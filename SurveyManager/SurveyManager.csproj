@@ -263,5 +263,14 @@
   <ItemGroup>
     <None Include="Resources\error_64x64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrument.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
