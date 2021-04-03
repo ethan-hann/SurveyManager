@@ -149,6 +149,12 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\FilterResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FilterResults.Designer.cs">
+      <DependentUpon>FilterResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,7 @@
     <Compile Include="utility\Filtering\FilterExpressionList.cs" />
     <Compile Include="utility\Filtering\IFilter.cs" />
     <Compile Include="utility\Filtering\ORFilter.cs" />
+    <Compile Include="utility\ProcessDataTable.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
     <Compile Include="utility\Utility.cs" />
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
@@ -184,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FilterResults.resx">
+      <DependentUpon>FilterResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -335,6 +345,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\title_company_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

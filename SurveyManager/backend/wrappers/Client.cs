@@ -101,7 +101,7 @@ namespace SurveyManager.backend.wrappers
             {
                 Thread dbThread = new Thread(() =>
                 {
-                    //ClientAddress = Database.GetAddress(AddressID);
+                    ClientAddress = Database.GetAddress(AddressID);
                 })
                 {
                     Name = "GetClientAddressThread",

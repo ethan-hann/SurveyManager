@@ -219,6 +219,7 @@ namespace SurveyManager
             this.findClientBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.findClientBtn.Size = new System.Drawing.Size(193, 22);
             this.findClientBtn.Text = "Find...";
+            this.findClientBtn.Click += new System.EventHandler(this.findClientBtn_Click);
             // 
             // toolStripSeparator2
             // 

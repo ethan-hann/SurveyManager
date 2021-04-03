@@ -1,11 +1,14 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend;
+using SurveyManager.backend.wrappers;
+using SurveyManager.forms;
 using SurveyManager.forms.clientMenu;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -158,6 +161,21 @@ namespace SurveyManager
         #endregion
 
         #region Client Menu
+        private void findClientBtn_Click(object sender, EventArgs e)
+        {
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("phone_number", "Phone #"),
+                new DBMap("email_address", "Email"),
+                new DBMap("fax_number", "Fax #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
+            filter.FilterDone += ProcessClientSearch;
+            filter.Show();
+        }
+
         private void newClientBtn_Click(object sender, EventArgs e)
         {
             NewClient ncForm = new NewClient();
@@ -222,6 +240,16 @@ namespace SurveyManager
         {
             if (e is StatusArgs args)
                 lblStatus.Text = args.StatusString;
+        }
+
+        private void ProcessClientSearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                FilterResults results = new FilterResults(args.Results, typeof(Client), "Client Results");
+                results.MdiParent = this;
+                results.Show();
+            }
         }
         #endregion
 

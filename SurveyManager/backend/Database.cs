@@ -287,5 +287,38 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
+        #region Get
+        public static Address GetAddress(int id)
+        {
+            Address a = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Address", null, null, $"address_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            a = new Address
+                            {
+                                ID = reader.GetInt32(0),
+                                Street = reader.GetString(1),
+                                City = reader.GetString(2),
+                                ZipCode = reader.GetString(3)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return a;
+        }
+
+        #endregion
     }
 }
