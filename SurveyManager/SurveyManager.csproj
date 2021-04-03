@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="backend\Database.cs" />
+    <Compile Include="backend\Queries.cs" />
     <Compile Include="backend\wrappers\Address.cs" />
     <Compile Include="backend\wrappers\Client.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.cs">

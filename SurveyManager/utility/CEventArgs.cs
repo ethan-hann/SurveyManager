@@ -21,11 +21,21 @@ namespace SurveyManager.utility
 
         public class DBArgs : EventArgs
         {
-            public int ExceptionCode { get; set; }
+            public int ExceptionCode { get; internal set; }
 
             public DBArgs(int exCode)
             {
                 ExceptionCode = exCode;
+            }
+        }
+
+        public class StatusArgs : EventArgs
+        {
+            public string StatusString { get; internal set; }
+
+            public StatusArgs(string status)
+            {
+                StatusString = status;
             }
         }
     }

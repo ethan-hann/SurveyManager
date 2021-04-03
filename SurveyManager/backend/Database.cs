@@ -1,12 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
+using SurveyManager.backend.wrappers;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend
 {
@@ -143,5 +146,146 @@ namespace SurveyManager.backend
             }
             return dt;
         }
+
+        /// <summary>
+        /// Retrieve a list of column names from the specified table.
+        /// </summary>
+        /// <param name="tableName">The table to get the columns of</param>
+        /// <returns>An <see cref="ArrayList"/> of type <see cref="string"/> containing the column names.</returns>
+        public static ArrayList GetColumns(string tableName)
+        {
+            ArrayList columns = new ArrayList();
+            string q = $"SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`= '{DB}' AND `TABLE_NAME`= '{tableName}';";
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            columns.Add(reader.GetString(0));
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return columns;
+        }
+
+        /// <summary>
+        /// Get the last row id inserted in the specified table.
+        /// </summary>
+        /// <param name="tablename">The table's name to search</param>
+        /// <returns>The id of the last row inserted</returns>
+        public static int GetLastRowIDInserted(string tablename)
+        {
+            int lastRowID = 0;
+            ArrayList columns = GetColumns(tablename);
+            string q = $"SELECT * FROM {tablename} order by {columns[0]} desc limit 1;";
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            lastRowID = reader.GetInt32(0);
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return lastRowID;
+        }
+
+        #region Insert
+        public static bool InsertAddress(Address a)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Address");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Address", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", a.Street);
+                        cmd.Parameters.AddWithValue("@1", a.City);
+                        cmd.Parameters.AddWithValue("@2", a.ZipCode);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        /// <summary>
+        /// Inserts a new client into the database.
+        /// </summary>
+        /// <param name="c">The <see cref="Client"/> to insert.</param>
+        /// <returns>True if the record was inserted successfully; False otherwise.</returns>
+        public static bool InsertClient(Client c)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Client");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Client", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using(MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", c.Name);
+                        cmd.Parameters.AddWithValue("@1", c.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@2", c.Email);
+                        cmd.Parameters.AddWithValue("@3", c.FaxNumber);
+                        cmd.Parameters.AddWithValue("@4", c.AddressID);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+        #endregion
     }
 }

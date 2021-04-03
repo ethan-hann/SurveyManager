@@ -162,6 +162,7 @@ namespace SurveyManager
         {
             NewClient ncForm = new NewClient();
             ncForm.MdiParent = this;
+            ncForm.StatusUpdate += ChangeStatusText;
             ncForm.Show();
         }
         #endregion
@@ -213,6 +214,14 @@ namespace SurveyManager
                     break;
                 }
             }
+        }
+        #endregion
+
+        #region Event Handlers
+        private void ChangeStatusText(object sender, EventArgs e)
+        {
+            if (e is StatusArgs args)
+                lblStatus.Text = args.StatusString;
         }
         #endregion
 
