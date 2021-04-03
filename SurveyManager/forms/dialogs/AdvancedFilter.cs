@@ -42,7 +42,7 @@ namespace SurveyManager.forms.dialogs
         /// <param name="columns">The column options available for the user to select from. This <see cref="ArrayList"/> must contain items of type <see cref="DBMap"/>.</param>
         /// <param name="title">The optional title displayed in the titlebar of this dialog.</param>
         /// <param name="additionalColumnFilter">The optional, additional filter to search by. Example: <c>company_id=1</c></param>
-        public AdvancedFilter(string tableName, ArrayList columns, string title = "", string additionalColumnFilter = "")
+        public AdvancedFilter(string tableName, ArrayList columns, string title = "", string additionalColumnFilter = "", Icon windowIcon = null)
         {
             InitializeComponent();
             if (title.Equals(""))
@@ -74,6 +74,11 @@ namespace SurveyManager.forms.dialogs
 
             cmbColumns.SelectedIndex = 0;
             cmbChoices.SelectedIndex = 0;
+
+            if (windowIcon == null)
+                Icon = Icon.FromHandle(Resources.filter_16x16.GetHicon());
+            else
+                Icon = windowIcon;
         }
 
         private void AddFilterToGrid(object sender, EventArgs e)

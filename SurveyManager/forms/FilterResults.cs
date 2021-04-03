@@ -1,6 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using SurveyManager.backend.wrappers;
 using SurveyManager.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +16,14 @@ namespace SurveyManager.forms
 {
     public partial class FilterResults : KryptonForm
     {
-        private DataTable results;
-        private Type resultDataType;
+        private object[] results;
+        private Type resultDataType = null;
 
-        public FilterResults(DataTable filterResults, Type typeOfData, string title = "")
+        public FilterResults(object[] results, string title = "")
         {
             InitializeComponent();
 
-            results = filterResults;
-            resultDataType = typeOfData;
+            this.results = results;
 
             Text = title.Equals("") ? "Search Results" : title;
         }
@@ -31,9 +32,9 @@ namespace SurveyManager.forms
         {
             Icon = Icon.FromHandle(Resources.filter_16x16.GetHicon());
 
-            foreach (DataRow r in results.Rows)
+            foreach (object o in results)
             {
-                lbResults.Items.Add(r);
+                lbResults.Items.Add(o);
             }
         }
 

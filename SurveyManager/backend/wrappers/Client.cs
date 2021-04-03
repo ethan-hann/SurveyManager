@@ -10,31 +10,31 @@ namespace SurveyManager.backend.wrappers
     public class Client
     {
         [Browsable(false)]
-        public int ID { get; set; }
+        public int ID { get; set; } = 0;
 
         [Category("Client Information")]
         [Description("The full name of the client.")]
         [Browsable(true)]
         [DisplayName("Client Name")]
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = "N/A";
 
         [Category("Client Information")]
         [Description("The phone number for the client.")]
         [Browsable(true)]
         [DisplayName("Phone Number")]
-        public string PhoneNumber { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = "N/A";
 
         [Category("Client Information")]
         [Description("The email address of the client.")]
         [Browsable(true)]
         [DisplayName("Email Address")]
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; } = "N/A";
 
         [Category("Client Information")]
         [Description("The fax number, if any, of the client.")]
         [Browsable(true)]
         [DisplayName("Fax Number")]
-        public string FaxNumber { get; set; } = string.Empty;
+        public string FaxNumber { get; set; } = "N/A";
 
         [Browsable(false)]
         public int AddressID { get; set; }
@@ -45,6 +45,18 @@ namespace SurveyManager.backend.wrappers
         [DisplayName("Address")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Address ClientAddress { get; set; } = new Address();
+
+        /// <summary>
+        /// Checks the name and phone number to ensure they are not the default values.
+        /// </summary>
+        [Browsable(false)]
+        public bool IsValid
+        {
+            get
+            {
+                return !Name.Equals("N/A") && !PhoneNumber.Equals("N/A");
+            }
+        }
 
         public Client() { }
 

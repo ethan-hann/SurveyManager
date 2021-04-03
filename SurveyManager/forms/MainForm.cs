@@ -246,7 +246,13 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                FilterResults results = new FilterResults(args.Results, typeof(Client), "Client Results");
+                List<Client> clients = new List<Client>();
+                foreach (DataRow row in args.Results.Rows)
+                {
+                    clients.Add(ProcessDataTable.GetClient(row));
+                }
+
+                FilterResults results = new FilterResults(clients.ToArray(), "Client Results");
                 results.MdiParent = this;
                 results.Show();
             }

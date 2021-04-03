@@ -23,15 +23,13 @@ namespace SurveyManager.utility
 
         public static Client GetClient(DataRow row)
         {
-            Client c = new Client
-            {
-                ID = (int)row["client_id"],
-                Name = (string)row["name"],
-                PhoneNumber = (string)row["phone_number"],
-                Email = (string)row["email_address"],
-                FaxNumber = (string)row["fax_number"],
-                AddressID = (int)row["address_id"]
-            };
+            Client c = new Client();
+            c.ID = (int)row["client_id"];
+            c.Name = (string)row["name"];
+            c.PhoneNumber = (string)row["phone_number"];
+            c.Email = (string)row["email_address"];
+            c.FaxNumber = (string)row["fax_number"];
+            c.AddressID = (int)row["address_id"];
 
             if (c.AddressID != 0)
                 c.SetAddress();

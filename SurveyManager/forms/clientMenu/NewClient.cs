@@ -51,9 +51,9 @@ namespace SurveyManager.forms.clientMenu
                 return;
             }
 
-            if (client.Name.Equals(string.Empty) || client.PhoneNumber.Equals(string.Empty))
+            if (!client.IsValid)
             {
-                CMessageBox.Show("Client's name and phone number cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                CMessageBox.Show("Client's name and phone number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 return;
             }
 
