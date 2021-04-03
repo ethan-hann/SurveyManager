@@ -120,18 +120,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="backend\Database.cs" />
+    <Compile Include="backend\wrappers\Address.cs" />
+    <Compile Include="backend\wrappers\Client.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\databaseMenu\DBConnection.Designer.cs">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\AdvancedFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\AdvancedFilter.Designer.cs">
+      <DependentUpon>AdvancedFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\CMessageBox.cs" />
+    <Compile Include="forms\dialogs\CRichMsgBox.cs" />
     <Compile Include="forms\dialogs\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\dialogs\MessageForm.Designer.cs">
       <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\RichMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
+      <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -147,9 +162,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utility\CEventArgs.cs" />
+    <Compile Include="utility\CustomControls\CPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="utility\CustomControls\CPropertyGrid.Designer.cs">
+      <DependentUpon>CPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utility\DBMap.cs" />
+    <Compile Include="utility\Enums.cs" />
+    <Compile Include="utility\Filtering\ANDFilter.cs" />
+    <Compile Include="utility\Filtering\Filter.cs" />
+    <Compile Include="utility\Filtering\FilterExpressionList.cs" />
+    <Compile Include="utility\Filtering\IFilter.cs" />
+    <Compile Include="utility\Filtering\ORFilter.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
+    <Compile Include="utility\Utility.cs" />
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
+      <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -271,6 +304,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrument_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realtor_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surveying_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title_company_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

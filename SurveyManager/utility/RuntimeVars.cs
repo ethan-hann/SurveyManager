@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,9 @@ namespace SurveyManager.utility
         }
         
         public int NumberOfDBConnectionFormsOpen { get; set; } = 0;
+
+        public bool DatabaseConnected { get; set; } = false;
+
+        public MainForm MainForm { get; set; }
     }
 }
