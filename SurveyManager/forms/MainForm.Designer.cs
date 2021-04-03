@@ -242,6 +242,7 @@ namespace SurveyManager
             this.editClientBtn.Name = "editClientBtn";
             this.editClientBtn.Size = new System.Drawing.Size(193, 22);
             this.editClientBtn.Text = "Edit...";
+            this.editClientBtn.Click += new System.EventHandler(this.editClientBtn_Click);
             // 
             // viewClientsBtn
             // 

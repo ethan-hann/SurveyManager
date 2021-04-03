@@ -252,7 +252,7 @@ namespace SurveyManager
                     clients.Add(ProcessDataTable.GetClient(row));
                 }
 
-                FilterResults results = new FilterResults(clients.ToArray(), "Client Results");
+                ViewObjects results = new ViewObjects(args.Results, clients.ToArray(), "Name", "name", "Client Results");
                 results.MdiParent = this;
                 results.Show();
             }
@@ -265,5 +265,10 @@ namespace SurveyManager
             return office2013_edited;
         }
         #endregion
+
+        private void editClientBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
