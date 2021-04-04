@@ -125,6 +125,7 @@
     <Compile Include="backend\Queries.cs" />
     <Compile Include="backend\wrappers\Address.cs" />
     <Compile Include="backend\wrappers\Client.cs" />
+    <Compile Include="backend\wrappers\DatabaseWrapper.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,11 +152,11 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FilterResults.cs">
+    <Compile Include="forms\ViewObjects.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FilterResults.Designer.cs">
-      <DependentUpon>FilterResults.cs</DependentUpon>
+      <DependentUpon>ViewObjects.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -196,7 +197,7 @@
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FilterResults.resx">
-      <DependentUpon>FilterResults.cs</DependentUpon>
+      <DependentUpon>ViewObjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

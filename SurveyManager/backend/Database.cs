@@ -205,7 +205,7 @@ namespace SurveyManager.backend
             return lastRowID;
         }
 
-        #region Insert
+        #region Address
         public static bool InsertAddress(Address a)
         {
             int affectedRows = 0;
@@ -243,6 +243,107 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        public static bool UpdateAddress(Address a)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Address");
+            string q = Queries.BuildQuery(QType.UPDATE, "Address", null, columns, $"address_id={a.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.Parameters.AddWithValue("@0", a.ID);
+                        cmd.Parameters.AddWithValue("@0", a.Street);
+                        cmd.Parameters.AddWithValue("@0", a.City);
+                        cmd.Parameters.AddWithValue("@0", a.ZipCode);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static Address GetAddress(int id)
+        {
+            Address a = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Address", null, null, $"address_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            a = new Address
+                            {
+                                ID = reader.GetInt32(0),
+                                Street = reader.GetString(1),
+                                City = reader.GetString(2),
+                                ZipCode = reader.GetString(3)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return a;
+        }
+
+        public static bool DeleteAddress(Address a)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Address", null, null, $"address_id={a.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            } catch (Exception)
+            {
+                return false;
+            }
+            
+            return affectedRows != 0;
+        }
+        #endregion
+
+        #region Client
         /// <summary>
         /// Inserts a new client into the database.
         /// </summary>
@@ -286,13 +387,49 @@ namespace SurveyManager.backend
             }
             return affectedRows != 0;
         }
-        #endregion
 
-        #region Get
-        public static Address GetAddress(int id)
+        public static bool UpdateClient(Client c)
         {
-            Address a = null;
-            string q = Queries.BuildQuery(QType.SELECT, "Address", null, null, $"address_id={id}");
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Client");
+            string q = Queries.BuildQuery(QType.UPDATE, "Client", null, columns, $"client_id={c.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", c.ID);
+                        cmd.Parameters.AddWithValue("@1", c.Name);
+                        cmd.Parameters.AddWithValue("@2", c.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@3", c.Email);
+                        cmd.Parameters.AddWithValue("@4", c.FaxNumber);
+                        cmd.Parameters.AddWithValue("@5", c.AddressID);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static Client GetClient(int id)
+        {
+            Client c = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Client", null, null, $"client_id={id}");
 
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -304,21 +441,100 @@ namespace SurveyManager.backend
                         if (reader.HasRows)
                         {
                             reader.Read();
-                            a = new Address
+                            c = new Client
                             {
                                 ID = reader.GetInt32(0),
-                                Street = reader.GetString(1),
-                                City = reader.GetString(2),
-                                ZipCode = reader.GetString(3)
+                                Name = reader.GetString(1),
+                                PhoneNumber = reader.GetString(2),
+                                Email = reader.GetString(3),
+                                FaxNumber = reader.GetString(4),
+                                AddressID = reader.GetInt32(5)
                             };
+
+                            if (c.AddressID > 0)
+                                c.SetAddress();
                         }
                     }
                 }
                 con.Close();
             }
-            return a;
+            return c;
         }
 
+        public static List<Client> GetClients()
+        {
+            List<Client> clients = new List<Client>();
+            string q = Queries.BuildQuery(QType.SELECT, "Client", null, null);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Client c = new Client
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Name = reader.GetString(1),
+                                    PhoneNumber = reader.GetString(2),
+                                    Email = reader.GetString(3),
+                                    FaxNumber = reader.GetString(4),
+                                    AddressID = reader.GetInt32(5)
+                                };
+
+                                if (c.AddressID > 0)
+                                    c.SetAddress();
+
+                                clients.Add(c);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return clients;
+        }
+
+        public static bool DeleteClient(Client c)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Client", null, null, $"client_id={c.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
         #endregion
     }
 }

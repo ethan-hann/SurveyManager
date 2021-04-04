@@ -13,18 +13,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.clientMenu
 {
     public partial class NewClient : KryptonForm
     {
         private Client client = new Client();
+        private bool editMode = false;
 
         public EventHandler StatusUpdate;
 
-        public NewClient()
+        public NewClient(Client c = null)
         {
             InitializeComponent();
+
+            if (c != null)
+            {
+                editMode = true;
+                client = c;
+            }
         }
 
         private void NewClient_Load(object sender, EventArgs e)
@@ -44,37 +52,39 @@ namespace SurveyManager.forms.clientMenu
         private void SaveClient(object sender, EventArgs e)
         {
             client = (Client)clientPropGrid.SelectedObject;
+            DatabaseError clientError;
 
-            if (client.ClientAddress.IsEmpty)
-            {
-                CMessageBox.Show("Client's address cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return;
-            }
-
-            if (!client.IsValid)
-            {
-                CMessageBox.Show("Client's name and phone number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return;
-            }
-
-            if (Database.InsertAddress(client.ClientAddress))
-            {
-                int addressID = Database.GetLastRowIDInserted("Address");
-                client.AddressID = addressID;
-
-                if (Database.InsertClient(client))
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Client {client.Name} created successfully."));
-                    Close();
-                }
-                else
-                {
-                    CMessageBox.Show("Could not create the client in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                }
-            }
+            if (!editMode)
+                clientError = client.Insert();
             else
+                clientError = client.Update();
+
+            switch (clientError)
             {
-                CMessageBox.Show("Could not create the client's address in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                case DatabaseError.AddressIncomplete:
+                    CMessageBox.Show("Client's address cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return;
+                case DatabaseError.ClientIncomplete:
+                    CMessageBox.Show("Client's name and phone number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return;
+                case DatabaseError.AddressInsert:
+                    CMessageBox.Show("Could not create the client's address in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return;
+                case DatabaseError.ClientInsert:
+                    CMessageBox.Show("Could not create the client in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return;
+                case DatabaseError.NoError:
+                {
+                    if (editMode)
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Client {client.Name} updated successfully."));
+                    else
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Client {client.Name} created successfully."));
+                    Close();
+                    break;
+                }
+                default:
+                    CMessageBox.Show("An unknown error has occured. Please try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return;
             }
         }
 

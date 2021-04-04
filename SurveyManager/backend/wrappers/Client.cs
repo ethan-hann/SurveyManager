@@ -1,13 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
     /// <summary>
     /// Defines a survey client.
     /// </summary>
-    public class Client
+    public class Client : DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; } = 0;
@@ -121,6 +122,49 @@ namespace SurveyManager.backend.wrappers
                 };
                 dbThread.Start();
             }
+        }
+
+        public DatabaseError Insert()
+        {
+            if (ClientAddress.IsEmpty)
+            {
+                return DatabaseError.AddressIncomplete;
+            }
+
+            if (!IsValid)
+            {
+                return DatabaseError.ClientIncomplete;
+            }
+
+            DatabaseError addressError = ClientAddress.Insert();
+            if (addressError == DatabaseError.NoError)
+            {
+                int addressID = Database.GetLastRowIDInserted("Address");
+                AddressID = addressID;
+
+                if (Database.InsertClient(this))
+                {
+                    return DatabaseError.NoError;
+                }
+                else
+                {
+                    return DatabaseError.ClientInsert;
+                }
+            }
+            else
+            {
+                return addressError;
+            }
+        }
+
+        public DatabaseError Update()
+        {
+            return DatabaseError.NoError;
+        }
+
+        public DatabaseError Delete()
+        {
+            return DatabaseError.NoError;
         }
 
         public override string ToString()

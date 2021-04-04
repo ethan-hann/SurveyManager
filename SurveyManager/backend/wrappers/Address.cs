@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SurveyManager.utility;
+using System;
 using System.ComponentModel;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
@@ -7,7 +9,7 @@ namespace SurveyManager.backend.wrappers
     /// Defines a basic address used for surveys and clients.
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    public class Address : ExpandableObjectConverter
+    public class Address : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
@@ -61,6 +63,28 @@ namespace SurveyManager.backend.wrappers
             if (!IsEmpty)
                 return $"{Street} {City}, {ZipCode}";
             return "(...)";
+        }
+
+        public DatabaseError Insert()
+        {
+            if (Database.InsertAddress(this))
+            {
+                return DatabaseError.NoError;
+            }
+            else
+            {
+            return DatabaseError.AddressInsert;
+            }
+        }
+
+        public DatabaseError Update()
+        {
+            return DatabaseError.NoError;
+        }
+
+        public DatabaseError Delete()
+        {
+            return DatabaseError.NoError;
         }
     }
 }
