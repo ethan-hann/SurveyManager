@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace SurveyManager.backend.wrappers
 {
-    public class County : DatabaseWrapper
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class County : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
@@ -45,6 +46,11 @@ namespace SurveyManager.backend.wrappers
         public Enums.DatabaseError Update()
         {
             return Database.UpdateCounty(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.CountyUpdate;
+        }
+
+        public override string ToString()
+        {
+            return CountyName;
         }
     }
 }

@@ -114,7 +114,23 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when a realtor is missing important information
             /// </summary>
-            RealtorIncomplete
+            RealtorIncomplete,
+            /// <summary>
+            /// Error when inseting title company data.
+            /// </summary>
+            TitleCompanyInsert,
+            /// <summary>
+            /// Error when updating title company data.
+            /// </summary>
+            TitleCompanyUpdate,
+            /// <summary>
+            /// Error when deleting title company data.
+            /// </summary>
+            TitleCompanyDelete,
+            /// <summary>
+            /// Error when a title company is missing important information.
+            /// </summary>
+            TitleCompanyIncomplete
         }
 
         /// <summary>

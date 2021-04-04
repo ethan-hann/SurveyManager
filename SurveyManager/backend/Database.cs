@@ -884,5 +884,185 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
+        #region Title Company
+        public static bool InsertTitleCompany(TitleCompany t)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("TitleCompany");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "TitleCompany", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", t.Name);
+                        cmd.Parameters.AddWithValue("@1", t.AssociateName);
+                        cmd.Parameters.AddWithValue("@2", t.AssociateEmail);
+                        cmd.Parameters.AddWithValue("@3", t.OfficeNumber);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static bool UpdateTitleCompany(TitleCompany t)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("TitleCompany");
+            string q = Queries.BuildQuery(QType.UPDATE, "TitleCompany", null, columns, $"company_id={t.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", t.ID);
+                        cmd.Parameters.AddWithValue("@1", t.Name);
+                        cmd.Parameters.AddWithValue("@2", t.AssociateName);
+                        cmd.Parameters.AddWithValue("@3", t.AssociateEmail);
+                        cmd.Parameters.AddWithValue("@4", t.OfficeNumber);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+
+        }
+
+        public static TitleCompany GetTitleCompany(int id)
+        {
+            TitleCompany t = null;
+            string q = Queries.BuildQuery(QType.SELECT, "TitleCompany", null, null, $"company_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            t = new TitleCompany
+                            {
+                                ID = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                AssociateName = reader.GetString(2),
+                                AssociateEmail = reader.GetString(3),
+                                OfficeNumber = reader.GetString(4)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return t;
+        }
+
+        public static List<TitleCompany> GetTitleCompanies()
+        {
+            List<TitleCompany> companies = new List<TitleCompany>();
+            TitleCompany t = null;
+            string q = Queries.BuildQuery(QType.SELECT, "TitleCompany");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                t = new TitleCompany
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Name = reader.GetString(1),
+                                    AssociateName = reader.GetString(2),
+                                    AssociateEmail = reader.GetString(3),
+                                    OfficeNumber = reader.GetString(4)
+                                };
+                                companies.Add(t);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return companies;
+        }
+
+        public static bool DeleteTitleCompany(TitleCompany c)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "TitleCompany", null, null, $"company_id={c.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
     }
 }

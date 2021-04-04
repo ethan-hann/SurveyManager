@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace SurveyManager.backend.wrappers
 {
-    public class Realtor : DatabaseWrapper
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class Realtor : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
@@ -42,7 +43,7 @@ namespace SurveyManager.backend.wrappers
         /// <para>A valid Realtor is one whose name and email is not equal to N/A and also not an empty string.</para>
         /// </summary>
         [Browsable(false)]
-        public bool IsValid
+        public bool IsValidRealtor
         {
             get
             {
@@ -76,7 +77,7 @@ namespace SurveyManager.backend.wrappers
 
         public Enums.DatabaseError Insert()
         {
-            if (IsValid)
+            if (IsValidRealtor)
                 return Database.InsertRealtor(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.RealtorInsert;
             else
                 return Enums.DatabaseError.RealtorIncomplete;
@@ -84,10 +85,18 @@ namespace SurveyManager.backend.wrappers
 
         public Enums.DatabaseError Update()
         {
-            if (IsValid)
+            if (IsValidRealtor)
                 return Database.UpdateRealtor(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.RealtorUpdate;
             else
                 return Enums.DatabaseError.RealtorIncomplete;
+        }
+
+        public override string ToString()
+        {
+            if (IsValidRealtor)
+                return Name;
+            else
+                return "(...)";
         }
     }
 }

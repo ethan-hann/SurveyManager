@@ -67,24 +67,23 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Insert()
         {
-            if (Database.InsertAddress(this))
-            {
-                return DatabaseError.NoError;
-            }
+            if (!IsEmpty)
+                return Database.InsertAddress(this) ? DatabaseError.NoError : DatabaseError.AddressInsert;
             else
-            {
-            return DatabaseError.AddressInsert;
-            }
+                return DatabaseError.AddressIncomplete;
         }
 
         public DatabaseError Update()
         {
-            return DatabaseError.NoError;
+            if (!IsEmpty)
+                return Database.UpdateAddress(this) ? DatabaseError.NoError : DatabaseError.AddressUpdate;
+            else
+                return DatabaseError.AddressIncomplete;
         }
 
         public DatabaseError Delete()
         {
-            return DatabaseError.NoError;
+            return Database.DeleteAddress(this) ? DatabaseError.NoError : DatabaseError.AddressDelete;
         }
     }
 }
