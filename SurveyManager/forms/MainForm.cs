@@ -191,7 +191,10 @@ namespace SurveyManager
 
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
-            
+            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Client, Icon.FromHandle(Resources.client_16x16.GetHicon()), "View Clients");
+            vgForm.MdiParent = this;
+            vgForm.StatusUpdate += ChangeStatusText;
+            vgForm.Show();
         }
 
         #endregion

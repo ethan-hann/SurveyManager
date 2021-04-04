@@ -152,6 +152,12 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ViewGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ViewGrid.Designer.cs">
+      <DependentUpon>ViewGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\ViewObjects.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,7 @@
     <Compile Include="utility\CustomControls\CPropertyGrid.Designer.cs">
       <DependentUpon>CPropertyGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="utility\DataGridViewSetup.cs" />
     <Compile Include="utility\DBMap.cs" />
     <Compile Include="utility\Enums.cs" />
     <Compile Include="utility\Filtering\ANDFilter.cs" />
@@ -204,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\clientMenu\NewClient.resx">
       <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ViewGrid.resx">
+      <DependentUpon>ViewGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -358,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\filter_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

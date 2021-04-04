@@ -86,7 +86,58 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when an address is missing important information
             /// </summary>
-            AddressIncomplete
+            AddressIncomplete,
+            /// <summary>
+            /// Error when inserting county data.
+            /// </summary>
+            CountyInsert,
+            /// <summary>
+            /// Error when updating county data.
+            /// </summary>
+            CountyUpdate,
+            /// <summary>
+            /// Error when deleting county data.
+            /// </summary>
+            CountyDelete,
+            /// <summary>
+            /// Error when inserting realtor data.
+            /// </summary>
+            RealtorInsert,
+            /// <summary>
+            /// Error when updating realtor data.
+            /// </summary>
+            RealtorUpdate,
+            /// <summary>
+            /// Error when deleting realtor data.
+            /// </summary>
+            RealtorDelete,
+            /// <summary>
+            /// Error when a realtor is missing important information
+            /// </summary>
+            RealtorIncomplete
+        }
+
+        /// <summary>
+        /// Enum representing the different entities for the program.
+        /// </summary>
+        public enum EntityTypes
+        {
+            /// <summary>
+            /// Represents a client entity.
+            /// </summary>
+            Client,
+            /// <summary>
+            /// Represents a survey entity.
+            /// </summary>
+            Survey,
+            /// <summary>
+            /// Represents a title company entity.
+            /// </summary>
+            TitleCompany,
+            /// <summary>
+            /// Represents a realtor entity.
+            /// </summary>
+            Realtor
         }
     }
 }

@@ -464,7 +464,7 @@ namespace SurveyManager.backend
         public static List<Client> GetClients()
         {
             List<Client> clients = new List<Client>();
-            string q = Queries.BuildQuery(QType.SELECT, "Client", null, null);
+            string q = Queries.BuildQuery(QType.SELECT, "Client");
 
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -504,6 +504,354 @@ namespace SurveyManager.backend
         {
             int affectedRows = 0;
             string q = Queries.BuildQuery(QType.DELETE, "Client", null, null, $"client_id={c.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
+
+        #region County
+        public static bool InsertCounty(County c)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("County");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "County", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", c.CountyName);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static bool UpdateCounty(County c)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("County");
+            string q = Queries.BuildQuery(QType.UPDATE, "County", null, columns, $"county_id={c.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", c.ID);
+                        cmd.Parameters.AddWithValue("@1", c.CountyName);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+
+        }
+
+        public static County GetCounty(int id)
+        {
+            County c = null;
+            string q = Queries.BuildQuery(QType.SELECT, "County", null, null, $"county_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            c = new County
+                            {
+                                ID = reader.GetInt32(0),
+                                CountyName = reader.GetString(1)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return c;
+        }
+
+        public static List<County> GetCounties()
+        {
+            List<County> counties = new List<County>();
+            County c = null;
+            string q = Queries.BuildQuery(QType.SELECT, "County");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                c = new County
+                                {
+                                    ID = reader.GetInt32(0),
+                                    CountyName = reader.GetString(1)
+                                };
+                                counties.Add(c);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return counties;
+        }
+
+        public static bool DeleteCounty(County c)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "County", null, null, $"county_id={c.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
+
+        #region Realtor
+        public static bool InsertRealtor(Realtor r)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Realtor");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Realtor", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", r.Name);
+                        cmd.Parameters.AddWithValue("@1", r.Email);
+                        cmd.Parameters.AddWithValue("@2", r.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@3", r.FaxNumber);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static bool UpdateRealtor(Realtor r)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Realtor");
+            string q = Queries.BuildQuery(QType.UPDATE, "Realtor", null, columns, $"realtor_id={r.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", r.ID);
+                        cmd.Parameters.AddWithValue("@1", r.Name);
+                        cmd.Parameters.AddWithValue("@2", r.Email);
+                        cmd.Parameters.AddWithValue("@3", r.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@4", r.FaxNumber);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+
+        }
+
+        public static Realtor GetRealtor(int id)
+        {
+            Realtor r = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Realtor", null, null, $"realtor_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            r = new Realtor
+                            {
+                                ID = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Email = reader.GetString(2),
+                                PhoneNumber = reader.GetString(3),
+                                FaxNumber = reader.GetString(4)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return r;
+        }
+
+        public static List<Realtor> GetRealtors()
+        {
+            List<Realtor> realtors = new List<Realtor>();
+            Realtor r = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Realtor");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                r = new Realtor
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Name = reader.GetString(1),
+                                    Email = reader.GetString(2),
+                                    PhoneNumber = reader.GetString(3),
+                                    FaxNumber = reader.GetString(4)
+                                };
+                                realtors.Add(r);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return realtors;
+        }
+
+        public static bool DeleteRealtor(Realtor c)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Realtor", null, null, $"realtor_id={c.ID}");
 
             try
             {
