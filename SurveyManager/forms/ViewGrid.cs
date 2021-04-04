@@ -24,7 +24,6 @@ namespace SurveyManager.forms
     {
         private EntityTypes typeOfData;
         private DataTable lastFilterResults;
-        private List<object> objectsToDisplay;
         private List<OutlookGridRow> rows;
 
         public EventHandler StatusUpdate;
@@ -35,13 +34,18 @@ namespace SurveyManager.forms
 
             Icon = iconToDisplay;
             if (titleText.Equals(""))
-                Text = "View Items";
+                Text = "View Objects";
             else
                 Text = titleText;
+
+            typeOfData = typeToDisplay;
         }
 
         private void ViewGrid_Load(object sender, EventArgs e)
         {
+            propGrid.GetAcceptButton().Click += SaveData;
+            propGrid.GetAcceptButton().ToolTipText = "Save the object's properties to the database.";
+
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);
             LoadData();
@@ -51,6 +55,7 @@ namespace SurveyManager.forms
         {
             StatusUpdate?.Invoke(this, new StatusArgs($"Loading {typeOfData}s..."));
             loadProgressBar.Value = 0;
+            loadProgressBar.Visible = true;
             bgWorker.RunWorkerAsync();
         }
 
@@ -85,6 +90,7 @@ namespace SurveyManager.forms
                     columns = new ArrayList
                     {
                         new DBMap("name", "Name"),
+                        new DBMap("company_name", "Company Name"),
                         new DBMap("phone_number", "Phone #"),
                         new DBMap("email_address", "Email"),
                         new DBMap("fax_number", "Fax #")
@@ -153,6 +159,11 @@ namespace SurveyManager.forms
                     PopulateClientGrid(LoadClients());
                     break;
                 }
+                case EntityTypes.Realtor:
+                {
+                    PopulateRealtorGrid(LoadRealtors());
+                    break;
+                }
             }
         }
 
@@ -165,7 +176,7 @@ namespace SurveyManager.forms
         {
             if (!Disposing && !IsDisposed)
             {
-                StatusUpdate?.Invoke(this, new StatusArgs("Clients loaded."));
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
 
                 dataGrid.SuspendLayout();
                 dataGrid.ClearInternalRows();
@@ -173,10 +184,33 @@ namespace SurveyManager.forms
                 dataGrid.AssignRows(rows);
                 dataGrid.ForceRefreshGroupBox();
                 dataGrid.Fill();
+
+                if (dataGrid.Rows.Count > 0)
+                {
+                    DataGridViewRow r = dataGrid.Rows[0];
+                    propGrid.SelectedObject = r.Tag;
+                }
+
+                loadProgressBar.Visible = false;
             }
             else
             {
-                StatusUpdate?.Invoke(this, new StatusArgs("Client loading cancelled."));
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData} loading cancelled."));
+            }
+        }
+
+        private void SaveData(object sender, EventArgs e)
+        {
+            DatabaseWrapper obj = (DatabaseWrapper)propGrid.SelectedObject;
+            DatabaseError error = obj.Update();
+            switch (error)
+            {
+                case DatabaseError.NoError:
+                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
+                    break;
+                default:
+                    CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    break;
             }
         }
 
@@ -212,6 +246,43 @@ namespace SurveyManager.forms
                     c.Name
                 });
                 row.Tag = c;
+                rows.Add(row);
+            }
+        }
+        #endregion
+
+        #region Realtor
+        private List<Realtor> LoadRealtors()
+        {
+            List<Realtor> realtors = new List<Realtor>();
+            if (lastFilterResults == null)
+            {
+                realtors = Database.GetRealtors();
+            }
+            else
+            {
+                foreach (DataRow dataRow in lastFilterResults.Rows)
+                {
+                    realtors.Add(ProcessDataTable.GetRealtor(dataRow));
+                }
+                lastFilterResults = null;
+            }
+            return realtors;
+        }
+
+        private void PopulateRealtorGrid(List<Realtor> realtors)
+        {
+            OutlookGridRow row;
+            rows = new List<OutlookGridRow>();
+
+            foreach (Realtor r in realtors)
+            {
+                row = new OutlookGridRow();
+                row.CreateCells(dataGrid, new object[] {
+                    r.ID,
+                    r.Name
+                });
+                row.Tag = r;
                 rows.Add(row);
             }
         }

@@ -21,6 +21,12 @@ namespace SurveyManager.backend.wrappers
         public string Name { get; set; } = "N/A";
 
         [Category("Realtor Information")]
+        [Description("The realtor's company's name.")]
+        [Browsable(true)]
+        [DisplayName("Company Name")]
+        public string CompanyName { get; set; } = "N/A";
+
+        [Category("Realtor Information")]
         [Description("The email address of the realtor.")]
         [Browsable(true)]
         [DisplayName("Email Address")]
@@ -47,24 +53,28 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return (!Name.Equals("N/A") && Name.Length > 0) && (!Email.Equals("N/A") && Email.Length > 0);
+                return (!Name.Equals("N/A") && Name.Length > 0) && 
+                (!PhoneNumber.Equals("N/A") && PhoneNumber.Length > 0) &&
+                (!CompanyName.Equals("N/A") && CompanyName.Length > 0);
             }
         }
 
         public Realtor() { }
 
-        public Realtor(int iD, string name, string email, string phoneNumber, string faxNumber)
+        public Realtor(int iD, string name, string companyName, string email, string phoneNumber, string faxNumber)
         {
             ID = iD;
             Name = name;
+            CompanyName = companyName;
             Email = email;
             PhoneNumber = phoneNumber;
             FaxNumber = faxNumber;
         }
 
-        public Realtor(string name, string email, string phoneNumber, string faxNumber)
+        public Realtor(string name, string companyName, string email, string phoneNumber, string faxNumber)
         {
             Name = name;
+            CompanyName = companyName;
             Email = email;
             PhoneNumber = phoneNumber;
             FaxNumber = faxNumber;
@@ -94,7 +104,7 @@ namespace SurveyManager.backend.wrappers
         public override string ToString()
         {
             if (IsValidRealtor)
-                return Name;
+                return $"{Name} with {CompanyName}";
             else
                 return "(...)";
         }

@@ -42,25 +42,21 @@ namespace SurveyManager
             this.findSurveyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.newSurveyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.editSurveyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSurveysBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findClientBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.newClientBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.editClientBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.viewClientsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.realtorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findRealtorBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.newRealtorBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.editRealtorBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.viewRealtorsBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.titleCompanyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.newTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.editTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.viewTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dbConnectionBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,7 +154,6 @@ namespace SurveyManager
             this.findSurveyBtn,
             this.toolStripSeparator1,
             this.newSurveyBtn,
-            this.editSurveyBtn,
             this.viewSurveysBtn});
             this.surveysToolStripMenuItem.Name = "surveysToolStripMenuItem";
             this.surveysToolStripMenuItem.Size = new System.Drawing.Size(59, 22);
@@ -186,17 +181,11 @@ namespace SurveyManager
             this.newSurveyBtn.Size = new System.Drawing.Size(192, 22);
             this.newSurveyBtn.Text = "New...";
             // 
-            // editSurveyBtn
-            // 
-            this.editSurveyBtn.Image = global::SurveyManager.Properties.Resources.edit;
-            this.editSurveyBtn.Name = "editSurveyBtn";
-            this.editSurveyBtn.Size = new System.Drawing.Size(192, 22);
-            this.editSurveyBtn.Text = "Edit...";
-            // 
             // viewSurveysBtn
             // 
             this.viewSurveysBtn.Image = global::SurveyManager.Properties.Resources.view;
             this.viewSurveysBtn.Name = "viewSurveysBtn";
+            this.viewSurveysBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.viewSurveysBtn.Size = new System.Drawing.Size(192, 22);
             this.viewSurveysBtn.Text = "View...";
             // 
@@ -206,7 +195,6 @@ namespace SurveyManager
             this.findClientBtn,
             this.toolStripSeparator2,
             this.newClientBtn,
-            this.editClientBtn,
             this.viewClientsBtn});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
             this.clientToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
@@ -236,18 +224,11 @@ namespace SurveyManager
             this.newClientBtn.Text = "New...";
             this.newClientBtn.Click += new System.EventHandler(this.newClientBtn_Click);
             // 
-            // editClientBtn
-            // 
-            this.editClientBtn.Image = global::SurveyManager.Properties.Resources.edit;
-            this.editClientBtn.Name = "editClientBtn";
-            this.editClientBtn.Size = new System.Drawing.Size(193, 22);
-            this.editClientBtn.Text = "Edit...";
-            this.editClientBtn.Click += new System.EventHandler(this.editClientBtn_Click);
-            // 
             // viewClientsBtn
             // 
             this.viewClientsBtn.Image = global::SurveyManager.Properties.Resources.view;
             this.viewClientsBtn.Name = "viewClientsBtn";
+            this.viewClientsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.viewClientsBtn.Size = new System.Drawing.Size(193, 22);
             this.viewClientsBtn.Text = "View...";
             this.viewClientsBtn.Click += new System.EventHandler(this.viewClientsBtn_Click);
@@ -258,7 +239,6 @@ namespace SurveyManager
             this.findRealtorBtn,
             this.toolStripSeparator3,
             this.newRealtorBtn,
-            this.editRealtorBtn,
             this.viewRealtorsBtn});
             this.realtorToolStripMenuItem.Name = "realtorToolStripMenuItem";
             this.realtorToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
@@ -271,6 +251,7 @@ namespace SurveyManager
             this.findRealtorBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.findRealtorBtn.Size = new System.Drawing.Size(193, 22);
             this.findRealtorBtn.Text = "Find...";
+            this.findRealtorBtn.Click += new System.EventHandler(this.findRealtorBtn_Click);
             // 
             // toolStripSeparator3
             // 
@@ -285,20 +266,16 @@ namespace SurveyManager
             | System.Windows.Forms.Keys.R)));
             this.newRealtorBtn.Size = new System.Drawing.Size(193, 22);
             this.newRealtorBtn.Text = "New...";
-            // 
-            // editRealtorBtn
-            // 
-            this.editRealtorBtn.Image = global::SurveyManager.Properties.Resources.edit;
-            this.editRealtorBtn.Name = "editRealtorBtn";
-            this.editRealtorBtn.Size = new System.Drawing.Size(193, 22);
-            this.editRealtorBtn.Text = "Edit...";
+            this.newRealtorBtn.Click += new System.EventHandler(this.newRealtorBtn_Click);
             // 
             // viewRealtorsBtn
             // 
             this.viewRealtorsBtn.Image = global::SurveyManager.Properties.Resources.view;
             this.viewRealtorsBtn.Name = "viewRealtorsBtn";
+            this.viewRealtorsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
             this.viewRealtorsBtn.Size = new System.Drawing.Size(193, 22);
             this.viewRealtorsBtn.Text = "View...";
+            this.viewRealtorsBtn.Click += new System.EventHandler(this.viewRealtorsBtn_Click);
             // 
             // titleCompanyToolStripMenuItem
             // 
@@ -306,7 +283,6 @@ namespace SurveyManager
             this.findTitleCompanyBtn,
             this.toolStripSeparator4,
             this.newTitleCompanyBtn,
-            this.editTitleCompanyBtn,
             this.viewTitleCompanyBtn});
             this.titleCompanyToolStripMenuItem.Name = "titleCompanyToolStripMenuItem";
             this.titleCompanyToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
@@ -334,17 +310,11 @@ namespace SurveyManager
             this.newTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
             this.newTitleCompanyBtn.Text = "New...";
             // 
-            // editTitleCompanyBtn
-            // 
-            this.editTitleCompanyBtn.Image = global::SurveyManager.Properties.Resources.edit;
-            this.editTitleCompanyBtn.Name = "editTitleCompanyBtn";
-            this.editTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
-            this.editTitleCompanyBtn.Text = "Edit...";
-            // 
             // viewTitleCompanyBtn
             // 
             this.viewTitleCompanyBtn.Image = global::SurveyManager.Properties.Resources.view;
             this.viewTitleCompanyBtn.Name = "viewTitleCompanyBtn";
+            this.viewTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
             this.viewTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
             this.viewTitleCompanyBtn.Text = "View...";
             // 
@@ -410,7 +380,7 @@ namespace SurveyManager
             this.userManualBtn.Image = global::SurveyManager.Properties.Resources.info;
             this.userManualBtn.Name = "userManualBtn";
             this.userManualBtn.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.userManualBtn.Size = new System.Drawing.Size(169, 22);
+            this.userManualBtn.Size = new System.Drawing.Size(180, 22);
             this.userManualBtn.Text = "User Manual";
             // 
             // mainStatusStrip
@@ -469,7 +439,7 @@ namespace SurveyManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1028, 591);
             this.Controls.Add(this.mainStatusStrip);
             this.Controls.Add(this.menuStrip1);
@@ -502,25 +472,21 @@ namespace SurveyManager
         private System.Windows.Forms.ToolStripMenuItem findSurveyBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem newSurveyBtn;
-        private System.Windows.Forms.ToolStripMenuItem editSurveyBtn;
         private System.Windows.Forms.ToolStripMenuItem viewSurveysBtn;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findClientBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem newClientBtn;
-        private System.Windows.Forms.ToolStripMenuItem editClientBtn;
         private System.Windows.Forms.ToolStripMenuItem viewClientsBtn;
         private System.Windows.Forms.ToolStripMenuItem realtorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findRealtorBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem newRealtorBtn;
-        private System.Windows.Forms.ToolStripMenuItem editRealtorBtn;
         private System.Windows.Forms.ToolStripMenuItem viewRealtorsBtn;
         private System.Windows.Forms.ToolStripMenuItem titleCompanyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findTitleCompanyBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem newTitleCompanyBtn;
-        private System.Windows.Forms.ToolStripMenuItem editTitleCompanyBtn;
         private System.Windows.Forms.ToolStripMenuItem viewTitleCompanyBtn;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportDatabaseBtn;

@@ -1,7 +1,7 @@
 ﻿
-namespace SurveyManager.forms.clientMenu
+namespace SurveyManager.forms.newForms
 {
-    partial class NewClient
+    partial class NewRealtor
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace SurveyManager.forms.clientMenu
             this.clientPropGrid.Size = new System.Drawing.Size(708, 450);
             this.clientPropGrid.TabIndex = 0;
             // 
-            // NewClient
+            // NewRealtor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -50,9 +50,9 @@ namespace SurveyManager.forms.clientMenu
             this.ClientSize = new System.Drawing.Size(708, 450);
             this.Controls.Add(this.clientPropGrid);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "NewClient";
+            this.Name = "NewRealtor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New Client";
+            this.Text = "New Realtor";
             this.Load += new System.EventHandler(this.NewClient_Load);
             this.ResumeLayout(false);
 

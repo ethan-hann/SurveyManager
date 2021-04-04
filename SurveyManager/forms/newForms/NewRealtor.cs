@@ -15,70 +15,67 @@ using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.forms.clientMenu
+namespace SurveyManager.forms.newForms
 {
-    public partial class NewClient : KryptonForm
+    public partial class NewRealtor : KryptonForm
     {
-        private Client client = new Client();
+        private Realtor realtor = new Realtor();
         private bool editMode = false;
 
         public EventHandler StatusUpdate;
 
-        public NewClient(Client c = null)
+        public NewRealtor(Realtor r = null)
         {
             InitializeComponent();
 
-            if (c != null)
+            if (r != null)
             {
                 editMode = true;
-                client = c;
+                realtor = r;
             }
         }
 
         private void NewClient_Load(object sender, EventArgs e)
         {
-            Icon = Icon.FromHandle(Resources.client_16x16.GetHicon());
+            Icon = Icon.FromHandle(Resources.realtor_16x16.GetHicon());
 
-            clientPropGrid.GetAcceptButton().ToolTipText = "Save the client to the database.";
+            clientPropGrid.GetAcceptButton().ToolTipText = "Save the realtor to the database.";
             clientPropGrid.GetClearButton().ToolTipText = "Clear all values and start over.";
 
-            clientPropGrid.GetAcceptButton().Click += SaveClient;
+            clientPropGrid.GetAcceptButton().Click += Save;
             clientPropGrid.GetClearButton().Click += ClearFields;
             
 
-            clientPropGrid.SelectedObject = client;
+            clientPropGrid.SelectedObject = realtor;
         }
 
-        private void SaveClient(object sender, EventArgs e)
+        private void Save(object sender, EventArgs e)
         {
-            client = (Client)clientPropGrid.SelectedObject;
+            realtor = (Realtor)clientPropGrid.SelectedObject;
             DatabaseError clientError;
 
             if (!editMode)
-                clientError = client.Insert();
+                clientError = realtor.Insert();
             else
-                clientError = client.Update();
+                clientError = realtor.Update();
 
             switch (clientError)
             {
-                case DatabaseError.AddressIncomplete:
-                    CMessageBox.Show("Client's address cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                case DatabaseError.RealtorIncomplete:
+                    CMessageBox.Show("Realtor's name, phone number, and company name cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
-                case DatabaseError.ClientIncomplete:
-                    CMessageBox.Show("Client's name and phone number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                case DatabaseError.RealtorInsert:
+                    CMessageBox.Show("Could not create the realtor in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
-                case DatabaseError.AddressInsert:
-                    CMessageBox.Show("Could not create the client's address in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
-                case DatabaseError.ClientInsert:
-                    CMessageBox.Show("Could not create the client in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                case DatabaseError.RealtorUpdate:
+                    CMessageBox.Show("Could not update the realtor's information in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
                 case DatabaseError.NoError:
                 {
                     if (editMode)
-                        StatusUpdate?.Invoke(this, new StatusArgs($"Client {client.Name} updated successfully."));
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Realtor {realtor.Name} updated successfully."));
                     else
-                        StatusUpdate?.Invoke(this, new StatusArgs($"Client {client.Name} created successfully."));
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Realtor {realtor.Name} created successfully."));
                     Close();
                     break;
                 }
@@ -94,8 +91,8 @@ namespace SurveyManager.forms.clientMenu
 
             if (result == DialogResult.Yes)
             {
-                client = new Client();
-                clientPropGrid.SelectedObject = client;
+                realtor = new Realtor();
+                clientPropGrid.SelectedObject = realtor;
             }
             else
                 return;

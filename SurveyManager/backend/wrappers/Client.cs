@@ -8,7 +8,8 @@ namespace SurveyManager.backend.wrappers
     /// <summary>
     /// Defines a survey client.
     /// </summary>
-    public class Client : DatabaseWrapper
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class Client : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; } = 0;
@@ -51,7 +52,7 @@ namespace SurveyManager.backend.wrappers
         /// Checks the name and phone number to ensure they are not the default values.
         /// </summary>
         [Browsable(false)]
-        public bool IsValid
+        public bool IsValidClient
         {
             get
             {
@@ -127,14 +128,10 @@ namespace SurveyManager.backend.wrappers
         public DatabaseError Insert()
         {
             if (ClientAddress.IsEmpty)
-            {
                 return DatabaseError.AddressIncomplete;
-            }
 
-            if (!IsValid)
-            {
+            if (!IsValidClient)
                 return DatabaseError.ClientIncomplete;
-            }
 
             DatabaseError addressError = ClientAddress.Insert();
             if (addressError == DatabaseError.NoError)
@@ -142,14 +139,7 @@ namespace SurveyManager.backend.wrappers
                 int addressID = Database.GetLastRowIDInserted("Address");
                 AddressID = addressID;
 
-                if (Database.InsertClient(this))
-                {
-                    return DatabaseError.NoError;
-                }
-                else
-                {
-                    return DatabaseError.ClientInsert;
-                }
+                return Database.InsertClient(this) ? DatabaseError.NoError : DatabaseError.ClientInsert;
             }
             else
             {
@@ -159,12 +149,21 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Update()
         {
-            return DatabaseError.NoError;
+            if (ClientAddress.IsEmpty)
+                return DatabaseError.AddressIncomplete;
+
+            if (!IsValidClient)
+                return DatabaseError.ClientIncomplete;
+
+            DatabaseError addressError = ClientAddress.Update();
+            return addressError == DatabaseError.NoError ? 
+                (Database.UpdateClient(this) ? DatabaseError.NoError : DatabaseError.ClientUpdate) 
+                : DatabaseError.AddressUpdate;
         }
 
         public DatabaseError Delete()
         {
-            return DatabaseError.NoError;
+            return Database.DeleteClient(this) ? DatabaseError.NoError : DatabaseError.ClientDelete;
         }
 
         public override string ToString()

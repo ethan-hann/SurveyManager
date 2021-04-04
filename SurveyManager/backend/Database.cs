@@ -259,9 +259,9 @@ namespace SurveyManager.backend
                         cmd.CommandText = q;
                         cmd.Transaction = tr;
                         cmd.Parameters.AddWithValue("@0", a.ID);
-                        cmd.Parameters.AddWithValue("@0", a.Street);
-                        cmd.Parameters.AddWithValue("@0", a.City);
-                        cmd.Parameters.AddWithValue("@0", a.ZipCode);
+                        cmd.Parameters.AddWithValue("@1", a.Street);
+                        cmd.Parameters.AddWithValue("@2", a.City);
+                        cmd.Parameters.AddWithValue("@3", a.ZipCode);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -503,7 +503,9 @@ namespace SurveyManager.backend
         public static bool DeleteClient(Client c)
         {
             int affectedRows = 0;
+            int addressRows = 0;
             string q = Queries.BuildQuery(QType.DELETE, "Client", null, null, $"client_id={c.ID}");
+            string addressQ = Queries.BuildQuery(QType.DELETE, "Address", null, null, $"address_id={c.AddressID}");
 
             try
             {
@@ -524,6 +526,19 @@ namespace SurveyManager.backend
                             else
                                 tr.Rollback();
                         }
+
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = addressQ;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            addressRows = cmd.ExecuteNonQuery();
+
+                            if (addressRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
                     }
                     con.Close();
                 }
@@ -533,7 +548,7 @@ namespace SurveyManager.backend
                 return false;
             }
 
-            return affectedRows != 0;
+            return affectedRows != 0 && addressRows != 0;
         }
         #endregion
 
@@ -726,9 +741,10 @@ namespace SurveyManager.backend
                         cmd.CommandType = CommandType.Text;
 
                         cmd.Parameters.AddWithValue("@0", r.Name);
-                        cmd.Parameters.AddWithValue("@1", r.Email);
-                        cmd.Parameters.AddWithValue("@2", r.PhoneNumber);
-                        cmd.Parameters.AddWithValue("@3", r.FaxNumber);
+                        cmd.Parameters.AddWithValue("@1", r.CompanyName);
+                        cmd.Parameters.AddWithValue("@2", r.Email);
+                        cmd.Parameters.AddWithValue("@3", r.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@4", r.FaxNumber);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -763,9 +779,10 @@ namespace SurveyManager.backend
 
                         cmd.Parameters.AddWithValue("@0", r.ID);
                         cmd.Parameters.AddWithValue("@1", r.Name);
-                        cmd.Parameters.AddWithValue("@2", r.Email);
-                        cmd.Parameters.AddWithValue("@3", r.PhoneNumber);
-                        cmd.Parameters.AddWithValue("@4", r.FaxNumber);
+                        cmd.Parameters.AddWithValue("@2", r.CompanyName);
+                        cmd.Parameters.AddWithValue("@3", r.Email);
+                        cmd.Parameters.AddWithValue("@4", r.PhoneNumber);
+                        cmd.Parameters.AddWithValue("@5", r.FaxNumber);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -801,9 +818,10 @@ namespace SurveyManager.backend
                             {
                                 ID = reader.GetInt32(0),
                                 Name = reader.GetString(1),
-                                Email = reader.GetString(2),
-                                PhoneNumber = reader.GetString(3),
-                                FaxNumber = reader.GetString(4)
+                                CompanyName = reader.GetString(2),
+                                Email = reader.GetString(3),
+                                PhoneNumber = reader.GetString(4),
+                                FaxNumber = reader.GetString(5)
                             };
                         }
                     }
@@ -834,9 +852,10 @@ namespace SurveyManager.backend
                                 {
                                     ID = reader.GetInt32(0),
                                     Name = reader.GetString(1),
-                                    Email = reader.GetString(2),
-                                    PhoneNumber = reader.GetString(3),
-                                    FaxNumber = reader.GetString(4)
+                                    CompanyName = reader.GetString(2),
+                                    Email = reader.GetString(3),
+                                    PhoneNumber = reader.GetString(4),
+                                    FaxNumber = reader.GetString(5)
                                 };
                                 realtors.Add(r);
                             }

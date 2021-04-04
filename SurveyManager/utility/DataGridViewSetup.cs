@@ -51,6 +51,31 @@ namespace SurveyManager.utility
                     grid.AddInternalColumn(clientNameColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 client", XXXItemsText = " clients" }, SortOrder.None, -1, -1);
                     break;
                 }
+
+                case EntityTypes.Realtor:
+                {
+                    DataGridViewColumn realtorIDColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Realtor ID",
+                        Name = "realtorIDColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(realtorIDColumn);
+                    DataGridViewColumn realtorNameColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Realtor Name",
+                        Name = "realtorNameColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(realtorNameColumn);
+                    grid.Columns.AddRange(columnsToAdd.ToArray());
+
+                    grid.AddInternalColumn(realtorIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 realtor", XXXItemsText = " realtors" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(realtorNameColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 realtor", XXXItemsText = " realtors" }, SortOrder.None, -1, -1);
+                    break;
+                }
             }
         }
     }

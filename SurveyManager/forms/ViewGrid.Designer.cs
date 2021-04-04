@@ -33,12 +33,12 @@ namespace SurveyManager.forms
             JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection1 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
             this.dataGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
             this.groupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
-            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnFilter = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnRefresh = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
@@ -82,14 +82,6 @@ namespace SurveyManager.forms
             this.groupBox.Size = new System.Drawing.Size(987, 31);
             this.groupBox.TabIndex = 1;
             // 
-            // propGrid
-            // 
-            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(0, 287);
-            this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(989, 320);
-            this.propGrid.TabIndex = 2;
-            // 
             // bgWorker
             // 
             this.bgWorker.WorkerReportsProgress = true;
@@ -102,6 +94,7 @@ namespace SurveyManager.forms
             // 
             this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loadProgressBar.Location = new System.Drawing.Point(0, 607);
+            this.loadProgressBar.MarqueeAnimationSpeed = 10;
             this.loadProgressBar.Name = "loadProgressBar";
             this.loadProgressBar.Size = new System.Drawing.Size(989, 23);
             this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -144,6 +137,14 @@ namespace SurveyManager.forms
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UniqueName = "193F7B3442034733E7BBC4E91B0F7F8B";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // propGrid
+            // 
+            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propGrid.Location = new System.Drawing.Point(0, 287);
+            this.propGrid.Name = "propGrid";
+            this.propGrid.Size = new System.Drawing.Size(989, 320);
+            this.propGrid.TabIndex = 2;
             // 
             // ViewGrid
             // 

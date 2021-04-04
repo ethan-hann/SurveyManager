@@ -2,9 +2,9 @@
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms;
-using SurveyManager.forms.clientMenu;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
+using SurveyManager.forms.newForms;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -56,6 +56,16 @@ namespace SurveyManager
 
             //Set main form
             RuntimeVars.Instance.MainForm = this;
+
+            //Change the color of the MDI Client area to be the same as the form.
+            foreach (Control ctl in Controls)
+            {
+                try
+                {
+                    MdiClient ctlClient = (MdiClient)ctl;
+                    ctlClient.BackColor = BackColor;
+                } catch (InvalidCastException) { }
+            }
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -184,11 +194,6 @@ namespace SurveyManager
             ncForm.Show();
         }
 
-        private void editClientBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
             ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Client, Icon.FromHandle(Resources.client_16x16.GetHicon()), "View Clients");
@@ -200,6 +205,36 @@ namespace SurveyManager
         #endregion
 
         #region Realtor Menu
+        private void findRealtorBtn_Click(object sender, EventArgs e)
+        {
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("phone_number", "Phone #"),
+                new DBMap("email_address", "Email"),
+                new DBMap("fax_number", "Fax #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
+            filter.FilterDone += ProcessRealtorSearch;
+            filter.Show();
+        }
+
+        private void newRealtorBtn_Click(object sender, EventArgs e)
+        {
+            NewRealtor nrForm = new NewRealtor();
+            nrForm.MdiParent = this;
+            nrForm.StatusUpdate += ChangeStatusText;
+            nrForm.Show();
+        }
+
+        private void viewRealtorsBtn_Click(object sender, EventArgs e)
+        {
+            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Realtor, Icon.FromHandle(Resources.realtor_16x16.GetHicon()), "View Realtors");
+            vgForm.MdiParent = this;
+            vgForm.StatusUpdate += ChangeStatusText;
+            vgForm.Show();
+        }
         #endregion
 
         #region Title Company Menu
@@ -271,6 +306,22 @@ namespace SurveyManager
                 results.Show();
             }
         }
+
+        private void ProcessRealtorSearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                List<Realtor> realtors = new List<Realtor>();
+                foreach (DataRow row in args.Results.Rows)
+                {
+                    realtors.Add(ProcessDataTable.GetRealtor(row));
+                }
+
+                ViewObjects results = new ViewObjects(args.Results, realtors.ToArray(), "Name", "name", "Realtor Results");
+                results.MdiParent = this;
+                results.Show();
+            }
+        }
         #endregion
 
         #region Getters and Setters
@@ -279,5 +330,7 @@ namespace SurveyManager
             return office2013_edited;
         }
         #endregion
+
+        
     }
 }
