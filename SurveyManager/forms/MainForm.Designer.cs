@@ -250,6 +250,7 @@ namespace SurveyManager
             this.viewClientsBtn.Name = "viewClientsBtn";
             this.viewClientsBtn.Size = new System.Drawing.Size(193, 22);
             this.viewClientsBtn.Text = "View...";
+            this.viewClientsBtn.Click += new System.EventHandler(this.viewClientsBtn_Click);
             // 
             // realtorToolStripMenuItem
             // 

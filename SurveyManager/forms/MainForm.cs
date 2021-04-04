@@ -183,6 +183,17 @@ namespace SurveyManager
             ncForm.StatusUpdate += ChangeStatusText;
             ncForm.Show();
         }
+
+        private void editClientBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void viewClientsBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         #endregion
 
         #region Realtor Menu
@@ -265,10 +276,5 @@ namespace SurveyManager
             return office2013_edited;
         }
         #endregion
-
-        private void editClientBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

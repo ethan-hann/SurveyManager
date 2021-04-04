@@ -277,7 +277,7 @@ namespace SurveyManager.forms.dialogs
             this.MinimizeBox = false;
             this.Name = "AdvancedFilter";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.TopMost = true;
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.AdvancedFilter_HelpRequested);
             this.flowLayoutPanel1.ResumeLayout(false);

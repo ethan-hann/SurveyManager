@@ -41,27 +41,6 @@ namespace SurveyManager.forms
 
             lbResults.DataSource = tableResults;
             lbResults.DisplayMember = displayMember;
-
-            btnSaveChanges.Click += SaveClick;
-            btnClearChanges.Click += ClearClick;
-
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            DataView dv = tableResults.DefaultView;
-
-            dv.RowFilter = $"{rowFilterColumn} LIKE '%{txtSearch.Text}%'";
-        }
-
-        private void ClearClick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SaveClick(object sender, EventArgs e)
-        {
-            
         }
 
         private void lbResults_SelectedIndexChanged(object sender, EventArgs e)
