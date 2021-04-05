@@ -129,6 +129,14 @@ namespace SurveyManager.backend
         public static DataTable ExecuteFilter(string query)
         {
             DataTable dt = new DataTable();
+
+            if (query.Equals("") || query.Equals(string.Empty))
+            {
+                dt.Columns.Add("MySQL Error");
+                dt.Rows.Add("Query is empty!");
+                return dt;
+            }
+
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
                 con.Open();

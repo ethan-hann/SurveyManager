@@ -29,106 +29,118 @@ namespace SurveyManager.forms.databaseMenu
         /// </summary>
         private void InitializeComponent()
         {
-            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection2 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
-            this.txtQuery = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.kryptonHeaderGroup1 = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
-            this.btnExecuteQuery = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
-            this.btnSqlHelp = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
-            this.resultsGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1.Panel)).BeginInit();
-            this.kryptonHeaderGroup1.Panel.SuspendLayout();
-            this.kryptonHeaderGroup1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultsGrid)).BeginInit();
+            this.navigator = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.pgOne = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.btnAddNewPage = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.SqlControl = new SurveyManager.forms.databaseMenu.SqlControl();
+            this.rightClickContext = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.navigator)).BeginInit();
+            this.navigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pgOne)).BeginInit();
+            this.pgOne.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtQuery
+            // navigator
             // 
-            this.txtQuery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtQuery.Location = new System.Drawing.Point(0, 0);
-            this.txtQuery.Name = "txtQuery";
-            this.txtQuery.Size = new System.Drawing.Size(720, 130);
-            this.txtQuery.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuery.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtQuery.TabIndex = 0;
-            this.txtQuery.Text = "";
+            this.navigator.Bar.TabBorderStyle = ComponentFactory.Krypton.Toolkit.TabBorderStyle.SlantEqualFar;
+            this.navigator.Bar.TabStyle = ComponentFactory.Krypton.Toolkit.TabStyle.Dock;
+            this.navigator.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
+            this.navigator.Button.NextButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.SelectPage;
+            this.navigator.Button.NextButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.ShowEnabled;
+            this.navigator.Button.PreviousButtonAction = ComponentFactory.Krypton.Navigator.DirectionButtonAction.SelectPage;
+            this.navigator.Button.PreviousButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.ShowEnabled;
+            this.navigator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigator.Location = new System.Drawing.Point(0, 0);
+            this.navigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navigator.Name = "navigator";
+            this.navigator.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.pgOne});
+            this.navigator.SelectedIndex = 0;
+            this.navigator.Size = new System.Drawing.Size(737, 453);
+            this.navigator.TabIndex = 0;
+            this.navigator.CloseAction += new System.EventHandler<ComponentFactory.Krypton.Navigator.CloseActionEventArgs>(this.navigator_CloseAction);
             // 
-            // kryptonHeaderGroup1
+            // pgOne
             // 
-            this.kryptonHeaderGroup1.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
-            this.btnExecuteQuery,
-            this.btnSqlHelp});
-            this.kryptonHeaderGroup1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonHeaderGroup1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonHeaderGroup1.Name = "kryptonHeaderGroup1";
+            this.pgOne.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.pgOne.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
+            this.btnAddNewPage});
+            this.pgOne.Controls.Add(this.SqlControl);
+            this.pgOne.Flags = 63994;
+            this.pgOne.KryptonContextMenu = this.rightClickContext;
+            this.pgOne.LastVisibleSet = true;
+            this.pgOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pgOne.MinimumSize = new System.Drawing.Size(50, 61);
+            this.pgOne.Name = "pgOne";
+            this.pgOne.Size = new System.Drawing.Size(735, 426);
+            this.pgOne.Text = "Query";
+            this.pgOne.ToolTipTitle = "Page ToolTip";
+            this.pgOne.UniqueName = "366DD626044A4C4DE5856332DAF0DCF5";
             // 
-            // kryptonHeaderGroup1.Panel
+            // btnAddNewPage
             // 
-            this.kryptonHeaderGroup1.Panel.Controls.Add(this.txtQuery);
-            this.kryptonHeaderGroup1.Size = new System.Drawing.Size(722, 183);
-            this.kryptonHeaderGroup1.TabIndex = 1;
-            this.kryptonHeaderGroup1.ValuesPrimary.Heading = "Enter your SQL query below:";
-            this.kryptonHeaderGroup1.ValuesPrimary.Image = global::SurveyManager.Properties.Resources.sql_16x16;
-            this.kryptonHeaderGroup1.ValuesSecondary.Heading = "Run a custom query against the database and show the results below.";
+            this.btnAddNewPage.Image = global::SurveyManager.Properties.Resources.add_16x16;
+            this.btnAddNewPage.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.ButtonSpec;
+            this.btnAddNewPage.UniqueName = "E195E8349F3C4FA211AD242DFAD709B0";
+            this.btnAddNewPage.Click += new System.EventHandler(this.btnAddNewPage_Click);
             // 
-            // btnExecuteQuery
+            // SqlControl
             // 
-            this.btnExecuteQuery.Image = global::SurveyManager.Properties.Resources.execute_16x16;
-            this.btnExecuteQuery.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.NavigatorStack;
-            this.btnExecuteQuery.Text = "Execute";
-            this.btnExecuteQuery.ToolTipBody = "Execute the SQL query against the database.";
-            this.btnExecuteQuery.ToolTipTitle = "Execute";
-            this.btnExecuteQuery.UniqueName = "D2B0B7114BAE4CD70FBB632603785179";
-            this.btnExecuteQuery.Click += new System.EventHandler(this.btnExecuteQuery_Click);
+            this.SqlControl.AutoSize = true;
+            this.SqlControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SqlControl.Location = new System.Drawing.Point(0, 0);
+            this.SqlControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SqlControl.Name = "SqlControl";
+            this.SqlControl.Size = new System.Drawing.Size(735, 426);
+            this.SqlControl.TabIndex = 0;
             // 
-            // btnSqlHelp
+            // rightClickContext
             // 
-            this.btnSqlHelp.Image = global::SurveyManager.Properties.Resources.info_16x16;
-            this.btnSqlHelp.Text = "SQL Help";
-            this.btnSqlHelp.ToolTipBody = "Takes you to a web page where you can view help about basic SQL commands.";
-            this.btnSqlHelp.ToolTipTitle = "SQL Help";
-            this.btnSqlHelp.UniqueName = "17FB047BEFA14FEF5080A263F9A06CC9";
+            this.rightClickContext.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems1});
+            this.rightClickContext.Closed += new System.Windows.Forms.ToolStripDropDownClosedEventHandler(this.rightClickContext_Closed);
             // 
-            // resultsGrid
+            // kryptonContextMenuItems1
             // 
-            this.resultsGrid.AllowUserToAddRows = false;
-            this.resultsGrid.AllowUserToDeleteRows = false;
-            this.resultsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.resultsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resultsGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
-            this.resultsGrid.GroupCollection = outlookGridGroupCollection2;
-            this.resultsGrid.Location = new System.Drawing.Point(0, 183);
-            this.resultsGrid.Name = "resultsGrid";
-            this.resultsGrid.PreviousSelectedGroupRow = -1;
-            this.resultsGrid.ReadOnly = true;
-            this.resultsGrid.Size = new System.Drawing.Size(722, 161);
-            this.resultsGrid.TabIndex = 2;
+            this.kryptonContextMenuItems1.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem1});
+            // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Image = global::SurveyManager.Properties.Resources.edit_16x16;
+            this.kryptonContextMenuItem1.Text = "Edit Title";
             // 
             // SQLQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 344);
-            this.Controls.Add(this.resultsGrid);
-            this.Controls.Add(this.kryptonHeaderGroup1);
+            this.ClientSize = new System.Drawing.Size(737, 453);
+            this.Controls.Add(this.navigator);
+            this.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SQLQuery";
-            this.Text = "SQLQuery";
+            this.ShowIcon = false;
+            this.Text = "Custom Queries";
             this.Load += new System.EventHandler(this.SQLQuery_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1.Panel)).EndInit();
-            this.kryptonHeaderGroup1.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1)).EndInit();
-            this.kryptonHeaderGroup1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.resultsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigator)).EndInit();
+            this.navigator.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pgOne)).EndInit();
+            this.pgOne.ResumeLayout(false);
+            this.pgOne.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtQuery;
-        private ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup kryptonHeaderGroup1;
-        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid resultsGrid;
-        private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnExecuteQuery;
-        private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnSqlHelp;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator navigator;
+        private ComponentFactory.Krypton.Navigator.KryptonPage pgOne;
+        private SurveyManager.forms.databaseMenu.SqlControl SqlControl;
+        private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnAddNewPage;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu rightClickContext;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
     }
 }

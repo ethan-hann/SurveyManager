@@ -48,3 +48,5 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Survey
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.pdb
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.newForms.NewTitleCompany.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.databaseMenu.SQLQuery.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.AboutBox.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.databaseMenu.SqlControl.resources

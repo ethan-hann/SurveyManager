@@ -38,5 +38,15 @@ namespace SurveyManager.utility
                 StatusString = status;
             }
         }
+
+        public class QueryRanArgs : EventArgs
+        {
+            public string TableName { get; internal set; }
+
+            public QueryRanArgs(string tableName)
+            {
+                TableName = tableName;
+            }
+        }
     }
 }

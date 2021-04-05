@@ -136,11 +136,23 @@
     <Compile Include="forms\databaseMenu\DBConnection.Designer.cs">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\databaseMenu\SqlControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\databaseMenu\SqlControl.Designer.cs">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\databaseMenu\SQLQuery.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\databaseMenu\SQLQuery.Designer.cs">
       <DependentUpon>SQLQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\AdvancedFilter.cs">
       <SubType>Form</SubType>
@@ -222,8 +234,14 @@
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\databaseMenu\SqlControl.resx">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\databaseMenu\SQLQuery.resx">
       <DependentUpon>SQLQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
@@ -429,6 +447,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

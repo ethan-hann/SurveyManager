@@ -76,12 +76,12 @@ namespace SurveyManager
         #region File Menu
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)
         {
-
+            new AboutBox().ShowDialog();
         }
 
         private void checkForUpdatesBtn_Click(object sender, EventArgs e)
@@ -315,10 +315,10 @@ namespace SurveyManager
 
         private void sqlQueryBtn_Click(object sender, EventArgs e)
         {
-            SQLQuery ncForm = new SQLQuery();
-            ncForm.MdiParent = this;
-            ncForm.StatusUpdate += ChangeStatusText;
-            ncForm.Show();
+            SQLQuery sqForm = new SQLQuery();
+            sqForm.MdiParent = this;
+            sqForm.StatusUpdate += ChangeStatusText;
+            sqForm.Show();
         }
         #endregion
 
