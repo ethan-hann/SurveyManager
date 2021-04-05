@@ -133,6 +133,16 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("delete_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doc {
             get {
                 object obj = ResourceManager.GetObject("doc", resourceCulture);
@@ -246,6 +256,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap export {
             get {
                 object obj = ResourceManager.GetObject("export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file {
+            get {
+                object obj = ResourceManager.GetObject("file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("file_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +576,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap title_company_16x16 {
             get {
                 object obj = ResourceManager.GetObject("title_company_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap txt {
+            get {
+                object obj = ResourceManager.GetObject("txt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap txt_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("txt_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

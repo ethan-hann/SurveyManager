@@ -124,6 +124,7 @@
     <Compile Include="backend\Database.cs" />
     <Compile Include="backend\Queries.cs" />
     <Compile Include="backend\wrappers\Address.cs" />
+    <Compile Include="backend\wrappers\CFile.cs" />
     <Compile Include="backend\wrappers\Client.cs" />
     <Compile Include="backend\wrappers\County.cs" />
     <Compile Include="backend\wrappers\DatabaseWrapper.cs" />
@@ -185,6 +186,12 @@
     </Compile>
     <Compile Include="forms\newForms\NewRealtor.Designer.cs">
       <DependentUpon>NewRealtor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\UploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\UploadFile.Designer.cs">
+      <DependentUpon>UploadFile.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\ViewGrid.cs">
       <SubType>Form</SubType>
@@ -260,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\newForms\NewClient.resx">
       <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
+      <DependentUpon>UploadFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ViewGrid.resx">
       <DependentUpon>ViewGrid.cs</DependentUpon>
@@ -356,7 +366,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="forms\fileMenu\" />
-    <Folder Include="forms\surveyMenu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\db_connection.png" />
@@ -453,6 +462,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

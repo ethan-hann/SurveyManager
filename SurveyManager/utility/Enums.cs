@@ -130,7 +130,23 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when a title company is missing important information.
             /// </summary>
-            TitleCompanyIncomplete
+            TitleCompanyIncomplete,
+            /// <summary>
+            /// Error when inserting file data.
+            /// </summary>
+            FileInsert,
+            /// <summary>
+            /// Error when updating file data.
+            /// </summary>
+            FileUpdate,
+            /// <summary>
+            /// Error when deleting file data.
+            /// </summary>
+            FileDelete,
+            /// <summary>
+            /// Error when a file is missing important information.
+            /// </summary>
+            FileIncomplete
         }
 
         /// <summary>
@@ -154,6 +170,46 @@ namespace SurveyManager.utility
             /// Represents a realtor entity.
             /// </summary>
             Realtor
+        }
+
+        public enum FileExtension
+        {
+            /// <summary>
+            /// An AutoCAD drawing file.
+            /// </summary>
+            DWG,
+            /// <summary>
+            /// A plain text file.
+            /// </summary>
+            TXT,
+            /// <summary>
+            /// A legacy word document.
+            /// </summary>
+            DOC,
+            /// <summary>
+            /// A word document.
+            /// </summary>
+            DOCX,
+            /// <summary>
+            /// A PDF document.
+            /// </summary>
+            PDF,
+            /// <summary>
+            /// A portable graphics picture.
+            /// </summary>
+            PNG,
+            /// <summary>
+            /// A picture file.
+            /// </summary>
+            JPG,
+            /// <summary>
+            /// An alternate form of a JPG file.
+            /// </summary>
+            JPEG,
+            /// <summary>
+            /// Represents no file extension.
+            /// </summary>
+            NONE
         }
     }
 }

@@ -5,6 +5,7 @@ using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.newForms;
+using SurveyManager.forms.surveyMenu;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -76,7 +77,10 @@ namespace SurveyManager
         #region File Menu
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-            
+            UploadFile fDlg = new UploadFile();
+            fDlg.StatusUpdate += ChangeStatusText;
+            fDlg.MdiParent = this;
+            fDlg.Show();
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)

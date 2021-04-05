@@ -100,6 +100,7 @@ namespace SurveyManager.forms.databaseMenu
                 navigator.Pages[e.Index - 1].ButtonSpecs.Add(newButton);
             }
         }
+
         private void rightClickContext_Closed(object sender, ToolStripDropDownClosedEventArgs e)
         {
             if (e.CloseReason == ToolStripDropDownCloseReason.ItemClicked)

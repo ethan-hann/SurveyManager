@@ -1100,5 +1100,241 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
+        #region Files
+
+        /// <summary>
+        /// Attempts to insert a new record into the File table. If the insert could not be completed, the transaction is rolled back
+        /// and no data is committed to the database.
+        /// </summary>
+        /// <param name="file">The <see cref="CFile"/> object to insert</param>
+        /// <returns>True if the record inserted successfully; False otherwise</returns>
+        public static bool InsertFile(CFile file)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("File");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "File", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.Parameters.AddWithValue("@0", file.FileName);
+                        cmd.Parameters.AddWithValue("@1", file.Description);
+                        cmd.Parameters.AddWithValue("@2", file.Extension);
+                        cmd.Parameters.AddWithValue("@3", file.Contents);
+                        cmd.Parameters.AddWithValue("@4", file.FileEncoding.CodePage);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                        {
+                            tr.Commit();
+                        }
+                        else
+                        {
+                            tr.Rollback();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        /// <summary>
+        /// Update the <see cref="CFile"/> object in the database.
+        /// </summary>
+        /// <param name="file">The file to update.</param>
+        /// <returns>True if the update completed successfully. False otherwise.</returns>
+        public static bool UpdateFile(CFile file)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("File");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        string q = Queries.BuildQuery(QType.UPDATE, "File", null, columns, $"id={file.ID}");
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+
+                        cmd.Parameters.AddWithValue("@0", file.ID);
+                        cmd.Parameters.AddWithValue("@1", file.FileName);
+                        cmd.Parameters.AddWithValue("@2", file.Description);
+                        cmd.Parameters.AddWithValue("@3", file.Extension);
+                        cmd.Parameters.AddWithValue("@4", file.Contents);
+
+
+                        cmd.Connection = con;
+                        affectedRows += cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                        {
+                            tr.Commit();
+                        }
+                        else
+                        {
+                            tr.Rollback();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        /// <summary>
+        /// Retrieve a single <see cref="CFile"/> record from the database.
+        /// </summary>
+        /// <param name="id">The id of the file record.</param>
+        /// <returns>A single <see cref="CFile"/> object representing the file record or <c>null</c> if no file was found</returns>
+        public static CFile GetFile(int id)
+        {
+            CFile f = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Files", null, null, $"id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            try
+                            {
+                                reader.Read();
+                                f = new CFile
+                                {
+                                    ID = reader.GetInt32(0),
+                                    FileName = reader.GetString(1),
+                                    Description = reader.GetString(2),
+                                    Extension = (FileExtension)(Enum.Parse(typeof(FileExtension), reader.GetString(3))),
+                                    FileEncoding = Encoding.GetEncoding(reader.GetInt32(5))
+                                };
+                                long length = reader.GetBytes(4, 0, null, 0, 0);
+                                byte[] fileContents = new byte[length];
+                                reader.GetBytes(4, 0, fileContents, 0, fileContents.Length);
+                                f.Contents = fileContents;
+                            }
+                            catch (Exception)
+                            {
+                                return null;
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return f;
+        }
+
+        /// <summary>
+        /// Retrieves multiple files from the database based on the supplied ids.
+        /// </summary>
+        /// <param name="ids">A variable length parameter: the list of ids of the file records to retrieve.</param>
+        /// <returns>A <see cref="List{T}"/> of type <see cref="CFile"/> containing the file objects or an empty <see cref="List{T}"/> if no files were found</returns>
+        public static List<CFile> GetFiles(params int[] ids)
+        {
+            List<CFile> files = new List<CFile>();
+            foreach (int id in ids)
+            {
+                CFile f = null;
+                string q = Queries.BuildQuery(QType.SELECT, "File", null, null, $"id={id}");
+
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(q, con))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                try
+                                {
+                                    reader.Read();
+                                    f = new CFile
+                                    {
+                                        ID = reader.GetInt32(0),
+                                        FileName = reader.GetString(1),
+                                        Description = reader.GetString(2),
+                                        Extension = (FileExtension)(Enum.Parse(typeof(FileExtension), reader.GetString(3))),
+                                        FileEncoding = Encoding.GetEncoding(reader.GetInt32(5))
+                                    };
+                                    long length = reader.GetBytes(4, 0, null, 0, 0);
+                                    byte[] fileContents = new byte[length];
+                                    reader.GetBytes(4, 0, fileContents, 0, fileContents.Length);
+                                    f.Contents = fileContents;
+                                }
+                                catch (Exception)
+                                {
+                                    return files;
+                                }
+                            }
+                        }
+                    }
+                    con.Close();
+                }
+                files.Add(f);
+            }
+            return files;
+        }
+
+        /// <summary>
+        /// Attempts to delete a file record from the database.
+        /// </summary>
+        /// <param name="file">The file to delete.</param>
+        /// <returns>True if the deleting was successfull; False otherwise.</returns>
+        public static bool DeleteFile(CFile file)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "File", null, null, $"id={file.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
     }
 }
