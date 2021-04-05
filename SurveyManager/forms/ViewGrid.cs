@@ -164,6 +164,11 @@ namespace SurveyManager.forms
                     PopulateRealtorGrid(LoadRealtors());
                     break;
                 }
+                case EntityTypes.TitleCompany:
+                {
+                    PopulateTitleCompanyGrid(LoadTitleCompanies());
+                    break;
+                }
             }
         }
 
@@ -176,7 +181,10 @@ namespace SurveyManager.forms
         {
             if (!Disposing && !IsDisposed)
             {
-                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
+                if (typeOfData == EntityTypes.TitleCompany)
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Title Companies loaded."));
+                else
+                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
 
                 dataGrid.SuspendLayout();
                 dataGrid.ClearInternalRows();
@@ -283,6 +291,43 @@ namespace SurveyManager.forms
                     r.Name
                 });
                 row.Tag = r;
+                rows.Add(row);
+            }
+        }
+        #endregion
+
+        #region Title Company
+        private List<TitleCompany> LoadTitleCompanies()
+        {
+            List<TitleCompany> companies = new List<TitleCompany>();
+            if (lastFilterResults == null)
+            {
+                companies = Database.GetTitleCompanies();
+            }
+            else
+            {
+                foreach (DataRow dataRow in lastFilterResults.Rows)
+                {
+                    companies.Add(ProcessDataTable.GetTitleCompany(dataRow));
+                }
+                lastFilterResults = null;
+            }
+            return companies;
+        }
+
+        private void PopulateTitleCompanyGrid(List<TitleCompany> companies)
+        {
+            OutlookGridRow row;
+            rows = new List<OutlookGridRow>();
+
+            foreach (TitleCompany c in companies)
+            {
+                row = new OutlookGridRow();
+                row.CreateCells(dataGrid, new object[] {
+                    c.ID,
+                    c.Name
+                });
+                row.Tag = c;
                 rows.Add(row);
             }
         }

@@ -295,6 +295,7 @@ namespace SurveyManager
             this.findTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.findTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
             this.findTitleCompanyBtn.Text = "Find...";
+            this.findTitleCompanyBtn.Click += new System.EventHandler(this.findTitleCompanyBtn_Click);
             // 
             // toolStripSeparator4
             // 
@@ -309,6 +310,7 @@ namespace SurveyManager
             | System.Windows.Forms.Keys.T)));
             this.newTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
             this.newTitleCompanyBtn.Text = "New...";
+            this.newTitleCompanyBtn.Click += new System.EventHandler(this.newTitleCompanyBtn_Click);
             // 
             // viewTitleCompanyBtn
             // 
@@ -317,6 +319,7 @@ namespace SurveyManager
             this.viewTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
             this.viewTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
             this.viewTitleCompanyBtn.Text = "View...";
+            this.viewTitleCompanyBtn.Click += new System.EventHandler(this.viewTitleCompanyBtn_Click);
             // 
             // databaseToolStripMenuItem
             // 
@@ -366,6 +369,7 @@ namespace SurveyManager
             this.sqlQueryBtn.ShortcutKeys = System.Windows.Forms.Keys.F2;
             this.sqlQueryBtn.Size = new System.Drawing.Size(251, 22);
             this.sqlQueryBtn.Text = "SQL Query...";
+            this.sqlQueryBtn.Click += new System.EventHandler(this.sqlQueryBtn_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -380,7 +384,7 @@ namespace SurveyManager
             this.userManualBtn.Image = global::SurveyManager.Properties.Resources.info;
             this.userManualBtn.Name = "userManualBtn";
             this.userManualBtn.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.userManualBtn.Size = new System.Drawing.Size(180, 22);
+            this.userManualBtn.Size = new System.Drawing.Size(169, 22);
             this.userManualBtn.Text = "User Manual";
             // 
             // mainStatusStrip

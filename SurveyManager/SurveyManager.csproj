@@ -136,6 +136,12 @@
     <Compile Include="forms\databaseMenu\DBConnection.Designer.cs">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\databaseMenu\SQLQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\databaseMenu\SQLQuery.Designer.cs">
+      <DependentUpon>SQLQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\AdvancedFilter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     </Compile>
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\newForms\NewTitleCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\newForms\NewTitleCompany.Designer.cs">
+      <DependentUpon>NewTitleCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\newForms\NewRealtor.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,9 @@
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\databaseMenu\SQLQuery.resx">
+      <DependentUpon>SQLQuery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\newForms\NewTitleCompany.resx">
+      <DependentUpon>NewTitleCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\newForms\NewRealtor.resx">
       <DependentUpon>NewRealtor.cs</DependentUpon>
@@ -387,6 +405,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\success_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwg_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\execute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\execute_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

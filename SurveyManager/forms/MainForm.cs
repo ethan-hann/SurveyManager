@@ -238,6 +238,36 @@ namespace SurveyManager
         #endregion
 
         #region Title Company Menu
+        private void findTitleCompanyBtn_Click(object sender, EventArgs e)
+        {
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("associate_name", "Associate's Name"),
+                new DBMap("associate_email", "Associate's Email"),
+                new DBMap("office_number", "Office #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
+            filter.FilterDone += ProcessTitleCompanySearch;
+            filter.Show();
+        }
+
+        private void newTitleCompanyBtn_Click(object sender, EventArgs e)
+        {
+            NewTitleCompany ntForm = new NewTitleCompany();
+            ntForm.MdiParent = this;
+            ntForm.StatusUpdate += ChangeStatusText;
+            ntForm.Show();
+        }
+
+        private void viewTitleCompanyBtn_Click(object sender, EventArgs e)
+        {
+            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.TitleCompany, Icon.FromHandle(Resources.title_company_16x16.GetHicon()), "View Title Companies");
+            vgForm.MdiParent = this;
+            vgForm.StatusUpdate += ChangeStatusText;
+            vgForm.Show();
+        }
         #endregion
 
         #region Database Menu
@@ -282,6 +312,14 @@ namespace SurveyManager
                 }
             }
         }
+
+        private void sqlQueryBtn_Click(object sender, EventArgs e)
+        {
+            SQLQuery ncForm = new SQLQuery();
+            ncForm.MdiParent = this;
+            ncForm.StatusUpdate += ChangeStatusText;
+            ncForm.Show();
+        }
         #endregion
 
         #region Event Handlers
@@ -322,6 +360,22 @@ namespace SurveyManager
                 results.Show();
             }
         }
+
+        private void ProcessTitleCompanySearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                List<TitleCompany> companies = new List<TitleCompany>();
+                foreach (DataRow row in args.Results.Rows)
+                {
+                    companies.Add(ProcessDataTable.GetTitleCompany(row));
+                }
+
+                ViewObjects results = new ViewObjects(args.Results, companies.ToArray(), "Name", "name", "Title Company Results");
+                results.MdiParent = this;
+                results.Show();
+            }
+        }
         #endregion
 
         #region Getters and Setters
@@ -329,8 +383,8 @@ namespace SurveyManager
         {
             return office2013_edited;
         }
-        #endregion
 
-        
+
+        #endregion
     }
 }

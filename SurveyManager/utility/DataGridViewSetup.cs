@@ -76,6 +76,31 @@ namespace SurveyManager.utility
                     grid.AddInternalColumn(realtorNameColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 realtor", XXXItemsText = " realtors" }, SortOrder.None, -1, -1);
                     break;
                 }
+
+                case EntityTypes.TitleCompany:
+                {
+                    DataGridViewColumn companyIDColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Company ID",
+                        Name = "companyIDColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(companyIDColumn);
+                    DataGridViewColumn companyNameColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Company Name",
+                        Name = "companyNameColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(companyNameColumn);
+                    grid.Columns.AddRange(columnsToAdd.ToArray());
+
+                    grid.AddInternalColumn(companyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 title company", XXXItemsText = " title companies" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(companyNameColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 title company", XXXItemsText = " title companies" }, SortOrder.None, -1, -1);
+                    break;
+                }
             }
         }
     }

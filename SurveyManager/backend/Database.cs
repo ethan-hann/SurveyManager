@@ -132,16 +132,25 @@ namespace SurveyManager.backend
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
                 con.Open();
-                using (MySqlCommand cmd = new MySqlCommand(query, con))
+                try
                 {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
-                        if (reader.HasRows)
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            dt.Load(reader);
+                            if (reader.HasRows)
+                            {
+                                dt.Load(reader);
+                            }
                         }
                     }
+                } catch (MySqlException ex)
+                {
+                    dt.Columns.Add("MySQL Error");
+                    dt.Columns.Add("Error Code");
+                    dt.Rows.Add(ex.Message, ex.ErrorCode);
                 }
+                
                 con.Close();
             }
             return dt;
