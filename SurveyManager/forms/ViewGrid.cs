@@ -45,6 +45,7 @@ namespace SurveyManager.forms
         {
             propGrid.GetAcceptButton().Click += SaveData;
             propGrid.GetAcceptButton().ToolTipText = "Save the object's properties to the database.";
+            propGrid.GetClearButton().Visible = false;
 
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);

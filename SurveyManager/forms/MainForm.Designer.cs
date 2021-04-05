@@ -89,7 +89,7 @@ namespace SurveyManager
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1584, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -393,17 +393,17 @@ namespace SurveyManager
             this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus,
             this.lblStatusDate});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 568);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 838);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.mainStatusStrip.Size = new System.Drawing.Size(1028, 23);
+            this.mainStatusStrip.Size = new System.Drawing.Size(1584, 23);
             this.mainStatusStrip.SizingGrip = false;
             this.mainStatusStrip.TabIndex = 3;
             // 
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(948, 18);
+            this.lblStatus.Size = new System.Drawing.Size(1504, 18);
             this.lblStatus.Spring = true;
             this.lblStatus.Text = "Ready";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,7 +444,7 @@ namespace SurveyManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1028, 591);
+            this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.mainStatusStrip);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
