@@ -3,7 +3,9 @@ using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Drawing;
+using System.Drawing.Design;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,6 +30,7 @@ namespace SurveyManager.backend.wrappers
         [Description("A description explaining the contents of the file.")]
         [Browsable(true)]
         [DisplayName("Description")]
+        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
         public string Description { get; set; } = "";
 
         [Browsable(false)]

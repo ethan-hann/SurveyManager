@@ -37,6 +37,8 @@ namespace SurveyManager.forms.surveyMenu
             this.propGrid = new System.Windows.Forms.PropertyGrid();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.fileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.bgWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -48,7 +50,7 @@ namespace SurveyManager.forms.surveyMenu
             this.lbFileNames.Location = new System.Drawing.Point(0, 0);
             this.lbFileNames.Name = "lbFileNames";
             this.lbFileNames.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lbFileNames.Size = new System.Drawing.Size(297, 461);
+            this.lbFileNames.Size = new System.Drawing.Size(297, 438);
             this.lbFileNames.TabIndex = 0;
             this.lbFileNames.SelectedIndexChanged += new System.EventHandler(this.lbFileNames_SelectedIndexChanged);
             // 
@@ -59,7 +61,7 @@ namespace SurveyManager.forms.surveyMenu
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(297, 498);
+            this.kryptonPanel1.Size = new System.Drawing.Size(297, 475);
             this.kryptonPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -69,7 +71,7 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1.Controls.Add(this.btnAddFile);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 461);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 438);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(297, 37);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -99,7 +101,7 @@ namespace SurveyManager.forms.surveyMenu
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propGrid.Location = new System.Drawing.Point(297, 0);
             this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(547, 498);
+            this.propGrid.Size = new System.Drawing.Size(547, 475);
             this.propGrid.TabIndex = 2;
             this.propGrid.ToolbarVisible = false;
             // 
@@ -119,6 +121,22 @@ namespace SurveyManager.forms.surveyMenu
             this.fileDialog.Multiselect = true;
             this.fileDialog.Title = "Select files to upload";
             // 
+            // progressBar
+            // 
+            this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar.Location = new System.Drawing.Point(0, 475);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(844, 23);
+            this.progressBar.TabIndex = 3;
+            // 
+            // bgWorker
+            // 
+            this.bgWorker.WorkerReportsProgress = true;
+            this.bgWorker.WorkerSupportsCancellation = true;
+            this.bgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker_DoWork);
+            this.bgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgWorker_ProgressChanged);
+            this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
+            // 
             // UploadFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,10 +146,12 @@ namespace SurveyManager.forms.surveyMenu
             this.ClientSize = new System.Drawing.Size(844, 498);
             this.Controls.Add(this.propGrid);
             this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.progressBar);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UploadFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Upload Files";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UploadFile_FormClosed);
             this.Load += new System.EventHandler(this.UploadFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
@@ -150,5 +170,7 @@ namespace SurveyManager.forms.surveyMenu
         private System.Windows.Forms.PropertyGrid propGrid;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnSave;
         private System.Windows.Forms.OpenFileDialog fileDialog;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.ComponentModel.BackgroundWorker bgWorker;
     }
 }
