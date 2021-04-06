@@ -14,8 +14,11 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
-    [TypeConverter(typeof(ExpandableObjectConverter))]
-    public class CFile : ExpandableObjectConverter, DatabaseWrapper
+    /// <summary>
+    /// A class which represents a custom file that can be stored in the database.
+    /// </summary>
+    [TypeConverter(typeof(CFileTypeConverter))]
+    public class CFile : DatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
@@ -48,9 +51,15 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        /// <summary>
+        /// The RAW byte array representing the file's contents.
+        /// </summary>
         [Browsable(false)]
         public byte[] Contents { get; set; }
 
+        /// <summary>
+        /// Get the encoding for this file.
+        /// </summary>
         [Browsable(false)]
         public Encoding FileEncoding { get; set; } = Encoding.Default;
 
@@ -66,16 +75,22 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        /// <summary>
+        /// Get a value indicating if this is a valid file and thus ready to be saved to the database.
+        /// <para>A valid file is one whose contents are not null or empty and has a file name and extension.</para>
+        /// </summary>
         [Browsable(false)]
         public bool IsValidFile
         {
             get
             {
-                return Contents.Length > 0 && Extension != FileExtension.NONE && FileName.Length > 0;
+                return Contents != null && (Contents.Length > 0 && Extension != FileExtension.NONE && FileName.Length > 0);
             }
         }
 
+        [Category("File Contents")]
         [Browsable(false)]
+        [DisplayName("Icon")]
         public Bitmap DisplayIcon
         {
             get
@@ -85,21 +100,24 @@ namespace SurveyManager.backend.wrappers
                     switch (Extension)
                     {
                         case FileExtension.DWG:
-                            return Resources.dwg_16x16;
+                        case FileExtension.DXF:
+                        case FileExtension.DWT:
+                        case FileExtension.DXB:
+                            return Resources.dwg_32x32;
                         case FileExtension.PNG:
                         case FileExtension.JPEG:
                         case FileExtension.JPG:
-                            return Resources.png_16x16;
+                            return Resources.png_32x32;
                         case FileExtension.DOC:
                         case FileExtension.DOCX:
-                            return Resources.doc_16x16;
+                            return Resources.doc_32x32;
                         case FileExtension.PDF:
-                            return Resources.pdf_16x16;
+                            return Resources.pdf_32x32;
                         case FileExtension.TXT:
-                            return Resources.txt_16x16;
+                            return Resources.txt_32x32;
                     }
                 }
-                return new Bitmap(16, 16);
+                return Resources.file_32x32;
             }
         }
 
@@ -156,6 +174,11 @@ namespace SurveyManager.backend.wrappers
             Extension = extension;
         }
 
+        /// <summary>
+        /// Reads the contents in <paramref name="path"/> into the <see cref="Contents"/> property.
+        /// </summary>
+        /// <param name="path">The path to the file to read from.</param>
+        /// <returns>True if the file was read successfully; False otherwise.</returns>
         public bool ReadAllBytes(string path)
         {
             try
@@ -164,7 +187,7 @@ namespace SurveyManager.backend.wrappers
                 SetEncoding(path);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -195,12 +218,18 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Insert()
         {
-            throw new NotImplementedException();
+            if (!IsValidFile)
+                return DatabaseError.FileIncomplete;
+
+            return Database.InsertFile(this) ? DatabaseError.NoError : DatabaseError.FileInsert;
         }
 
         public DatabaseError Update()
         {
-            throw new NotImplementedException();
+            if (!IsValidFile)
+                return DatabaseError.FileIncomplete;
+
+            return Database.UpdateFile(this) ? DatabaseError.NoError : DatabaseError.FileUpdate;
         }
     }
 }

@@ -26,11 +26,21 @@ namespace SurveyManager.forms.surveyMenu
         private List<CFile> filesToAdd = new List<CFile>();
         private string currentFileName = "";
 
+        private Thread backgroundThread;
+
         public EventHandler StatusUpdate;
 
-        public UploadFile()
+        /// <summary>
+        /// Occurs whenever the file upload is done and the user clicks the Save button. Simply passes the list of files along to the subscriber of this event.
+        /// </summary>
+        public EventHandler FileUploadDone;
+
+        public UploadFile(List<CFile> files = null)
         {
             InitializeComponent();
+
+            if (files != null)
+                filesToAdd = files;
         }
 
         private void UploadFile_Load(object sender, EventArgs e)
@@ -38,6 +48,12 @@ namespace SurveyManager.forms.surveyMenu
             Icon = Icon.FromHandle(Resources.file_16x16.GetHicon());
 
             btnSave.Click += SaveFiles;
+            btnPreview.Click += PreviewFile;
+
+            if (filesToAdd.Count > 0)
+            {
+                lbFileNames.Items.AddRange(filesToAdd.ToArray());
+            }
         }
 
         private void btnAddFile_Click(object sender, EventArgs e)
@@ -45,7 +61,7 @@ namespace SurveyManager.forms.surveyMenu
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 progressBar.Value = 0;
-                progressBar.Visible = true;
+                tblProgress.Visible = true;
                 progressBar.Maximum = fileDialog.FileNames.Length;
                 bgWorker.RunWorkerAsync();
             }
@@ -53,33 +69,44 @@ namespace SurveyManager.forms.surveyMenu
 
         private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            int counter = 0;
-            foreach (string fileName in fileDialog.FileNames)
+            try
             {
-                bgWorker.ReportProgress(counter);
+                backgroundThread = Thread.CurrentThread;
 
-                FileInfo fInfo = new FileInfo(fileName);
-                if (fInfo.Length > Database.MAX_ALLOWED_PACKET_SIZE)
+                filesToAdd = new List<CFile>();
+                bldr = new StringBuilder();
+
+                int counter = 0;
+                foreach (string fileName in fileDialog.FileNames)
                 {
-                    bldr.Append(fInfo.FullName + "\n");
-                    continue;
+                    bgWorker.ReportProgress(counter);
+
+                    FileInfo fInfo = new FileInfo(fileName);
+                    if (fInfo.Length > Database.MAX_ALLOWED_PACKET_SIZE)
+                    {
+                        bldr.Append(fInfo.FullName + "\n");
+                        continue;
+                    }
+
+                    CFile f = new CFile
+                    {
+                        FileName = Path.GetFileNameWithoutExtension(fInfo.FullName),
+                        Extension = (FileExtension)Enum.Parse(typeof(FileExtension), fInfo.Extension.ToUpper().Replace(".", "")),
+                    };
+
+                    if (f.ReadAllBytes(fInfo.FullName))
+                    {
+                        currentFileName = fInfo.FullName;
+                        filesToAdd.Add(f);
+                    }
+                    else
+                        bldr.Append(fInfo.FullName + "\n");
+
+                    counter++;
                 }
-
-                CFile f = new CFile
-                {
-                    FileName = Path.GetFileNameWithoutExtension(fInfo.FullName),
-                    Extension = (FileExtension)Enum.Parse(typeof(FileExtension), fInfo.Extension.ToUpper().Replace(".", "")),
-                };
-
-                if (f.ReadAllBytes(fInfo.FullName))
-                {
-                    currentFileName = fInfo.FullName;
-                    filesToAdd.Add(f);
-                }
-                else
-                    bldr.Append(fInfo.FullName + "\n");
-
-                counter++;
+            } catch (ThreadAbortException)
+            {
+                
             }
         }
 
@@ -91,7 +118,6 @@ namespace SurveyManager.forms.surveyMenu
 
         private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            lbFileNames.Items.Clear();
             lbFileNames.Items.AddRange(filesToAdd.ToArray());
             Text = $"Upload Files - Total Size to Upload = {Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length))}";
 
@@ -102,7 +128,7 @@ namespace SurveyManager.forms.surveyMenu
             StatusUpdate?.Invoke(this, new StatusArgs($"{filesToAdd.Count} files pending upload."));
 
             progressBar.Value = 0;
-            progressBar.Visible = false;
+            tblProgress.Visible = false;
         }
 
         private void btnRemoveSelected_Click(object sender, EventArgs e)
@@ -131,19 +157,75 @@ namespace SurveyManager.forms.surveyMenu
 
         private void SaveFiles(object sender, EventArgs e)
         {
-            
+            if (lbFileNames.Items.Count > 0)
+            {
+                FileUploadDone?.Invoke(this, new FileUploadDoneArgs(lbFileNames.Items.Cast<CFile>().ToList()));
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                FileUploadDone?.Invoke(this, new FileUploadDoneArgs(new List<CFile>()));
+                DialogResult = DialogResult.Cancel;
+                Close();
+            }
+        }
+
+        private void PreviewFile(object sender, EventArgs e)
+        {
+            if (lbFileNames.SelectedItem != null)
+            {
+                
+            }
         }
 
         private void lbFileNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbFileNames.SelectedIndex >= 0)
+            {
                 propGrid.SelectedObject = (CFile)lbFileNames.Items[lbFileNames.SelectedIndex];
+                picBox.Image = ((CFile)propGrid.SelectedObject).DisplayIcon;
+                picPanel.Visible = true;
+                seperator.Visible = true;
+            }
+            else
+            {
+                picPanel.Visible = false;
+                seperator.Visible = false;
+            }
+                
         }
 
-        private void UploadFile_FormClosed(object sender, FormClosedEventArgs e)
+        private void UploadFile_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (bgWorker.IsBusy)
+            {
+                backgroundThread.Abort();
+                StatusUpdate?.Invoke(this, new StatusArgs($"File upload cancelled."));
+            }
+
             GC.Collect();
             GC.WaitForPendingFinalizers();
+        }
+
+        private void btnCancelLoading_Click(object sender, EventArgs e)
+        {
+            if (bgWorker.IsBusy)
+            {
+                backgroundThread.Abort();
+                StatusUpdate?.Invoke(this, new StatusArgs($"File upload cancelled."));
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                progressBar.Value = 0;
+                tblProgress.Visible = false;
+            }
+        }
+
+        public List<CFile> GetFiles()
+        {
+            return lbFileNames.Items.Cast<CFile>().ToList();
         }
     }
 }

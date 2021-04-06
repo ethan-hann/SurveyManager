@@ -29,19 +29,31 @@ namespace SurveyManager.forms.surveyMenu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploadFile));
             this.lbFileNames = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveSelected = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.seperator = new ComponentFactory.Krypton.Toolkit.KryptonSeparator();
+            this.picPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.propGrid = new System.Windows.Forms.PropertyGrid();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.fileDialog = new System.Windows.Forms.OpenFileDialog();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
+            this.tblProgress = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCancelLoading = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnPreview = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seperator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPanel)).BeginInit();
+            this.picPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
+            this.tblProgress.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbFileNames
@@ -50,7 +62,7 @@ namespace SurveyManager.forms.surveyMenu
             this.lbFileNames.Location = new System.Drawing.Point(0, 0);
             this.lbFileNames.Name = "lbFileNames";
             this.lbFileNames.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lbFileNames.Size = new System.Drawing.Size(297, 438);
+            this.lbFileNames.Size = new System.Drawing.Size(332, 430);
             this.lbFileNames.TabIndex = 0;
             this.lbFileNames.SelectedIndexChanged += new System.EventHandler(this.lbFileNames_SelectedIndexChanged);
             // 
@@ -61,7 +73,7 @@ namespace SurveyManager.forms.surveyMenu
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(297, 475);
+            this.kryptonPanel1.Size = new System.Drawing.Size(332, 470);
             this.kryptonPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -69,18 +81,20 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Controls.Add(this.btnRemoveSelected);
             this.flowLayoutPanel1.Controls.Add(this.btnAddFile);
+            this.flowLayoutPanel1.Controls.Add(this.seperator);
+            this.flowLayoutPanel1.Controls.Add(this.picPanel);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 438);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 430);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(297, 37);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 40);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnRemoveSelected
             // 
-            this.btnRemoveSelected.Location = new System.Drawing.Point(170, 3);
+            this.btnRemoveSelected.Location = new System.Drawing.Point(205, 3);
             this.btnRemoveSelected.Name = "btnRemoveSelected";
-            this.btnRemoveSelected.Size = new System.Drawing.Size(124, 25);
+            this.btnRemoveSelected.Size = new System.Drawing.Size(124, 32);
             this.btnRemoveSelected.TabIndex = 0;
             this.btnRemoveSelected.Values.Image = global::SurveyManager.Properties.Resources.delete_16x16;
             this.btnRemoveSelected.Values.Text = "Remove Selected";
@@ -88,20 +102,49 @@ namespace SurveyManager.forms.surveyMenu
             // 
             // btnAddFile
             // 
-            this.btnAddFile.Location = new System.Drawing.Point(40, 3);
+            this.btnAddFile.Location = new System.Drawing.Point(75, 3);
             this.btnAddFile.Name = "btnAddFile";
-            this.btnAddFile.Size = new System.Drawing.Size(124, 25);
+            this.btnAddFile.Size = new System.Drawing.Size(124, 32);
             this.btnAddFile.TabIndex = 1;
             this.btnAddFile.Values.Image = global::SurveyManager.Properties.Resources.add_16x16;
             this.btnAddFile.Values.Text = "Add File(s)...";
             this.btnAddFile.Click += new System.EventHandler(this.btnAddFile_Click);
             // 
+            // seperator
+            // 
+            this.seperator.AllowMove = false;
+            this.seperator.Enabled = false;
+            this.seperator.Location = new System.Drawing.Point(59, 3);
+            this.seperator.Name = "seperator";
+            this.seperator.Size = new System.Drawing.Size(10, 31);
+            this.seperator.TabIndex = 3;
+            this.seperator.Visible = false;
+            // 
+            // picPanel
+            // 
+            this.picPanel.Controls.Add(this.picBox);
+            this.picPanel.Location = new System.Drawing.Point(21, 3);
+            this.picPanel.Name = "picPanel";
+            this.picPanel.Size = new System.Drawing.Size(32, 32);
+            this.picPanel.TabIndex = 2;
+            this.picPanel.Visible = false;
+            // 
+            // picBox
+            // 
+            this.picBox.BackColor = System.Drawing.Color.White;
+            this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBox.Location = new System.Drawing.Point(0, 0);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(32, 32);
+            this.picBox.TabIndex = 5;
+            this.picBox.TabStop = false;
+            // 
             // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(297, 0);
+            this.propGrid.Location = new System.Drawing.Point(332, 0);
             this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(547, 475);
+            this.propGrid.Size = new System.Drawing.Size(512, 470);
             this.propGrid.TabIndex = 2;
             this.propGrid.ToolbarVisible = false;
             // 
@@ -116,17 +159,16 @@ namespace SurveyManager.forms.surveyMenu
             // 
             // fileDialog
             // 
-            this.fileDialog.Filter = "AutoCAD Drawing (*.dwg)|*.dwg|PDF (*.pdf)|*.pdf|Word Document (*.doc;*.docx)|*.do" +
-    "c;*.docx|Text File|*.txt|Image (*.jpeg;*.jpg;*.png)|*.jpeg;*.jpg;*.png";
+            this.fileDialog.Filter = resources.GetString("fileDialog.Filter");
             this.fileDialog.Multiselect = true;
             this.fileDialog.Title = "Select files to upload";
             // 
             // progressBar
             // 
-            this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar.Location = new System.Drawing.Point(0, 475);
+            this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBar.Location = new System.Drawing.Point(3, 3);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(844, 23);
+            this.progressBar.Size = new System.Drawing.Size(698, 22);
             this.progressBar.TabIndex = 3;
             // 
             // bgWorker
@@ -137,25 +179,65 @@ namespace SurveyManager.forms.surveyMenu
             this.bgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgWorker_ProgressChanged);
             this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
             // 
+            // tblProgress
+            // 
+            this.tblProgress.ColumnCount = 2;
+            this.tblProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.41232F));
+            this.tblProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58768F));
+            this.tblProgress.Controls.Add(this.progressBar, 0, 0);
+            this.tblProgress.Controls.Add(this.btnCancelLoading, 1, 0);
+            this.tblProgress.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tblProgress.Location = new System.Drawing.Point(0, 470);
+            this.tblProgress.Name = "tblProgress";
+            this.tblProgress.RowCount = 1;
+            this.tblProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblProgress.Size = new System.Drawing.Size(844, 28);
+            this.tblProgress.TabIndex = 5;
+            this.tblProgress.Visible = false;
+            // 
+            // btnCancelLoading
+            // 
+            this.btnCancelLoading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancelLoading.Location = new System.Drawing.Point(707, 3);
+            this.btnCancelLoading.Name = "btnCancelLoading";
+            this.btnCancelLoading.Size = new System.Drawing.Size(134, 22);
+            this.btnCancelLoading.TabIndex = 4;
+            this.btnCancelLoading.Values.Image = global::SurveyManager.Properties.Resources.error_16x16;
+            this.btnCancelLoading.Values.Text = "Cancel";
+            this.btnCancelLoading.Click += new System.EventHandler(this.btnCancelLoading_Click);
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Image = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnPreview.Text = "Preview...";
+            this.btnPreview.UniqueName = "9375A9B752B1440D459DA3AD6C2A3260";
+            this.btnPreview.Visible = false;
+            // 
             // UploadFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
-            this.btnSave});
+            this.btnSave,
+            this.btnPreview});
             this.ClientSize = new System.Drawing.Size(844, 498);
             this.Controls.Add(this.propGrid);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.tblProgress);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UploadFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Upload Files";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UploadFile_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UploadFile_FormClosing);
             this.Load += new System.EventHandler(this.UploadFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.seperator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPanel)).EndInit();
+            this.picPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
+            this.tblProgress.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -172,5 +254,11 @@ namespace SurveyManager.forms.surveyMenu
         private System.Windows.Forms.OpenFileDialog fileDialog;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.ComponentModel.BackgroundWorker bgWorker;
+        private System.Windows.Forms.PictureBox picBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel picPanel;
+        private System.Windows.Forms.TableLayoutPanel tblProgress;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelLoading;
+        private ComponentFactory.Krypton.Toolkit.KryptonSeparator seperator;
+        private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnPreview;
     }
 }

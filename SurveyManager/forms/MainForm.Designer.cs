@@ -166,6 +166,7 @@ namespace SurveyManager
             this.findSurveyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.findSurveyBtn.Size = new System.Drawing.Size(192, 22);
             this.findSurveyBtn.Text = "Find...";
+            this.findSurveyBtn.Click += new System.EventHandler(this.findSurveyBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -180,6 +181,7 @@ namespace SurveyManager
             | System.Windows.Forms.Keys.S)));
             this.newSurveyBtn.Size = new System.Drawing.Size(192, 22);
             this.newSurveyBtn.Text = "New...";
+            this.newSurveyBtn.Click += new System.EventHandler(this.newSurveyBtn_Click);
             // 
             // viewSurveysBtn
             // 
@@ -188,6 +190,7 @@ namespace SurveyManager
             this.viewSurveysBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.viewSurveysBtn.Size = new System.Drawing.Size(192, 22);
             this.viewSurveysBtn.Text = "View...";
+            this.viewSurveysBtn.Click += new System.EventHandler(this.viewSurveysBtn_Click);
             // 
             // clientToolStripMenuItem
             // 

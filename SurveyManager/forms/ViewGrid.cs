@@ -124,10 +124,10 @@ namespace SurveyManager.forms
                         new DBMap("lot", "Lot #"),
                         new DBMap("block", "Block #"),
                         new DBMap("section", "Section #"),
-                        new DBMap("county_id", "County ID"),
-                        new DBMap("acres", "# of Acres"),
-                        new DBMap("realtor_id", "Realtor ID"),
-                        new DBMap("title_company_id", "Title Company ID"),
+                        new DBMap("county_id", "County"),
+                        new DBMap("acres", "Acres"),
+                        new DBMap("realtor_id", "Realtor"),
+                        new DBMap("title_company_id", "Title Company")
                     };
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));
@@ -170,6 +170,11 @@ namespace SurveyManager.forms
                     PopulateTitleCompanyGrid(LoadTitleCompanies());
                     break;
                 }
+                case EntityTypes.Survey:
+                {
+                    PopulateSurveyGrid(LoadSurveys());
+                    break;
+                }
             }
         }
 
@@ -210,6 +215,9 @@ namespace SurveyManager.forms
 
         private void SaveData(object sender, EventArgs e)
         {
+            if (propGrid.SelectedObject == null)
+                return;
+
             DatabaseWrapper obj = (DatabaseWrapper)propGrid.SelectedObject;
             DatabaseError error = obj.Update();
             switch (error)
@@ -327,6 +335,46 @@ namespace SurveyManager.forms
                 row.CreateCells(dataGrid, new object[] {
                     c.ID,
                     c.Name
+                });
+                row.Tag = c;
+                rows.Add(row);
+            }
+        }
+        #endregion
+
+        #region Survey
+        private List<Survey> LoadSurveys()
+        {
+            List<Survey> surveys = new List<Survey>();
+            if (lastFilterResults == null)
+            {
+                surveys = Database.GetSurveys();
+            }
+            else
+            {
+                foreach (DataRow dataRow in lastFilterResults.Rows)
+                {
+                    surveys.Add(ProcessDataTable.GetSurvey(dataRow));
+                }
+                lastFilterResults = null;
+            }
+            return surveys;
+        }
+
+        private void PopulateSurveyGrid(List<Survey> surveys)
+        {
+            OutlookGridRow row;
+            rows = new List<OutlookGridRow>();
+
+            foreach (Survey c in surveys)
+            {
+                row = new OutlookGridRow();
+                row.CreateCells(dataGrid, new object[] {
+                    c.ID,
+                    c.JobNumber,
+                    c.AbstractNumber,
+                    c.Acres,
+                    c.County.CountyName,
                 });
                 row.Tag = c;
                 rows.Add(row);

@@ -72,9 +72,28 @@ namespace SurveyManager.utility
             };
         }
 
-        //public static Survey GetSurvey(DataRow row)
-        //{
-            
-        //}
+        public static Survey GetSurvey(DataRow row)
+        {
+            Survey s = new Survey
+            {
+                ID = (int)row["survey_id"],
+                JobNumber = (string)row["job_number"],
+                ClientID = (int)row["client_id"],
+                Description = (string)row["description"],
+                AbstractNumber = (string)row["abstract_number"],
+                Subdivision = (string)row["subdivision"],
+                LotNumber = (string)row["lot"],
+                BlockNumber = (string)row["block"],
+                SectionNumber = (string)row["section"],
+                CountyID = (int)row["county_id"],
+                Acres = (double)row["acres"],
+                FileIds = (string)row["file_ids"],
+                RealtorID = row.IsNull("realtor_id") ? 0 : (int)row["realtor_id"],
+                TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"]
+            };
+
+            s.SetObjects();
+            return s;
+        }
     }
 }

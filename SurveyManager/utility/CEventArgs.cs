@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveyManager.backend.wrappers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -46,6 +47,16 @@ namespace SurveyManager.utility
             public QueryRanArgs(string tableName)
             {
                 TableName = tableName;
+            }
+        }
+
+        public class FileUploadDoneArgs : EventArgs
+        {
+            public List<CFile> Files { get; internal set; }
+
+            public FileUploadDoneArgs(List<CFile> files)
+            {
+                Files = files;
             }
         }
     }

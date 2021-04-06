@@ -163,6 +163,26 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doc_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("doc_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doc_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("doc_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dwg {
             get {
                 object obj = ResourceManager.GetObject("dwg", resourceCulture);
@@ -176,6 +196,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap dwg_16x16 {
             get {
                 object obj = ResourceManager.GetObject("dwg_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dwg_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("dwg_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dwg_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("dwg_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +316,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap file_16x16 {
             get {
                 object obj = ResourceManager.GetObject("file_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("file_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("file_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +483,26 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("pdf_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pdf_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("pdf_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png {
             get {
                 object obj = ResourceManager.GetObject("png", resourceCulture);
@@ -436,6 +516,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap png_16x16 {
             get {
                 object obj = ResourceManager.GetObject("png_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("png_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("png_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -603,6 +703,16 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap txt_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("txt_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap updated {
             get {
                 object obj = ResourceManager.GetObject("updated", resourceCulture);
@@ -616,6 +726,16 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap view {
             get {
                 object obj = ResourceManager.GetObject("view", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("view_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

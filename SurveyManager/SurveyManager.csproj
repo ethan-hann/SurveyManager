@@ -176,6 +176,12 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\newForms\NewSurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\newForms\NewSurvey.Designer.cs">
+      <DependentUpon>NewSurvey.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\newForms\NewTitleCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,7 @@
     <Compile Include="forms\surveyMenu\UploadFile.Designer.cs">
       <DependentUpon>UploadFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\surveyMenu\UploadFileEditor.cs" />
     <Compile Include="forms\ViewGrid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +228,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utility\CEventArgs.cs" />
+    <Compile Include="utility\CFileTypeConverter.cs" />
     <Compile Include="utility\CustomControls\CPropertyGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -259,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\newForms\NewSurvey.resx">
+      <DependentUpon>NewSurvey.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\newForms\NewTitleCompany.resx">
       <DependentUpon>NewTitleCompany.cs</DependentUpon>
@@ -478,6 +489,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\file_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwg_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwg_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

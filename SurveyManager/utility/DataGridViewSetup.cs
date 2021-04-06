@@ -101,6 +101,59 @@ namespace SurveyManager.utility
                     grid.AddInternalColumn(companyNameColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 title company", XXXItemsText = " title companies" }, SortOrder.None, -1, -1);
                     break;
                 }
+
+                case EntityTypes.Survey:
+                {
+                    DataGridViewColumn surveyIDColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Survey ID",
+                        Name = "surveyIDColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(surveyIDColumn);
+                    DataGridViewColumn jobNumberColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Job Number",
+                        Name = "jobNumberColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(jobNumberColumn);
+                    DataGridViewColumn abstractNumberColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Abstract",
+                        Name = "abstractNumberColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(abstractNumberColumn);
+                    DataGridViewColumn acresColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "# of Acres",
+                        Name = "acresColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(acresColumn);
+                    DataGridViewColumn countyColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "County",
+                        Name = "countyColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(countyColumn);
+
+                    grid.Columns.AddRange(columnsToAdd.ToArray());
+
+                    grid.AddInternalColumn(surveyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(jobNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(abstractNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(acresColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(countyColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    break;
+                }
             }
         }
     }

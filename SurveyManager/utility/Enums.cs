@@ -146,7 +146,23 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when a file is missing important information.
             /// </summary>
-            FileIncomplete
+            FileIncomplete,
+            /// <summary>
+            /// Error when inserting survey data.
+            /// </summary>
+            SurveyInsert,
+            /// <summary>
+            /// Error when updating survey data.
+            /// </summary>
+            SurveyUpdate,
+            /// <summary>
+            /// Error when deleting survey data.
+            /// </summary>
+            SurveyDelete,
+            /// <summary>
+            /// Error when a survey is missing important information.
+            /// </summary>
+            SurveyIncomplete
         }
 
         /// <summary>
@@ -175,9 +191,21 @@ namespace SurveyManager.utility
         public enum FileExtension
         {
             /// <summary>
-            /// An AutoCAD drawing file.
+            /// An AutoCAD file.
             /// </summary>
             DWG,
+            /// <summary>
+            /// An AutoCAD file.
+            /// </summary>
+            DXF,
+            /// <summary>
+            /// An AutoCAD file.
+            /// </summary>
+            DWT,
+            /// <summary>
+            /// An AutoCAD file.
+            /// </summary>
+            DXB,
             /// <summary>
             /// A plain text file.
             /// </summary>
@@ -195,7 +223,7 @@ namespace SurveyManager.utility
             /// </summary>
             PDF,
             /// <summary>
-            /// A portable graphics picture.
+            /// A picture file.
             /// </summary>
             PNG,
             /// <summary>

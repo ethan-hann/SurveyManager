@@ -1336,5 +1336,259 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
+        #region Survey
+        public static bool InsertSurvey(Survey s)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Survey");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Survey", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", s.JobNumber);
+                        cmd.Parameters.AddWithValue("@1", s.Client.ID);
+                        cmd.Parameters.AddWithValue("@2", s.Description);
+                        cmd.Parameters.AddWithValue("@3", s.AbstractNumber);
+                        cmd.Parameters.AddWithValue("@4", s.Subdivision);
+                        cmd.Parameters.AddWithValue("@5", s.LotNumber);
+                        cmd.Parameters.AddWithValue("@6", s.BlockNumber);
+                        cmd.Parameters.AddWithValue("@7", s.SectionNumber);
+                        cmd.Parameters.AddWithValue("@8", s.County.ID);
+                        cmd.Parameters.AddWithValue("@9", s.Acres);
+
+                        if (s.Realtor != null)
+                            cmd.Parameters.AddWithValue("@10", s.Realtor.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@10", DBNull.Value);
+
+                        if (s.TitleCompany != null)
+                            cmd.Parameters.AddWithValue("@11", s.TitleCompany.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@11", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@12", s.FileIds);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static bool UpdateSurvey(Survey s)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Survey");
+            string q = Queries.BuildQuery(QType.UPDATE, "Survey", null, columns, $"survey_id={s.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", s.JobNumber);
+                        cmd.Parameters.AddWithValue("@1", s.Client.ID);
+                        cmd.Parameters.AddWithValue("@2", s.Description);
+                        cmd.Parameters.AddWithValue("@3", s.AbstractNumber);
+                        cmd.Parameters.AddWithValue("@4", s.Subdivision);
+                        cmd.Parameters.AddWithValue("@5", s.LotNumber);
+                        cmd.Parameters.AddWithValue("@6", s.BlockNumber);
+                        cmd.Parameters.AddWithValue("@7", s.SectionNumber);
+                        cmd.Parameters.AddWithValue("@8", s.County.ID);
+                        cmd.Parameters.AddWithValue("@9", s.Acres);
+
+                        if (s.Realtor != null)
+                            cmd.Parameters.AddWithValue("@10", s.Realtor.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@10", DBNull.Value);
+
+                        if (s.TitleCompany != null)
+                            cmd.Parameters.AddWithValue("@11", s.TitleCompany.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@11", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@12", s.FileIds);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+
+        }
+
+        public static Survey GetSurvey(int id)
+        {
+            Survey s = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"survey_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            s = new Survey
+                            {
+                                ID = reader.GetInt32(0),
+                                JobNumber = reader.GetString(1),
+                                ClientID = reader.GetInt32(2),
+                                Description = reader.GetString(3),
+                                AbstractNumber = reader.GetString(4),
+                                Subdivision = reader.GetString(5),
+                                LotNumber = reader.GetString(6),
+                                BlockNumber = reader.GetString(7),
+                                SectionNumber = reader.GetString(8),
+                                CountyID = reader.GetInt32(9),
+                                Acres = reader.GetDouble(10),
+                                FileIds = reader.GetString(13)
+                            };
+
+                            if (reader.IsDBNull(11))
+                                s.RealtorID = 0;
+                            else
+                                s.RealtorID = reader.GetInt32(11);
+
+                            if (reader.IsDBNull(12))
+                                s.TitleCompanyID = 0;
+                            else
+                                s.TitleCompanyID = reader.GetInt32(12);
+
+                            s.SetObjects();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return s;
+        }
+
+        public static List<Survey> GetSurveys()
+        {
+            List<Survey> surveys = new List<Survey>();
+            Survey s = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                s = new Survey
+                                {
+                                    ID = reader.GetInt32(0),
+                                    JobNumber = reader.GetString(1),
+                                    ClientID = reader.GetInt32(2),
+                                    Description = reader.GetString(3),
+                                    AbstractNumber = reader.GetString(4),
+                                    Subdivision = reader.GetString(5),
+                                    LotNumber = reader.GetString(6),
+                                    BlockNumber = reader.GetString(7),
+                                    SectionNumber = reader.GetString(8),
+                                    CountyID = reader.GetInt32(9),
+                                    Acres = reader.GetDouble(10),
+                                    FileIds = reader.GetString(13)
+                                };
+
+                                if (reader.IsDBNull(11))
+                                    s.RealtorID = 0;
+                                else
+                                    s.RealtorID = reader.GetInt32(11);
+
+                                if (reader.IsDBNull(12))
+                                    s.TitleCompanyID = 0;
+                                else
+                                    s.TitleCompanyID = reader.GetInt32(12);
+
+                                s.SetObjects();
+
+                                surveys.Add(s);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return surveys;
+        }
+
+        public static bool DeleteSurvey(Survey s)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Survey", null, null, $"survey_id={s.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
     }
 }

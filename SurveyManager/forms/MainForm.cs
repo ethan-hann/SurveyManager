@@ -77,10 +77,7 @@ namespace SurveyManager
         #region File Menu
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-            UploadFile fDlg = new UploadFile();
-            fDlg.StatusUpdate += ChangeStatusText;
-            fDlg.MdiParent = this;
-            fDlg.Show();
+            
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)
@@ -172,6 +169,46 @@ namespace SurveyManager
         #endregion
 
         #region Survey Menu
+        private void findSurveyBtn_Click(object sender, EventArgs e)
+        {
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("job_number", "Job #"),
+                new DBMap("client_id", "Client ID"),
+                new DBMap("description", "Description"),
+                new DBMap("subdivision", "Subdivision"),
+                new DBMap("lot", "Lot #"),
+                new DBMap("block", "Block #"),
+                new DBMap("section", "Section #"),
+                new DBMap("county_id", "County"),
+                new DBMap("acres", "Acres"),
+                new DBMap("realtor_id", "Realtor"),
+                new DBMap("title_company_id", "Title Company")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
+            filter.FilterDone += ProcessSurveySearch;
+            filter.Show();
+        }
+
+        private void newSurveyBtn_Click(object sender, EventArgs e)
+        {
+            //UploadFile uf = new UploadFile();
+            //uf.MdiParent = this;
+            //uf.Show();
+            NewSurvey nsForm = new NewSurvey();
+            nsForm.MdiParent = this;
+            nsForm.StatusUpdate += ChangeStatusText;
+            nsForm.Show();
+        }
+
+        private void viewSurveysBtn_Click(object sender, EventArgs e)
+        {
+            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Survey, Icon.FromHandle(Resources.surveying_16x16.GetHicon()), "View Surveys");
+            vgForm.MdiParent = this;
+            vgForm.StatusUpdate += ChangeStatusText;
+            vgForm.Show();
+        }
         #endregion
 
         #region Client Menu
@@ -376,6 +413,22 @@ namespace SurveyManager
                 }
 
                 ViewObjects results = new ViewObjects(args.Results, companies.ToArray(), "Name", "name", "Title Company Results");
+                results.MdiParent = this;
+                results.Show();
+            }
+        }
+
+        private void ProcessSurveySearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                List<Survey> surveys = new List<Survey>();
+                foreach (DataRow row in args.Results.Rows)
+                {
+                    surveys.Add(ProcessDataTable.GetSurvey(row));
+                }
+
+                ViewObjects results = new ViewObjects(args.Results, surveys.ToArray(), "JobNumber", "job_number", "Survey Results");
                 results.MdiParent = this;
                 results.Show();
             }
