@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using SurveyManager.backend.wrappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,8 @@ namespace SurveyManager.utility
         public int NumberOfDBConnectionFormsOpen { get; set; } = 0;
 
         public bool DatabaseConnected { get; set; } = false;
+
+        public List<County> Counties { get; set; }
 
         public MainForm MainForm { get; set; }
     }

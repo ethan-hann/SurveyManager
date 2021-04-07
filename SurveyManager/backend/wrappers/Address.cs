@@ -9,6 +9,7 @@ namespace SurveyManager.backend.wrappers
     /// Defines a basic address used for surveys and clients.
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
+    [Serializable]
     public class Address : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]

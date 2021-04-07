@@ -58,6 +58,11 @@ namespace SurveyManager
             //Set main form
             RuntimeVars.Instance.MainForm = this;
 
+            if (RuntimeVars.Instance.DatabaseConnected)
+            {
+                RuntimeVars.Instance.Counties = Database.GetCounties();
+            }
+
             //Change the color of the MDI Client area to be the same as the form.
             foreach (Control ctl in Controls)
             {
@@ -171,24 +176,32 @@ namespace SurveyManager
         #region Survey Menu
         private void findSurveyBtn_Click(object sender, EventArgs e)
         {
-            ArrayList columns = new ArrayList
+            List<Survey> surveys = Database.GetSurveys();
+            if (surveys.Count > 0)
             {
-                new DBMap("job_number", "Job #"),
-                new DBMap("client_id", "Client ID"),
-                new DBMap("description", "Description"),
-                new DBMap("subdivision", "Subdivision"),
-                new DBMap("lot", "Lot #"),
-                new DBMap("block", "Block #"),
-                new DBMap("section", "Section #"),
-                new DBMap("county_id", "County"),
-                new DBMap("acres", "Acres"),
-                new DBMap("realtor_id", "Realtor"),
-                new DBMap("title_company_id", "Title Company")
-            };
+                NewSurvey nsForm = new NewSurvey(surveys[0]);
+                nsForm.MdiParent = this;
+                nsForm.StatusUpdate += ChangeStatusText;
+                nsForm.Show();
+            }
+            //ArrayList columns = new ArrayList
+            //{
+            //    new DBMap("job_number", "Job #"),
+            //    new DBMap("client_id", "Client ID"),
+            //    new DBMap("description", "Description"),
+            //    new DBMap("subdivision", "Subdivision"),
+            //    new DBMap("lot", "Lot #"),
+            //    new DBMap("block", "Block #"),
+            //    new DBMap("section", "Section #"),
+            //    new DBMap("county_id", "County"),
+            //    new DBMap("acres", "Acres"),
+            //    new DBMap("realtor_id", "Realtor"),
+            //    new DBMap("title_company_id", "Title Company")
+            //};
 
-            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
-            filter.FilterDone += ProcessSurveySearch;
-            filter.Show();
+            //AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
+            //filter.FilterDone += ProcessSurveySearch;
+            //filter.Show();
         }
 
         private void newSurveyBtn_Click(object sender, EventArgs e)
@@ -364,7 +377,7 @@ namespace SurveyManager
         #endregion
 
         #region Event Handlers
-        private void ChangeStatusText(object sender, EventArgs e)
+        public void ChangeStatusText(object sender, EventArgs e)
         {
             if (e is StatusArgs args)
                 lblStatus.Text = args.StatusString;

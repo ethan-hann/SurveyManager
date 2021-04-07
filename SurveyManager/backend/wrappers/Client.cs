@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading;
+using System.Windows.Forms;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -9,6 +10,7 @@ namespace SurveyManager.backend.wrappers
     /// Defines a survey client.
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
+    [Serializable]
     public class Client : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]

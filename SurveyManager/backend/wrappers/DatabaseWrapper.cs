@@ -1,4 +1,5 @@
-﻿using static SurveyManager.utility.Enums;
+﻿using System;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {

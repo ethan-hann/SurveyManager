@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace SurveyManager.backend.wrappers
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
+    [Serializable]
     public class County : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]

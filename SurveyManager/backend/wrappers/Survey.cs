@@ -14,6 +14,7 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
+    [Serializable]
     public class Survey : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
@@ -91,7 +92,7 @@ namespace SurveyManager.backend.wrappers
         [Description("The county this survey is located in.")]
         [Browsable(true)]
         [DisplayName("County")]
-        [TypeConverter(typeof(ExpandableObjectConverter))]
+        [TypeConverter(typeof(CountyTypeConverter))]
         public County County { get; set; } = new County();
 
         [Category("Associated Objects")]
@@ -213,6 +214,11 @@ namespace SurveyManager.backend.wrappers
             Files.Add(file);
         }
 
+        public void AddFiles(ICollection<CFile> files)
+        {
+            Files.AddRange(files);
+        }
+
         /// <summary>
         /// Remove a file, if it exists, from the associated file list.
         /// </summary>
@@ -238,6 +244,8 @@ namespace SurveyManager.backend.wrappers
         /// <param name="id">The id to add.</param>
         public void AddFileId(int id)
         {
+            if (FileIds.Equals("N/A"))
+                FileIds = "";
             StringBuilder str = new StringBuilder(FileIds);
             str.Append($"{id}, ");
             FileIds = str.ToString().Trim();
@@ -252,6 +260,8 @@ namespace SurveyManager.backend.wrappers
             StringBuilder str = new StringBuilder(FileIds);
             str.Replace($"{id},", string.Empty);
             FileIds = str.ToString().Trim();
+            if (FileIds.Equals(""))
+                FileIds = "N/A";
         }
 
         private int[] ParseFileIds()
@@ -259,8 +269,8 @@ namespace SurveyManager.backend.wrappers
             string trimmed = FileIds.Trim();
             string[] tokens = trimmed.Split(',');
 
-            int[] ids = new int[tokens.Length];
-            for (int i = 0; i < tokens.Length; i++)
+            int[] ids = new int[tokens.Length - 1];
+            for (int i = 0; i < tokens.Length - 1; i++)
             {
                 ids[i] = int.Parse(tokens[i]);
             }
@@ -292,14 +302,68 @@ namespace SurveyManager.backend.wrappers
             if (!IsValidSurvey)
                 return DatabaseError.SurveyIncomplete;
 
+            #region Client Insert/Update
+            if (Client.ID == 0)
+            {
+                DatabaseError clientError = Client.Insert();
+                if (clientError != DatabaseError.NoError)
+                    return clientError;
+                Client.ID = Database.GetLastRowIDInserted("Client");
+            }
+            else
+            {
+                DatabaseError clientError = Client.Update();
+                if (clientError != DatabaseError.NoError)
+                    return clientError;
+            }
+            #endregion
+            #region Realtor Insert/Update
+            if (Realtor.IsValidRealtor)
+            {
+                if (Realtor.ID == 0)
+                {
+                    DatabaseError realtorError = Realtor.Insert();
+                    if (realtorError != DatabaseError.NoError)
+                        return realtorError;
+                    Realtor.ID = Database.GetLastRowIDInserted("Realtor");
+                }
+                else
+                {
+                    DatabaseError realtorError = Realtor.Update();
+                    if (realtorError != DatabaseError.NoError)
+                        return realtorError;
+                }
+            }
+            #endregion
+            #region Title Company Insert/Update
+            if (TitleCompany.IsValidCompany)
+            {
+                if (TitleCompany.ID == 0)
+                {
+                    DatabaseError tcError = TitleCompany.Insert();
+                    if (tcError != DatabaseError.NoError)
+                        return tcError;
+                    TitleCompany.ID = Database.GetLastRowIDInserted("TitleCompany");
+                }
+                else
+                {
+                    DatabaseError tcError = TitleCompany.Update();
+                    if (tcError != DatabaseError.NoError)
+                        return tcError;
+                }
+            }
+            #endregion
+
+            #region Files
             foreach (CFile file in Files)
             {
-                DatabaseError fileError = Database.InsertFile(file) ? DatabaseError.NoError : DatabaseError.FileInsert;
-                int id = Database.GetLastRowIDInserted("File");
+                DatabaseError fileError = file.Update();
                 if (fileError == DatabaseError.FileInsert)
                     return fileError;
-                AddFileId(id);
+                AddFileId(Database.GetLastRowIDInserted("File"));
             }
+            #endregion
+
             return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }
 

@@ -1151,12 +1151,15 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
-        /// Update the <see cref="CFile"/> object in the database.
+        /// Update the <see cref="CFile"/> object in the database. If the file has an ID of 0, it is inserted instead.
         /// </summary>
-        /// <param name="file">The file to update.</param>
-        /// <returns>True if the update completed successfully. False otherwise.</returns>
+        /// <param name="file">The file to update/insert.</param>
+        /// <returns>True if the update/insert completed successfully. False otherwise.</returns>
         public static bool UpdateFile(CFile file)
         {
+            if (file.ID == 0)
+                return InsertFile(file);
+
             int affectedRows = 0;
             ArrayList columns = GetColumns("File");
 
@@ -1176,7 +1179,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@2", file.Description);
                         cmd.Parameters.AddWithValue("@3", file.Extension);
                         cmd.Parameters.AddWithValue("@4", file.Contents);
-
+                        cmd.Parameters.AddWithValue("@5", file.FileEncoding.CodePage);
 
                         cmd.Connection = con;
                         affectedRows += cmd.ExecuteNonQuery();
@@ -1368,12 +1371,12 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@8", s.County.ID);
                         cmd.Parameters.AddWithValue("@9", s.Acres);
 
-                        if (s.Realtor != null)
+                        if (s.Realtor.IsValidRealtor)
                             cmd.Parameters.AddWithValue("@10", s.Realtor.ID);
                         else
                             cmd.Parameters.AddWithValue("@10", DBNull.Value);
 
-                        if (s.TitleCompany != null)
+                        if (s.TitleCompany.IsValidCompany)
                             cmd.Parameters.AddWithValue("@11", s.TitleCompany.ID);
                         else
                             cmd.Parameters.AddWithValue("@11", DBNull.Value);
@@ -1411,28 +1414,29 @@ namespace SurveyManager.backend
                         cmd.Transaction = tr;
                         cmd.CommandType = CommandType.Text;
 
-                        cmd.Parameters.AddWithValue("@0", s.JobNumber);
-                        cmd.Parameters.AddWithValue("@1", s.Client.ID);
-                        cmd.Parameters.AddWithValue("@2", s.Description);
-                        cmd.Parameters.AddWithValue("@3", s.AbstractNumber);
-                        cmd.Parameters.AddWithValue("@4", s.Subdivision);
-                        cmd.Parameters.AddWithValue("@5", s.LotNumber);
-                        cmd.Parameters.AddWithValue("@6", s.BlockNumber);
-                        cmd.Parameters.AddWithValue("@7", s.SectionNumber);
-                        cmd.Parameters.AddWithValue("@8", s.County.ID);
-                        cmd.Parameters.AddWithValue("@9", s.Acres);
+                        cmd.Parameters.AddWithValue("@0", s.ID);
+                        cmd.Parameters.AddWithValue("@1", s.JobNumber);
+                        cmd.Parameters.AddWithValue("@2", s.Client.ID);
+                        cmd.Parameters.AddWithValue("@3", s.Description);
+                        cmd.Parameters.AddWithValue("@4", s.AbstractNumber);
+                        cmd.Parameters.AddWithValue("@5", s.Subdivision);
+                        cmd.Parameters.AddWithValue("@6", s.LotNumber);
+                        cmd.Parameters.AddWithValue("@7", s.BlockNumber);
+                        cmd.Parameters.AddWithValue("@8", s.SectionNumber);
+                        cmd.Parameters.AddWithValue("@9", s.County.ID);
+                        cmd.Parameters.AddWithValue("@10", s.Acres);
 
-                        if (s.Realtor != null)
-                            cmd.Parameters.AddWithValue("@10", s.Realtor.ID);
-                        else
-                            cmd.Parameters.AddWithValue("@10", DBNull.Value);
-
-                        if (s.TitleCompany != null)
-                            cmd.Parameters.AddWithValue("@11", s.TitleCompany.ID);
+                        if (s.Realtor.IsValidRealtor)
+                            cmd.Parameters.AddWithValue("@11", s.Realtor.ID);
                         else
                             cmd.Parameters.AddWithValue("@11", DBNull.Value);
 
-                        cmd.Parameters.AddWithValue("@12", s.FileIds);
+                        if (s.TitleCompany.IsValidCompany)
+                            cmd.Parameters.AddWithValue("@12", s.TitleCompany.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@12", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@13", s.FileIds);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();

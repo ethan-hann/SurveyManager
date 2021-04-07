@@ -68,6 +68,7 @@ namespace SurveyManager.forms
             this.dataGrid.Size = new System.Drawing.Size(987, 204);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            this.dataGrid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGrid_MouseDown);
             // 
             // groupBox
             // 

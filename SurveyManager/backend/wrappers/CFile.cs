@@ -18,6 +18,7 @@ namespace SurveyManager.backend.wrappers
     /// A class which represents a custom file that can be stored in the database.
     /// </summary>
     [TypeConverter(typeof(CFileTypeConverter))]
+    [Serializable]
     public class CFile : DatabaseWrapper
     {
         [Browsable(false)]

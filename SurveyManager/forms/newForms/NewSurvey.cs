@@ -2,7 +2,9 @@
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.dialogs;
+using SurveyManager.forms.surveyMenu;
 using SurveyManager.Properties;
+using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,33 +35,49 @@ namespace SurveyManager.forms.newForms
                 editMode = true;
                 survey = s;
             }
+
+            fileCtl.StatusUpdate += RuntimeVars.Instance.MainForm.ChangeStatusText;
+            fileCtl.FileUploadDone += SetFiles;
         }
 
         private void NewSurvey_Load(object sender, EventArgs e)
         {
             Icon = Icon.FromHandle(Resources.surveying_16x16.GetHicon());
 
-            clientPropGrid.GetAcceptButton().ToolTipText = "Save the survey to the database.";
-            clientPropGrid.GetClearButton().ToolTipText = "Clear all values and start over.";
+            surveyPropGrid.GetAcceptButton().ToolTipText = "Save the survey to the database.";
+            surveyPropGrid.GetClearButton().ToolTipText = "Clear all values and start over.";
 
-            clientPropGrid.GetAcceptButton().Click += SaveClient;
-            clientPropGrid.GetClearButton().Click += ClearFields;
+            surveyPropGrid.GetAcceptButton().Click += SaveClient;
+            surveyPropGrid.GetClearButton().Click += ClearFields;
             
 
-            clientPropGrid.SelectedObject = survey;
+            surveyPropGrid.SelectedObject = survey;
+            clientPropGrid.SelectedObject = survey.Client;
+            realtorPropGrid.SelectedObject = survey.Realtor;
+            tcPropGrid.SelectedObject = survey.TitleCompany;
+
+            if (survey.HasFiles)
+                fileCtl.AddFiles(survey.Files);
+        }
+
+        private void SetFiles(object sender, EventArgs e)
+        {
+            if (!editMode)
+                survey.ClearFiles();
+            survey.AddFiles(fileCtl.GetFiles());
         }
 
         private void SaveClient(object sender, EventArgs e)
         {
-            survey = (Survey)clientPropGrid.SelectedObject;
-            DatabaseError clientError;
+            survey = (Survey)surveyPropGrid.SelectedObject;
+            DatabaseError surveyError;
 
             if (!editMode)
-                clientError = survey.Insert();
+                surveyError = survey.Insert();
             else
-                clientError = survey.Update();
+                surveyError = survey.Update();
 
-            switch (clientError)
+            switch (surveyError)
             {
                 case DatabaseError.SurveyIncomplete:
                     CMessageBox.Show("A survey must have a Client, County, Job Number, Description, and Abstract Number associated with it!\nPlease check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
@@ -87,15 +105,60 @@ namespace SurveyManager.forms.newForms
 
         private void ClearFields(object sender, EventArgs e)
         {
-            DialogResult result = CMessageBox.Show("Are you sure? This will clear all fields.", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+            DialogResult result = CMessageBox.Show("Are you sure? This will clear all fields including associated objects!", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
 
             if (result == DialogResult.Yes)
             {
                 survey = new Survey();
-                clientPropGrid.SelectedObject = survey;
+                surveyPropGrid.SelectedObject = survey;
+                clientPropGrid.SelectedObject = survey.Client;
+                realtorPropGrid.SelectedObject = survey.Realtor;
+                tcPropGrid.SelectedObject = survey.TitleCompany;
+            }
+        }
+
+        #region Drag and Drop events
+        private void propGrid_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetData(typeof(DragDropInfo)) is DragDropInfo c)
+            {
+                string s = c.Wrapper.GetType().ToString();
+                if (s.Contains("Client"))
+                    clientPropGrid.SelectedObject = c.Wrapper;
+                else if (s.Contains("Realtor"))
+                    realtorPropGrid.SelectedObject = c.Wrapper;
+                else if (s.Contains("TitleCompany"))
+                    tcPropGrid.SelectedObject = c.Wrapper;
+            }
+        }
+
+        private void propGrid_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(DragDropInfo)))
+            {
+                e.Effect = DragDropEffects.Copy;
             }
             else
-                return;
+                e.Effect = DragDropEffects.None;
+        }
+        #endregion
+
+        private void clientPropGrid_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+            survey.Client = (Client)clientPropGrid.SelectedObject;
+            surveyPropGrid.Update();
+        }
+
+        private void realtorPropGrid_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+            survey.Realtor = (Realtor)realtorPropGrid.SelectedObject;
+            surveyPropGrid.Update();
+        }
+
+        private void tcPropGrid_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+            survey.TitleCompany = (TitleCompany)tcPropGrid.SelectedObject;
+            surveyPropGrid.Update();
         }
     }
 }

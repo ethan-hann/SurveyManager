@@ -25,7 +25,7 @@ namespace SurveyManager.utility
                 return "No files pending upload.";
 
             CFile[] arr = files.ToArray();
-            return string.Join(",", arr);
+            return "";//return string.Join(",", arr);
         }
 
         //public override PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, object value, Attribute[] attributes)

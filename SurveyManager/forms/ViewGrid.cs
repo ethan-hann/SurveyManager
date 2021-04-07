@@ -390,5 +390,14 @@ namespace SurveyManager.forms
                 propGrid.SelectedObject = r.Tag;
             }
         }
+
+        private void dataGrid_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (dataGrid.SelectedCells.Count > 0)
+                    dataGrid.DoDragDrop(new DragDropInfo((DatabaseWrapper)dataGrid.SelectedCells[0].OwningRow.Tag), DragDropEffects.Copy);
+            }
+        }
     }
 }
