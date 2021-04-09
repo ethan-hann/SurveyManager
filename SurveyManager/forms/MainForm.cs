@@ -176,32 +176,24 @@ namespace SurveyManager
         #region Survey Menu
         private void findSurveyBtn_Click(object sender, EventArgs e)
         {
-            List<Survey> surveys = Database.GetSurveys();
-            if (surveys.Count > 0)
+            ArrayList columns = new ArrayList
             {
-                NewSurvey nsForm = new NewSurvey(surveys[0]);
-                nsForm.MdiParent = this;
-                nsForm.StatusUpdate += ChangeStatusText;
-                nsForm.Show();
-            }
-            //ArrayList columns = new ArrayList
-            //{
-            //    new DBMap("job_number", "Job #"),
-            //    new DBMap("client_id", "Client ID"),
-            //    new DBMap("description", "Description"),
-            //    new DBMap("subdivision", "Subdivision"),
-            //    new DBMap("lot", "Lot #"),
-            //    new DBMap("block", "Block #"),
-            //    new DBMap("section", "Section #"),
-            //    new DBMap("county_id", "County"),
-            //    new DBMap("acres", "Acres"),
-            //    new DBMap("realtor_id", "Realtor"),
-            //    new DBMap("title_company_id", "Title Company")
-            //};
+                new DBMap("job_number", "Job #"),
+                new DBMap("client_id", "Client ID"),
+                new DBMap("description", "Description"),
+                new DBMap("subdivision", "Subdivision"),
+                new DBMap("lot", "Lot #"),
+                new DBMap("block", "Block #"),
+                new DBMap("section", "Section #"),
+                new DBMap("county_id", "County"),
+                new DBMap("acres", "Acres"),
+                new DBMap("realtor_id", "Realtor"),
+                new DBMap("title_company_id", "Title Company")
+            };
 
-            //AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
-            //filter.FilterDone += ProcessSurveySearch;
-            //filter.Show();
+            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
+            filter.FilterDone += ProcessSurveySearch;
+            filter.Show();
         }
 
         private void newSurveyBtn_Click(object sender, EventArgs e)

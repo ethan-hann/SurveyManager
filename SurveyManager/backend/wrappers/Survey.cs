@@ -109,15 +109,38 @@ namespace SurveyManager.backend.wrappers
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public TitleCompany TitleCompany { get; set; } = new TitleCompany();
 
+        [Category("Survey Information")]
+        [Description("The location for this survey job, if different from the Client's address.")]
+        [Browsable(true)]
+        [DisplayName("Location")]
+        [TypeConverter(typeof(ExpandableObjectConverter))]
+        public Address Location { get; set; } = new Address();
+
+        [Browsable(false)]
+        public int LocationID { get; set; }
+
         [Browsable(false)]
         public string FileIds { get; set; } = "N/A";
 
         [Category("Files")]
-        [Description("A list of files that should be associated with this survey job.")]
+        [Description("The total number of files associated with this survey job.")]
         [Browsable(true)]
         [DisplayName("Files")]
-        [Editor(typeof(UploadFileEditor), typeof(UITypeEditor))]
+        public int NumOfFiles
+        {
+            get
+            {
+                return Files.Count;
+            }
+        }
+
+        [Category("Files")]
+        [Description("A list of files that should be associated with this survey job.")]
+        [Browsable(false)]
+        [DisplayName("Files")]
+        //[Editor(typeof(UploadFileEditor), typeof(UITypeEditor))]
         public List<CFile> Files { get; private set; } = new List<CFile>();
+        //TODO: see https://stackoverflow.com/questions/7456738/how-do-i-pass-an-argument-to-a-class-that-inherits-uitypeeditor
 
         [Browsable(false)]
         public bool HasFiles
@@ -191,6 +214,21 @@ namespace SurveyManager.backend.wrappers
                 };
                 dbThread.Start();
             }
+            if (LocationID == Client.ClientAddress.ID)
+            {
+                Location = Client.ClientAddress;
+            }
+            else if (LocationID != 0)
+            {
+                Thread dbThread = new Thread(() =>
+                {
+                    Location = Database.GetAddress(LocationID);
+                })
+                {
+                    IsBackground = true
+                };
+                dbThread.Start();
+            }
             if (!FileIds.Equals("N/A"))
             {
                 Thread dbThread = new Thread(() =>
@@ -214,6 +252,10 @@ namespace SurveyManager.backend.wrappers
             Files.Add(file);
         }
 
+        /// <summary>
+        /// Adds the files to the associated file list.
+        /// </summary>
+        /// <param name="files">The files to add.</param>
         public void AddFiles(ICollection<CFile> files)
         {
             Files.AddRange(files);
@@ -227,6 +269,15 @@ namespace SurveyManager.backend.wrappers
         {
             if (Files.Contains(file))
                 Files.Remove(file);
+        }
+
+        /// <summary>
+        /// Remove all files in <paramref name="files"/> from <see cref="Files"/>.
+        /// </summary>
+        /// <param name="files">The collection of files to remove.</param>
+        public void RemoveFiles(ICollection<CFile> files)
+        {
+            Files = (List<CFile>)Files.Except(files).Cast<CFile>();
         }
 
         /// <summary>
@@ -299,9 +350,6 @@ namespace SurveyManager.backend.wrappers
         /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
         public DatabaseError Insert()
         {
-            if (!IsValidSurvey)
-                return DatabaseError.SurveyIncomplete;
-
             #region Client Insert/Update
             if (Client.ID == 0)
             {
@@ -353,16 +401,38 @@ namespace SurveyManager.backend.wrappers
                 }
             }
             #endregion
-
-            #region Files
+            #region Location Insert/Update
+            {
+                if (Location.ID == 0)
+                {
+                    DatabaseError locationError = Location.Insert();
+                    if (locationError != DatabaseError.NoError)
+                        return locationError;
+                    Location.ID = Database.GetLastRowIDInserted("Address");
+                }
+                else
+                {
+                    DatabaseError locError = Location.Update();
+                    if (locError != DatabaseError.NoError)
+                        return locError;
+                }
+            }
+            #endregion
+            #region Files Insert
             foreach (CFile file in Files)
             {
                 DatabaseError fileError = file.Update();
                 if (fileError == DatabaseError.FileInsert)
                     return fileError;
-                AddFileId(Database.GetLastRowIDInserted("File"));
+                if (file.ID == 0)
+                    AddFileId(Database.GetLastRowIDInserted("File"));
+                else
+                    AddFileId(file.ID);
             }
             #endregion
+            #region County Insert
+            if (County.ID == 0)
+                return DatabaseError.CountyInsert;
 
             return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }
@@ -376,26 +446,59 @@ namespace SurveyManager.backend.wrappers
         {
             if (!IsValidSurvey)
                 return DatabaseError.SurveyIncomplete;
-
+            
+            #region Client Update
+            if (Client.ID != 0)
+            {
+                DatabaseError clientError = Client.Update();
+                if (clientError != DatabaseError.NoError)
+                    return clientError;
+            }
+            #endregion
+            #region Realtor Update
+            if (Realtor.IsValidRealtor)
+            {
+                if (Realtor.ID == 0)
+                {
+                    DatabaseError realtorError = Realtor.Update();
+                    if (realtorError != DatabaseError.NoError)
+                        return realtorError;
+                }
+            }
+            #endregion
+            #region Title Company Update
+            if (TitleCompany.IsValidCompany)
+            {
+                if (TitleCompany.ID != 0)
+                {
+                    DatabaseError tcError = TitleCompany.Update();
+                    if (tcError != DatabaseError.NoError)
+                        return tcError;
+                }
+                
+            }
+            #endregion
+            #region Location Update
+            {
+                if (Location.ID != 0)
+                {
+                    DatabaseError locationError = Location.Update();
+                    if (locationError != DatabaseError.NoError)
+                        return locationError;
+                }
+            }
+            #endregion
+            #region Files Update
             foreach (CFile file in Files)
             {
-                DatabaseError fileError;
-                //We need to insert a new file
-                if (file.ID == 0)
+                if (file.ID != 0)
                 {
-                    fileError = Database.InsertFile(file) ? DatabaseError.NoError : DatabaseError.FileInsert;
-                    int id = Database.GetLastRowIDInserted("File");
-                    if (fileError == DatabaseError.FileInsert)
-                        return fileError;
-                    AddFileId(id);
-                }
-                else //we are updating a file
-                {
-                    fileError = Database.UpdateFile(file) ? DatabaseError.NoError : DatabaseError.FileUpdate;
+                    DatabaseError fileError = Database.UpdateFile(file) ? DatabaseError.NoError : DatabaseError.FileUpdate;
                     if (fileError == DatabaseError.FileUpdate)
                         return fileError;
                 }
             }
+            #endregion
 
             return Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }

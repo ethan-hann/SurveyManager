@@ -89,7 +89,8 @@ namespace SurveyManager.utility
                 Acres = (double)row["acres"],
                 FileIds = (string)row["file_ids"],
                 RealtorID = row.IsNull("realtor_id") ? 0 : (int)row["realtor_id"],
-                TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"]
+                TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"],
+                LocationID = (int)row["address_id"]
             };
 
             s.SetObjects();

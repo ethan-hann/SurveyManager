@@ -70,6 +70,9 @@ namespace SurveyManager.forms.newForms
         private void SaveClient(object sender, EventArgs e)
         {
             survey = (Survey)surveyPropGrid.SelectedObject;
+            if (survey.Location.IsEmpty)
+                survey.Location = survey.Client.ClientAddress;
+
             DatabaseError surveyError;
 
             if (!editMode)

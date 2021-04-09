@@ -33,6 +33,9 @@ namespace SurveyManager.forms
             this.rowFilterColumn = rowFilterColumn;
 
             Text = title.Equals("") ? "View Objects" : title;
+
+            if (table.TableName.Equals("Survey"))
+                resultPropertyGrid.Enabled = true;
         }
 
         private void FilterResults_Load(object sender, EventArgs e)

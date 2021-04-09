@@ -33,7 +33,11 @@ namespace SurveyManager.forms.surveyMenu
             }
 
             // Displays a file upload dialog
-            UploadFile form = new UploadFile();
+            UploadFile form;
+           //if (files != null && files.Count > 0)
+              //  form = new UploadFile(files);
+            //else
+                form = new UploadFile();
             if (edSvc.ShowDialog(form) == System.Windows.Forms.DialogResult.OK)
             {
                 return form.GetFiles();

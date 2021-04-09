@@ -1382,6 +1382,7 @@ namespace SurveyManager.backend
                             cmd.Parameters.AddWithValue("@11", DBNull.Value);
 
                         cmd.Parameters.AddWithValue("@12", s.FileIds);
+                        cmd.Parameters.AddWithValue("@13", s.Location.ID);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1437,6 +1438,7 @@ namespace SurveyManager.backend
                             cmd.Parameters.AddWithValue("@12", DBNull.Value);
 
                         cmd.Parameters.AddWithValue("@13", s.FileIds);
+                        cmd.Parameters.AddWithValue("@14", s.Location.ID);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1481,7 +1483,8 @@ namespace SurveyManager.backend
                                 SectionNumber = reader.GetString(8),
                                 CountyID = reader.GetInt32(9),
                                 Acres = reader.GetDouble(10),
-                                FileIds = reader.GetString(13)
+                                FileIds = reader.GetString(13),
+                                LocationID = reader.GetInt32(14)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1533,7 +1536,8 @@ namespace SurveyManager.backend
                                     SectionNumber = reader.GetString(8),
                                     CountyID = reader.GetInt32(9),
                                     Acres = reader.GetDouble(10),
-                                    FileIds = reader.GetString(13)
+                                    FileIds = reader.GetString(13),
+                                    LocationID = reader.GetInt32(14)
                                 };
 
                                 if (reader.IsDBNull(11))
