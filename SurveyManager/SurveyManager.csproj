@@ -176,24 +176,8 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\newForms\NewSurvey.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\newForms\NewSurvey.Designer.cs">
-      <DependentUpon>NewSurvey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\newForms\NewTitleCompany.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\newForms\NewTitleCompany.Designer.cs">
-      <DependentUpon>NewTitleCompany.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\newForms\NewRealtor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\newForms\NewRealtor.Designer.cs">
-      <DependentUpon>NewRealtor.cs</DependentUpon>
-    </Compile>
+    <Compile Include="forms\pages\NewPage.cs" />
+    <Compile Include="forms\pages\ViewPage.cs" />
     <Compile Include="forms\surveyMenu\UploadFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,30 +190,29 @@
     <Compile Include="forms\surveyMenu\UploadFileCtl.Designer.cs">
       <DependentUpon>UploadFileCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\UploadFileEditor.cs" />
-    <Compile Include="forms\ViewGrid.cs">
-      <SubType>Form</SubType>
+    <Compile Include="forms\userControls\NewObject.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\ViewGrid.Designer.cs">
-      <DependentUpon>ViewGrid.cs</DependentUpon>
+    <Compile Include="forms\userControls\NewObject.Designer.cs">
+      <DependentUpon>NewObject.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\ViewObjects.cs">
-      <SubType>Form</SubType>
+    <Compile Include="forms\userControls\NewSurveyCtl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\FilterResults.Designer.cs">
-      <DependentUpon>ViewObjects.cs</DependentUpon>
+    <Compile Include="forms\userControls\NewSurveyCtl.Designer.cs">
+      <DependentUpon>NewSurveyCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\userControls\ViewObjectsCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\userControls\ViewObjectsCtl.Designer.cs">
+      <DependentUpon>ViewObjectsCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\newForms\NewClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\newForms\NewClient.Designer.cs">
-      <DependentUpon>NewClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,23 +253,8 @@
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\FilterResults.resx">
-      <DependentUpon>ViewObjects.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\newForms\NewSurvey.resx">
-      <DependentUpon>NewSurvey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\newForms\NewTitleCompany.resx">
-      <DependentUpon>NewTitleCompany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\newForms\NewRealtor.resx">
-      <DependentUpon>NewRealtor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\newForms\NewClient.resx">
-      <DependentUpon>NewClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
       <DependentUpon>UploadFile.cs</DependentUpon>
@@ -294,8 +262,14 @@
     <EmbeddedResource Include="forms\surveyMenu\UploadFileCtl.resx">
       <DependentUpon>UploadFileCtl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\ViewGrid.resx">
-      <DependentUpon>ViewGrid.cs</DependentUpon>
+    <EmbeddedResource Include="forms\userControls\NewObject.resx">
+      <DependentUpon>NewObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\userControls\NewSurveyCtl.resx">
+      <DependentUpon>NewSurveyCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\userControls\ViewObjectsCtl.resx">
+      <DependentUpon>ViewObjectsCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -536,6 +510,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\view_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrument_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated_24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

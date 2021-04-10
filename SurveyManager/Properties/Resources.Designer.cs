@@ -431,6 +431,16 @@ namespace SurveyManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instrument_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("instrument_24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon logo {
@@ -593,6 +603,16 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("settings_24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sql {
             get {
                 object obj = ResourceManager.GetObject("sql", resourceCulture);
@@ -716,6 +736,16 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap updated {
             get {
                 object obj = ResourceManager.GetObject("updated", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap updated_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("updated_24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

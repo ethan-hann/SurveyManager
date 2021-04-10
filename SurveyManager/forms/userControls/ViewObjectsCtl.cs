@@ -1,4 +1,4 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Navigator;
 using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
@@ -18,30 +18,26 @@ using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.forms
+namespace SurveyManager.forms.userControls
 {
-    public partial class ViewGrid : KryptonForm
+    public partial class ViewObjectsCtl : UserControl
     {
         private EntityTypes typeOfData;
         private DataTable lastFilterResults;
         private List<OutlookGridRow> rows;
+        private FilterDoneEventArgs currentFilterArgs;
 
         public EventHandler StatusUpdate;
 
-        public ViewGrid(EntityTypes typeToDisplay, Icon iconToDisplay, string titleText = "")
+        public ViewObjectsCtl(EntityTypes typeToDisplay, DataTable filterResults = null)
         {
             InitializeComponent();
 
-            Icon = iconToDisplay;
-            if (titleText.Equals(""))
-                Text = "View Objects";
-            else
-                Text = titleText;
-
             typeOfData = typeToDisplay;
+            lastFilterResults = filterResults;
         }
 
-        private void ViewGrid_Load(object sender, EventArgs e)
+        private void ViewObjects_Load(object sender, EventArgs e)
         {
             propGrid.GetAcceptButton().Click += SaveData;
             propGrid.GetAcceptButton().ToolTipText = "Save the object's properties to the database.";
@@ -50,6 +46,18 @@ namespace SurveyManager.forms
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);
             LoadData();
+        }
+
+        private void UpdateTabName(string newTitle)
+        {
+            KryptonPage parentPage = Parent as KryptonPage;
+            if (parentPage != null)
+            {
+                parentPage.Text = newTitle;
+                parentPage.TextTitle = parentPage.Text;
+                parentPage.Invalidate();
+                parentPage.Update();
+            }
         }
 
         private void LoadData()
@@ -128,7 +136,7 @@ namespace SurveyManager.forms
                         new DBMap("acres", "Acres"),
                         new DBMap("realtor_id", "Realtor"),
                         new DBMap("title_company_id", "Title Company")
-                    };
+                    }; //TODO: combine all tables to search for surveys!
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));
                     break;
@@ -147,6 +155,7 @@ namespace SurveyManager.forms
             if (e is FilterDoneEventArgs args)
             {
                 lastFilterResults = args.Results;
+                currentFilterArgs = args;
                 LoadData();
             }
         }
@@ -187,11 +196,27 @@ namespace SurveyManager.forms
         {
             if (!Disposing && !IsDisposed)
             {
-                if (typeOfData == EntityTypes.TitleCompany)
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Title Companies loaded."));
+                if (lastFilterResults != null)
+                {
+                    if (typeOfData == EntityTypes.TitleCompany)
+                    {
+                        UpdateTabName("Title Companies" + $" [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} title companies " + "matching search criteria: " + currentFilterArgs.Query));
+                    }
+                    else
+                    {
+                        UpdateTabName(typeOfData.ToString() + $"s [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} {typeOfData}s " + "matching search criteria: " + currentFilterArgs.Query));
+                    }
+                }
                 else
-                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
-
+                {
+                    if (typeOfData == EntityTypes.TitleCompany)
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Title Companies loaded."));
+                    else
+                        StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
+                }
+                
                 dataGrid.SuspendLayout();
                 dataGrid.ClearInternalRows();
                 dataGrid.ResumeLayout();
@@ -240,12 +265,11 @@ namespace SurveyManager.forms
                 clients = Database.GetClients();
             }
             else
-            { 
+            {
                 foreach (DataRow dataRow in lastFilterResults.Rows)
                 {
                     clients.Add(ProcessDataTable.GetClient(dataRow));
                 }
-                lastFilterResults = null;
             }
             return clients;
         }
@@ -282,7 +306,6 @@ namespace SurveyManager.forms
                 {
                     realtors.Add(ProcessDataTable.GetRealtor(dataRow));
                 }
-                lastFilterResults = null;
             }
             return realtors;
         }
@@ -319,7 +342,6 @@ namespace SurveyManager.forms
                 {
                     companies.Add(ProcessDataTable.GetTitleCompany(dataRow));
                 }
-                lastFilterResults = null;
             }
             return companies;
         }
@@ -356,7 +378,6 @@ namespace SurveyManager.forms
                 {
                     surveys.Add(ProcessDataTable.GetSurvey(dataRow));
                 }
-                lastFilterResults = null;
             }
             return surveys;
         }
@@ -388,15 +409,6 @@ namespace SurveyManager.forms
             {
                 DataGridViewRow r = dataGrid.Rows[e.RowIndex];
                 propGrid.SelectedObject = r.Tag;
-            }
-        }
-
-        private void dataGrid_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                if (dataGrid.SelectedCells.Count > 0)
-                    dataGrid.DoDragDrop(new DragDropInfo((DatabaseWrapper)dataGrid.SelectedCells[0].OwningRow.Tag), DragDropEffects.Copy);
             }
         }
     }

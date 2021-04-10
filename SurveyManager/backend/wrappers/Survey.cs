@@ -433,6 +433,7 @@ namespace SurveyManager.backend.wrappers
             #region County Insert
             if (County.ID == 0)
                 return DatabaseError.CountyInsert;
+            #endregion
 
             return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }

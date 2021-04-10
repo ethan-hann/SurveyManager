@@ -31,364 +31,55 @@ namespace SurveyManager
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdatesBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.surveysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findSurveyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.newSurveyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewSurveysBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findClientBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.newClientBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewClientsBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.realtorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findRealtorBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.newRealtorBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewRealtorsBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.titleCompanyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.newTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewTitleCompanyBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dbConnectionBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.exportDatabaseBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDatabaseBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.sqlQueryBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userManualBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblStatusDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.kManager = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.office2013_edited = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.menuStrip1.SuspendLayout();
+            this.mainRibbon = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
+            this.homeTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
+            this.surveyRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.clientRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.realtorRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.tcRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton12 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.helpGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnUserManual = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.databaseTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnDBConnection = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroup2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.exportDataBtn = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.importDataBtn = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnSqlQuery = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.dockingManager = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
             this.mainStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dockableWorkspace)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.surveysToolStripMenuItem,
-            this.clientToolStripMenuItem,
-            this.realtorToolStripMenuItem,
-            this.titleCompanyToolStripMenuItem,
-            this.databaseToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1584, 26);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsBtn,
-            this.aboutBtn,
-            this.checkForUpdatesBtn,
-            this.toolStripSeparator5,
-            this.exitBtn});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 22);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Image = global::SurveyManager.Properties.Resources.settings;
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.ShortcutKeyDisplayString = "";
-            this.settingsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.settingsBtn.Size = new System.Drawing.Size(224, 22);
-            this.settingsBtn.Text = "Settings";
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
-            // 
-            // aboutBtn
-            // 
-            this.aboutBtn.Image = global::SurveyManager.Properties.Resources.info;
-            this.aboutBtn.Name = "aboutBtn";
-            this.aboutBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.aboutBtn.Size = new System.Drawing.Size(224, 22);
-            this.aboutBtn.Text = "About";
-            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
-            // 
-            // checkForUpdatesBtn
-            // 
-            this.checkForUpdatesBtn.Image = global::SurveyManager.Properties.Resources.updated;
-            this.checkForUpdatesBtn.Name = "checkForUpdatesBtn";
-            this.checkForUpdatesBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.checkForUpdatesBtn.Size = new System.Drawing.Size(224, 22);
-            this.checkForUpdatesBtn.Text = "Check For Updates";
-            this.checkForUpdatesBtn.Click += new System.EventHandler(this.checkForUpdatesBtn_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitBtn.Size = new System.Drawing.Size(224, 22);
-            this.exitBtn.Text = "Exit";
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
-            // 
-            // surveysToolStripMenuItem
-            // 
-            this.surveysToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findSurveyBtn,
-            this.toolStripSeparator1,
-            this.newSurveyBtn,
-            this.viewSurveysBtn});
-            this.surveysToolStripMenuItem.Name = "surveysToolStripMenuItem";
-            this.surveysToolStripMenuItem.Size = new System.Drawing.Size(59, 22);
-            this.surveysToolStripMenuItem.Text = "Survey";
-            // 
-            // findSurveyBtn
-            // 
-            this.findSurveyBtn.Image = global::SurveyManager.Properties.Resources.surveying;
-            this.findSurveyBtn.Name = "findSurveyBtn";
-            this.findSurveyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.findSurveyBtn.Size = new System.Drawing.Size(192, 22);
-            this.findSurveyBtn.Text = "Find...";
-            this.findSurveyBtn.Click += new System.EventHandler(this.findSurveyBtn_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(189, 6);
-            // 
-            // newSurveyBtn
-            // 
-            this.newSurveyBtn.Image = global::SurveyManager.Properties.Resources.add;
-            this.newSurveyBtn.Name = "newSurveyBtn";
-            this.newSurveyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.newSurveyBtn.Size = new System.Drawing.Size(192, 22);
-            this.newSurveyBtn.Text = "New...";
-            this.newSurveyBtn.Click += new System.EventHandler(this.newSurveyBtn_Click);
-            // 
-            // viewSurveysBtn
-            // 
-            this.viewSurveysBtn.Image = global::SurveyManager.Properties.Resources.view;
-            this.viewSurveysBtn.Name = "viewSurveysBtn";
-            this.viewSurveysBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.viewSurveysBtn.Size = new System.Drawing.Size(192, 22);
-            this.viewSurveysBtn.Text = "View...";
-            this.viewSurveysBtn.Click += new System.EventHandler(this.viewSurveysBtn_Click);
-            // 
-            // clientToolStripMenuItem
-            // 
-            this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findClientBtn,
-            this.toolStripSeparator2,
-            this.newClientBtn,
-            this.viewClientsBtn});
-            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
-            this.clientToolStripMenuItem.Text = "Client";
-            // 
-            // findClientBtn
-            // 
-            this.findClientBtn.Image = global::SurveyManager.Properties.Resources.client;
-            this.findClientBtn.Name = "findClientBtn";
-            this.findClientBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.findClientBtn.Size = new System.Drawing.Size(193, 22);
-            this.findClientBtn.Text = "Find...";
-            this.findClientBtn.Click += new System.EventHandler(this.findClientBtn_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(190, 6);
-            // 
-            // newClientBtn
-            // 
-            this.newClientBtn.Image = global::SurveyManager.Properties.Resources.add;
-            this.newClientBtn.Name = "newClientBtn";
-            this.newClientBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.newClientBtn.Size = new System.Drawing.Size(193, 22);
-            this.newClientBtn.Text = "New...";
-            this.newClientBtn.Click += new System.EventHandler(this.newClientBtn_Click);
-            // 
-            // viewClientsBtn
-            // 
-            this.viewClientsBtn.Image = global::SurveyManager.Properties.Resources.view;
-            this.viewClientsBtn.Name = "viewClientsBtn";
-            this.viewClientsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.viewClientsBtn.Size = new System.Drawing.Size(193, 22);
-            this.viewClientsBtn.Text = "View...";
-            this.viewClientsBtn.Click += new System.EventHandler(this.viewClientsBtn_Click);
-            // 
-            // realtorToolStripMenuItem
-            // 
-            this.realtorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findRealtorBtn,
-            this.toolStripSeparator3,
-            this.newRealtorBtn,
-            this.viewRealtorsBtn});
-            this.realtorToolStripMenuItem.Name = "realtorToolStripMenuItem";
-            this.realtorToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
-            this.realtorToolStripMenuItem.Text = "Realtor";
-            // 
-            // findRealtorBtn
-            // 
-            this.findRealtorBtn.Image = global::SurveyManager.Properties.Resources.realtor;
-            this.findRealtorBtn.Name = "findRealtorBtn";
-            this.findRealtorBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.findRealtorBtn.Size = new System.Drawing.Size(193, 22);
-            this.findRealtorBtn.Text = "Find...";
-            this.findRealtorBtn.Click += new System.EventHandler(this.findRealtorBtn_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(190, 6);
-            // 
-            // newRealtorBtn
-            // 
-            this.newRealtorBtn.Image = global::SurveyManager.Properties.Resources.add;
-            this.newRealtorBtn.Name = "newRealtorBtn";
-            this.newRealtorBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.R)));
-            this.newRealtorBtn.Size = new System.Drawing.Size(193, 22);
-            this.newRealtorBtn.Text = "New...";
-            this.newRealtorBtn.Click += new System.EventHandler(this.newRealtorBtn_Click);
-            // 
-            // viewRealtorsBtn
-            // 
-            this.viewRealtorsBtn.Image = global::SurveyManager.Properties.Resources.view;
-            this.viewRealtorsBtn.Name = "viewRealtorsBtn";
-            this.viewRealtorsBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.viewRealtorsBtn.Size = new System.Drawing.Size(193, 22);
-            this.viewRealtorsBtn.Text = "View...";
-            this.viewRealtorsBtn.Click += new System.EventHandler(this.viewRealtorsBtn_Click);
-            // 
-            // titleCompanyToolStripMenuItem
-            // 
-            this.titleCompanyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findTitleCompanyBtn,
-            this.toolStripSeparator4,
-            this.newTitleCompanyBtn,
-            this.viewTitleCompanyBtn});
-            this.titleCompanyToolStripMenuItem.Name = "titleCompanyToolStripMenuItem";
-            this.titleCompanyToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.titleCompanyToolStripMenuItem.Text = "Title Company";
-            // 
-            // findTitleCompanyBtn
-            // 
-            this.findTitleCompanyBtn.Image = global::SurveyManager.Properties.Resources.title_company;
-            this.findTitleCompanyBtn.Name = "findTitleCompanyBtn";
-            this.findTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.findTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
-            this.findTitleCompanyBtn.Text = "Find...";
-            this.findTitleCompanyBtn.Click += new System.EventHandler(this.findTitleCompanyBtn_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(190, 6);
-            // 
-            // newTitleCompanyBtn
-            // 
-            this.newTitleCompanyBtn.Image = global::SurveyManager.Properties.Resources.add;
-            this.newTitleCompanyBtn.Name = "newTitleCompanyBtn";
-            this.newTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.T)));
-            this.newTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
-            this.newTitleCompanyBtn.Text = "New...";
-            this.newTitleCompanyBtn.Click += new System.EventHandler(this.newTitleCompanyBtn_Click);
-            // 
-            // viewTitleCompanyBtn
-            // 
-            this.viewTitleCompanyBtn.Image = global::SurveyManager.Properties.Resources.view;
-            this.viewTitleCompanyBtn.Name = "viewTitleCompanyBtn";
-            this.viewTitleCompanyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.viewTitleCompanyBtn.Size = new System.Drawing.Size(193, 22);
-            this.viewTitleCompanyBtn.Text = "View...";
-            this.viewTitleCompanyBtn.Click += new System.EventHandler(this.viewTitleCompanyBtn_Click);
-            // 
-            // databaseToolStripMenuItem
-            // 
-            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dbConnectionBtn,
-            this.toolStripSeparator6,
-            this.exportDatabaseBtn,
-            this.importDatabaseBtn,
-            this.sqlQueryBtn});
-            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(74, 22);
-            this.databaseToolStripMenuItem.Text = "Database";
-            // 
-            // dbConnectionBtn
-            // 
-            this.dbConnectionBtn.Image = global::SurveyManager.Properties.Resources.db_connection;
-            this.dbConnectionBtn.Name = "dbConnectionBtn";
-            this.dbConnectionBtn.ShortcutKeyDisplayString = "Ctrl+~";
-            this.dbConnectionBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Oemtilde)));
-            this.dbConnectionBtn.Size = new System.Drawing.Size(251, 22);
-            this.dbConnectionBtn.Text = "Connection Settings...";
-            this.dbConnectionBtn.Click += new System.EventHandler(this.dbConnectionBtn_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(248, 6);
-            // 
-            // exportDatabaseBtn
-            // 
-            this.exportDatabaseBtn.Image = global::SurveyManager.Properties.Resources.export;
-            this.exportDatabaseBtn.Name = "exportDatabaseBtn";
-            this.exportDatabaseBtn.Size = new System.Drawing.Size(251, 22);
-            this.exportDatabaseBtn.Text = "Export...";
-            // 
-            // importDatabaseBtn
-            // 
-            this.importDatabaseBtn.Image = global::SurveyManager.Properties.Resources.import;
-            this.importDatabaseBtn.Name = "importDatabaseBtn";
-            this.importDatabaseBtn.Size = new System.Drawing.Size(251, 22);
-            this.importDatabaseBtn.Text = "Import...";
-            // 
-            // sqlQueryBtn
-            // 
-            this.sqlQueryBtn.Image = global::SurveyManager.Properties.Resources.sql;
-            this.sqlQueryBtn.Name = "sqlQueryBtn";
-            this.sqlQueryBtn.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.sqlQueryBtn.Size = new System.Drawing.Size(251, 22);
-            this.sqlQueryBtn.Text = "SQL Query...";
-            this.sqlQueryBtn.Click += new System.EventHandler(this.sqlQueryBtn_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userManualBtn});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // userManualBtn
-            // 
-            this.userManualBtn.Image = global::SurveyManager.Properties.Resources.info;
-            this.userManualBtn.Name = "userManualBtn";
-            this.userManualBtn.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.userManualBtn.Size = new System.Drawing.Size(169, 22);
-            this.userManualBtn.Text = "User Manual";
             // 
             // mainStatusStrip
             // 
@@ -442,74 +133,353 @@ namespace SurveyManager
             this.office2013_edited.ToolMenuStatus.StatusStrip.StatusStripGradientEnd = System.Drawing.Color.SteelBlue;
             this.office2013_edited.ToolMenuStatus.StatusStrip.StatusStripText = System.Drawing.Color.LightYellow;
             // 
+            // mainRibbon
+            // 
+            this.mainRibbon.InDesignHelperMode = true;
+            this.mainRibbon.Name = "mainRibbon";
+            this.mainRibbon.QATLocation = ComponentFactory.Krypton.Ribbon.QATLocation.Hidden;
+            this.mainRibbon.RibbonAppButton.AppButtonImage = global::SurveyManager.Properties.Resources.instrument_16x16;
+            this.mainRibbon.RibbonAppButton.AppButtonShowRecentDocs = false;
+            this.mainRibbon.RibbonAppButton.AppButtonText = "Menu";
+            this.mainRibbon.RibbonTabs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab[] {
+            this.homeTab,
+            this.databaseTab});
+            this.mainRibbon.SelectedTab = this.homeTab;
+            this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
+            this.mainRibbon.TabIndex = 4;
+            // 
+            // homeTab
+            // 
+            this.homeTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.surveyRibbonGroup,
+            this.clientRibbonGroup,
+            this.realtorRibbonGroup,
+            this.tcRibbonGroup,
+            this.helpGroup});
+            this.homeTab.Text = "Home";
+            // 
+            // surveyRibbonGroup
+            // 
+            this.surveyRibbonGroup.DialogBoxLauncher = false;
+            this.surveyRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple1});
+            this.surveyRibbonGroup.TextLine1 = "Survey";
+            // 
+            // kryptonRibbonGroupTriple1
+            // 
+            this.kryptonRibbonGroupTriple1.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton1,
+            this.kryptonRibbonGroupButton2,
+            this.kryptonRibbonGroupButton3});
+            // 
+            // kryptonRibbonGroupButton1
+            // 
+            this.kryptonRibbonGroupButton1.ImageLarge = global::SurveyManager.Properties.Resources.surveying;
+            this.kryptonRibbonGroupButton1.ImageSmall = global::SurveyManager.Properties.Resources.surveying_16x16;
+            this.kryptonRibbonGroupButton1.TextLine1 = "Find";
+            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.findSurveyBtn_Click);
+            // 
+            // kryptonRibbonGroupButton2
+            // 
+            this.kryptonRibbonGroupButton2.ImageLarge = global::SurveyManager.Properties.Resources.add;
+            this.kryptonRibbonGroupButton2.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonRibbonGroupButton2.TextLine1 = "New";
+            this.kryptonRibbonGroupButton2.Click += new System.EventHandler(this.newSurveyBtn_Click);
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.kryptonRibbonGroupButton3.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.kryptonRibbonGroupButton3.TextLine1 = "View All";
+            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.viewSurveysBtn_Click);
+            // 
+            // clientRibbonGroup
+            // 
+            this.clientRibbonGroup.DialogBoxLauncher = false;
+            this.clientRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple2});
+            this.clientRibbonGroup.TextLine1 = "Client";
+            // 
+            // kryptonRibbonGroupTriple2
+            // 
+            this.kryptonRibbonGroupTriple2.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton4,
+            this.kryptonRibbonGroupButton5,
+            this.kryptonRibbonGroupButton6});
+            // 
+            // kryptonRibbonGroupButton4
+            // 
+            this.kryptonRibbonGroupButton4.ImageLarge = global::SurveyManager.Properties.Resources.client;
+            this.kryptonRibbonGroupButton4.ImageSmall = global::SurveyManager.Properties.Resources.client_16x16;
+            this.kryptonRibbonGroupButton4.TextLine1 = "Find";
+            this.kryptonRibbonGroupButton4.Click += new System.EventHandler(this.findClientBtn_Click);
+            // 
+            // kryptonRibbonGroupButton5
+            // 
+            this.kryptonRibbonGroupButton5.ImageLarge = global::SurveyManager.Properties.Resources.add;
+            this.kryptonRibbonGroupButton5.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonRibbonGroupButton5.TextLine1 = "New";
+            this.kryptonRibbonGroupButton5.Click += new System.EventHandler(this.newClientBtn_Click);
+            // 
+            // kryptonRibbonGroupButton6
+            // 
+            this.kryptonRibbonGroupButton6.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.kryptonRibbonGroupButton6.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.kryptonRibbonGroupButton6.TextLine1 = "View All";
+            this.kryptonRibbonGroupButton6.Click += new System.EventHandler(this.viewClientsBtn_Click);
+            // 
+            // realtorRibbonGroup
+            // 
+            this.realtorRibbonGroup.DialogBoxLauncher = false;
+            this.realtorRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple3});
+            this.realtorRibbonGroup.TextLine1 = "Realtor";
+            // 
+            // kryptonRibbonGroupTriple3
+            // 
+            this.kryptonRibbonGroupTriple3.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton7,
+            this.kryptonRibbonGroupButton8,
+            this.kryptonRibbonGroupButton9});
+            // 
+            // kryptonRibbonGroupButton7
+            // 
+            this.kryptonRibbonGroupButton7.ImageLarge = global::SurveyManager.Properties.Resources.realtor;
+            this.kryptonRibbonGroupButton7.ImageSmall = global::SurveyManager.Properties.Resources.realtor_16x16;
+            this.kryptonRibbonGroupButton7.TextLine1 = "Find";
+            this.kryptonRibbonGroupButton7.Click += new System.EventHandler(this.findRealtorBtn_Click);
+            // 
+            // kryptonRibbonGroupButton8
+            // 
+            this.kryptonRibbonGroupButton8.ImageLarge = global::SurveyManager.Properties.Resources.add;
+            this.kryptonRibbonGroupButton8.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonRibbonGroupButton8.TextLine1 = "New";
+            this.kryptonRibbonGroupButton8.Click += new System.EventHandler(this.newRealtorBtn_Click);
+            // 
+            // kryptonRibbonGroupButton9
+            // 
+            this.kryptonRibbonGroupButton9.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.kryptonRibbonGroupButton9.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.kryptonRibbonGroupButton9.TextLine1 = "View All";
+            this.kryptonRibbonGroupButton9.Click += new System.EventHandler(this.viewRealtorsBtn_Click);
+            // 
+            // tcRibbonGroup
+            // 
+            this.tcRibbonGroup.DialogBoxLauncher = false;
+            this.tcRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple4});
+            this.tcRibbonGroup.TextLine1 = "Title Company";
+            // 
+            // kryptonRibbonGroupTriple4
+            // 
+            this.kryptonRibbonGroupTriple4.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton10,
+            this.kryptonRibbonGroupButton11,
+            this.kryptonRibbonGroupButton12});
+            // 
+            // kryptonRibbonGroupButton10
+            // 
+            this.kryptonRibbonGroupButton10.ImageLarge = global::SurveyManager.Properties.Resources.title_company;
+            this.kryptonRibbonGroupButton10.ImageSmall = global::SurveyManager.Properties.Resources.title_company_16x16;
+            this.kryptonRibbonGroupButton10.TextLine1 = "Find";
+            this.kryptonRibbonGroupButton10.Click += new System.EventHandler(this.findTitleCompanyBtn_Click);
+            // 
+            // kryptonRibbonGroupButton11
+            // 
+            this.kryptonRibbonGroupButton11.ImageLarge = global::SurveyManager.Properties.Resources.add;
+            this.kryptonRibbonGroupButton11.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonRibbonGroupButton11.TextLine1 = "New";
+            this.kryptonRibbonGroupButton11.Click += new System.EventHandler(this.newTitleCompanyBtn_Click);
+            // 
+            // kryptonRibbonGroupButton12
+            // 
+            this.kryptonRibbonGroupButton12.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.kryptonRibbonGroupButton12.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.kryptonRibbonGroupButton12.TextLine1 = "View All";
+            this.kryptonRibbonGroupButton12.Click += new System.EventHandler(this.viewTitleCompanyBtn_Click);
+            // 
+            // helpGroup
+            // 
+            this.helpGroup.DialogBoxLauncher = false;
+            this.helpGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple7});
+            this.helpGroup.TextLine1 = "Help";
+            // 
+            // kryptonRibbonGroupTriple7
+            // 
+            this.kryptonRibbonGroupTriple7.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnUserManual});
+            // 
+            // btnUserManual
+            // 
+            this.btnUserManual.ImageLarge = global::SurveyManager.Properties.Resources.info;
+            this.btnUserManual.ImageSmall = global::SurveyManager.Properties.Resources.info_16x16;
+            this.btnUserManual.TextLine1 = "User";
+            this.btnUserManual.TextLine2 = "Manual";
+            // 
+            // databaseTab
+            // 
+            this.databaseTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup1,
+            this.kryptonRibbonGroup2});
+            this.databaseTab.Text = "Database";
+            // 
+            // kryptonRibbonGroup1
+            // 
+            this.kryptonRibbonGroup1.DialogBoxLauncher = false;
+            this.kryptonRibbonGroup1.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple5});
+            this.kryptonRibbonGroup1.TextLine1 = "Connection";
+            // 
+            // kryptonRibbonGroupTriple5
+            // 
+            this.kryptonRibbonGroupTriple5.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnDBConnection});
+            // 
+            // btnDBConnection
+            // 
+            this.btnDBConnection.ImageLarge = global::SurveyManager.Properties.Resources.db_connection;
+            this.btnDBConnection.ImageSmall = global::SurveyManager.Properties.Resources.db_connection;
+            this.btnDBConnection.TextLine1 = "Connection";
+            this.btnDBConnection.TextLine2 = "Settings";
+            this.btnDBConnection.Click += new System.EventHandler(this.dbConnectionBtn_Click);
+            // 
+            // kryptonRibbonGroup2
+            // 
+            this.kryptonRibbonGroup2.DialogBoxLauncher = false;
+            this.kryptonRibbonGroup2.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple6});
+            this.kryptonRibbonGroup2.TextLine1 = "Data";
+            // 
+            // kryptonRibbonGroupTriple6
+            // 
+            this.kryptonRibbonGroupTriple6.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.exportDataBtn,
+            this.importDataBtn,
+            this.btnSqlQuery});
+            // 
+            // exportDataBtn
+            // 
+            this.exportDataBtn.ImageLarge = global::SurveyManager.Properties.Resources.export;
+            this.exportDataBtn.ImageSmall = global::SurveyManager.Properties.Resources.export;
+            this.exportDataBtn.TextLine1 = "Export";
+            this.exportDataBtn.TextLine2 = "Data";
+            // 
+            // importDataBtn
+            // 
+            this.importDataBtn.ImageLarge = global::SurveyManager.Properties.Resources.import;
+            this.importDataBtn.ImageSmall = global::SurveyManager.Properties.Resources.import;
+            this.importDataBtn.TextLine1 = "Import";
+            this.importDataBtn.TextLine2 = "Data";
+            // 
+            // btnSqlQuery
+            // 
+            this.btnSqlQuery.ImageLarge = global::SurveyManager.Properties.Resources.sql;
+            this.btnSqlQuery.ImageSmall = global::SurveyManager.Properties.Resources.sql_16x16;
+            this.btnSqlQuery.TextLine1 = "SQL";
+            this.btnSqlQuery.TextLine2 = "Query";
+            this.btnSqlQuery.Click += new System.EventHandler(this.sqlQueryBtn_Click);
+            // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.dockableWorkspace);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 115);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(1584, 723);
+            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.kryptonPanel1.TabIndex = 5;
+            // 
+            // dockableWorkspace
+            // 
+            this.dockableWorkspace.AutoHiddenHost = false;
+            this.dockableWorkspace.CompactFlags = ((ComponentFactory.Krypton.Workspace.CompactFlags)(((ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptyCells | ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptySequences) 
+            | ComponentFactory.Krypton.Workspace.CompactFlags.PromoteLeafs)));
+            this.dockableWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dockableWorkspace.Location = new System.Drawing.Point(0, 0);
+            this.dockableWorkspace.Name = "dockableWorkspace";
+            // 
+            // 
+            // 
+            this.dockableWorkspace.Root.UniqueName = "FD3F779B80FA42AB2284FE60B3AE5414";
+            this.dockableWorkspace.Root.WorkspaceControl = this.dockableWorkspace;
+            this.dockableWorkspace.ShowMaximizeButton = false;
+            this.dockableWorkspace.Size = new System.Drawing.Size(1584, 723);
+            this.dockableWorkspace.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dockableWorkspace.TabIndex = 0;
+            this.dockableWorkspace.TabStop = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
-            this.Controls.Add(this.menuStrip1);
+            this.CustomCaptionArea = new System.Drawing.Rectangle(252, 0, 1309, 26);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Survey Manager";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dockableWorkspace)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsBtn;
-        private System.Windows.Forms.ToolStripMenuItem aboutBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem exitBtn;
-        private System.Windows.Forms.ToolStripMenuItem surveysToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findSurveyBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem newSurveyBtn;
-        private System.Windows.Forms.ToolStripMenuItem viewSurveysBtn;
-        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findClientBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem newClientBtn;
-        private System.Windows.Forms.ToolStripMenuItem viewClientsBtn;
-        private System.Windows.Forms.ToolStripMenuItem realtorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findRealtorBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem newRealtorBtn;
-        private System.Windows.Forms.ToolStripMenuItem viewRealtorsBtn;
-        private System.Windows.Forms.ToolStripMenuItem titleCompanyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findTitleCompanyBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem newTitleCompanyBtn;
-        private System.Windows.Forms.ToolStripMenuItem viewTitleCompanyBtn;
-        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportDatabaseBtn;
-        private System.Windows.Forms.ToolStripMenuItem importDatabaseBtn;
-        private System.Windows.Forms.ToolStripMenuItem sqlQueryBtn;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userManualBtn;
-        private System.Windows.Forms.ToolStripMenuItem dbConnectionBtn;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.StatusStrip mainStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusDate;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.Timer clockTimer;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kManager;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette office2013_edited;
-        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesBtn;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbon mainRibbon;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab homeTab;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup surveyRibbonGroup;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple1;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton2;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup clientRibbonGroup;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple2;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton4;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton5;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton6;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup realtorRibbonGroup;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton7;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton8;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton9;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup tcRibbonGroup;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple4;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton10;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton11;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton12;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup helpGroup;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple7;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnUserManual;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab databaseTab;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup1;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple5;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnDBConnection;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup2;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple6;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton exportDataBtn;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton importDataBtn;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSqlQuery;
+        private ComponentFactory.Krypton.Docking.KryptonDockingManager dockingManager;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Docking.KryptonDockableWorkspace dockableWorkspace;
     }
 }
 

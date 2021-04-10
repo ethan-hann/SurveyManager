@@ -4,15 +4,9 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Survey
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.databaseMenu.SQLQuery.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.AboutBox.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.AdvancedFilter.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.ViewObjects.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.MainForm.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.newForms.NewSurvey.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.newForms.NewTitleCompany.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.newForms.NewRealtor.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.newForms.NewClient.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.UploadFile.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.UploadFileCtl.resources
-C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.ViewGrid.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.Properties.Resources.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.GenerateResource.cache
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.CoreCompileInputs.cache
@@ -53,3 +47,6 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\System
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.CopyComplete
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.pdb
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.userControls.NewObject.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.userControls.NewSurveyCtl.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.userControls.ViewObjectsCtl.resources

@@ -19,6 +19,13 @@ namespace SurveyManager.utility.CustomControls
         public CPropertyGrid()
         {
             InitializeComponent();
+
+            acceptButton.Image = Resources.success_16x16;
+            clearButton.Image = Resources.error_16x16;
+            acceptButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            clearButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+
+            AddButtons();
         }
 
         public CPropertyGrid(IContainer container)

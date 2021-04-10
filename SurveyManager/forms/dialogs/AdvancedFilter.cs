@@ -201,7 +201,7 @@ namespace SurveyManager.forms.dialogs
                 query = $"SELECT * FROM {tableName} WHERE {optionalClause} AND {whereClause};";
             }
 
-            FilterDoneEventArgs args = new FilterDoneEventArgs(Database.ExecuteFilter(query));
+            FilterDoneEventArgs args = new FilterDoneEventArgs(Database.ExecuteFilter(query), query);
 
             if (args.Results == null || args.Results.Rows.Count <= 0)
             {

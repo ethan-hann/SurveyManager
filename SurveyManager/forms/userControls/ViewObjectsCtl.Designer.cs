@@ -1,14 +1,14 @@
 ﻿
-namespace SurveyManager.forms
+namespace SurveyManager.forms.userControls
 {
-    partial class ViewGrid
+    partial class ViewObjectsCtl
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,85 +21,30 @@ namespace SurveyManager.forms
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection1 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
-            this.dataGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
-            this.groupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
-            this.bgWorker = new System.ComponentModel.BackgroundWorker();
-            this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnFilter = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnRefresh = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.dataGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
+            this.groupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
+            this.loadProgressBar = new System.Windows.Forms.ProgressBar();
+            this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
             this.hdrGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGrid
-            // 
-            this.dataGrid.AllowDrop = true;
-            this.dataGrid.AllowUserToAddRows = false;
-            this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
-            this.dataGrid.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Sheet;
-            this.dataGrid.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet;
-            this.dataGrid.GridStyles.StyleColumn = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
-            this.dataGrid.GridStyles.StyleDataCells = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
-            this.dataGrid.GridStyles.StyleRow = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
-            this.dataGrid.GroupBox = this.groupBox;
-            this.dataGrid.GroupCollection = outlookGridGroupCollection1;
-            this.dataGrid.Location = new System.Drawing.Point(0, 31);
-            this.dataGrid.MultiSelect = false;
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.PreviousSelectedGroupRow = -1;
-            this.dataGrid.ReadOnly = true;
-            this.dataGrid.Size = new System.Drawing.Size(987, 204);
-            this.dataGrid.TabIndex = 0;
-            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            this.dataGrid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGrid_MouseDown);
-            // 
-            // groupBox
-            // 
-            this.groupBox.AllowDrop = true;
-            this.groupBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.groupBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.groupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(987, 31);
-            this.groupBox.TabIndex = 1;
-            // 
-            // bgWorker
-            // 
-            this.bgWorker.WorkerReportsProgress = true;
-            this.bgWorker.WorkerSupportsCancellation = true;
-            this.bgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker_DoWork);
-            this.bgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgWorker_ProgressChanged);
-            this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
-            // 
-            // loadProgressBar
-            // 
-            this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loadProgressBar.Location = new System.Drawing.Point(0, 607);
-            this.loadProgressBar.MarqueeAnimationSpeed = 10;
-            this.loadProgressBar.Name = "loadProgressBar";
-            this.loadProgressBar.Size = new System.Drawing.Size(989, 23);
-            this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.loadProgressBar.TabIndex = 3;
             // 
             // hdrGroup
             // 
@@ -114,8 +59,8 @@ namespace SurveyManager.forms
             // 
             this.hdrGroup.Panel.Controls.Add(this.dataGrid);
             this.hdrGroup.Panel.Controls.Add(this.groupBox);
-            this.hdrGroup.Size = new System.Drawing.Size(989, 287);
-            this.hdrGroup.TabIndex = 4;
+            this.hdrGroup.Size = new System.Drawing.Size(957, 287);
+            this.hdrGroup.TabIndex = 7;
             this.hdrGroup.ValuesPrimary.Heading = "";
             this.hdrGroup.ValuesPrimary.Image = null;
             this.hdrGroup.ValuesSecondary.Heading = "Select a row to display its properties below. You can edit the property grid belo" +
@@ -139,43 +84,96 @@ namespace SurveyManager.forms
             this.btnRefresh.UniqueName = "193F7B3442034733E7BBC4E91B0F7F8B";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // dataGrid
+            // 
+            this.dataGrid.AllowDrop = true;
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
+            this.dataGrid.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Sheet;
+            this.dataGrid.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundSheet;
+            this.dataGrid.GridStyles.StyleColumn = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
+            this.dataGrid.GridStyles.StyleDataCells = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
+            this.dataGrid.GridStyles.StyleRow = ComponentFactory.Krypton.Toolkit.GridStyle.Sheet;
+            this.dataGrid.GroupBox = this.groupBox;
+            this.dataGrid.GroupCollection = outlookGridGroupCollection1;
+            this.dataGrid.Location = new System.Drawing.Point(0, 31);
+            this.dataGrid.MultiSelect = false;
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.PreviousSelectedGroupRow = -1;
+            this.dataGrid.ReadOnly = true;
+            this.dataGrid.Size = new System.Drawing.Size(955, 204);
+            this.dataGrid.TabIndex = 0;
+            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            // 
+            // groupBox
+            // 
+            this.groupBox.AllowDrop = true;
+            this.groupBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.groupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox.Location = new System.Drawing.Point(0, 0);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(955, 31);
+            this.groupBox.TabIndex = 1;
+            // 
+            // loadProgressBar
+            // 
+            this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.loadProgressBar.Location = new System.Drawing.Point(0, 608);
+            this.loadProgressBar.MarqueeAnimationSpeed = 10;
+            this.loadProgressBar.Name = "loadProgressBar";
+            this.loadProgressBar.Size = new System.Drawing.Size(957, 23);
+            this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadProgressBar.TabIndex = 6;
+            // 
+            // bgWorker
+            // 
+            this.bgWorker.WorkerReportsProgress = true;
+            this.bgWorker.WorkerSupportsCancellation = true;
+            this.bgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker_DoWork);
+            this.bgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgWorker_ProgressChanged);
+            this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
+            // 
             // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propGrid.Location = new System.Drawing.Point(0, 287);
             this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(989, 320);
-            this.propGrid.TabIndex = 2;
+            this.propGrid.Size = new System.Drawing.Size(957, 321);
+            this.propGrid.TabIndex = 5;
             // 
-            // ViewGrid
+            // ViewObjectsCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 630);
             this.Controls.Add(this.propGrid);
             this.Controls.Add(this.hdrGroup);
             this.Controls.Add(this.loadProgressBar);
-            this.Name = "ViewGrid";
-            this.Text = "View {}";
-            this.Load += new System.EventHandler(this.ViewGrid_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            this.Name = "ViewObjectsCtl";
+            this.Size = new System.Drawing.Size(957, 631);
+            this.Load += new System.EventHandler(this.ViewObjects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).EndInit();
             this.hdrGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).EndInit();
             this.hdrGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid dataGrid;
-        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox groupBox;
-        private SurveyManager.utility.CustomControls.CPropertyGrid propGrid;
-        private System.ComponentModel.BackgroundWorker bgWorker;
-        private System.Windows.Forms.ProgressBar loadProgressBar;
+        private utility.CustomControls.CPropertyGrid propGrid;
         private ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup hdrGroup;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnFilter;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnRefresh;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid dataGrid;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox groupBox;
+        private System.Windows.Forms.ProgressBar loadProgressBar;
+        private System.ComponentModel.BackgroundWorker bgWorker;
     }
 }

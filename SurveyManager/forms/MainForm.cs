@@ -1,11 +1,14 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Docking;
+using ComponentFactory.Krypton.Navigator;
+using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
-using SurveyManager.forms.newForms;
+using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
+using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -26,6 +29,11 @@ namespace SurveyManager
 {
     public partial class MainForm : KryptonForm
     {
+        /// <summary>
+        /// A static reference to this forms <see cref="KryptonDockingWorkspace"/>
+        /// </summary>
+        public static KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -33,6 +41,12 @@ namespace SurveyManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InitializeRibbon();
+
+            DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
+            dockingManager.ManageControl("Control", kryptonPanel1, DockingWorkspace);
+            dockingManager.ManageFloating("Floating", this);
+
             lblStatusDate.Text = DateTime.Now.ToString();
 
             clockTimer.Start();
@@ -62,16 +76,46 @@ namespace SurveyManager
             {
                 RuntimeVars.Instance.Counties = Database.GetCounties();
             }
+        }
 
-            //Change the color of the MDI Client area to be the same as the form.
-            foreach (Control ctl in Controls)
+        private void InitializeRibbon()
+        {
+            KryptonContextMenuItem settingsBtn = new KryptonContextMenuItem
             {
-                try
-                {
-                    MdiClient ctlClient = (MdiClient)ctl;
-                    ctlClient.BackColor = BackColor;
-                } catch (InvalidCastException) { }
-            }
+                Text = "Settings...",
+                Image = Resources.settings_24x24
+            };
+
+            KryptonContextMenuItem aboutBtn = new KryptonContextMenuItem
+            {
+                Text = "About...",
+                Image = Resources.instrument_24x24
+            };
+
+            KryptonContextMenuItem checkUpdatesBtn = new KryptonContextMenuItem
+            {
+                Text = "Check for Updates...",
+                Image = Resources.updated_24x24,
+                ShortcutKeys = Keys.Alt | Keys.U,
+                ShowShortcutKeys = true
+            };
+
+            KryptonContextMenuItem exitBtn = new KryptonContextMenuItem
+            {
+                Text = "Exit",
+                ShortcutKeys = Keys.Alt | Keys.F4,
+                ShowShortcutKeys = true
+            };
+
+            mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(settingsBtn);
+            mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(aboutBtn);
+            mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(checkUpdatesBtn);
+            mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(exitBtn);
+
+            settingsBtn.Click += settingsBtn_Click;
+            aboutBtn.Click += aboutBtn_Click;
+            checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
+            exitBtn.Click += exitBtn_Click;
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -198,21 +242,16 @@ namespace SurveyManager
 
         private void newSurveyBtn_Click(object sender, EventArgs e)
         {
-            //UploadFile uf = new UploadFile();
-            //uf.MdiParent = this;
-            //uf.Show();
-            NewSurvey nsForm = new NewSurvey();
-            nsForm.MdiParent = this;
-            nsForm.StatusUpdate += ChangeStatusText;
-            nsForm.Show();
+            KryptonPage page = new NewPage(Enums.EntityTypes.Survey);
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         private void viewSurveysBtn_Click(object sender, EventArgs e)
         {
-            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Survey, Icon.FromHandle(Resources.surveying_16x16.GetHicon()), "View Surveys");
-            vgForm.MdiParent = this;
-            vgForm.StatusUpdate += ChangeStatusText;
-            vgForm.Show();
+            KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys");
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
         #endregion
 
@@ -234,18 +273,16 @@ namespace SurveyManager
 
         private void newClientBtn_Click(object sender, EventArgs e)
         {
-            NewClient ncForm = new NewClient();
-            ncForm.MdiParent = this;
-            ncForm.StatusUpdate += ChangeStatusText;
-            ncForm.Show();
+            KryptonPage page = new NewPage(Enums.EntityTypes.Client);
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
-            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Client, Icon.FromHandle(Resources.client_16x16.GetHicon()), "View Clients");
-            vgForm.MdiParent = this;
-            vgForm.StatusUpdate += ChangeStatusText;
-            vgForm.Show();
+            KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients");
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         #endregion
@@ -268,18 +305,16 @@ namespace SurveyManager
 
         private void newRealtorBtn_Click(object sender, EventArgs e)
         {
-            NewRealtor nrForm = new NewRealtor();
-            nrForm.MdiParent = this;
-            nrForm.StatusUpdate += ChangeStatusText;
-            nrForm.Show();
+            KryptonPage page = new NewPage(Enums.EntityTypes.Realtor);
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         private void viewRealtorsBtn_Click(object sender, EventArgs e)
         {
-            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.Realtor, Icon.FromHandle(Resources.realtor_16x16.GetHicon()), "View Realtors");
-            vgForm.MdiParent = this;
-            vgForm.StatusUpdate += ChangeStatusText;
-            vgForm.Show();
+            KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors");
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
         #endregion
 
@@ -301,18 +336,16 @@ namespace SurveyManager
 
         private void newTitleCompanyBtn_Click(object sender, EventArgs e)
         {
-            NewTitleCompany ntForm = new NewTitleCompany();
-            ntForm.MdiParent = this;
-            ntForm.StatusUpdate += ChangeStatusText;
-            ntForm.Show();
+            KryptonPage page = new NewPage(Enums.EntityTypes.TitleCompany);
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         private void viewTitleCompanyBtn_Click(object sender, EventArgs e)
         {
-            ViewGrid vgForm = new ViewGrid(Enums.EntityTypes.TitleCompany, Icon.FromHandle(Resources.title_company_16x16.GetHicon()), "View Title Companies");
-            vgForm.MdiParent = this;
-            vgForm.StatusUpdate += ChangeStatusText;
-            vgForm.Show();
+            KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies");
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
         #endregion
 
@@ -385,9 +418,9 @@ namespace SurveyManager
                     clients.Add(ProcessDataTable.GetClient(row));
                 }
 
-                ViewObjects results = new ViewObjects(args.Results, clients.ToArray(), "Name", "name", "Client Results");
-                results.MdiParent = this;
-                results.Show();
+                //ViewObjectsCtl results = new ViewObjects(args.Results, clients.ToArray(), "Name", "name", "Client Results");
+                //results.MdiParent = this;
+                //results.Show();
             }
         }
 
@@ -401,9 +434,9 @@ namespace SurveyManager
                     realtors.Add(ProcessDataTable.GetRealtor(row));
                 }
 
-                ViewObjects results = new ViewObjects(args.Results, realtors.ToArray(), "Name", "name", "Realtor Results");
-                results.MdiParent = this;
-                results.Show();
+                //ViewObjectsCtl results = new ViewObjects(args.Results, realtors.ToArray(), "Name", "name", "Realtor Results");
+                //results.MdiParent = this;
+                //results.Show();
             }
         }
 
@@ -417,9 +450,9 @@ namespace SurveyManager
                     companies.Add(ProcessDataTable.GetTitleCompany(row));
                 }
 
-                ViewObjects results = new ViewObjects(args.Results, companies.ToArray(), "Name", "name", "Title Company Results");
-                results.MdiParent = this;
-                results.Show();
+                //ViewObjectsCtl results = new ViewObjects(args.Results, companies.ToArray(), "Name", "name", "Title Company Results");
+                //results.MdiParent = this;
+                //results.Show();
             }
         }
 
@@ -433,9 +466,9 @@ namespace SurveyManager
                     surveys.Add(ProcessDataTable.GetSurvey(row));
                 }
 
-                ViewObjects results = new ViewObjects(args.Results, surveys.ToArray(), "JobNumber", "job_number", "Survey Results");
-                results.MdiParent = this;
-                results.Show();
+                //ViewObjectsCtl results = new ViewObjects(args.Results, surveys.ToArray(), "JobNumber", "job_number", "Survey Results");
+                //results.MdiParent = this;
+                //results.Show();
             }
         }
         #endregion

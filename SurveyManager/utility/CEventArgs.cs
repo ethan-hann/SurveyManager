@@ -13,10 +13,12 @@ namespace SurveyManager.utility
         public class FilterDoneEventArgs : EventArgs
         {
             public DataTable Results { get; internal set; }
+            public string Query { get; internal set; }
 
-            public FilterDoneEventArgs(DataTable results)
+            public FilterDoneEventArgs(DataTable results, string query)
             {
                 Results = results;
+                Query = query;
             }
         }
 
