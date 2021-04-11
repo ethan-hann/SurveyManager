@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using Ionic.Zip;
 using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.dialogs;
+using SurveyManager.forms.surveyMenu;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -11,6 +13,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +32,17 @@ namespace SurveyManager.forms.userControls
 
         public EventHandler StatusUpdate;
 
-        public ViewObjectsCtl(EntityTypes typeToDisplay, DataTable filterResults = null)
+        public ViewObjectsCtl(EntityTypes typeToDisplay, FilterDoneEventArgs args = null)
         {
             InitializeComponent();
 
             typeOfData = typeToDisplay;
-            lastFilterResults = filterResults;
+
+            if (args != null)
+            {
+                lastFilterResults = args.Results;
+                currentFilterArgs = args;
+            }
         }
 
         private void ViewObjects_Load(object sender, EventArgs e)
@@ -42,10 +50,58 @@ namespace SurveyManager.forms.userControls
             propGrid.GetAcceptButton().Click += SaveData;
             propGrid.GetAcceptButton().ToolTipText = "Save the object's properties to the database.";
             propGrid.GetClearButton().Visible = false;
+            if (typeOfData == EntityTypes.Survey)
+            {
+                propGrid.GetUploadFilesButton().Click += UploadFiles;
+                propGrid.GetDownloadFilesButton().Click += DownloadFiles;
+                propGrid.GetUploadFilesButton().Visible = true;
+                propGrid.GetDownloadFilesButton().Visible = true;
+            }
 
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);
             LoadData();
+        }
+
+        private void DownloadFiles(object sender, EventArgs e)
+        {
+            if (typeOfData != EntityTypes.Survey)
+                return;
+
+            using (ZipFile zip = new ZipFile())
+            {
+                foreach (CFile file in (propGrid.SelectedObject as Survey).Files)
+                {
+                    zip.AddEntry(file.FullFileName, new MemoryStream(file.Contents));
+                }
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    zip.Save(saveDialog.FileName);
+                }
+            }
+        }
+
+        private void UploadFiles(object sender, EventArgs e)
+        {
+            if (typeOfData != EntityTypes.Survey)
+                return;
+
+            UploadFile uploadDialog = new UploadFile((propGrid.SelectedObject as Survey).Files);
+            uploadDialog.StatusUpdate += RuntimeVars.Instance.MainForm.ChangeStatusText;
+            uploadDialog.FileUploadDone += SetFiles;
+
+            uploadDialog.Show();
+        }
+
+        private void SetFiles(object sender, EventArgs e)
+        {
+            if (e is FileUploadDoneArgs args)
+            {
+                (propGrid.SelectedObject as Survey).ClearFiles();
+                (propGrid.SelectedObject as Survey).AddFiles(args.Files);
+                propGrid.Update();
+            }
         }
 
         private void UpdateTabName(string newTitle)
@@ -66,6 +122,11 @@ namespace SurveyManager.forms.userControls
             loadProgressBar.Value = 0;
             loadProgressBar.Visible = true;
             bgWorker.RunWorkerAsync();
+        }
+
+        private void btnDeleteRow_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -212,9 +273,15 @@ namespace SurveyManager.forms.userControls
                 else
                 {
                     if (typeOfData == EntityTypes.TitleCompany)
+                    {
+                        UpdateTabName("Title Companies");
                         StatusUpdate?.Invoke(this, new StatusArgs($"Title Companies loaded."));
+                    }
                     else
+                    {
+                        UpdateTabName(typeOfData.ToString() + "s");
                         StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
+                    }
                 }
                 
                 dataGrid.SuspendLayout();
@@ -228,6 +295,8 @@ namespace SurveyManager.forms.userControls
                 {
                     DataGridViewRow r = dataGrid.Rows[0];
                     propGrid.SelectedObject = r.Tag;
+                    propGrid.Invalidate();
+                    propGrid.Update();
                 }
 
                 loadProgressBar.Visible = false;
@@ -248,7 +317,7 @@ namespace SurveyManager.forms.userControls
             switch (error)
             {
                 case DatabaseError.NoError:
-                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
+                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj.ToString()}, updated successfully!"));
                     break;
                 default:
                     CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);

@@ -15,6 +15,8 @@ namespace SurveyManager.utility.CustomControls
     {
         ToolStripButton acceptButton = new ToolStripButton("Save");
         ToolStripButton clearButton = new ToolStripButton("Clear");
+        ToolStripButton uploadFiles = new ToolStripButton("Upload Files");
+        ToolStripButton downloadFiles = new ToolStripButton("Download Files");
         
         public CPropertyGrid()
         {
@@ -22,8 +24,12 @@ namespace SurveyManager.utility.CustomControls
 
             acceptButton.Image = Resources.success_16x16;
             clearButton.Image = Resources.error_16x16;
+            uploadFiles.Image = Resources.file_16x16;
+            downloadFiles.Image = Resources.download_16x16;
             acceptButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             clearButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            uploadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            downloadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
 
             AddButtons();
         }
@@ -36,8 +42,12 @@ namespace SurveyManager.utility.CustomControls
 
             acceptButton.Image = Resources.success_16x16;
             clearButton.Image = Resources.error_16x16;
+            uploadFiles.Image = Resources.file_16x16;
+            downloadFiles.Image = Resources.download_16x16;
             acceptButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             clearButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            uploadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            downloadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
 
             AddButtons();
         }
@@ -60,6 +70,10 @@ namespace SurveyManager.utility.CustomControls
                 //Add our two custom buttons
                 toolStrip.Items.Add(acceptButton);
                 toolStrip.Items.Add(clearButton);
+                toolStrip.Items.Add(uploadFiles);
+                toolStrip.Items.Add(downloadFiles);
+                uploadFiles.Visible = false;
+                downloadFiles.Visible = false;
             }
         }
 
@@ -71,6 +85,16 @@ namespace SurveyManager.utility.CustomControls
         public ToolStripButton GetClearButton()
         {
             return clearButton;
+        }
+
+        public ToolStripButton GetUploadFilesButton()
+        {
+            return uploadFiles;
+        }
+
+        public ToolStripButton GetDownloadFilesButton()
+        {
+            return downloadFiles;
         }
 
         protected override bool ProcessTabKey(bool forward)

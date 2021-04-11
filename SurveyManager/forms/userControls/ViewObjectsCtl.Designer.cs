@@ -38,7 +38,9 @@ namespace SurveyManager.forms.userControls
             this.groupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
             this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
+            this.saveDialog = new System.Windows.Forms.SaveFileDialog();
             this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
+            this.btnDeleteRow = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
@@ -50,7 +52,8 @@ namespace SurveyManager.forms.userControls
             // 
             this.hdrGroup.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
             this.btnFilter,
-            this.btnRefresh});
+            this.btnRefresh,
+            this.btnDeleteRow});
             this.hdrGroup.Dock = System.Windows.Forms.DockStyle.Top;
             this.hdrGroup.Location = new System.Drawing.Point(0, 0);
             this.hdrGroup.Name = "hdrGroup";
@@ -103,7 +106,7 @@ namespace SurveyManager.forms.userControls
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.PreviousSelectedGroupRow = -1;
             this.dataGrid.ReadOnly = true;
-            this.dataGrid.Size = new System.Drawing.Size(955, 204);
+            this.dataGrid.Size = new System.Drawing.Size(955, 198);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
@@ -138,6 +141,11 @@ namespace SurveyManager.forms.userControls
             this.bgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgWorker_ProgressChanged);
             this.bgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker_RunWorkerCompleted);
             // 
+            // saveDialog
+            // 
+            this.saveDialog.Filter = "Compressed Zip File (*.zip)|*.zip";
+            this.saveDialog.Title = "Save Files";
+            // 
             // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -145,6 +153,17 @@ namespace SurveyManager.forms.userControls
             this.propGrid.Name = "propGrid";
             this.propGrid.Size = new System.Drawing.Size(957, 321);
             this.propGrid.TabIndex = 5;
+            // 
+            // btnDeleteRow
+            // 
+            this.btnDeleteRow.HeaderLocation = ComponentFactory.Krypton.Toolkit.HeaderLocation.SecondaryHeader;
+            this.btnDeleteRow.Image = global::SurveyManager.Properties.Resources.delete_16x16;
+            this.btnDeleteRow.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Standalone;
+            this.btnDeleteRow.Text = "Delete Row";
+            this.btnDeleteRow.ToolTipBody = "Deletes the selected row entry from the database.";
+            this.btnDeleteRow.ToolTipTitle = "Delete";
+            this.btnDeleteRow.UniqueName = "12A3525AC11A4985AB8BD4CBA1F36584";
+            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
             // 
             // ViewObjectsCtl
             // 
@@ -175,5 +194,7 @@ namespace SurveyManager.forms.userControls
         private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox groupBox;
         private System.Windows.Forms.ProgressBar loadProgressBar;
         private System.ComponentModel.BackgroundWorker bgWorker;
+        private System.Windows.Forms.SaveFileDialog saveDialog;
+        private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnDeleteRow;
     }
 }

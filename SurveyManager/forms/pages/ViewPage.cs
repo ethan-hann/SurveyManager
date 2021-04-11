@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using SurveyManager.backend.wrappers;
 using SurveyManager.forms.userControls;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +15,12 @@ namespace SurveyManager.forms.pages
 {
     public class ViewPage : KryptonPage
     {
-        public ViewPage(EntityTypes entity, string titleText)
+        public ViewPage(EntityTypes entity, string titleText, FilterDoneEventArgs args = null)
         {
             Text = titleText;
             TextTitle = Text;
 
-            ViewObjectsCtl ctl = new ViewObjectsCtl(entity)
+            ViewObjectsCtl ctl = new ViewObjectsCtl(entity, args)
             {
                 Dock = System.Windows.Forms.DockStyle.Fill
             };

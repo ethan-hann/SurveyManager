@@ -34,6 +34,8 @@ namespace SurveyManager.utility
 
         public List<County> Counties { get; set; }
 
+        public string SelectedPageUniqueName { get; set; } = "";
+
         public MainForm MainForm { get; set; }
     }
 }

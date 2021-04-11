@@ -30,9 +30,9 @@ namespace SurveyManager
     public partial class MainForm : KryptonForm
     {
         /// <summary>
-        /// A static reference to this forms <see cref="KryptonDockingWorkspace"/>
+        /// A reference to this forms <see cref="KryptonDockingWorkspace"/>
         /// </summary>
-        public static KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
+        public KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
 
         public MainForm()
         {
@@ -412,15 +412,9 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                List<Client> clients = new List<Client>();
-                foreach (DataRow row in args.Results.Rows)
-                {
-                    clients.Add(ProcessDataTable.GetClient(row));
-                }
-
-                //ViewObjectsCtl results = new ViewObjects(args.Results, clients.ToArray(), "Name", "name", "Client Results");
-                //results.MdiParent = this;
-                //results.Show();
+                KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
         }
 
@@ -428,15 +422,9 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                List<Realtor> realtors = new List<Realtor>();
-                foreach (DataRow row in args.Results.Rows)
-                {
-                    realtors.Add(ProcessDataTable.GetRealtor(row));
-                }
-
-                //ViewObjectsCtl results = new ViewObjects(args.Results, realtors.ToArray(), "Name", "name", "Realtor Results");
-                //results.MdiParent = this;
-                //results.Show();
+                KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
         }
 
@@ -444,15 +432,9 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                List<TitleCompany> companies = new List<TitleCompany>();
-                foreach (DataRow row in args.Results.Rows)
-                {
-                    companies.Add(ProcessDataTable.GetTitleCompany(row));
-                }
-
-                //ViewObjectsCtl results = new ViewObjects(args.Results, companies.ToArray(), "Name", "name", "Title Company Results");
-                //results.MdiParent = this;
-                //results.Show();
+                KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
         }
 
@@ -460,15 +442,9 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                List<Survey> surveys = new List<Survey>();
-                foreach (DataRow row in args.Results.Rows)
-                {
-                    surveys.Add(ProcessDataTable.GetSurvey(row));
-                }
-
-                //ViewObjectsCtl results = new ViewObjects(args.Results, surveys.ToArray(), "JobNumber", "job_number", "Survey Results");
-                //results.MdiParent = this;
-                //results.Show();
+                KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
         }
         #endregion

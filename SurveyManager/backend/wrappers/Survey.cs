@@ -492,16 +492,22 @@ namespace SurveyManager.backend.wrappers
             #region Files Update
             foreach (CFile file in Files)
             {
-                if (file.ID != 0)
-                {
-                    DatabaseError fileError = Database.UpdateFile(file) ? DatabaseError.NoError : DatabaseError.FileUpdate;
-                    if (fileError == DatabaseError.FileUpdate)
-                        return fileError;
-                }
+                DatabaseError fileError = file.Update();
+                if (fileError == DatabaseError.FileInsert)
+                    return fileError;
+                if (file.ID == 0)
+                    AddFileId(Database.GetLastRowIDInserted("File"));
+                else
+                    AddFileId(file.ID);
             }
             #endregion
 
             return Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
+        }
+
+        public override string ToString()
+        {
+            return JobNumber;
         }
     }
 }
