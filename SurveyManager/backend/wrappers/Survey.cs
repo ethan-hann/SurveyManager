@@ -328,27 +328,7 @@ namespace SurveyManager.backend.wrappers
             return ids;
         }
 
-        /// <summary>
-        /// Delete this survey from the database, along with the associated files.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Delete operation.</returns>
-        public DatabaseError Delete()
-        {
-            foreach (CFile file in Files)
-            {
-                DatabaseError fileError = Database.DeleteFile(file) ? DatabaseError.NoError : DatabaseError.FileDelete;
-                if (fileError == DatabaseError.FileDelete)
-                    return fileError;
-            }
-
-            return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;
-        }
-
-        /// <summary>
-        /// Handles insertion of this survey and any files associated with it.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
-        public DatabaseError Insert()
+        private DatabaseError UpdateObjects()
         {
             #region Client Insert/Update
             if (Client.ID == 0)
@@ -403,6 +383,12 @@ namespace SurveyManager.backend.wrappers
             #endregion
             #region Location Insert/Update
             {
+                if (Location.Equals(Client.ClientAddress))
+                {
+                    Location.ID = Client.ClientAddress.ID;
+                    LocationID = Client.AddressID;
+                }
+
                 if (Location.ID == 0)
                 {
                     DatabaseError locationError = Location.Insert();
@@ -435,6 +421,38 @@ namespace SurveyManager.backend.wrappers
                 return DatabaseError.CountyInsert;
             #endregion
 
+            return DatabaseError.NoError;
+        }
+
+        /// <summary>
+        /// Delete this survey from the database, along with the associated files.
+        /// </summary>
+        /// <returns>A <see cref="DatabaseError"/> with the result of the Delete operation.</returns>
+        public DatabaseError Delete()
+        {
+            foreach (CFile file in Files)
+            {
+                DatabaseError fileError = Database.DeleteFile(file) ? DatabaseError.NoError : DatabaseError.FileDelete;
+                if (fileError == DatabaseError.FileDelete)
+                    return fileError;
+            }
+
+            return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;
+        }
+
+        /// <summary>
+        /// Handles insertion of this survey and any files associated with it.
+        /// </summary>
+        /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
+        public DatabaseError Insert()
+        {
+            if (!IsValidSurvey)
+                return DatabaseError.SurveyIncomplete;
+
+            DatabaseError updateObjectsError = UpdateObjects();
+            if (updateObjectsError != DatabaseError.NoError)
+                return updateObjectsError;
+
             return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }
 
@@ -447,60 +465,10 @@ namespace SurveyManager.backend.wrappers
         {
             if (!IsValidSurvey)
                 return DatabaseError.SurveyIncomplete;
-            
-            #region Client Update
-            if (Client.ID != 0)
-            {
-                DatabaseError clientError = Client.Update();
-                if (clientError != DatabaseError.NoError)
-                    return clientError;
-            }
-            #endregion
-            #region Realtor Update
-            if (Realtor.IsValidRealtor)
-            {
-                if (Realtor.ID == 0)
-                {
-                    DatabaseError realtorError = Realtor.Update();
-                    if (realtorError != DatabaseError.NoError)
-                        return realtorError;
-                }
-            }
-            #endregion
-            #region Title Company Update
-            if (TitleCompany.IsValidCompany)
-            {
-                if (TitleCompany.ID != 0)
-                {
-                    DatabaseError tcError = TitleCompany.Update();
-                    if (tcError != DatabaseError.NoError)
-                        return tcError;
-                }
-                
-            }
-            #endregion
-            #region Location Update
-            {
-                if (Location.ID != 0)
-                {
-                    DatabaseError locationError = Location.Update();
-                    if (locationError != DatabaseError.NoError)
-                        return locationError;
-                }
-            }
-            #endregion
-            #region Files Update
-            foreach (CFile file in Files)
-            {
-                DatabaseError fileError = file.Update();
-                if (fileError == DatabaseError.FileInsert)
-                    return fileError;
-                if (file.ID == 0)
-                    AddFileId(Database.GetLastRowIDInserted("File"));
-                else
-                    AddFileId(file.ID);
-            }
-            #endregion
+
+            DatabaseError updateObjectsError = UpdateObjects();
+            if (updateObjectsError != DatabaseError.NoError)
+                return updateObjectsError;
 
             return Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }

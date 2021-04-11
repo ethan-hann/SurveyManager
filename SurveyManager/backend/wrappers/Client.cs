@@ -139,6 +139,7 @@ namespace SurveyManager.backend.wrappers
             if (addressError == DatabaseError.NoError)
             {
                 int addressID = Database.GetLastRowIDInserted("Address");
+                ClientAddress.ID = addressID;
                 AddressID = addressID;
 
                 return Database.InsertClient(this) ? DatabaseError.NoError : DatabaseError.ClientInsert;

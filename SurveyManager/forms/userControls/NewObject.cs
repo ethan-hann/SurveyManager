@@ -220,6 +220,9 @@ namespace SurveyManager.forms.userControls
         private void SaveSurvey()
         {
             Survey s = obj as Survey;
+            if (s.Location.IsEmpty)
+                s.Location = s.Client.ClientAddress;
+
             DatabaseError surveyError = s.Insert();
             switch (surveyError)
             {

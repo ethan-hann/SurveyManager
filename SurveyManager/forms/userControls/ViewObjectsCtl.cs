@@ -68,6 +68,12 @@ namespace SurveyManager.forms.userControls
             if (typeOfData != EntityTypes.Survey)
                 return;
 
+            if (!(propGrid.SelectedObject as Survey).HasFiles)
+            {
+                CMessageBox.Show("No files associated with this survey.", "Nothing to Download", MessageBoxButtons.OK, Resources.warning_64x64);
+                return;
+            }
+
             using (ZipFile zip = new ZipFile())
             {
                 foreach (CFile file in (propGrid.SelectedObject as Survey).Files)

@@ -34,13 +34,13 @@ namespace SurveyManager.forms.userControls
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnFilter = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnRefresh = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.btnDeleteRow = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.dataGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
             this.groupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
             this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
             this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
-            this.btnDeleteRow = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
@@ -87,6 +87,17 @@ namespace SurveyManager.forms.userControls
             this.btnRefresh.UniqueName = "193F7B3442034733E7BBC4E91B0F7F8B";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnDeleteRow
+            // 
+            this.btnDeleteRow.HeaderLocation = ComponentFactory.Krypton.Toolkit.HeaderLocation.SecondaryHeader;
+            this.btnDeleteRow.Image = global::SurveyManager.Properties.Resources.delete_16x16;
+            this.btnDeleteRow.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Standalone;
+            this.btnDeleteRow.Text = "Delete Row";
+            this.btnDeleteRow.ToolTipBody = "Deletes the selected row entry from the database.";
+            this.btnDeleteRow.ToolTipTitle = "Delete";
+            this.btnDeleteRow.UniqueName = "12A3525AC11A4985AB8BD4CBA1F36584";
+            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
+            // 
             // dataGrid
             // 
             this.dataGrid.AllowDrop = true;
@@ -106,7 +117,7 @@ namespace SurveyManager.forms.userControls
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.PreviousSelectedGroupRow = -1;
             this.dataGrid.ReadOnly = true;
-            this.dataGrid.Size = new System.Drawing.Size(955, 198);
+            this.dataGrid.Size = new System.Drawing.Size(955, 196);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
@@ -153,17 +164,6 @@ namespace SurveyManager.forms.userControls
             this.propGrid.Name = "propGrid";
             this.propGrid.Size = new System.Drawing.Size(957, 321);
             this.propGrid.TabIndex = 5;
-            // 
-            // btnDeleteRow
-            // 
-            this.btnDeleteRow.HeaderLocation = ComponentFactory.Krypton.Toolkit.HeaderLocation.SecondaryHeader;
-            this.btnDeleteRow.Image = global::SurveyManager.Properties.Resources.delete_16x16;
-            this.btnDeleteRow.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Standalone;
-            this.btnDeleteRow.Text = "Delete Row";
-            this.btnDeleteRow.ToolTipBody = "Deletes the selected row entry from the database.";
-            this.btnDeleteRow.ToolTipTitle = "Delete";
-            this.btnDeleteRow.UniqueName = "12A3525AC11A4985AB8BD4CBA1F36584";
-            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
             // 
             // ViewObjectsCtl
             // 
