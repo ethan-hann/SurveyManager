@@ -144,7 +144,8 @@ namespace SurveyManager
             this.mainRibbon.RibbonTabs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab[] {
             this.homeTab,
             this.databaseTab});
-            this.mainRibbon.SelectedTab = this.homeTab;
+            this.mainRibbon.SelectedContext = null;
+            this.mainRibbon.SelectedTab = this.databaseTab;
             this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
             this.mainRibbon.TabIndex = 4;
             // 
@@ -418,7 +419,6 @@ namespace SurveyManager
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
-            this.CustomCaptionArea = new System.Drawing.Rectangle(252, 0, 1309, 26);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";

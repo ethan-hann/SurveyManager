@@ -257,6 +257,7 @@ namespace SurveyManager.forms.databaseMenu
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database Connection";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.DBConnection_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

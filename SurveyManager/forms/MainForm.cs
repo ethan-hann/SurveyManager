@@ -355,7 +355,6 @@ namespace SurveyManager
             if (RuntimeVars.Instance.NumberOfDBConnectionFormsOpen == 0)
             {
                 DBConnection dbForm = new DBConnection();
-                dbForm.MdiParent = this;
                 RuntimeVars.Instance.NumberOfDBConnectionFormsOpen++;
                 dbForm.DatabaseConnectFinished += OnDBConnectDone;
                 dbForm.Show();
@@ -395,7 +394,6 @@ namespace SurveyManager
         private void sqlQueryBtn_Click(object sender, EventArgs e)
         {
             SQLQuery sqForm = new SQLQuery();
-            sqForm.MdiParent = this;
             sqForm.StatusUpdate += ChangeStatusText;
             sqForm.Show();
         }
