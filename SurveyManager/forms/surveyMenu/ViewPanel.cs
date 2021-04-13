@@ -1,4 +1,5 @@
-﻿using SurveyManager.Properties;
+﻿using ComponentFactory.Krypton.Navigator;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,9 @@ namespace SurveyManager.forms.surveyMenu
         private void RefreshObject(object sender, EventArgs e)
         {
             propGrid.SelectedObject = RuntimeVars.Instance.OpenJob;
+            (Parent as KryptonPage).Text = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info";
+            (Parent as KryptonPage).TextTitle = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info";
+            (Parent as KryptonPage).UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info";
         }
     }
 }

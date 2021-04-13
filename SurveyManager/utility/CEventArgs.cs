@@ -42,6 +42,16 @@ namespace SurveyManager.utility
             }
         }
 
+        public class SurveyOpenedEventArgs : EventArgs
+        {
+            public Survey Survey { get; internal set; }
+
+            public SurveyOpenedEventArgs(Survey survey)
+            {
+                Survey = survey;
+            }
+        }
+
         public class QueryRanArgs : EventArgs
         {
             public string TableName { get; internal set; }

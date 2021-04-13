@@ -42,6 +42,9 @@ namespace SurveyManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.RecentJobs == null)
+                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
+
             InitializeRibbon();
 
             DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
@@ -113,6 +116,18 @@ namespace SurveyManager
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(checkUpdatesBtn);
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(exitBtn);
 
+            UpdateRecentDocs();
+
+            settingsBtn.Click += settingsBtn_Click;
+            aboutBtn.Click += aboutBtn_Click;
+            checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
+            exitBtn.Click += exitBtn_Click;
+        }
+
+        private void UpdateRecentDocs()
+        {
+            mainRibbon.RibbonAppButton.AppButtonRecentDocs.Clear();
+
             if (Settings.Default.RecentJobs != null && Settings.Default.RecentJobs.Count > 0)
             {
                 List<KryptonRibbonRecentDoc> recentJobs = new List<KryptonRibbonRecentDoc>();
@@ -125,20 +140,16 @@ namespace SurveyManager
                 }
                 mainRibbon.RibbonAppButton.AppButtonRecentDocs.AddRange(recentJobs.ToArray());
             }
-
-            settingsBtn.Click += settingsBtn_Click;
-            aboutBtn.Click += aboutBtn_Click;
-            checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
-            exitBtn.Click += exitBtn_Click;
         }
 
         private void OpenRecentJob(object sender, EventArgs e)
         {
-            if (sender is KryptonRibbonRecentDoc)
+            if (sender is KryptonRibbonRecentDoc recentDoc)
             {
-                Console.WriteLine("Recent job clicked: " + (sender as KryptonRibbonRecentDoc).Text);
+                RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
+                ChangeStatusText(this, new StatusArgs("Job " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
+                AddTitleText("[JOB# " + recentDoc.Text + " OPENED]");
             }
-            
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -243,24 +254,7 @@ namespace SurveyManager
         #region Survey Menu
         private void findSurveyBtn_Click(object sender, EventArgs e)
         {
-            ArrayList columns = new ArrayList
-            {
-                new DBMap("job_number", "Job #"),
-                new DBMap("client_id", "Client ID"),
-                new DBMap("description", "Description"),
-                new DBMap("subdivision", "Subdivision"),
-                new DBMap("lot", "Lot #"),
-                new DBMap("block", "Block #"),
-                new DBMap("section", "Section #"),
-                new DBMap("county_id", "County"),
-                new DBMap("acres", "Acres"),
-                new DBMap("realtor_id", "Realtor"),
-                new DBMap("title_company_id", "Title Company")
-            };
-
-            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
-            filter.FilterDone += ProcessSurveySearch;
-            filter.Show();
+            
         }
 
         private void newSurveyBtn_Click(object sender, EventArgs e)
@@ -463,10 +457,32 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
-                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+                SurveySearchResults searchResults = new SurveySearchResults(args.Results);
+                searchResults.StatusUpdate += ChangeStatusText;
+                searchResults.SurveyOpened += AddSurveyToRecentJobs;
+                searchResults.Show();
             }
+        }
+
+        private void AddSurveyToRecentJobs(object sender, EventArgs e)
+        {
+            if (e is SurveyOpenedEventArgs args)
+            {
+                if (!Settings.Default.RecentJobs.Contains(args.Survey.JobNumber))
+                {
+                    Settings.Default.RecentJobs.Add(args.Survey.JobNumber);
+                    Settings.Default.Save();
+
+                    UpdateRecentDocs();
+                }
+
+                AddTitleText("[JOB# " + args.Survey.JobNumber + " OPENED]");
+            }
+        }
+
+        private void AddTitleText(string newText)
+        {
+            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}" + "\t" + newText;
         }
         #endregion
 
@@ -480,6 +496,38 @@ namespace SurveyManager
         #endregion
 
         #region Survey Tab
+        private void btnNewSurveyJob_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpenSurveyJob_Click(object sender, EventArgs e)
+        {
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("job_number", "Job #"),
+                new DBMap("client_id", "Client ID"),
+                new DBMap("description", "Description"),
+                new DBMap("subdivision", "Subdivision"),
+                new DBMap("lot", "Lot #"),
+                new DBMap("block", "Block #"),
+                new DBMap("section", "Section #"),
+                new DBMap("county_id", "County"),
+                new DBMap("acres", "Acres"),
+                new DBMap("realtor_id", "Realtor"),
+                new DBMap("title_company_id", "Title Company")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
+            filter.FilterDone += ProcessSurveySearch;
+            filter.Show();
+        }
+
+        private void btnViewAllJobs_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnBasicInfo_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
@@ -491,11 +539,6 @@ namespace SurveyManager
 
         private void btnOpenViewPanel_Click(object sender, EventArgs e)
         {
-            RuntimeVars.Instance.OpenJob = new Survey()
-            {
-                JobNumber = "10-5124"
-            };
-
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view."));
@@ -533,26 +576,33 @@ namespace SurveyManager
             }
         }
 
-        private void btnNewSurveyJob_Click(object sender, EventArgs e)
+        private void btnCloseCurrentJob_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no information to change."));
+                return;
+            }
 
+            DialogResult result = CMessageBox.Show("Save changes?", "Confirm", MessageBoxButtons.YesNoCancel, Resources.save_64x64);
+            switch (result)
+            {
+                case DialogResult.Yes: //TODO: save and close job
+                    break;
+                case DialogResult.No:
+                    CloseJob();
+                    break;
+                case DialogResult.Cancel:
+                    ChangeStatusText(this, new StatusArgs("Closing of job " + RuntimeVars.Instance.OpenJob.JobNumber + " cancelled."));
+                    break;
+            }
         }
 
-        private void btnOpenSurveyJob_Click(object sender, EventArgs e)
+        private void CloseJob()
         {
-            if (Settings.Default.RecentJobs == null)
-                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
-
-            Settings.Default.RecentJobs.Add("10-1252");
-            Settings.Default.RecentJobs.Add("21-1584");
-            Settings.Default.RecentJobs.Add("13-2014");
-            Settings.Default.RecentJobs.Add("15-5963");
-            Settings.Default.Save();
-        }
-
-        private void btnViewAllJobs_Click(object sender, EventArgs e)
-        {
-            
+            AddTitleText("[NO JOB OPENED]");
+            ChangeStatusText(this, new StatusArgs("Ready"));
+            RuntimeVars.Instance.OpenJob = null;
         }
 
         private void btnAddNewFile_Click(object sender, EventArgs e)

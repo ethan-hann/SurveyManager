@@ -191,6 +191,12 @@
     </Compile>
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
+    <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SurveySearchResults.Designer.cs">
+      <DependentUpon>SurveySearchResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\UploadFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">
+      <DependentUpon>SurveySearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
       <DependentUpon>UploadFile.cs</DependentUpon>
@@ -613,6 +622,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\billing_line_items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_64x64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

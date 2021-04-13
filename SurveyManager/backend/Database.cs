@@ -1506,6 +1506,57 @@ namespace SurveyManager.backend
             return s;
         }
 
+        public static Survey GetSurvey(string jobNumber)
+        {
+            Survey s = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"job_number='{jobNumber}'");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            s = new Survey
+                            {
+                                ID = reader.GetInt32(0),
+                                JobNumber = reader.GetString(1),
+                                ClientID = reader.GetInt32(2),
+                                Description = reader.GetString(3),
+                                AbstractNumber = reader.GetString(4),
+                                Subdivision = reader.GetString(5),
+                                LotNumber = reader.GetString(6),
+                                BlockNumber = reader.GetString(7),
+                                SectionNumber = reader.GetString(8),
+                                CountyID = reader.GetInt32(9),
+                                Acres = reader.GetDouble(10),
+                                FileIds = reader.GetString(13),
+                                LocationID = reader.GetInt32(14)
+                            };
+
+                            if (reader.IsDBNull(11))
+                                s.RealtorID = 0;
+                            else
+                                s.RealtorID = reader.GetInt32(11);
+
+                            if (reader.IsDBNull(12))
+                                s.TitleCompanyID = 0;
+                            else
+                                s.TitleCompanyID = reader.GetInt32(12);
+
+                            s.SetObjects();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return s;
+        }
+
         public static List<Survey> GetSurveys()
         {
             List<Survey> surveys = new List<Survey>();

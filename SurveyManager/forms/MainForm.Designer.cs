@@ -40,7 +40,6 @@ namespace SurveyManager
             this.mainRibbon = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
             this.surveyTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.jobsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupSeparator3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnNewSurveyJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnOpenSurveyJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -50,6 +49,8 @@ namespace SurveyManager
             this.btnBasicInfo = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnOpenViewPanel = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupTriple12 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnCloseCurrentJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.filesRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAddNewFile = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -105,6 +106,7 @@ namespace SurveyManager
             this.dockingManager = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
+            this.kryptonRibbonGroupSeparator3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -197,7 +199,6 @@ namespace SurveyManager
             this.jobsRibbonGroup.DialogBoxLauncher = false;
             this.jobsRibbonGroup.Image = global::SurveyManager.Properties.Resources.instrument_24x24;
             this.jobsRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupSeparator3,
             this.kryptonRibbonGroupTriple1});
             this.jobsRibbonGroup.TextLine1 = "Jobs";
             // 
@@ -240,7 +241,9 @@ namespace SurveyManager
             // 
             this.kryptonRibbonGroup3.DialogBoxLauncher = false;
             this.kryptonRibbonGroup3.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple11});
+            this.kryptonRibbonGroupTriple11,
+            this.kryptonRibbonGroupSeparator3,
+            this.kryptonRibbonGroupTriple12});
             this.kryptonRibbonGroup3.TextLine1 = "Current Job";
             // 
             // kryptonRibbonGroupTriple11
@@ -280,6 +283,20 @@ namespace SurveyManager
             this.kryptonRibbonGroupButton1.ToolTipBody = "Save any changes made to the currently open survey job.";
             this.kryptonRibbonGroupButton1.ToolTipTitle = "Current Job";
             this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.btnSaveSurvey_Click);
+            // 
+            // kryptonRibbonGroupTriple12
+            // 
+            this.kryptonRibbonGroupTriple12.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnCloseCurrentJob});
+            // 
+            // btnCloseCurrentJob
+            // 
+            this.btnCloseCurrentJob.ImageLarge = global::SurveyManager.Properties.Resources.close;
+            this.btnCloseCurrentJob.ImageSmall = global::SurveyManager.Properties.Resources.close_16x16;
+            this.btnCloseCurrentJob.TextLine1 = "Close";
+            this.btnCloseCurrentJob.ToolTipBody = "Closes the current job; will prompt to save changes.";
+            this.btnCloseCurrentJob.ToolTipTitle = "Current Job";
+            this.btnCloseCurrentJob.Click += new System.EventHandler(this.btnCloseCurrentJob_Click);
             // 
             // filesRibbonGroup
             // 
@@ -715,6 +732,7 @@ namespace SurveyManager
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
+            this.CustomCaptionArea = new System.Drawing.Rectangle(325, 0, 1236, 26);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -800,13 +818,15 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSendFeedback;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple11;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnBasicInfo;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator3;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOpenViewPanel;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupLines kryptonRibbonGroupLines2;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnBillingLineItems;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewCurrentBill;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup3;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple12;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnCloseCurrentJob;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator3;
     }
 }
 
