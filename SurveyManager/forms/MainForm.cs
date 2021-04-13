@@ -112,6 +112,11 @@ namespace SurveyManager
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(checkUpdatesBtn);
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(exitBtn);
 
+            if (Settings.Default.LastJobNumberOpened.Equals("N/A"))
+            {
+                
+            }
+
             settingsBtn.Click += settingsBtn_Click;
             aboutBtn.Click += aboutBtn_Click;
             checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
@@ -454,6 +459,184 @@ namespace SurveyManager
         }
 
 
+        #endregion
+
+        #region Survey Tab
+        private void btnBasicInfo_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no information to change."));
+                return;
+            }
+        }
+
+        private void btnOpenViewPanel_Click(object sender, EventArgs e)
+        {
+            RuntimeVars.Instance.OpenJob = new Survey()
+            {
+                JobNumber = "10-5124"
+            };
+
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view."));
+                return;
+            }
+
+            KryptonPage viewPanel = new KryptonPage
+            {
+                Text = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
+                TextTitle = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
+                UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info"
+            };
+            viewPanel.Controls.Add(new ViewPanel()
+            {
+                Dock = DockStyle.Fill
+            });
+
+            if (!dockingManager.ContainsPage(viewPanel))
+            {
+                dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+            }
+            else
+            {
+                dockingManager.RemovePage(viewPanel, true);
+                dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+            }
+        }
+
+        private void btnSaveSurvey_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to save."));
+                return;
+            }
+        }
+
+        private void btnNewSurveyJob_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpenSurveyJob_Click(object sender, EventArgs e)
+        {
+            //TODO: Add recent files to App button!
+        }
+
+        private void btnViewAllJobs_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAddNewFile_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to attach a file to."));
+                return;
+            }
+        }
+
+        private void btnViewAllFiles_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view files of."));
+                return;
+            }
+        }
+
+        private void btnBillingRates_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to edit rates for."));
+                return;
+            }
+        }
+
+        private void btnFieldTime_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add time to."));
+                return;
+            }
+        }
+
+        private void btnOfficeTime_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add time to."));
+                return;
+            }
+        }
+
+        private void btnBillingLineItems_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add billing items to."));
+                return;
+            }
+        }
+
+        private void btnCurrentBill_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no current bill to open."));
+                return;
+            }
+        }
+
+        private void btnAssocClient_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Client to."));
+                return;
+            }
+        }
+
+        private void btnAssocRealtor_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Realtor to."));
+                return;
+            }
+        }
+
+        private void btnAssocTitleComp_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Title Company to."));
+                return;
+            }
+        }
+
+        private void btnLocation_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to change the location of."));
+                return;
+            }
+        }
+
+        private void btnNotes_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add notes to."));
+                return;
+            }
+        }
         #endregion
     }
 }

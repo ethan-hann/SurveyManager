@@ -142,7 +142,8 @@
     <Compile Include="backend\wrappers\County.cs" />
     <Compile Include="backend\wrappers\DatabaseWrapper.cs" />
     <Compile Include="backend\wrappers\Realtor.cs" />
-    <Compile Include="backend\wrappers\Survey.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\LineItem.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\Survey.cs" />
     <Compile Include="backend\wrappers\TitleCompany.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.cs">
       <SubType>Form</SubType>
@@ -201,6 +202,12 @@
     </Compile>
     <Compile Include="forms\surveyMenu\UploadFileCtl.Designer.cs">
       <DependentUpon>UploadFileCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\ViewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\ViewPanel.Designer.cs">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\userControls\NewObject.cs">
       <SubType>UserControl</SubType>
@@ -267,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFileCtl.resx">
       <DependentUpon>UploadFileCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\ViewPanel.resx">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\userControls\NewObject.resx">
       <DependentUpon>NewObject.cs</DependentUpon>
@@ -597,6 +607,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_line_items_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_line_items.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

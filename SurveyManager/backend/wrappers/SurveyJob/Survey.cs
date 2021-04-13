@@ -1,4 +1,5 @@
-﻿using SurveyManager.forms.surveyMenu;
+﻿using SurveyManager.backend.wrappers.SurveyJob;
+using SurveyManager.forms.surveyMenu;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,6 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    [Serializable]
     public class Survey : ExpandableObjectConverter, DatabaseWrapper
     {
         [Browsable(false)]
@@ -23,95 +23,107 @@ namespace SurveyManager.backend.wrappers
         [Category("Survey Information")]
         [Description("The job number assigned to this survey.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Job Number")]
         public string JobNumber { get; set; } = "N/A";
-
-        [Browsable(false)]
-        public int ClientID { get; set; }
 
         [Category("Survey Information")]
         [Description("A description for this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Description")]
-        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
         public string Description { get; set; } = "N/A";
 
         [Category("Survey Information")]
         [Description("The abstract number where this survey job is located.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Survey Abstract")]
         public string AbstractNumber { get; set; } = "N/A";
 
         [Category("Subdivision")]
         [Description("The subdivision, if any, this survey job is located. If a subdivision is specified, the lot number, block number, and section number should also be specified.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Subdivision")]
         public string Subdivision { get; set; } = "N/A";
 
         [Category("Subdivision")]
         [Description("The lot number in the subdivision for this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Lot Number")]
         public string LotNumber { get; set; } = "N/A";
 
         [Category("Subdivision")]
         [Description("The block number in the subdivision for this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Block Number")]
         public string BlockNumber { get; set; } = "N/A";
 
         [Category("Subdivision")]
         [Description("The section in the subdivision for this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Section Number")]
         public string SectionNumber { get; set; } = "N/A";
-
-        [Browsable(false)]
-        public int CountyID { get; set; }
 
         [Category("Survey Information")]
         [Description("The number of acres this survey is for.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Acres")]
         public double Acres { get; set; }
 
-        [Browsable(false)]
-        public int RealtorID { get; set; }
-
-        [Browsable(false)]
-        public int TitleCompanyID { get; set; }
-
-        [Category("Associated Objects")]
+        [Category("Associated Assets")]
         [Description("The client who ordered the survey.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Client")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Client Client { get; set; } = new Client();
 
-        [Category("Associated Objects")]
+        [Browsable(false)]
+        public int ClientID { get; set; }
+
+        [Category("Associated Assets")]
         [Description("The county this survey is located in.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("County")]
         [TypeConverter(typeof(CountyTypeConverter))]
         public County County { get; set; } = new County();
 
-        [Category("Associated Objects")]
+        [Browsable(false)]
+        public int CountyID { get; set; }
+
+        [Category("Associated Assets")]
         [Description("The realtor, if any, for this survey.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Realtor")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Realtor Realtor { get; set; } = new Realtor();
 
-        [Category("Associated Objects")]
+        [Browsable(false)]
+        public int RealtorID { get; set; }
+
+        [Category("Associated Assets")]
         [Description("The title company, if any, for this survey.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Title Company")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public TitleCompany TitleCompany { get; set; } = new TitleCompany();
 
+        [Browsable(false)]
+        public int TitleCompanyID { get; set; }
+
         [Category("Survey Information")]
-        [Description("The location for this survey job, if different from the Client's address.")]
+        [Description("The location for this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Location")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Address Location { get; set; } = new Address();
@@ -122,9 +134,13 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public string FileIds { get; set; } = "N/A";
 
+        [Browsable(false)]
+        public List<CFile> Files { get; private set; } = new List<CFile>();
+
         [Category("Files")]
         [Description("The total number of files associated with this survey job.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("Files")]
         public int NumOfFiles
         {
@@ -134,14 +150,6 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
-        [Category("Files")]
-        [Description("A list of files that should be associated with this survey job.")]
-        [Browsable(false)]
-        [DisplayName("Files")]
-        //[Editor(typeof(UploadFileEditor), typeof(UITypeEditor))]
-        public List<CFile> Files { get; private set; } = new List<CFile>();
-        //TODO: see https://stackoverflow.com/questions/7456738/how-do-i-pass-an-argument-to-a-class-that-inherits-uitypeeditor
-
         [Browsable(false)]
         public bool HasFiles
         {
@@ -150,6 +158,42 @@ namespace SurveyManager.backend.wrappers
                 return Files.Count != 0;
             }
         }
+
+        [Category("Billing")]
+        [Description("The field rate to use for billing.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Field Rate / Hour")]
+        public decimal FieldRate { get; set; }
+
+        [Category("Billing")]
+        [Description("The office rate to use for billing.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Office Rate / Hour")]
+        public decimal OfficeRate { get; set; }
+
+        [Category("Billing")]
+        [Description("The current field time spent on this survey job, in hours.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Field Time")]
+        public TimeSpan FieldTime { get; private set; }
+
+        [Category("Billing")]
+        [Description("The current office time spent on this survey job, in hours.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Office Time")]
+        public TimeSpan OfficeTime { get; private set; }
+
+        [Category("Billing")]
+        [Description("Any additional billing line items for this survey job.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Billing Line Items")]
+        [TypeConverter(typeof(ExpandableObjectConverter))]
+        public List<LineItem> BillingLineItems { get; private set; } = new List<LineItem>();
 
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
@@ -326,6 +370,58 @@ namespace SurveyManager.backend.wrappers
                 ids[i] = int.Parse(tokens[i]);
             }
             return ids;
+        }
+
+        public void AddFieldTime(TimeSpan timeToAdd)
+        {
+            FieldTime = FieldTime.Add(timeToAdd);
+        }
+
+        public void AddOfficeTime(TimeSpan timeToAdd)
+        {
+            OfficeTime = OfficeTime.Add(timeToAdd);
+        }
+
+        public void RemoveFieldTime(TimeSpan timeToRemove)
+        {
+            FieldTime = FieldTime.Subtract(timeToRemove);
+        }
+
+        public void RemoveOfficeTime(TimeSpan timeToRemove)
+        {
+            OfficeTime = OfficeTime.Subtract(timeToRemove);
+        }
+
+        /// <summary>
+        /// Get the current office bill for this survey job.
+        /// </summary>
+        /// <returns>A decimal value representing the current office bill.</returns>
+        public decimal GetOfficeBill()
+        {
+            return (decimal)((double)OfficeRate * OfficeTime.TotalHours);
+        }
+
+        /// <summary>
+        /// Get the current field bill for this survey job.
+        /// </summary>
+        /// <returns>A decimal value representing the current field bill.</returns>
+        public decimal GetFieldBill()
+        {
+            return (decimal)((double)FieldRate * FieldTime.TotalHours);
+        }
+
+        public decimal GetBillingLineItemsBill()
+        {
+            return BillingLineItems.Sum(l => l.SubTotal);
+        }
+
+        /// <summary>
+        /// Get the total bill for this survey job. The total bill is the office bill + the field bill + any additional line items.
+        /// </summary>
+        /// <returns>A decimal value representing the current total bill.</returns>
+        public decimal GetTotalBill()
+        {
+            return GetOfficeBill() + GetFieldBill() + BillingLineItems.Sum(l => l.SubTotal);
         }
 
         private DatabaseError UpdateObjects()

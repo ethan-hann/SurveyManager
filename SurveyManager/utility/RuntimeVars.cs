@@ -28,14 +28,42 @@ namespace SurveyManager.utility
             }
         }
         
+        /// <summary>
+        /// Get a value indicating the number of database connection forms currently open.
+        /// </summary>
         public int NumberOfDBConnectionFormsOpen { get; set; } = 0;
 
+        /// <summary>
+        /// Get a value indicating if the database is currently connected.
+        /// </summary>
         public bool DatabaseConnected { get; set; } = false;
 
+        /// <summary>
+        /// Get the list of supported counties.
+        /// </summary>
         public List<County> Counties { get; set; }
 
         public string SelectedPageUniqueName { get; set; } = "";
 
+        /// <summary>
+        /// Get the currently open survey job.
+        /// </summary>
+        public Survey OpenJob { get; set; }
+
+        /// <summary>
+        /// Get a value indicating if a survey job is already open.
+        /// </summary>
+        public bool IsJobOpen
+        {
+            get
+            {
+                return OpenJob != null;
+            }
+        }
+
+        /// <summary>
+        /// Get a reference to the main form of the application.
+        /// </summary>
         public MainForm MainForm { get; set; }
     }
 }

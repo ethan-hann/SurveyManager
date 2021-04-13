@@ -46,5 +46,17 @@ namespace SurveyManager.Properties {
                 this["UpgradeRequired"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("N/A")]
+        public string LastJobNumberOpened {
+            get {
+                return ((string)(this["LastJobNumberOpened"]));
+            }
+            set {
+                this["LastJobNumberOpened"] = value;
+            }
+        }
     }
 }

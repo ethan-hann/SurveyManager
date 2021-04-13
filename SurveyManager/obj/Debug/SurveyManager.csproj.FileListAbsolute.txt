@@ -52,3 +52,5 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Survey
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.CopyComplete
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.pdb
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\Standard.Licensing.dll
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.ViewPanel.resources

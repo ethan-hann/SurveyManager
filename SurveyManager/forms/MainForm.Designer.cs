@@ -40,12 +40,16 @@ namespace SurveyManager
             this.mainRibbon = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
             this.surveyTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.jobsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple12 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnSaveSurvey = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupSeparator3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnNewSurveyJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnOpenSurveyJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.btnCloseCurrentJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnViewAllJobs = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroup3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnBasicInfo = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnOpenViewPanel = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.filesRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAddNewFile = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -56,8 +60,9 @@ namespace SurveyManager
             this.btnFieldTime = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnOfficeTime = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
-            this.kryptonRibbonGroupTriple13 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnCurrentBill = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupLines2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupLines();
+            this.btnBillingLineItems = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnViewCurrentBill = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.assetsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAssocClient = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -165,7 +170,6 @@ namespace SurveyManager
             this.mainRibbon.Name = "mainRibbon";
             this.mainRibbon.QATLocation = ComponentFactory.Krypton.Ribbon.QATLocation.Hidden;
             this.mainRibbon.RibbonAppButton.AppButtonImage = global::SurveyManager.Properties.Resources.instrument_16x16;
-            this.mainRibbon.RibbonAppButton.AppButtonShowRecentDocs = false;
             this.mainRibbon.RibbonAppButton.AppButtonText = "Menu";
             this.mainRibbon.RibbonTabs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab[] {
             this.surveyTab,
@@ -179,6 +183,7 @@ namespace SurveyManager
             // 
             this.surveyTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
             this.jobsRibbonGroup,
+            this.kryptonRibbonGroup3,
             this.filesRibbonGroup,
             this.billingRibbonGroup,
             this.assetsRibbonGroup,
@@ -190,30 +195,16 @@ namespace SurveyManager
             this.jobsRibbonGroup.DialogBoxLauncher = false;
             this.jobsRibbonGroup.Image = global::SurveyManager.Properties.Resources.instrument_24x24;
             this.jobsRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple12,
+            this.kryptonRibbonGroupSeparator3,
             this.kryptonRibbonGroupTriple1});
-            this.jobsRibbonGroup.TextLine1 = "Job";
-            // 
-            // kryptonRibbonGroupTriple12
-            // 
-            this.kryptonRibbonGroupTriple12.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnSaveSurvey});
-            // 
-            // btnSaveSurvey
-            // 
-            this.btnSaveSurvey.ImageLarge = global::SurveyManager.Properties.Resources.save;
-            this.btnSaveSurvey.ImageSmall = global::SurveyManager.Properties.Resources.save_16x16;
-            this.btnSaveSurvey.TextLine1 = "Save";
-            this.btnSaveSurvey.TextLine2 = "Current Job";
-            this.btnSaveSurvey.ToolTipBody = "Save any changes made to the currently open survey job.";
-            this.btnSaveSurvey.ToolTipTitle = "Job";
+            this.jobsRibbonGroup.TextLine1 = "Jobs";
             // 
             // kryptonRibbonGroupTriple1
             // 
             this.kryptonRibbonGroupTriple1.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.btnNewSurveyJob,
             this.btnOpenSurveyJob,
-            this.btnCloseCurrentJob});
+            this.btnViewAllJobs});
             // 
             // btnNewSurveyJob
             // 
@@ -221,7 +212,8 @@ namespace SurveyManager
             this.btnNewSurveyJob.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
             this.btnNewSurveyJob.TextLine1 = "New";
             this.btnNewSurveyJob.ToolTipBody = "Create a new survey job.";
-            this.btnNewSurveyJob.ToolTipTitle = "Job";
+            this.btnNewSurveyJob.ToolTipTitle = "Jobs";
+            this.btnNewSurveyJob.Click += new System.EventHandler(this.btnNewSurveyJob_Click);
             // 
             // btnOpenSurveyJob
             // 
@@ -229,16 +221,63 @@ namespace SurveyManager
             this.btnOpenSurveyJob.ImageSmall = global::SurveyManager.Properties.Resources.open_16x16;
             this.btnOpenSurveyJob.TextLine1 = "Open";
             this.btnOpenSurveyJob.ToolTipBody = "Open an existing survey job for editing.";
-            this.btnOpenSurveyJob.ToolTipTitle = "Job";
+            this.btnOpenSurveyJob.ToolTipTitle = "Jobs";
+            this.btnOpenSurveyJob.Click += new System.EventHandler(this.btnOpenSurveyJob_Click);
             // 
-            // btnCloseCurrentJob
+            // btnViewAllJobs
             // 
-            this.btnCloseCurrentJob.ImageLarge = global::SurveyManager.Properties.Resources.close;
-            this.btnCloseCurrentJob.ImageSmall = global::SurveyManager.Properties.Resources.close_16x16;
-            this.btnCloseCurrentJob.TextLine1 = "Close";
-            this.btnCloseCurrentJob.TextLine2 = "Current Job";
-            this.btnCloseCurrentJob.ToolTipBody = "Closes the currently open survey job.";
-            this.btnCloseCurrentJob.ToolTipTitle = "Job";
+            this.btnViewAllJobs.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.btnViewAllJobs.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnViewAllJobs.TextLine1 = "View";
+            this.btnViewAllJobs.TextLine2 = "All Jobs";
+            this.btnViewAllJobs.ToolTipBody = "View all survey jobs.";
+            this.btnViewAllJobs.ToolTipTitle = "Jobs";
+            this.btnViewAllJobs.Click += new System.EventHandler(this.btnViewAllJobs_Click);
+            // 
+            // kryptonRibbonGroup3
+            // 
+            this.kryptonRibbonGroup3.DialogBoxLauncher = false;
+            this.kryptonRibbonGroup3.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple11});
+            this.kryptonRibbonGroup3.TextLine1 = "Current Job";
+            // 
+            // kryptonRibbonGroupTriple11
+            // 
+            this.kryptonRibbonGroupTriple11.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnBasicInfo,
+            this.btnOpenViewPanel,
+            this.kryptonRibbonGroupButton1});
+            // 
+            // btnBasicInfo
+            // 
+            this.btnBasicInfo.ImageLarge = global::SurveyManager.Properties.Resources.instrument;
+            this.btnBasicInfo.ImageSmall = global::SurveyManager.Properties.Resources.instrument_16x16;
+            this.btnBasicInfo.TextLine1 = "Basic";
+            this.btnBasicInfo.TextLine2 = "Information";
+            this.btnBasicInfo.ToolTipBody = "Add\\Update the basic information this survey job needs to be valid.\r\nThis include" +
+    "s a description, abstract number, and the number of acres of the job.";
+            this.btnBasicInfo.ToolTipTitle = "Job";
+            this.btnBasicInfo.Click += new System.EventHandler(this.btnBasicInfo_Click);
+            // 
+            // btnOpenViewPanel
+            // 
+            this.btnOpenViewPanel.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.btnOpenViewPanel.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnOpenViewPanel.TextLine1 = "Open";
+            this.btnOpenViewPanel.TextLine2 = "View Panel";
+            this.btnOpenViewPanel.ToolTipBody = "Opens the view panel. This panel allows you to quickly see the information about " +
+    "the job at a quick glance.";
+            this.btnOpenViewPanel.ToolTipTitle = "Job";
+            this.btnOpenViewPanel.Click += new System.EventHandler(this.btnOpenViewPanel_Click);
+            // 
+            // kryptonRibbonGroupButton1
+            // 
+            this.kryptonRibbonGroupButton1.ImageLarge = global::SurveyManager.Properties.Resources.save;
+            this.kryptonRibbonGroupButton1.ImageSmall = global::SurveyManager.Properties.Resources.save_16x16;
+            this.kryptonRibbonGroupButton1.TextLine1 = "Save";
+            this.kryptonRibbonGroupButton1.ToolTipBody = "Save any changes made to the currently open survey job.";
+            this.kryptonRibbonGroupButton1.ToolTipTitle = "Current Job";
+            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.btnSaveSurvey_Click);
             // 
             // filesRibbonGroup
             // 
@@ -262,6 +301,7 @@ namespace SurveyManager
             this.btnAddNewFile.TextLine2 = "File";
             this.btnAddNewFile.ToolTipBody = "Attach a new file to this survey job.";
             this.btnAddNewFile.ToolTipTitle = "Files";
+            this.btnAddNewFile.Click += new System.EventHandler(this.btnAddNewFile_Click);
             // 
             // btnViewAllFiles
             // 
@@ -271,6 +311,7 @@ namespace SurveyManager
             this.btnViewAllFiles.TextLine2 = "All";
             this.btnViewAllFiles.ToolTipBody = "View all of the associated files for this job; also allows removal of files.";
             this.btnViewAllFiles.ToolTipTitle = "Files";
+            this.btnViewAllFiles.Click += new System.EventHandler(this.btnViewAllFiles_Click);
             // 
             // billingRibbonGroup
             // 
@@ -279,7 +320,7 @@ namespace SurveyManager
             this.billingRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
             this.kryptonRibbonGroupTriple9,
             this.kryptonRibbonGroupSeparator2,
-            this.kryptonRibbonGroupTriple13});
+            this.kryptonRibbonGroupLines2});
             this.billingRibbonGroup.TextLine1 = "Billing";
             // 
             // kryptonRibbonGroupTriple9
@@ -296,6 +337,7 @@ namespace SurveyManager
             this.btnBillingRates.TextLine1 = "Rates";
             this.btnBillingRates.ToolTipBody = "Set the rates used for this job. You can set the office rate and the field rate.";
             this.btnBillingRates.ToolTipTitle = "Billing";
+            this.btnBillingRates.Click += new System.EventHandler(this.btnBillingRates_Click);
             // 
             // btnFieldTime
             // 
@@ -305,6 +347,7 @@ namespace SurveyManager
             this.btnFieldTime.TextLine2 = "Time";
             this.btnFieldTime.ToolTipBody = "Add a new time entry for time spent in the field.";
             this.btnFieldTime.ToolTipTitle = "Billing";
+            this.btnFieldTime.Click += new System.EventHandler(this.btnFieldTime_Click);
             // 
             // btnOfficeTime
             // 
@@ -314,21 +357,35 @@ namespace SurveyManager
             this.btnOfficeTime.TextLine2 = "Time";
             this.btnOfficeTime.ToolTipBody = "Add a new time entry for time spent in the office.";
             this.btnOfficeTime.ToolTipTitle = "Billing";
+            this.btnOfficeTime.Click += new System.EventHandler(this.btnOfficeTime_Click);
             // 
-            // kryptonRibbonGroupTriple13
+            // kryptonRibbonGroupLines2
             // 
-            this.kryptonRibbonGroupTriple13.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnCurrentBill});
+            this.kryptonRibbonGroupLines2.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnBillingLineItems,
+            this.btnViewCurrentBill});
             // 
-            // btnCurrentBill
+            // btnBillingLineItems
             // 
-            this.btnCurrentBill.ImageLarge = global::SurveyManager.Properties.Resources.current_bill;
-            this.btnCurrentBill.ImageSmall = global::SurveyManager.Properties.Resources.current_bill_16x16;
-            this.btnCurrentBill.TextLine1 = "View";
-            this.btnCurrentBill.TextLine2 = "Current Bill";
-            this.btnCurrentBill.ToolTipBody = "View the current bill as it stands right now.\r\nThis uses the current rates and th" +
-    "e current time entries for both the field time and the office time.";
-            this.btnCurrentBill.ToolTipTitle = "Billing";
+            this.btnBillingLineItems.ImageLarge = global::SurveyManager.Properties.Resources.billing_line_items;
+            this.btnBillingLineItems.ImageSmall = global::SurveyManager.Properties.Resources.billing_line_items_16x16;
+            this.btnBillingLineItems.TextLine1 = "Billing";
+            this.btnBillingLineItems.TextLine2 = "Line Items";
+            this.btnBillingLineItems.ToolTipBody = "Add/Update additional billing line items for this survey job.\r\nThis allows you to" +
+    " add additional items to bill for besides just field and office time.";
+            this.btnBillingLineItems.ToolTipTitle = "Billing";
+            this.btnBillingLineItems.Click += new System.EventHandler(this.btnBillingLineItems_Click);
+            // 
+            // btnViewCurrentBill
+            // 
+            this.btnViewCurrentBill.ImageLarge = global::SurveyManager.Properties.Resources.current_bill;
+            this.btnViewCurrentBill.ImageSmall = global::SurveyManager.Properties.Resources.current_bill_16x16;
+            this.btnViewCurrentBill.TextLine1 = "View";
+            this.btnViewCurrentBill.TextLine2 = "Current Bill";
+            this.btnViewCurrentBill.ToolTipBody = "View the current bill for this survey job. \r\nThe current bill is the sum of all f" +
+    "ield and office time as well as any additional billing line items.";
+            this.btnViewCurrentBill.ToolTipTitle = "Billing";
+            this.btnViewCurrentBill.Click += new System.EventHandler(this.btnCurrentBill_Click);
             // 
             // assetsRibbonGroup
             // 
@@ -355,6 +412,7 @@ namespace SurveyManager
             this.btnAssocClient.TextLine1 = "Client";
             this.btnAssocClient.ToolTipBody = "View/Update the associated client for this survey job.";
             this.btnAssocClient.ToolTipTitle = "Associations";
+            this.btnAssocClient.Click += new System.EventHandler(this.btnAssocClient_Click);
             // 
             // btnAssocRealtor
             // 
@@ -363,6 +421,7 @@ namespace SurveyManager
             this.btnAssocRealtor.TextLine1 = "Realtor";
             this.btnAssocRealtor.ToolTipBody = "View/Update the associated realtor for this survey job.\r\n";
             this.btnAssocRealtor.ToolTipTitle = "Associations";
+            this.btnAssocRealtor.Click += new System.EventHandler(this.btnAssocRealtor_Click);
             // 
             // btnAssocTitleComp
             // 
@@ -372,6 +431,7 @@ namespace SurveyManager
             this.btnAssocTitleComp.TextLine2 = "Company";
             this.btnAssocTitleComp.ToolTipBody = "View/Update the associated title company for this survey job.\r\n";
             this.btnAssocTitleComp.ToolTipTitle = "Associations";
+            this.btnAssocTitleComp.Click += new System.EventHandler(this.btnAssocTitleComp_Click);
             // 
             // kryptonRibbonGroupLines1
             // 
@@ -387,6 +447,7 @@ namespace SurveyManager
             this.btnLocation.ToolTipBody = "View/Update the location for this survey job.\r\nBy default, this will be the same " +
     "as the selected Client\'s address.\r\n";
             this.btnLocation.ToolTipTitle = "Associations";
+            this.btnLocation.Click += new System.EventHandler(this.btnLocation_Click);
             // 
             // btnNotes
             // 
@@ -395,6 +456,7 @@ namespace SurveyManager
             this.btnNotes.TextLine1 = "Notes";
             this.btnNotes.ToolTipBody = "View/Update any notes for this survey job.";
             this.btnNotes.ToolTipTitle = "Associations";
+            this.btnNotes.Click += new System.EventHandler(this.btnNotes_Click);
             // 
             // surMangRibbonGroup
             // 
@@ -709,7 +771,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple1;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOpenSurveyJob;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnNewSurveyJob;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnCloseCurrentJob;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewAllJobs;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup filesRibbonGroup;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple8;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAddNewFile;
@@ -725,11 +787,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAssocRealtor;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAssocTitleComp;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator1;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple12;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSaveSurvey;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator2;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple13;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnCurrentBill;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupLines kryptonRibbonGroupLines1;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnLocation;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnNotes;
@@ -738,6 +796,15 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOpenHelp;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnManageLicense;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSendFeedback;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple11;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnBasicInfo;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOpenViewPanel;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupLines kryptonRibbonGroupLines2;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnBillingLineItems;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewCurrentBill;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
     }
 }
 
