@@ -580,7 +580,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no information to change."));
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to close."));
                 return;
             }
 
@@ -602,6 +602,10 @@ namespace SurveyManager
         {
             AddTitleText("[NO JOB OPENED]");
             ChangeStatusText(this, new StatusArgs("Ready"));
+
+            if (dockingManager.ContainsPage("Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info"))
+                dockingManager.RemovePage("Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info", true);
+
             RuntimeVars.Instance.OpenJob = null;
         }
 
