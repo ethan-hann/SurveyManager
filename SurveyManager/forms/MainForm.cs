@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
+using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
@@ -112,15 +113,32 @@ namespace SurveyManager
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(checkUpdatesBtn);
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(exitBtn);
 
-            if (Settings.Default.LastJobNumberOpened.Equals("N/A"))
+            if (Settings.Default.RecentJobs != null && Settings.Default.RecentJobs.Count > 0)
             {
-                
+                List<KryptonRibbonRecentDoc> recentJobs = new List<KryptonRibbonRecentDoc>();
+                foreach (string str in Settings.Default.RecentJobs)
+                {
+                    KryptonRibbonRecentDoc job = new KryptonRibbonRecentDoc();
+                    job.Text = str;
+                    job.Click += OpenRecentJob;
+                    recentJobs.Add(job);
+                }
+                mainRibbon.RibbonAppButton.AppButtonRecentDocs.AddRange(recentJobs.ToArray());
             }
 
             settingsBtn.Click += settingsBtn_Click;
             aboutBtn.Click += aboutBtn_Click;
             checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
             exitBtn.Click += exitBtn_Click;
+        }
+
+        private void OpenRecentJob(object sender, EventArgs e)
+        {
+            if (sender is KryptonRibbonRecentDoc)
+            {
+                Console.WriteLine("Recent job clicked: " + (sender as KryptonRibbonRecentDoc).Text);
+            }
+            
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -522,7 +540,14 @@ namespace SurveyManager
 
         private void btnOpenSurveyJob_Click(object sender, EventArgs e)
         {
-            //TODO: Add recent files to App button!
+            if (Settings.Default.RecentJobs == null)
+                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
+
+            Settings.Default.RecentJobs.Add("10-1252");
+            Settings.Default.RecentJobs.Add("21-1584");
+            Settings.Default.RecentJobs.Add("13-2014");
+            Settings.Default.RecentJobs.Add("15-5963");
+            Settings.Default.Save();
         }
 
         private void btnViewAllJobs_Click(object sender, EventArgs e)

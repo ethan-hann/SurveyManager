@@ -49,13 +49,12 @@ namespace SurveyManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("N/A")]
-        public string LastJobNumberOpened {
+        public global::System.Collections.Specialized.StringCollection RecentJobs {
             get {
-                return ((string)(this["LastJobNumberOpened"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["RecentJobs"]));
             }
             set {
-                this["LastJobNumberOpened"] = value;
+                this["RecentJobs"] = value;
             }
         }
     }
