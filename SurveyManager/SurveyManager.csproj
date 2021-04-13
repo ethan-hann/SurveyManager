@@ -85,6 +85,9 @@
     <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
+    <Reference Include="Standard.Licensing, Version=1.1.5.0, Culture=neutral, PublicKeyToken=9f81b18f6db6aea5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Standard.Licensing.1.1.5\lib\net45\Standard.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -522,6 +525,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_rates_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_rates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_files_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\current_bill_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\current_bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\license_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
