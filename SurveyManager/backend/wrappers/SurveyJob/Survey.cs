@@ -392,6 +392,10 @@ namespace SurveyManager.backend.wrappers
         {
             if (FileIds.Equals("N/A"))
                 FileIds = "";
+
+            if (FileIds.Contains($"{id}"))
+                return;
+
             StringBuilder str = new StringBuilder(FileIds);
             str.Append($"{id}, ");
             FileIds = str.ToString().Trim();
@@ -479,6 +483,10 @@ namespace SurveyManager.backend.wrappers
         {
             if (LineItemIds.Equals("N/A"))
                 LineItemIds = "";
+
+            if (LineItemIds.Contains($"{id}"))
+                return;
+
             StringBuilder str = new StringBuilder(LineItemIds);
             str.Append($"{id}, ");
             LineItemIds = str.ToString().Trim();
