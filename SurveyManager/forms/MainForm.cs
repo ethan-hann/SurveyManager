@@ -25,6 +25,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager
 {
@@ -592,6 +593,9 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to save."));
                 return;
             }
+
+            SaveJob();
+            ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
         }
 
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
@@ -602,11 +606,21 @@ namespace SurveyManager
                 return;
             }
 
+            if (!RuntimeVars.Instance.OpenJob.SavePending)
+            {
+                CloseJob();
+                return;
+            }
+
             DialogResult result = CMessageBox.Show("Save changes?", "Confirm", MessageBoxButtons.YesNoCancel, Resources.save_64x64);
             switch (result)
             {
                 case DialogResult.Yes: //TODO: save and close job
+                {
+                    SaveJob();
+                    CloseJob();
                     break;
+                }
                 case DialogResult.No:
                     CloseJob();
                     break;
@@ -614,6 +628,30 @@ namespace SurveyManager
                     ChangeStatusText(this, new StatusArgs("Closing of job " + RuntimeVars.Instance.OpenJob.JobNumber + " cancelled."));
                     break;
             }
+        }
+
+        private bool SaveJob()
+        {
+            if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
+            {
+                CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            DatabaseError surveyError;
+            if (RuntimeVars.Instance.OpenJob.ID == 0)
+                surveyError = RuntimeVars.Instance.OpenJob.Insert();
+            else
+                surveyError = RuntimeVars.Instance.OpenJob.Update();
+
+            if (surveyError != DatabaseError.NoError)
+            {
+                CMessageBox.Show("Something went wrong while trying to save the job. Check the information and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            RuntimeVars.Instance.OpenJob.SavePending = false;
+            return true;
         }
 
         private void CloseJob()

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -65,8 +66,20 @@ namespace SurveyManager.forms.surveyMenu
 
         private void txtNoteContents_TextChanged(object sender, EventArgs e)
         {
+            //Use regular expressions to protect against the user inserting the delimeter for seperating time and note entries in the database.
+            MatchCollection mc = Regex.Matches(txtNoteContents.Text, "(\\/\\*--\\*\\/)+", RegexOptions.Multiline);
+            foreach (Match m in mc)
+            {
+                txtNoteContents.Text = txtNoteContents.Text.Remove(m.Index, m.Length);
+            }
+
+            //Update the dictionary with the new text value.
             notes[(DateTime)lbNoteKeys.Items[lbNoteKeys.SelectedIndex]] = txtNoteContents.Text;
 
+            //If the text has been changed, notify about a pending save.
+            RuntimeVars.Instance.OpenJob.SavePending = true;
+
+            //Update the character count
             lblCharCount.Text = "Character Count: " + txtNoteContents.Text.Count() + " / 4,000";
         }
 
@@ -76,6 +89,7 @@ namespace SurveyManager.forms.surveyMenu
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            //When this user control is disposed (closed), update the currently open job with the new notes.
             RuntimeVars.Instance.OpenJob.Notes = notes;
 
             if (disposing && (components != null))

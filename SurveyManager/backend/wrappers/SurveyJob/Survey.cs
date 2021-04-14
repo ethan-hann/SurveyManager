@@ -228,6 +228,8 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public string NotesString { get; set; } = "N/A";
 
+        public bool SavePending { get; set; } = false;
+
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
         /// <para>A valid survey has a client, county, job number, and description at the very least.</para>
@@ -510,12 +512,12 @@ namespace SurveyManager.backend.wrappers
 
         /// <summary>
         /// Parses a string containing notes and times into the appropiate dictionary in this class.
-        /// <para>A note is specified by a time (i.e., 18:00:31) followed by a string; these two components are seperated by <c>/*--*/</c></para>
+        /// <para>A note is specified by a dateTime in ticks (i.e., 637539336310000000) followed by a string; these two components are seperated by <c>/*--*/</c></para>
         /// </summary>
         /// <param name="notesString">The string containing the notes and time information.</param>
         public bool ParseNotes(string notesString)
         {
-            //Notes format -> 18:00:31/*--*/NotesGoHere/*--*/19:20:08/*--*/More Notes here.../*--*/
+            //Notes format -> 637539336310000000/*--*/NotesGoHere/*--*/637539384080000000/*--*/More Notes here.../*--*/
             string noteDelimter = "/*--*/";
             string[] notes = notesString.Split(noteDelimter.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
@@ -524,12 +526,12 @@ namespace SurveyManager.backend.wrappers
             if (notes.Length % 2 != 0)
                 return false;
 
-            //the notes array has a time followed by the note content:
+            //the notes array has a time in ticks followed by the note content:
             //i.e. (0) 18:00:31, (1) NotesGoHere, (2) 19:20:08, (3) More Notes here...
             //need to only iterate every other item containing the time entry, hence i+=2
             for (int i = 0; i < notes.Length - 1; i+=2)
             {
-                AddNote(DateTime.Parse(notes[i]), notes[i + 1]);
+                AddNote(new DateTime(long.Parse(notes[i])), notes[i + 1]);
             }
 
             return true;
@@ -553,7 +555,7 @@ namespace SurveyManager.backend.wrappers
             StringBuilder bldr = new StringBuilder();
             foreach (DateTime key in Notes.Keys)
             {
-                bldr.Append($"{key}/*--*/{Notes[key]}/*--*/");
+                bldr.Append($"{key.Ticks}/*--*/{Notes[key]}/*--*/");
             }
             return bldr.ToString();
         }
