@@ -191,6 +191,12 @@
     </Compile>
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
+    <Compile Include="forms\surveyMenu\NotesCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
+      <DependentUpon>NotesCtl.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
+      <DependentUpon>NotesCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">
       <DependentUpon>SurveySearchResults.cs</DependentUpon>

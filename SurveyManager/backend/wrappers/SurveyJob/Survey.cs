@@ -553,7 +553,7 @@ namespace SurveyManager.backend.wrappers
             StringBuilder bldr = new StringBuilder();
             foreach (DateTime key in Notes.Keys)
             {
-                bldr.Append($"{key.Ticks}/*--*/{Notes[key]}/*--*/");
+                bldr.Append($"{key}/*--*/{Notes[key]}/*--*/");
             }
             return bldr.ToString();
         }

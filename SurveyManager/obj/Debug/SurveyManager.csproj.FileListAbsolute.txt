@@ -55,3 +55,4 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Survey
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\Standard.Licensing.dll
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.ViewPanel.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.SurveySearchResults.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.NotesCtl.resources

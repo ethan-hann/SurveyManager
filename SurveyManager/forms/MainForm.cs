@@ -734,7 +734,26 @@ namespace SurveyManager
                 return;
             }
 
+            KryptonPage notesPanel = new KryptonPage
+            {
+                Text = "Notes",
+                TextTitle = "Notes",
+                UniqueName = "Notes"
+            };
+            notesPanel.Controls.Add(new NotesCtl(RuntimeVars.Instance.OpenJob.Notes)
+            {
+                Dock = DockStyle.Fill
+            });
 
+            if (!dockingManager.ContainsPage(notesPanel))
+            {
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
+            }
+            else
+            {
+                dockingManager.RemovePage(notesPanel, true);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
+            }
         }
         #endregion
     }
