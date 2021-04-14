@@ -162,7 +162,23 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when a survey is missing important information.
             /// </summary>
-            SurveyIncomplete
+            SurveyIncomplete,
+            /// <summary>
+            /// Error when inserting a billing line item.
+            /// </summary>
+            LineItemInsert,
+            /// <summary>
+            /// Error when updating a billing line item.
+            /// </summary>
+            LineItemUpdate,
+            /// <summary>
+            /// Error when deleting a billing line item.
+            /// </summary>
+            LineItemDelete,
+            /// <summary>
+            /// Error when a billing line item is missing important information.
+            /// </summary>
+            LineItemIncomplete
         }
 
         /// <summary>

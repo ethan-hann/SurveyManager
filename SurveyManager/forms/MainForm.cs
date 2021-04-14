@@ -147,7 +147,7 @@ namespace SurveyManager
             if (sender is KryptonRibbonRecentDoc recentDoc)
             {
                 RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
-                ChangeStatusText(this, new StatusArgs("Job " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
+                ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
                 AddTitleText("[JOB# " + recentDoc.Text + " OPENED]");
             }
         }
@@ -498,7 +498,25 @@ namespace SurveyManager
         #region Survey Tab
         private void btnNewSurveyJob_Click(object sender, EventArgs e)
         {
+            string newJobNumber = KryptonInputBox.Show(this, "Enter the new job number:", "New Job", $"{DateTime.Now.Date.Year.ToString().Substring(2)}-");
+            if (newJobNumber.Equals("NONE") || newJobNumber.Length <= 0)
+                return;
 
+            if (!Database.DoesSurveyExist(newJobNumber))
+            {
+                RuntimeVars.Instance.OpenJob = new Survey()
+                {
+                    JobNumber = newJobNumber
+                };
+
+                AddTitleText("[JOB# " + RuntimeVars.Instance.OpenJob.JobNumber + " OPENED]");
+                ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " created successfully!"));
+            }
+            else
+            {
+                CMessageBox.Show("Job# " + newJobNumber + " already exists. Try opening it instead.", "Job Already Exists", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
         }
 
         private void btnOpenSurveyJob_Click(object sender, EventArgs e)

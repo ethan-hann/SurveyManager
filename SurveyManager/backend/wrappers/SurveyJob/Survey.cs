@@ -3,6 +3,7 @@ using SurveyManager.forms.surveyMenu;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
@@ -178,14 +179,14 @@ namespace SurveyManager.backend.wrappers
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Field Time")]
-        public TimeSpan FieldTime { get; private set; }
+        public TimeSpan FieldTime { get; set; }
 
         [Category("Billing")]
         [Description("The current office time spent on this survey job, in hours.")]
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Office Time")]
-        public TimeSpan OfficeTime { get; private set; }
+        public TimeSpan OfficeTime { get; set; }
 
         [Category("Billing")]
         [Description("Any additional billing line items for this survey job.")]
@@ -194,6 +195,15 @@ namespace SurveyManager.backend.wrappers
         [DisplayName("Billing Line Items")]
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public List<LineItem> BillingLineItems { get; private set; } = new List<LineItem>();
+
+        [Browsable(false)]
+        public string LineItemIds { get; set; } = "N/A";
+
+        [Browsable(false)]
+        public Dictionary<DateTime, string> Notes { get; internal set; } = new Dictionary<DateTime, string>();
+
+        [Browsable(false)]
+        public string NotesString { get; set; } = "N/A";
 
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
@@ -284,6 +294,22 @@ namespace SurveyManager.backend.wrappers
                     IsBackground = true
                 };
                 dbThread.Start();
+            }
+            if (!LineItemIds.Equals("N/A"))
+            {
+                Thread dbThread = new Thread(() =>
+                {
+                    int[] ids = ParseLineItemIds();
+                    BillingLineItems = Database.GetLineItems(ids);
+                })
+                {
+                    IsBackground = true
+                };
+                dbThread.Start();
+            }
+            if (!NotesString.Equals("N/A"))
+            {
+                ParseNotes(NotesString);
             }
         }
 
@@ -424,6 +450,91 @@ namespace SurveyManager.backend.wrappers
             return GetOfficeBill() + GetFieldBill() + BillingLineItems.Sum(l => l.SubTotal);
         }
 
+        public void AddLineItemID(int id)
+        {
+            if (LineItemIds.Equals("N/A"))
+                LineItemIds = "";
+            StringBuilder str = new StringBuilder(LineItemIds);
+            str.Append($"{id}, ");
+            LineItemIds = str.ToString().Trim();
+        }
+
+        public void RemoveLineItemID(int id)
+        {
+            StringBuilder str = new StringBuilder(LineItemIds);
+            str.Replace($"{id},", string.Empty);
+            LineItemIds = str.ToString().Trim();
+            if (LineItemIds.Equals(""))
+                LineItemIds = "N/A";
+        }
+
+        public void AddNote(DateTime time, string newNote)
+        {
+            if (!Notes.ContainsKey(time))
+                Notes.Add(time, newNote);
+        }
+
+        public void AddNote(string newNote)
+        {
+            Notes.Add(DateTime.Now, newNote);
+        }
+
+        public void RemoveNote(DateTime time)
+        {
+            if (Notes.ContainsKey(time))
+                Notes.Remove(time);
+        }
+
+        /// <summary>
+        /// Parses a string containing notes and times into the appropiate dictionary in this class.
+        /// <para>A note is specified by a time (i.e., 18:00:31) followed by a string; these two components are seperated by <c>/*--*/</c></para>
+        /// </summary>
+        /// <param name="notesString">The string containing the notes and time information.</param>
+        public bool ParseNotes(string notesString)
+        {
+            //Notes format -> 18:00:31/*--*/NotesGoHere/*--*/19:20:08/*--*/More Notes here.../*--*/
+            string noteDelimter = "/*--*/";
+            string[] notes = notesString.Split(noteDelimter.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+            //If we dont have an even number of items (meaning we don't have pairs of times and notes,
+            //return false and don't attempt parse
+            if (notes.Length % 2 != 0)
+                return false;
+
+            //the notes array has a time followed by the note content:
+            //i.e. (0) 18:00:31, (1) NotesGoHere, (2) 19:20:08, (3) More Notes here...
+            //need to only iterate every other item containing the time entry, hence i+=2
+            for (int i = 0; i < notes.Length - 1; i+=2)
+            {
+                AddNote(DateTime.Parse(notes[i]), notes[i + 1]);
+            }
+
+            return true;
+        }
+
+        private int[] ParseLineItemIds()
+        {
+            string trimmed = LineItemIds.Trim();
+            string[] tokens = trimmed.Split(',');
+
+            int[] ids = new int[tokens.Length];
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                ids[i] = int.Parse(tokens[i]);
+            }
+            return ids;
+        }
+
+        public string GetNotesString()
+        {
+            StringBuilder bldr = new StringBuilder();
+            foreach (DateTime key in Notes.Keys)
+            {
+                bldr.Append($"{key.Ticks}/*--*/{Notes[key]}/*--*/");
+            }
+            return bldr.ToString();
+        }
+
         private DatabaseError UpdateObjects()
         {
             #region Client Insert/Update
@@ -504,7 +615,7 @@ namespace SurveyManager.backend.wrappers
             foreach (CFile file in Files)
             {
                 DatabaseError fileError = file.Update();
-                if (fileError == DatabaseError.FileInsert)
+                if (fileError == DatabaseError.FileUpdate)
                     return fileError;
                 if (file.ID == 0)
                     AddFileId(Database.GetLastRowIDInserted("File"));
@@ -517,11 +628,24 @@ namespace SurveyManager.backend.wrappers
                 return DatabaseError.CountyInsert;
             #endregion
 
+            #region Line Items
+            foreach (LineItem item in BillingLineItems)
+            {
+                DatabaseError itemError = item.Update();
+                if (itemError == DatabaseError.LineItemUpdate)
+                    return itemError;
+                if (item.ID == 0)
+                    AddLineItemID(Database.GetLastRowIDInserted("LineItem"));
+                else
+                    AddLineItemID(item.ID);
+            }
+            #endregion
+
             return DatabaseError.NoError;
         }
 
         /// <summary>
-        /// Delete this survey from the database, along with the associated files.
+        /// Delete this survey from the database, along with the associated files and billing line items.
         /// </summary>
         /// <returns>A <see cref="DatabaseError"/> with the result of the Delete operation.</returns>
         public DatabaseError Delete()
@@ -531,6 +655,13 @@ namespace SurveyManager.backend.wrappers
                 DatabaseError fileError = Database.DeleteFile(file) ? DatabaseError.NoError : DatabaseError.FileDelete;
                 if (fileError == DatabaseError.FileDelete)
                     return fileError;
+            }
+
+            foreach (LineItem item in BillingLineItems)
+            {
+                DatabaseError itemError = Database.DeleteLineItem(item.ID) ? DatabaseError.NoError : DatabaseError.LineItemDelete;
+                if (itemError == DatabaseError.LineItemDelete)
+                    return itemError;
             }
 
             return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;

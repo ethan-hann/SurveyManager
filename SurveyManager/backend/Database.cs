@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -1383,6 +1384,13 @@ namespace SurveyManager.backend
 
                         cmd.Parameters.AddWithValue("@12", s.FileIds);
                         cmd.Parameters.AddWithValue("@13", s.Location.ID);
+                        cmd.Parameters.AddWithValue("@14", s.FieldRate);
+                        cmd.Parameters.AddWithValue("@15", s.OfficeRate);
+                        cmd.Parameters.AddWithValue("@16", s.FieldTime);
+                        cmd.Parameters.AddWithValue("@17", s.OfficeTime);
+                        cmd.Parameters.AddWithValue("@18", s.LineItemIds);
+                        cmd.Parameters.AddWithValue("@19", s.GetNotesString());
+
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1415,30 +1423,35 @@ namespace SurveyManager.backend
                         cmd.Transaction = tr;
                         cmd.CommandType = CommandType.Text;
 
-                        cmd.Parameters.AddWithValue("@0", s.ID);
-                        cmd.Parameters.AddWithValue("@1", s.JobNumber);
-                        cmd.Parameters.AddWithValue("@2", s.Client.ID);
-                        cmd.Parameters.AddWithValue("@3", s.Description);
-                        cmd.Parameters.AddWithValue("@4", s.AbstractNumber);
-                        cmd.Parameters.AddWithValue("@5", s.Subdivision);
-                        cmd.Parameters.AddWithValue("@6", s.LotNumber);
-                        cmd.Parameters.AddWithValue("@7", s.BlockNumber);
-                        cmd.Parameters.AddWithValue("@8", s.SectionNumber);
-                        cmd.Parameters.AddWithValue("@9", s.County.ID);
-                        cmd.Parameters.AddWithValue("@10", s.Acres);
+                        cmd.Parameters.AddWithValue("@0", s.JobNumber);
+                        cmd.Parameters.AddWithValue("@1", s.Client.ID);
+                        cmd.Parameters.AddWithValue("@2", s.Description);
+                        cmd.Parameters.AddWithValue("@3", s.AbstractNumber);
+                        cmd.Parameters.AddWithValue("@4", s.Subdivision);
+                        cmd.Parameters.AddWithValue("@5", s.LotNumber);
+                        cmd.Parameters.AddWithValue("@6", s.BlockNumber);
+                        cmd.Parameters.AddWithValue("@7", s.SectionNumber);
+                        cmd.Parameters.AddWithValue("@8", s.County.ID);
+                        cmd.Parameters.AddWithValue("@9", s.Acres);
 
                         if (s.Realtor.IsValidRealtor)
-                            cmd.Parameters.AddWithValue("@11", s.Realtor.ID);
+                            cmd.Parameters.AddWithValue("@10", s.Realtor.ID);
+                        else
+                            cmd.Parameters.AddWithValue("@10", DBNull.Value);
+
+                        if (s.TitleCompany.IsValidCompany)
+                            cmd.Parameters.AddWithValue("@11", s.TitleCompany.ID);
                         else
                             cmd.Parameters.AddWithValue("@11", DBNull.Value);
 
-                        if (s.TitleCompany.IsValidCompany)
-                            cmd.Parameters.AddWithValue("@12", s.TitleCompany.ID);
-                        else
-                            cmd.Parameters.AddWithValue("@12", DBNull.Value);
-
-                        cmd.Parameters.AddWithValue("@13", s.FileIds);
-                        cmd.Parameters.AddWithValue("@14", s.Location.ID);
+                        cmd.Parameters.AddWithValue("@12", s.FileIds);
+                        cmd.Parameters.AddWithValue("@13", s.Location.ID);
+                        cmd.Parameters.AddWithValue("@14", s.FieldRate);
+                        cmd.Parameters.AddWithValue("@15", s.OfficeRate);
+                        cmd.Parameters.AddWithValue("@16", s.FieldTime);
+                        cmd.Parameters.AddWithValue("@17", s.OfficeTime);
+                        cmd.Parameters.AddWithValue("@18", s.LineItemIds);
+                        cmd.Parameters.AddWithValue("@19", s.GetNotesString());
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1453,6 +1466,25 @@ namespace SurveyManager.backend
             }
             return affectedRows != 0;
 
+        }
+
+        public static bool DoesSurveyExist(string jobNumber)
+        {
+            bool exists = false;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"job_number='{jobNumber}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        exists = reader.HasRows;
+                    }
+                }
+                con.Close();
+            }
+            return exists;
         }
 
         public static Survey GetSurvey(int id)
@@ -1484,7 +1516,13 @@ namespace SurveyManager.backend
                                 CountyID = reader.GetInt32(9),
                                 Acres = reader.GetDouble(10),
                                 FileIds = reader.GetString(13),
-                                LocationID = reader.GetInt32(14)
+                                LocationID = reader.GetInt32(14),
+                                FieldRate = reader.GetDecimal(15),
+                                OfficeRate = reader.GetDecimal(16),
+                                FieldTime = reader.GetTimeSpan(17),
+                                OfficeTime = reader.GetTimeSpan(18),
+                                LineItemIds = reader.GetString(19),
+                                NotesString = reader.GetString(20)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1535,7 +1573,13 @@ namespace SurveyManager.backend
                                 CountyID = reader.GetInt32(9),
                                 Acres = reader.GetDouble(10),
                                 FileIds = reader.GetString(13),
-                                LocationID = reader.GetInt32(14)
+                                LocationID = reader.GetInt32(14),
+                                FieldRate = reader.GetDecimal(15),
+                                OfficeRate = reader.GetDecimal(16),
+                                FieldTime = reader.GetTimeSpan(17),
+                                OfficeTime = reader.GetTimeSpan(18),
+                                LineItemIds = reader.GetString(19),
+                                NotesString = reader.GetString(20)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1588,7 +1632,13 @@ namespace SurveyManager.backend
                                     CountyID = reader.GetInt32(9),
                                     Acres = reader.GetDouble(10),
                                     FileIds = reader.GetString(13),
-                                    LocationID = reader.GetInt32(14)
+                                    LocationID = reader.GetInt32(14),
+                                    FieldRate = reader.GetDecimal(15),
+                                    OfficeRate = reader.GetDecimal(16),
+                                    FieldTime = reader.GetTimeSpan(17),
+                                    OfficeTime = reader.GetTimeSpan(18),
+                                    LineItemIds = reader.GetString(19),
+                                    NotesString = reader.GetString(20)
                                 };
 
                                 if (reader.IsDBNull(11))
@@ -1617,6 +1667,179 @@ namespace SurveyManager.backend
         {
             int affectedRows = 0;
             string q = Queries.BuildQuery(QType.DELETE, "Survey", null, null, $"survey_id={s.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+
+        public static bool InsertLineItem(LineItem item)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("LineItem");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "LineItem", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.Amount);
+                        cmd.Parameters.AddWithValue("@1", item.Description);
+                        cmd.Parameters.AddWithValue("@2", item.TaxRate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static bool UpdateLineItem(LineItem item)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("LineItem");
+            string q = Queries.BuildQuery(QType.UPDATE, "LineItem", null, columns, $"item_id={item.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.ID);
+                        cmd.Parameters.AddWithValue("@1", item.Amount);
+                        cmd.Parameters.AddWithValue("@2", item.Description);
+                        cmd.Parameters.AddWithValue("@3", item.TaxRate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static LineItem GetLineItem(int id)
+        {
+            LineItem item = null;
+            string q = Queries.BuildQuery(QType.SELECT, "LineItem", null, null, $"item_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            item = new LineItem
+                            {
+                                ID = reader.GetInt32(0),
+                                Amount = reader.GetDecimal(1),
+                                Description = reader.GetString(2),
+                                TaxRate = reader.GetDouble(3),
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return item;
+        }
+
+        public static List<LineItem> GetLineItems(params int[] ids)
+        {
+            List<LineItem> items = new List<LineItem>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                foreach (int id in ids)
+                {
+                    string q = Queries.BuildQuery(QType.SELECT, "LineItem", null, null, $"item_id={id}");
+
+                    using (MySqlCommand cmd = new MySqlCommand(q, con))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                items.Add(new LineItem
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Amount = reader.GetDecimal(1),
+                                    Description = reader.GetString(2),
+                                    TaxRate = reader.GetDouble(3),
+                                });
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
+        public static bool DeleteLineItem(int id)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "LineItem", null, null, $"item_id={id}");
 
             try
             {
