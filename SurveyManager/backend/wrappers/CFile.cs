@@ -203,6 +203,18 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        public FileStream GetTempFile()
+        {
+            if (Contents.Length == 0)
+                return null;
+
+            string path = Path.GetTempPath() + Path.GetRandomFileName() + $"-{FullFileName}";
+            File.WriteAllBytes(path, Contents);
+            FileInfo fInfo = new FileInfo(path);
+            fInfo.Attributes = FileAttributes.ReadOnly;
+            return new FileStream(path, FileMode.Open, FileAccess.Read);
+        }
+
         /// <summary>
         /// Override for <see cref="object.ToString()"/> that returns a readable version of this <see cref="CFile"/>.
         /// </summary>

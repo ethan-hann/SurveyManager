@@ -228,6 +228,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public string NotesString { get; set; } = "N/A";
 
+        [Browsable(false)]
         public bool SavePending { get; set; } = false;
 
         /// <summary>

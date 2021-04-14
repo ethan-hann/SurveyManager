@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Deployment.Application;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -70,9 +71,9 @@ namespace SurveyManager
             //Check database connection
             int code = Database.CheckConnection();
             if (code != -1)
-                Text = "Survey Manager - Database: <NONE>";
+                Text = "Survey Manager - Database: <NONE>\tUnlicensed Copy\t";
             else
-                Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}";
+                Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}\\\tUnlicensed Copy\t";
 
             //Set main form
             RuntimeVars.Instance.MainForm = this;
@@ -149,7 +150,7 @@ namespace SurveyManager
             {
                 RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
                 ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
-                AddTitleText("[JOB# " + recentDoc.Text + " OPENED]");
+                AddTitleText("[JOB# " + recentDoc.Text + "]");
             }
         }
 
@@ -477,13 +478,14 @@ namespace SurveyManager
                     UpdateRecentDocs();
                 }
 
-                AddTitleText("[JOB# " + args.Survey.JobNumber + " OPENED]");
+                AddTitleText("[JOB# " + args.Survey.JobNumber + "]");
             }
         }
 
         private void AddTitleText(string newText)
         {
-            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}" + "\t" + newText;
+            //TODO: Add license check
+            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}\\\tUnlicensed Copy\t" + newText;
         }
         #endregion
 
@@ -615,7 +617,7 @@ namespace SurveyManager
             DialogResult result = CMessageBox.Show("Save changes?", "Confirm", MessageBoxButtons.YesNoCancel, Resources.save_64x64);
             switch (result)
             {
-                case DialogResult.Yes: //TODO: save and close job
+                case DialogResult.Yes:
                 {
                     SaveJob();
                     CloseJob();
@@ -665,6 +667,8 @@ namespace SurveyManager
             RuntimeVars.Instance.OpenJob = null;
         }
 
+        //TODO: WORK ON FILES NEXT!
+
         private void btnAddNewFile_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
@@ -672,6 +676,9 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to attach a file to."));
                 return;
             }
+
+            CFile file = RuntimeVars.Instance.OpenJob.Files[2];
+            Process.Start(file.GetTempFile().Name);
         }
 
         private void btnViewAllFiles_Click(object sender, EventArgs e)
