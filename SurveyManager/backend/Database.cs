@@ -1738,6 +1738,9 @@ namespace SurveyManager.backend
 
         public static bool UpdateLineItem(LineItem item)
         {
+            if (item.ID == 0)
+                return InsertLineItem(item);
+
             int affectedRows = 0;
             ArrayList columns = GetColumns("LineItem");
             string q = Queries.BuildQuery(QType.UPDATE, "LineItem", null, columns, $"item_id={item.ID}");

@@ -733,6 +733,8 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add notes to."));
                 return;
             }
+
+
         }
         #endregion
     }

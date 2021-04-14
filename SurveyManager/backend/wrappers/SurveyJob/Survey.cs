@@ -160,41 +160,64 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        [Browsable(false)]
+        public decimal FieldRate { get; set; }
+
         [Category("Billing")]
         [Description("The field rate to use for billing.")]
         [Browsable(true)]
-        [ReadOnly(true)]
         [DisplayName("Field Rate / Hour")]
-        public decimal FieldRate { get; set; }
+        public string FieldRateString
+        {
+            get
+            {
+                return string.Format("{0:C}", FieldRate);
+            }
+        }
+
+        [Browsable(false)]
+        public decimal OfficeRate { get; set; }
 
         [Category("Billing")]
         [Description("The office rate to use for billing.")]
         [Browsable(true)]
-        [ReadOnly(true)]
         [DisplayName("Office Rate / Hour")]
-        public decimal OfficeRate { get; set; }
+        public string OfficeRateString
+        {
+            get
+            {
+                return string.Format("{0:C}", OfficeRate);
+            }
+        }
 
         [Category("Billing")]
-        [Description("The current field time spent on this survey job, in hours.")]
+        [Description("The current field time spent on this survey job; format = hours:minutes:seconds")]
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Field Time")]
         public TimeSpan FieldTime { get; set; }
 
         [Category("Billing")]
-        [Description("The current office time spent on this survey job, in hours.")]
+        [Description("The current office time spent on this survey job; format = hours:minutes:seconds")]
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Office Time")]
         public TimeSpan OfficeTime { get; set; }
 
-        [Category("Billing")]
-        [Description("Any additional billing line items for this survey job.")]
-        [Browsable(true)]
-        [ReadOnly(true)]
-        [DisplayName("Billing Line Items")]
-        [TypeConverter(typeof(ExpandableObjectConverter))]
+        [Browsable(false)]
         public List<LineItem> BillingLineItems { get; private set; } = new List<LineItem>();
+
+        [Category("Billing")]
+        [Description("The total billing amount including office time, field time, and all additional line items for this survey.")]
+        [Browsable(true)]
+        [DisplayName("Billing Total")]
+        public string BillingTotal
+        {
+            get
+            {
+                return string.Format("{0:C}", GetTotalBill());
+            }
+        }
 
         [Browsable(false)]
         public string LineItemIds { get; set; } = "N/A";
