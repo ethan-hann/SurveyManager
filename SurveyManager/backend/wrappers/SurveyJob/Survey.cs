@@ -84,7 +84,7 @@ namespace SurveyManager.backend.wrappers
         [DisplayName("Acres")]
         public double Acres { get; set; }
 
-        [Category("Associated Assets")]
+        [Category("Associated Objects")]
         [Description("The client who ordered the survey.")]
         [Browsable(true)]
         [ReadOnly(true)]
@@ -95,7 +95,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ClientID { get; set; }
 
-        [Category("Associated Assets")]
+        [Category("Associated Objects")]
         [Description("The county this survey is located in.")]
         [Browsable(true)]
         [ReadOnly(true)]
@@ -106,7 +106,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int CountyID { get; set; }
 
-        [Category("Associated Assets")]
+        [Category("Associated Objects")]
         [Description("The realtor, if any, for this survey.")]
         [Browsable(true)]
         [ReadOnly(true)]
@@ -117,7 +117,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int RealtorID { get; set; }
 
-        [Category("Associated Assets")]
+        [Category("Associated Objects")]
         [Description("The title company, if any, for this survey.")]
         [Browsable(true)]
         [ReadOnly(true)]

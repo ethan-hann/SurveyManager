@@ -90,7 +90,14 @@ namespace SurveyManager.utility
                 FileIds = (string)row["file_ids"],
                 RealtorID = row.IsNull("realtor_id") ? 0 : (int)row["realtor_id"],
                 TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"],
-                LocationID = (int)row["address_id"]
+                LocationID = (int)row["address_id"],
+                FieldRate = (decimal)row["field_rate"],
+                OfficeRate = (decimal)row["office_rate"],
+                FieldTime = (TimeSpan)row["field_time"],
+                OfficeTime = (TimeSpan)row["office_time"],
+                LineItemIds = (string)row["line_item_ids"],
+                NotesString = (string)row["notes"],
+                SurveyName = (string)row["survey_name"]
             };
 
             s.SetObjects();

@@ -80,7 +80,7 @@ namespace SurveyManager
             this.btnOpenHelp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnManageLicense = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnSendFeedback = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.homeTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
+            this.objectsTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.clientRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kryptonRibbonGroupButton4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -187,7 +187,7 @@ namespace SurveyManager
             this.mainRibbon.RibbonStrings.RecentDocuments = "Recent Jobs";
             this.mainRibbon.RibbonTabs.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab[] {
             this.surveyTab,
-            this.homeTab,
+            this.objectsTab,
             this.databaseTab});
             this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
@@ -439,7 +439,7 @@ namespace SurveyManager
             this.kryptonRibbonGroupSeparator1,
             this.kryptonRibbonGroupLines1});
             this.assetsRibbonGroup.TextLine1 = "Associated";
-            this.assetsRibbonGroup.TextLine2 = "Assets";
+            this.assetsRibbonGroup.TextLine2 = "Objects";
             // 
             // kryptonRibbonGroupTriple10
             // 
@@ -550,13 +550,13 @@ namespace SurveyManager
             this.btnSendFeedback.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.btnSendFeedback.ToolTipTitle = "Survey Manager";
             // 
-            // homeTab
+            // objectsTab
             // 
-            this.homeTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.objectsTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
             this.clientRibbonGroup,
             this.realtorRibbonGroup,
             this.tcRibbonGroup});
-            this.homeTab.Text = "Assets";
+            this.objectsTab.Text = "Objects";
             // 
             // clientRibbonGroup
             // 
@@ -814,7 +814,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Toolkit.KryptonManager kManager;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette office2013_edited;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbon mainRibbon;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab homeTab;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab objectsTab;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup clientRibbonGroup;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple2;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton4;
