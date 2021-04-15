@@ -189,6 +189,12 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\fileMenu\FileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\fileMenu\FileBrowser.Designer.cs">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
     <Compile Include="forms\surveyMenu\NotesCtl.cs">
@@ -260,6 +266,8 @@
     <Compile Include="utility\Filtering\IFilter.cs" />
     <Compile Include="utility\Filtering\ORFilter.cs" />
     <Compile Include="utility\Filtering\TextSearchFilter.cs" />
+    <Compile Include="utility\Icons\IconListManager.cs" />
+    <Compile Include="utility\Icons\IconReader.cs" />
     <Compile Include="utility\ProcessDataTable.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
     <Compile Include="utility\Utility.cs" />
@@ -277,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\fileMenu\FileBrowser.resx">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -393,7 +404,7 @@
     <None Include="Resources\view.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="forms\fileMenu\" />
+    <None Include="Resources\folder_16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\db_connection.png" />
@@ -634,6 +645,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

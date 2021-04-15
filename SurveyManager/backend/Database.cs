@@ -1109,8 +1109,8 @@ namespace SurveyManager.backend
         /// and no data is committed to the database.
         /// </summary>
         /// <param name="file">The <see cref="CFile"/> object to insert</param>
-        /// <returns>True if the record inserted successfully; False otherwise</returns>
-        public static bool InsertFile(CFile file)
+        /// <returns>The row id of the inserted file; 0 if the file was not inserted.</returns>
+        public static int InsertFile(CFile file)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("File");
@@ -1148,7 +1148,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("File") : 0;
         }
 
         /// <summary>
@@ -1159,7 +1159,7 @@ namespace SurveyManager.backend
         public static bool UpdateFile(CFile file)
         {
             if (file.ID == 0)
-                return InsertFile(file);
+                return file.Insert() == DatabaseError.NoError;
 
             int affectedRows = 0;
             ArrayList columns = GetColumns("File");
@@ -1390,6 +1390,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@17", s.OfficeTime);
                         cmd.Parameters.AddWithValue("@18", s.LineItemIds);
                         cmd.Parameters.AddWithValue("@19", s.GetNotesString());
+                        cmd.Parameters.AddWithValue("@21", s.SurveyName);
 
 
                         cmd.Connection = con;
@@ -1453,6 +1454,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@18", s.OfficeTime);
                         cmd.Parameters.AddWithValue("@19", s.LineItemIds);
                         cmd.Parameters.AddWithValue("@20", s.GetNotesString());
+                        cmd.Parameters.AddWithValue("@21", s.SurveyName);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1523,7 +1525,8 @@ namespace SurveyManager.backend
                                 FieldTime = reader.GetTimeSpan(17),
                                 OfficeTime = reader.GetTimeSpan(18),
                                 LineItemIds = reader.GetString(19),
-                                NotesString = reader.GetString(20)
+                                NotesString = reader.GetString(20),
+                                SurveyName = reader.GetString(21)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1580,7 +1583,8 @@ namespace SurveyManager.backend
                                 FieldTime = reader.GetTimeSpan(17),
                                 OfficeTime = reader.GetTimeSpan(18),
                                 LineItemIds = reader.GetString(19),
-                                NotesString = reader.GetString(20)
+                                NotesString = reader.GetString(20),
+                                SurveyName = reader.GetString(21)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1639,7 +1643,8 @@ namespace SurveyManager.backend
                                     FieldTime = reader.GetTimeSpan(17),
                                     OfficeTime = reader.GetTimeSpan(18),
                                     LineItemIds = reader.GetString(19),
-                                    NotesString = reader.GetString(20)
+                                    NotesString = reader.GetString(20),
+                                    SurveyName = reader.GetString(21)
                                 };
 
                                 if (reader.IsDBNull(11))
@@ -1700,7 +1705,7 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
-        public static bool InsertLineItem(LineItem item)
+        public static int InsertLineItem(LineItem item)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("LineItem");
@@ -1734,13 +1739,13 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("LineItem") : 0;
         }
 
         public static bool UpdateLineItem(LineItem item)
         {
             if (item.ID == 0)
-                return InsertLineItem(item);
+                return item.Insert() == DatabaseError.NoError;
 
             int affectedRows = 0;
             ArrayList columns = GetColumns("LineItem");

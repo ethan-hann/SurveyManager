@@ -1,6 +1,7 @@
 ﻿using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -21,6 +22,8 @@ namespace SurveyManager.backend.wrappers
     [Serializable]
     public class CFile : DatabaseWrapper
     {
+        private string tempPath = string.Empty;
+
         [Browsable(false)]
         public int ID { get; set; }
 
@@ -51,6 +54,9 @@ namespace SurveyManager.backend.wrappers
                 return ToString();
             }
         }
+
+        [Browsable(false)]
+        public string TempPath { get; internal set; }
 
         /// <summary>
         /// The RAW byte array representing the file's contents.
@@ -203,16 +209,22 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
-        public FileStream GetTempFile()
+        /// <summary>
+        /// Get a file path to this CFile object. The temporary file is deleted after the program is closed.
+        /// </summary>
+        /// <returns></returns>
+        public string GetTempFile()
         {
             if (Contents.Length == 0)
                 return null;
 
-            string path = Path.GetTempPath() + Path.GetRandomFileName() + $"-{FullFileName}";
+            string path = Path.Combine(RuntimeVars.Instance.TempFiles.TempDir, Path.GetRandomFileName() + $"-{FullFileName}");
             File.WriteAllBytes(path, Contents);
-            FileInfo fInfo = new FileInfo(path);
-            fInfo.Attributes = FileAttributes.ReadOnly;
-            return new FileStream(path, FileMode.Open, FileAccess.Read);
+            RuntimeVars.Instance.TempFiles.AddFile(path, false);
+
+            TempPath = path;
+
+            return path;
         }
 
         /// <summary>
@@ -233,8 +245,9 @@ namespace SurveyManager.backend.wrappers
         {
             if (!IsValidFile)
                 return DatabaseError.FileIncomplete;
+            ID = Database.InsertFile(this);
 
-            return Database.InsertFile(this) ? DatabaseError.NoError : DatabaseError.FileInsert;
+            return ID != 0 ? DatabaseError.NoError : DatabaseError.FileInsert;
         }
 
         public DatabaseError Update()

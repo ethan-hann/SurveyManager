@@ -1,7 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend.wrappers;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +62,8 @@ namespace SurveyManager.utility
                 return OpenJob != null;
             }
         }
+
+        public TempFileCollection TempFiles = new TempFileCollection(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
 
         /// <summary>
         /// Get a reference to the main form of the application.

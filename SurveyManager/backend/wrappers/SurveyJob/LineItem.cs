@@ -111,18 +111,19 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public DatabaseError Insert()
         {
-            if (IsValidLineItem)
-                return Database.InsertLineItem(this) ? DatabaseError.NoError : DatabaseError.LineItemInsert;
-            else
+            if (!IsValidLineItem)
                 return DatabaseError.LineItemIncomplete;
+            ID = Database.InsertLineItem(this);
+
+            return ID != 0 ? DatabaseError.NoError : DatabaseError.LineItemInsert;
         }
 
         public DatabaseError Update()
         {
-            if (IsValidLineItem)
-                return Database.UpdateLineItem(this) ? DatabaseError.NoError : DatabaseError.LineItemUpdate;
-            else
+            if (!IsValidLineItem)
                 return DatabaseError.LineItemIncomplete;
+
+            return Database.UpdateLineItem(this) ? DatabaseError.NoError : DatabaseError.LineItemUpdate;
         }
 
         public DatabaseError Delete()

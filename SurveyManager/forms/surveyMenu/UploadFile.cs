@@ -45,10 +45,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void UploadFile_Load(object sender, EventArgs e)
         {
-            Icon = Icon.FromHandle(Resources.file_16x16.GetHicon());
+            Icon = Icon.FromHandle(Resources.attachment.GetHicon());
 
             btnSave.Click += SaveFiles;
-            btnPreview.Click += PreviewFile;
 
             if (filesToAdd.Count > 0)
             {
@@ -171,14 +170,6 @@ namespace SurveyManager.forms.surveyMenu
             }
         }
 
-        private void PreviewFile(object sender, EventArgs e)
-        {
-            if (lbFileNames.SelectedItem != null)
-            {
-                
-            }
-        }
-
         private void lbFileNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbFileNames.SelectedIndex >= 0)
@@ -186,12 +177,10 @@ namespace SurveyManager.forms.surveyMenu
                 propGrid.SelectedObject = (CFile)lbFileNames.Items[lbFileNames.SelectedIndex];
                 picBox.Image = ((CFile)propGrid.SelectedObject).DisplayIcon;
                 picPanel.Visible = true;
-                seperator.Visible = true;
             }
             else
             {
                 picPanel.Visible = false;
-                seperator.Visible = false;
             }
                 
         }
@@ -221,11 +210,6 @@ namespace SurveyManager.forms.surveyMenu
                 progressBar.Value = 0;
                 tblProgress.Visible = false;
             }
-        }
-
-        public List<CFile> GetFiles()
-        {
-            return lbFileNames.Items.Cast<CFile>().ToList();
         }
     }
 }

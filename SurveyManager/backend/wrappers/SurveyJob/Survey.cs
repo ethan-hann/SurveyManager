@@ -39,8 +39,15 @@ namespace SurveyManager.backend.wrappers
         [Description("The abstract number where this survey job is located.")]
         [Browsable(true)]
         [ReadOnly(true)]
-        [DisplayName("Survey Abstract")]
+        [DisplayName("Abstract")]
         public string AbstractNumber { get; set; } = "N/A";
+
+        [Category("Survey Information")]
+        [Description("The survey this job is located in.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Survey")]
+        public string SurveyName { get; set; } = "N/A";
 
         [Category("Subdivision")]
         [Description("The subdivision, if any, this survey job is located. If a subdivision is specified, the lot number, block number, and section number should also be specified.")]
@@ -349,13 +356,39 @@ namespace SurveyManager.backend.wrappers
         }
 
         /// <summary>
-        /// Adds the files to the associated file list.
+        /// Adds the files to the associated file list if they are not already present.
         /// </summary>
         /// <param name="files">The files to add.</param>
         public void AddFiles(ICollection<CFile> files)
         {
-            Files.AddRange(files);
+            foreach (CFile file in files)
+            {
+                if (!Files.Contains(file))
+                    Files.Add(file);
+            }
         }
+
+        /// <summary>
+        /// Overwrites the files list to be the specified files instead.
+        /// </summary>
+        /// <param name="files">The files to set as the new <see cref="Files"/> list.</param>
+        public void SetFiles(ICollection<CFile> files)
+        {
+            Files = files.ToList();
+            FileIds = "";
+        }
+
+        //private void SetFileIds()
+        //{
+        //    FileIds = "";
+        //    foreach (CFile file in Files)
+        //    {
+        //        if (file.ID != 0)
+        //            AddFileId(file.ID);
+        //        else
+                    
+        //    }
+        //}
 
         /// <summary>
         /// Remove a file, if it exists, from the associated file list.
@@ -651,10 +684,7 @@ namespace SurveyManager.backend.wrappers
                 DatabaseError fileError = file.Update();
                 if (fileError == DatabaseError.FileUpdate)
                     return fileError;
-                if (file.ID == 0)
-                    AddFileId(Database.GetLastRowIDInserted("File"));
-                else
-                    AddFileId(file.ID);
+                AddFileId(file.ID);
             }
             #endregion
             #region County Insert
@@ -668,10 +698,7 @@ namespace SurveyManager.backend.wrappers
                 DatabaseError itemError = item.Update();
                 if (itemError == DatabaseError.LineItemUpdate)
                     return itemError;
-                if (item.ID == 0)
-                    AddLineItemID(Database.GetLastRowIDInserted("LineItem"));
-                else
-                    AddLineItemID(item.ID);
+                AddLineItemID(item.ID);
             }
             #endregion
 

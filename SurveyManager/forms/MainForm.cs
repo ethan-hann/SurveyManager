@@ -7,6 +7,7 @@ using SurveyManager.backend.wrappers;
 using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
+using SurveyManager.forms.fileMenu;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
 using SurveyManager.forms.userControls;
@@ -20,6 +21,7 @@ using System.Data;
 using System.Deployment.Application;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -82,6 +84,8 @@ namespace SurveyManager
             {
                 RuntimeVars.Instance.Counties = Database.GetCounties();
             }
+
+            Directory.CreateDirectory(RuntimeVars.Instance.TempFiles.TempDir);
         }
 
         private void InitializeRibbon()
@@ -596,8 +600,15 @@ namespace SurveyManager
                 return;
             }
 
-            SaveJob();
-            ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
+            if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
+            {
+                CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
+
+            ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
+            progressBar.Visible = true;
+            saveDataBackgroundWorker.RunWorkerAsync();
         }
 
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
@@ -619,41 +630,56 @@ namespace SurveyManager
             {
                 case DialogResult.Yes:
                 {
-                    SaveJob();
-                    CloseJob();
+                    if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
+                    {
+                        CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
+                        break;
+                    }
+                    ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
+                    progressBar.Visible = true;
+                    saveDataBackgroundWorker.RunWorkerAsync();
                     break;
                 }
                 case DialogResult.No:
                     CloseJob();
                     break;
                 case DialogResult.Cancel:
-                    ChangeStatusText(this, new StatusArgs("Closing of job " + RuntimeVars.Instance.OpenJob.JobNumber + " cancelled."));
+                    ChangeStatusText(this, new StatusArgs("Closing of job " + RuntimeVars.Instance.OpenJob.JobNumber + " canceled."));
                     break;
             }
         }
 
-        private bool SaveJob()
+        DatabaseError surveyError;
+        private void saveDataBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
-            {
-                CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            DatabaseError surveyError;
             if (RuntimeVars.Instance.OpenJob.ID == 0)
                 surveyError = RuntimeVars.Instance.OpenJob.Insert();
             else
                 surveyError = RuntimeVars.Instance.OpenJob.Update();
 
+            if (surveyError == DatabaseError.NoError)
+            {
+                RuntimeVars.Instance.OpenJob.SavePending = false;
+            }
+        }
+
+        private void saveDataBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void saveDataBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             if (surveyError != DatabaseError.NoError)
             {
+                RuntimeVars.Instance.OpenJob.SavePending = false;
                 CMessageBox.Show("Something went wrong while trying to save the job. Check the information and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
+                ChangeStatusText(this, new StatusArgs("Saving of Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " failed!"));
+                return;
             }
 
-            RuntimeVars.Instance.OpenJob.SavePending = false;
-            return true;
+            progressBar.Visible = false;
+            ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
         }
 
         private void CloseJob()
@@ -677,8 +703,18 @@ namespace SurveyManager
                 return;
             }
 
-            CFile file = RuntimeVars.Instance.OpenJob.Files[2];
-            Process.Start(file.GetTempFile().Name);
+            UploadFile uploadForm = new UploadFile(RuntimeVars.Instance.OpenJob.Files);
+            uploadForm.FileUploadDone += AddFiles;
+            uploadForm.StatusUpdate += ChangeStatusText;
+            uploadForm.Show();
+        }
+
+        private void AddFiles(object sender, EventArgs e)
+        {
+            if (e is FileUploadDoneArgs args)
+            {
+                RuntimeVars.Instance.OpenJob.SetFiles(args.Files);
+            }
         }
 
         private void btnViewAllFiles_Click(object sender, EventArgs e)
@@ -688,6 +724,10 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view files of."));
                 return;
             }
+
+            FileBrowser fb = new FileBrowser(RuntimeVars.Instance.OpenJob.Files);
+            fb.StatusUpdate += ChangeStatusText;
+            fb.Show();
         }
 
         private void btnBillingRates_Click(object sender, EventArgs e)

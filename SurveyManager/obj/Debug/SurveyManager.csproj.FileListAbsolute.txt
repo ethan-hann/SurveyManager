@@ -56,3 +56,4 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\Standa
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.ViewPanel.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.SurveySearchResults.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.NotesCtl.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.fileMenu.FileBrowser.resources

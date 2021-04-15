@@ -35,7 +35,6 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveSelected = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.seperator = new ComponentFactory.Krypton.Toolkit.KryptonSeparator();
             this.picPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.propGrid = new System.Windows.Forms.PropertyGrid();
@@ -49,7 +48,6 @@ namespace SurveyManager.forms.surveyMenu
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seperator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPanel)).BeginInit();
             this.picPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
@@ -81,7 +79,6 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Controls.Add(this.btnRemoveSelected);
             this.flowLayoutPanel1.Controls.Add(this.btnAddFile);
-            this.flowLayoutPanel1.Controls.Add(this.seperator);
             this.flowLayoutPanel1.Controls.Add(this.picPanel);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
@@ -110,20 +107,10 @@ namespace SurveyManager.forms.surveyMenu
             this.btnAddFile.Values.Text = "Add File(s)...";
             this.btnAddFile.Click += new System.EventHandler(this.btnAddFile_Click);
             // 
-            // seperator
-            // 
-            this.seperator.AllowMove = false;
-            this.seperator.Enabled = false;
-            this.seperator.Location = new System.Drawing.Point(59, 3);
-            this.seperator.Name = "seperator";
-            this.seperator.Size = new System.Drawing.Size(10, 31);
-            this.seperator.TabIndex = 3;
-            this.seperator.Visible = false;
-            // 
             // picPanel
             // 
             this.picPanel.Controls.Add(this.picBox);
-            this.picPanel.Location = new System.Drawing.Point(21, 3);
+            this.picPanel.Location = new System.Drawing.Point(37, 3);
             this.picPanel.Name = "picPanel";
             this.picPanel.Size = new System.Drawing.Size(32, 32);
             this.picPanel.TabIndex = 2;
@@ -154,7 +141,9 @@ namespace SurveyManager.forms.surveyMenu
             this.btnSave.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.NavigatorStack;
             this.btnSave.Text = "Save and Close";
             this.btnSave.ToolTipBody = "Saves the files and closes this dialog.";
+            this.btnSave.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.btnSave.ToolTipTitle = "Save";
+            this.btnSave.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnSave.UniqueName = "11B6C9518DC647896F9EB159CBE849FD";
             // 
             // fileDialog
@@ -209,7 +198,10 @@ namespace SurveyManager.forms.surveyMenu
             // btnPreview
             // 
             this.btnPreview.Image = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnPreview.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.btnPreview.Text = "Preview...";
+            this.btnPreview.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
+            this.btnPreview.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnPreview.UniqueName = "9375A9B752B1440D459DA3AD6C2A3260";
             this.btnPreview.Visible = false;
             // 
@@ -227,13 +219,12 @@ namespace SurveyManager.forms.surveyMenu
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UploadFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Upload Files";
+            this.Text = "Manage Files";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UploadFile_FormClosing);
             this.Load += new System.EventHandler(this.UploadFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.seperator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPanel)).EndInit();
             this.picPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
@@ -258,7 +249,6 @@ namespace SurveyManager.forms.surveyMenu
         private ComponentFactory.Krypton.Toolkit.KryptonPanel picPanel;
         private System.Windows.Forms.TableLayoutPanel tblProgress;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelLoading;
-        private ComponentFactory.Krypton.Toolkit.KryptonSeparator seperator;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnPreview;
     }
 }
