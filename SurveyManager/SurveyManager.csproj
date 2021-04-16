@@ -221,11 +221,23 @@
     <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.Designer.cs">
       <DependentUpon>JobInfoCtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.Designer.cs">
+      <DependentUpon>LocationCtl.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\NotesCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
       <DependentUpon>NotesCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.Designer.cs">
+      <DependentUpon>SubdivisionCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
       <SubType>Form</SubType>
@@ -238,12 +250,6 @@
     </Compile>
     <Compile Include="forms\surveyMenu\UploadFile.Designer.cs">
       <DependentUpon>UploadFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\surveyMenu\UploadFileCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="forms\surveyMenu\UploadFileCtl.Designer.cs">
-      <DependentUpon>UploadFileCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\ViewPanel.cs">
       <SubType>UserControl</SubType>
@@ -328,17 +334,20 @@
     <EmbeddedResource Include="forms\surveyMenu\jobInfo\JobInfoCtl.resx">
       <DependentUpon>JobInfoCtl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\locationInfo\LocationCtl.resx">
+      <DependentUpon>LocationCtl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
       <DependentUpon>NotesCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.resx">
+      <DependentUpon>SubdivisionCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">
       <DependentUpon>SurveySearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
       <DependentUpon>UploadFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\UploadFileCtl.resx">
-      <DependentUpon>UploadFileCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\ViewPanel.resx">
       <DependentUpon>ViewPanel.cs</DependentUpon>
@@ -688,9 +697,6 @@
   <ItemGroup>
     <None Include="Resources\folder.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="forms\surveyMenu\locationInfo\" />
-    <Folder Include="forms\surveyMenu\subdivisionInfo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

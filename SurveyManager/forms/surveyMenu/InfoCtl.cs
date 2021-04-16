@@ -1,5 +1,7 @@
 ﻿using SurveyManager.forms.surveyMenu.description;
 using SurveyManager.forms.surveyMenu.jobInfo;
+using SurveyManager.forms.surveyMenu.locationInfo;
+using SurveyManager.forms.surveyMenu.subdivisionInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +18,7 @@ namespace SurveyManager.forms.surveyMenu
     {
         private readonly List<UserControl> infoControls = new List<UserControl>
         {
-            new EssentialInformationCtl(), new DescriptionCtl()
+            new EssentialInformationCtl(), new DescriptionCtl(), new SubdivisionCtl(), new LocationCtl()
         };
 
         public InfoCtl()

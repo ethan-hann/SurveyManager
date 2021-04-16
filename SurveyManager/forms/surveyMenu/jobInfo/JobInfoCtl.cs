@@ -1,4 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using SurveyManager.forms.dialogs;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ using System.Windows.Forms;
 
 namespace SurveyManager.forms.surveyMenu.jobInfo
 {
-    public partial class EssentialInformationCtl : UserControl
+    public partial class EssentialInformationCtl : UserControl, IInfoControl
     {
         public EssentialInformationCtl()
         {
@@ -56,7 +58,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             char decimalSeparator = Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
             if (e.KeyChar == decimalSeparator) // If the decimal separator key is pressed
             {
-                // When the whore number is selected and contains decimal separator
+                // When the whole number is selected and contains decimal separator
                 // allow to enter decimal separator
                 if ((txtNumOfAcres.SelectionLength > 0) && txtNumOfAcres.Text.Contains(decimalSeparator))
                 {
@@ -81,6 +83,39 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             {
                 e.Handled = true; // Cancel the key press
             }
+        }
+
+        public bool SaveInfo()
+        {
+            if (txtJobNumber.Text.Length == 0)
+            {
+                CMessageBox.Show("The job number cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            if (txtAbstract.Text.Length == 0)
+            {
+                CMessageBox.Show("The abstract cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            if (txtSurvey.Text.Length == 0)
+            {
+                CMessageBox.Show("The survey name cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            if (txtNumOfAcres.Text.Length == 0)
+            {
+                CMessageBox.Show("The number of acres cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            RuntimeVars.Instance.OpenJob.JobNumber = txtJobNumber.Text;
+            RuntimeVars.Instance.OpenJob.AbstractNumber = txtAbstract.Text;
+            RuntimeVars.Instance.OpenJob.SurveyName = txtSurvey.Text;
+            RuntimeVars.Instance.OpenJob.Acres = double.Parse(txtNumOfAcres.Text);
+            return true;
         }
     }
 }

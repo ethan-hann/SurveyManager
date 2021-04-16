@@ -55,7 +55,7 @@ namespace SurveyManager.forms.surveyMenu
                 lbFileNames.Items.AddRange(filesToAdd.ToArray());
             }
 
-            lblFileSize.Text = "Total File Size: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
+            lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
         }
 
         private void btnAddFile_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace SurveyManager.forms.surveyMenu
         private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             lbFileNames.Items.AddRange(filesToAdd.ToArray());
-            lblFileSize.Text = "Total File Size: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
+            lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
 
             if (bldr.Length != 0)
                 CRichMsgBox.Show("The following files were to big to be added to the database:", "Files to big",
@@ -144,7 +144,7 @@ namespace SurveyManager.forms.surveyMenu
                     lbFileNames.Items.RemoveAt(idx);
                 }
 
-                lblFileSize.Text = "Total File Size: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
+                lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
                 StatusUpdate?.Invoke(this, new StatusArgs($"Removed {count} files from pending upload."));
                 Application.DoEvents();
 

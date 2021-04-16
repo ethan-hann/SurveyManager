@@ -150,9 +150,7 @@ namespace SurveyManager.forms.surveyMenu
             this.btnSave.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.NavigatorStack;
             this.btnSave.Text = "Save and Close";
             this.btnSave.ToolTipBody = "Saves the files and closes this dialog.";
-            this.btnSave.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.btnSave.ToolTipTitle = "Save";
-            this.btnSave.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnSave.UniqueName = "11B6C9518DC647896F9EB159CBE849FD";
             // 
             // fileDialog
@@ -207,10 +205,7 @@ namespace SurveyManager.forms.surveyMenu
             // btnPreview
             // 
             this.btnPreview.Image = global::SurveyManager.Properties.Resources.view_16x16;
-            this.btnPreview.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.btnPreview.Text = "Preview...";
-            this.btnPreview.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.btnPreview.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnPreview.UniqueName = "9375A9B752B1440D459DA3AD6C2A3260";
             this.btnPreview.Visible = false;
             // 
@@ -222,20 +217,21 @@ namespace SurveyManager.forms.surveyMenu
             this.statusStrip1.Location = new System.Drawing.Point(0, 476);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(844, 22);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(750, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(685, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // lblFileSize
             // 
             this.lblFileSize.Name = "lblFileSize";
-            this.lblFileSize.Size = new System.Drawing.Size(79, 17);
-            this.lblFileSize.Text = "Total File Size:";
+            this.lblFileSize.Size = new System.Drawing.Size(144, 17);
+            this.lblFileSize.Text = "Total File Size For This Job:";
             // 
             // splitContainer1
             // 
