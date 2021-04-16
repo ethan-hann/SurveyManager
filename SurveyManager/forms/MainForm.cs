@@ -560,6 +560,30 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no information to change."));
                 return;
             }
+
+            KryptonPage basicInfoPage = new KryptonPage
+            {
+                Text = "Job Information",
+                TextTitle = "Job Information",
+                UniqueName = "Job Information",
+                ImageSmall = Resources.instrument_16x16,
+                ImageMedium = Resources.instrument_24x24,
+                ImageLarge = Resources.instrument
+            };
+            basicInfoPage.Controls.Add(new InfoCtl()
+            {
+                Dock = DockStyle.Fill
+            });
+
+            if (!dockingManager.ContainsPage(basicInfoPage))
+            {
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { basicInfoPage });
+            }
+            else
+            {
+                dockingManager.RemovePage(basicInfoPage, true);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { basicInfoPage });
+            }
         }
 
         private void btnOpenViewPanel_Click(object sender, EventArgs e)
@@ -574,7 +598,9 @@ namespace SurveyManager
             {
                 Text = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
                 TextTitle = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
-                UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info"
+                UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
+                ImageSmall = Resources.view_16x16,
+                ImageLarge = Resources.view
             };
             viewPanel.Controls.Add(new ViewPanel()
             {
@@ -692,8 +718,6 @@ namespace SurveyManager
 
             RuntimeVars.Instance.OpenJob = null;
         }
-
-        //TODO: WORK ON FILES NEXT!
 
         private void btnAddNewFile_Click(object sender, EventArgs e)
         {
@@ -823,7 +847,9 @@ namespace SurveyManager
             {
                 Text = "Notes",
                 TextTitle = "Notes",
-                UniqueName = "Notes"
+                UniqueName = "Notes",
+                ImageSmall = Resources.notes_16x16,
+                ImageLarge = Resources.notes
             };
             notesPanel.Controls.Add(new NotesCtl(RuntimeVars.Instance.OpenJob.Notes)
             {

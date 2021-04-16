@@ -197,6 +197,30 @@
     </Compile>
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
+    <Compile Include="forms\surveyMenu\BasicInfoCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\BasicInfoCtl.Designer.cs">
+      <DependentUpon>BasicInfoCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\description\DescriptionCtl.Designer.cs">
+      <DependentUpon>DescriptionCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\InfoCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\InfoCtl.Designer.cs">
+      <DependentUpon>InfoCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.Designer.cs">
+      <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\NotesCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,6 +315,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\BasicInfoCtl.resx">
+      <DependentUpon>BasicInfoCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\description\DescriptionCtl.resx">
+      <DependentUpon>DescriptionCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\InfoCtl.resx">
+      <DependentUpon>InfoCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\jobInfo\JobInfoCtl.resx">
+      <DependentUpon>JobInfoCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
       <DependentUpon>NotesCtl.cs</DependentUpon>
@@ -651,6 +687,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="forms\surveyMenu\locationInfo\" />
+    <Folder Include="forms\surveyMenu\subdivisionInfo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
