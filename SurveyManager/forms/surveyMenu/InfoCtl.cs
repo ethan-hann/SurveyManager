@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.surveyMenu
 {
@@ -20,6 +21,8 @@ namespace SurveyManager.forms.surveyMenu
         {
             new EssentialInformationCtl(), new DescriptionCtl(), new SubdivisionCtl(), new LocationCtl()
         };
+
+        public EventHandler StatusUpdate;
 
         public InfoCtl()
         {
@@ -43,6 +46,28 @@ namespace SurveyManager.forms.surveyMenu
             {
                 ctl.Dock = DockStyle.Fill;
                 splitContainer1.Panel2.Controls.Add(ctl);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bool saveSuccess = true;
+            foreach (IInfoControl ctl in infoControls)
+            {
+                if (!ctl.SaveInfo())
+                {
+                    saveSuccess = false;
+                    break;
+                }
+            }
+
+            if (saveSuccess)
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("Job information successfully updated."));
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's information. Please try again."));
             }
         }
     }

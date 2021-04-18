@@ -301,11 +301,7 @@ namespace SurveyManager.backend.wrappers
                 };
                 dbThread.Start();
             }
-            if (LocationID == Client.ClientAddress.ID)
-            {
-                Location = Client.ClientAddress;
-            }
-            else if (LocationID != 0)
+            if (LocationID != 0)
             {
                 Thread dbThread = new Thread(() =>
                 {
@@ -657,12 +653,6 @@ namespace SurveyManager.backend.wrappers
             #endregion
             #region Location Insert/Update
             {
-                if (Location.Equals(Client.ClientAddress))
-                {
-                    Location.ID = Client.ClientAddress.ID;
-                    LocationID = Client.AddressID;
-                }
-
                 if (Location.ID == 0)
                 {
                     DatabaseError locationError = Location.Insert();

@@ -17,8 +17,6 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 {
     public partial class LocationCtl : UserControl, IInfoControl
     {
-        private bool setToClientAddress = false;
-
         public LocationCtl()
         {
             InitializeComponent();
@@ -31,7 +29,11 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             txtStreet.Text = RuntimeVars.Instance.OpenJob.Location.Street;
             txtCity.Text = RuntimeVars.Instance.OpenJob.Location.City;
             txtZipCode.Text = RuntimeVars.Instance.OpenJob.Location.ZipCode;
-            cmbCounty.SelectedItem = RuntimeVars.Instance.OpenJob.County;
+
+            if (RuntimeVars.Instance.OpenJob.County.CountyName.Equals(""))
+                cmbCounty.SelectedIndex = 0;
+            else
+                cmbCounty.SelectedItem = RuntimeVars.Instance.OpenJob.County;
         }
 
         private void textBox_Enter(object sender, EventArgs e)
@@ -67,8 +69,6 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                 txtStreet.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.Street;
                 txtCity.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.City;
                 txtZipCode.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.ZipCode;
-
-                setToClientAddress = true;
             }
             else
             {
@@ -93,12 +93,21 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         public bool SaveInfo()
         {
-            
-        }
+            if ((txtStreet.Text.Length > 0 && !txtStreet.Text.Equals("N/A")) && 
+                (txtCity.Text.Length > 0 && !txtCity.Text.Equals("N/A")) && 
+                (txtZipCode.Text.Length > 0))
+            {
+                RuntimeVars.Instance.OpenJob.Location.Street = txtStreet.Text;
+                RuntimeVars.Instance.OpenJob.Location.City = txtCity.Text;
+                RuntimeVars.Instance.OpenJob.Location.ZipCode = txtZipCode.Text;
 
-        private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            setToClientAddress = false;
+                return true;
+            }
+            else
+            {
+                CMessageBox.Show("The job's location cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
         }
     }
 }

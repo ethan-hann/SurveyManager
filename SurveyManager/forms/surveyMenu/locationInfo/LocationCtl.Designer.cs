@@ -65,7 +65,6 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.txtStreet.Size = new System.Drawing.Size(248, 23);
             this.txtStreet.TabIndex = 1;
             this.txtStreet.Enter += new System.EventHandler(this.textBox_Enter);
-            this.txtStreet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             this.txtStreet.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel1
@@ -93,7 +92,6 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.txtCity.Size = new System.Drawing.Size(107, 23);
             this.txtCity.TabIndex = 1;
             this.txtCity.Enter += new System.EventHandler(this.textBox_Enter);
-            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             this.txtCity.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel2
@@ -122,7 +120,7 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.txtZipCode.Size = new System.Drawing.Size(78, 23);
             this.txtZipCode.TabIndex = 1;
             this.txtZipCode.Enter += new System.EventHandler(this.textBox_Enter);
-            this.txtZipCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
+            this.txtZipCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZipCode_KeyPress);
             this.txtZipCode.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel3

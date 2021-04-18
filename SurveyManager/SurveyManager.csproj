@@ -197,18 +197,13 @@
     </Compile>
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
-    <Compile Include="forms\surveyMenu\BasicInfoCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="forms\surveyMenu\BasicInfoCtl.Designer.cs">
-      <DependentUpon>BasicInfoCtl.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="forms\surveyMenu\description\DescriptionCtl.Designer.cs">
       <DependentUpon>DescriptionCtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\surveyMenu\IInfoControl.cs" />
     <Compile Include="forms\surveyMenu\InfoCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,9 +316,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\BasicInfoCtl.resx">
-      <DependentUpon>BasicInfoCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\description\DescriptionCtl.resx">
       <DependentUpon>DescriptionCtl.cs</DependentUpon>

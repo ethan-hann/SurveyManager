@@ -98,6 +98,7 @@ namespace SurveyManager.forms.surveyMenu
             this.btnSave.ToolTipBody = "Saves any changes made to the job locally. Does not save to the database.";
             this.btnSave.ToolTipTitle = "Save";
             this.btnSave.UniqueName = "25B626E46B0843EC048DFE736A3DDAA4";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // InfoCtl
             // 

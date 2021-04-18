@@ -570,10 +570,13 @@ namespace SurveyManager
                 ImageMedium = Resources.instrument_24x24,
                 ImageLarge = Resources.instrument
             };
-            basicInfoPage.Controls.Add(new InfoCtl()
+            InfoCtl ctl = new InfoCtl()
             {
                 Dock = DockStyle.Fill
-            });
+            };
+            ctl.StatusUpdate += ChangeStatusText;
+
+            basicInfoPage.Controls.Add(ctl);
 
             if (!dockingManager.ContainsPage(basicInfoPage))
             {
