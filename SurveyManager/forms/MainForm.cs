@@ -303,7 +303,7 @@ namespace SurveyManager
 
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients");
+            KryptonPage page = new ViewPage(EntityTypes.Client, "Clients");
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
@@ -550,7 +550,9 @@ namespace SurveyManager
 
         private void btnViewAllJobs_Click(object sender, EventArgs e)
         {
-
+            KryptonPage page = new ViewPage(EntityTypes.Survey, "Surveys");
+            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
 
         private void btnBasicInfo_Click(object sender, EventArgs e)

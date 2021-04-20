@@ -72,6 +72,8 @@ namespace SurveyManager
             this.btnAssocRealtor = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnAssocTitleComp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
+            this.kryptonRibbonGroupTriple13 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnAddNote = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.surMangRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnOpenHelp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -106,8 +108,6 @@ namespace SurveyManager
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
             this.saveDataBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.kryptonRibbonGroupTriple13 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnAddNote = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -187,6 +187,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
+            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
             this.mainRibbon.TabIndex = 4;
@@ -459,6 +460,20 @@ namespace SurveyManager
             this.btnAssocTitleComp.ToolTipTitle = "Associations";
             this.btnAssocTitleComp.Click += new System.EventHandler(this.btnAssocTitleComp_Click);
             // 
+            // kryptonRibbonGroupTriple13
+            // 
+            this.kryptonRibbonGroupTriple13.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnAddNote});
+            // 
+            // btnAddNote
+            // 
+            this.btnAddNote.ImageLarge = global::SurveyManager.Properties.Resources.notes;
+            this.btnAddNote.ImageSmall = global::SurveyManager.Properties.Resources.notes_16x16;
+            this.btnAddNote.TextLine1 = "Notes";
+            this.btnAddNote.ToolTipBody = "View/Update any notes for this survey job.";
+            this.btnAddNote.ToolTipTitle = "Associations";
+            this.btnAddNote.Click += new System.EventHandler(this.btnNotes_Click);
+            // 
             // surMangRibbonGroup
             // 
             this.surMangRibbonGroup.DialogBoxLauncher = false;
@@ -712,20 +727,6 @@ namespace SurveyManager
             this.saveDataBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.saveDataBackgroundWorker_DoWork);
             this.saveDataBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.saveDataBackgroundWorker_ProgressChanged);
             this.saveDataBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.saveDataBackgroundWorker_RunWorkerCompleted);
-            // 
-            // kryptonRibbonGroupTriple13
-            // 
-            this.kryptonRibbonGroupTriple13.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnAddNote});
-            // 
-            // btnAddNote
-            // 
-            this.btnAddNote.ImageLarge = global::SurveyManager.Properties.Resources.notes;
-            this.btnAddNote.ImageSmall = global::SurveyManager.Properties.Resources.notes_16x16;
-            this.btnAddNote.TextLine1 = "Notes";
-            this.btnAddNote.ToolTipBody = "View/Update any notes for this survey job.";
-            this.btnAddNote.ToolTipTitle = "Associations";
-            this.btnAddNote.Click += new System.EventHandler(this.btnNotes_Click);
             // 
             // MainForm
             // 
