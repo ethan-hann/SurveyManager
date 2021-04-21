@@ -63,3 +63,4 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Survey
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.SearchResults.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.SaveMessageForm.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.RatesDialog.resources

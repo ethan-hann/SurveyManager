@@ -201,7 +201,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedTab = this.databaseTab;
+            this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
             this.mainRibbon.TabIndex = 4;
             // 
@@ -385,7 +385,7 @@ namespace SurveyManager
             this.btnFieldTime.ImageSmall = global::SurveyManager.Properties.Resources.surveying_16x16;
             this.btnFieldTime.TextLine1 = "Field";
             this.btnFieldTime.TextLine2 = "Time";
-            this.btnFieldTime.ToolTipBody = "Add a new time entry for time spent in the field.";
+            this.btnFieldTime.ToolTipBody = "Add/Remove time spent in the field.";
             this.btnFieldTime.ToolTipTitle = "Billing";
             this.btnFieldTime.Click += new System.EventHandler(this.btnFieldTime_Click);
             // 
@@ -395,7 +395,7 @@ namespace SurveyManager
             this.btnOfficeTime.ImageSmall = global::SurveyManager.Properties.Resources.time_16x16;
             this.btnOfficeTime.TextLine1 = "Office";
             this.btnOfficeTime.TextLine2 = "Time";
-            this.btnOfficeTime.ToolTipBody = "Add a new time entry for time spent in the office.";
+            this.btnOfficeTime.ToolTipBody = "Add/Remove time spent in the office.";
             this.btnOfficeTime.ToolTipTitle = "Billing";
             this.btnOfficeTime.Click += new System.EventHandler(this.btnOfficeTime_Click);
             // 

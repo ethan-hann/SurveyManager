@@ -1019,7 +1019,9 @@ namespace SurveyManager
                 return;
             }
 
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            RatesDialog rDialog = new RatesDialog();
+            rDialog.StatusUpdate += ChangeStatusText;
+            rDialog.Show();
         }
 
         private void btnFieldTime_Click(object sender, EventArgs e)
