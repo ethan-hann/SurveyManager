@@ -2,6 +2,7 @@
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
+using ComponentFactory.Krypton.Workspace;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms;
@@ -50,6 +51,8 @@ namespace SurveyManager
                 Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
 
             InitializeRibbon();
+
+            mainRibbon.SelectedTab = surveyTab;
 
             DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
             dockingManager.ManageControl("Control", kryptonPanel1, DockingWorkspace);
@@ -128,6 +131,23 @@ namespace SurveyManager
             aboutBtn.Click += aboutBtn_Click;
             checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
             exitBtn.Click += exitBtn_Click;
+
+            //Context Menu Actions
+            //Survey Associate Client -> search for client
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[0]).Click += btnAssocClient_Click;
+            //Survey Associate Client -> create new client
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[1]).Click += CreateNewClient;
+        }
+
+        private void CreateNewClient(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a client to."));
+                return;
+            }
+
+            newClientBtn_Click(sender, e);
         }
 
         private void UpdateRecentDocs()
@@ -153,8 +173,21 @@ namespace SurveyManager
             if (sender is KryptonRibbonRecentDoc recentDoc)
             {
                 RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
-                ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
-                AddTitleText("[JOB# " + recentDoc.Text + "]");
+                if (RuntimeVars.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
+                    AddTitleText("[JOB# " + recentDoc.Text + "]");
+                }
+                else
+                {
+                    ChangeStatusText(this, new StatusArgs("The selected job no longer exists! Maybe it was deleted? Removing from recent jobs..."));
+                    if (Settings.Default.RecentJobs.Contains(recentDoc.Text))
+                    {
+                        Settings.Default.RecentJobs.Remove(recentDoc.Text);
+                        Settings.Default.Save();
+                        UpdateRecentDocs();
+                    }
+                }
             }
         }
 
@@ -296,7 +329,7 @@ namespace SurveyManager
 
         private void newClientBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Client);
+            KryptonPage page = new NewPage(EntityTypes.Client);
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
@@ -328,7 +361,7 @@ namespace SurveyManager
 
         private void newRealtorBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Realtor);
+            KryptonPage page = new NewPage(EntityTypes.Realtor);
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
         }
@@ -706,11 +739,13 @@ namespace SurveyManager
                 RuntimeVars.Instance.OpenJob.SavePending = false;
                 CMessageBox.Show("Something went wrong while trying to save the job. Check the information and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 ChangeStatusText(this, new StatusArgs("Saving of Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " failed!"));
+                progressBar.Visible = false;
                 return;
             }
 
             progressBar.Visible = false;
             ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
+            AddSurveyToRecentJobs(this, new SurveyOpenedEventArgs(RuntimeVars.Instance.OpenJob));
         }
 
         private void CloseJob()
@@ -811,6 +846,37 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Client to."));
                 return;
             }
+
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("phone_number", "Phone #"),
+                new DBMap("email_address", "Email"),
+                new DBMap("fax_number", "Fax #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
+            filter.FilterDone += SelectClient;
+            filter.Show();
+        }
+
+        private void SelectClient(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.Client);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateClient;
+                resultsForm.Show();
+            }
+        }
+
+        private void AssociateClient(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                RuntimeVars.Instance.OpenJob.Client = args.Object as Client;
+            }
         }
 
         private void btnAssocRealtor_Click(object sender, EventArgs e)
@@ -819,6 +885,37 @@ namespace SurveyManager
             {
                 ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Realtor to."));
                 return;
+            }
+
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("phone_number", "Phone #"),
+                new DBMap("email_address", "Email"),
+                new DBMap("fax_number", "Fax #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
+            filter.FilterDone += SelectRealtor;
+            filter.Show();
+        }
+
+        private void SelectRealtor(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.Realtor);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateRealtor;
+                resultsForm.Show();
+            }
+        }
+
+        private void AssociateRealtor(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                RuntimeVars.Instance.OpenJob.Realtor = args.Object as Realtor;
             }
         }
 
@@ -872,5 +969,24 @@ namespace SurveyManager
             }
         }
         #endregion
+
+        #region Drop Down Context Menus
+        private void btnAssocClient_DropDown(object sender, ContextMenuArgs e)
+        {
+            surveyClientContextMenu.Show(this);
+        }
+        #endregion
+
+        private void dockingManager_DockableWorkspaceCellAdding(object sender, DockableWorkspaceCellEventArgs e)
+        {
+            KryptonWorkspaceCell currentCell = e.CellControl;
+
+            currentCell.Bar.ItemAlignment = RelativePositionAlign.Center;
+            currentCell.Bar.TabStyle = TabStyle.OneNote;
+            currentCell.Bar.TabBorderStyle = TabBorderStyle.OneNote;
+            currentCell.NavigatorMode = NavigatorMode.BarTabGroup;
+            currentCell.Group.GroupBackStyle = PaletteBackStyle.ButtonStandalone;
+            currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ButtonStandalone;
+        }
     }
 }

@@ -228,6 +228,12 @@
     <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
       <DependentUpon>NotesCtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\surveyMenu\SearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SearchResults.Designer.cs">
+      <DependentUpon>SearchResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
       <DependentUpon>NotesCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\SearchResults.resx">
+      <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.resx">
       <DependentUpon>SubdivisionCtl.cs</DependentUpon>
@@ -689,6 +698,14 @@
   <ItemGroup>
     <None Include="Resources\folder.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend.wrappers;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace SurveyManager.forms.surveyMenu
             propGrid.GetAcceptButton().Click += OpenJob;
 
             lbJobs.DisplayMember = "JobNumber";
+
+            Icon = Icon.FromHandle(Resources.surveying_16x16.GetHicon());
 
             PopulateListBox();
         }

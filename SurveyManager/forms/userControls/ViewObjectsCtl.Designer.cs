@@ -41,11 +41,19 @@ namespace SurveyManager.forms.userControls
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
             this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
+            this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.deleteBgWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
             this.hdrGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
+            this.kryptonSplitContainer1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
+            this.kryptonSplitContainer1.Panel2.SuspendLayout();
+            this.kryptonSplitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // hdrGroup
@@ -54,7 +62,7 @@ namespace SurveyManager.forms.userControls
             this.btnFilter,
             this.btnRefresh,
             this.btnDeleteRow});
-            this.hdrGroup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hdrGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hdrGroup.Location = new System.Drawing.Point(0, 0);
             this.hdrGroup.Name = "hdrGroup";
             // 
@@ -62,7 +70,7 @@ namespace SurveyManager.forms.userControls
             // 
             this.hdrGroup.Panel.Controls.Add(this.dataGrid);
             this.hdrGroup.Panel.Controls.Add(this.groupBox);
-            this.hdrGroup.Size = new System.Drawing.Size(957, 287);
+            this.hdrGroup.Size = new System.Drawing.Size(957, 301);
             this.hdrGroup.TabIndex = 7;
             this.hdrGroup.ValuesPrimary.Heading = "";
             this.hdrGroup.ValuesPrimary.Image = null;
@@ -117,7 +125,7 @@ namespace SurveyManager.forms.userControls
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.PreviousSelectedGroupRow = -1;
             this.dataGrid.ReadOnly = true;
-            this.dataGrid.Size = new System.Drawing.Size(955, 196);
+            this.dataGrid.Size = new System.Drawing.Size(955, 212);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
@@ -160,17 +168,43 @@ namespace SurveyManager.forms.userControls
             // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(0, 287);
+            this.propGrid.Location = new System.Drawing.Point(0, 0);
             this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(957, 321);
+            this.propGrid.Size = new System.Drawing.Size(957, 302);
             this.propGrid.TabIndex = 5;
+            // 
+            // kryptonSplitContainer1
+            // 
+            this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer1.Name = "kryptonSplitContainer1";
+            this.kryptonSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // kryptonSplitContainer1.Panel1
+            // 
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.hdrGroup);
+            // 
+            // kryptonSplitContainer1.Panel2
+            // 
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.propGrid);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(957, 608);
+            this.kryptonSplitContainer1.SplitterDistance = 301;
+            this.kryptonSplitContainer1.TabIndex = 8;
+            // 
+            // deleteBgWorker
+            // 
+            this.deleteBgWorker.WorkerReportsProgress = true;
+            this.deleteBgWorker.WorkerSupportsCancellation = true;
+            this.deleteBgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.deleteBgWorker_DoWork);
+            this.deleteBgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.deleteBgWorker_ProgressChanged);
+            this.deleteBgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.deleteBgWorker_RunWorkerCompleted);
             // 
             // ViewObjectsCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.propGrid);
-            this.Controls.Add(this.hdrGroup);
+            this.Controls.Add(this.kryptonSplitContainer1);
             this.Controls.Add(this.loadProgressBar);
             this.Name = "ViewObjectsCtl";
             this.Size = new System.Drawing.Size(957, 631);
@@ -180,6 +214,12 @@ namespace SurveyManager.forms.userControls
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).EndInit();
             this.hdrGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
+            this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
+            this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
+            this.kryptonSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +236,7 @@ namespace SurveyManager.forms.userControls
         private System.ComponentModel.BackgroundWorker bgWorker;
         private System.Windows.Forms.SaveFileDialog saveDialog;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnDeleteRow;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
+        private System.ComponentModel.BackgroundWorker deleteBgWorker;
     }
 }

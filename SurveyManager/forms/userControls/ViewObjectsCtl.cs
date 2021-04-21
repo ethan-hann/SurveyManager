@@ -130,11 +130,6 @@ namespace SurveyManager.forms.userControls
             bgWorker.RunWorkerAsync();
         }
 
-        private void btnDeleteRow_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             lastFilterResults = null;
@@ -310,6 +305,73 @@ namespace SurveyManager.forms.userControls
             else
             {
                 StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData} loading cancelled."));
+            }
+        }
+
+        DatabaseWrapper objToDelete;
+
+        private void btnDeleteRow_Click(object sender, EventArgs e)
+        {
+            if (dataGrid.SelectedRows.Count == 1)
+            {
+                string confirmText = "The following is what will be deleted based on the type of object the grid is displaying:\n" +
+                "Surveys       ->\tdelete the survey record, all associated files, and all associated billing line items.\n\n" +
+                "Clients       ->\tdelete the client record and the associated address record; can only delete if the client is not referenced anywhere else.\n\n" +
+                "Realtors      ->\tdelete the realtor record only; can only delete if the realtor is not referenced anywhere else.\n\n" +
+                "Title Company ->\tdelete the title company record only; can only delete if the title company is not referenced anywhere else.\n\n";
+                
+                DialogResult confirm = CRichMsgBox.Show("Are you sure you want to delete this record?\nTHIS IS A DESTRUCTIVE OPERATION AND CANNOT BE REVERSED!", "Confirm", confirmText, MessageBoxButtons.YesNo, Resources.warning_64x64);
+                if (confirm == DialogResult.Yes)
+                {
+                    objToDelete = dataGrid.SelectedRows[0].Tag as DatabaseWrapper;
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Attempting to delete {typeOfData} {objToDelete}..."));
+                    loadProgressBar.Value = 0;
+                    loadProgressBar.Visible = true;
+                    deleteBgWorker.RunWorkerAsync();
+                }
+                else
+                {
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Canceled deletion of {typeOfData} {objToDelete}..."));
+                }
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("No row selected; nothing to delete."));
+            }
+        }
+
+        DatabaseError deleteError;
+        private void deleteBgWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            deleteError = objToDelete.Delete();
+            
+        }
+
+        private void deleteBgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            loadProgressBar.Value = e.ProgressPercentage;
+        }
+
+        private void deleteBgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!Disposing && !IsDisposed)
+            {
+                if (deleteError == DatabaseError.NoError)
+                {
+                    LoadData();
+                    return;
+                }
+                else
+                {
+                    CMessageBox.Show("This object can not be deleted. Most likely it is referenced elsewhere or the database connection was interupted.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    loadProgressBar.Visible = false;
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Could not perform deletion on {typeOfData} {objToDelete}."));
+                    return;
+                }
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData} deletion canceled."));
             }
         }
 

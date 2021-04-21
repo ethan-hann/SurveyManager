@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.surveyMenu;
@@ -36,9 +37,6 @@ namespace SurveyManager.forms.userControls
             {
                 switch (entity)
                 {
-                    case EntityTypes.Survey:
-                        obj = new Survey();
-                        break;
                     case EntityTypes.Client:
                         obj = new Client();
                         break;
@@ -56,35 +54,7 @@ namespace SurveyManager.forms.userControls
             propGrid.GetAcceptButton().Visible = true;
             propGrid.GetClearButton().Visible = true;
 
-            if (entity == EntityTypes.Survey)
-            {
-                propGrid.GetUploadFilesButton().Click += UploadFiles;
-                propGrid.GetUploadFilesButton().Visible = true;
-            }
-
             propGrid.SelectedObject = obj;
-        }
-
-        private void UploadFiles(object sender, EventArgs e)
-        {
-            if (entity != EntityTypes.Survey)
-                return;
-
-            UploadFile uploadDialog = new UploadFile((obj as Survey).Files);
-            uploadDialog.StatusUpdate += RuntimeVars.Instance.MainForm.ChangeStatusText;
-            uploadDialog.FileUploadDone += SetFiles;
-
-            uploadDialog.Show();
-        }
-
-        private void SetFiles(object sender, EventArgs e)
-        {
-            if (e is FileUploadDoneArgs args)
-            {
-                (obj as Survey).ClearFiles();
-                (obj as Survey).AddFiles(args.Files);
-                propGrid.SelectedObject = obj;
-            }
         }
 
         private void SaveObject(object sender, EventArgs e)
@@ -93,9 +63,6 @@ namespace SurveyManager.forms.userControls
 
             switch (entity)
             {
-                case EntityTypes.Survey:
-                    SaveSurvey();
-                    break;
                 case EntityTypes.Client:
                     SaveClient();
                     break;
@@ -127,6 +94,16 @@ namespace SurveyManager.forms.userControls
                 case DatabaseError.NoError:
                 {
                     StatusUpdate?.Invoke(this, new StatusArgs($"Title Company {t.Name} created successfully."));
+
+                    if (RuntimeVars.Instance.IsJobOpen)
+                    {
+                        if (CMessageBox.Show("Associate this Title Company with the open job?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
+                        {
+                            t.ID = Database.GetLastRowIDInserted("TitleCompany");
+                            RuntimeVars.Instance.OpenJob.TitleCompany = t;
+                        }
+                    }
+
                     if (CMessageBox.Show("Create another?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
                     {
                         Clear();
@@ -161,6 +138,16 @@ namespace SurveyManager.forms.userControls
                 case DatabaseError.NoError:
                 {
                     StatusUpdate?.Invoke(this, new StatusArgs($"Realtor {r.Name} created successfully."));
+
+                    if (RuntimeVars.Instance.IsJobOpen)
+                    {
+                        if (CMessageBox.Show("Associate this realtor with the open job?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
+                        {
+                            r.ID = Database.GetLastRowIDInserted("Realtor");
+                            RuntimeVars.Instance.OpenJob.Realtor = r;
+                        }
+                    }
+
                     if (CMessageBox.Show("Create another?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
                     {
                         Clear();
@@ -201,43 +188,16 @@ namespace SurveyManager.forms.userControls
                 case DatabaseError.NoError:
                 {
                     StatusUpdate?.Invoke(this, new StatusArgs($"Client {c.Name} created successfully."));
-                    if (CMessageBox.Show("Create another?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
-                    {
-                        Clear();
-                    }
-                    else
-                    {
-                        RuntimeVars.Instance.MainForm.DockingWorkspace.RemovePage(RuntimeVars.Instance.SelectedPageUniqueName, true);
-                    }
-                    break;
-                }
-                default:
-                    CMessageBox.Show("An unknown error has occured. Please try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
-            }
-        }
 
-        private void SaveSurvey()
-        {
-            Survey s = obj as Survey;
-            if (s.Location.IsEmpty)
-                s.Location = s.Client.ClientAddress;
+                    if (RuntimeVars.Instance.IsJobOpen)
+                    {
+                        if (CMessageBox.Show("Associate this client with the open job?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
+                        {
+                            c.ID = Database.GetLastRowIDInserted("Client");
+                            RuntimeVars.Instance.OpenJob.Client = c;
+                        }
+                    }
 
-            DatabaseError surveyError = s.Insert();
-            switch (surveyError)
-            {
-                case DatabaseError.SurveyIncomplete:
-                    CMessageBox.Show("A survey must have a Client, County, Job Number, Description, and Abstract Number associated with it!\nPlease check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
-                case DatabaseError.SurveyInsert:
-                    CMessageBox.Show("Could not create the survey in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
-                case DatabaseError.SurveyUpdate:
-                    CMessageBox.Show("Could not update the survey's information in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
-                case DatabaseError.NoError:
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Survey {s.JobNumber} created successfully."));
                     if (CMessageBox.Show("Create another?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
                     {
                         Clear();

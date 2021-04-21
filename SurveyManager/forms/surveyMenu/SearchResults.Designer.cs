@@ -1,7 +1,7 @@
 ﻿
 namespace SurveyManager.forms.surveyMenu
 {
-    partial class SurveySearchResults
+    partial class SearchResults
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,9 @@ namespace SurveyManager.forms.surveyMenu
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lbJobs = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
-            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.lbObjects = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
+            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -40,23 +40,6 @@ namespace SurveyManager.forms.surveyMenu
             this.kryptonSplitContainer1.Panel2.SuspendLayout();
             this.kryptonSplitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbJobs
-            // 
-            this.lbJobs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbJobs.Location = new System.Drawing.Point(0, 0);
-            this.lbJobs.Name = "lbJobs";
-            this.lbJobs.Size = new System.Drawing.Size(243, 450);
-            this.lbJobs.TabIndex = 0;
-            this.lbJobs.SelectedIndexChanged += new System.EventHandler(this.lbJobs_SelectedIndexChanged);
-            // 
-            // propGrid
-            // 
-            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(0, 0);
-            this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(552, 450);
-            this.propGrid.TabIndex = 1;
             // 
             // kryptonSplitContainer1
             // 
@@ -67,26 +50,42 @@ namespace SurveyManager.forms.surveyMenu
             // 
             // kryptonSplitContainer1.Panel1
             // 
-            this.kryptonSplitContainer1.Panel1.Controls.Add(this.lbJobs);
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.lbObjects);
             // 
             // kryptonSplitContainer1.Panel2
             // 
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.propGrid);
             this.kryptonSplitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.kryptonSplitContainer1.SplitterDistance = 243;
-            this.kryptonSplitContainer1.TabIndex = 2;
+            this.kryptonSplitContainer1.SplitterDistance = 268;
+            this.kryptonSplitContainer1.TabIndex = 3;
             // 
-            // SurveySearchResults
+            // lbObjects
+            // 
+            this.lbObjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbObjects.Location = new System.Drawing.Point(0, 0);
+            this.lbObjects.Name = "lbObjects";
+            this.lbObjects.Size = new System.Drawing.Size(268, 450);
+            this.lbObjects.TabIndex = 0;
+            this.lbObjects.SelectedIndexChanged += new System.EventHandler(this.lbObjects_SelectedIndexChanged);
+            // 
+            // propGrid
+            // 
+            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propGrid.Enabled = false;
+            this.propGrid.Location = new System.Drawing.Point(0, 0);
+            this.propGrid.Name = "propGrid";
+            this.propGrid.Size = new System.Drawing.Size(527, 450);
+            this.propGrid.TabIndex = 1;
+            // 
+            // SearchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.kryptonSplitContainer1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "SurveySearchResults";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Survey Results";
-            this.Load += new System.EventHandler(this.SurveySearchResults_Load);
+            this.Name = "SearchResults";
+            this.Text = "Select";
+            this.Load += new System.EventHandler(this.SearchResults_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
             this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
@@ -99,8 +98,8 @@ namespace SurveyManager.forms.surveyMenu
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonListBox lbJobs;
-        private SurveyManager.utility.CustomControls.CPropertyGrid propGrid;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
+        private ComponentFactory.Krypton.Toolkit.KryptonListBox lbObjects;
+        private utility.CustomControls.CPropertyGrid propGrid;
     }
 }

@@ -69,6 +69,10 @@ namespace SurveyManager
             this.assetsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAssocClient = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.surveyClientContextMenu = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.btnAssocRealtor = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnAssocTitleComp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
@@ -166,7 +170,6 @@ namespace SurveyManager
             // office2013_edited
             // 
             this.office2013_edited.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2013White;
-            this.office2013_edited.BaseRenderMode = ComponentFactory.Krypton.Toolkit.RendererMode.Professional;
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripFont = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripText = System.Drawing.Color.Black;
@@ -187,7 +190,6 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
             this.mainRibbon.TabIndex = 4;
@@ -434,19 +436,42 @@ namespace SurveyManager
             // 
             // btnAssocClient
             // 
+            this.btnAssocClient.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Split;
             this.btnAssocClient.ImageLarge = global::SurveyManager.Properties.Resources.client;
             this.btnAssocClient.ImageSmall = global::SurveyManager.Properties.Resources.client_16x16;
+            this.btnAssocClient.KryptonContextMenu = this.surveyClientContextMenu;
             this.btnAssocClient.TextLine1 = "Client";
-            this.btnAssocClient.ToolTipBody = "View/Update the associated client for this survey job.";
+            this.btnAssocClient.ToolTipBody = "Add/Update the associated client for this survey job.";
             this.btnAssocClient.ToolTipTitle = "Associations";
             this.btnAssocClient.Click += new System.EventHandler(this.btnAssocClient_Click);
+            // 
+            // surveyClientContextMenu
+            // 
+            this.surveyClientContextMenu.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems1});
+            // 
+            // kryptonContextMenuItems1
+            // 
+            this.kryptonContextMenuItems1.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem1,
+            this.kryptonContextMenuItem2});
+            // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Image = global::SurveyManager.Properties.Resources.search_16x16;
+            this.kryptonContextMenuItem1.Text = "Search for Client";
+            // 
+            // kryptonContextMenuItem2
+            // 
+            this.kryptonContextMenuItem2.Image = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonContextMenuItem2.Text = "Create New Client";
             // 
             // btnAssocRealtor
             // 
             this.btnAssocRealtor.ImageLarge = global::SurveyManager.Properties.Resources.realtor;
             this.btnAssocRealtor.ImageSmall = global::SurveyManager.Properties.Resources.realtor_16x16;
             this.btnAssocRealtor.TextLine1 = "Realtor";
-            this.btnAssocRealtor.ToolTipBody = "View/Update the associated realtor for this survey job.\r\n";
+            this.btnAssocRealtor.ToolTipBody = "Add/Update the associated realtor for this survey job.\r\n";
             this.btnAssocRealtor.ToolTipTitle = "Associations";
             this.btnAssocRealtor.Click += new System.EventHandler(this.btnAssocRealtor_Click);
             // 
@@ -456,7 +481,7 @@ namespace SurveyManager
             this.btnAssocTitleComp.ImageSmall = global::SurveyManager.Properties.Resources.title_company_16x16;
             this.btnAssocTitleComp.TextLine1 = "Title";
             this.btnAssocTitleComp.TextLine2 = "Company";
-            this.btnAssocTitleComp.ToolTipBody = "View/Update the associated title company for this survey job.\r\n";
+            this.btnAssocTitleComp.ToolTipBody = "Add/Update the associated title company for this survey job.\r\n";
             this.btnAssocTitleComp.ToolTipTitle = "Associations";
             this.btnAssocTitleComp.Click += new System.EventHandler(this.btnAssocTitleComp_Click);
             // 
@@ -691,6 +716,11 @@ namespace SurveyManager
             this.btnSqlQuery.TextLine2 = "Query";
             this.btnSqlQuery.Click += new System.EventHandler(this.sqlQueryBtn_Click);
             // 
+            // dockingManager
+            // 
+            this.dockingManager.DefaultCloseRequest = ComponentFactory.Krypton.Docking.DockingCloseRequest.RemovePageAndDispose;
+            this.dockingManager.DockableWorkspaceCellAdding += new System.EventHandler<ComponentFactory.Krypton.Docking.DockableWorkspaceCellEventArgs>(this.dockingManager_DockableWorkspaceCellAdding);
+            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.dockableWorkspace);
@@ -787,7 +817,6 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton exportDataBtn;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton importDataBtn;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSqlQuery;
-        private ComponentFactory.Krypton.Docking.KryptonDockingManager dockingManager;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Docking.KryptonDockableWorkspace dockableWorkspace;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab surveyTab;
@@ -832,6 +861,11 @@ namespace SurveyManager
         private System.ComponentModel.BackgroundWorker saveDataBackgroundWorker;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple13;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAddNote;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu surveyClientContextMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
+        protected ComponentFactory.Krypton.Docking.KryptonDockingManager dockingManager;
     }
 }
 

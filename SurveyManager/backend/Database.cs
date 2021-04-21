@@ -1390,7 +1390,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@17", s.OfficeTime);
                         cmd.Parameters.AddWithValue("@18", s.LineItemIds);
                         cmd.Parameters.AddWithValue("@19", s.GetNotesString());
-                        cmd.Parameters.AddWithValue("@21", s.SurveyName);
+                        cmd.Parameters.AddWithValue("@20", s.SurveyName);
 
 
                         cmd.Connection = con;

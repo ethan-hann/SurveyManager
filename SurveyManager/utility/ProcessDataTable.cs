@@ -45,6 +45,7 @@ namespace SurveyManager.utility
             {
                 ID = (int)row["realtor_id"],
                 Name = (string)row["name"],
+                CompanyName = (string)row["company_name"],
                 Email = (string)row["email"],
                 PhoneNumber = (string)row["phone_number"],
                 FaxNumber = (string)row["fax_number"]

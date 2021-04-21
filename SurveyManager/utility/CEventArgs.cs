@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
@@ -29,6 +30,18 @@ namespace SurveyManager.utility
             public DBArgs(int exCode)
             {
                 ExceptionCode = exCode;
+            }
+        }
+
+        public class DBObjectArgs : EventArgs
+        {
+            public DatabaseWrapper Object { get; internal set; }
+            public EntityTypes Type { get; internal set; }
+
+            public DBObjectArgs(DatabaseWrapper obj, EntityTypes type)
+            {
+                Object = obj;
+                Type = type;
             }
         }
 
