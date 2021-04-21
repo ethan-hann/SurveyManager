@@ -137,17 +137,49 @@ namespace SurveyManager
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[0]).Click += btnAssocClient_Click;
             //Survey Associate Client -> create new client
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[1]).Click += CreateNewClient;
+
+            //Survey Associate Realtor -> search for realtor
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[0]).Click += btnAssocRealtor_Click;
+            //Survey Associate Realtor -> create new realtor
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[1]).Click += CreateNewRealtor;
+
+            //Survey Associate TitleCompany -> search for title company
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[0]).Click += btnAssocTitleComp_Click;
+            //Survey Associate TitleCompany -> create new title company
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[1]).Click += CreateNewTitleCompany;
         }
 
         private void CreateNewClient(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a client to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
                 return;
             }
 
             newClientBtn_Click(sender, e);
+        }
+
+        private void CreateNewRealtor(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
+                return;
+            }
+
+            newRealtorBtn_Click(sender, e);
+        }
+
+        private void CreateNewTitleCompany(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
+                return;
+            }
+
+            newTitleCompanyBtn_Click(sender, e);
         }
 
         private void UpdateRecentDocs()
@@ -286,28 +318,21 @@ namespace SurveyManager
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-        #endregion
-
-        #region Survey Menu
-        private void findSurveyBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void newSurveyBtn_Click(object sender, EventArgs e)
-        {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Survey);
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
-        }
-
-        private void viewSurveysBtn_Click(object sender, EventArgs e)
-        {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys");
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            ExitChoice choice = ShowCloseDialog();
+            if (choice == ExitChoice.SaveAndExit)
+            {
+                SaveSurvey();
+                CloseJob();
+                Application.Exit();
+            }
+            else if (choice == ExitChoice.ExitNoSave)
+            {
+                Application.Exit();
+            }
+            else if (choice == ExitChoice.SaveOnly)
+            {
+                SaveSurvey();
+            }
         }
         #endregion
 
@@ -546,7 +571,8 @@ namespace SurveyManager
             {
                 RuntimeVars.Instance.OpenJob = new Survey()
                 {
-                    JobNumber = newJobNumber
+                    JobNumber = newJobNumber,
+                    SavePending = true
                 };
 
                 AddTitleText("[JOB# " + RuntimeVars.Instance.OpenJob.JobNumber + " OPENED]");
@@ -592,7 +618,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no information to change."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BasicInfo.ToDescriptionString()));
                 return;
             }
 
@@ -603,7 +629,8 @@ namespace SurveyManager
                 UniqueName = "Job Information",
                 ImageSmall = Resources.instrument_16x16,
                 ImageMedium = Resources.instrument_24x24,
-                ImageLarge = Resources.instrument
+                ImageLarge = Resources.instrument,
+                Tag = SurveyPage.IsSurveyPage
             };
             InfoCtl ctl = new InfoCtl()
             {
@@ -628,7 +655,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_View.ToDescriptionString()));
                 return;
             }
 
@@ -638,7 +665,8 @@ namespace SurveyManager
                 TextTitle = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
                 UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
                 ImageSmall = Resources.view_16x16,
-                ImageLarge = Resources.view
+                ImageLarge = Resources.view,
+                Tag = SurveyPage.IsSurveyPage
             };
             viewPanel.Controls.Add(new ViewPanel()
             {
@@ -658,28 +686,34 @@ namespace SurveyManager
 
         private void btnSaveSurvey_Click(object sender, EventArgs e)
         {
+            SaveSurvey();
+        }
+
+        private bool SaveSurvey()
+        {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to save."));
-                return;
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Save.ToDescriptionString()));
+                return false;
             }
 
             if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
             {
                 CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
-                return;
+                return false;
             }
 
             ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
             progressBar.Visible = true;
             saveDataBackgroundWorker.RunWorkerAsync();
+            return true;
         }
 
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to close."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Close.ToDescriptionString()));
                 return;
             }
 
@@ -702,6 +736,7 @@ namespace SurveyManager
                     ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
                     progressBar.Visible = true;
                     saveDataBackgroundWorker.RunWorkerAsync();
+                    CloseJob();
                     break;
                 }
                 case DialogResult.No:
@@ -751,19 +786,26 @@ namespace SurveyManager
         private void CloseJob()
         {
             AddTitleText("[NO JOB OPENED]");
-            ChangeStatusText(this, new StatusArgs("Ready"));
-
-            if (dockingManager.ContainsPage("Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info"))
-                dockingManager.RemovePage("Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info", true);
-
+            
             RuntimeVars.Instance.OpenJob = null;
+
+            //remove pages that are considered survey pages
+            dockingManager.RemovePages(dockingManager.Pages.Where(p => ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage).ToArray(), true);
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (!Application.OpenForms[i].Equals(this))
+                    Application.OpenForms[i].Close();
+            }
+
+            ChangeStatusText(this, new StatusArgs("Ready"));
         }
 
         private void btnAddNewFile_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to attach a file to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AttachFile.ToDescriptionString()));
                 return;
             }
 
@@ -778,6 +820,7 @@ namespace SurveyManager
             if (e is FileUploadDoneArgs args)
             {
                 RuntimeVars.Instance.OpenJob.SetFiles(args.Files);
+                RuntimeVars.Instance.OpenJob.SavePending = true;
             }
         }
 
@@ -785,7 +828,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to view files of."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_ViewFiles.ToDescriptionString()));
                 return;
             }
 
@@ -798,43 +841,51 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to edit rates for."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_EditRates.ToDescriptionString()));
                 return;
             }
+
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnFieldTime_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add time to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
                 return;
             }
+
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnOfficeTime_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add time to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
                 return;
             }
+
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnBillingLineItems_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add billing items to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddBillingItems.ToDescriptionString()));
                 return;
             }
+
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnCurrentBill_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is no current bill to open."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
                 return;
             }
         }
@@ -843,7 +894,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Client to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
                 return;
             }
 
@@ -876,6 +927,7 @@ namespace SurveyManager
             if (e is DBObjectArgs args)
             {
                 RuntimeVars.Instance.OpenJob.Client = args.Object as Client;
+                RuntimeVars.Instance.OpenJob.SavePending = true;
             }
         }
 
@@ -883,7 +935,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Realtor to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
                 return;
             }
 
@@ -916,6 +968,7 @@ namespace SurveyManager
             if (e is DBObjectArgs args)
             {
                 RuntimeVars.Instance.OpenJob.Realtor = args.Object as Realtor;
+                RuntimeVars.Instance.OpenJob.SavePending = true;
             }
         }
 
@@ -923,17 +976,40 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add a Title Company to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
                 return;
+            }
+
+            ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("associate_name", "Associate's Name"),
+                new DBMap("associate_email", "Associate's Email"),
+                new DBMap("office_number", "Office #")
+            };
+
+            AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
+            filter.FilterDone += SelectTitleCompany;
+            filter.Show();
+        }
+
+        private void SelectTitleCompany(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.TitleCompany);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateTitleCompany;
+                resultsForm.Show();
             }
         }
 
-        private void btnLocation_Click(object sender, EventArgs e)
+        private void AssociateTitleCompany(object sender, EventArgs e)
         {
-            if (!RuntimeVars.Instance.IsJobOpen)
+            if (e is DBObjectArgs args)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to change the location of."));
-                return;
+                RuntimeVars.Instance.OpenJob.TitleCompany = args.Object as TitleCompany;
+                RuntimeVars.Instance.OpenJob.SavePending = true;
             }
         }
 
@@ -941,7 +1017,7 @@ namespace SurveyManager
         {
             if (!RuntimeVars.Instance.IsJobOpen)
             {
-                ChangeStatusText(this, new StatusArgs("No job is currently opened. There is nothing to add notes to."));
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddNotes.ToDescriptionString()));
                 return;
             }
 
@@ -951,7 +1027,8 @@ namespace SurveyManager
                 TextTitle = "Notes",
                 UniqueName = "Notes",
                 ImageSmall = Resources.notes_16x16,
-                ImageLarge = Resources.notes
+                ImageLarge = Resources.notes,
+                Tag = SurveyPage.IsSurveyPage
             };
             notesPanel.Controls.Add(new NotesCtl(RuntimeVars.Instance.OpenJob.Notes)
             {
@@ -970,13 +1047,6 @@ namespace SurveyManager
         }
         #endregion
 
-        #region Drop Down Context Menus
-        private void btnAssocClient_DropDown(object sender, ContextMenuArgs e)
-        {
-            surveyClientContextMenu.Show(this);
-        }
-        #endregion
-
         private void dockingManager_DockableWorkspaceCellAdding(object sender, DockableWorkspaceCellEventArgs e)
         {
             KryptonWorkspaceCell currentCell = e.CellControl;
@@ -987,6 +1057,51 @@ namespace SurveyManager
             currentCell.NavigatorMode = NavigatorMode.BarTabGroup;
             currentCell.Group.GroupBackStyle = PaletteBackStyle.ButtonStandalone;
             currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ButtonStandalone;
+        }
+
+        private ExitChoice ShowCloseDialog()
+        {
+            if (RuntimeVars.Instance.IsJobOpen)
+            {
+                if (RuntimeVars.Instance.OpenJob.SavePending)
+                {
+                    return CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened survey job. What would you like to do?", "Save Changes", MessageBoxButtons.OKCancel, Resources.warning_64x64);
+                }
+                else
+                {
+                    return ExitChoice.ExitNoSave;
+                }
+            }
+            else
+            {
+                return ExitChoice.ExitNoSave;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.WindowsShutDown || e.CloseReason == CloseReason.TaskManagerClosing)
+                Application.Exit();
+
+            if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.FormOwnerClosing)
+            {
+                ExitChoice choice = ShowCloseDialog();
+                if (choice == ExitChoice.SaveAndExit)
+                {
+                    SaveSurvey();
+                    CloseJob();
+                    Application.Exit();
+                }
+                else if (choice == ExitChoice.ExitNoSave)
+                {
+                    Application.Exit();
+                }
+                else if (choice == ExitChoice.SaveOnly)
+                {
+                    SaveSurvey();
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

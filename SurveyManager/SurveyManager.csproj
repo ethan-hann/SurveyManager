@@ -177,6 +177,12 @@
     </Compile>
     <Compile Include="forms\dialogs\CMessageBox.cs" />
     <Compile Include="forms\dialogs\CRichMsgBox.cs" />
+    <Compile Include="forms\dialogs\SaveMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SaveMessageForm.Designer.cs">
+      <DependentUpon>SaveMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SaveMessageForm.resx">
+      <DependentUpon>SaveMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\fileMenu\FileBrowser.resx">
       <DependentUpon>FileBrowser.cs</DependentUpon>

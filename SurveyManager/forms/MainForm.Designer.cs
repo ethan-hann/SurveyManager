@@ -74,7 +74,15 @@ namespace SurveyManager
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.btnAssocRealtor = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.surveyRealtorContextMenu = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.btnAssocTitleComp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.surveyTitleCompanyContextMenu = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem5 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem6 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonRibbonGroupSeparator1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple13 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAddNote = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -112,6 +120,8 @@ namespace SurveyManager
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
             this.saveDataBackgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -459,31 +469,77 @@ namespace SurveyManager
             // kryptonContextMenuItem1
             // 
             this.kryptonContextMenuItem1.Image = global::SurveyManager.Properties.Resources.search_16x16;
-            this.kryptonContextMenuItem1.Text = "Search for Client";
+            this.kryptonContextMenuItem1.Text = "Search...";
             // 
             // kryptonContextMenuItem2
             // 
             this.kryptonContextMenuItem2.Image = global::SurveyManager.Properties.Resources.add_16x16;
-            this.kryptonContextMenuItem2.Text = "Create New Client";
+            this.kryptonContextMenuItem2.Text = "New...";
             // 
             // btnAssocRealtor
             // 
+            this.btnAssocRealtor.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Split;
             this.btnAssocRealtor.ImageLarge = global::SurveyManager.Properties.Resources.realtor;
             this.btnAssocRealtor.ImageSmall = global::SurveyManager.Properties.Resources.realtor_16x16;
+            this.btnAssocRealtor.KryptonContextMenu = this.surveyRealtorContextMenu;
             this.btnAssocRealtor.TextLine1 = "Realtor";
             this.btnAssocRealtor.ToolTipBody = "Add/Update the associated realtor for this survey job.\r\n";
             this.btnAssocRealtor.ToolTipTitle = "Associations";
             this.btnAssocRealtor.Click += new System.EventHandler(this.btnAssocRealtor_Click);
             // 
+            // surveyRealtorContextMenu
+            // 
+            this.surveyRealtorContextMenu.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems3});
+            // 
+            // kryptonContextMenuItems3
+            // 
+            this.kryptonContextMenuItems3.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem3,
+            this.kryptonContextMenuItem4});
+            // 
+            // kryptonContextMenuItem3
+            // 
+            this.kryptonContextMenuItem3.Image = global::SurveyManager.Properties.Resources.search_16x16;
+            this.kryptonContextMenuItem3.Text = "Search...";
+            // 
+            // kryptonContextMenuItem4
+            // 
+            this.kryptonContextMenuItem4.Image = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonContextMenuItem4.Text = "New...";
+            // 
             // btnAssocTitleComp
             // 
+            this.btnAssocTitleComp.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Split;
             this.btnAssocTitleComp.ImageLarge = global::SurveyManager.Properties.Resources.title_company;
             this.btnAssocTitleComp.ImageSmall = global::SurveyManager.Properties.Resources.title_company_16x16;
+            this.btnAssocTitleComp.KryptonContextMenu = this.surveyTitleCompanyContextMenu;
             this.btnAssocTitleComp.TextLine1 = "Title";
             this.btnAssocTitleComp.TextLine2 = "Company";
             this.btnAssocTitleComp.ToolTipBody = "Add/Update the associated title company for this survey job.\r\n";
             this.btnAssocTitleComp.ToolTipTitle = "Associations";
             this.btnAssocTitleComp.Click += new System.EventHandler(this.btnAssocTitleComp_Click);
+            // 
+            // surveyTitleCompanyContextMenu
+            // 
+            this.surveyTitleCompanyContextMenu.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems4});
+            // 
+            // kryptonContextMenuItems4
+            // 
+            this.kryptonContextMenuItems4.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem5,
+            this.kryptonContextMenuItem6});
+            // 
+            // kryptonContextMenuItem5
+            // 
+            this.kryptonContextMenuItem5.Image = global::SurveyManager.Properties.Resources.search_16x16;
+            this.kryptonContextMenuItem5.Text = "Search...";
+            // 
+            // kryptonContextMenuItem6
+            // 
+            this.kryptonContextMenuItem6.Image = global::SurveyManager.Properties.Resources.add_16x16;
+            this.kryptonContextMenuItem6.Text = "New...";
             // 
             // kryptonRibbonGroupTriple13
             // 
@@ -758,6 +814,10 @@ namespace SurveyManager
             this.saveDataBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.saveDataBackgroundWorker_ProgressChanged);
             this.saveDataBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.saveDataBackgroundWorker_RunWorkerCompleted);
             // 
+            // kryptonContextMenuHeading1
+            // 
+            this.kryptonContextMenuHeading1.ExtraText = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -772,6 +832,7 @@ namespace SurveyManager
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Survey Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
@@ -866,6 +927,16 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem2;
         protected ComponentFactory.Krypton.Docking.KryptonDockingManager dockingManager;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu surveyRealtorContextMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems3;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem3;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem4;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems2;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu surveyTitleCompanyContextMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems4;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem5;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem6;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading kryptonContextMenuHeading1;
     }
 }
 

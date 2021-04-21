@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
@@ -254,6 +256,63 @@ namespace SurveyManager.utility
             /// Represents no file extension.
             /// </summary>
             NONE
+        }
+
+        public enum StatusText
+        {
+            [Description("No job is currently opened. There is nothing to add a Client to.")]
+            NoJob_AddClient,
+            [Description("No job is currently opened. There is nothing to add a Realtor to.")]
+            NoJob_AddRealtor,
+            [Description("No job is currently opened. There is nothing to add a Title Company to.")]
+            NoJob_AddTitleCompany,
+            [Description("No job is currently opened. There is nothing to change.")]
+            NoJob_BasicInfo,
+            [Description("No job is currently opened. There is nothing to view.")]
+            NoJob_View,
+            [Description("No job is currently opened. There is nothing to save.")]
+            NoJob_Save,
+            [Description("No job is currently opened. There is nothing to close.")]
+            NoJob_Close,
+            [Description("No job is currently opened. There is nothing to attach files to.")]
+            NoJob_AttachFile,
+            [Description("No job is currently opened. There is nothing to view the files of.")]
+            NoJob_ViewFiles,
+            [Description("No job is currently opened. There is nothing to edit rates for.")]
+            NoJob_EditRates,
+            [Description("No job is currently opened. There is nothing to add time to.")]
+            NoJob_AddTime,
+            [Description("No job is currently opened. There is nothing to add billing items to.")]
+            NoJob_AddBillingItems,
+            [Description("No job is currently opened. There is no current bill to open.")]
+            NoJob_OpenBill,
+            [Description("No job is currently opened. There is nothing to add notes to.")]
+            NoJob_AddNotes
+        }
+
+        public enum ExitChoice
+        {
+            SaveAndExit,
+            SaveOnly,
+            ExitNoSave,
+            Cancel
+        }
+
+        public enum SurveyPage
+        {
+            IsSurveyPage
+        }
+    }
+
+    public static class EnumExtensions
+    {
+        public static string ToDescriptionString(this StatusText val)
+        {
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])val
+               .GetType()
+               .GetField(val.ToString())
+               .GetCustomAttributes(typeof(DescriptionAttribute), false);
+            return attributes.Length > 0 ? attributes[0].Description : string.Empty;
         }
     }
 }

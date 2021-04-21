@@ -76,9 +76,6 @@ namespace SurveyManager.forms.surveyMenu
             //Update the dictionary with the new text value.
             notes[(DateTime)lbNoteKeys.Items[lbNoteKeys.SelectedIndex]] = txtNoteContents.Text;
 
-            //If the text has been changed, notify about a pending save.
-            RuntimeVars.Instance.OpenJob.SavePending = true;
-
             //Update the character count
             lblCharCount.Text = "Character Count: " + txtNoteContents.Text.Count() + " / 4,000";
         }
@@ -90,13 +87,20 @@ namespace SurveyManager.forms.surveyMenu
         protected override void Dispose(bool disposing)
         {
             //When this user control is disposed (closed), update the currently open job with the new notes.
-            RuntimeVars.Instance.OpenJob.Notes = notes;
+            if (RuntimeVars.Instance.IsJobOpen)
+                RuntimeVars.Instance.OpenJob.Notes = notes;
 
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void txtNoteContents_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //If the text has been changed, notify about a pending save.
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
     }
 }

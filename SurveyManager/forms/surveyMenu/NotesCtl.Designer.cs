@@ -24,8 +24,8 @@ namespace SurveyManager.forms.surveyMenu
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTotalNoteCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblCharCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblCharCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -51,6 +51,7 @@ namespace SurveyManager.forms.surveyMenu
             this.txtNoteContents.TabIndex = 1;
             this.txtNoteContents.Text = "";
             this.txtNoteContents.TextChanged += new System.EventHandler(this.txtNoteContents_TextChanged);
+            this.txtNoteContents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNoteContents_KeyPress);
             // 
             // flowLayoutPanel1
             // 
@@ -113,18 +114,18 @@ namespace SurveyManager.forms.surveyMenu
             this.lblTotalNoteCount.Size = new System.Drawing.Size(102, 17);
             this.lblTotalNoteCount.Text = "Total # of Notes: 0";
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(544, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
             // lblCharCount
             // 
             this.lblCharCount.Name = "lblCharCount";
             this.lblCharCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCharCount.Size = new System.Drawing.Size(144, 17);
             this.lblCharCount.Text = "Character Count: 0 / 4,000";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(522, 17);
-            this.toolStripStatusLabel1.Spring = true;
             // 
             // NotesCtl
             // 

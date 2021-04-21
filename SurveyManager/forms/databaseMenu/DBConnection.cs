@@ -120,11 +120,13 @@ namespace SurveyManager.forms.databaseMenu
                 progressBarLoad.Visible = false;
                 txtStatus.Text = "Connected!";
                 btnFinish.Visible = true;
+                RuntimeVars.Instance.DatabaseConnected = true;
             }
             else
             {
                 txtStatus.Text = "Not Connected to Server!";
                 btnFinish.Visible = false;
+                RuntimeVars.Instance.DatabaseConnected = false;
             }
         }
 

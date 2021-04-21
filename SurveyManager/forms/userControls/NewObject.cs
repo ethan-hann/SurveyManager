@@ -101,6 +101,7 @@ namespace SurveyManager.forms.userControls
                         {
                             t.ID = Database.GetLastRowIDInserted("TitleCompany");
                             RuntimeVars.Instance.OpenJob.TitleCompany = t;
+                            RuntimeVars.Instance.OpenJob.SavePending = true;
                         }
                     }
 
@@ -145,6 +146,7 @@ namespace SurveyManager.forms.userControls
                         {
                             r.ID = Database.GetLastRowIDInserted("Realtor");
                             RuntimeVars.Instance.OpenJob.Realtor = r;
+                            RuntimeVars.Instance.OpenJob.SavePending = true;
                         }
                     }
 
@@ -195,6 +197,7 @@ namespace SurveyManager.forms.userControls
                         {
                             c.ID = Database.GetLastRowIDInserted("Client");
                             RuntimeVars.Instance.OpenJob.Client = c;
+                            RuntimeVars.Instance.OpenJob.SavePending = true;
                         }
                     }
 
