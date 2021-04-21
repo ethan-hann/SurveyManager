@@ -305,6 +305,7 @@
     <Compile Include="utility\Filtering\TextSearchFilter.cs" />
     <Compile Include="utility\Icons\IconListManager.cs" />
     <Compile Include="utility\Icons\IconReader.cs" />
+    <Compile Include="utility\Logging\LogFile.cs" />
     <Compile Include="utility\ProcessDataTable.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
     <Compile Include="utility\Utility.cs" />

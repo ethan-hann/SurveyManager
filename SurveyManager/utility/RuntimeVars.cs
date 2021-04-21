@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend.wrappers;
+using SurveyManager.utility.Logging;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -48,9 +49,14 @@ namespace SurveyManager.utility
         public string SelectedPageUniqueName { get; set; } = "";
 
         /// <summary>
-        /// Get the currently open survey job.
+        /// Get or set the currently open survey job.
         /// </summary>
         public Survey OpenJob { get; set; }
+
+        /// <summary>
+        /// Get or set the applications log file.
+        /// </summary>
+        public LogFile LogFile { get; set; }
 
         /// <summary>
         /// Get a value indicating if a survey job is already open.

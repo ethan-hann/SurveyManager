@@ -51,6 +51,7 @@ namespace SurveyManager.forms.databaseMenu
             {
                 progressBarLoad.Value = 0;
                 tlpStatus.Visible = true;
+                progressBarLoad.Visible = true;
                 bgWorker.RunWorkerAsync();
             }
         }

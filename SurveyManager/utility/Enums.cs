@@ -287,7 +287,11 @@ namespace SurveyManager.utility
             [Description("No job is currently opened. There is no current bill to open.")]
             NoJob_OpenBill,
             [Description("No job is currently opened. There is nothing to add notes to.")]
-            NoJob_AddNotes
+            NoJob_AddNotes,
+            [Description("No server connection defined. Can't access database. Please open a connection using the Database Connection button on the Database tab.")]
+            NoDatabaseConnection,
+            [Description("Survey Manager - Database: {0}\t\t{1}\t\t{2}")]
+            TitleText
         }
 
         public enum ExitChoice

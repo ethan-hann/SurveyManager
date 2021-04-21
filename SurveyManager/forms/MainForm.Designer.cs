@@ -122,6 +122,7 @@ namespace SurveyManager
             this.saveDataBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
+            this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -200,7 +201,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedTab = this.surveyTab;
+            this.mainRibbon.SelectedTab = this.databaseTab;
             this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
             this.mainRibbon.TabIndex = 4;
             // 
@@ -818,6 +819,14 @@ namespace SurveyManager
             // 
             this.kryptonContextMenuHeading1.ExtraText = "";
             // 
+            // checkConnectionBGWorker
+            // 
+            this.checkConnectionBGWorker.WorkerReportsProgress = true;
+            this.checkConnectionBGWorker.WorkerSupportsCancellation = true;
+            this.checkConnectionBGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.checkConnectionBGWorker_DoWork);
+            this.checkConnectionBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.checkConnectionBGWorker_ProgressChanged);
+            this.checkConnectionBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.checkConnectionBGWorker_RunWorkerCompleted);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -834,6 +843,7 @@ namespace SurveyManager
             this.Text = "Survey Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).EndInit();
@@ -937,6 +947,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem5;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem6;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading kryptonContextMenuHeading1;
+        private System.ComponentModel.BackgroundWorker checkConnectionBGWorker;
     }
 }
 

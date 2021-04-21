@@ -14,6 +14,7 @@ using SurveyManager.forms.surveyMenu;
 using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
+using SurveyManager.utility.Logging;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -70,25 +71,16 @@ namespace SurveyManager
                 Settings.Default.Save();
             }
 
-            //Initialize the database and connection string
-            Database.Initialize();
-
-            //Check database connection
-            int code = Database.CheckConnection();
-            if (code != -1)
-                Text = "Survey Manager - Database: <NONE>\tUnlicensed Copy\t";
-            else
-                Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}\\\tUnlicensed Copy\t";
-
-            //Set main form
-            RuntimeVars.Instance.MainForm = this;
-
-            if (RuntimeVars.Instance.DatabaseConnected)
+            if (Settings.Default.LogFilePath.Equals("Undefined"))
             {
-                RuntimeVars.Instance.Counties = Database.GetCounties();
+                Settings.Default.LogFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SurveyManager", "logs");
+                Settings.Default.Save();
             }
 
             Directory.CreateDirectory(RuntimeVars.Instance.TempFiles.TempDir);
+            Directory.CreateDirectory(Settings.Default.LogFilePath);
+
+            RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
         }
 
         private void InitializeRibbon()
@@ -151,6 +143,12 @@ namespace SurveyManager
 
         private void CreateNewClient(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
@@ -162,6 +160,12 @@ namespace SurveyManager
 
         private void CreateNewRealtor(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
@@ -173,6 +177,12 @@ namespace SurveyManager
 
         private void CreateNewTitleCompany(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
@@ -198,21 +208,32 @@ namespace SurveyManager
                 }
                 mainRibbon.RibbonAppButton.AppButtonRecentDocs.AddRange(recentJobs.ToArray());
             }
+            else
+            {
+                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
+                Settings.Default.Save();
+            }
         }
 
         private void OpenRecentJob(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (sender is KryptonRibbonRecentDoc recentDoc)
             {
                 RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
                 if (RuntimeVars.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
-                    AddTitleText("[JOB# " + recentDoc.Text + "]");
+                    ChangeTitleText("[JOB# " + recentDoc.Text + "]");
                 }
                 else
                 {
-                    ChangeStatusText(this, new StatusArgs("The selected job no longer exists! Maybe it was deleted? Removing from recent jobs..."));
+                    ChangeStatusText(this, new StatusArgs("The selected job no longer exists! It was probably deleted; removing from recent jobs list."));
                     if (Settings.Default.RecentJobs.Contains(recentDoc.Text))
                     {
                         Settings.Default.RecentJobs.Remove(recentDoc.Text);
@@ -339,6 +360,12 @@ namespace SurveyManager
         #region Client Menu
         private void findClientBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             ArrayList columns = new ArrayList
             {
                 new DBMap("name", "Name"),
@@ -354,6 +381,12 @@ namespace SurveyManager
 
         private void newClientBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new NewPage(EntityTypes.Client);
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -361,6 +394,12 @@ namespace SurveyManager
 
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new ViewPage(EntityTypes.Client, "Clients");
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -371,6 +410,12 @@ namespace SurveyManager
         #region Realtor Menu
         private void findRealtorBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             ArrayList columns = new ArrayList
             {
                 new DBMap("name", "Name"),
@@ -386,6 +431,12 @@ namespace SurveyManager
 
         private void newRealtorBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new NewPage(EntityTypes.Realtor);
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -393,6 +444,12 @@ namespace SurveyManager
 
         private void viewRealtorsBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors");
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -402,6 +459,12 @@ namespace SurveyManager
         #region Title Company Menu
         private void findTitleCompanyBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             ArrayList columns = new ArrayList
             {
                 new DBMap("name", "Name"),
@@ -417,6 +480,12 @@ namespace SurveyManager
 
         private void newTitleCompanyBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new NewPage(Enums.EntityTypes.TitleCompany);
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -424,6 +493,12 @@ namespace SurveyManager
 
         private void viewTitleCompanyBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies");
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -458,11 +533,13 @@ namespace SurveyManager
                     break;
                     case 1042: //could not reach the hostname
                         CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
-                    break;
+                        Text = "Survey Manager - " + $"Database: <Not Connected>";
+                        break;
                     case -1: //all good, begin loading database data
                     {
                         if (RuntimeVars.Instance.DatabaseConnected)
-                            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}";
+                            ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
+                            ChangeStatusText(this, new StatusArgs("Ready"));
                         break;
                     }
                     default: //unknown error; display error code for debugging
@@ -474,6 +551,12 @@ namespace SurveyManager
 
         private void sqlQueryBtn_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             SQLQuery sqForm = new SQLQuery();
             sqForm.StatusUpdate += ChangeStatusText;
             sqForm.Show();
@@ -484,7 +567,10 @@ namespace SurveyManager
         public void ChangeStatusText(object sender, EventArgs e)
         {
             if (e is StatusArgs args)
+            {
                 lblStatus.Text = args.StatusString;
+                RuntimeVars.Instance.LogFile.AddEntry(args.StatusString);
+            }
         }
 
         private void ProcessClientSearch(object sender, EventArgs e)
@@ -540,14 +626,35 @@ namespace SurveyManager
                     UpdateRecentDocs();
                 }
 
-                AddTitleText("[JOB# " + args.Survey.JobNumber + "]");
+                ChangeTitleText("[JOB# " + args.Survey.JobNumber + "]");
             }
         }
 
-        private void AddTitleText(string newText)
+        private void ChangeTitleText(params string[] texts)
         {
             //TODO: Add license check
-            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}\\\tUnlicensed Copy\t" + newText;
+            if (texts.Length == 3)
+            {
+                Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], texts[1], texts[2]);
+            }
+            else if (texts.Length == 2)
+            {
+                Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], texts[1], string.Empty);
+            }
+            else if (texts.Length == 1)
+            {
+                if (texts[0].Contains("JOB"))
+                    Text = string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", texts[0]);
+                else if (texts[0].Contains("\\\\"))
+                {
+                    if (RuntimeVars.Instance.IsJobOpen)
+                        Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                    else
+                        Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[NO JOB OPENED]");
+                }
+            }
+            else
+                Text = string.Format(StatusText.TitleText.ToDescriptionString(), "<NONE>", "Unlicensed Copy", "[NO JOB OPENED]");
         }
         #endregion
 
@@ -563,6 +670,12 @@ namespace SurveyManager
         #region Survey Tab
         private void btnNewSurveyJob_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             string newJobNumber = KryptonInputBox.Show(this, "Enter the new job number:", "New Job", $"{DateTime.Now.Date.Year.ToString().Substring(2)}-");
             if (newJobNumber.Equals("NONE") || newJobNumber.Length <= 0)
                 return;
@@ -575,7 +688,7 @@ namespace SurveyManager
                     SavePending = true
                 };
 
-                AddTitleText("[JOB# " + RuntimeVars.Instance.OpenJob.JobNumber + " OPENED]");
+                ChangeTitleText("[JOB# " + RuntimeVars.Instance.OpenJob.JobNumber + " OPENED]");
                 ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " created successfully!"));
             }
             else
@@ -587,6 +700,12 @@ namespace SurveyManager
 
         private void btnOpenSurveyJob_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             ArrayList columns = new ArrayList
             {
                 new DBMap("job_number", "Job #"),
@@ -598,8 +717,8 @@ namespace SurveyManager
                 new DBMap("section", "Section #"),
                 new DBMap("county_id", "County"),
                 new DBMap("acres", "Acres"),
-                new DBMap("realtor_id", "Realtor"),
-                new DBMap("title_company_id", "Title Company")
+                new DBMap("realtor_id", "Realtor ID"),
+                new DBMap("title_company_id", "Title Company ID")
             };
 
             AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
@@ -609,6 +728,12 @@ namespace SurveyManager
 
         private void btnViewAllJobs_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             KryptonPage page = new ViewPage(EntityTypes.Survey, "Surveys");
             dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
             dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
@@ -616,6 +741,12 @@ namespace SurveyManager
 
         private void btnBasicInfo_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BasicInfo.ToDescriptionString()));
@@ -653,6 +784,12 @@ namespace SurveyManager
 
         private void btnOpenViewPanel_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_View.ToDescriptionString()));
@@ -686,6 +823,12 @@ namespace SurveyManager
 
         private void btnSaveSurvey_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             SaveSurvey();
         }
 
@@ -709,8 +852,15 @@ namespace SurveyManager
             return true;
         }
 
+        private bool isClosingJob = false;
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Close.ToDescriptionString()));
@@ -736,7 +886,7 @@ namespace SurveyManager
                     ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
                     progressBar.Visible = true;
                     saveDataBackgroundWorker.RunWorkerAsync();
-                    CloseJob();
+                    isClosingJob = true;
                     break;
                 }
                 case DialogResult.No:
@@ -781,11 +931,16 @@ namespace SurveyManager
             progressBar.Visible = false;
             ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
             AddSurveyToRecentJobs(this, new SurveyOpenedEventArgs(RuntimeVars.Instance.OpenJob));
+
+            if (isClosingJob)
+                CloseJob();
+
+            RuntimeVars.Instance.LogFile.WriteToFile();
         }
 
         private void CloseJob()
         {
-            AddTitleText("[NO JOB OPENED]");
+            ChangeTitleText("[NO JOB OPENED]");
             
             RuntimeVars.Instance.OpenJob = null;
 
@@ -799,10 +954,17 @@ namespace SurveyManager
             }
 
             ChangeStatusText(this, new StatusArgs("Ready"));
+            isClosingJob = false;
         }
 
         private void btnAddNewFile_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AttachFile.ToDescriptionString()));
@@ -826,6 +988,12 @@ namespace SurveyManager
 
         private void btnViewAllFiles_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_ViewFiles.ToDescriptionString()));
@@ -839,6 +1007,12 @@ namespace SurveyManager
 
         private void btnBillingRates_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_EditRates.ToDescriptionString()));
@@ -850,6 +1024,12 @@ namespace SurveyManager
 
         private void btnFieldTime_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
@@ -861,6 +1041,12 @@ namespace SurveyManager
 
         private void btnOfficeTime_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
@@ -872,6 +1058,12 @@ namespace SurveyManager
 
         private void btnBillingLineItems_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddBillingItems.ToDescriptionString()));
@@ -883,6 +1075,12 @@ namespace SurveyManager
 
         private void btnCurrentBill_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
@@ -892,6 +1090,12 @@ namespace SurveyManager
 
         private void btnAssocClient_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
@@ -933,6 +1137,12 @@ namespace SurveyManager
 
         private void btnAssocRealtor_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
@@ -974,6 +1184,12 @@ namespace SurveyManager
 
         private void btnAssocTitleComp_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
@@ -1015,6 +1231,12 @@ namespace SurveyManager
 
         private void btnNotes_Click(object sender, EventArgs e)
         {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
             if (!RuntimeVars.Instance.IsJobOpen)
             {
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddNotes.ToDescriptionString()));
@@ -1055,8 +1277,8 @@ namespace SurveyManager
             currentCell.Bar.TabStyle = TabStyle.OneNote;
             currentCell.Bar.TabBorderStyle = TabBorderStyle.OneNote;
             currentCell.NavigatorMode = NavigatorMode.BarTabGroup;
-            currentCell.Group.GroupBackStyle = PaletteBackStyle.ButtonStandalone;
-            currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ButtonStandalone;
+            currentCell.Group.GroupBackStyle = PaletteBackStyle.ControlClient;
+            currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ControlClient;
         }
 
         private ExitChoice ShowCloseDialog()
@@ -1101,6 +1323,52 @@ namespace SurveyManager
                     SaveSurvey();
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            progressBar.Visible = true;
+            checkConnectionBGWorker.RunWorkerAsync();
+            ChangeStatusText(this, new StatusArgs("Checking existing database connection. Please wait..."));
+        }
+
+        int code;
+        private void checkConnectionBGWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //Initialize the database and connection string
+            Database.Initialize();
+
+            //Check database connection
+            code = Database.CheckConnection();
+        }
+
+        private void checkConnectionBGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void checkConnectionBGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (code != -1)
+            {
+                ChangeTitleText("", "", "", "");
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+            }
+            else
+            {
+                ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[NO JOB OPENED]");
+                ChangeStatusText(this, new StatusArgs("Ready"));
+            }
+                
+            progressBar.Visible = false;
+
+            //Set main form
+            RuntimeVars.Instance.MainForm = this;
+
+            if (RuntimeVars.Instance.DatabaseConnected)
+            {
+                RuntimeVars.Instance.Counties = Database.GetCounties();
             }
         }
     }
