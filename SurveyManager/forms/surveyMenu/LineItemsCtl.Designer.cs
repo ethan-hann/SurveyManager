@@ -102,7 +102,7 @@ namespace SurveyManager.forms.surveyMenu
             this.btnAddItem.Size = new System.Drawing.Size(123, 25);
             this.btnAddItem.TabIndex = 0;
             this.btnAddItem.Values.Image = global::SurveyManager.Properties.Resources.add_16x16;
-            this.btnAddItem.Values.Text = "Add Item";
+            this.btnAddItem.Values.Text = "New Item";
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // statusStrip

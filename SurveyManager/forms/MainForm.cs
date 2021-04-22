@@ -1083,10 +1083,10 @@ namespace SurveyManager
                 ImageLarge = Resources.billing_line_items,
                 Tag = SurveyPage.IsSurveyPage
             };
-            lineItemPanel.Controls.Add(new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingLineItems)
-            {
-                Dock = DockStyle.Fill
-            });
+            LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingLineItems);
+            ctl.StatusUpdate += ChangeStatusText;
+            ctl.Dock = DockStyle.Fill;
+            lineItemPanel.Controls.Add(ctl);
 
             if (!dockingManager.ContainsPage(lineItemPanel))
             {
@@ -1278,10 +1278,11 @@ namespace SurveyManager
                 ImageLarge = Resources.notes,
                 Tag = SurveyPage.IsSurveyPage
             };
-            notesPanel.Controls.Add(new NotesCtl(RuntimeVars.Instance.OpenJob.Notes)
-            {
-                Dock = DockStyle.Fill
-            });
+
+            NotesCtl ctl = new NotesCtl(RuntimeVars.Instance.OpenJob.Notes);
+            ctl.StatusUpdate += ChangeStatusText;
+            ctl.Dock = DockStyle.Fill;
+            notesPanel.Controls.Add(ctl);
 
             if (!dockingManager.ContainsPage(notesPanel))
             {

@@ -9,12 +9,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.surveyMenu
 {
     public partial class NotesCtl : UserControl
     {
         private Dictionary<DateTime, string> notes;
+
+        public EventHandler StatusUpdate;
 
         public NotesCtl(Dictionary<DateTime, string> notes)
         {
@@ -87,8 +90,7 @@ namespace SurveyManager.forms.surveyMenu
         protected override void Dispose(bool disposing)
         {
             //When this user control is disposed (closed), update the currently open job with the new notes.
-            if (RuntimeVars.Instance.IsJobOpen)
-                RuntimeVars.Instance.OpenJob.Notes = notes;
+            SaveNotes();
 
             if (disposing && (components != null))
             {
@@ -101,6 +103,24 @@ namespace SurveyManager.forms.surveyMenu
         {
             //If the text has been changed, notify about a pending save.
             RuntimeVars.Instance.OpenJob.SavePending = true;
+        }
+
+        private void btnSaveUpdate_Click(object sender, EventArgs e)
+        {
+            SaveNotes();
+        }
+
+        private void SaveNotes()
+        {
+            if (RuntimeVars.Instance.IsJobOpen)
+            {
+                RuntimeVars.Instance.OpenJob.Notes = notes;
+                StatusUpdate?.Invoke(this, new StatusArgs("Notes for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("Invalid operation: <Save Notes> => Job is not opened!"));
+            }
         }
     }
 }

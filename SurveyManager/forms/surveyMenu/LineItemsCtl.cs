@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.surveyMenu
 {
     public partial class LineItemsCtl : UserControl
     {
         private List<LineItem> items;
+
+        public EventHandler StatusUpdate;
 
         public LineItemsCtl(List<LineItem> items)
         {
@@ -49,7 +52,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            LineItem item = new LineItem(0.0M, $"<New Item {lbItems.Items.Count}>");
+            LineItem item = new LineItem();
             lbItems.Items.Add(item);
             lbItems.SelectedItem = item;
 
@@ -61,6 +64,9 @@ namespace SurveyManager.forms.surveyMenu
             LineItem selected = (LineItem)lbItems.SelectedItem;
             lbItems.Items.Remove(selected);
             lbItems.SelectedIndex = lbItems.Items.Count - 1;
+
+            if (selected.ID != 0)
+                RuntimeVars.Instance.OpenJob.RemoveLineItemID(selected.ID);
 
             UpdateSubTotal();
         }
@@ -85,8 +91,8 @@ namespace SurveyManager.forms.surveyMenu
         protected override void Dispose(bool disposing)
         {
             //When this user control is disposed (closed), update the currently open job with the new billing line items.
-            if (RuntimeVars.Instance.IsJobOpen)
-                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList();
+            SaveItems();
+                
 
             if (disposing && (components != null))
             {
@@ -97,8 +103,20 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
+            SaveItems();
+        }
+
+        private void SaveItems()
+        {
             if (RuntimeVars.Instance.IsJobOpen)
-                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList();
+            {
+                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList(); ;
+                StatusUpdate?.Invoke(this, new StatusArgs("Line items for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("Invalid operation: <Save Billing Line Items> => Job is not opened!"));
+            }
         }
     }
 }
