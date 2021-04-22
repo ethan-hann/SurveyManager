@@ -312,6 +312,12 @@ namespace SurveyManager.utility
             Office,
             Field
         }
+
+        public enum Fonts
+        {
+            Courier,
+            TimesNewRoman
+        }
     }
 
     public static class EnumExtensions

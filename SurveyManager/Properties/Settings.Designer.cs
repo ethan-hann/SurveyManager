@@ -69,5 +69,17 @@ namespace SurveyManager.Properties {
                 this["LogFilePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string DefaultSavePath {
+            get {
+                return ((string)(this["DefaultSavePath"]));
+            }
+            set {
+                this["DefaultSavePath"] = value;
+            }
+        }
     }
 }

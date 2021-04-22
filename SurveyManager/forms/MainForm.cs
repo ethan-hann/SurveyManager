@@ -15,6 +15,7 @@ using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using SurveyManager.utility.Logging;
+using SurveyManager.utility.PdfGeneration;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -74,6 +75,12 @@ namespace SurveyManager
             if (Settings.Default.LogFilePath.Equals("Undefined"))
             {
                 Settings.Default.LogFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SurveyManager", "logs");
+                Settings.Default.Save();
+            }
+
+            if (Settings.Default.DefaultSavePath.Equals("Undefined"))
+            {
+                Settings.Default.DefaultSavePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SurveyManager");
                 Settings.Default.Save();
             }
 
@@ -1112,6 +1119,15 @@ namespace SurveyManager
                 ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
                 return;
             }
+
+            string fileName = $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+            PDF.CreateDocument(fileName,
+                    $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "", 
+                    $"Billing Report - Job: {RuntimeVars.Instance.OpenJob.JobNumber} - Date: {DateTime.Now}", Fonts.TimesNewRoman, true, true, false, 12);
+            PDF.GenerateBillingReport(RuntimeVars.Instance.OpenJob);
+
+            string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+            Process.Start(path);
         }
 
         private void btnAssocClient_Click(object sender, EventArgs e)
