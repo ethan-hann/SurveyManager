@@ -212,7 +212,7 @@ namespace SurveyManager.backend.wrappers
         public TimeSpan OfficeTime { get; set; }
 
         [Browsable(false)]
-        public List<LineItem> BillingLineItems { get; private set; } = new List<LineItem>();
+        public List<LineItem> BillingLineItems { get; set; } = new List<LineItem>();
 
         [Category("Billing")]
         [Description("The total billing amount including office time, field time, and all additional line items for this survey.")]
@@ -509,6 +509,20 @@ namespace SurveyManager.backend.wrappers
             return GetOfficeBill() + GetFieldBill() + BillingLineItems.Sum(l => l.SubTotal);
         }
 
+        public void AddLineItem(LineItem item)
+        {
+            if (BillingLineItems == null)
+                BillingLineItems = new List<LineItem>();
+
+            BillingLineItems.Add(item);
+        }
+
+        public void RemoveLineItem(LineItem item)
+        {
+            if (BillingLineItems.Contains(item))
+                BillingLineItems.Remove(item);
+        }
+
         public void AddLineItemID(int id)
         {
             if (LineItemIds.Equals("N/A"))
@@ -578,7 +592,8 @@ namespace SurveyManager.backend.wrappers
         private int[] ParseLineItemIds()
         {
             string trimmed = LineItemIds.Trim();
-            string[] tokens = trimmed.Split(',');
+            string delimeter = ",";
+            string[] tokens = trimmed.Split(delimeter.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             int[] ids = new int[tokens.Length];
             for (int i = 0; i < tokens.Length; i++)
@@ -677,7 +692,7 @@ namespace SurveyManager.backend.wrappers
             foreach (CFile file in Files)
             {
                 DatabaseError fileError = file.Update();
-                if (fileError == DatabaseError.FileUpdate)
+                if (fileError == DatabaseError.FileUpdate || fileError == DatabaseError.FileIncomplete)
                     return fileError;
                 AddFileId(file.ID);
             }
@@ -691,7 +706,7 @@ namespace SurveyManager.backend.wrappers
             foreach (LineItem item in BillingLineItems)
             {
                 DatabaseError itemError = item.Update();
-                if (itemError == DatabaseError.LineItemUpdate)
+                if (itemError == DatabaseError.LineItemUpdate || itemError == DatabaseError.LineItemIncomplete)
                     return itemError;
                 AddLineItemID(item.ID);
             }

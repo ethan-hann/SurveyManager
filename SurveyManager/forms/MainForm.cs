@@ -1074,7 +1074,29 @@ namespace SurveyManager
                 return;
             }
 
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            KryptonPage lineItemPanel = new KryptonPage
+            {
+                Text = "Billing Items",
+                TextTitle = "Billing Items",
+                UniqueName = "Billing Items",
+                ImageSmall = Resources.billing_line_items_16x16,
+                ImageLarge = Resources.billing_line_items,
+                Tag = SurveyPage.IsSurveyPage
+            };
+            lineItemPanel.Controls.Add(new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingLineItems)
+            {
+                Dock = DockStyle.Fill
+            });
+
+            if (!dockingManager.ContainsPage(lineItemPanel))
+            {
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { lineItemPanel });
+            }
+            else
+            {
+                dockingManager.RemovePage(lineItemPanel, true);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { lineItemPanel });
+            }
         }
 
         private void btnCurrentBill_Click(object sender, EventArgs e)

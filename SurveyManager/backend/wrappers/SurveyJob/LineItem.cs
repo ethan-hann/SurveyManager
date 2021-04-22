@@ -66,6 +66,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// Get a value indicating if this is a valid billing line item.
         /// <para>A valid line item is one whose amount is not $0.00 and has a description.</para>
         /// </summary>
+        [Browsable(false)]
         public bool IsValidLineItem
         {
             get

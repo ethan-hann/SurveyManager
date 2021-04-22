@@ -222,6 +222,12 @@
     <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.Designer.cs">
       <DependentUpon>JobInfoCtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\surveyMenu\LineItemsCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\LineItemsCtl.Designer.cs">
+      <DependentUpon>LineItemsCtl.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -353,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\jobInfo\JobInfoCtl.resx">
       <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\LineItemsCtl.resx">
+      <DependentUpon>LineItemsCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\locationInfo\LocationCtl.resx">
       <DependentUpon>LocationCtl.cs</DependentUpon>

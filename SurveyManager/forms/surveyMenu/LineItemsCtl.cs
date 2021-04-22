@@ -1,0 +1,104 @@
+﻿using SurveyManager.backend.wrappers.SurveyJob;
+using SurveyManager.utility;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SurveyManager.forms.surveyMenu
+{
+    public partial class LineItemsCtl : UserControl
+    {
+        private List<LineItem> items;
+
+        public LineItemsCtl(List<LineItem> items)
+        {
+            InitializeComponent();
+
+            this.items = items;
+        }
+
+        private void LineItemsCtl_Load(object sender, EventArgs e)
+        {
+            foreach (LineItem item in items)
+            {
+                lbItems.Items.Add(item);
+            }
+
+            if (lbItems.Items.Count > 0)
+                lbItems.SelectedIndex = 0;
+
+            lblSubTotal.Text = "Sub Total for Line Items: " + items.Sum(i => i.SubTotal).ToString("C2");
+
+            propGrid.GetAcceptButton().Visible = false;
+            propGrid.GetClearButton().Visible = false;
+        }
+
+        private void lbItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbItems.SelectedIndex >= 0)
+            {
+                propGrid.SelectedObject = lbItems.Items[lbItems.SelectedIndex];
+            }
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            LineItem item = new LineItem(0.0M, $"<New Item {lbItems.Items.Count}>");
+            lbItems.Items.Add(item);
+            lbItems.SelectedItem = item;
+
+            UpdateSubTotal();
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            LineItem selected = (LineItem)lbItems.SelectedItem;
+            lbItems.Items.Remove(selected);
+            lbItems.SelectedIndex = lbItems.Items.Count - 1;
+
+            UpdateSubTotal();
+        }
+
+        private void UpdateSubTotal()
+        {
+            if (lbItems.Items.Count > 0)
+                lblSubTotal.Text = "Sub Total for Line Items: " + lbItems.Items.Cast<LineItem>().Sum(i => i.SubTotal).ToString("C2");
+            else
+                lblSubTotal.Text = "Sub Total for Line Items: $0.00";
+        }
+
+        private void propGrid_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
+        {
+            if (e.ChangedItem.Label.Contains("Amount") || e.ChangedItem.Label.Contains("Tax"))
+                UpdateSubTotal();
+
+            if (RuntimeVars.Instance.IsJobOpen)
+                RuntimeVars.Instance.OpenJob.SavePending = true;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            //When this user control is disposed (closed), update the currently open job with the new billing line items.
+            if (RuntimeVars.Instance.IsJobOpen)
+                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList();
+
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void btnSaveUpdate_Click(object sender, EventArgs e)
+        {
+            if (RuntimeVars.Instance.IsJobOpen)
+                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList();
+        }
+    }
+}
