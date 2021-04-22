@@ -598,6 +598,11 @@ namespace SurveyManager.backend.wrappers
             return bldr.ToString();
         }
 
+        public TimeSpan GetTotalTimeSpent()
+        {
+            return FieldTime + OfficeTime;
+        }
+
         private DatabaseError UpdateObjects()
         {
             #region Client Insert/Update

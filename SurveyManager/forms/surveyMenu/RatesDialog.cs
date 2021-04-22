@@ -26,8 +26,8 @@ namespace SurveyManager.forms.surveyMenu
         private void RatesDialog_Load(object sender, EventArgs e)
         {
             Text = "Rates for Job# " + RuntimeVars.Instance.OpenJob.JobNumber;
-            txtOfficeRate.Text = RuntimeVars.Instance.OpenJob.OfficeRate.ToString("C2");
-            txtFieldRate.Text = RuntimeVars.Instance.OpenJob.FieldRate.ToString("C2");
+            txtOfficeRate.Text = RuntimeVars.Instance.OpenJob.OfficeRate.ToString("C2").Replace("$", "");
+            txtFieldRate.Text = RuntimeVars.Instance.OpenJob.FieldRate.ToString("C2").Replace("$", "");
 
             btnUpdateRates.Click += UpdateRates;
         }

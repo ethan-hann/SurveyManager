@@ -306,6 +306,12 @@ namespace SurveyManager.utility
         {
             IsSurveyPage
         }
+
+        public enum TimeType
+        {
+            Office,
+            Field
+        }
     }
 
     public static class EnumExtensions

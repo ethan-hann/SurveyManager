@@ -1038,7 +1038,8 @@ namespace SurveyManager
                 return;
             }
 
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            TimeEntry te = new TimeEntry(TimeType.Field);
+            te.Show();
         }
 
         private void btnOfficeTime_Click(object sender, EventArgs e)
@@ -1055,7 +1056,8 @@ namespace SurveyManager
                 return;
             }
 
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            TimeEntry te = new TimeEntry(TimeType.Office);
+            te.Show();
         }
 
         private void btnBillingLineItems_Click(object sender, EventArgs e)

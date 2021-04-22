@@ -735,5 +735,23 @@
   <ItemGroup>
     <None Include="Resources\search_32x32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow_64x64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
