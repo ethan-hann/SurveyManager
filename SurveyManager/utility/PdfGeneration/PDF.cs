@@ -120,14 +120,20 @@ namespace SurveyManager.utility.PdfGeneration
             DrawStringLarge("Time to Bill", GetLeftPage());
             DrawStringLine(new Pair<string, string>("Office Time: ", s.OfficeTime.ToString()), true, new Pair<string, string>("Office SubTotal: ", s.GetOfficeBill().ToString("C2")), true, true);
             DrawStringLine(new Pair<string, string>("Field Time: ", s.FieldTime.ToString()), true, new Pair<string, string>("Field SubTotal: ", s.GetFieldBill().ToString("C2")), true, true);
-            DrawLineSeperator();
+            DrawStringBold($"SubTotal: {(s.GetFieldBill() + s.GetOfficeBill()).ToString("C2")}", GetRightPage());
 
             DrawStringLarge("Line Items", GetLeftPage());
 
             foreach (LineItem item in s.BillingLineItems)
             {
-                DrawStringPair(item.Description, item.SubTotal.ToString("C2"), GetLeftPage());
+                DrawStringLine(new Pair<string, string>(item.Description, ""), false, new Pair<string, string>("", item.SubTotal.ToString("C2")), false, true);
             }
+
+            DrawStringBold($"SubTotal: {s.GetBillingLineItemsBill():C2}", GetRightPage());
+            DrawLineSeperator();
+
+            DrawStringLargeBold($"Total Bill for this Job: {s.GetTotalBill():C2}", 
+                GetCenterPageX() - pageFontBold.MeasureString($"Total Bill for this Job: {s.GetTotalBill():C2}").Width / 2);
 
             if (isStream)
             {
@@ -158,7 +164,7 @@ namespace SurveyManager.utility.PdfGeneration
             float y = 0;
 
             //Figure out what logo to use; either the application's logo or the owning company's logo
-            Bitmap logo = Resources.logo.ToBitmap();
+            Bitmap logo = null; //Resources.logo.ToBitmap();
             
 
             //Draw image in header if we have one
