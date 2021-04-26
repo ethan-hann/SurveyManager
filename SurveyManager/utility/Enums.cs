@@ -291,7 +291,9 @@ namespace SurveyManager.utility
             [Description("No server connection defined. Can't access database. Please open a connection using the Database Connection button on the Database tab.")]
             NoDatabaseConnection,
             [Description("Survey Manager - Database: {0}\t\t{1}\t\t{2}")]
-            TitleText
+            TitleText,
+            [Description("No job is currently opened. There is nothing to generate a report for.")]
+            NoJob_FullReport
         }
 
         public enum ExitChoice

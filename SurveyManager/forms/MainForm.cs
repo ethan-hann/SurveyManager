@@ -1130,6 +1130,30 @@ namespace SurveyManager
             Process.Start(path);
         }
 
+        private void btnGenerateFullReport_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FullReport.ToDescriptionString()));
+                return;
+            }
+
+            string fileName = $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+            PDF.CreateDocument(fileName,
+                $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                $"Full Survey Report - Job: {RuntimeVars.Instance.OpenJob.JobNumber} - Date: {DateTime.Now.Date:MM-dd-yyyy}", Fonts.TimesNewRoman, true, true, false, 12);
+            PDF.GenerateFullReport(RuntimeVars.Instance.OpenJob);
+
+            string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+            Process.Start(path);
+        }
+
         private void btnAssocClient_Click(object sender, EventArgs e)
         {
             if (!RuntimeVars.Instance.DatabaseConnected)

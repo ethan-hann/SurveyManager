@@ -130,10 +130,35 @@ namespace SurveyManager.utility.PdfGeneration
             }
 
             DrawStringBold($"SubTotal: {s.GetBillingLineItemsBill():C2}", GetRightPage());
+
             DrawLineSeperator();
 
-            DrawStringLargeBold($"Total Bill for this Job: {s.GetTotalBill():C2}", 
-                GetCenterPageX() - pageFontBold.MeasureString($"Total Bill for this Job: {s.GetTotalBill():C2}").Width / 2);
+            DrawStringLargeBold($"Total Bill: {s.GetTotalBill():C2}", GetLeftPage());
+
+            if (isStream)
+            {
+                MemoryStream ms = new MemoryStream();
+                document.SaveToStream(ms);
+                document.Close();
+                return ms;
+            }
+            else
+            {
+                document.SaveToFile(savePath);
+                document.Close();
+                return null;
+            }
+        }
+
+        public static MemoryStream GenerateFullReport(Survey s)
+        {
+            if (document == null)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry("Could not generate full report for Job# " + s.JobNumber + ". There doesn't seem to be a valid document created.");
+                return null;
+            }
+
+            //TODO: Create full survey report
 
             if (isStream)
             {
