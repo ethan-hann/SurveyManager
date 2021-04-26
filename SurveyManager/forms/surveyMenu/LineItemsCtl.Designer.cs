@@ -22,12 +22,12 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSubTotal = new System.Windows.Forms.ToolStripStatusLabel();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnSaveUpdate = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
-            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -105,6 +105,17 @@ namespace SurveyManager.forms.surveyMenu
             this.btnAddItem.Values.Text = "New Item";
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
+            // propGrid
+            // 
+            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propGrid.Location = new System.Drawing.Point(0, 0);
+            this.propGrid.Name = "propGrid";
+            this.propGrid.PropertySort = System.Windows.Forms.PropertySort.Alphabetical;
+            this.propGrid.Size = new System.Drawing.Size(550, 715);
+            this.propGrid.TabIndex = 0;
+            this.propGrid.ToolbarVisible = false;
+            this.propGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propGrid_PropertyValueChanged);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -153,15 +164,6 @@ namespace SurveyManager.forms.surveyMenu
             this.btnSaveUpdate.Text = "Save and Update";
             this.btnSaveUpdate.UniqueName = "044D33CA7EE541CB8FA44D6F7BEDCE0A";
             this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
-            // 
-            // propGrid
-            // 
-            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(0, 0);
-            this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(550, 715);
-            this.propGrid.TabIndex = 0;
-            this.propGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propGrid_PropertyValueChanged);
             // 
             // LineItemsCtl
             // 

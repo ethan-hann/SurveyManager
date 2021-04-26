@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 using static SurveyManager.utility.Utility;
@@ -118,6 +119,25 @@ namespace SurveyManager.utility.PdfGeneration
                 return null;
             }
 
+            AddBillingContent(s);
+
+            if (isStream)
+            {
+                MemoryStream ms = new MemoryStream();
+                document.SaveToStream(ms);
+                document.Close();
+                return ms;
+            }
+            else
+            {
+                document.SaveToFile(savePath);
+                document.Close();
+                return null;
+            }
+        }
+
+        private static void AddBillingContent(Survey s)
+        {
             DrawStringLarge("Time to Bill", GetLeftPage());
             DrawStringLine(new Pair<string, string>("Office Time: ", s.OfficeTime.ToString()), true, new Pair<string, string>("Office SubTotal: ", s.GetOfficeBill().ToString("C2")), true, true);
             DrawStringLine(new Pair<string, string>("Field Time: ", s.FieldTime.ToString()), true, new Pair<string, string>("Field SubTotal: ", s.GetFieldBill().ToString("C2")), true, true);
@@ -135,20 +155,6 @@ namespace SurveyManager.utility.PdfGeneration
             DrawLineSeperator();
 
             DrawStringLargeBold($"Total Bill: {s.GetTotalBill():C2}", GetLeftPage());
-
-            if (isStream)
-            {
-                MemoryStream ms = new MemoryStream();
-                document.SaveToStream(ms);
-                document.Close();
-                return ms;
-            }
-            else
-            {
-                document.SaveToFile(savePath);
-                document.Close();
-                return null;
-            }
         }
 
         public static MemoryStream GenerateFullReport(Survey s)
@@ -159,10 +165,8 @@ namespace SurveyManager.utility.PdfGeneration
                 return null;
             }
 
-            //TODO: Create full survey report
             AddReportHeader(s);
             AddReportContent(s);
-            AddReportFooter(s);
 
             if (isStream)
             {
@@ -181,27 +185,31 @@ namespace SurveyManager.utility.PdfGeneration
 
         private static void AddReportHeader(Survey s)
         {
-            DrawStringLarge("Basic Information", GetCenterPageX() - headerFont.MeasureString("Basic Information").Width / 2);
+            DrawStringLarge("Basic Information", GetLeftPage());
             DrawStringPair("Survey: ", s.SurveyName, GetLeftPage());
             DrawStringPair("Abstract: ", s.AbstractNumber, GetLeftPage());
             DrawStringPair("# of Acres: ", s.Acres.ToString(), GetLeftPage());
+
             AddDescriptionString(s);
+
+            UpdateCurrentY("Description:", true);
 
             if (!s.Subdivision.Equals("N/A") || !s.LotNumber.Equals("N/A") || !s.BlockNumber.Equals("N/A") || !s.SectionNumber.Equals("N/A"))
             {
-                DrawStringLarge("Subdivision", GetCenterPageX());
+                DrawStringLarge("Subdivision", GetLeftPage());
                 DrawStringPair("Name: ", s.Subdivision, GetLeftPage());
                 DrawStringPair("Section: ", s.SectionNumber, GetLeftPage());
                 DrawStringPair("Block: ", s.BlockNumber, GetLeftPage());
                 DrawStringPair("Lot: ", s.LotNumber, GetLeftPage());
             }
 
-            DrawStringLarge("Survey Location", GetCenterPageX() - headerFont.MeasureString("Survey Location").Width / 2);
+            DrawStringLarge("Survey Location", GetLeftPage());
             DrawStringPair("Street: ", s.Location.Street, GetLeftPage());
             DrawStringPair("City: ", s.Location.City, GetLeftPage());
             DrawStringPair("Zip-Code: ", s.Location.ZipCode, GetLeftPage());
             DrawStringPair("County: ", s.County.CountyName, GetLeftPage());
-            DrawLineSeperator();
+            UpdateCurrentY("County:", true);
+
         }
 
         private static void AddDescriptionString(Survey s)
@@ -209,33 +217,140 @@ namespace SurveyManager.utility.PdfGeneration
             string temp = s.Description;
             TrimVars tv = TrimString(temp);
 
-            if (tv.numberOfLines == 0)
-            {
-                BacktrackCurrentY("\n", false);
-            }
-            else
-            {
-                for (int i = 0; i < tv.numberOfLines + 1; i++)
-                {
-                    BacktrackCurrentY("\n", false);
-                }
-            }
-
             DrawStringBold("Description: ", GetLeftPage(), false);
-            BacktrackCurrentY("Description: ", true);
-            DrawLineSeperator(true);
-            UpdateCurrentY("Description: ", true);
-            DrawString(tv.trimmedString, GetLeftPage(), false);
+            DrawString(tv.trimmedString, GetLeftPage() + pageFontBold.MeasureString("Description: ").Width + 2, true);
         }
 
         private static void AddReportContent(Survey s)
         {
-            
+            DrawStringLarge("Associations", GetLeftPage());
+            DrawStringPair("Client: ", $"{s.Client.Name}\t PH: {s.Client.PhoneNumber}", GetLeftPage());
+
+            if (s.Realtor.IsValidRealtor)
+                DrawStringPair("Realtor: ", $"{s.Realtor.Name}\t PH: {s.Realtor.PhoneNumber}", GetLeftPage());
+            else
+                DrawStringPair("Realtor: ", "N/A", GetLeftPage());
+
+            if (s.TitleCompany.IsValidCompany)
+                DrawStringPair("Title Company: ", $"{s.TitleCompany.Name}\t PH: {s.TitleCompany.OfficeNumber}", GetLeftPage());
+            else
+                DrawStringPair("Title Company: ", "N/A", GetLeftPage());
+
+            if (s.HasFiles)
+            {
+                DrawStringPair("Files: ", $"{s.NumOfFiles}\tTotal Size: {Utility.FormatSize(s.Files.Sum(f => f.Contents.Length))}", GetLeftPage());
+                if (s.Files.Count >= 10)
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (currentY >= GetBottomPage())
+                        {
+                            currentPage = document.Pages.Add();
+                            currentY = GetTopPage();
+                        }
+                        DrawStringLine(new Pair<string, string>(s.Files[i].FullFileName, ""), false, new Pair<string, string>(s.Files[i].FileSize, ""), false, true);
+                    }
+                    DrawString($"+ {s.Files.Count - 10} more. Run a file report for full file information.", GetLeftPage());
+                }
+                else
+                {
+                    foreach (CFile file in s.Files)
+                    {
+                        if (currentY >= GetBottomPage())
+                        {
+                            currentPage = document.Pages.Add();
+                            currentY = GetTopPage();
+                        }
+                        DrawStringLine(new Pair<string, string>(file.FullFileName, ""), false, new Pair<string, string>(file.FileSize, ""), false, true);
+                    }
+                }
+                
+            }
+            else
+                DrawStringPair("Files: ", "No files associated with this job.", GetLeftPage());
+
+            DrawLineSeperator();
+
+            if (currentY <= GetBottomPage())
+            {
+                currentPage = document.Pages.Add();
+                currentY = GetTopPage() - (margins.Top * 2);
+            }
+
+            DrawStringLarge("Notes", GetLeftPage());
+            DrawTable(ToTable<string>(null, ItemType.Notes, s.Notes));
+
+            //Start billing report on next page, regardless of how much space is left on the current page.
+            currentPage = document.Pages.Add();
+            currentY = GetTopPage() - (margins.Top * 2);
+
+            DrawStringLargeBold("Billing Report", GetCenterPageX() - headerFontBold.MeasureString("Billing Report").Width / 2);
+            AddBillingContent(s);
         }
 
-        private static void AddReportFooter(Survey s)
+        public static MemoryStream GenerateFileReport(Survey s)
         {
-            
+            if (document == null)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry("Could not generate file report for Job# " + s.JobNumber + ". There doesn't seem to be a valid document created.");
+                return null;
+            }
+
+            DrawString($"Below is the full detailed list of files associated with Job# {s.JobNumber}: ", GetLeftPage());
+            DrawStringPair("Total File Size: ", FormatSize(s.Files.Sum(f => f.Contents.Length)), GetLeftPage());
+            DrawStringPair("# of Files: ", s.Files.Count.ToString(), GetLeftPage());
+            UpdateCurrentY("# of Files:", true);
+
+            DrawTable(ToTable(s.Files, ItemType.Files));
+
+            if (isStream)
+            {
+                MemoryStream ms = new MemoryStream();
+                document.SaveToStream(ms);
+                document.Close();
+                return ms;
+            }
+            else
+            {
+                document.SaveToFile(savePath);
+                document.Close();
+                return null;
+            }
+        }
+
+        private static void DrawTable(DataTable dt)
+        {
+            PdfTable table = new PdfTable
+            {
+                DataSource = dt
+            };
+
+            PdfTableLayoutFormat tableLayout = new PdfTableLayoutFormat
+            {
+                Break = PdfLayoutBreakType.FitPage,
+                Layout = PdfLayoutType.Paginate
+            };
+            table.Style.CellPadding = 2;
+            table.Style.BorderPen = new PdfPen(Color.Transparent);
+            table.Style.DefaultStyle.Font = pageFont;
+            table.Style.AlternateStyle.Font = pageFont;
+            table.Style.HeaderSource = PdfHeaderSource.ColumnCaptions;
+            table.Style.HeaderStyle.BackgroundBrush = PdfBrushes.Transparent;
+            table.Style.HeaderStyle.Font = pageFontBold;
+            table.Style.HeaderStyle.StringFormat = new PdfStringFormat(PdfTextAlignment.Center);
+            table.Style.ShowHeader = true;
+            table.BeginRowLayout += new BeginRowLayoutEventHandler(table_BeginRowLayout); //ensures cells are transparent as well
+
+            //Draw table
+            currentTableLayout = table.Draw(currentPage, new PointF(GetLeftPage(), currentY), tableLayout);
+        }
+
+        private static void table_BeginRowLayout(object sender, BeginRowLayoutEventArgs args)
+        {
+            PdfCellStyle cs = new PdfCellStyle();
+            cs.BorderPen = new PdfPen(Color.Transparent);
+            cs.Font = pageFont;
+            args.CellStyle = cs;
         }
 
         #region Header and Footer
@@ -270,7 +385,7 @@ namespace SurveyManager.utility.PdfGeneration
             PdfStringFormat format = new PdfStringFormat(PdfTextAlignment.Left);
             SizeF size = headerFontBold.MeasureString(headerString, format);
             headerSpace.Graphics.DrawString(headerString, headerFontBold, PdfBrushes.Black, (headerSpace.Width / 2) - (size.Width / 2), margins.Top - (size.Height + 5), format);
-            headerSpace.Graphics.DrawString(DateTime.Now.Date.ToString("MM-dd-yyyy"), headerFontBold, PdfBrushes.Black, GetRightPage(), margins.Top - (size.Height + 5), format);
+            headerSpace.Graphics.DrawString(DateTime.Now.Date.ToString("MM-dd-yyyy"), headerFontBold, PdfBrushes.Black, GetRightPage() - headerFontBold.MeasureString(DateTime.Now.Date.ToString("MM-dd-yyyy")).Width, margins.Top - (size.Height + 5), format);
             return headerSpace;
         }
 

@@ -206,6 +206,21 @@ namespace SurveyManager.utility
             Realtor
         }
 
+        /// <summary>
+        /// Enum representing the various item types that a Survey contains.
+        /// </summary>
+        public enum ItemType
+        {
+            /// <summary>
+            /// Represents that Survey notes should be considered.
+            /// </summary>
+            Notes,
+            /// <summary>
+            /// Represents that Survey files should be considered.
+            /// </summary>
+            Files
+        }
+
         public enum FileExtension
         {
             /// <summary>
@@ -293,7 +308,11 @@ namespace SurveyManager.utility
             [Description("Survey Manager - Database: {0}\t\t{1}\t\t{2}")]
             TitleText,
             [Description("No job is currently opened. There is nothing to generate a report for.")]
-            NoJob_FullReport
+            NoJob_FullReport,
+            [Description("No job is currently opened. There is nothing to generate a full file report for.")]
+            NoJob_FileReport,
+            [Description("There are no files associated with this job; nothing to generate a full file report for.")]
+            FileReport_NoFiles
         }
 
         public enum ExitChoice

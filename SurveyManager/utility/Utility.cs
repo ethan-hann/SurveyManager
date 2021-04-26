@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SurveyManager.backend.wrappers;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
@@ -95,6 +98,56 @@ namespace SurveyManager.utility
                 }
             }
             return "NONE";
+        }
+
+        public static DataTable ToTable<T>(List<T> items, ItemType type, Dictionary<DateTime, string> dictItems = null)
+        {
+            string[] data;
+            if (items != null)
+                data = new string[items.Count];
+            else if (dictItems != null)
+                data = new string[dictItems.Count];
+            else
+                data = new string[0];
+            int counter = 0;
+            DataTable dt = new DataTable();
+
+            switch (type)
+            {
+                case ItemType.Files:
+                {
+                    
+                    List<CFile> files = items.Cast<CFile>().ToList();
+                    foreach (CFile file in files)
+                    {
+                        data[counter] = $"{file.FullFileName};{file.Description};{file.FileSize}";
+                        counter++;
+                    }
+
+                    dt.Columns.Add("Name", typeof(string));
+                    dt.Columns.Add("Description", typeof(string));
+                    dt.Columns.Add("File Size", typeof(string));
+                    break;
+                }
+                case ItemType.Notes:
+                {
+                    foreach (DateTime key in dictItems.Keys)
+                    {
+                        data[counter] = $"{key};{dictItems[key]}";
+                        counter++;
+                    }
+
+                    dt.Columns.Add("Date", typeof(string));
+                    dt.Columns.Add("Contents", typeof(string));
+                    break;
+                }
+            }
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                dt.Rows.Add(data[i].Split(';'));
+            }
+            return dt;
         }
 
         /// <summary>

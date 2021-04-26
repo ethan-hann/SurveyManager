@@ -55,6 +55,7 @@ namespace SurveyManager.forms.surveyMenu
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propGrid.Location = new System.Drawing.Point(0, 0);
             this.propGrid.Name = "propGrid";
+            this.propGrid.PropertySort = System.Windows.Forms.PropertySort.NoSort;
             this.propGrid.Size = new System.Drawing.Size(552, 450);
             this.propGrid.TabIndex = 1;
             // 

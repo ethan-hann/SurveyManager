@@ -1123,7 +1123,7 @@ namespace SurveyManager
             string fileName = $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
             PDF.CreateDocument(fileName,
                     $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "", 
-                    $"Billing Report - Job: {RuntimeVars.Instance.OpenJob.JobNumber} - Date: {DateTime.Now}", Fonts.TimesNewRoman, true, true, false, 12);
+                    $"Billing Report - Job: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
             PDF.GenerateBillingReport(RuntimeVars.Instance.OpenJob);
 
             string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
@@ -1147,8 +1147,38 @@ namespace SurveyManager
             string fileName = $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
             PDF.CreateDocument(fileName,
                 $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                $"Full Survey Report - Job: {RuntimeVars.Instance.OpenJob.JobNumber} - Date: {DateTime.Now.Date:MM-dd-yyyy}", Fonts.TimesNewRoman, true, true, false, 12);
+                $"Full Survey Report - Job#: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
             PDF.GenerateFullReport(RuntimeVars.Instance.OpenJob);
+
+            string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+            Process.Start(path);
+        }
+
+        private void btnFileDetailReport_Click(object sender, EventArgs e)
+        {
+            if (!RuntimeVars.Instance.DatabaseConnected)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                return;
+            }
+
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FileReport.ToDescriptionString()));
+                return;
+            }
+
+            if (!RuntimeVars.Instance.OpenJob.HasFiles)
+            {
+                ChangeStatusText(this, new StatusArgs(StatusText.FileReport_NoFiles.ToDescriptionString()));
+                return;
+            }
+
+            string fileName = $"File Detail Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+            PDF.CreateDocument(fileName,
+                $"File Detail Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                $"File Detail Report - Job#: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+            PDF.GenerateFileReport(RuntimeVars.Instance.OpenJob);
 
             string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
             Process.Start(path);
