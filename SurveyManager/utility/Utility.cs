@@ -120,5 +120,69 @@ namespace SurveyManager.utility
         {
             return inches * dpi;
         }
+
+        /// <summary>
+        /// Trims the string to be the length specified before a new-line character is inserted.
+        /// <para>If the new-line character would be inserted at the position of a period (.), the
+        /// new line is inserted at the index of the period + 1.</para>
+        /// <para>If the line being checked contains a new-line character already, nothing is done for that line.</para>
+        /// </summary>
+        /// <param name="text">The string to trim.</param>
+        /// <param name="lineLength">The number of characters in the line. Default is 80.</param>
+        /// <returns>A new <see cref="TrimVars"/> structure containing the trimmed string and the number of new lines.</returns>
+        public static TrimVars TrimString(string text, int lineLength = 80)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (i % lineLength == 0 && i != 0)
+                {
+                    if (text[i].Equals('.'))
+                    {
+                        if (i + 1 <= text.Length)
+                        {
+                            text = text.Insert(i + 1, "\n");
+                        }
+                        if (i + 2 <= text.Length)
+                        {
+                            text = text.Remove(i + 2, 1);
+                        }
+                    }
+                    else if (text[i].Equals('\n'))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        text = text.Insert(i, "\n");
+                    }
+                }
+            }
+            return new TrimVars(text);
+        }
+
+        /// <summary>
+        /// Represents a structure to hold a trimmed string (from <see cref="Utility.TrimString(string, int)"/>) and the number of new-lines in that string.
+        /// </summary>
+        public struct TrimVars
+        {
+            /// <summary>
+            /// The trimmed string containing new-line characters
+            /// </summary>
+            public string trimmedString { get; private set; }
+            /// <summary>
+            /// The number of new-line characters in the string
+            /// </summary>
+            public int numberOfLines { get; private set; }
+
+            /// <summary>
+            /// Get an instance of this structure with the specified string.
+            /// </summary>
+            /// <param name="trimmedString"></param>
+            public TrimVars(string trimmedString)
+            {
+                this.trimmedString = trimmedString;
+                numberOfLines = trimmedString.Count(c => c.Equals('\n'));
+            }
+        }
     }
 }

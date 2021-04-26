@@ -12,6 +12,7 @@ using System.Drawing;
 using System.IO;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
+using static SurveyManager.utility.Utility;
 
 namespace SurveyManager.utility.PdfGeneration
 {
@@ -159,6 +160,9 @@ namespace SurveyManager.utility.PdfGeneration
             }
 
             //TODO: Create full survey report
+            AddReportHeader(s);
+            AddReportContent(s);
+            AddReportFooter(s);
 
             if (isStream)
             {
@@ -173,6 +177,65 @@ namespace SurveyManager.utility.PdfGeneration
                 document.Close();
                 return null;
             }
+        }
+
+        private static void AddReportHeader(Survey s)
+        {
+            DrawStringLarge("Basic Information", GetCenterPageX() - headerFont.MeasureString("Basic Information").Width / 2);
+            DrawStringPair("Survey: ", s.SurveyName, GetLeftPage());
+            DrawStringPair("Abstract: ", s.AbstractNumber, GetLeftPage());
+            DrawStringPair("# of Acres: ", s.Acres.ToString(), GetLeftPage());
+            AddDescriptionString(s);
+
+            if (!s.Subdivision.Equals("N/A") || !s.LotNumber.Equals("N/A") || !s.BlockNumber.Equals("N/A") || !s.SectionNumber.Equals("N/A"))
+            {
+                DrawStringLarge("Subdivision", GetCenterPageX());
+                DrawStringPair("Name: ", s.Subdivision, GetLeftPage());
+                DrawStringPair("Section: ", s.SectionNumber, GetLeftPage());
+                DrawStringPair("Block: ", s.BlockNumber, GetLeftPage());
+                DrawStringPair("Lot: ", s.LotNumber, GetLeftPage());
+            }
+
+            DrawStringLarge("Survey Location", GetCenterPageX() - headerFont.MeasureString("Survey Location").Width / 2);
+            DrawStringPair("Street: ", s.Location.Street, GetLeftPage());
+            DrawStringPair("City: ", s.Location.City, GetLeftPage());
+            DrawStringPair("Zip-Code: ", s.Location.ZipCode, GetLeftPage());
+            DrawStringPair("County: ", s.County.CountyName, GetLeftPage());
+            DrawLineSeperator();
+        }
+
+        private static void AddDescriptionString(Survey s)
+        {
+            string temp = s.Description;
+            TrimVars tv = TrimString(temp);
+
+            if (tv.numberOfLines == 0)
+            {
+                BacktrackCurrentY("\n", false);
+            }
+            else
+            {
+                for (int i = 0; i < tv.numberOfLines + 1; i++)
+                {
+                    BacktrackCurrentY("\n", false);
+                }
+            }
+
+            DrawStringBold("Description: ", GetLeftPage(), false);
+            BacktrackCurrentY("Description: ", true);
+            DrawLineSeperator(true);
+            UpdateCurrentY("Description: ", true);
+            DrawString(tv.trimmedString, GetLeftPage(), false);
+        }
+
+        private static void AddReportContent(Survey s)
+        {
+            
+        }
+
+        private static void AddReportFooter(Survey s)
+        {
+            
         }
 
         #region Header and Footer
@@ -207,7 +270,7 @@ namespace SurveyManager.utility.PdfGeneration
             PdfStringFormat format = new PdfStringFormat(PdfTextAlignment.Left);
             SizeF size = headerFontBold.MeasureString(headerString, format);
             headerSpace.Graphics.DrawString(headerString, headerFontBold, PdfBrushes.Black, (headerSpace.Width / 2) - (size.Width / 2), margins.Top - (size.Height + 5), format);
-
+            headerSpace.Graphics.DrawString(DateTime.Now.Date.ToString("MM-dd-yyyy"), headerFontBold, PdfBrushes.Black, GetRightPage(), margins.Top - (size.Height + 5), format);
             return headerSpace;
         }
 
