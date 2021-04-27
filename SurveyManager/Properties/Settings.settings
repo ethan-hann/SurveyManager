@@ -17,5 +17,8 @@
     <Setting Name="DefaultSavePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">Undefined</Value>
     </Setting>
+    <Setting Name="LicenseFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

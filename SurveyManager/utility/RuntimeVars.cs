@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Standard.Licensing;
 using SurveyManager.backend.wrappers;
 using SurveyManager.utility.Logging;
 using System;
@@ -75,5 +76,7 @@ namespace SurveyManager.utility
         /// Get a reference to the main form of the application.
         /// </summary>
         public MainForm MainForm { get; set; }
+
+        public License CurrentLicense { get; set; }
     }
 }

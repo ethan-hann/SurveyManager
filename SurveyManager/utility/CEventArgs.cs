@@ -84,5 +84,15 @@ namespace SurveyManager.utility
                 Files = files;
             }
         }
+
+        public class LicensingEventArgs : EventArgs
+        {
+            public CloseReasons CloseReason { get; internal set; }
+
+            public LicensingEventArgs(CloseReasons closeReason)
+            {
+                CloseReason = closeReason;
+            }
+        }
     }
 }

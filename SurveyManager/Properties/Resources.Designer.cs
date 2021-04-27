@@ -821,6 +821,15 @@ namespace SurveyManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzJkRuEPSEdS/fD23JbrRR9k1c4wRnUXOL8RwRNNfa9aT2IQkmOsVO3PuC8ixH9iRd63914+iqgU3PqrZnbrTNw==.
+        /// </summary>
+        internal static string public_key {
+            get {
+                return ResourceManager.GetString("public_key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap realtor {

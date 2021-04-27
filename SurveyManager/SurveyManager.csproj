@@ -118,6 +118,9 @@
     <Reference Include="Spire.XLS, Version=9.2.16.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.XLS.dll</HintPath>
     </Reference>
+    <Reference Include="SSPKeyGen">
+      <HintPath>Z:\Drive\UI Libraries\DLLS\SSPKeyGen.dll</HintPath>
+    </Reference>
     <Reference Include="Standard.Licensing, Version=1.1.5.0, Culture=neutral, PublicKeyToken=9f81b18f6db6aea5, processorArchitecture=MSIL">
       <HintPath>..\packages\Standard.Licensing.1.1.5\lib\net45\Standard.Licensing.dll</HintPath>
     </Reference>
@@ -201,6 +204,12 @@
     </Compile>
     <Compile Include="forms\dialogs\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\ActivationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\ActivationDlg.Designer.cs">
+      <DependentUpon>ActivationDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\AdvancedFilter.cs">
       <SubType>Form</SubType>
@@ -356,6 +365,10 @@
     <Compile Include="utility\Filtering\TextSearchFilter.cs" />
     <Compile Include="utility\Icons\IconListManager.cs" />
     <Compile Include="utility\Icons\IconReader.cs" />
+    <Compile Include="utility\Licensing\InvalidProductKeyValidationFailure.cs" />
+    <Compile Include="utility\Licensing\Licensee.cs" />
+    <Compile Include="utility\Licensing\LicenseEngine.cs" />
+    <Compile Include="utility\Licensing\LicenseType.cs" />
     <Compile Include="utility\Logging\LogFile.cs" />
     <Compile Include="utility\Pair.cs" />
     <Compile Include="utility\PdfGeneration\PDF.cs" />
@@ -373,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\ActivationDlg.resx">
+      <DependentUpon>ActivationDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
@@ -465,6 +481,7 @@
     <None Include="Resources\realtor.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\surman_public.key" />
     <None Include="Resources\surveying.png" />
   </ItemGroup>
   <ItemGroup>

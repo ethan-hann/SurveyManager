@@ -221,6 +221,25 @@ namespace SurveyManager.utility
             Files
         }
 
+        /// <summary>
+        /// Enum representing the various close reasons a License Activation dialog can have.
+        /// </summary>
+        public enum CloseReasons
+        {
+            /// <summary>
+            /// The dialog was closed and the current license is valid.
+            /// </summary>
+            Licensed,
+            /// <summary>
+            /// The dialog was closed and the current license is invalid.
+            /// </summary>
+            Unlicensed,
+            /// <summary>
+            /// The dialog was closed and the current license was updated.
+            /// </summary>
+            Updating
+        }
+
         public enum FileExtension
         {
             /// <summary>

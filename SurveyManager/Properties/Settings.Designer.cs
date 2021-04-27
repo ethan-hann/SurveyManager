@@ -81,5 +81,17 @@ namespace SurveyManager.Properties {
                 this["DefaultSavePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string LicenseFilePath {
+            get {
+                return ((string)(this["LicenseFilePath"]));
+            }
+            set {
+                this["LicenseFilePath"] = value;
+            }
+        }
     }
 }

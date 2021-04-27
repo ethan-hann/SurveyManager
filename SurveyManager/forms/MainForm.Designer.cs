@@ -89,6 +89,7 @@ namespace SurveyManager
             this.kryptonRibbonGroupTriple14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnGenerateBillingReport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnGenerateFullReport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnFileDetailReport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.surMangRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnOpenHelp = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -126,7 +127,6 @@ namespace SurveyManager
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
             this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
-            this.btnFileDetailReport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -144,7 +144,7 @@ namespace SurveyManager
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 838);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.mainStatusStrip.Size = new System.Drawing.Size(1584, 23);
+            this.mainStatusStrip.Size = new System.Drawing.Size(1683, 23);
             this.mainStatusStrip.SizingGrip = false;
             this.mainStatusStrip.TabIndex = 3;
             // 
@@ -158,7 +158,7 @@ namespace SurveyManager
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1504, 18);
+            this.lblStatus.Size = new System.Drawing.Size(1603, 18);
             this.lblStatus.Spring = true;
             this.lblStatus.Text = "Ready";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,9 +205,8 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
-            this.mainRibbon.Size = new System.Drawing.Size(1584, 115);
+            this.mainRibbon.Size = new System.Drawing.Size(1683, 115);
             this.mainRibbon.TabIndex = 4;
             // 
             // surveyTab
@@ -582,6 +581,16 @@ namespace SurveyManager
             this.btnGenerateFullReport.ToolTipTitle = "Reporting";
             this.btnGenerateFullReport.Click += new System.EventHandler(this.btnGenerateFullReport_Click);
             // 
+            // btnFileDetailReport
+            // 
+            this.btnFileDetailReport.ImageLarge = global::SurveyManager.Properties.Resources.file_32x32;
+            this.btnFileDetailReport.ImageSmall = global::SurveyManager.Properties.Resources.file;
+            this.btnFileDetailReport.TextLine1 = "File Detail";
+            this.btnFileDetailReport.TextLine2 = "Report";
+            this.btnFileDetailReport.ToolTipBody = "Generate a full detailed report of all of the files associated with this job.";
+            this.btnFileDetailReport.ToolTipTitle = "Reporting";
+            this.btnFileDetailReport.Click += new System.EventHandler(this.btnFileDetailReport_Click);
+            // 
             // surMangRibbonGroup
             // 
             this.surMangRibbonGroup.DialogBoxLauncher = false;
@@ -612,6 +621,7 @@ namespace SurveyManager
             this.btnManageLicense.TextLine2 = "License";
             this.btnManageLicense.ToolTipBody = "Manage your license file.";
             this.btnManageLicense.ToolTipTitle = "Survey Manager";
+            this.btnManageLicense.Click += new System.EventHandler(this.btnManageLicense_Click);
             // 
             // btnSendFeedback
             // 
@@ -810,7 +820,7 @@ namespace SurveyManager
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 115);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1584, 723);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1683, 723);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.kryptonPanel1.TabIndex = 5;
             // 
@@ -828,7 +838,7 @@ namespace SurveyManager
             this.dockableWorkspace.Root.UniqueName = "FD3F779B80FA42AB2284FE60B3AE5414";
             this.dockableWorkspace.Root.WorkspaceControl = this.dockableWorkspace;
             this.dockableWorkspace.ShowMaximizeButton = false;
-            this.dockableWorkspace.Size = new System.Drawing.Size(1584, 723);
+            this.dockableWorkspace.Size = new System.Drawing.Size(1683, 723);
             this.dockableWorkspace.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dockableWorkspace.TabIndex = 0;
             this.dockableWorkspace.TabStop = true;
@@ -853,22 +863,12 @@ namespace SurveyManager
             this.checkConnectionBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.checkConnectionBGWorker_ProgressChanged);
             this.checkConnectionBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.checkConnectionBGWorker_RunWorkerCompleted);
             // 
-            // btnFileDetailReport
-            // 
-            this.btnFileDetailReport.ImageLarge = global::SurveyManager.Properties.Resources.file_32x32;
-            this.btnFileDetailReport.ImageSmall = global::SurveyManager.Properties.Resources.file;
-            this.btnFileDetailReport.TextLine1 = "File Detail";
-            this.btnFileDetailReport.TextLine2 = "Report";
-            this.btnFileDetailReport.ToolTipBody = "Generate a full detailed report of all of the files associated with this job.";
-            this.btnFileDetailReport.ToolTipTitle = "Reporting";
-            this.btnFileDetailReport.Click += new System.EventHandler(this.btnFileDetailReport_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.ClientSize = new System.Drawing.Size(1683, 861);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);

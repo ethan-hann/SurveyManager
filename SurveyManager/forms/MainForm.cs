@@ -42,6 +42,9 @@ namespace SurveyManager
         /// </summary>
         public KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
 
+        private ActivationDlg activationDialog = new ActivationDlg();
+        private bool licensed = false;
+
         public MainForm()
         {
             InitializeComponent();
@@ -88,6 +91,32 @@ namespace SurveyManager
             Directory.CreateDirectory(Settings.Default.LogFilePath);
 
             RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
+
+            activationDialog.LicensingComplete += UpdateLicense;
+        }
+
+        private void UpdateLicense(object sender, EventArgs e)
+        {
+            if (e is LicensingEventArgs args)
+            {
+                if (args.CloseReason == CloseReasons.Licensed || args.CloseReason == CloseReasons.Updating)
+                {
+                    licensed = true;
+
+                    //Set title text
+                    UpdateTitleText();
+                }
+                else if (args.CloseReason == CloseReasons.Unlicensed)
+                {
+                    licensed = false;
+                    if (RuntimeVars.Instance.IsJobOpen)
+                        CloseJob();
+
+                    UpdateTitleText();
+
+                    ChangeStatusText(this, new StatusArgs("Running an Unlicensed Copy! Most features are disabled. Please activate!"));
+                }
+            }
         }
 
         private void InitializeRibbon()
@@ -655,13 +684,33 @@ namespace SurveyManager
                 else if (texts[0].Contains("\\\\"))
                 {
                     if (RuntimeVars.Instance.IsJobOpen)
-                        Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
                     else
-                        Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[NO JOB OPENED]");
+                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
                 }
             }
             else
-                Text = string.Format(StatusText.TitleText.ToDescriptionString(), "<NONE>", "Unlicensed Copy", "[NO JOB OPENED]");
+                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+        }
+
+        private void UpdateTitleText()
+        {
+            if (RuntimeVars.Instance.IsJobOpen)
+                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+            else
+            {
+                if (RuntimeVars.Instance.DatabaseConnected)
+                    Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+                else
+                    Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+            }
+                
         }
         #endregion
 
@@ -1364,6 +1413,19 @@ namespace SurveyManager
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
             }
         }
+
+        private void btnManageLicense_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                //Always check the current license file before showing the activation! Otherwise, the user may think they are actived, when they are actually not.
+                activationDialog.ShowActivation(Standard.Licensing.License.Load(File.ReadAllText(Settings.Default.LicenseFilePath)));
+            }
+            else
+            {
+                activationDialog.ShowActivation(null);
+            }
+        }
         #endregion
 
         private void dockingManager_DockableWorkspaceCellAdding(object sender, DockableWorkspaceCellEventArgs e)
@@ -1454,7 +1516,7 @@ namespace SurveyManager
             }
             else
             {
-                ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[NO JOB OPENED]");
+                ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
                 ChangeStatusText(this, new StatusArgs("Ready"));
             }
                 
