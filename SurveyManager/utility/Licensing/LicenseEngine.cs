@@ -1,5 +1,4 @@
-﻿using SSPKeyGen;
-using Standard.Licensing;
+﻿using Standard.Licensing;
 using Standard.Licensing.Validation;
 using SurveyManager.Properties;
 using System;
@@ -20,7 +19,7 @@ namespace SurveyManager.utility.Licensing
         /// <returns>A string of validation messages and solutions to resolve, or <see cref="string.Empty"/> if the validation passed.</returns>
         public static string Validate(License l)
         {
-            if (l.Id.Equals(HardwareInfo.GenerateUID("SurveyManagerApplication")))
+            if (l.Id.Equals(""))
             {
                 IEnumerable<IValidationFailure> validationFailures = l.Validate().ExpirationDate().When(lic => lic.Type == Standard.Licensing.LicenseType.Trial).And()
                             .Signature(Resources.public_key)

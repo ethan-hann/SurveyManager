@@ -1416,15 +1416,16 @@ namespace SurveyManager
 
         private void btnManageLicense_Click(object sender, EventArgs e)
         {
-            if (licensed)
-            {
-                //Always check the current license file before showing the activation! Otherwise, the user may think they are actived, when they are actually not.
-                activationDialog.ShowActivation(Standard.Licensing.License.Load(File.ReadAllText(Settings.Default.LicenseFilePath)));
-            }
-            else
-            {
-                activationDialog.ShowActivation(null);
-            }
+            activationDialog.ShowDialog();
+            //if (licensed)
+            //{
+            //    //Always check the current license file before showing the activation! Otherwise, the user may think they are actived, when they are actually not.
+            //    activationDialog.ShowActivation(Standard.Licensing.License.Load(File.ReadAllText(Settings.Default.LicenseFilePath)));
+            //}
+            //else
+            //{
+            //    activationDialog.ShowActivation(null);
+            //}
         }
         #endregion
 

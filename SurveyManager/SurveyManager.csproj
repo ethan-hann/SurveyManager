@@ -85,6 +85,9 @@
     <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
+    <Reference Include="SeriousBit.Ellipter">
+      <HintPath>Z:\Drive\UI Libraries\DLLS\SeriousBit.Ellipter.dll</HintPath>
+    </Reference>
     <Reference Include="Spire.Barcode, Version=3.2.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Barcode.dll</HintPath>
     </Reference>
@@ -117,9 +120,6 @@
     </Reference>
     <Reference Include="Spire.XLS, Version=9.2.16.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.XLS.dll</HintPath>
-    </Reference>
-    <Reference Include="SSPKeyGen">
-      <HintPath>Z:\Drive\UI Libraries\DLLS\SSPKeyGen.dll</HintPath>
     </Reference>
     <Reference Include="Standard.Licensing, Version=1.1.5.0, Culture=neutral, PublicKeyToken=9f81b18f6db6aea5, processorArchitecture=MSIL">
       <HintPath>..\packages\Standard.Licensing.1.1.5\lib\net45\Standard.Licensing.dll</HintPath>
