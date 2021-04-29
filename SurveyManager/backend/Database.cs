@@ -110,6 +110,7 @@ namespace SurveyManager.backend
                 catch (MySqlException ex)
                 {
                     RuntimeVars.Instance.DatabaseConnected = false;
+                    RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to connect to SQL database: {ex.Message}");
                     return ex.Number;
                 }
                 finally
@@ -354,6 +355,7 @@ namespace SurveyManager.backend
                 }
             } catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete address: {a.ID}. It might be associated with another object.");
                 return false;
             }
             
@@ -563,6 +565,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete client: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -731,6 +734,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete county: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -885,10 +889,10 @@ namespace SurveyManager.backend
             return realtors;
         }
 
-        public static bool DeleteRealtor(Realtor c)
+        public static bool DeleteRealtor(Realtor r)
         {
             int affectedRows = 0;
-            string q = Queries.BuildQuery(QType.DELETE, "Realtor", null, null, $"realtor_id={c.ID}");
+            string q = Queries.BuildQuery(QType.DELETE, "Realtor", null, null, $"realtor_id={r.ID}");
 
             try
             {
@@ -915,6 +919,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete realtor: {r.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1095,6 +1100,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete title company: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1237,6 +1243,7 @@ namespace SurveyManager.backend
                             }
                             catch (Exception)
                             {
+                                RuntimeVars.Instance.LogFile.AddEntry($"Could not read file from database: {id}.");
                                 return null;
                             }
                         }
@@ -1287,6 +1294,7 @@ namespace SurveyManager.backend
                                 }
                                 catch (Exception)
                                 {
+                                    RuntimeVars.Instance.LogFile.AddEntry($"Could not read file from database: {id}.");
                                     return files;
                                 }
                             }
@@ -1334,6 +1342,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete file: {file.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1699,6 +1708,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete survey: {s.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1875,6 +1885,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete line item: {id}. It might be associated with another object.");
                 return false;
             }
 

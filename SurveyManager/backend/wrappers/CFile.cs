@@ -196,6 +196,7 @@ namespace SurveyManager.backend.wrappers
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to read a file: {path}");
                 return false;
             }
         }

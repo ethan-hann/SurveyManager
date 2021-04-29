@@ -36,7 +36,9 @@ namespace SurveyManager.utility.Logging
                 Entries.Add(DateTime.Now, logtext);
             } catch (ArgumentException)
             {
-                Console.WriteLine("Error creating log entry!");
+                //If we get an argument exception, it is because multiple events were triggered at one time resulting in the same DateTime object as the key.
+                //The solution is to just add 1 second to the DateTime object for each occurance. This should minimize collisions.
+                Entries.Add(DateTime.Now + TimeSpan.FromSeconds(1), logtext);
             }
         }
 
@@ -56,6 +58,7 @@ namespace SurveyManager.utility.Logging
                 File.WriteAllText(Path.Combine(LOG_FILE_PATH, "sm.log"), logEntries.ToString());
             } catch (Exception)
             {
+                Console.WriteLine("[CRITICAL]: Could not write to log file!!!");
                 return;
             }
         }
