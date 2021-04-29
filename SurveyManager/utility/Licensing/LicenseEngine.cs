@@ -1,4 +1,5 @@
-﻿using Standard.Licensing;
+﻿using SeriousBit.Ellipter;
+using Standard.Licensing;
 using Standard.Licensing.Validation;
 using SurveyManager.Properties;
 using System;
@@ -10,79 +11,71 @@ using System.Text;
 
 namespace SurveyManager.utility.Licensing
 {
+    /// <summary>
+    /// Licensing Engine for validating and getting the information associated with product keys.
+    /// </summary>
     public class LicenseEngine
     {
+        private static SerialsManager manager = new SerialsManager(Resources.developer_name, Resources.developer_key, KeyStrength.Use128Bits);
+        
         /// <summary>
-        /// Checks a license against the public key and against the expiration date if a trial.
+        /// Get a value indicating if the specified product key is valid for this product.
         /// </summary>
-        /// <param name="l">The license object to check.</param>
-        /// <returns>A string of validation messages and solutions to resolve, or <see cref="string.Empty"/> if the validation passed.</returns>
-        public static string Validate(License l)
+        /// <param name="productKey">The product key to check.</param>
+        /// <returns>True if the product key is valid; False otherwise.</returns>
+        public static bool CheckIfValid(string productKey)
         {
-            if (l.Id.Equals(""))
+            manager.PublicKey = Resources.public_key;
+            return manager.IsValid(productKey);
+        }
+
+        /// <summary>
+        /// Get the License information associated with the specified product key.
+        /// </summary>
+        /// <param name="productKey">The product key to get the information for.</param>
+        /// <returns>If the License information is in the correct format, returns the correct license info.
+        /// If not, returns a LicenseInfo object representing an Unlicensed entity.</returns>
+        public static LicenseInfo GetLicenseInfo(string productKey)
+        {
+            if (!CheckIfValid(productKey))
             {
-                IEnumerable<IValidationFailure> validationFailures = l.Validate().ExpirationDate().When(lic => lic.Type == Standard.Licensing.LicenseType.Trial).And()
-                            .Signature(Resources.public_key)
-                            .AssertValidLicense();
+                return LicenseInfo.CreateUnlicensedInfo();
+            }
 
-                StringBuilder builder = new StringBuilder();
-                List<IValidationFailure> failures = validationFailures.ToList();
-                if (failures.Count > 0)
-                {
-                    foreach (IValidationFailure failure in failures)
-                    {
-                        if (failure.GetType() == typeof(GeneralValidationFailure))
-                        {
-                            failure.Message = "The license file provided was invalid. Either the signature was corrupt (due to editing) or it was never valid to begin with.";
-                            failure.HowToResolve = "Please purchase a new license file or select a different one.";
-                        }
-                        else if (failure.GetType() == typeof(InvalidSignatureValidationFailure))
-                        {
-                            failure.Message = "The license file's signature was corrupted. This is likely from attempts to edit it.";
-                            failure.HowToResolve = "Either undo any edits to the file or purchase a new license file.";
-                        }
-                        else if (failure.GetType() == typeof(LicenseExpiredValidationFailure))
-                        {
-                            failure.Message = "The license file provided has expired.";
-                            failure.HowToResolve = "Please purchase a new license file or select a different one.";
-                        }
+            long serialID = manager.GetID(productKey);
+            DateTime purchaseDate = manager.GetDate(productKey);
+            string info = manager.GetInfo(productKey);
 
-                        builder.Append($"{failure.Message} {failure.HowToResolve}\n");
-                    }
-                    return builder.ToString();
-                }
-                return string.Empty;
+            info = info.Trim();
+            string[] tokens = info.Split(';');
+            if (tokens.Length == 5)
+            {
+                string appName = tokens[0];
+                string customerName = tokens[1];
+                string customerEmail = tokens[2];
+                string numOfUses = tokens[3];
+                string expirationDate = tokens[4];
+                DateTime expDate = DateTime.Parse(expirationDate);
+                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), 
+                    purchaseDate, expDate, LicenseType.Trial);
+            }
+            else if (tokens.Length == 4)
+            {
+                string appName = tokens[0];
+                string customerName = tokens[1];
+                string customerEmail = tokens[2];
+                string numOfUses = tokens[3];
+                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), purchaseDate,
+                    LicenseType.FullLicense);
             }
             else
             {
-                List<IValidationFailure> failues = new List<IValidationFailure>
-                {
-                    new InvalidProductKeyValidationFailure()
-                };
-                return $"{failues[0].Message} {failues[0].HowToResolve}";
+                return LicenseInfo.CreateUnlicensedInfo();
             }
-        }
-
-        public static bool LoadLicense(string path)
-        {
-            string contents;
-            try
-            {
-                contents = File.ReadAllText(path);
-            }
-            catch
-            {
-                return false;
-            }
-
-            RuntimeVars.Instance.CurrentLicense = License.Load(contents);
-            if (RuntimeVars.Instance.CurrentLicense != null)
-            {
-                Settings.Default.LicenseFilePath = path;
-                Settings.Default.Save();
-            }
-
-            return RuntimeVars.Instance.CurrentLicense != null;
         }
     }
 }
+
+//Serial info format:
+//Application Name; Customer Name; Customer Email; <NumOfUses>; Expiration Date;
+//If no expiration date: Application Name; Customer Name; Customer Email; <NumOfUses>;

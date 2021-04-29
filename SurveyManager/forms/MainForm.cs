@@ -91,8 +91,6 @@ namespace SurveyManager
             Directory.CreateDirectory(Settings.Default.LogFilePath);
 
             RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
-
-            activationDialog.LicensingComplete += UpdateLicense;
         }
 
         private void UpdateLicense(object sender, EventArgs e)
@@ -668,7 +666,6 @@ namespace SurveyManager
 
         private void ChangeTitleText(params string[] texts)
         {
-            //TODO: Add license check
             if (texts.Length == 3)
             {
                 Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], texts[1], texts[2]);
@@ -685,30 +682,30 @@ namespace SurveyManager
                 {
                     if (RuntimeVars.Instance.IsJobOpen)
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
-                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
                     else
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
-                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
                 }
             }
             else
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
         }
 
         private void UpdateTitleText()
         {
             if (RuntimeVars.Instance.IsJobOpen)
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
             else
             {
                 if (RuntimeVars.Instance.DatabaseConnected)
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
                 else
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.CurrentLicense.Customer.Company}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
             }
                 
         }
@@ -1416,16 +1413,22 @@ namespace SurveyManager
 
         private void btnManageLicense_Click(object sender, EventArgs e)
         {
+            activationDialog.LicensingComplete += SetLicenseStatus;
             activationDialog.ShowDialog();
-            //if (licensed)
-            //{
-            //    //Always check the current license file before showing the activation! Otherwise, the user may think they are actived, when they are actually not.
-            //    activationDialog.ShowActivation(Standard.Licensing.License.Load(File.ReadAllText(Settings.Default.LicenseFilePath)));
-            //}
-            //else
-            //{
-            //    activationDialog.ShowActivation(null);
-            //}
+        }
+
+        private void SetLicenseStatus(object sender, EventArgs e)
+        {
+            if (e is LicensingEventArgs args)
+            {
+                RuntimeVars.Instance.License = args.License;
+                licensed = RuntimeVars.Instance.IsLicensed;
+
+                if (!licensed)
+                    CloseJob();
+
+                UpdateTitleText();
+            }
         }
         #endregion
 

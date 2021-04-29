@@ -241,6 +241,24 @@ namespace SurveyManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to YAE8NGR3K776G9ZTB8XW76ACDFMRF7Y21QU24K6HX.
+        /// </summary>
+        internal static string developer_key {
+            get {
+                return ResourceManager.GetString("developer_key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thomas Smith.
+        /// </summary>
+        internal static string developer_name {
+            get {
+                return ResourceManager.GetString("developer_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap doc {
@@ -821,7 +839,7 @@ namespace SurveyManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzJkRuEPSEdS/fD23JbrRR9k1c4wRnUXOL8RwRNNfa9aT2IQkmOsVO3PuC8ixH9iRd63914+iqgU3PqrZnbrTNw==.
+        ///   Looks up a localized string similar to WUA3PRSJ62ZBWMDCUQ5SUA3PCKW3CJZQPBKJWZRMWPN44DVXZ2JVQ.
         /// </summary>
         internal static string public_key {
             get {

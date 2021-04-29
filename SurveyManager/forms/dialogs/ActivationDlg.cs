@@ -18,57 +18,55 @@ namespace SurveyManager.forms.dialogs
 {
     public partial class ActivationDlg : KryptonForm
     {
+        private LicenseInfo info;
+
         public EventHandler LicensingComplete;
 
         public ActivationDlg()
         {
             InitializeComponent();
-            
-        }
-
-        public void ShowActivation(License currentLicense)
-        {
-            
         }
 
         private void Activation_Load(object sender, EventArgs e)
         {
-            
-        }
+            if (Settings.Default.ProductKey.Equals("Unlicensed"))
+            {
+                info = LicenseInfo.CreateUnlicensedInfo();
+                lblActivationStatus.Text = "Status: No valid product key was found.";
+            }
+            else
+            {
+                info = LicenseEngine.GetLicenseInfo(Settings.Default.ProductKey);
+                if (info.IsEmpty)
+                    lblActivationStatus.Text = "Status: No valid product key was found.";
+                else
+                    lblActivationStatus.Text = "Status: Product activated. No further action needed.";
+            }
+                
 
-        private void radHasLicenseFile_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnBrowseForLicense_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SetLicenseInfo()
-        {
-            
-        }
-
-        private void SetLicenseLabel(bool isInvalid)
-        {
-            
-        }
-
-        private void lnkCopyGUID_LinkClicked(object sender, EventArgs e)
-        {
-            
+            infoPropGrid.SelectedObject = info;
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            
+            info = LicenseEngine.GetLicenseInfo(txtProductKey.Text);
+            if (info.IsEmpty)
+                lblActivationStatus.Text = "Status: The product key you entered was invalid.";
+            else
+            {
+                lblActivationStatus.Text = "Status: Successful!";
+                Settings.Default.ProductKey = txtProductKey.Text;
+            }
+
+            infoPropGrid.SelectedObject = info;
         }
 
-        private void Activation_KeyPress(object sender, KeyPressEventArgs e)
+        private void ActivationDlg_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            Enums.CloseReasons reason =
+                    (info.Type == utility.Licensing.LicenseType.FullLicense || info.Type == utility.Licensing.LicenseType.Trial) ?
+                    Enums.CloseReasons.Licensed : Enums.CloseReasons.Unlicensed;
+            LicensingComplete?.Invoke(this, new LicensingEventArgs(info, reason));
         }
     }
 }

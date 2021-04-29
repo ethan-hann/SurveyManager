@@ -366,8 +366,8 @@
     <Compile Include="utility\Icons\IconListManager.cs" />
     <Compile Include="utility\Icons\IconReader.cs" />
     <Compile Include="utility\Licensing\InvalidProductKeyValidationFailure.cs" />
-    <Compile Include="utility\Licensing\Licensee.cs" />
     <Compile Include="utility\Licensing\LicenseEngine.cs" />
+    <Compile Include="utility\Licensing\LicenseInfo.cs" />
     <Compile Include="utility\Licensing\LicenseType.cs" />
     <Compile Include="utility\Logging\LogFile.cs" />
     <Compile Include="utility\Pair.cs" />

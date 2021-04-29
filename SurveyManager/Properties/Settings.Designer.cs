@@ -84,13 +84,13 @@ namespace SurveyManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
-        public string LicenseFilePath {
+        [global::System.Configuration.DefaultSettingValueAttribute("Unlicensed")]
+        public string ProductKey {
             get {
-                return ((string)(this["LicenseFilePath"]));
+                return ((string)(this["ProductKey"]));
             }
             set {
-                this["LicenseFilePath"] = value;
+                this["ProductKey"] = value;
             }
         }
     }

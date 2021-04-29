@@ -1,4 +1,5 @@
 ﻿using SurveyManager.backend.wrappers;
+using SurveyManager.utility.Licensing;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -88,9 +89,11 @@ namespace SurveyManager.utility
         public class LicensingEventArgs : EventArgs
         {
             public CloseReasons CloseReason { get; internal set; }
+            public LicenseInfo License { get; internal set; }
 
-            public LicensingEventArgs(CloseReasons closeReason)
+            public LicensingEventArgs(LicenseInfo info, CloseReasons closeReason)
             {
+                License = info;
                 CloseReason = closeReason;
             }
         }
