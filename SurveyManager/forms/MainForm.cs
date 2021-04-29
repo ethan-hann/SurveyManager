@@ -718,35 +718,42 @@ namespace SurveyManager
             {
                 if (texts[0].Contains("JOB"))
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", texts[0]) :
-                        string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", texts[0]);
+                        string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                            + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), texts[0]);
                 else if (texts[0].Contains("\\\\"))
                 {
                     if (RuntimeVars.Instance.IsJobOpen)
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber} OPEN BUT DISABLED]") :
-                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
                     else
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
-                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
                 }
             }
             else
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
         }
 
         private void UpdateTitleText()
         {
             if (RuntimeVars.Instance.IsJobOpen)
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName} " 
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
             else
             {
                 if (RuntimeVars.Instance.DatabaseConnected)
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
                 else
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}", "[NO OPEN JOB]");
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
             }
                 
         }
