@@ -59,6 +59,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void RemoveTime(object sender, EventArgs e)
         {
+            //Add time based on labels text too!! TODO!!!
             int hours = int.Parse(txtHours.Text);
             int minutes = int.Parse(txtMinutes.Text);
             int seconds = int.Parse(txtSeconds.Text);
@@ -111,6 +112,7 @@ namespace SurveyManager.forms.surveyMenu
             int hours = int.Parse(lblHours.Text);
             hours += 1;
             lblHours.Text = hours.ToString();
+            txtHours.Text = lblHours.Text;
         }
 
         private void hoursDown_MouseClick(object sender, MouseEventArgs e)
@@ -121,6 +123,7 @@ namespace SurveyManager.forms.surveyMenu
                 hours = 0;
 
             lblHours.Text = hours.ToString();
+            txtHours.Text = lblHours.Text;
         }
 
         private void minutesUp_MouseClick(object sender, MouseEventArgs e)
@@ -128,6 +131,7 @@ namespace SurveyManager.forms.surveyMenu
             int minutes = int.Parse(lblMinutes.Text);
             minutes += 1;
             lblMinutes.Text = minutes.ToString();
+            txtMinutes.Text = lblMinutes.Text;
         }
 
         private void minutesDown_MouseClick(object sender, MouseEventArgs e)
@@ -138,6 +142,7 @@ namespace SurveyManager.forms.surveyMenu
                 minutes = 0;
 
             lblMinutes.Text = minutes.ToString();
+            txtMinutes.Text = lblMinutes.Text;
         }
 
         private void secondsUp_MouseClick(object sender, MouseEventArgs e)
@@ -145,6 +150,7 @@ namespace SurveyManager.forms.surveyMenu
             int seconds = int.Parse(lblSeconds.Text);
             seconds += 1;
             lblSeconds.Text = seconds.ToString();
+            txtSeconds.Text = lblSeconds.Text;
         }
 
         private void secondsDown_MouseClick(object sender, MouseEventArgs e)
@@ -155,6 +161,7 @@ namespace SurveyManager.forms.surveyMenu
                 seconds = 0;
 
             lblSeconds.Text = seconds.ToString();
+            txtSeconds.Text = lblSeconds.Text;
         }
 
         private void txtHours_KeyPress(object sender, KeyPressEventArgs e)

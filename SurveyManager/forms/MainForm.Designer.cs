@@ -205,6 +205,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
+            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1683, 115);
             this.mainRibbon.TabIndex = 4;
@@ -617,9 +618,8 @@ namespace SurveyManager
             // 
             this.btnManageLicense.ImageLarge = global::SurveyManager.Properties.Resources.license;
             this.btnManageLicense.ImageSmall = global::SurveyManager.Properties.Resources.license_16x16;
-            this.btnManageLicense.TextLine1 = "Manage";
-            this.btnManageLicense.TextLine2 = "License";
-            this.btnManageLicense.ToolTipBody = "Manage your license file.";
+            this.btnManageLicense.TextLine1 = "Activation";
+            this.btnManageLicense.ToolTipBody = "Activate or purchase a product key.";
             this.btnManageLicense.ToolTipTitle = "Survey Manager";
             this.btnManageLicense.Click += new System.EventHandler(this.btnManageLicense_Click);
             // 

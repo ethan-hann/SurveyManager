@@ -29,6 +29,7 @@ namespace SurveyManager.forms.dialogs
 
         private void Activation_Load(object sender, EventArgs e)
         {
+            Size = new Size(Size.Width, 168);
             if (Settings.Default.ProductKey.Equals("Unlicensed"))
             {
                 info = LicenseInfo.CreateUnlicensedInfo();
@@ -40,25 +41,44 @@ namespace SurveyManager.forms.dialogs
                 if (info.IsEmpty)
                     lblActivationStatus.Text = "Status: No valid product key was found.";
                 else
+                {
+                    txtProductKey.Text = Settings.Default.ProductKey.Substring(0, 15) + "******-******-...";
                     lblActivationStatus.Text = "Status: Product activated. No further action needed.";
+                    Size = new Size(Size.Width, 370);
+                }
             }
-                
 
             infoPropGrid.SelectedObject = info;
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            info = LicenseEngine.GetLicenseInfo(txtProductKey.Text);
-            if (info.IsEmpty)
-                lblActivationStatus.Text = "Status: The product key you entered was invalid.";
-            else
+            if (txtProductKey.Text.Length <= 0)
+            {
+                CMessageBox.Show("Product Key cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                lblActivationStatus.Text = "Status: The product key was empty.";
+                Size = new Size(Size.Width, 168);
+                return;
+            }
+
+            LicenseInfo temp = LicenseEngine.GetLicenseInfo(txtProductKey.Text);
+            if (!temp.IsEmpty)
             {
                 lblActivationStatus.Text = "Status: Successful!";
                 Settings.Default.ProductKey = txtProductKey.Text;
-            }
+                Settings.Default.Save();
+                info = temp;
 
-            infoPropGrid.SelectedObject = info;
+                infoPropGrid.SelectedObject = info;
+                Size = new Size(Size.Width, 370);
+            }
+            else
+            {
+                CMessageBox.Show("Invalid product key!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                lblActivationStatus.Text = "Status: The product key you entered was invalid.";
+                Size = new Size(Size.Width, 168);
+                return;
+            }
         }
 
         private void ActivationDlg_FormClosing(object sender, FormClosingEventArgs e)

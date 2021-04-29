@@ -31,7 +31,13 @@ namespace SurveyManager.utility.Logging
         /// <param name="logtext">The text to add.</param>
         public void AddEntry(string logtext)
         {
-            Entries.Add(DateTime.Now, logtext);
+            try
+            {
+                Entries.Add(DateTime.Now, logtext);
+            } catch (ArgumentException)
+            {
+                Console.WriteLine("Error creating log entry!");
+            }
         }
 
         /// <summary>

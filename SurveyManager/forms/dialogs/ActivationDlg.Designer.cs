@@ -81,7 +81,9 @@ namespace SurveyManager.forms.dialogs
             // 
             this.txtProductKey.Location = new System.Drawing.Point(6, 42);
             this.txtProductKey.Name = "txtProductKey";
-            this.txtProductKey.Size = new System.Drawing.Size(460, 23);
+            this.txtProductKey.Size = new System.Drawing.Size(460, 20);
+            this.txtProductKey.StateCommon.Content.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductKey.StateNormal.Content.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProductKey.TabIndex = 15;
             // 
             // statusStrip1
