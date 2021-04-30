@@ -55,7 +55,7 @@ namespace SurveyManager.utility.Licensing
                 string numOfUses = tokens[2].Trim();
                 string expirationDate = tokens[3].Trim();
                 DateTime expDate = DateTime.Parse(expirationDate);
-                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), 
+                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(),
                     purchaseDate, expDate, LicenseType.Trial);
             }
             else if (tokens.Length == 3)
