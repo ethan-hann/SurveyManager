@@ -39,7 +39,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTaxRate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtTaxRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblPercentage = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -116,7 +116,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             // 
             this.flowLayoutPanel4.Controls.Add(this.lblTaxRate);
             this.flowLayoutPanel4.Controls.Add(this.txtTaxRate);
-            this.flowLayoutPanel4.Controls.Add(this.kryptonLabel1);
+            this.flowLayoutPanel4.Controls.Add(this.lblPercentage);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 79);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(256, 32);
@@ -138,14 +138,15 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.txtTaxRate.Name = "txtTaxRate";
             this.txtTaxRate.Size = new System.Drawing.Size(63, 23);
             this.txtTaxRate.TabIndex = 1;
+            this.txtTaxRate.TextChanged += new System.EventHandler(this.txtTaxRate_TextChanged);
             // 
-            // kryptonLabel1
+            // lblPercentage
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(180, 3);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(21, 20);
-            this.kryptonLabel1.TabIndex = 2;
-            this.kryptonLabel1.Values.Text = "%";
+            this.lblPercentage.Location = new System.Drawing.Point(180, 3);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(21, 20);
+            this.lblPercentage.TabIndex = 2;
+            this.lblPercentage.Values.Text = "%";
             // 
             // CurrencySettings
             // 
@@ -178,6 +179,6 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTaxRate;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTaxRate;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPercentage;
     }
 }

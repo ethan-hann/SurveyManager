@@ -60,6 +60,14 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             txtTaxRate.Text = "0.0825";
         }
 
+        private void txtTaxRate_TextChanged(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtTaxRate.Text, out double taxRate))
+            {
+                lblPercentage.Text = $"{taxRate * 100.00} %";
+            }
+        }
+
         private void flowLayoutPanel2_MouseEnter(object sender, EventArgs e)
         {
             OnHelpTextChanged(new StatusArgs("Specify the default field rate per hour for new jobs."));

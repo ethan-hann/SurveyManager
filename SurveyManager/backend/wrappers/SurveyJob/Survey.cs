@@ -1,5 +1,6 @@
 ﻿using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.surveyMenu;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -168,10 +169,10 @@ namespace SurveyManager.backend.wrappers
         }
 
         [Browsable(false)]
-        public decimal FieldRate { get; set; }
+        public decimal FieldRate { get; set; } = Settings.Default.DefaultFieldRate;
 
         [Category("Billing")]
-        [Description("The field rate to use for billing.")]
+        [Description("The field rate to use for billing. Default is modified in application settings.")]
         [Browsable(true)]
         [DisplayName("Field Rate / Hour")]
         public string FieldRateString
@@ -183,10 +184,10 @@ namespace SurveyManager.backend.wrappers
         }
 
         [Browsable(false)]
-        public decimal OfficeRate { get; set; }
+        public decimal OfficeRate { get; set; } = Settings.Default.DefaultOfficeRate;
 
         [Category("Billing")]
-        [Description("The office rate to use for billing.")]
+        [Description("The office rate to use for billing. Default is modified in application settings.")]
         [Browsable(true)]
         [DisplayName("Office Rate / Hour")]
         public string OfficeRateString

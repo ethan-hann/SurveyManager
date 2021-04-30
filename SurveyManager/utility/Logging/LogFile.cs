@@ -8,12 +8,22 @@ using System.Threading.Tasks;
 namespace SurveyManager.utility.Logging
 {
     /// <summary>
-    /// Helper class for creating log file entries. The log file location is specified by the <see cref="LOG_FILE_PATH"/>
+    /// Helper class for creating log file entries. The log file location is specified by the <see cref="FolderPath"/>
     /// assigned in the constructor and cannot be changed while the program is running.
     /// </summary>
     public class LogFile
     {
-        private readonly string LOG_FILE_PATH;
+        public string FolderPath { get; set; }
+
+        public string FileName { get; set; } = "default.log";
+
+        public string FullPath
+        {
+             get
+             {
+                return Path.Combine(FolderPath, FileName);
+             }
+        }
 
         /// <summary>
         /// The list of Log entries for this session.
@@ -22,7 +32,7 @@ namespace SurveyManager.utility.Logging
 
         public LogFile(string logFilePath)
         {
-            LOG_FILE_PATH = logFilePath;
+            FolderPath = logFilePath;
         }
 
         /// <summary>
@@ -43,7 +53,7 @@ namespace SurveyManager.utility.Logging
         }
 
         /// <summary>
-        /// Write the contents of the <see cref="Entries"/> dictionary to the files specified by <see cref="LOG_FILE_PATH"/>.
+        /// Write the contents of the <see cref="Entries"/> dictionary to the files specified by <see cref="FolderPath"/>.
         /// </summary>
         public void WriteToFile()
         {
@@ -55,7 +65,7 @@ namespace SurveyManager.utility.Logging
 
             try
             {
-                File.WriteAllText(Path.Combine(LOG_FILE_PATH, "sm.log"), logEntries.ToString());
+                File.WriteAllText(Path.Combine(FolderPath, FileName), logEntries.ToString());
             } catch (Exception)
             {
                 Console.WriteLine("[CRITICAL]: Could not write to log file!!!");

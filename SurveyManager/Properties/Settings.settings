@@ -44,5 +44,17 @@
     <Setting Name="DefaultTaxRate" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0.0825</Value>
     </Setting>
+    <Setting Name="OverwriteLogFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LogAutoSaveInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SurveyAutoSaveInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="SurveyAutoSaveEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

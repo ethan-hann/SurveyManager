@@ -189,5 +189,53 @@ namespace SurveyManager.Properties {
                 this["DefaultTaxRate"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool OverwriteLogFile {
+            get {
+                return ((bool)(this["OverwriteLogFile"]));
+            }
+            set {
+                this["OverwriteLogFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int LogAutoSaveInterval {
+            get {
+                return ((int)(this["LogAutoSaveInterval"]));
+            }
+            set {
+                this["LogAutoSaveInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int SurveyAutoSaveInterval {
+            get {
+                return ((int)(this["SurveyAutoSaveInterval"]));
+            }
+            set {
+                this["SurveyAutoSaveInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SurveyAutoSaveEnabled {
+            get {
+                return ((bool)(this["SurveyAutoSaveEnabled"]));
+            }
+            set {
+                this["SurveyAutoSaveEnabled"] = value;
+            }
+        }
     }
 }

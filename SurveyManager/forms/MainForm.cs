@@ -94,6 +94,8 @@ namespace SurveyManager
 
             //Set log file
             RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
+            if (!Settings.Default.OverwriteLogFile)
+                RuntimeVars.Instance.LogFile.FileName = Guid.NewGuid().ToString().Substring(0, 10) + DateTime.Now.Date.ToString("MM-dd-yyyy") + ".log";
 
             //Check product key and set license status
             InitializeLicense();
@@ -305,9 +307,11 @@ namespace SurveyManager
         {
             lblStatusDate.Text = DateTime.Now.ToString();
 
-            //Update the log file every 10 minutes just in case
-            if (DateTime.Now.Minute % 10 == 0)
+            //Update the log file and survey at the correct intervals.
+            if (DateTime.Now.Minute % Settings.Default.LogAutoSaveInterval == 0)
+            {
                 RuntimeVars.Instance.LogFile.WriteToFile();
+            }
         }
 
         #region File Menu
@@ -748,33 +752,32 @@ namespace SurveyManager
                     else
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
                             string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
                 }
             }
             else
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
         }
 
         private void UpdateTitleText()
         {
             if (RuntimeVars.Instance.IsJobOpen)
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName} " 
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}" 
                         + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
             else
             {
                 if (RuntimeVars.Instance.DatabaseConnected)
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
                 else
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO OPEN JOB]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
             }
-                
         }
         #endregion
 
@@ -1080,7 +1083,7 @@ namespace SurveyManager
 
         private void CloseJob()
         {
-            ChangeTitleText("[NO JOB OPENED]");
+            ChangeTitleText("[NO JOB OPEN]");
             
             RuntimeVars.Instance.OpenJob = null;
 
@@ -1624,6 +1627,10 @@ namespace SurveyManager
                 else if (choice == ExitChoice.SaveOnly)
                 {
                     SaveSurvey();
+                    e.Cancel = true;
+                }
+                else if (choice == ExitChoice.Cancel)
+                {
                     e.Cancel = true;
                 }
             }

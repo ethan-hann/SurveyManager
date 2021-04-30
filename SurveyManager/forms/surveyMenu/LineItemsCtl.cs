@@ -54,7 +54,12 @@ namespace SurveyManager.forms.surveyMenu
         {
             LineItem item = new LineItem();
             lbItems.Items.Add(item);
-            lbItems.SelectedItem = item;
+
+            if (lbItems.Items.Count > 0)
+            {
+                lbItems.SelectedItem = item;
+                propGrid.Enabled = true;
+            }
 
             UpdateSubTotal();
         }
@@ -67,6 +72,13 @@ namespace SurveyManager.forms.surveyMenu
 
             if (selected.ID != 0)
                 RuntimeVars.Instance.OpenJob.RemoveLineItemID(selected.ID);
+
+            if (lbItems.Items.Count <= 0)
+            {
+                propGrid.SelectedObject = null;
+                propGrid.Enabled = false;
+            }
+                
 
             UpdateSubTotal();
         }

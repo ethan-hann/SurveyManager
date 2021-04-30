@@ -1,4 +1,5 @@
-﻿using SurveyManager.utility;
+﻿using SurveyManager.Properties;
+using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,10 +43,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// Any applicable tax to add to the total for this line item.
         /// </summary>
         [Category("Details")]
-        [Description("The tax rate that should be applied to the amount. Default is 0.0825 or 8.25%")]
+        [Description($"The tax rate that should be applied to the amount. Default is modified in application settings.")]
         [Browsable(true)]
         [DisplayName("Tax Rate")]
-        public double TaxRate { get; set; } = 0.0825;
+        public double TaxRate { get; set; } = Settings.Default.DefaultTaxRate;
 
         /// <summary>
         /// Get a value representing the subtotal for this line item. The subtotal is calculated using the <see cref="Amount"/> and the <see cref="TaxRate"/>.

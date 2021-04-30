@@ -98,7 +98,7 @@ namespace SurveyManager.forms.dialogs
             treeNode2.Text = "Database";
             treeNode3.Name = "emailGroup";
             treeNode3.Text = "Email";
-            treeNode4.Name = "logGroup";
+            treeNode4.Name = "filesGroup";
             treeNode4.Tag = "admin";
             treeNode4.Text = "Files";
             this.settingsTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {

@@ -86,7 +86,7 @@ namespace SurveyManager.forms.dialogs
         /// <param name="e"></param>
         private void btnToDefaults_Click(object sender, EventArgs e)
         {
-            DialogResult result = CMessageBox.Show("Are you sure you want to reset settings? Changes do not save unless you click the \"Save Settings\" button.", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+            DialogResult result = CMessageBox.Show("Are you sure you want to reset settings? Changes do not save unless you click the \"Save\" button.", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
             if (result == DialogResult.Yes)
             {
                 foreach (ISettingsControl c in settingControls)
