@@ -38,9 +38,11 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
 
             lblPath.Text = Settings.Default.LogFilePath;
             openLogFolder.SelectedPath = lblPath.Text;
+            nudAutoSaveInterval.Value = Settings.Default.LogAutoSaveInterval;
 
             //Other file options
-
+            lblReportPath.Text = Settings.Default.DefaultSavePath;
+            openReportPath.SelectedPath = lblReportPath.Text;
 
             Unchanged = false;
         }
@@ -53,10 +55,11 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             Settings.Default.LogAutoSaveInterval = (int)nudAutoSaveInterval.Value;
 
             //Other file options
+            Settings.Default.DefaultSavePath = lblReportPath.Text;
 
             Settings.Default.Save();
 
-            CMessageBox.Show("An application restart is needed for logging settings to take full effect.", "Restart Required", MessageBoxButtons.OK, Resources.warning_64x64);
+            CMessageBox.Show("An application restart is needed for some logging settings to take full effect. Please save your work and restart the application.", "Restart Required", MessageBoxButtons.OK, Resources.warning_64x64);
         }
 
         public void ToDefaults()
@@ -67,6 +70,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             radCreateNewLogFile.Checked = false;
 
             //file options defaults
+            lblReportPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SurveyManager");
         }
 
         private void btnChangeLogPath_Click(object sender, EventArgs e)
@@ -90,24 +94,47 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             }
         }
 
+        private void btnChangeReportPath_Click(object sender, EventArgs e)
+        {
+            if (openReportPath.ShowDialog() == DialogResult.OK)
+            {
+                lblReportPath.Text = openReportPath.SelectedPath;
+            }
+        }
+
         private void radCreateNewLogFile_MouseEnter(object sender, EventArgs e)
         {
-            OnHelpTextChanged(new StatusArgs("If checked, will create a new log file for every launch of the application."));
+            OnHelpTextChanged(new StatusArgs("Create a new log file every time the application is launched."));
         }
 
         private void radOverwriteLog_MouseEnter(object sender, EventArgs e)
         {
-            OnHelpTextChanged(new StatusArgs("If checked, will overwrite the existing log file everytime the application is launched."));
+            OnHelpTextChanged(new StatusArgs("Overwrite the existing log file everytime the application is launched."));
         }
 
         private void flowLayoutPanel3_MouseEnter(object sender, EventArgs e)
         {
-            OnHelpTextChanged(new StatusArgs("Defines the time between autosaves for the log file. Valid range is between 5 minutes and 120 minutes (2 hours)."));
+            OnHelpTextChanged(new StatusArgs("Defines the time between autosaves for the log file. Range: 5 => 120 minutes (2 hours)."));
+        }
+
+        private void btnChangeReportPath_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Change the default location where PDF reports are saved to."));
         }
 
         private void ResetHelpText(object sender, EventArgs e)
         {
             OnHelpTextChanged(new StatusArgs(""));
+        }
+
+        private void btnChangeLogPath_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Change the default location for log files."));
+        }
+
+        private void btnOpenLogPath_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Open the current log file in the system's default text editor."));
         }
 
         protected virtual void OnHelpTextChanged(StatusArgs args)
