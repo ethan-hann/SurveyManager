@@ -313,7 +313,7 @@ namespace SurveyManager
         #region File Menu
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-            
+            new AppSettings().ShowDialog();
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)

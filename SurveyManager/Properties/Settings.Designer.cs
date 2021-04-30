@@ -93,5 +93,101 @@ namespace SurveyManager.Properties {
                 this["ProductKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailFromAddress {
+            get {
+                return ((string)(this["MailFromAddress"]));
+            }
+            set {
+                this["MailFromAddress"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerUser {
+            get {
+                return ((string)(this["MailServerUser"]));
+            }
+            set {
+                this["MailServerUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerPassword {
+            get {
+                return ((string)(this["MailServerPassword"]));
+            }
+            set {
+                this["MailServerPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerHost {
+            get {
+                return ((string)(this["MailServerHost"]));
+            }
+            set {
+                this["MailServerHost"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MailServerPort {
+            get {
+                return ((int)(this["MailServerPort"]));
+            }
+            set {
+                this["MailServerPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.00")]
+        public decimal DefaultFieldRate {
+            get {
+                return ((decimal)(this["DefaultFieldRate"]));
+            }
+            set {
+                this["DefaultFieldRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.00")]
+        public decimal DefaultOfficeRate {
+            get {
+                return ((decimal)(this["DefaultOfficeRate"]));
+            }
+            set {
+                this["DefaultOfficeRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0825")]
+        public double DefaultTaxRate {
+            get {
+                return ((double)(this["DefaultTaxRate"]));
+            }
+            set {
+                this["DefaultTaxRate"] = value;
+            }
+        }
     }
 }

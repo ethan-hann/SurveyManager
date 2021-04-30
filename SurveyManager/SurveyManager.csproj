@@ -217,6 +217,12 @@
     <Compile Include="forms\dialogs\AdvancedFilter.Designer.cs">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.Designer.cs">
+      <DependentUpon>AppSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\CMessageBox.cs" />
     <Compile Include="forms\dialogs\CRichMsgBox.cs" />
     <Compile Include="forms\dialogs\SaveMessageForm.cs">
@@ -237,6 +243,31 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.Designer.cs">
+      <DependentUpon>CurrencySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\DatabaseSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\DatabaseSettings.Designer.cs">
+      <DependentUpon>DatabaseSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.Designer.cs">
+      <DependentUpon>EmailSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.Designer.cs">
+      <DependentUpon>FileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\ISettingsControl.cs" />
     <Compile Include="forms\fileMenu\FileBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,11 +401,13 @@
     <Compile Include="utility\Licensing\LicenseInfo.cs" />
     <Compile Include="utility\Licensing\LicenseType.cs" />
     <Compile Include="utility\Logging\LogFile.cs" />
+    <Compile Include="utility\Mail.cs" />
     <Compile Include="utility\Pair.cs" />
     <Compile Include="utility\PdfGeneration\PDF.cs" />
     <Compile Include="utility\ProcessDataTable.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
     <Compile Include="utility\Utility.cs" />
+    <Compile Include="utility\Validator.cs" />
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,8 +426,23 @@
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\AppSettings.resx">
+      <DependentUpon>AppSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\SaveMessageForm.resx">
       <DependentUpon>SaveMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\CurrencySettings.resx">
+      <DependentUpon>CurrencySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\DatabaseSettings.resx">
+      <DependentUpon>DatabaseSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\EmailSettings.resx">
+      <DependentUpon>EmailSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\FileSettings.resx">
+      <DependentUpon>FileSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\fileMenu\FileBrowser.resx">
       <DependentUpon>FileBrowser.cs</DependentUpon>

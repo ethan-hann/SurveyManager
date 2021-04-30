@@ -20,5 +20,29 @@
     <Setting Name="ProductKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">Unlicensed</Value>
     </Setting>
+    <Setting Name="MailFromAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
+    <Setting Name="MailServerUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
+    <Setting Name="MailServerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
+    <Setting Name="MailServerHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
+    <Setting Name="MailServerPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultFieldRate" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.00</Value>
+    </Setting>
+    <Setting Name="DefaultOfficeRate" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.00</Value>
+    </Setting>
+    <Setting Name="DefaultTaxRate" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.0825</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

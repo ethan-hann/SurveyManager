@@ -91,3 +91,8 @@ C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\Spire.
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\Spire.XLS.xml
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.ActivationDlg.resources
 C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\SeriousBit.Ellipter.dll
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.AppSettings.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.SettingsDialog.DatabaseSettings.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.resources
+C:\Users\TestBench\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.SettingsDialog.FileSettings.resources
