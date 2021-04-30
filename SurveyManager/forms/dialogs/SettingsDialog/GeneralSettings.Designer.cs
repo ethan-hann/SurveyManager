@@ -30,45 +30,87 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.chkEnableSurveyAutoSave = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.flpInterval = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.nudAutoSaveInterval = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.flpInterval.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel1.Controls.Add(this.chkEnableSurveyAutoSave);
+            this.flowLayoutPanel1.Controls.Add(this.flpInterval);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 352);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // flowLayoutPanel2
+            // chkEnableSurveyAutoSave
             // 
-            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel1);
-            this.flowLayoutPanel2.Controls.Add(this.kryptonNumericUpDown1);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(351, 31);
-            this.flowLayoutPanel2.TabIndex = 0;
+            this.chkEnableSurveyAutoSave.Location = new System.Drawing.Point(3, 3);
+            this.chkEnableSurveyAutoSave.Name = "chkEnableSurveyAutoSave";
+            this.chkEnableSurveyAutoSave.Size = new System.Drawing.Size(240, 20);
+            this.chkEnableSurveyAutoSave.TabIndex = 0;
+            this.chkEnableSurveyAutoSave.Values.Text = "Enable autosave feature for Survey Jobs";
+            this.chkEnableSurveyAutoSave.CheckedChanged += new System.EventHandler(this.chkEnableSurveyAutoSave_CheckedChanged);
+            this.chkEnableSurveyAutoSave.MouseEnter += new System.EventHandler(this.chkEnableSurveyAutoSave_MouseEnter);
+            this.chkEnableSurveyAutoSave.MouseLeave += new System.EventHandler(this.ResetHelpText);
+            // 
+            // flpInterval
+            // 
+            this.flpInterval.Controls.Add(this.kryptonLabel1);
+            this.flpInterval.Controls.Add(this.nudAutoSaveInterval);
+            this.flpInterval.Controls.Add(this.kryptonLabel2);
+            this.flpInterval.Location = new System.Drawing.Point(3, 29);
+            this.flpInterval.Name = "flpInterval";
+            this.flpInterval.Size = new System.Drawing.Size(311, 29);
+            this.flpInterval.TabIndex = 1;
+            this.flpInterval.Visible = false;
+            this.flpInterval.MouseEnter += new System.EventHandler(this.flpInterval_MouseEnter);
+            this.flpInterval.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(147, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(107, 20);
             this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Survey Autosave Interval: ";
+            this.kryptonLabel1.Values.Text = "Autosave Interval: ";
             // 
-            // kryptonNumericUpDown1
+            // nudAutoSaveInterval
             // 
-            this.kryptonNumericUpDown1.Location = new System.Drawing.Point(156, 3);
-            this.kryptonNumericUpDown1.Name = "kryptonNumericUpDown1";
-            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(90, 22);
-            this.kryptonNumericUpDown1.TabIndex = 1;
+            this.nudAutoSaveInterval.Location = new System.Drawing.Point(116, 3);
+            this.nudAutoSaveInterval.Maximum = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            this.nudAutoSaveInterval.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoSaveInterval.Name = "nudAutoSaveInterval";
+            this.nudAutoSaveInterval.Size = new System.Drawing.Size(90, 22);
+            this.nudAutoSaveInterval.TabIndex = 1;
+            this.nudAutoSaveInterval.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(212, 3);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(54, 20);
+            this.kryptonLabel2.TabIndex = 2;
+            this.kryptonLabel2.Values.Text = "minutes";
             // 
             // GeneralSettings
             // 
@@ -79,8 +121,9 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.Size = new System.Drawing.Size(519, 352);
             this.Load += new System.EventHandler(this.GeneralSettings_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.PerformLayout();
+            this.flpInterval.ResumeLayout(false);
+            this.flpInterval.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -88,8 +131,10 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkEnableSurveyAutoSave;
+        private System.Windows.Forms.FlowLayoutPanel flpInterval;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown kryptonNumericUpDown1;
+        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown nudAutoSaveInterval;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
     }
 }

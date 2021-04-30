@@ -50,7 +50,6 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblReportPath = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnChangeReportPath = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.openLogFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.openReportPath = new System.Windows.Forms.FolderBrowserDialog();
@@ -61,11 +60,9 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoSaveInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgReporting)).BeginInit();
             this.pgReporting.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // radCreateNewLogFile
@@ -238,7 +235,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             0,
             0});
             this.nudAutoSaveInterval.Name = "nudAutoSaveInterval";
-            this.nudAutoSaveInterval.Size = new System.Drawing.Size(50, 20);
+            this.nudAutoSaveInterval.Size = new System.Drawing.Size(50, 22);
             this.nudAutoSaveInterval.TabIndex = 7;
             this.nudAutoSaveInterval.Value = new decimal(new int[] {
             10,
@@ -272,7 +269,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel4.Controls.Add(this.kryptonLabel2);
             this.flowLayoutPanel4.Controls.Add(this.lblReportPath);
-            this.flowLayoutPanel4.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel4.Controls.Add(this.btnChangeReportPath);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
@@ -299,19 +296,9 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.lblReportPath.TabIndex = 3;
             this.lblReportPath.Values.Text = "<PATH>";
             // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel5.Controls.Add(this.btnChangeReportPath);
-            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 58);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(307, 31);
-            this.flowLayoutPanel5.TabIndex = 5;
-            // 
             // btnChangeReportPath
             // 
-            this.btnChangeReportPath.Location = new System.Drawing.Point(145, 3);
+            this.btnChangeReportPath.Location = new System.Drawing.Point(3, 58);
             this.btnChangeReportPath.Name = "btnChangeReportPath";
             this.btnChangeReportPath.Size = new System.Drawing.Size(159, 25);
             this.btnChangeReportPath.TabIndex = 4;
@@ -338,12 +325,10 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoSaveInterval)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgReporting)).EndInit();
             this.pgReporting.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -372,7 +357,6 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblReportPath;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnChangeReportPath;
         private System.Windows.Forms.FolderBrowserDialog openReportPath;
     }
