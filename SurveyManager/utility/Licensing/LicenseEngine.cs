@@ -48,23 +48,21 @@ namespace SurveyManager.utility.Licensing
 
             info = info.Trim();
             string[] tokens = info.Split(';');
-            if (tokens.Length == 5)
+            if (tokens.Length == 4)
             {
-                string appName = tokens[0];
-                string customerName = tokens[1];
-                string customerEmail = tokens[2];
-                string numOfUses = tokens[3];
-                string expirationDate = tokens[4];
+                string customerName = tokens[0].Trim();
+                string customerEmail = tokens[1].Trim();
+                string numOfUses = tokens[2].Trim();
+                string expirationDate = tokens[3].Trim();
                 DateTime expDate = DateTime.Parse(expirationDate);
                 return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), 
                     purchaseDate, expDate, LicenseType.Trial);
             }
-            else if (tokens.Length == 4)
+            else if (tokens.Length == 3)
             {
-                string appName = tokens[0];
-                string customerName = tokens[1];
-                string customerEmail = tokens[2];
-                string numOfUses = tokens[3];
+                string customerName = tokens[0].Trim();
+                string customerEmail = tokens[1].Trim();
+                string numOfUses = tokens[2].Trim();
                 return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), purchaseDate,
                     LicenseType.FullLicense);
             }
