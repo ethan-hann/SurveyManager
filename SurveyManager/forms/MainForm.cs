@@ -832,20 +832,21 @@ namespace SurveyManager
                 }
 
                 ArrayList columns = new ArrayList
-            {
-                new DBMap("job_number", "Job #"),
-                new DBMap("client_id", "Client ID"),
-                new DBMap("description", "Description"),
-                new DBMap("subdivision", "Subdivision"),
-                new DBMap("lot", "Lot #"),
-                new DBMap("block", "Block #"),
-                new DBMap("section", "Section #"),
-                new DBMap("county_id", "County"),
-                new DBMap("acres", "Acres"),
-                new DBMap("realtor_id", "Realtor ID"),
-                new DBMap("title_company_id", "Title Company ID")
-            };
+                {
+                    new DBMap("job_number", "Job #"),
+                    new DBMap("client_id", "Client ID"),
+                    new DBMap("description", "Description"),
+                    new DBMap("subdivision", "Subdivision"),
+                    new DBMap("lot", "Lot #"),
+                    new DBMap("block", "Block #"),
+                    new DBMap("section", "Section #"),
+                    new DBMap("county_id", "County"),
+                    new DBMap("acres", "Acres"),
+                    new DBMap("realtor_id", "Realtor ID"),
+                    new DBMap("title_company_id", "Title Company ID")
+                };
 
+                //TODO: add correct search filter for county
                 AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
                 filter.FilterDone += ProcessSurveySearch;
                 filter.Show();

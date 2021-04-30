@@ -196,8 +196,8 @@ namespace SurveyManager.forms.userControls
                         new DBMap("section", "Section #"),
                         new DBMap("county_id", "County"),
                         new DBMap("acres", "Acres"),
-                        new DBMap("realtor_id", "Realtor"),
-                        new DBMap("title_company_id", "Title Company")
+                        new DBMap("realtor_id", "Realtor ID"),
+                        new DBMap("title_company_id", "Title Company ID")
                     }; //TODO: combine all tables to search for surveys!
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));

@@ -100,6 +100,7 @@ namespace SurveyManager.forms.dialogs
             this.cmbColumns.Size = new System.Drawing.Size(143, 21);
             this.cmbColumns.TabIndex = 0;
             this.cmbColumns.ValueMember = "InternalField";
+            this.cmbColumns.SelectedIndexChanged += new System.EventHandler(this.cmbColumns_SelectedIndexChanged);
             // 
             // dBMapBindingSource
             // 

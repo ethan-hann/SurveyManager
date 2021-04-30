@@ -82,13 +82,13 @@ namespace SurveyManager.forms.userControls
             DatabaseError tcError = t.Insert();
             switch (tcError)
             {
-                case DatabaseError.RealtorIncomplete:
+                case DatabaseError.TitleCompanyIncomplete:
                     CMessageBox.Show("Company's name, associate's name, and associate's email cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
-                case DatabaseError.RealtorInsert:
+                case DatabaseError.TitleCompanyInsert:
                     CMessageBox.Show("Could not create the title company in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
-                case DatabaseError.RealtorUpdate:
+                case DatabaseError.TitleCompanyUpdate:
                     CMessageBox.Show("Could not update the company's information in the database.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     return;
                 case DatabaseError.NoError:

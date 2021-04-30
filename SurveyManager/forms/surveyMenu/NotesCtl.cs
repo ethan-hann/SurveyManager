@@ -35,6 +35,8 @@ namespace SurveyManager.forms.surveyMenu
 
             if (lbNoteKeys.Items.Count > 0)
                 lbNoteKeys.SelectedIndex = 0;
+            else
+                txtNoteContents.Enabled = false;
 
             lblTotalNoteCount.Text = "Total # of Notes: " + lbNoteKeys.Items.Count;
         }
@@ -54,6 +56,11 @@ namespace SurveyManager.forms.surveyMenu
             lbNoteKeys.Items.Add(now);
             lbNoteKeys.SelectedItem = now;
 
+            if (lbNoteKeys.Items.Count > 0)
+                txtNoteContents.Enabled = true;
+            else
+                txtNoteContents.Enabled = false;
+
             lblTotalNoteCount.Text = "Total # of Notes: " + lbNoteKeys.Items.Count;
         }
 
@@ -64,11 +71,19 @@ namespace SurveyManager.forms.surveyMenu
             lbNoteKeys.Items.Remove(selected);
             lbNoteKeys.SelectedIndex = lbNoteKeys.Items.Count - 1;
 
+            if (lbNoteKeys.Items.Count > 0)
+                txtNoteContents.Enabled = true;
+            else
+                txtNoteContents.Enabled = false;
+
             lblTotalNoteCount.Text = "Total # of Notes: " + lbNoteKeys.Items.Count;
         }
 
         private void txtNoteContents_TextChanged(object sender, EventArgs e)
         {
+            if (lbNoteKeys.Items.Count <= 0)
+                return;
+
             //Use regular expressions to protect against the user inserting the delimeter for seperating time and note entries in the database.
             MatchCollection mc = Regex.Matches(txtNoteContents.Text, "(\\/\\*--\\*\\/)+", RegexOptions.Multiline);
             foreach (Match m in mc)
