@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.dialogs.SettingsDialog
 {
-    public partial class DatabaseSettings : UserControl, ISettingsControl
+    public partial class GeneralSettings : UserControl, ISettingsControl
     {
         public string UniqueName { get => "database"; }
 
@@ -18,15 +19,17 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
 
         public event ISettingsControl.ChangeStatusText HelpTextChanged;
 
-        public DatabaseSettings()
+        public GeneralSettings()
         {
             InitializeComponent();
+            Dock = DockStyle.Fill;
         }
 
 
-        private void DatabaseSettings_Load(object sender, EventArgs e)
+        private void GeneralSettings_Load(object sender, EventArgs e)
         {
-
+            
+            Unchanged = false;
         }
 
         public void SaveSettings()
@@ -37,6 +40,11 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         public void ToDefaults()
         {
             
+        }
+
+        protected virtual void OnHelpTextChanged(StatusArgs args)
+        {
+            HelpTextChanged?.Invoke(args);
         }
     }
 }

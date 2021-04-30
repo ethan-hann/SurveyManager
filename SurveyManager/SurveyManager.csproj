@@ -249,11 +249,11 @@
     <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.Designer.cs">
       <DependentUpon>CurrencySettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\DatabaseSettings.cs">
+    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\DatabaseSettings.Designer.cs">
-      <DependentUpon>DatabaseSettings.cs</DependentUpon>
+    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.Designer.cs">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.cs">
       <SubType>UserControl</SubType>
@@ -435,8 +435,8 @@
     <EmbeddedResource Include="forms\dialogs\SettingsDialog\CurrencySettings.resx">
       <DependentUpon>CurrencySettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\dialogs\SettingsDialog\DatabaseSettings.resx">
-      <DependentUpon>DatabaseSettings.cs</DependentUpon>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\SettingsDialog\EmailSettings.resx">
       <DependentUpon>EmailSettings.cs</DependentUpon>

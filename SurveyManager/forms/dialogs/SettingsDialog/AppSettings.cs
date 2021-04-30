@@ -20,7 +20,7 @@ namespace SurveyManager.forms.dialogs
         //Create a list of setting controls with all of the UserControls considered setting screens
         private readonly List<ISettingsControl> settingControls = new List<ISettingsControl>
         {
-            new CurrencySettings(),  new DatabaseSettings(), new EmailSettings(), new FileSettings()
+            new CurrencySettings(),  new GeneralSettings(), new EmailSettings(), new FileSettings()
         };
 
         /// <summary>

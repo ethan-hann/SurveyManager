@@ -29,8 +29,8 @@ namespace SurveyManager.forms.dialogs
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Currency");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Database");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("General");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Currency");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Email");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Files");
             this.panel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -91,11 +91,11 @@ namespace SurveyManager.forms.dialogs
             this.settingsTreeView.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorOverflow;
             this.settingsTreeView.Location = new System.Drawing.Point(0, 0);
             this.settingsTreeView.Name = "settingsTreeView";
-            treeNode1.Name = "currencyGroup";
-            treeNode1.Text = "Currency";
-            treeNode2.Name = "databaseGroup";
-            treeNode2.Tag = "admin";
-            treeNode2.Text = "Database";
+            treeNode1.Name = "generalGroup";
+            treeNode1.Tag = "admin";
+            treeNode1.Text = "General";
+            treeNode2.Name = "currencyGroup";
+            treeNode2.Text = "Currency";
             treeNode3.Name = "emailGroup";
             treeNode3.Text = "Email";
             treeNode4.Name = "filesGroup";
@@ -107,7 +107,6 @@ namespace SurveyManager.forms.dialogs
             treeNode3,
             treeNode4});
             this.settingsTreeView.Size = new System.Drawing.Size(167, 214);
-            this.settingsTreeView.Sorted = true;
             this.settingsTreeView.TabIndex = 0;
             this.settingsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.settingsTreeView_AfterSelect);
             // 

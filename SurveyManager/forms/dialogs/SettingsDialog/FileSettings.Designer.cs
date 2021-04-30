@@ -44,7 +44,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.btnChangeLogPath = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblSaveInterval = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.nudAutoSaveInterval = new System.Windows.Forms.NumericUpDown();
+            this.nudAutoSaveInterval = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pgReporting = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -367,7 +367,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         private System.Windows.Forms.FolderBrowserDialog openLogFolder;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblSaveInterval;
-        private System.Windows.Forms.NumericUpDown nudAutoSaveInterval;
+        private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown nudAutoSaveInterval;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
