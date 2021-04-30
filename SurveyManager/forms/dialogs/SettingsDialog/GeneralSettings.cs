@@ -1,4 +1,5 @@
 ﻿using SurveyManager.Properties;
+using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,6 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             if (chkEnableSurveyAutoSave.Checked)
                 nudAutoSaveInterval.Value = Settings.Default.SurveyAutoSaveInterval;
 
-
             Unchanged = false;
         }
 
@@ -43,6 +43,9 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             Settings.Default.SurveyAutoSaveInterval = (int)nudAutoSaveInterval.Value;
             Settings.Default.SurveyAutoSaveEnabled = chkEnableSurveyAutoSave.Checked;
             Settings.Default.Save();
+
+            //Set the new autosave interval
+            RuntimeVars.Instance.MainForm.SetSurveyAutosaveInterval(Settings.Default.SurveyAutoSaveInterval);
         }
 
         public void ToDefaults()

@@ -54,6 +54,9 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             Settings.Default.LogFilePath = lblPath.Text;
             Settings.Default.LogAutoSaveInterval = (int)nudAutoSaveInterval.Value;
 
+            //Set the new autosave intervals
+            RuntimeVars.Instance.MainForm.SetLogAutosaveInterval(Settings.Default.LogAutoSaveInterval);
+
             //Other file options
             Settings.Default.DefaultSavePath = lblReportPath.Text;
 

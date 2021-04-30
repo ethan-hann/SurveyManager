@@ -99,6 +99,62 @@ namespace SurveyManager
 
             //Check product key and set license status
             InitializeLicense();
+
+            //Set and enable autosave timers
+            surveyAutosave.Interval = (int) TimeSpan.FromMinutes(Settings.Default.SurveyAutoSaveInterval).TotalMilliseconds;
+            logAutoSave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.LogAutoSaveInterval).TotalMilliseconds;
+
+            surveyAutosave.Enabled = Settings.Default.SurveyAutoSaveEnabled;
+            logAutoSave.Enabled = true;
+
+            if (surveyAutosave.Enabled)
+                surveyAutosave.Start();
+
+            if (logAutoSave.Enabled)
+                logAutoSave.Start();
+        }
+
+        private void surveyAutosave_Tick(object sender, EventArgs e)
+        {
+            if (Settings.Default.SurveyAutoSaveEnabled)
+            {
+                if (RuntimeVars.Instance.IsJobOpen)
+                {
+                    if (RuntimeVars.Instance.OpenJob.IsValidSurvey)
+                    {
+                        if (!saveDataBackgroundWorker.IsBusy)
+                        {
+                            if (SaveSurvey())
+                            {
+                                ChangeStatusText(this, new StatusArgs($"Autosave completed for Job# {RuntimeVars.Instance.OpenJob.JobNumber}"));
+                            }
+                        }
+                    }
+                    else
+                    {
+                        ChangeStatusText(this, new StatusArgs($"Could not autosave Job# {RuntimeVars.Instance.OpenJob.JobNumber}. It is not a valid survey job."));
+                    }
+                }
+            }
+        }
+
+        private void logAutoSave_Tick(object sender, EventArgs e)
+        {
+            RuntimeVars.Instance.LogFile.WriteToFile();
+        }
+
+        public void SetSurveyAutosaveInterval(int minutes)
+        {
+            surveyAutosave.Stop();
+            surveyAutosave.Interval = (int)TimeSpan.FromMinutes(minutes).TotalMilliseconds;
+            surveyAutosave.Start();
+        }
+
+        public void SetLogAutosaveInterval(int minutes)
+        {
+            logAutoSave.Stop();
+            logAutoSave.Interval = (int)TimeSpan.FromMinutes(minutes).TotalMilliseconds;
+            logAutoSave.Start();
         }
 
         private void InitializeLicense()
@@ -306,12 +362,6 @@ namespace SurveyManager
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             lblStatusDate.Text = DateTime.Now.ToString();
-
-            //Update the log file and survey at the correct intervals.
-            if (DateTime.Now.Minute % Settings.Default.LogAutoSaveInterval == 0)
-            {
-                RuntimeVars.Instance.LogFile.WriteToFile();
-            }
         }
 
         #region File Menu
@@ -667,6 +717,7 @@ namespace SurveyManager
             {
                 lblStatus.Text = args.StatusString;
                 RuntimeVars.Instance.LogFile.AddEntry(args.StatusString);
+                RuntimeVars.Instance.LogFile.WriteToFile();
             }
         }
 

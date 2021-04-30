@@ -127,6 +127,8 @@ namespace SurveyManager
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
             this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
+            this.surveyAutosave = new System.Windows.Forms.Timer(this.components);
+            this.logAutoSave = new System.Windows.Forms.Timer(this.components);
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -863,6 +865,14 @@ namespace SurveyManager
             this.checkConnectionBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.checkConnectionBGWorker_ProgressChanged);
             this.checkConnectionBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.checkConnectionBGWorker_RunWorkerCompleted);
             // 
+            // surveyAutosave
+            // 
+            this.surveyAutosave.Tick += new System.EventHandler(this.surveyAutosave_Tick);
+            // 
+            // logAutoSave
+            // 
+            this.logAutoSave.Tick += new System.EventHandler(this.logAutoSave_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -988,6 +998,8 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnGenerateBillingReport;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnGenerateFullReport;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnFileDetailReport;
+        private System.Windows.Forms.Timer surveyAutosave;
+        private System.Windows.Forms.Timer logAutoSave;
     }
 }
 
