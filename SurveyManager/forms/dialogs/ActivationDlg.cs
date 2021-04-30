@@ -64,6 +64,18 @@ namespace SurveyManager.forms.dialogs
             LicenseInfo temp = LicenseEngine.GetLicenseInfo(txtProductKey.Text);
             if (!temp.IsEmpty)
             {
+                if (temp.Type == utility.Licensing.LicenseType.Trial)
+                {
+                    if (DateTime.Now.Date >= temp.ExpirationDate.Date)
+                    {
+                        CMessageBox.Show($"Trial key is no longer valid for use. " +
+                        $"It expired on: {temp.ExpirationDate.Date.ToShortDateString()}. " +
+                        "You can request a new one by using the \"Purchase New Product Key\" button.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                        lblActivationStatus.Text = "Status: Invalid trial key; expired.";
+                        return;
+                    }
+                }
+
                 lblActivationStatus.Text = "Status: Successful!";
                 Settings.Default.ProductKey = txtProductKey.Text;
                 Settings.Default.Save();

@@ -96,6 +96,11 @@ namespace SurveyManager
             RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
 
             //Check product key and set license status
+            InitializeLicense();
+        }
+
+        private void InitializeLicense()
+        {
             RuntimeVars.Instance.License = LicenseEngine.GetLicenseInfo(Settings.Default.ProductKey);
             if (RuntimeVars.Instance.License.IsEmpty)
             {
@@ -104,6 +109,20 @@ namespace SurveyManager
             }
             else
             {
+                //If the license type is a trial and today is the day of the trial expiration, show message and let user know.
+                if (RuntimeVars.Instance.License.Type == LicenseType.Trial & DateTime.Now.Date >= RuntimeVars.Instance.License.ExpirationDate.Date)
+                {
+                    licensed = false;
+                    CMessageBox.Show("Your trial period has ended. Please purchase a new product key or request a new trial key. " +
+                    "Most features are disabled until the product is activated.", "End of Trial", MessageBoxButtons.OK, Resources.warning_64x64);
+                    Settings.Default.ProductKey = "Unlicensed";
+                    Settings.Default.Save();
+
+                    SetLicenseStatus(this, new LicensingEventArgs(LicenseInfo.CreateUnlicensedInfo(), CloseReasons.Unlicensed));
+                    return;
+                }
+
+                //Otherwise, assume it to be a full key and set the license.
                 licensed = true;
                 SetLicenseStatus(this, new LicensingEventArgs(RuntimeVars.Instance.License, CloseReasons.Licensed));
             }
