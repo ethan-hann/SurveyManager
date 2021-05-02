@@ -1121,8 +1121,10 @@ namespace SurveyManager
             if (surveyError != DatabaseError.NoError)
             {
                 RuntimeVars.Instance.OpenJob.SavePending = false;
-                CMessageBox.Show("Something went wrong while trying to save the job. Check the information and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                ChangeStatusText(this, new StatusArgs("Saving of Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " failed!"));
+                CRichMsgBox.Show("Something went wrong while trying to save the job. Check the information and try again. The message below may help figure out where saving went wrong...", 
+                "Error", surveyError.ToDescriptionString(), MessageBoxButtons.OK, Resources.error_64x64);
+
+                ChangeStatusText(this, new StatusArgs("Saving of Job# " + RuntimeVars.Instance.OpenJob.JobNumber + $" failed with error: {surveyError.ToDescriptionString()}"));
                 progressBar.Visible = false;
                 return;
             }
@@ -1297,7 +1299,7 @@ namespace SurveyManager
                     ImageLarge = Resources.billing_line_items,
                     Tag = SurveyPage.IsSurveyPage
                 };
-                LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.LineItems);
+                LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingObject.GetLineItems());
                 ctl.StatusUpdate += ChangeStatusText;
                 ctl.Dock = DockStyle.Fill;
                 lineItemPanel.Controls.Add(ctl);

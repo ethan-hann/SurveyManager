@@ -18,8 +18,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
     /// </summary>
     public class Billing : DatabaseWrapper
     {
-        private List<BillingItem> items = new List<BillingItem>();
-        private List<LineItem> lineItems = new List<LineItem>();
+        private readonly List<BillingItem> items = new List<BillingItem>();
+        private readonly List<LineItem> lineItems = new List<LineItem>();
 
         [Browsable(false)]
         public string LineItemIds { get; set; } = "N/A";
@@ -29,6 +29,16 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public Billing() { }
 
+        public List<BillingItem> GetBillingItems()
+        {
+            return items;
+        }
+
+        public List<LineItem> GetLineItems()
+        {
+            return lineItems;
+        }
+
         public void SetObjects()
         {
             if (!BillingIds.Equals("N/A"))
@@ -36,7 +46,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 Thread dbThread = new Thread(() =>
                 {
                     int[] ids = ParseIds(BillingIds);
-                    items = Database.GetBillingItems(ids);
+                    List<BillingItem> temp = Database.GetBillingItems(ids);
+                    items.AddRange(temp);
                 })
                 {
                     IsBackground = true
@@ -48,7 +59,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 Thread dbThread = new Thread(() =>
                 {
                     int[] ids = ParseIds(LineItemIds);
-                    lineItems = Database.GetLineItems(ids);
+                    List<LineItem> temp = Database.GetLineItems(ids);
+                    lineItems.AddRange(temp);
                 })
                 {
                     IsBackground = true
@@ -99,10 +111,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public void AddLineItem(LineItem item)
         {
-            if (lineItems == null)
-                lineItems = new List<LineItem>();
-
             lineItems.Add(item);
+        }
+
+        public void AddLineItemsRange(ICollection<LineItem> lItems, bool clearListFirst)
+        {
+            if (clearListFirst)
+                lineItems.Clear();
+
+            lineItems.AddRange(lItems);
         }
 
         public void RemoveLineItem(LineItem item)
@@ -135,9 +152,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public void AddBilling(BillingItem item)
         {
-            if (items == null)
-                items = new List<BillingItem>();
             items.Add(item);
+        }
+
+        public void AddBillingRange(ICollection<BillingItem> billingItems, bool clearListFirst)
+        {
+            if (clearListFirst)
+                items.Clear();
+
+            items.AddRange(billingItems);
         }
 
         public void RemoveBilling(BillingItem item)
@@ -175,6 +198,11 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         public TimeSpan GetTotalOfficeTime()
         {
             return TimeSpan.FromTicks(items.Sum(b => b.OfficeTime.Ticks));
+        }
+
+        public TimeSpan GetTotalTime()
+        {
+            return GetTotalFieldTime() + GetTotalOfficeTime();
         }
 
         /// <summary>

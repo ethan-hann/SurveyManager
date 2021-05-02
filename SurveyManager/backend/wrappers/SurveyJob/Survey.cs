@@ -552,17 +552,6 @@ namespace SurveyManager.backend.wrappers
                 return DatabaseError.CountyInsert;
             #endregion
 
-            #region Billing Object
-            BillingObject.
-            foreach (LineItem item in LineItems)
-            {
-                DatabaseError itemError = item.Update();
-                if (itemError == DatabaseError.LineItemUpdate || itemError == DatabaseError.LineItemIncomplete)
-                    return itemError;
-                AddLineItemID(item.ID);
-            }
-            #endregion
-
             return DatabaseError.NoError;
         }
 
@@ -579,12 +568,9 @@ namespace SurveyManager.backend.wrappers
                     return fileError;
             }
 
-            foreach (LineItem item in LineItems)
-            {
-                DatabaseError itemError = Database.DeleteLineItem(item.ID) ? DatabaseError.NoError : DatabaseError.LineItemDelete;
-                if (itemError == DatabaseError.LineItemDelete)
-                    return itemError;
-            }
+            DatabaseError e = BillingObject.Delete();
+            if (e != DatabaseError.NoError)
+                return e;
 
             return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;
         }
@@ -598,9 +584,13 @@ namespace SurveyManager.backend.wrappers
             if (!IsValidSurvey)
                 return DatabaseError.SurveyIncomplete;
 
-            DatabaseError updateObjectsError = UpdateObjects();
-            if (updateObjectsError != DatabaseError.NoError)
-                return updateObjectsError;
+            DatabaseError e = UpdateObjects();
+            if (e != DatabaseError.NoError)
+                return e;
+
+            e = BillingObject.Insert();
+            if (e != DatabaseError.NoError)
+                return e;
 
             return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }
@@ -615,9 +605,13 @@ namespace SurveyManager.backend.wrappers
             if (!IsValidSurvey)
                 return DatabaseError.SurveyIncomplete;
 
-            DatabaseError updateObjectsError = UpdateObjects();
-            if (updateObjectsError != DatabaseError.NoError)
-                return updateObjectsError;
+            DatabaseError e = UpdateObjects();
+            if (e != DatabaseError.NoError)
+                return e;
+
+            e = BillingObject.Update();
+            if (e != DatabaseError.NoError)
+                return e;
 
             return Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
         }

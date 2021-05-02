@@ -56,162 +56,202 @@ namespace SurveyManager.utility
             /// <summary>
             /// No error has occured.
             /// </summary>
+            [Description("No database error has occured.")]
             NoError,
             /// <summary>
             /// Error when a client's data is missing important information.
             /// </summary>
+            [Description("The client's information is missing or incomplete.")]
             ClientIncomplete,
             /// <summary>
             /// Error when inserting client data.
             /// </summary>
+            [Description("There was an error inserting the client's information into the database.")]
             ClientInsert,
             /// <summary>
             /// Error when updating client data.
             /// </summary>
+            [Description("There was an error updating the existing client's information in the database.")]
             ClientUpdate,
             /// <summary>
             /// Error when deleting client data.
             /// </summary>
+            [Description("There was an error deleting the existing client from the database.")]
             ClientDelete,
             /// <summary>
             /// Error when inserting address data.
             /// </summary>
+            [Description("There was an error inserting an address into the database.")]
             AddressInsert,
             /// <summary>
             /// Error when updating address data.
             /// </summary>
+            [Description("There was an error updating an existing address in the database.")]
             AddressUpdate,
             /// <summary>
             /// Error when deleting address data.
             /// </summary>
+            [Description("There was an error deleting an existing address from the database.")]
             AddressDelete,
             /// <summary>
             /// Error when an address is missing important information
             /// </summary>
+            [Description("The address's information was missing or incomplete.")]
             AddressIncomplete,
             /// <summary>
             /// Error when inserting county data.
             /// </summary>
+            [Description("There was an error inserting the county's information into the database.")]
             CountyInsert,
             /// <summary>
             /// Error when updating county data.
             /// </summary>
+            [Description("There was an error updating the existing county's information in the database.")]
             CountyUpdate,
             /// <summary>
             /// Error when deleting county data.
             /// </summary>
+            [Description("There was an error deleting an existing county from the database.")]
             CountyDelete,
             /// <summary>
             /// Error when inserting realtor data.
             /// </summary>
+            [Description("There was an error inserting the realtor's information into the database.")]
             RealtorInsert,
             /// <summary>
             /// Error when updating realtor data.
             /// </summary>
+            [Description("There was an error updating the existing realtor's information in the database.")]
             RealtorUpdate,
             /// <summary>
             /// Error when deleting realtor data.
             /// </summary>
+            [Description("There was an error deleting an existing realtor from the database.")]
             RealtorDelete,
             /// <summary>
             /// Error when a realtor is missing important information
             /// </summary>
+            [Description("The realtor's information was missing or incomplete.")]
             RealtorIncomplete,
             /// <summary>
             /// Error when inseting title company data.
             /// </summary>
+            [Description("There was an error inserting the title company's information into the database.")]
             TitleCompanyInsert,
             /// <summary>
             /// Error when updating title company data.
             /// </summary>
+            [Description("There was an error updating the existing title company's information in the database.")]
             TitleCompanyUpdate,
             /// <summary>
             /// Error when deleting title company data.
             /// </summary>
+            [Description("There was an error deleting an existing title company from the database.")]
             TitleCompanyDelete,
             /// <summary>
             /// Error when a title company is missing important information.
             /// </summary>
+            [Description("The title company's information was missing or incomplete.")]
             TitleCompanyIncomplete,
             /// <summary>
             /// Error when inserting file data.
             /// </summary>
+            [Description("There was an error inserting the file's information into the database.")]
             FileInsert,
             /// <summary>
             /// Error when updating file data.
             /// </summary>
+            [Description("There was an error updating an existing file's information in the database.")]
             FileUpdate,
             /// <summary>
             /// Error when deleting file data.
             /// </summary>
+            [Description("There was an error deleting an existing file from the database.")]
             FileDelete,
             /// <summary>
             /// Error when a file is missing important information.
             /// </summary>
+            [Description("The file's information was missing or incomplete.")]
             FileIncomplete,
             /// <summary>
             /// Error when inserting survey data.
             /// </summary>
+            [Description("There was an error inserting the survey's information into the database.")]
             SurveyInsert,
             /// <summary>
             /// Error when updating survey data.
             /// </summary>
+            [Description("There was an error updating the existing survey's information in the database.")]
             SurveyUpdate,
             /// <summary>
             /// Error when deleting survey data.
             /// </summary>
+            [Description("There was an error deleting an existing survey from the database.")]
             SurveyDelete,
             /// <summary>
             /// Error when a survey is missing important information.
             /// </summary>
+            [Description("The survey's information was missing or incomplete.")]
             SurveyIncomplete,
             /// <summary>
             /// Error when inserting a billing line item.
             /// </summary>
+            [Description("There was an error inserting the line item's information into the database.")]
             LineItemInsert,
             /// <summary>
             /// Error when updating a billing line item.
             /// </summary>
+            [Description("There was an error updating an existing line item's information in the database.")]
             LineItemUpdate,
             /// <summary>
             /// Error when deleting a billing line item.
             /// </summary>
+            [Description("There was an error deleting an existing line item from the database.")]
             LineItemDelete,
             /// <summary>
             /// Error when a billing line item is missing important information.
             /// </summary>
+            [Description("The line item's information was missing or incomplete.")]
             LineItemIncomplete,
             /// <summary>
             /// Error when inserting a rate item.
             /// </summary>
+            [Description("There was an error inserting the rate's information into the database.")]
             RateInsert,
             /// <summary>
             /// Error when updating a rate item.
             /// </summary>
+            [Description("There was an error updating an existing rate's information in the database.")]
             RateUpdate,
             /// <summary>
             /// Error when deleting a rate item.
             /// </summary>
+            [Description("There was an error deleting an existing rate from the database.")]
             RateDelete,
             /// <summary>
             /// Error when a rate item is missing important information.
             /// </summary>
+            [Description("The rate's information was missing or incomplete.")]
             RateIncomplete,
             /// <summary>
             /// Error when inserting a billing item.
             /// </summary>
+            [Description("There was an error inserting the billing item's information into the database.")]
             BillingItemInsert,
             /// <summary>
             /// Error when updating a billing item.
             /// </summary>
+            [Description("There was an error updating an existing billing item's information in the database.")]
             BillingItemUpdate,
             /// <summary>
             /// Error when deleting a billing item.
             /// </summary>
+            [Description("There was an error deleting an existing billing item from the database.")]
             BillingItemDelete,
             /// <summary>
             /// Error when a billing item is missing important information.
             /// </summary>
+            [Description("The billing item's information was missing or incomplete.")]
             BillingItemIncomplete
         }
 
@@ -405,6 +445,15 @@ namespace SurveyManager.utility
     public static class EnumExtensions
     {
         public static string ToDescriptionString(this StatusText val)
+        {
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])val
+               .GetType()
+               .GetField(val.ToString())
+               .GetCustomAttributes(typeof(DescriptionAttribute), false);
+            return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+        }
+
+        public static string ToDescriptionString(this DatabaseError val)
         {
             DescriptionAttribute[] attributes = (DescriptionAttribute[])val
                .GetType()

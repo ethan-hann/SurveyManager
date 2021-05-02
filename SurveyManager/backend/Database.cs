@@ -2112,7 +2112,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0 ? GetLastRowIDInserted("Rates") : 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Billing") : 0;
         }
 
         public static bool UpdateBillingItem(BillingItem item)

@@ -119,7 +119,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 if (ID == 0)
                 {
                     ID = Database.InsertLineItem(this);
-                    e = ID == 0 ? DatabaseError.NoError : DatabaseError.LineItemInsert;
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.LineItemInsert;
                 }
                 else
                 {

@@ -27,40 +27,40 @@ namespace SurveyManager.forms.surveyMenu
         {
             Text = "Rates for Job# " + RuntimeVars.Instance.OpenJob.JobNumber;
 
-            txtOfficeRate.Text = RuntimeVars.Instance.OpenJob.OfficeRateString.Replace("$", "");
-            txtFieldRate.Text = RuntimeVars.Instance.OpenJob.FieldRateString.Replace("$", "");
+            //txtOfficeRate.Text = RuntimeVars.Instance.OpenJob.OfficeRateString.Replace("$", "");
+            //txtFieldRate.Text = RuntimeVars.Instance.OpenJob.FieldRateString.Replace("$", "");
 
             btnUpdateRates.Click += UpdateRates;
         }
 
         private void UpdateRates(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtOfficeRate.Text, out decimal officeRate))
-            {
-                if (decimal.TryParse(txtFieldRate.Text, out decimal fieldRate))
-                {
-                    if (RuntimeVars.Instance.OpenJob.OfficeRate != officeRate || RuntimeVars.Instance.OpenJob.FieldRate != fieldRate)
-                    {
-                        RuntimeVars.Instance.OpenJob.SavePending = true;
-                        RuntimeVars.Instance.OpenJob.OfficeRate = officeRate;
-                        RuntimeVars.Instance.OpenJob.FieldRate = fieldRate;
-                        StatusUpdate?.Invoke(this, new StatusArgs("Rates updated for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + ". Office Rate=" + officeRate.ToString("C2") + " per hour; Field Rate=" + fieldRate.ToString("C2")));
-                    }
-                    else
-                    {
-                        StatusUpdate?.Invoke(this, new StatusArgs("No rates were changed therefore there is nothing to save."));
-                    }
-                    Close();
-                }
-                else
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs("Could not update the field rate for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " with the rate " + fieldRate));
-                }
-            }
-            else
-            {
-                StatusUpdate?.Invoke(this, new StatusArgs("Could not update the office rate for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " with the rate " + officeRate));
-            }
+            //if (decimal.TryParse(txtOfficeRate.Text, out decimal officeRate))
+            //{
+            //    if (decimal.TryParse(txtFieldRate.Text, out decimal fieldRate))
+            //    {
+            //        if (RuntimeVars.Instance.OpenJob.OfficeRate != officeRate || RuntimeVars.Instance.OpenJob.FieldRate != fieldRate)
+            //        {
+            //            RuntimeVars.Instance.OpenJob.SavePending = true;
+            //            RuntimeVars.Instance.OpenJob.OfficeRate = officeRate;
+            //            RuntimeVars.Instance.OpenJob.FieldRate = fieldRate;
+            //            StatusUpdate?.Invoke(this, new StatusArgs("Rates updated for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + ". Office Rate=" + officeRate.ToString("C2") + " per hour; Field Rate=" + fieldRate.ToString("C2")));
+            //        }
+            //        else
+            //        {
+            //            StatusUpdate?.Invoke(this, new StatusArgs("No rates were changed therefore there is nothing to save."));
+            //        }
+            //        Close();
+            //    }
+            //    else
+            //    {
+            //        StatusUpdate?.Invoke(this, new StatusArgs("Could not update the field rate for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " with the rate " + fieldRate));
+            //    }
+            //}
+            //else
+            //{
+            //    StatusUpdate?.Invoke(this, new StatusArgs("Could not update the office rate for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " with the rate " + officeRate));
+            //}
         }
 
         private void txtOfficeRate_KeyPress(object sender, KeyPressEventArgs e)

@@ -103,7 +103,7 @@ namespace SurveyManager.backend.wrappers
 
         public override string ToString()
         {
-            return $"{Amount.ToString("C2")} per {TimeUnit}";
+            return $"{Description} - {Amount.ToString("C2")} per {TimeUnit}";
         }
 
         public DatabaseError Insert()

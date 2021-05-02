@@ -71,7 +71,7 @@ namespace SurveyManager.forms.surveyMenu
             lbItems.SelectedIndex = lbItems.Items.Count - 1;
 
             if (selected.ID != 0)
-                RuntimeVars.Instance.OpenJob.RemoveLineItemID(selected.ID);
+                RuntimeVars.Instance.OpenJob.BillingObject.RemoveLineItemID(selected.ID);
 
             if (lbItems.Items.Count <= 0)
             {
@@ -122,7 +122,7 @@ namespace SurveyManager.forms.surveyMenu
         {
             if (RuntimeVars.Instance.IsJobOpen)
             {
-                RuntimeVars.Instance.OpenJob.LineItems = lbItems.Items.Cast<LineItem>().ToList(); ;
+                RuntimeVars.Instance.OpenJob.BillingObject.AddLineItemsRange(lbItems.Items.Cast<LineItem>().ToList(), true);
                 StatusUpdate?.Invoke(this, new StatusArgs("Line items for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
             }
             else

@@ -139,22 +139,22 @@ namespace SurveyManager.utility.PdfGeneration
         private static void AddBillingContent(Survey s)
         {
             DrawStringLarge("Time to Bill", GetLeftPage());
-            DrawStringLine(new Pair<string, string>("Office Time: ", s.OfficeTime.ToString()), true, new Pair<string, string>("Office SubTotal: ", s.GetOfficeBill().ToString("C2")), true, true);
-            DrawStringLine(new Pair<string, string>("Field Time: ", s.FieldTime.ToString()), true, new Pair<string, string>("Field SubTotal: ", s.GetFieldBill().ToString("C2")), true, true);
-            DrawStringBold($"SubTotal: {(s.GetFieldBill() + s.GetOfficeBill()).ToString("C2")}", GetRightPage());
+            //DrawStringLine(new Pair<string, string>("Office Time: ", s.OfficeTime.ToString()), true, new Pair<string, string>("Office SubTotal: ", s.GetOfficeBill().ToString("C2")), true, true);
+            //DrawStringLine(new Pair<string, string>("Field Time: ", s.FieldTime.ToString()), true, new Pair<string, string>("Field SubTotal: ", s.GetFieldBill().ToString("C2")), true, true);
+            //DrawStringBold($"SubTotal: {(s.GetFieldBill() + s.GetOfficeBill()).ToString("C2")}", GetRightPage());
 
-            DrawStringLarge("Line Items", GetLeftPage());
+            //DrawStringLarge("Line Items", GetLeftPage());
 
-            foreach (LineItem item in s.LineItems)
-            {
-                DrawStringLine(new Pair<string, string>(item.Description, ""), false, new Pair<string, string>("", item.SubTotal.ToString("C2")), false, true);
-            }
+            //foreach (LineItem item in s.LineItems)
+            //{
+            //    DrawStringLine(new Pair<string, string>(item.Description, ""), false, new Pair<string, string>("", item.SubTotal.ToString("C2")), false, true);
+            //}
 
-            DrawStringBold($"SubTotal: {s.GetBillingLineItemsBill():C2}", GetRightPage());
+            //DrawStringBold($"SubTotal: {s.GetBillingLineItemsBill():C2}", GetRightPage());
 
-            DrawLineSeperator();
+            //DrawLineSeperator();
 
-            DrawStringLargeBold($"Total Bill: {s.GetTotalBill():C2}", GetLeftPage());
+            //DrawStringLargeBold($"Total Bill: {s.GetTotalBill():C2}", GetLeftPage());
         }
 
         public static MemoryStream GenerateFullReport(Survey s)

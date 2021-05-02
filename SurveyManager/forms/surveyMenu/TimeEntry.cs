@@ -43,12 +43,12 @@ namespace SurveyManager.forms.surveyMenu
             {
                 case TimeType.Field:
                 {
-                    RuntimeVars.Instance.OpenJob.AddFieldTime(timeToAdd);
+                    //RuntimeVars.Instance.OpenJob.AddFieldTime(timeToAdd);
                     break;
                 }
                 case TimeType.Office:
                 {
-                    RuntimeVars.Instance.OpenJob.AddOfficeTime(timeToAdd);
+                    //RuntimeVars.Instance.OpenJob.AddOfficeTime(timeToAdd);
                     break;
                 }
             }
@@ -69,12 +69,12 @@ namespace SurveyManager.forms.surveyMenu
             {
                 case TimeType.Field:
                 {
-                    RuntimeVars.Instance.OpenJob.RemoveFieldTime(timeToRemove);
+                    //RuntimeVars.Instance.OpenJob.RemoveFieldTime(timeToRemove);
                     break;
                 }
                 case TimeType.Office:
                 {
-                    RuntimeVars.Instance.OpenJob.RemoveOfficeTime(timeToRemove);
+                    //RuntimeVars.Instance.OpenJob.RemoveOfficeTime(timeToRemove);
                     break;
                 }
             }
@@ -85,7 +85,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void SetTotalTimeLabel()
         {
-            TimeSpan totalTime = RuntimeVars.Instance.OpenJob.GetTotalTimeSpent();
+            TimeSpan totalTime = RuntimeVars.Instance.OpenJob.BillingObject.GetTotalTime();
             lblTotalTime.Text = "Total Time = " + $"{totalTime.Hours} hour(s), {totalTime.Minutes} minute(s), {totalTime.Seconds} second(s)";
         }
 
