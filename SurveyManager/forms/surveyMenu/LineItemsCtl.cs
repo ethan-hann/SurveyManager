@@ -122,7 +122,7 @@ namespace SurveyManager.forms.surveyMenu
         {
             if (RuntimeVars.Instance.IsJobOpen)
             {
-                RuntimeVars.Instance.OpenJob.BillingLineItems = lbItems.Items.Cast<LineItem>().ToList(); ;
+                RuntimeVars.Instance.OpenJob.LineItems = lbItems.Items.Cast<LineItem>().ToList(); ;
                 StatusUpdate?.Invoke(this, new StatusArgs("Line items for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
             }
             else

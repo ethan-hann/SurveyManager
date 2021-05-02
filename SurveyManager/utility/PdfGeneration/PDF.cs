@@ -145,7 +145,7 @@ namespace SurveyManager.utility.PdfGeneration
 
             DrawStringLarge("Line Items", GetLeftPage());
 
-            foreach (LineItem item in s.BillingLineItems)
+            foreach (LineItem item in s.LineItems)
             {
                 DrawStringLine(new Pair<string, string>(item.Description, ""), false, new Pair<string, string>("", item.SubTotal.ToString("C2")), false, true);
             }

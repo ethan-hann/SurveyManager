@@ -176,12 +176,15 @@ namespace SurveyManager
                     Settings.Default.ProductKey = "Unlicensed";
                     Settings.Default.Save();
 
+                    RuntimeVars.Instance.LogFile.AddEntry("Trial has ended. Features are disabled.");
+
                     SetLicenseStatus(this, new LicensingEventArgs(LicenseInfo.CreateUnlicensedInfo(), CloseReasons.Unlicensed));
                     return;
                 }
 
                 //Otherwise, assume it to be a full key and set the license.
                 licensed = true;
+                RuntimeVars.Instance.LogFile.AddEntry("Product is licensed! All features are enabled.");
                 SetLicenseStatus(this, new LicensingEventArgs(RuntimeVars.Instance.License, CloseReasons.Licensed));
             }
         }
@@ -442,7 +445,7 @@ namespace SurveyManager
                 }
                 else
                 {
-                    CMessageBox.Show($"Congrats! You are running the current version.\nVersion: {Assembly.GetExecutingAssembly().GetName().Version}", "No Updates", MessageBoxButtons.OK, Resources.info_64x64);
+                    CMessageBox.Show($"Congrats! You are running the latest version.\nVersion: {Assembly.GetExecutingAssembly().GetName().Version}", "No Updates", MessageBoxButtons.OK, Resources.info_64x64);
                 }
             }
             else
@@ -673,7 +676,7 @@ namespace SurveyManager
                 switch (args.ExceptionCode)
                 {
                     case 0: //the user specified did not exist or did not have the correct permissions
-                        CMessageBox.Show("The database user did not exist.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                        CMessageBox.Show("The database user did not exist or does not have the appropiate permissions.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
                     break;
                     case 1042: //could not reach the hostname
                         CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
@@ -1294,7 +1297,7 @@ namespace SurveyManager
                     ImageLarge = Resources.billing_line_items,
                     Tag = SurveyPage.IsSurveyPage
                 };
-                LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingLineItems);
+                LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.LineItems);
                 ctl.StatusUpdate += ChangeStatusText;
                 ctl.Dock = DockStyle.Fill;
                 lineItemPanel.Controls.Add(ctl);

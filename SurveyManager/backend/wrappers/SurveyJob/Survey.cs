@@ -169,51 +169,31 @@ namespace SurveyManager.backend.wrappers
         }
 
         [Browsable(false)]
-        public decimal FieldRate { get; set; } = Settings.Default.DefaultFieldRate;
+        public Billing BillingObject { get; set; } = new Billing();
 
         [Category("Billing")]
-        [Description("The field rate to use for billing. Default is modified in application settings.")]
+        [Description("The total amount of field time spent on this job.")]
         [Browsable(true)]
-        [DisplayName("Field Rate / Hour")]
-        public string FieldRateString
-        {
-            get
-            {
-                return string.Format("{0:C}", FieldRate);
-            }
-        }
-
-        [Browsable(false)]
-        public decimal OfficeRate { get; set; } = Settings.Default.DefaultOfficeRate;
-
-        [Category("Billing")]
-        [Description("The office rate to use for billing. Default is modified in application settings.")]
-        [Browsable(true)]
-        [DisplayName("Office Rate / Hour")]
-        public string OfficeRateString
-        {
-            get
-            {
-                return string.Format("{0:C}", OfficeRate);
-            }
-        }
-
-        [Category("Billing")]
-        [Description("The current field time spent on this survey job; format = hours:minutes:seconds")]
-        [Browsable(true)]
-        [ReadOnly(true)]
         [DisplayName("Field Time")]
-        public TimeSpan FieldTime { get; set; }
+        public TimeSpan TotalFieldTime
+        {
+            get
+            {
+                return BillingObject.GetTotalFieldTime();
+            }
+        }
 
         [Category("Billing")]
-        [Description("The current office time spent on this survey job; format = hours:minutes:seconds")]
+        [Description("The total amount of office time spent on this job.")]
         [Browsable(true)]
-        [ReadOnly(true)]
         [DisplayName("Office Time")]
-        public TimeSpan OfficeTime { get; set; }
-
-        [Browsable(false)]
-        public List<LineItem> BillingLineItems { get; set; } = new List<LineItem>();
+        public TimeSpan TotalOfficeTime
+        { 
+            get
+            {
+                return BillingObject.GetTotalOfficeTime();
+            }
+        }
 
         [Category("Billing")]
         [Description("The total billing amount including office time, field time, and all additional line items for this survey.")]
@@ -223,12 +203,9 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return string.Format("{0:C}", GetTotalBill());
+                return string.Format("{0:C}", BillingObject.GetTotalBill());
             }
         }
-
-        [Browsable(false)]
-        public string LineItemIds { get; set; } = "N/A";
 
         [Browsable(false)]
         public Dictionary<DateTime, string> Notes { get; internal set; } = new Dictionary<DateTime, string>();
@@ -317,20 +294,8 @@ namespace SurveyManager.backend.wrappers
             {
                 Thread dbThread = new Thread(() =>
                 {
-                    int[] ids = ParseFileIds();
+                    int[] ids = ParseIds(FileIds);
                     Files = Database.GetFiles(ids);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
-            }
-            if (!LineItemIds.Equals("N/A"))
-            {
-                Thread dbThread = new Thread(() =>
-                {
-                    int[] ids = ParseLineItemIds();
-                    BillingLineItems = Database.GetLineItems(ids);
                 })
                 {
                     IsBackground = true
@@ -341,6 +306,8 @@ namespace SurveyManager.backend.wrappers
             {
                 ParseNotes(NotesString);
             }
+
+            BillingObject.SetObjects();
         }
 
         /// <summary>
@@ -374,18 +341,6 @@ namespace SurveyManager.backend.wrappers
             Files = files.ToList();
             FileIds = "";
         }
-
-        //private void SetFileIds()
-        //{
-        //    FileIds = "";
-        //    foreach (CFile file in Files)
-        //    {
-        //        if (file.ID != 0)
-        //            AddFileId(file.ID);
-        //        else
-                    
-        //    }
-        //}
 
         /// <summary>
         /// Remove a file, if it exists, from the associated file list.
@@ -445,107 +400,6 @@ namespace SurveyManager.backend.wrappers
                 FileIds = "N/A";
         }
 
-        private int[] ParseFileIds()
-        {
-            string trimmed = FileIds.Trim();
-            string[] tokens = trimmed.Split(',');
-
-            int[] ids = new int[tokens.Length - 1];
-            for (int i = 0; i < tokens.Length - 1; i++)
-            {
-                ids[i] = int.Parse(tokens[i]);
-            }
-            return ids;
-        }
-
-        public void AddFieldTime(TimeSpan timeToAdd)
-        {
-            FieldTime = FieldTime.Add(timeToAdd);
-        }
-
-        public void AddOfficeTime(TimeSpan timeToAdd)
-        {
-            OfficeTime = OfficeTime.Add(timeToAdd);
-        }
-
-        public void RemoveFieldTime(TimeSpan timeToRemove)
-        {
-            FieldTime = FieldTime.Subtract(timeToRemove);
-        }
-
-        public void RemoveOfficeTime(TimeSpan timeToRemove)
-        {
-            OfficeTime = OfficeTime.Subtract(timeToRemove);
-        }
-
-        /// <summary>
-        /// Get the current office bill for this survey job.
-        /// </summary>
-        /// <returns>A decimal value representing the current office bill.</returns>
-        public decimal GetOfficeBill()
-        {
-            return (decimal)((double)OfficeRate * OfficeTime.TotalHours);
-        }
-
-        /// <summary>
-        /// Get the current field bill for this survey job.
-        /// </summary>
-        /// <returns>A decimal value representing the current field bill.</returns>
-        public decimal GetFieldBill()
-        {
-            return (decimal)((double)FieldRate * FieldTime.TotalHours);
-        }
-
-        public decimal GetBillingLineItemsBill()
-        {
-            return BillingLineItems.Sum(l => l.SubTotal);
-        }
-
-        /// <summary>
-        /// Get the total bill for this survey job. The total bill is the office bill + the field bill + any additional line items.
-        /// </summary>
-        /// <returns>A decimal value representing the current total bill.</returns>
-        public decimal GetTotalBill()
-        {
-            return GetOfficeBill() + GetFieldBill() + BillingLineItems.Sum(l => l.SubTotal);
-        }
-
-        public void AddLineItem(LineItem item)
-        {
-            if (BillingLineItems == null)
-                BillingLineItems = new List<LineItem>();
-
-            BillingLineItems.Add(item);
-        }
-
-        public void RemoveLineItem(LineItem item)
-        {
-            if (BillingLineItems.Contains(item))
-                BillingLineItems.Remove(item);
-        }
-
-        public void AddLineItemID(int id)
-        {
-            if (LineItemIds.Equals("N/A"))
-                LineItemIds = "";
-
-            if (LineItemIds.Contains($"{id}"))
-                return;
-
-            StringBuilder str = new StringBuilder(LineItemIds);
-            str.Append($"{id}, ");
-            LineItemIds = str.ToString().Trim();
-        }
-
-        public void RemoveLineItemID(int id)
-        {
-            StringBuilder str = new StringBuilder(LineItemIds);
-            str.Replace($"{id},", string.Empty);
-            LineItemIds = str.ToString().Trim();
-            if (LineItemIds.Equals(""))
-                LineItemIds = "N/A";
-        }
-
         public void AddNote(DateTime time, string newNote)
         {
             if (!Notes.ContainsKey(time))
@@ -590,9 +444,9 @@ namespace SurveyManager.backend.wrappers
             return true;
         }
 
-        private int[] ParseLineItemIds()
+        private int[] ParseIds(string strids)
         {
-            string trimmed = LineItemIds.Trim();
+            string trimmed = strids.Trim();
             string delimeter = ",";
             string[] tokens = trimmed.Split(delimeter.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
@@ -612,11 +466,6 @@ namespace SurveyManager.backend.wrappers
                 bldr.Append($"{key.Ticks}/*--*/{Notes[key]}/*--*/");
             }
             return bldr.ToString();
-        }
-
-        public TimeSpan GetTotalTimeSpent()
-        {
-            return FieldTime + OfficeTime;
         }
 
         private DatabaseError UpdateObjects()
@@ -703,8 +552,9 @@ namespace SurveyManager.backend.wrappers
                 return DatabaseError.CountyInsert;
             #endregion
 
-            #region Line Items
-            foreach (LineItem item in BillingLineItems)
+            #region Billing Object
+            BillingObject.
+            foreach (LineItem item in LineItems)
             {
                 DatabaseError itemError = item.Update();
                 if (itemError == DatabaseError.LineItemUpdate || itemError == DatabaseError.LineItemIncomplete)
@@ -729,7 +579,7 @@ namespace SurveyManager.backend.wrappers
                     return fileError;
             }
 
-            foreach (LineItem item in BillingLineItems)
+            foreach (LineItem item in LineItems)
             {
                 DatabaseError itemError = Database.DeleteLineItem(item.ID) ? DatabaseError.NoError : DatabaseError.LineItemDelete;
                 if (itemError == DatabaseError.LineItemDelete)

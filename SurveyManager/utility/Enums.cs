@@ -180,7 +180,39 @@ namespace SurveyManager.utility
             /// <summary>
             /// Error when a billing line item is missing important information.
             /// </summary>
-            LineItemIncomplete
+            LineItemIncomplete,
+            /// <summary>
+            /// Error when inserting a rate item.
+            /// </summary>
+            RateInsert,
+            /// <summary>
+            /// Error when updating a rate item.
+            /// </summary>
+            RateUpdate,
+            /// <summary>
+            /// Error when deleting a rate item.
+            /// </summary>
+            RateDelete,
+            /// <summary>
+            /// Error when a rate item is missing important information.
+            /// </summary>
+            RateIncomplete,
+            /// <summary>
+            /// Error when inserting a billing item.
+            /// </summary>
+            BillingItemInsert,
+            /// <summary>
+            /// Error when updating a billing item.
+            /// </summary>
+            BillingItemUpdate,
+            /// <summary>
+            /// Error when deleting a billing item.
+            /// </summary>
+            BillingItemDelete,
+            /// <summary>
+            /// Error when a billing item is missing important information.
+            /// </summary>
+            BillingItemIncomplete
         }
 
         /// <summary>
@@ -332,6 +364,16 @@ namespace SurveyManager.utility
             NoJob_FileReport,
             [Description("There are no files associated with this job; nothing to generate a full file report for.")]
             FileReport_NoFiles
+        }
+
+        /// <summary>
+        /// Enum representing the various time units to use for billing.
+        /// </summary>
+        public enum TimeUnit
+        {
+            Minute,
+            Hour,
+            Day
         }
 
         public enum ExitChoice
