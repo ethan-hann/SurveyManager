@@ -1998,6 +1998,45 @@ namespace SurveyManager.backend
             return item;
         }
 
+        public static List<Rate> GetRates()
+        {
+            List<Rate> items = new List<Rate>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                string q = Queries.BuildQuery(QType.SELECT, "Rates", null, null);
+
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Rate item = new Rate
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Description = reader.GetString(1),
+                                    Amount = reader.GetDecimal(2),
+                                    TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
+                                    CountyID = reader.GetInt32(4),
+                                    TaxIncluded = reader.GetBoolean(5)
+                                };
+
+                                item.SetObjects();
+
+                                items.Add(item);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
         public static List<Rate> GetRates(params int[] ids)
         {
             List<Rate> items = new List<Rate>();

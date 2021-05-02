@@ -131,7 +131,7 @@ namespace SurveyManager.forms.surveyMenu
             this.Name = "RatesDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Rates";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.RatesDialog_Load);

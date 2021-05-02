@@ -183,6 +183,18 @@ namespace SurveyManager.forms.userControls
                     filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies", "", Icon.FromHandle(Resources.title_company_16x16.GetHicon()));
                     break;
                 }
+                case EntityTypes.Rate:
+                {
+                    columns = new ArrayList
+                    {
+                        new DBMap("description", "Description"),
+                        new DBMap("amount", "Amount"),
+                        new DBMap("time_unit", "Time Unit")
+                    };
+
+                    filter = new AdvancedFilter("Rates", columns, "Find Rates");
+                    break;
+                }
                 case EntityTypes.Survey:
                 {
                     columns = new ArrayList
@@ -239,6 +251,11 @@ namespace SurveyManager.forms.userControls
                 case EntityTypes.TitleCompany:
                 {
                     PopulateTitleCompanyGrid(LoadTitleCompanies());
+                    break;
+                }
+                case EntityTypes.Rate:
+                {
+                    PopulateRateGrid(LoadRates());
                     break;
                 }
                 case EntityTypes.Survey:
@@ -385,7 +402,7 @@ namespace SurveyManager.forms.userControls
             switch (error)
             {
                 case DatabaseError.NoError:
-                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj.ToString()}, updated successfully!"));
+                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
                     break;
                 default:
                     CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
@@ -496,6 +513,44 @@ namespace SurveyManager.forms.userControls
                     c.Name
                 });
                 row.Tag = c;
+                rows.Add(row);
+            }
+        }
+        #endregion
+
+        #region Rates
+        private List<Rate> LoadRates()
+        {
+            List<Rate> rates = new List<Rate>();
+            if (lastFilterResults == null)
+            {
+                rates = Database.GetRates();
+            }
+            else
+            {
+                foreach (DataRow dataRow in lastFilterResults.Rows)
+                {
+                    rates.Add(ProcessDataTable.GetRate(dataRow));
+                }
+            }
+            return rates;
+        }
+
+        private void PopulateRateGrid(List<Rate> rates)
+        {
+            OutlookGridRow row;
+            rows = new List<OutlookGridRow>();
+
+            foreach (Rate r in rates)
+            {
+                row = new OutlookGridRow();
+                row.CreateCells(dataGrid, new object[] {
+                    r.ID,
+                    r.Description,
+                    $"{r.Amount.ToString("C2")} / {r.TimeUnit}",
+                    r.County
+                });
+                row.Tag = r;
                 rows.Add(row);
             }
         }

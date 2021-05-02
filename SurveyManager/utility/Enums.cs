@@ -275,7 +275,11 @@ namespace SurveyManager.utility
             /// <summary>
             /// Represents a realtor entity.
             /// </summary>
-            Realtor
+            Realtor,
+            /// <summary>
+            /// Represents a rate entity.
+            /// </summary>
+            Rate
         }
 
         /// <summary>

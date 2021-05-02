@@ -39,9 +39,9 @@ namespace SurveyManager.backend.wrappers
         [Category("Rate Information")]
         [Description("The county this rate applies to.")]
         [Browsable(true)]
+        [ReadOnly(true)]
         [DisplayName("County")]
-        [TypeConverter(typeof(ExpandableObjectConverter))]
-        public County County { get; set; } = RuntimeVars.Instance.Counties.Find(c => c.CountyName.Equals("Chambers"));
+        public County County { get; private set; } = RuntimeVars.Instance.Counties.Find(c => c.CountyName.Equals("Chambers"));
 
         [Category("Rate Information")]
         [Description("Should tax be included in the final amount for this rate? The tax rate can be set in the application's settings.")]

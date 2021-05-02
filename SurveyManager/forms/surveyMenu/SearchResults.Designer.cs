@@ -83,6 +83,7 @@ namespace SurveyManager.forms.surveyMenu
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.kryptonSplitContainer1);
             this.Name = "SearchResults";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select";
             this.Load += new System.EventHandler(this.SearchResults_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();

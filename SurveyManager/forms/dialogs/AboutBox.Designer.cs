@@ -29,11 +29,11 @@ namespace SurveyManager.forms.dialogs
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.labelVersion = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.labelCopyright = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.labelCompanyName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.textBoxDescription = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.okButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel.SuspendLayout();
@@ -64,18 +64,6 @@ namespace SurveyManager.forms.dialogs
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(417, 265);
             this.tableLayoutPanel.TabIndex = 0;
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = global::SurveyManager.Properties.Resources.instrument;
-            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
-            this.logoPictureBox.Size = new System.Drawing.Size(131, 259);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
             // 
             // labelProductName
             // 
@@ -124,6 +112,18 @@ namespace SurveyManager.forms.dialogs
             this.labelCompanyName.Size = new System.Drawing.Size(271, 17);
             this.labelCompanyName.TabIndex = 22;
             this.labelCompanyName.Values.Text = "Company Name";
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoPictureBox.Image = global::SurveyManager.Properties.Resources.instrument;
+            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
+            this.logoPictureBox.Size = new System.Drawing.Size(131, 259);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPictureBox.TabIndex = 12;
+            this.logoPictureBox.TabStop = false;
             // 
             // textBoxDescription
             // 

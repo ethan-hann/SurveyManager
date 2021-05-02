@@ -51,15 +51,15 @@ namespace SurveyManager.forms.dialogs
             // 
             // lblText
             // 
-            this.lblText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblText.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.lblText.Location = new System.Drawing.Point(85, 15);
             this.lblText.MaximumSize = new System.Drawing.Size(294, 0);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(33, 20);
-            this.lblText.TabIndex = 0;
-            this.lblText.TabStop = false;
+            this.lblText.Size = new System.Drawing.Size(28, 15);
             this.lblText.Text = "Text";
             // 
             // btnOK
@@ -119,7 +119,7 @@ namespace SurveyManager.forms.dialogs
             this.MinimizeBox = false;
             this.Name = "MessageForm";
             this.Padding = new System.Windows.Forms.Padding(15);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Title";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();

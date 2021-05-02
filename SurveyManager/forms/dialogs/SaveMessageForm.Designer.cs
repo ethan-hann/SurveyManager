@@ -37,9 +37,9 @@ namespace SurveyManager.forms.dialogs
             this.btnNo = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnYes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonGroup1 = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
-            this.radSaveJobAndExit = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.radExitWithoutSaving = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.radSaveDontExit = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.radExitWithoutSaving = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.radSaveJobAndExit = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1.Panel)).BeginInit();
@@ -123,14 +123,13 @@ namespace SurveyManager.forms.dialogs
             this.kryptonGroup1.Size = new System.Drawing.Size(361, 90);
             this.kryptonGroup1.TabIndex = 5;
             // 
-            // radSaveJobAndExit
+            // radSaveDontExit
             // 
-            this.radSaveJobAndExit.Checked = true;
-            this.radSaveJobAndExit.Location = new System.Drawing.Point(4, 4);
-            this.radSaveJobAndExit.Name = "radSaveJobAndExit";
-            this.radSaveJobAndExit.Size = new System.Drawing.Size(116, 20);
-            this.radSaveJobAndExit.TabIndex = 0;
-            this.radSaveJobAndExit.Values.Text = "Save Job and Exit";
+            this.radSaveDontExit.Location = new System.Drawing.Point(4, 56);
+            this.radSaveDontExit.Name = "radSaveDontExit";
+            this.radSaveDontExit.Size = new System.Drawing.Size(156, 20);
+            this.radSaveDontExit.TabIndex = 2;
+            this.radSaveDontExit.Values.Text = "Save Job and DON\'T Exit";
             // 
             // radExitWithoutSaving
             // 
@@ -140,13 +139,14 @@ namespace SurveyManager.forms.dialogs
             this.radExitWithoutSaving.TabIndex = 1;
             this.radExitWithoutSaving.Values.Text = "Exit Without Saving";
             // 
-            // radSaveDontExit
+            // radSaveJobAndExit
             // 
-            this.radSaveDontExit.Location = new System.Drawing.Point(4, 56);
-            this.radSaveDontExit.Name = "radSaveDontExit";
-            this.radSaveDontExit.Size = new System.Drawing.Size(156, 20);
-            this.radSaveDontExit.TabIndex = 2;
-            this.radSaveDontExit.Values.Text = "Save Job and DON\'T Exit";
+            this.radSaveJobAndExit.Checked = true;
+            this.radSaveJobAndExit.Location = new System.Drawing.Point(4, 4);
+            this.radSaveJobAndExit.Name = "radSaveJobAndExit";
+            this.radSaveJobAndExit.Size = new System.Drawing.Size(116, 20);
+            this.radSaveJobAndExit.TabIndex = 0;
+            this.radSaveJobAndExit.Values.Text = "Save Job and Exit";
             // 
             // SaveMessageForm
             // 
@@ -166,7 +166,7 @@ namespace SurveyManager.forms.dialogs
             this.MinimizeBox = false;
             this.Name = "SaveMessageForm";
             this.Padding = new System.Windows.Forms.Padding(15);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Title";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();

@@ -180,7 +180,7 @@ namespace SurveyManager.forms.dialogs
             this.MinimumSize = new System.Drawing.Size(607, 338);
             this.Name = "AppSettings";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Settings_Load);

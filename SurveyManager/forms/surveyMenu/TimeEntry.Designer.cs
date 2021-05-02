@@ -38,29 +38,25 @@ namespace SurveyManager.forms.surveyMenu
             this.lblHours = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.hoursDown = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.hoursGroup = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
             this.minutesGroup = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.txtMinutes = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.minutesUp = new System.Windows.Forms.PictureBox();
             this.lblMinutes = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.minutesDown = new System.Windows.Forms.PictureBox();
             this.secondsGroup = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.txtSeconds = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.secondsUp = new System.Windows.Forms.PictureBox();
             this.lblSeconds = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.secondsDown = new System.Windows.Forms.PictureBox();
+            this.hoursGroup = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.txtHours = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtHours = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtMinutes = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtSeconds = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hoursUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup.Panel)).BeginInit();
-            this.hoursGroup.Panel.SuspendLayout();
-            this.hoursGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minutesGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minutesGroup.Panel)).BeginInit();
             this.minutesGroup.Panel.SuspendLayout();
@@ -73,6 +69,10 @@ namespace SurveyManager.forms.surveyMenu
             this.secondsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.secondsUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondsDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup.Panel)).BeginInit();
+            this.hoursGroup.Panel.SuspendLayout();
+            this.hoursGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -158,25 +158,10 @@ namespace SurveyManager.forms.surveyMenu
             this.tableLayoutPanel1.Size = new System.Drawing.Size(291, 142);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
-            // hoursGroup
-            // 
-            this.hoursGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoursGroup.Location = new System.Drawing.Point(3, 3);
-            this.hoursGroup.Name = "hoursGroup";
-            // 
-            // hoursGroup.Panel
-            // 
-            this.hoursGroup.Panel.Controls.Add(this.txtHours);
-            this.hoursGroup.Panel.Controls.Add(this.hoursUp);
-            this.hoursGroup.Panel.Controls.Add(this.lblHours);
-            this.hoursGroup.Panel.Controls.Add(this.hoursDown);
-            this.hoursGroup.Size = new System.Drawing.Size(90, 136);
-            this.hoursGroup.TabIndex = 13;
-            // 
             // minutesGroup
             // 
             this.minutesGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minutesGroup.Location = new System.Drawing.Point(99, 3);
+            this.minutesGroup.Location = new System.Drawing.Point(100, 3);
             this.minutesGroup.Name = "minutesGroup";
             // 
             // minutesGroup.Panel
@@ -185,8 +170,19 @@ namespace SurveyManager.forms.surveyMenu
             this.minutesGroup.Panel.Controls.Add(this.minutesUp);
             this.minutesGroup.Panel.Controls.Add(this.lblMinutes);
             this.minutesGroup.Panel.Controls.Add(this.minutesDown);
-            this.minutesGroup.Size = new System.Drawing.Size(90, 136);
+            this.minutesGroup.Size = new System.Drawing.Size(91, 136);
             this.minutesGroup.TabIndex = 14;
+            // 
+            // txtMinutes
+            // 
+            this.txtMinutes.Location = new System.Drawing.Point(3, 46);
+            this.txtMinutes.Name = "txtMinutes";
+            this.txtMinutes.Size = new System.Drawing.Size(82, 47);
+            this.txtMinutes.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMinutes.TabIndex = 7;
+            this.txtMinutes.Text = "0";
+            this.txtMinutes.Visible = false;
+            this.txtMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinutes_KeyPress);
             // 
             // minutesUp
             // 
@@ -221,7 +217,7 @@ namespace SurveyManager.forms.surveyMenu
             // secondsGroup
             // 
             this.secondsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondsGroup.Location = new System.Drawing.Point(195, 3);
+            this.secondsGroup.Location = new System.Drawing.Point(197, 3);
             this.secondsGroup.Name = "secondsGroup";
             // 
             // secondsGroup.Panel
@@ -230,8 +226,19 @@ namespace SurveyManager.forms.surveyMenu
             this.secondsGroup.Panel.Controls.Add(this.secondsUp);
             this.secondsGroup.Panel.Controls.Add(this.lblSeconds);
             this.secondsGroup.Panel.Controls.Add(this.secondsDown);
-            this.secondsGroup.Size = new System.Drawing.Size(93, 136);
+            this.secondsGroup.Size = new System.Drawing.Size(91, 136);
             this.secondsGroup.TabIndex = 15;
+            // 
+            // txtSeconds
+            // 
+            this.txtSeconds.Location = new System.Drawing.Point(3, 46);
+            this.txtSeconds.Name = "txtSeconds";
+            this.txtSeconds.Size = new System.Drawing.Size(82, 47);
+            this.txtSeconds.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeconds.TabIndex = 8;
+            this.txtSeconds.Text = "0";
+            this.txtSeconds.Visible = false;
+            this.txtSeconds.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSeconds_KeyPress);
             // 
             // secondsUp
             // 
@@ -263,6 +270,32 @@ namespace SurveyManager.forms.surveyMenu
             this.secondsDown.TabStop = false;
             this.secondsDown.MouseClick += new System.Windows.Forms.MouseEventHandler(this.secondsDown_MouseClick);
             // 
+            // hoursGroup
+            // 
+            this.hoursGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hoursGroup.Location = new System.Drawing.Point(3, 3);
+            this.hoursGroup.Name = "hoursGroup";
+            // 
+            // hoursGroup.Panel
+            // 
+            this.hoursGroup.Panel.Controls.Add(this.txtHours);
+            this.hoursGroup.Panel.Controls.Add(this.hoursUp);
+            this.hoursGroup.Panel.Controls.Add(this.lblHours);
+            this.hoursGroup.Panel.Controls.Add(this.hoursDown);
+            this.hoursGroup.Size = new System.Drawing.Size(91, 136);
+            this.hoursGroup.TabIndex = 13;
+            // 
+            // txtHours
+            // 
+            this.txtHours.Location = new System.Drawing.Point(3, 46);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.Size = new System.Drawing.Size(82, 47);
+            this.txtHours.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHours.TabIndex = 6;
+            this.txtHours.Text = "0";
+            this.txtHours.Visible = false;
+            this.txtHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHours_KeyPress);
+            // 
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(12, 160);
@@ -290,39 +323,6 @@ namespace SurveyManager.forms.surveyMenu
             this.kryptonLabel5.TabIndex = 15;
             this.kryptonLabel5.Values.Text = "Second(s)";
             // 
-            // txtHours
-            // 
-            this.txtHours.Location = new System.Drawing.Point(3, 46);
-            this.txtHours.Name = "txtHours";
-            this.txtHours.Size = new System.Drawing.Size(82, 47);
-            this.txtHours.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHours.TabIndex = 6;
-            this.txtHours.Text = "0";
-            this.txtHours.Visible = false;
-            this.txtHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHours_KeyPress);
-            // 
-            // txtMinutes
-            // 
-            this.txtMinutes.Location = new System.Drawing.Point(3, 46);
-            this.txtMinutes.Name = "txtMinutes";
-            this.txtMinutes.Size = new System.Drawing.Size(82, 47);
-            this.txtMinutes.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMinutes.TabIndex = 7;
-            this.txtMinutes.Text = "0";
-            this.txtMinutes.Visible = false;
-            this.txtMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinutes_KeyPress);
-            // 
-            // txtSeconds
-            // 
-            this.txtSeconds.Location = new System.Drawing.Point(3, 46);
-            this.txtSeconds.Name = "txtSeconds";
-            this.txtSeconds.Size = new System.Drawing.Size(82, 47);
-            this.txtSeconds.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeconds.TabIndex = 8;
-            this.txtSeconds.Text = "0";
-            this.txtSeconds.Visible = false;
-            this.txtSeconds.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSeconds_KeyPress);
-            // 
             // TimeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +339,7 @@ namespace SurveyManager.forms.surveyMenu
             this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TimeEntry";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Time Entry";
             this.Load += new System.EventHandler(this.TimeEntry_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -347,11 +347,6 @@ namespace SurveyManager.forms.surveyMenu
             ((System.ComponentModel.ISupportInitialize)(this.hoursUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoursDown)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup.Panel)).EndInit();
-            this.hoursGroup.Panel.ResumeLayout(false);
-            this.hoursGroup.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup)).EndInit();
-            this.hoursGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.minutesGroup.Panel)).EndInit();
             this.minutesGroup.Panel.ResumeLayout(false);
             this.minutesGroup.Panel.PerformLayout();
@@ -366,6 +361,11 @@ namespace SurveyManager.forms.surveyMenu
             this.secondsGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.secondsUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondsDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup.Panel)).EndInit();
+            this.hoursGroup.Panel.ResumeLayout(false);
+            this.hoursGroup.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hoursGroup)).EndInit();
+            this.hoursGroup.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

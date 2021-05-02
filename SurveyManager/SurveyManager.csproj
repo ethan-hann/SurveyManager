@@ -429,6 +429,12 @@
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\RichMessageForm.resx">
+      <DependentUpon>RichMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\SettingsDialog\AppSettings.resx">
       <DependentUpon>AppSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -864,6 +870,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\up_arrow_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

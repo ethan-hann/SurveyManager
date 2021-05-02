@@ -142,7 +142,7 @@ namespace SurveyManager.forms.dialogs
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ActivationDlg";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Survey Manager Activation";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ActivationDlg_FormClosing);

@@ -102,6 +102,49 @@ namespace SurveyManager.utility
                     break;
                 }
 
+                case EntityTypes.Rate:
+                {
+                    DataGridViewColumn rateIdColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Rate ID",
+                        Name = "rateIdColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(rateIdColumn);
+                    DataGridViewColumn rateDescriptionColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Description",
+                        Name = "rateDescriptionColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(rateDescriptionColumn);
+                    DataGridViewColumn rateAmountColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Amount",
+                        Name = "rateAmountColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(rateAmountColumn);
+                    DataGridViewColumn rateCountyColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Associated County",
+                        Name = "rateCountyColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(rateCountyColumn);
+                    grid.Columns.AddRange(columnsToAdd.ToArray());
+
+                    grid.AddInternalColumn(rateIdColumn, new OutlookGridDefaultGroup() { OneItemText = "1 rate", XXXItemsText = " rates" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(rateDescriptionColumn, new OutlookGridAlphabeticGroup() { OneItemText = "rate", XXXItemsText = " rates" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(rateAmountColumn, new OutlookGridAlphabeticGroup() { OneItemText = "rate", XXXItemsText = " rates" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(rateCountyColumn, new OutlookGridAlphabeticGroup() { OneItemText = "rate", XXXItemsText = " rates" }, SortOrder.None, -1, -1);
+                    break;
+                }
+
                 case EntityTypes.Survey:
                 {
                     DataGridViewColumn surveyIDColumn = new KryptonDataGridViewTextBoxColumn

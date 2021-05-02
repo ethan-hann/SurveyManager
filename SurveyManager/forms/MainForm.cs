@@ -648,6 +648,62 @@ namespace SurveyManager
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
         }
+
+        private void btnFindRate_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("description", "Description"),
+                    new DBMap("amount", "Amount"),
+                    new DBMap("time_unit", "Time Unit")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("Rates", columns, "Find Rates");
+                filter.FilterDone += ProcessRateSearch;
+                filter.Show();
+            }
+        }
+
+        private void btnNewRate_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new NewPage(EntityTypes.Rate);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
+        private void btnViewAllRates_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
         #endregion
 
         #region Database Menu
@@ -749,6 +805,16 @@ namespace SurveyManager
             if (e is FilterDoneEventArgs args)
             {
                 KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
+        private void ProcessRateSearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
