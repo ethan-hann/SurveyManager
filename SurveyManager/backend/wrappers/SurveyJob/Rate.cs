@@ -59,7 +59,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return !Description.Equals("N/A") && Amount != 0.00m && CountyID != 0;
+                return !Description.Equals("N/A") && Amount != 0.00m && County.ID != 0;
             }
         }
 

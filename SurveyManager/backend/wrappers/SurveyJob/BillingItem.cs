@@ -19,7 +19,7 @@ namespace SurveyManager.backend.wrappers
         public int ID { get; set; }
 
         [Category("Billing Information")]
-        [Description("The service or product this rate represents.")]
+        [Description("The service or product this item represents.")]
         [Browsable(true)]
         [DisplayName("Description")]
         public string Description { get; set; } = "N/A";

@@ -277,6 +277,7 @@
     <Compile Include="forms\fileMenu\FileBrowser.Designer.cs">
       <DependentUpon>FileBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\pages\BillingPortal.cs" />
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
     <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
@@ -357,6 +358,12 @@
     </Compile>
     <Compile Include="forms\surveyMenu\ViewPanel.Designer.cs">
       <DependentUpon>ViewPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.Designer.cs">
+      <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\userControls\NewObject.cs">
       <SubType>UserControl</SubType>
@@ -497,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\ViewPanel.resx">
       <DependentUpon>ViewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\billingPortal\BillingPortalCtl.resx">
+      <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\userControls\NewObject.resx">
       <DependentUpon>NewObject.cs</DependentUpon>

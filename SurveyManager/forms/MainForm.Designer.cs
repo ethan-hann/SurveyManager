@@ -59,7 +59,7 @@ namespace SurveyManager
             this.btnViewAllFiles = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.billingRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnOfficeTime = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnBillingPortal = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple15 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAdditionalLineItems = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.assetsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
@@ -108,6 +108,11 @@ namespace SurveyManager
             this.kryptonRibbonGroupButton10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton12 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.bRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple16 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnFindRate = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnNewRate = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnViewAllRates = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.databaseTab = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -126,11 +131,6 @@ namespace SurveyManager
             this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
             this.surveyAutosave = new System.Windows.Forms.Timer(this.components);
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
-            this.bRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple16 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnFindRate = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.btnNewRate = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.btnViewAllRates = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -375,17 +375,17 @@ namespace SurveyManager
             // kryptonRibbonGroupTriple9
             // 
             this.kryptonRibbonGroupTriple9.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnOfficeTime});
+            this.btnBillingPortal});
             // 
-            // btnOfficeTime
+            // btnBillingPortal
             // 
-            this.btnOfficeTime.ImageLarge = global::SurveyManager.Properties.Resources.billing_portal;
-            this.btnOfficeTime.ImageSmall = global::SurveyManager.Properties.Resources.billing_portal_16x16;
-            this.btnOfficeTime.TextLine1 = "Billing";
-            this.btnOfficeTime.TextLine2 = "Portal";
-            this.btnOfficeTime.ToolTipBody = "Open the main billing portal to add rates and billing objects.";
-            this.btnOfficeTime.ToolTipTitle = "Billing";
-            this.btnOfficeTime.Click += new System.EventHandler(this.btnOfficeTime_Click);
+            this.btnBillingPortal.ImageLarge = global::SurveyManager.Properties.Resources.billing_portal;
+            this.btnBillingPortal.ImageSmall = global::SurveyManager.Properties.Resources.billing_portal_16x16;
+            this.btnBillingPortal.TextLine1 = "Billing";
+            this.btnBillingPortal.TextLine2 = "Portal";
+            this.btnBillingPortal.ToolTipBody = "Open the main billing portal to add rates and billing objects.";
+            this.btnBillingPortal.ToolTipTitle = "Billing";
+            this.btnBillingPortal.Click += new System.EventHandler(this.btnBillingPortal_Click);
             // 
             // kryptonRibbonGroupTriple15
             // 
@@ -730,6 +730,43 @@ namespace SurveyManager
             this.kryptonRibbonGroupButton12.TextLine1 = "View All";
             this.kryptonRibbonGroupButton12.Click += new System.EventHandler(this.viewTitleCompanyBtn_Click);
             // 
+            // bRibbonGroup
+            // 
+            this.bRibbonGroup.DialogBoxLauncher = false;
+            this.bRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple16});
+            this.bRibbonGroup.TextLine1 = "Billing";
+            this.bRibbonGroup.TextLine2 = "Rates";
+            // 
+            // kryptonRibbonGroupTriple16
+            // 
+            this.kryptonRibbonGroupTriple16.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnFindRate,
+            this.btnNewRate,
+            this.btnViewAllRates});
+            // 
+            // btnFindRate
+            // 
+            this.btnFindRate.ImageLarge = global::SurveyManager.Properties.Resources.billing_rates;
+            this.btnFindRate.ImageSmall = global::SurveyManager.Properties.Resources.billing_rates_16x16;
+            this.btnFindRate.TextLine1 = "Find";
+            this.btnFindRate.Click += new System.EventHandler(this.btnFindRate_Click);
+            // 
+            // btnNewRate
+            // 
+            this.btnNewRate.ImageLarge = global::SurveyManager.Properties.Resources.add;
+            this.btnNewRate.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
+            this.btnNewRate.TextLine1 = "New";
+            this.btnNewRate.Click += new System.EventHandler(this.btnNewRate_Click);
+            // 
+            // btnViewAllRates
+            // 
+            this.btnViewAllRates.ImageLarge = global::SurveyManager.Properties.Resources.view;
+            this.btnViewAllRates.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnViewAllRates.TextLine1 = "View";
+            this.btnViewAllRates.TextLine2 = "All";
+            this.btnViewAllRates.Click += new System.EventHandler(this.btnViewAllRates_Click);
+            // 
             // databaseTab
             // 
             this.databaseTab.Groups.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup[] {
@@ -855,43 +892,6 @@ namespace SurveyManager
             // 
             this.logAutoSave.Tick += new System.EventHandler(this.logAutoSave_Tick);
             // 
-            // bRibbonGroup
-            // 
-            this.bRibbonGroup.DialogBoxLauncher = false;
-            this.bRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple16});
-            this.bRibbonGroup.TextLine1 = "Billing";
-            this.bRibbonGroup.TextLine2 = "Rates";
-            // 
-            // kryptonRibbonGroupTriple16
-            // 
-            this.kryptonRibbonGroupTriple16.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnFindRate,
-            this.btnNewRate,
-            this.btnViewAllRates});
-            // 
-            // btnFindRate
-            // 
-            this.btnFindRate.ImageLarge = global::SurveyManager.Properties.Resources.billing_rates;
-            this.btnFindRate.ImageSmall = global::SurveyManager.Properties.Resources.billing_rates_16x16;
-            this.btnFindRate.TextLine1 = "Find";
-            this.btnFindRate.Click += new System.EventHandler(this.btnFindRate_Click);
-            // 
-            // btnNewRate
-            // 
-            this.btnNewRate.ImageLarge = global::SurveyManager.Properties.Resources.add;
-            this.btnNewRate.ImageSmall = global::SurveyManager.Properties.Resources.add_16x16;
-            this.btnNewRate.TextLine1 = "New";
-            this.btnNewRate.Click += new System.EventHandler(this.btnNewRate_Click);
-            // 
-            // btnViewAllRates
-            // 
-            this.btnViewAllRates.ImageLarge = global::SurveyManager.Properties.Resources.view;
-            this.btnViewAllRates.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
-            this.btnViewAllRates.TextLine1 = "View";
-            this.btnViewAllRates.TextLine2 = "All";
-            this.btnViewAllRates.Click += new System.EventHandler(this.btnViewAllRates_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -901,7 +901,6 @@ namespace SurveyManager
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
-            this.CustomCaptionArea = new System.Drawing.Rectangle(332, 0, 1328, 26);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -968,7 +967,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewAllFiles;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup billingRibbonGroup;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple9;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOfficeTime;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnBillingPortal;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup assetsRibbonGroup;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple10;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAssocClient;

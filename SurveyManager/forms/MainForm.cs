@@ -1340,6 +1340,43 @@ namespace SurveyManager
             }
         }
 
+        private void btnBillingPortal_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!RuntimeVars.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BillingPortal.ToDescriptionString()));
+                    return;
+                }
+
+                BillingPortal page = new BillingPortal()
+                {
+                    ImageSmall = Resources.billing_portal_16x16,
+                    ImageLarge = Resources.billing_portal,
+                    Tag = SurveyPage.IsSurveyPage
+                };
+
+                if (!dockingManager.ContainsPage(page))
+                {
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                }
+                else
+                {
+                    dockingManager.RemovePage(page, true);
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                }
+
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
         private void btnBillingLineItems_Click(object sender, EventArgs e)
         {
             if (licensed)
