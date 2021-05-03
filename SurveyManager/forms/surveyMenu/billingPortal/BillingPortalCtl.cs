@@ -3,8 +3,10 @@ using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.backend.wrappers.SurveyJob;
+using SurveyManager.forms.dialogs;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,7 @@ namespace SurveyManager.forms.userControls
         private bool isOfficeEntry;
         private int selectedListBoxIndex;
 
-        private Dictionary<DateTime, List<BillingItem>> billingItems = new Dictionary<DateTime, List<BillingItem>>();
+        private Dictionary<string, List<BillingItem>> billingItems = new Dictionary<string, List<BillingItem>>();
 
         public EventHandler StatusUpdate;
 
@@ -43,15 +45,12 @@ namespace SurveyManager.forms.userControls
             lControl.StatusUpdate += ChangeStatusText;
 
             pgAdditionalLineItems.Controls.Add(lControl);
+            billingGrid.RegisterGroupBoxEvents();
+            DataGridViewSetup.SetupDGV(billingGrid, EntityTypes.BillingItem);
 
             CreateDictionary();
             PopulateListBox();
-
-            billingGrid.RegisterGroupBoxEvents();
-            DataGridViewSetup.SetupDGV(billingGrid, EntityTypes.BillingItem);
-            LoadData();
-
-            lblTotalTime.Text = "Total Time: " + RuntimeVars.Instance.OpenJob.BillingObject.GetTotalTime().ToString();
+            UpdateTotalTime();
 
             kryptonNavigator1.SelectedPage = pgTimeEntries;
         }
@@ -71,7 +70,7 @@ namespace SurveyManager.forms.userControls
         {
             if (selectedListBoxIndex != -1)
             {
-                List<BillingItem> items = billingItems[(DateTime)lbTimeEntries.Items[selectedListBoxIndex]];
+                List<BillingItem> items = billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]];
                 OutlookGridRow row;
                 rows = new List<OutlookGridRow>();
                 
@@ -83,8 +82,8 @@ namespace SurveyManager.forms.userControls
                         item.Description,
                         item.FieldRate,
                         item.OfficeRate,
-                        item.FieldTime,
-                        item.OfficeTime
+                        Utility.ToFullString(item.FieldTime),
+                        Utility.ToFullString(item.OfficeTime)
                     });
                     row.Tag = item;
                     rows.Add(row);
@@ -101,7 +100,7 @@ namespace SurveyManager.forms.userControls
         {
             if (!Disposing && !IsDisposed)
             {
-                StatusUpdate?.Invoke(this, new StatusArgs($"Billing Details for {((DateTime)lbTimeEntries.Items[selectedListBoxIndex]).Date.ToShortDateString()} loaded."));
+                StatusUpdate?.Invoke(this, new StatusArgs($"Billing Details for {(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex])).Date.ToShortDateString()} loaded."));
                 billingGrid.SuspendLayout();
                 billingGrid.ClearInternalRows();
                 billingGrid.ResumeLayout();
@@ -111,6 +110,21 @@ namespace SurveyManager.forms.userControls
             }
 
             loadProgressBar.Visible = false;
+            UpdateTotalTime();
+        }
+
+        private void UpdateTotalTime()
+        {
+            if (selectedListBoxIndex >= 0)
+            {
+                TimeSpan office = TimeSpan.FromTicks(billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Sum(b => b.OfficeTime.Ticks));
+                TimeSpan field = TimeSpan.FromTicks(billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Sum(b => b.FieldTime.Ticks));
+                lblTotalTime.Text = "Total Time: " + Utility.ToFullString(office + field);
+            }
+            else
+            {
+                lblTotalTime.Text = "Total Time: " + Utility.ToFullString(RuntimeVars.Instance.OpenJob.BillingObject.GetTotalTime());
+            }
         }
 
         /// <summary>
@@ -145,18 +159,17 @@ namespace SurveyManager.forms.userControls
                     addedItems[i] = true;
                 }
                 
-                if (!billingItems.ContainsKey(date))
-                    billingItems.Add(date, itemsToAdd);
+                if (!billingItems.ContainsKey(date.Date.ToShortDateString()))
+                    billingItems.Add(date.Date.ToShortDateString(), itemsToAdd);
             }
         }
 
         private void PopulateListBox()
         {
-            foreach (DateTime key in billingItems.Keys)
+            foreach (string key in billingItems.Keys)
             {
-                lbTimeEntries.Items.Add(key);
+                lbTimeEntries.Items.Add(DateTime.Parse(key).Date.ToShortDateString());
             }
-            lbTimeEntries.DisplayMember = "MM-dd-yyyy";
 
             if (lbTimeEntries.Items.Count > 0)
             {
@@ -167,6 +180,8 @@ namespace SurveyManager.forms.userControls
             {
                 selectedListBoxIndex = -1;
             }
+
+            LoadData();
         }
 
         private void btnAddNewRate_Click(object sender, EventArgs e)
@@ -184,7 +199,7 @@ namespace SurveyManager.forms.userControls
 
         private void btnSaveTimeEntry_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void radOfficeTime_CheckedChanged(object sender, EventArgs e)
@@ -217,22 +232,105 @@ namespace SurveyManager.forms.userControls
 
         private void btnAddTime_Click(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            if (lbTimeEntries.Items.Contains(now.Date.ToShortDateString()))
+            {
+                lbTimeEntries.SelectedItem = now.Date.ToShortDateString();
+                selectedListBoxIndex = lbTimeEntries.SelectedIndex;
+            }
+            else
+            {
+                billingItems.Add(now.Date.ToShortDateString(), new List<BillingItem>());
+                lbTimeEntries.Items.Add(now.Date.ToShortDateString());
 
+                lbTimeEntries.SelectedItem = now.Date.ToShortDateString();
+                selectedListBoxIndex = lbTimeEntries.SelectedIndex;
+            }
+
+            UpdateControls();
         }
 
         private void btnRemoveTime_Click(object sender, EventArgs e)
         {
+            DateTime selected = DateTime.Parse((string)lbTimeEntries.SelectedItem);
+            DialogResult result = CMessageBox.Show($"Are you sure you want to remove {selected.Date.ToShortDateString()} from this job? This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from the job!", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+            if (result == DialogResult.No || result == DialogResult.Cancel)
+                return;
 
+            billingItems.Remove(selected.ToShortDateString());
+            lbTimeEntries.Items.Remove(selected.ToShortDateString());
+
+            lbTimeEntries.SelectedIndex = lbTimeEntries.Items.Count - 1;
+            selectedListBoxIndex = lbTimeEntries.SelectedIndex;
+
+            UpdateControls();
         }
 
         private void lbTimeEntries_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DateTime key = (DateTime)lbTimeEntries.Items[lbTimeEntries.SelectedIndex];
-            if (key != null)
+            if (lbTimeEntries.SelectedIndex >= 0)
             {
-                selectedListBoxIndex = lbTimeEntries.SelectedIndex;
+                DateTime key = DateTime.Parse((string)lbTimeEntries.Items[lbTimeEntries.SelectedIndex]);
+                if (key != null)
+                {
+                    selectedListBoxIndex = lbTimeEntries.SelectedIndex;
+                    LoadData();
+                }
+            }
+        }
+
+        private void btnAddTimeEntry_Click(object sender, EventArgs e)
+        {
+            BillingItem item = new BillingItem();
+            item.AssociatedDate = DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]);
+            item.Description = rtbDescription.Text;
+            item.OfficeRate = (Rate)cmbRates.SelectedItem;
+            item.OfficeRateId = item.OfficeRate.ID;
+            item.FieldRate = (Rate)cmbRates.SelectedItem;
+            item.FieldRateId = item.FieldRate.ID;
+
+            if (isOfficeEntry)
+            {
+                item.OfficeTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                item.FieldTime = TimeSpan.Zero;
+            }
+            else
+            {
+                item.FieldTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                item.OfficeTime = TimeSpan.Zero;
+            }
+
+            if (item.IsValidItem)
+            {
+                billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Add(item);
                 LoadData();
             }
+            else
+            {
+                CMessageBox.Show("Not enough information to add new entry. " + 
+                    DatabaseError.BillingItemIncomplete.ToDescriptionString(), "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
+        }
+
+        private void UpdateControls()
+        {
+            radOfficeTime.Checked = true;
+            if (cmbRates.Items.Count > 0)
+                cmbRates.SelectedIndex = 0;
+
+            dtpTimeEntry.Value = DateTime.MinValue;
+            LoadData();
+        }
+
+        private void rtbDescription_TextChanged(object sender, EventArgs e)
+        {
+            lblDescCharCount.Text = "Char. Count: " + rtbDescription.Text.Count() + " / 255";
+        }
+
+        private void billingGrid_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            
         }
     }
 }

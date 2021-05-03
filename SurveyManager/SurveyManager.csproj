@@ -890,5 +890,14 @@
   <ItemGroup>
     <None Include="Resources\billing_portal_32x32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

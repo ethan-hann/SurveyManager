@@ -78,6 +78,28 @@ namespace SurveyManager.utility
         }
 
         /// <summary>
+        /// Converts a timespan object into a human readable string in the form of: 
+        /// x days, x hours, x minutes, x seconds
+        /// </summary>
+        /// <param name="span">The timespan to convert.</param>
+        /// <returns>A string representing the timespan as words.</returns>
+        public static string ToFullString(TimeSpan span)
+        {
+            List<Tuple<int, string>> components = new List<Tuple<int, string>> {
+                Tuple.Create((int)span.TotalDays, "day"),
+                Tuple.Create(span.Hours, "hour"),
+                Tuple.Create(span.Minutes, "minute"),
+                Tuple.Create(span.Seconds, "second"),
+            };
+
+            while (components.Any() && components[0].Item1 == 0)
+                components.RemoveAt(0);
+
+            return string.Join(", ", 
+                components.Select(t => t.Item1 + " " + t.Item2 + (t.Item1 != 1 ? "s" : string.Empty)));
+        }
+
+        /// <summary>
         /// Get a string that represents this applications current version.
         /// </summary>
         /// <returns>A string representing the current version; or "NONE" if the version could not be determined.</returns>
