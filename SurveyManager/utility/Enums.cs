@@ -284,7 +284,11 @@ namespace SurveyManager.utility
             /// <summary>
             /// Represents a rate entity.
             /// </summary>
-            Rate
+            Rate,
+            /// <summary>
+            /// Represents a billing item entity.
+            /// </summary>
+            BillingItem
         }
 
         /// <summary>

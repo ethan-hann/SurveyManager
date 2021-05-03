@@ -58,6 +58,9 @@ namespace SurveyManager.backend.wrappers
         [DisplayName("Office Time")]
         public TimeSpan OfficeTime { get; set; }
 
+        [Browsable(false)]
+        public DateTime AssociatedDate { get; set; } = DateTime.Now;
+
         /// <summary>
         /// Checks the description, the field rate, and the office rate to ensure this is a valid billing item.
         /// </summary>

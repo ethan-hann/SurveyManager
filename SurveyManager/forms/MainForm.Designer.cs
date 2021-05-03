@@ -209,8 +209,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
-            this.mainRibbon.SelectedTab = this.objectsTab;
+            this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1683, 115);
             this.mainRibbon.TabIndex = 4;
             // 

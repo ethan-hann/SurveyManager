@@ -144,7 +144,66 @@ namespace SurveyManager.utility
                     grid.AddInternalColumn(rateCountyColumn, new OutlookGridAlphabeticGroup() { OneItemText = "rate", XXXItemsText = " rates" }, SortOrder.None, -1, -1);
                     break;
                 }
+                case EntityTypes.BillingItem:
+                {
+                    DataGridViewColumn billingIdColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Billing ID",
+                        Name = "billingIdColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(billingIdColumn);
+                    DataGridViewColumn billingDescriptionColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Description",
+                        Name = "billingDescriptionColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(billingDescriptionColumn);
+                    DataGridViewColumn fieldRateColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Field Rate",
+                        Name = "fieldRateColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(fieldRateColumn);
+                    DataGridViewColumn officeRateColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Office Rate",
+                        Name = "officeRateColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(officeRateColumn);
+                    DataGridViewColumn fieldTimeColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Field Time",
+                        Name = "fieldTimeColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(fieldTimeColumn);
+                    DataGridViewColumn officeTimeColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Office Time",
+                        Name = "officeTimeColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(officeTimeColumn);
+                    grid.Columns.AddRange(columnsToAdd.ToArray());
 
+                    grid.AddInternalColumn(billingIdColumn, new OutlookGridDefaultGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(billingDescriptionColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(fieldRateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(officeRateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(fieldTimeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(officeTimeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    break;
+                }
                 case EntityTypes.Survey:
                 {
                     DataGridViewColumn surveyIDColumn = new KryptonDataGridViewTextBoxColumn

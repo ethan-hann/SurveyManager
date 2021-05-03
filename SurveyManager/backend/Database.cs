@@ -2139,6 +2139,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@2", item.OfficeRate.ID);
                         cmd.Parameters.AddWithValue("@3", item.FieldTime);
                         cmd.Parameters.AddWithValue("@4", item.OfficeTime);
+                        cmd.Parameters.AddWithValue("@5", item.AssociatedDate);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -2180,6 +2181,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@3", item.OfficeRate.ID);
                         cmd.Parameters.AddWithValue("@4", item.FieldTime);
                         cmd.Parameters.AddWithValue("@5", item.OfficeTime);
+                        cmd.Parameters.AddWithValue("@6", item.AssociatedDate);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -2217,7 +2219,8 @@ namespace SurveyManager.backend
                                 FieldRateId = reader.GetInt32(2),
                                 OfficeRateId = reader.GetInt32(3),
                                 FieldTime = reader.GetTimeSpan(4),
-                                OfficeTime = reader.GetTimeSpan(5)
+                                OfficeTime = reader.GetTimeSpan(5),
+                                AssociatedDate = reader.GetDateTime(6)
                             };
 
                             item.SetObjects();
@@ -2254,7 +2257,8 @@ namespace SurveyManager.backend
                                     FieldRateId = reader.GetInt32(2),
                                     OfficeRateId = reader.GetInt32(3),
                                     FieldTime = reader.GetTimeSpan(4),
-                                    OfficeTime = reader.GetTimeSpan(5)
+                                    OfficeTime = reader.GetTimeSpan(5),
+                                    AssociatedDate = reader.GetDateTime(6)
                                 };
 
                                 item.SetObjects();

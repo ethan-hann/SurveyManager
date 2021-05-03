@@ -29,37 +29,44 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private void InitializeComponent()
         {
+            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection2 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
+            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.pgTimeEntries = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.lbTimeEntries = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveTime = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddTime = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.radOfficeTime = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.radFieldTime = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblRate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbRates = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btnRefreshRates = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddNewRate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.dtpTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonSplitContainer2 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
-            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
-            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.btnSaveTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnRefreshRates = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblTotalTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pgAdditionalLineItems = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.billingGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
+            this.loadBillingDetailsWorker = new System.ComponentModel.BackgroundWorker();
+            this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
             this.hdrGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
+            this.kryptonNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pgTimeEntries)).BeginInit();
+            this.pgTimeEntries.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
@@ -67,22 +74,19 @@ namespace SurveyManager.forms.userControls
             this.kryptonSplitContainer1.Panel2.SuspendLayout();
             this.kryptonSplitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbRates)).BeginInit();
-            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel1)).BeginInit();
             this.kryptonSplitContainer2.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel2)).BeginInit();
             this.kryptonSplitContainer2.Panel2.SuspendLayout();
             this.kryptonSplitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
-            this.kryptonNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
-            this.kryptonPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbRates)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // hdrGroup
@@ -94,11 +98,38 @@ namespace SurveyManager.forms.userControls
             // hdrGroup.Panel
             // 
             this.hdrGroup.Panel.Controls.Add(this.kryptonNavigator1);
+            this.hdrGroup.Panel.Controls.Add(this.loadProgressBar);
             this.hdrGroup.Size = new System.Drawing.Size(1133, 756);
             this.hdrGroup.TabIndex = 0;
             this.hdrGroup.ValuesPrimary.Heading = "Billing Portal";
             this.hdrGroup.ValuesPrimary.Image = global::SurveyManager.Properties.Resources.billing_portal_32x32;
             this.hdrGroup.ValuesSecondary.Heading = "Manage the rates, billing items, and time entries for the current job.";
+            // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.pgTimeEntries,
+            this.pgAdditionalLineItems});
+            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(1131, 675);
+            this.kryptonNavigator1.TabIndex = 1;
+            this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // pgTimeEntries
+            // 
+            this.pgTimeEntries.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.pgTimeEntries.Controls.Add(this.kryptonSplitContainer1);
+            this.pgTimeEntries.Flags = 65534;
+            this.pgTimeEntries.LastVisibleSet = true;
+            this.pgTimeEntries.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pgTimeEntries.Name = "pgTimeEntries";
+            this.pgTimeEntries.Size = new System.Drawing.Size(1129, 648);
+            this.pgTimeEntries.Text = "Time Entries";
+            this.pgTimeEntries.ToolTipTitle = "Page ToolTip";
+            this.pgTimeEntries.UniqueName = "7E5565BDE95841DBC9BDE8BA804433B8";
             // 
             // kryptonSplitContainer1
             // 
@@ -117,7 +148,7 @@ namespace SurveyManager.forms.userControls
             // 
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonSplitContainer2);
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.statusStrip1);
-            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1129, 671);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1129, 648);
             this.kryptonSplitContainer1.SplitterDistance = 270;
             this.kryptonSplitContainer1.TabIndex = 0;
             // 
@@ -126,8 +157,9 @@ namespace SurveyManager.forms.userControls
             this.lbTimeEntries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTimeEntries.Location = new System.Drawing.Point(0, 0);
             this.lbTimeEntries.Name = "lbTimeEntries";
-            this.lbTimeEntries.Size = new System.Drawing.Size(270, 639);
+            this.lbTimeEntries.Size = new System.Drawing.Size(270, 616);
             this.lbTimeEntries.TabIndex = 3;
+            this.lbTimeEntries.SelectedIndexChanged += new System.EventHandler(this.lbTimeEntries_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -136,7 +168,7 @@ namespace SurveyManager.forms.userControls
             this.flowLayoutPanel1.Controls.Add(this.btnAddTime);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 639);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 616);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(270, 32);
             this.flowLayoutPanel1.TabIndex = 4;
@@ -149,6 +181,7 @@ namespace SurveyManager.forms.userControls
             this.btnRemoveTime.TabIndex = 1;
             this.btnRemoveTime.Values.Image = global::SurveyManager.Properties.Resources.delete_16x16;
             this.btnRemoveTime.Values.Text = "Remove Time Entry";
+            this.btnRemoveTime.Click += new System.EventHandler(this.btnRemoveTime_Click);
             // 
             // btnAddTime
             // 
@@ -158,29 +191,27 @@ namespace SurveyManager.forms.userControls
             this.btnAddTime.TabIndex = 0;
             this.btnAddTime.Values.Image = global::SurveyManager.Properties.Resources.add_16x16;
             this.btnAddTime.Values.Text = "Add Time Entry";
+            this.btnAddTime.Click += new System.EventHandler(this.btnAddTime_Click);
             // 
-            // statusStrip1
+            // kryptonSplitContainer2
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 649);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(854, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 0;
+            this.kryptonSplitContainer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer2.Name = "kryptonSplitContainer2";
+            this.kryptonSplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // toolStripStatusLabel1
+            // kryptonSplitContainer2.Panel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(772, 17);
-            this.toolStripStatusLabel1.Spring = true;
+            this.kryptonSplitContainer2.Panel1.Controls.Add(this.flowLayoutPanel2);
+            this.kryptonSplitContainer2.Panel1MinSize = 200;
             // 
-            // toolStripStatusLabel2
+            // kryptonSplitContainer2.Panel2
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(67, 17);
-            this.toolStripStatusLabel2.Text = "Total Time: ";
+            this.kryptonSplitContainer2.Panel2.Controls.Add(this.billingGrid);
+            this.kryptonSplitContainer2.Size = new System.Drawing.Size(854, 626);
+            this.kryptonSplitContainer2.SplitterDistance = 192;
+            this.kryptonSplitContainer2.TabIndex = 2;
             // 
             // flowLayoutPanel2
             // 
@@ -243,6 +274,16 @@ namespace SurveyManager.forms.userControls
             this.cmbRates.Size = new System.Drawing.Size(323, 21);
             this.cmbRates.TabIndex = 1;
             // 
+            // btnRefreshRates
+            // 
+            this.btnRefreshRates.Location = new System.Drawing.Point(376, 3);
+            this.btnRefreshRates.Name = "btnRefreshRates";
+            this.btnRefreshRates.Size = new System.Drawing.Size(35, 25);
+            this.btnRefreshRates.TabIndex = 3;
+            this.btnRefreshRates.Values.Image = global::SurveyManager.Properties.Resources.reload_16x16;
+            this.btnRefreshRates.Values.Text = "";
+            this.btnRefreshRates.Click += new System.EventHandler(this.btnRefreshRates_Click);
+            // 
             // btnAddNewRate
             // 
             this.btnAddNewRate.Location = new System.Drawing.Point(417, 3);
@@ -290,72 +331,6 @@ namespace SurveyManager.forms.userControls
             this.kryptonLabel1.TabIndex = 2;
             this.kryptonLabel1.Values.Text = "Format -> (hours) : (minutes) : (seconds)";
             // 
-            // kryptonSplitContainer2
-            // 
-            this.kryptonSplitContainer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.kryptonSplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonSplitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonSplitContainer2.Name = "kryptonSplitContainer2";
-            this.kryptonSplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // kryptonSplitContainer2.Panel1
-            // 
-            this.kryptonSplitContainer2.Panel1.Controls.Add(this.flowLayoutPanel2);
-            this.kryptonSplitContainer2.Panel1MinSize = 200;
-            // 
-            // kryptonSplitContainer2.Panel2
-            // 
-            this.kryptonSplitContainer2.Panel2.Controls.Add(this.propertyGrid1);
-            this.kryptonSplitContainer2.Size = new System.Drawing.Size(854, 649);
-            this.kryptonSplitContainer2.SplitterDistance = 200;
-            this.kryptonSplitContainer2.TabIndex = 2;
-            // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(854, 444);
-            this.propertyGrid1.TabIndex = 0;
-            // 
-            // kryptonNavigator1
-            // 
-            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonNavigator1.Name = "kryptonNavigator1";
-            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
-            this.kryptonPage1,
-            this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 0;
-            this.kryptonNavigator1.Size = new System.Drawing.Size(1131, 698);
-            this.kryptonNavigator1.TabIndex = 1;
-            this.kryptonNavigator1.Text = "kryptonNavigator1";
-            // 
-            // kryptonPage1
-            // 
-            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage1.Controls.Add(this.kryptonSplitContainer1);
-            this.kryptonPage1.Flags = 65534;
-            this.kryptonPage1.LastVisibleSet = true;
-            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(1129, 671);
-            this.kryptonPage1.Text = "Time Entries";
-            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage1.UniqueName = "7E5565BDE95841DBC9BDE8BA804433B8";
-            // 
-            // kryptonPage2
-            // 
-            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Flags = 65534;
-            this.kryptonPage2.LastVisibleSet = true;
-            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(1129, 671);
-            this.kryptonPage2.Text = "Additional Items";
-            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage2.UniqueName = "4F7B8A032FAD42B69485BD8A5F4E589F";
-            // 
             // btnSaveTimeEntry
             // 
             this.btnSaveTimeEntry.Location = new System.Drawing.Point(3, 144);
@@ -366,15 +341,68 @@ namespace SurveyManager.forms.userControls
             this.btnSaveTimeEntry.Values.Text = "Save Entry";
             this.btnSaveTimeEntry.Click += new System.EventHandler(this.btnSaveTimeEntry_Click);
             // 
-            // btnRefreshRates
+            // statusStrip1
             // 
-            this.btnRefreshRates.Location = new System.Drawing.Point(376, 3);
-            this.btnRefreshRates.Name = "btnRefreshRates";
-            this.btnRefreshRates.Size = new System.Drawing.Size(35, 25);
-            this.btnRefreshRates.TabIndex = 3;
-            this.btnRefreshRates.Values.Image = global::SurveyManager.Properties.Resources.reload_16x16;
-            this.btnRefreshRates.Values.Text = "";
-            this.btnRefreshRates.Click += new System.EventHandler(this.btnRefreshRates_Click);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.lblTotalTime});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 626);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(854, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 0;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(741, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // lblTotalTime
+            // 
+            this.lblTotalTime.Name = "lblTotalTime";
+            this.lblTotalTime.Size = new System.Drawing.Size(67, 17);
+            this.lblTotalTime.Text = "Total Time: ";
+            // 
+            // pgAdditionalLineItems
+            // 
+            this.pgAdditionalLineItems.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.pgAdditionalLineItems.Flags = 65534;
+            this.pgAdditionalLineItems.LastVisibleSet = true;
+            this.pgAdditionalLineItems.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pgAdditionalLineItems.Name = "pgAdditionalLineItems";
+            this.pgAdditionalLineItems.Size = new System.Drawing.Size(1129, 671);
+            this.pgAdditionalLineItems.Text = "Additional Items";
+            this.pgAdditionalLineItems.ToolTipTitle = "Page ToolTip";
+            this.pgAdditionalLineItems.UniqueName = "4F7B8A032FAD42B69485BD8A5F4E589F";
+            // 
+            // billingGrid
+            // 
+            this.billingGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.billingGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
+            this.billingGrid.GroupCollection = outlookGridGroupCollection2;
+            this.billingGrid.Location = new System.Drawing.Point(0, 0);
+            this.billingGrid.Name = "billingGrid";
+            this.billingGrid.PreviousSelectedGroupRow = -1;
+            this.billingGrid.Size = new System.Drawing.Size(854, 421);
+            this.billingGrid.TabIndex = 0;
+            // 
+            // loadBillingDetailsWorker
+            // 
+            this.loadBillingDetailsWorker.WorkerReportsProgress = true;
+            this.loadBillingDetailsWorker.WorkerSupportsCancellation = true;
+            this.loadBillingDetailsWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.loadBillingDetailsWorker_DoWork);
+            this.loadBillingDetailsWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.loadBillingDetailsWorker_ProgressChanged);
+            this.loadBillingDetailsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.loadBillingDetailsWorker_RunWorkerCompleted);
+            // 
+            // loadProgressBar
+            // 
+            this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.loadProgressBar.Location = new System.Drawing.Point(0, 675);
+            this.loadProgressBar.Name = "loadProgressBar";
+            this.loadProgressBar.Size = new System.Drawing.Size(1131, 23);
+            this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.loadProgressBar.TabIndex = 1;
             // 
             // BillingPortalCtl
             // 
@@ -388,6 +416,10 @@ namespace SurveyManager.forms.userControls
             this.hdrGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).EndInit();
             this.hdrGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
+            this.kryptonNavigator1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pgTimeEntries)).EndInit();
+            this.pgTimeEntries.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
             this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
@@ -396,8 +428,12 @@ namespace SurveyManager.forms.userControls
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
             this.kryptonSplitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel1)).EndInit();
+            this.kryptonSplitContainer2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel2)).EndInit();
+            this.kryptonSplitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2)).EndInit();
+            this.kryptonSplitContainer2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -405,17 +441,10 @@ namespace SurveyManager.forms.userControls
             ((System.ComponentModel.ISupportInitialize)(this.cmbRates)).EndInit();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel1)).EndInit();
-            this.kryptonSplitContainer2.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2.Panel2)).EndInit();
-            this.kryptonSplitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer2)).EndInit();
-            this.kryptonSplitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
-            this.kryptonNavigator1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
-            this.kryptonPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,7 +459,7 @@ namespace SurveyManager.forms.userControls
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddTime;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel lblTotalTime;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radOfficeTime;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radFieldTime;
@@ -443,11 +472,13 @@ namespace SurveyManager.forms.userControls
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpTimeEntry;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer2;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
         private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
-        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
-        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
+        private ComponentFactory.Krypton.Navigator.KryptonPage pgTimeEntries;
+        private ComponentFactory.Krypton.Navigator.KryptonPage pgAdditionalLineItems;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveTimeEntry;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnRefreshRates;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid billingGrid;
+        private System.ComponentModel.BackgroundWorker loadBillingDetailsWorker;
+        private System.Windows.Forms.ProgressBar loadProgressBar;
     }
 }
