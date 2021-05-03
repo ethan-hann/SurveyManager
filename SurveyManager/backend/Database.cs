@@ -225,7 +225,7 @@ namespace SurveyManager.backend
         }
 
         #region Address
-        public static bool InsertAddress(Address a)
+        public static int InsertAddress(Address a)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Address");
@@ -259,7 +259,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Address") : 0;
         }
 
         public static bool UpdateAddress(Address a)
@@ -369,7 +369,7 @@ namespace SurveyManager.backend
         /// </summary>
         /// <param name="c">The <see cref="Client"/> to insert.</param>
         /// <returns>True if the record was inserted successfully; False otherwise.</returns>
-        public static bool InsertClient(Client c)
+        public static int InsertClient(Client c)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Client");
@@ -405,7 +405,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Client") : 0;
         }
 
         public static bool UpdateClient(Client c)
@@ -574,7 +574,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region County
-        public static bool InsertCounty(County c)
+        public static int InsertCounty(County c)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("County");
@@ -606,7 +606,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("County") : 0;
         }
 
         public static bool UpdateCounty(County c)
@@ -743,7 +743,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Realtor
-        public static bool InsertRealtor(Realtor r)
+        public static int InsertRealtor(Realtor r)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Realtor");
@@ -779,7 +779,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Realtor") : 0;
         }
 
         public static bool UpdateRealtor(Realtor r)
@@ -928,7 +928,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Title Company
-        public static bool InsertTitleCompany(TitleCompany t)
+        public static int InsertTitleCompany(TitleCompany t)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("TitleCompany");
@@ -963,7 +963,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("TitleCompany") : 0;
         }
 
         public static bool UpdateTitleCompany(TitleCompany t)
@@ -1351,7 +1351,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Survey
-        public static bool InsertSurvey(Survey s)
+        public static int InsertSurvey(Survey s)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Survey");
@@ -1410,7 +1410,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Survey") : 0;
         }
 
         public static bool UpdateSurvey(Survey s)

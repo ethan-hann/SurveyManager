@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
@@ -81,33 +82,41 @@ namespace SurveyManager.backend.wrappers
             FaxNumber = faxNumber;
         }
 
-        public Enums.DatabaseError Delete()
-        {
-            return Database.DeleteRealtor(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.RealtorDelete;
-        }
-
-        public Enums.DatabaseError Insert()
-        {
-            if (IsValidRealtor)
-                return Database.InsertRealtor(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.RealtorInsert;
-            else
-                return Enums.DatabaseError.RealtorIncomplete;
-        }
-
-        public Enums.DatabaseError Update()
-        {
-            if (IsValidRealtor)
-                return Database.UpdateRealtor(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.RealtorUpdate;
-            else
-                return Enums.DatabaseError.RealtorIncomplete;
-        }
-
         public override string ToString()
         {
             if (IsValidRealtor)
                 return $"{Name} with {CompanyName}";
             else
                 return "(...)";
+        }
+
+        public DatabaseError Insert()
+        {
+            DatabaseError e;
+            if (IsValidRealtor)
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertRealtor(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.RealtorInsert;
+                }
+                else
+                {
+                    e = Database.UpdateRealtor(this) ? DatabaseError.NoError : DatabaseError.RealtorUpdate;
+                }
+                return e;
+            }
+            return DatabaseError.RealtorIncomplete;
+        }
+
+        public DatabaseError Update()
+        {
+            return Insert();
+        }
+
+        public DatabaseError Delete()
+        {
+            return Database.DeleteRealtor(this) ? DatabaseError.NoError : DatabaseError.RealtorDelete;
         }
     }
 }

@@ -291,71 +291,47 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public DatabaseError Insert()
         {
-            DatabaseError e = DatabaseError.NoError;
+            DatabaseError e;
             foreach (BillingItem item in items)
             {
                 e = item.Insert();
                 if (e != DatabaseError.NoError)
-                    break;
+                    return e;
             }
 
-            if (e == DatabaseError.NoError)
+            foreach (LineItem item in lineItems)
             {
-                foreach (LineItem item in lineItems)
-                {
-                    e = item.Insert();
-                    if (e != DatabaseError.NoError)
-                        break;
-                }
+                e = item.Insert();
+                if (e != DatabaseError.NoError)
+                    return e;
             }
 
-            return e;
+            return DatabaseError.NoError;
         }
 
         public DatabaseError Update()
         {
-            DatabaseError e = DatabaseError.NoError;
-            foreach (BillingItem item in items)
-            {
-                e = item.Update();
-                if (e != DatabaseError.NoError)
-                    break;
-            }
-
-            if (e == DatabaseError.NoError)
-            {
-                foreach (LineItem item in lineItems)
-                {
-                    e = item.Update();
-                    if (e != DatabaseError.NoError)
-                        break;
-                }
-            }
-
-            return e;
+            return Insert();
         }
 
         public DatabaseError Delete()
         {
-            DatabaseError e = DatabaseError.NoError;
+            DatabaseError e;
             foreach (BillingItem item in items)
             {
                 e = item.Delete();
                 if (e != DatabaseError.NoError)
-                    break;
+                    return e;
             }
 
-            if (e == DatabaseError.NoError)
+            foreach (LineItem item in lineItems)
             {
-                foreach (LineItem item in lineItems)
-                {
-                    e = item.Delete();
-                    if (e != DatabaseError.NoError)
-                        break;
-                }
+                e = item.Delete();
+                if (e != DatabaseError.NoError)
+                    return e;
             }
 
-            return e;
+            return DatabaseError.NoError;
         }
     }
 }

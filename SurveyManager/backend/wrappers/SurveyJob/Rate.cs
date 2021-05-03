@@ -1,6 +1,8 @@
 ﻿using SurveyManager.utility;
+using SurveyManager.utility.CustomControls;
 using System;
 using System.ComponentModel;
+using System.Drawing.Design;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -108,26 +110,26 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Insert()
         {
+            DatabaseError e;
             if (IsValidRate)
             {
-                int id = Database.InsertRate(this);
-                if (id != 0)
+                if (ID == 0)
                 {
-                    ID = id;
+                    ID = Database.InsertRate(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.RateInsert;
                 }
-
-                return id != 0 ? DatabaseError.NoError : DatabaseError.RateInsert;
+                else
+                {
+                    e = Database.UpdateRate(this) ? DatabaseError.NoError : DatabaseError.RateUpdate;
+                }
+                return e;
             }
-            else
-                return DatabaseError.RateIncomplete;
+            return DatabaseError.RateIncomplete;
         }
 
         public DatabaseError Update()
         {
-            if (IsValidRate)
-                return Database.UpdateRate(this) ? DatabaseError.NoError : DatabaseError.RateUpdate;
-            else
-                return DatabaseError.RateIncomplete;
+            return Insert();
         }
 
         public DatabaseError Delete()

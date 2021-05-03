@@ -470,87 +470,112 @@ namespace SurveyManager.backend.wrappers
 
         private DatabaseError UpdateObjects()
         {
-            #region Client Insert/Update
-            if (Client.ID == 0)
-            {
-                DatabaseError clientError = Client.Insert();
-                if (clientError != DatabaseError.NoError)
-                    return clientError;
-                Client.ID = Database.GetLastRowIDInserted("Client");
-            }
-            else
-            {
-                DatabaseError clientError = Client.Update();
-                if (clientError != DatabaseError.NoError)
-                    return clientError;
-            }
-            #endregion
-            #region Realtor Insert/Update
+            DatabaseError e;
+
+            e = Client.Insert();
+            if (e != DatabaseError.NoError)
+                return e;
+
+            e = Location.Insert();
+            if (e != DatabaseError.NoError)
+                return e;
+            LocationID = Location.ID;
+
+            e = County.Insert();
+            if (e != DatabaseError.NoError)
+                return e;
+            CountyID = County.ID;
+
             if (Realtor.IsValidRealtor)
             {
-                if (Realtor.ID == 0)
-                {
-                    DatabaseError realtorError = Realtor.Insert();
-                    if (realtorError != DatabaseError.NoError)
-                        return realtorError;
-                    Realtor.ID = Database.GetLastRowIDInserted("Realtor");
-                }
-                else
-                {
-                    DatabaseError realtorError = Realtor.Update();
-                    if (realtorError != DatabaseError.NoError)
-                        return realtorError;
-                }
+                e = Realtor.Insert();
+                if (e != DatabaseError.NoError)
+                    return e;
+                RealtorID = Realtor.ID;
             }
-            #endregion
-            #region Title Company Insert/Update
+
             if (TitleCompany.IsValidCompany)
             {
-                if (TitleCompany.ID == 0)
-                {
-                    DatabaseError tcError = TitleCompany.Insert();
-                    if (tcError != DatabaseError.NoError)
-                        return tcError;
-                    TitleCompany.ID = Database.GetLastRowIDInserted("TitleCompany");
-                }
-                else
-                {
-                    DatabaseError tcError = TitleCompany.Update();
-                    if (tcError != DatabaseError.NoError)
-                        return tcError;
-                }
+                e = TitleCompany.Insert();
+                if (e != DatabaseError.NoError)
+                    return e;
+                TitleCompanyID = TitleCompany.ID;
             }
-            #endregion
-            #region Location Insert/Update
-            {
-                if (Location.ID == 0)
-                {
-                    DatabaseError locationError = Location.Insert();
-                    if (locationError != DatabaseError.NoError)
-                        return locationError;
-                    Location.ID = Database.GetLastRowIDInserted("Address");
-                }
-                else
-                {
-                    DatabaseError locError = Location.Update();
-                    if (locError != DatabaseError.NoError)
-                        return locError;
-                }
-            }
-            #endregion
+
+            e = BillingObject.Insert();
+            if (e != DatabaseError.NoError)
+                return e;
+
             #region Files Insert
             foreach (CFile file in Files)
             {
-                DatabaseError fileError = file.Update();
-                if (fileError == DatabaseError.FileUpdate || fileError == DatabaseError.FileIncomplete)
+                DatabaseError fileError = file.Insert();
+                if (fileError != DatabaseError.NoError)
                     return fileError;
                 AddFileId(file.ID);
             }
             #endregion
-            #region County Insert
-            if (County.ID == 0)
-                return DatabaseError.CountyInsert;
-            #endregion
+
+            return DatabaseError.NoError;
+        }
+
+        public override string ToString()
+        {
+            return JobNumber;
+        }
+
+        /// <summary>
+        /// Handles insertion of this survey and any files associated with it.
+        /// </summary>
+        /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
+        public DatabaseError Insert()
+        {
+            if (IsValidSurvey)
+            {
+                DatabaseError e = UpdateObjects();
+                if (e != DatabaseError.NoError)
+                    return e;
+                if (ID == 0)
+                {
+                    ID = Database.InsertSurvey(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.SurveyInsert;
+                }
+                else
+                {
+                    e = Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyUpdate;
+                }
+                return e;
+            }
+            return DatabaseError.SurveyIncomplete;
+        }
+
+        /// <summary>
+        /// Handles updating this survey and any files associated with it as well. 
+        /// If there is a file with an ID of 0 (meaning it hasn't been inserted yet), inserts it.
+        /// </summary>
+        /// <returns>A <see cref="DatabaseError"/> with the result of the Update operation.</returns>
+        public DatabaseError Update()
+        {
+            return Insert();
+        }
+
+        private DatabaseError DeleteObjects()
+        {
+            DatabaseError e;
+            e = Database.DeleteAddress(Location) ? DatabaseError.NoError : DatabaseError.AddressDelete;
+            if (e != DatabaseError.NoError)
+                return e;
+
+            e = BillingObject.Delete();
+            if (e != DatabaseError.NoError)
+                return e;
+
+            foreach (CFile file in Files)
+            {
+                e = Database.DeleteFile(file) ? DatabaseError.NoError : DatabaseError.FileDelete;
+                if (e != DatabaseError.NoError)
+                    return e;
+            }
 
             return DatabaseError.NoError;
         }
@@ -561,64 +586,11 @@ namespace SurveyManager.backend.wrappers
         /// <returns>A <see cref="DatabaseError"/> with the result of the Delete operation.</returns>
         public DatabaseError Delete()
         {
-            foreach (CFile file in Files)
-            {
-                DatabaseError fileError = Database.DeleteFile(file) ? DatabaseError.NoError : DatabaseError.FileDelete;
-                if (fileError == DatabaseError.FileDelete)
-                    return fileError;
-            }
-
-            DatabaseError e = BillingObject.Delete();
+            DatabaseError e = DeleteObjects();
             if (e != DatabaseError.NoError)
                 return e;
 
             return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;
-        }
-
-        /// <summary>
-        /// Handles insertion of this survey and any files associated with it.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
-        public DatabaseError Insert()
-        {
-            if (!IsValidSurvey)
-                return DatabaseError.SurveyIncomplete;
-
-            DatabaseError e = UpdateObjects();
-            if (e != DatabaseError.NoError)
-                return e;
-
-            e = BillingObject.Insert();
-            if (e != DatabaseError.NoError)
-                return e;
-
-            return Database.InsertSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
-        }
-
-        /// <summary>
-        /// Handles updating this survey and any files associated with it as well. 
-        /// If there is a file with an ID of 0 (meaning it hasn't been inserted yet), inserts it.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Update operation.</returns>
-        public DatabaseError Update()
-        {
-            if (!IsValidSurvey)
-                return DatabaseError.SurveyIncomplete;
-
-            DatabaseError e = UpdateObjects();
-            if (e != DatabaseError.NoError)
-                return e;
-
-            e = BillingObject.Update();
-            if (e != DatabaseError.NoError)
-                return e;
-
-            return Database.UpdateSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyInsert;
-        }
-
-        public override string ToString()
-        {
-            return JobNumber;
         }
     }
 }

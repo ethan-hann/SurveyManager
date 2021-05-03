@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
@@ -19,7 +20,15 @@ namespace SurveyManager.backend.wrappers
         [Description("The full name of the county.")]
         [Browsable(true)]
         [DisplayName("Name")]
-        public string CountyName { get; set; }
+        public string CountyName { get; set; } = "N/A";
+
+        public bool IsValidCounty
+        {
+            get
+            {
+                return !CountyName.Equals("N/A");
+            }
+        }
 
         public County() { }
 
@@ -34,24 +43,41 @@ namespace SurveyManager.backend.wrappers
             CountyName = name;
         }
 
-        public Enums.DatabaseError Delete()
-        {
-            return Database.DeleteCounty(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.CountyDelete;
-        }
-
-        public Enums.DatabaseError Insert()
-        {
-            return Database.InsertCounty(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.CountyInsert;
-        }
-
-        public Enums.DatabaseError Update()
-        {
-            return Database.UpdateCounty(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.CountyUpdate;
-        }
-
         public override string ToString()
         {
             return CountyName;
+        }
+
+        public DatabaseError Insert()
+        {
+            DatabaseError e;
+            if (IsValidCounty)
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertCounty(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.CountyInsert;
+                }
+                else
+                {
+                    e = Database.UpdateCounty(this) ? DatabaseError.NoError : DatabaseError.CountyUpdate;
+                }
+                return e;
+            }
+            else
+            {
+                return DatabaseError.CountyIncomplete;
+            }
+        }
+
+        public DatabaseError Update()
+        {
+            return Insert();
+        }
+
+        public DatabaseError Delete()
+        {
+            return Database.DeleteCounty(this) ? DatabaseError.NoError : DatabaseError.CountyDelete;
         }
     }
 }

@@ -237,26 +237,33 @@ namespace SurveyManager.backend.wrappers
             return $"{FileName}.{Extension.ToString().ToLower()}";
         }
 
-        public DatabaseError Delete()
-        {
-            return Database.DeleteFile(this) ? DatabaseError.NoError : DatabaseError.FileDelete;
-        }
-
         public DatabaseError Insert()
         {
-            if (!IsValidFile)
-                return DatabaseError.FileIncomplete;
-            ID = Database.InsertFile(this);
-
-            return ID != 0 ? DatabaseError.NoError : DatabaseError.FileInsert;
+            DatabaseError e;
+            if (IsValidFile)
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertFile(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.FileInsert;
+                }
+                else
+                {
+                    e = Database.UpdateFile(this) ? DatabaseError.NoError : DatabaseError.FileUpdate;
+                }
+                return e;
+            }
+            return DatabaseError.FileIncomplete;
         }
 
         public DatabaseError Update()
         {
-            if (!IsValidFile)
-                return DatabaseError.FileIncomplete;
+            return Insert();
+        }
 
-            return Database.UpdateFile(this) ? DatabaseError.NoError : DatabaseError.FileUpdate;
+        public DatabaseError Delete()
+        {
+            return Database.DeleteFile(this) ? DatabaseError.NoError : DatabaseError.FileDelete;
         }
     }
 }

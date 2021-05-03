@@ -114,6 +114,11 @@ namespace SurveyManager.utility
             [Description("There was an error deleting an existing county from the database.")]
             CountyDelete,
             /// <summary>
+            /// Error when a county is missing important information.
+            /// </summary>
+            [Description("The county's information was missing or incomplete.")]
+            CountyIncomplete,
+            /// <summary>
             /// Error when inserting realtor data.
             /// </summary>
             [Description("There was an error inserting the realtor's information into the database.")]

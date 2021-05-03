@@ -58,7 +58,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return !Name.Equals("N/A") && !PhoneNumber.Equals("N/A");
+                return !Name.Equals("N/A") && !PhoneNumber.Equals("N/A") && !ClientAddress.IsEmpty;
             }
         }
 
@@ -127,51 +127,53 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
+
         public DatabaseError Insert()
         {
-            if (ClientAddress.IsEmpty)
-                return DatabaseError.AddressIncomplete;
-
-            if (!IsValidClient)
-                return DatabaseError.ClientIncomplete;
-
-            DatabaseError addressError = ClientAddress.Insert();
-            if (addressError == DatabaseError.NoError)
+            DatabaseError e;
+            if (IsValidClient)
             {
-                int addressID = Database.GetLastRowIDInserted("Address");
-                ClientAddress.ID = addressID;
-                AddressID = addressID;
+                if (ClientAddress.ID == 0)
+                {
+                    ClientAddress.ID = Database.InsertAddress(ClientAddress);
+                    AddressID = ClientAddress.ID;
+                    e = ClientAddress.ID != 0 ? DatabaseError.NoError : DatabaseError.AddressInsert;
+                    if (e != DatabaseError.NoError)
+                        return e;
+                }
+                else
+                {
+                    e = Database.UpdateAddress(ClientAddress) ? DatabaseError.NoError : DatabaseError.AddressUpdate;
+                    if (e != DatabaseError.NoError)
+                        return e;
+                }
 
-                return Database.InsertClient(this) ? DatabaseError.NoError : DatabaseError.ClientInsert;
+                if (ID == 0)
+                {
+                    ID = Database.InsertClient(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.ClientInsert;
+                }
+                else
+                {
+                    e = Database.UpdateClient(this) ? DatabaseError.NoError : DatabaseError.ClientUpdate;
+                }
+                return e;
             }
-            else
-            {
-                return addressError;
-            }
+            return DatabaseError.ClientIncomplete;
         }
 
         public DatabaseError Update()
         {
-            if (ClientAddress.IsEmpty)
-                return DatabaseError.AddressIncomplete;
-
-            if (!IsValidClient)
-                return DatabaseError.ClientIncomplete;
-
-            DatabaseError addressError = ClientAddress.Update();
-            return addressError == DatabaseError.NoError ? 
-                (Database.UpdateClient(this) ? DatabaseError.NoError : DatabaseError.ClientUpdate) 
-                : DatabaseError.AddressUpdate;
+            return Insert();
         }
 
         public DatabaseError Delete()
         {
             return Database.DeleteClient(this) ? DatabaseError.NoError : DatabaseError.ClientDelete;
-        }
-
-        public override string ToString()
-        {
-            return $"{Name}";
         }
     }
 }

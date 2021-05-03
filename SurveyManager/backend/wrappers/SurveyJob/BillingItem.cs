@@ -144,43 +144,23 @@ namespace SurveyManager.backend.wrappers
             DatabaseError e;
             if (IsValidItem)
             {
-                if (OfficeRate.ID == 0)
+                e = OfficeRate.Insert();
+                if (e != DatabaseError.NoError)
+                    return e;
+                e = FieldRate.Insert();
+                if (e != DatabaseError.NoError)
+                    return e;
+
+                if (ID == 0)
                 {
-                    e = OfficeRate.Insert();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                    else
-                        OfficeRateId = OfficeRate.ID;
+                    ID = Database.InsertBillingItem(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.BillingItemInsert;
                 }
                 else
                 {
-                    e = OfficeRate.Update();
-                    if (e != DatabaseError.NoError)
-                        return e;
+                    e = Database.UpdateBillingItem(this) ? DatabaseError.NoError : DatabaseError.BillingItemUpdate;
                 }
-
-                if (FieldRate.ID == 0)
-                {
-                    e = FieldRate.Insert();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                    else
-                        FieldRateId = FieldRate.ID;
-                }
-                else
-                {
-                    e = FieldRate.Update();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                }
-
-                int id = Database.InsertBillingItem(this);
-                if (id != 0)
-                {
-                    ID = id;
-                }
-
-                return id != 0 ? DatabaseError.NoError : DatabaseError.BillingItemInsert;
+                return e;
             }
             else
                 return DatabaseError.BillingItemIncomplete;
@@ -188,42 +168,7 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Update()
         {
-            DatabaseError e;
-            if (IsValidItem)
-            {
-                if (OfficeRate.ID == 0)
-                {
-                    e = OfficeRate.Insert();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                    else
-                        OfficeRateId = OfficeRate.ID;
-                }
-                else
-                {
-                    e = OfficeRate.Update();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                }
-
-                if (FieldRate.ID == 0)
-                {
-                    e = FieldRate.Insert();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                    else
-                        FieldRateId = FieldRate.ID;
-                }
-                else
-                {
-                    e = FieldRate.Update();
-                    if (e != DatabaseError.NoError)
-                        return e;
-                }
-                return Database.UpdateBillingItem(this) ? DatabaseError.NoError : DatabaseError.BillingItemUpdate;
-            }
-            else
-                return DatabaseError.BillingItemIncomplete;
+            return Insert();
         }
 
         public DatabaseError Delete()

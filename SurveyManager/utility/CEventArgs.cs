@@ -97,5 +97,15 @@ namespace SurveyManager.utility
                 CloseReason = closeReason;
             }
         }
+
+        public class ObjectCreatedEventArgs : EventArgs
+        {
+            public object DataValue { get; internal set; }
+
+            public ObjectCreatedEventArgs(object dataValue)
+            {
+                DataValue = dataValue;
+            }
+        }
     }
 }

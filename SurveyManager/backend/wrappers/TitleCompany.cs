@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
@@ -73,33 +74,41 @@ namespace SurveyManager.backend.wrappers
             OfficeNumber = officeNumber;
         }
 
-        public Enums.DatabaseError Delete()
-        {
-            return Database.DeleteTitleCompany(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.TitleCompanyDelete;
-        }
-
-        public Enums.DatabaseError Insert()
-        {
-            if (IsValidCompany)
-                return Database.InsertTitleCompany(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.TitleCompanyInsert;
-            else
-                return Enums.DatabaseError.TitleCompanyIncomplete;
-        }
-
-        public Enums.DatabaseError Update()
-        {
-            if (IsValidCompany)
-                return Database.UpdateTitleCompany(this) ? Enums.DatabaseError.NoError : Enums.DatabaseError.TitleCompanyUpdate;
-            else
-                return Enums.DatabaseError.TitleCompanyIncomplete;
-        }
-
         public override string ToString()
         {
             if (IsValidCompany)
                 return Name;
             else
                 return "(...)";
+        }
+
+        public DatabaseError Insert()
+        {
+            DatabaseError e;
+            if (IsValidCompany)
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertTitleCompany(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.TitleCompanyInsert;
+                }
+                else
+                {
+                    e = Database.UpdateTitleCompany(this) ? DatabaseError.NoError : DatabaseError.TitleCompanyUpdate;
+                }
+                return e;
+            }
+            return DatabaseError.TitleCompanyIncomplete;
+        }
+
+        public DatabaseError Update()
+        {
+            return Insert();
+        }
+
+        public DatabaseError Delete()
+        {
+            return Database.DeleteTitleCompany(this) ? DatabaseError.NoError : DatabaseError.TitleCompanyDelete;
         }
     }
 }
