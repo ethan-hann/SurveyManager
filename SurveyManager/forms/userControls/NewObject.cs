@@ -83,7 +83,18 @@ namespace SurveyManager.forms.userControls
             if (CMessageBox.Show("Create another?", "", MessageBoxButtons.YesNo, Resources.info_64x64) == DialogResult.Yes)
                 Clear();
             else
-                RuntimeVars.Instance.MainForm.DockingWorkspace.RemovePage(RuntimeVars.Instance.SelectedPageUniqueName, true);
+            {
+                if (RuntimeVars.Instance.MainForm.DockingWorkspace.DockingManager.FindDockingFloating("Floating")
+                    .DockingManager.ContainsPage(RuntimeVars.Instance.SelectedPageUniqueName))
+                {
+                    RuntimeVars.Instance.MainForm.DockingWorkspace.DockingManager.FindDockingFloating("Floating")
+                    .DockingManager.RemovePage(RuntimeVars.Instance.SelectedPageUniqueName, true);
+                }
+                else
+                {
+                    RuntimeVars.Instance.MainForm.DockingWorkspace.RemovePage(RuntimeVars.Instance.SelectedPageUniqueName, true);
+                }
+            }
         }
 
         private void CheckForAssociation()

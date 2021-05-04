@@ -6,6 +6,7 @@ using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
+using SurveyManager.forms.surveyMenu.billingPortal;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
@@ -38,8 +39,6 @@ namespace SurveyManager.forms.userControls
 
         private void BillingPortalCtl_Load(object sender, EventArgs e)
         {
-            RefreshRates();
-
             LineItemsCtl lControl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingObject.GetLineItems());
             lControl.Dock = DockStyle.Fill;
             lControl.StatusUpdate += ChangeStatusText;
@@ -76,17 +75,30 @@ namespace SurveyManager.forms.userControls
                 
                 foreach (BillingItem item in items)
                 {
-                    row = new OutlookGridRow();
-                    row.CreateCells(billingGrid, new object[] {
-                        item.ID,
-                        item.Description,
-                        item.FieldRate,
-                        item.OfficeRate,
-                        Utility.ToFullString(item.FieldTime),
-                        Utility.ToFullString(item.OfficeTime)
-                    });
-                    row.Tag = item;
-                    rows.Add(row);
+                    if (item.OfficeTime == TimeSpan.Zero)
+                    {
+                        row = new OutlookGridRow();
+                        row.CreateCells(billingGrid, new object[] {
+                            item.ID,
+                            item.Description,
+                            item.FieldRate,
+                            Utility.ToFullString(item.FieldTime)
+                        });
+                        row.Tag = item;
+                        rows.Add(row);
+                    }
+                    else
+                    {
+                        row = new OutlookGridRow();
+                        row.CreateCells(billingGrid, new object[] {
+                            item.ID,
+                            item.Description,
+                            item.OfficeRate,
+                            Utility.ToFullString(item.OfficeTime)
+                        });
+                        row.Tag = item;
+                        rows.Add(row);
+                    }
                 }
             }
         }
@@ -111,11 +123,6 @@ namespace SurveyManager.forms.userControls
 
             loadProgressBar.Visible = false;
             UpdateTotalTime();
-
-            if (billingGrid.Rows.Count <= 0)
-            {
-                ResetControls();
-            }
         }
 
         private void UpdateTotalTime()
@@ -124,11 +131,11 @@ namespace SurveyManager.forms.userControls
             {
                 TimeSpan office = TimeSpan.FromTicks(billingItems.Values.Sum(b => b.Sum(i => i.OfficeTime.Ticks)));
                 TimeSpan field = TimeSpan.FromTicks(billingItems.Values.Sum(b => b.Sum(i => i.FieldTime.Ticks)));
-                lblTotalTime.Text = "Total Time: " + Utility.ToFullString(office + field);
+                gridHeaderGroup.ValuesPrimary.Heading = "Total Time: " + Utility.ToFullString(office + field);
             }
             else
             {
-                lblTotalTime.Text = "Total Time: " + Utility.ToFullString(RuntimeVars.Instance.OpenJob.BillingObject.GetTotalTime());
+                gridHeaderGroup.ValuesPrimary.Heading = "Total Time: No time for this day yet!";
             }
         }
 
@@ -189,44 +196,6 @@ namespace SurveyManager.forms.userControls
             LoadData();
         }
 
-        private void btnAddNewRate_Click(object sender, EventArgs e)
-        {
-            if (!RuntimeVars.Instance.DatabaseConnected)
-            {
-                StatusUpdate?.Invoke(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
-                return;
-            }
-
-            KryptonPage page = new NewPage(EntityTypes.Rate);
-            RuntimeVars.Instance.MainForm.DockingWorkspace.DockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            RuntimeVars.Instance.MainForm.DockingWorkspace.DockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
-        }
-
-        private void btnSaveTimeEntry_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radOfficeTime_CheckedChanged(object sender, EventArgs e)
-        {
-            isOfficeEntry = radOfficeTime.Checked;
-        }
-
-        private void btnRefreshRates_Click(object sender, EventArgs e)
-        {
-            RefreshRates();
-        }
-
-        private void RefreshRates()
-        {
-            cmbRates.DataSource = Database.GetRates();
-            if (cmbRates.Items.Count <= 0)
-            {
-                cmbRates.Items.Add("No rates yet! Click the button to create a new one.");
-            }
-            cmbRates.SelectedIndex = 0;
-        }
-
         private void ChangeStatusText(object sender, EventArgs e)
         {
             if (e is StatusArgs args)
@@ -284,85 +253,9 @@ namespace SurveyManager.forms.userControls
                     selectedListBoxIndex = lbTimeEntries.SelectedIndex;
                     LoadData();
                 }
-
-                if (billingGrid.Rows.Count <= 0)
-                    ResetControls();
             }
         }
 
-        private void btnAddTimeEntry_Click(object sender, EventArgs e)
-        {
-            BillingItem item = new BillingItem();
-            item.AssociatedDate = DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]);
-            item.Description = rtbDescription.Text;
-            item.OfficeRate = (Rate)cmbRates.SelectedItem;
-            item.OfficeRateId = item.OfficeRate.ID;
-            item.FieldRate = (Rate)cmbRates.SelectedItem;
-            item.FieldRateId = item.FieldRate.ID;
-
-            if (isOfficeEntry)
-            {
-                item.OfficeTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
-                item.FieldTime = TimeSpan.Zero;
-            }
-            else
-            {
-                item.FieldTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
-                item.OfficeTime = TimeSpan.Zero;
-            }
-
-            if (item.IsValidItem)
-            {
-                billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Add(item);
-                LoadData();
-            }
-            else
-            {
-                CMessageBox.Show("Not enough information to add new entry. " + 
-                    DatabaseError.BillingItemIncomplete.ToDescriptionString(), "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Reset the values of the controls to their default (base) values.
-        /// </summary>
-        private void ResetControls()
-        {
-            radOfficeTime.Checked = true;
-            if (cmbRates.Items.Count > 0)
-                cmbRates.SelectedIndex = 0;
-
-            rtbDescription.Text = "";
-
-            dtpTimeEntry.Value = DateTime.MinValue;
-        }
-
-        /// <summary>
-        /// Set's the values of the controls to that of the specified billing item.
-        /// </summary>
-        /// <param name="item">The item to set the controls to.</param>
-        private void SetControls(BillingItem item)
-        {
-            radOfficeTime.Checked = item.OfficeTime != TimeSpan.Zero;
-
-            if (radOfficeTime.Checked)
-                cmbRates.SelectedItem = item.OfficeRate;
-            else
-                cmbRates.SelectedItem = item.FieldRate;
-
-            rtbDescription.Text = item.Description;
-
-            if (radOfficeTime.Checked)
-                dtpTimeEntry.Value = DateTime.MinValue + item.OfficeTime;
-            else
-                dtpTimeEntry.Value = DateTime.MinValue + item.FieldTime;
-        }
-
-        private void rtbDescription_TextChanged(object sender, EventArgs e)
-        {
-            lblDescCharCount.Text = "Char. Count: " + rtbDescription.Text.Count() + " / 255";
-        }
 
         /// <summary>
         /// Occurs when the user deletes a row from the grid.
@@ -377,16 +270,40 @@ namespace SurveyManager.forms.userControls
             }
         }
 
-        /// <summary>
-        /// Occurs when a row in the grid is clicked on.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void billingGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void btnNewEntry_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex < 0)
-                return;
-            SetControls((BillingItem)billingGrid.Rows[e.RowIndex].Tag);
+            NewEntryDlg dialog = new NewEntryDlg(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]));
+            dialog.TimeEntryAdded += ProcessItem;
+            dialog.ShowDialog();
+        }
+
+        private void ProcessItem(object sender, EventArgs e)
+        {
+            if (e is ObjectCreatedEventArgs args)
+            {
+                BillingItem item = args.DataValue as BillingItem;
+                if (item == null)
+                    return;
+
+                if (item.ID == 0)
+                    UpdateGrid(item, false);
+                else
+                    UpdateGrid(item, true);
+            }
+        }
+
+        private void UpdateGrid(BillingItem item, bool updating)
+        {
+            if (updating)
+            {
+                int itemIndex = billingItems[item.AssociatedDate.Date.ToShortDateString()].IndexOf(item);
+                billingItems[item.AssociatedDate.Date.ToShortDateString()][itemIndex] = item;
+            }
+            else
+            {
+                billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Add(item);
+            }
+            LoadData();
         }
     }
 }

@@ -280,6 +280,12 @@
     <Compile Include="forms\pages\BillingPortal.cs" />
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
+    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.Designer.cs">
+      <DependentUpon>NewEntryDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -465,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\billingPortal\NewEntryDlg.resx">
+      <DependentUpon>NewEntryDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\description\DescriptionCtl.resx">
       <DependentUpon>DescriptionCtl.cs</DependentUpon>

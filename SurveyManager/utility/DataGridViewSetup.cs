@@ -162,46 +162,28 @@ namespace SurveyManager.utility
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
                     columnsToAdd.Add(billingDescriptionColumn);
-                    DataGridViewColumn fieldRateColumn = new KryptonDataGridViewTextBoxColumn
+                    DataGridViewColumn rateColumn = new KryptonDataGridViewTextBoxColumn
                     {
-                        HeaderText = "Field Rate",
-                        Name = "fieldRateColumn",
+                        HeaderText = "Rate",
+                        Name = "rateColumn",
                         SortMode = DataGridViewColumnSortMode.Programmatic,
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
-                    columnsToAdd.Add(fieldRateColumn);
-                    DataGridViewColumn officeRateColumn = new KryptonDataGridViewTextBoxColumn
+                    columnsToAdd.Add(rateColumn);
+                    DataGridViewColumn timeColumn = new KryptonDataGridViewTextBoxColumn
                     {
-                        HeaderText = "Office Rate",
-                        Name = "officeRateColumn",
+                        HeaderText = "Time Entry",
+                        Name = "timeColumn",
                         SortMode = DataGridViewColumnSortMode.Programmatic,
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
-                    columnsToAdd.Add(officeRateColumn);
-                    DataGridViewColumn fieldTimeColumn = new KryptonDataGridViewTextBoxColumn
-                    {
-                        HeaderText = "Field Time",
-                        Name = "fieldTimeColumn",
-                        SortMode = DataGridViewColumnSortMode.Programmatic,
-                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    };
-                    columnsToAdd.Add(fieldTimeColumn);
-                    DataGridViewColumn officeTimeColumn = new KryptonDataGridViewTextBoxColumn
-                    {
-                        HeaderText = "Office Time",
-                        Name = "officeTimeColumn",
-                        SortMode = DataGridViewColumnSortMode.Programmatic,
-                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    };
-                    columnsToAdd.Add(officeTimeColumn);
+                    columnsToAdd.Add(timeColumn);
                     grid.Columns.AddRange(columnsToAdd.ToArray());
 
                     grid.AddInternalColumn(billingIdColumn, new OutlookGridDefaultGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(billingDescriptionColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(fieldRateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(officeRateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(fieldTimeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(officeTimeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(rateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(timeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     break;
                 }
                 case EntityTypes.Survey:
