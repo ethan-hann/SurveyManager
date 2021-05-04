@@ -129,12 +129,12 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
             if (isOfficeEntry)
             {
-                item.OfficeTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                item.OfficeTime = new TimeSpan(dtpTimeEntry.Value.Hour, dtpTimeEntry.Value.Minute, dtpTimeEntry.Value.Second);
                 item.FieldTime = TimeSpan.Zero;
             }
             else
             {
-                item.FieldTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                item.FieldTime = new TimeSpan(dtpTimeEntry.Value.Hour, dtpTimeEntry.Value.Minute, dtpTimeEntry.Value.Second);
                 item.OfficeTime = TimeSpan.Zero;
             }
 

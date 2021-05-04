@@ -305,5 +305,21 @@ namespace SurveyManager.forms.userControls
             }
             LoadData();
         }
+
+        private void btnEditTime_Click(object sender, EventArgs e)
+        {
+            if (billingGrid.SelectedRows.Count == 1)
+            {
+                BillingItem item = billingGrid.SelectedRows[0].Tag as BillingItem;
+                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item);
+                dialog.TimeEntryAdded += ProcessItem;
+                dialog.ShowDialog();
+            }
+        }
+
+        private void btnSaveAndUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

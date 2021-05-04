@@ -29,7 +29,7 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private void InitializeComponent()
         {
-            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection2 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
+            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection4 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.pgTimeEntries = new ComponentFactory.Krypton.Navigator.KryptonPage();
@@ -209,7 +209,7 @@ namespace SurveyManager.forms.userControls
             this.billingGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.billingGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.billingGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
-            this.billingGrid.GroupCollection = outlookGridGroupCollection2;
+            this.billingGrid.GroupCollection = outlookGridGroupCollection4;
             this.billingGrid.Location = new System.Drawing.Point(0, 0);
             this.billingGrid.Name = "billingGrid";
             this.billingGrid.PreviousSelectedGroupRow = -1;
@@ -256,6 +256,7 @@ namespace SurveyManager.forms.userControls
             this.btnSaveAndUpdate.ToolTipBody = "Saves the time entries internally. Does not save to database.";
             this.btnSaveAndUpdate.ToolTipTitle = "Save";
             this.btnSaveAndUpdate.UniqueName = "78CDC8FC2E324D5D3088A8C6BA0657B1";
+            this.btnSaveAndUpdate.Click += new System.EventHandler(this.btnSaveAndUpdate_Click);
             // 
             // btnEditTime
             // 
@@ -265,6 +266,7 @@ namespace SurveyManager.forms.userControls
             this.btnEditTime.ToolTipBody = "Opens the selected row for editing.";
             this.btnEditTime.ToolTipTitle = "Edit";
             this.btnEditTime.UniqueName = "E3E3C5B10803428C489F888D84A648C2";
+            this.btnEditTime.Click += new System.EventHandler(this.btnEditTime_Click);
             // 
             // BillingPortalCtl
             // 
