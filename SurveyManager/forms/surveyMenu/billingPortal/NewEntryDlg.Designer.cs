@@ -47,6 +47,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.lblFormatBold = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblHelpText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cmbRates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDescritpion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDescritpion.Panel)).BeginInit();
@@ -91,6 +92,8 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.lblRate.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRate.TabIndex = 0;
             this.lblRate.Values.Text = "Rate: ";
+            this.lblRate.MouseEnter += new System.EventHandler(this.cmbRates_MouseEnter);
+            this.lblRate.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // cmbRates
             // 
@@ -101,7 +104,6 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.cmbRates.Name = "cmbRates";
             this.cmbRates.Size = new System.Drawing.Size(426, 21);
             this.cmbRates.TabIndex = 1;
-            this.cmbRates.MouseEnter += new System.EventHandler(this.cmbRates_MouseEnter);
             this.cmbRates.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // btnRefreshRates
@@ -144,6 +146,8 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.grpDescritpion.Size = new System.Drawing.Size(671, 151);
             this.grpDescritpion.TabIndex = 5;
             this.grpDescritpion.Values.Heading = "Short Description";
+            this.grpDescritpion.MouseEnter += new System.EventHandler(this.rtbDescription_MouseEnter);
+            this.grpDescritpion.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // rtbDescription
             // 
@@ -156,8 +160,6 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.rtbDescription.TabIndex = 1;
             this.rtbDescription.Text = "";
             this.rtbDescription.TextChanged += new System.EventHandler(this.rtbDescription_TextChanged);
-            this.rtbDescription.MouseEnter += new System.EventHandler(this.rtbDescription_MouseEnter);
-            this.rtbDescription.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // statusStrip2
             // 
@@ -204,7 +206,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.dtpTimeEntry.Margin = new System.Windows.Forms.Padding(6);
             this.dtpTimeEntry.Name = "dtpTimeEntry";
             this.dtpTimeEntry.ShowUpDown = true;
-            this.dtpTimeEntry.Size = new System.Drawing.Size(110, 37);
+            this.dtpTimeEntry.Size = new System.Drawing.Size(123, 37);
             this.dtpTimeEntry.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeEntry.TabIndex = 1;
             this.dtpTimeEntry.MouseEnter += new System.EventHandler(this.dtpTimeEntry_MouseEnter);
@@ -229,7 +231,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             // 
             // lblFormatBold
             // 
-            this.lblFormatBold.Location = new System.Drawing.Point(78, 103);
+            this.lblFormatBold.Location = new System.Drawing.Point(32, 103);
             this.lblFormatBold.Name = "lblFormatBold";
             this.lblFormatBold.Size = new System.Drawing.Size(169, 21);
             this.lblFormatBold.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,15 +257,25 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.lblHelpText.Size = new System.Drawing.Size(47, 18);
             this.lblHelpText.Text = "<HELP>";
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(210, 68);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(346, 21);
+            this.kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 11;
+            this.kryptonLabel1.Values.Text = "Max time allowed: 23 hours : 59 minutes : 59 seconds";
+            // 
             // NewEntryDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
             this.btnSaveEntry,
             this.btnReset});
             this.ClientSize = new System.Drawing.Size(698, 377);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAddNewRate);
             this.Controls.Add(this.btnRefreshRates);
@@ -317,5 +329,6 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormatBold;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblHelpText;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

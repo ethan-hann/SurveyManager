@@ -321,5 +321,16 @@ namespace SurveyManager.forms.userControls
         {
 
         }
+
+        private void billingGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                BillingItem item = billingGrid.Rows[e.RowIndex].Tag as BillingItem;
+                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item);
+                dialog.TimeEntryAdded += ProcessItem;
+                dialog.ShowDialog();
+            }
+        }
     }
 }

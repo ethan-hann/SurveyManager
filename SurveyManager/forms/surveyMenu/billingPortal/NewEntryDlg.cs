@@ -43,13 +43,21 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             if (isEditing)
             {
                 Text = $"Editing Time Entry: {this.oldItem.ID} - {this.oldItem.AssociatedDate.Date.ToShortDateString()}";
-                SetControls(this.oldItem);
             }
         }
 
         private void NewEntryDlg_Load(object sender, EventArgs e)
         {
             RefreshRates();
+
+            if (isEditing)
+            {
+                SetControls(oldItem);
+            }
+            else
+            {
+                ResetControls();
+            }
 
             btnSaveEntry.Click += SaveEntry;
             btnReset.Click += Reset;
@@ -162,12 +170,12 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
             if (isOfficeEntry)
             {
-                oldItem.OfficeTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                oldItem.OfficeTime = (associatedDate + dtpTimeEntry.Value.TimeOfDay).TimeOfDay;
                 oldItem.FieldTime = TimeSpan.Zero;
             }
             else
             {
-                oldItem.FieldTime = TimeSpan.FromTicks(dtpTimeEntry.Value.Ticks);
+                oldItem.FieldTime = (associatedDate + dtpTimeEntry.Value.TimeOfDay).TimeOfDay;
                 oldItem.OfficeTime = TimeSpan.Zero;
             }
 
@@ -195,7 +203,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
             rtbDescription.Text = "";
 
-            dtpTimeEntry.Value = DateTime.MinValue;
+            dtpTimeEntry.Value = associatedDate;
         }
 
         /// <summary>
@@ -204,7 +212,10 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
         /// <param name="item">The item to set the controls to.</param>
         private void SetControls(BillingItem item)
         {
+            ResetControls();
+
             radOfficeTime.Checked = item.OfficeTime != TimeSpan.Zero;
+            radFieldTime.Checked = !radOfficeTime.Checked;
 
             if (radOfficeTime.Checked)
                 cmbRates.SelectedItem = item.OfficeRate;
@@ -214,9 +225,17 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             rtbDescription.Text = item.Description;
 
             if (radOfficeTime.Checked)
-                dtpTimeEntry.Value = DateTime.MinValue + item.OfficeTime;
+            {
+                DateTime d = dtpTimeEntry.Value;
+                TimeSpan t = item.OfficeTime;
+                dtpTimeEntry.Value = d.Date + t;
+            }
             else
-                dtpTimeEntry.Value = DateTime.MinValue + item.FieldTime;
+            {
+                DateTime d = dtpTimeEntry.Value;
+                TimeSpan t = item.FieldTime;
+                dtpTimeEntry.Value = d.Date + t;
+            }
         }
 
         private void rtbDescription_TextChanged(object sender, EventArgs e)

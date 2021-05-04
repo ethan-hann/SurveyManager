@@ -29,7 +29,7 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private void InitializeComponent()
         {
-            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection4 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
+            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection1 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
             this.hdrGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.pgTimeEntries = new ComponentFactory.Krypton.Navigator.KryptonPage();
@@ -38,14 +38,14 @@ namespace SurveyManager.forms.userControls
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveTime = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddTime = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pgAdditionalLineItems = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.loadProgressBar = new System.Windows.Forms.ProgressBar();
-            this.loadBillingDetailsWorker = new System.ComponentModel.BackgroundWorker();
-            this.billingGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
             this.gridHeaderGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnNewEntry = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnSaveAndUpdate = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnEditTime = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.billingGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
+            this.pgAdditionalLineItems = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.loadProgressBar = new System.Windows.Forms.ProgressBar();
+            this.loadBillingDetailsWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
@@ -61,12 +61,12 @@ namespace SurveyManager.forms.userControls
             this.kryptonSplitContainer1.Panel2.SuspendLayout();
             this.kryptonSplitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridHeaderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridHeaderGroup.Panel)).BeginInit();
             this.gridHeaderGroup.Panel.SuspendLayout();
             this.gridHeaderGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).BeginInit();
             this.SuspendLayout();
             // 
             // hdrGroup
@@ -173,52 +173,6 @@ namespace SurveyManager.forms.userControls
             this.btnAddTime.Values.Text = "New Day";
             this.btnAddTime.Click += new System.EventHandler(this.btnAddTime_Click);
             // 
-            // pgAdditionalLineItems
-            // 
-            this.pgAdditionalLineItems.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.pgAdditionalLineItems.Flags = 65534;
-            this.pgAdditionalLineItems.LastVisibleSet = true;
-            this.pgAdditionalLineItems.MinimumSize = new System.Drawing.Size(50, 50);
-            this.pgAdditionalLineItems.Name = "pgAdditionalLineItems";
-            this.pgAdditionalLineItems.Size = new System.Drawing.Size(1129, 648);
-            this.pgAdditionalLineItems.Text = "Additional Items";
-            this.pgAdditionalLineItems.ToolTipTitle = "Page ToolTip";
-            this.pgAdditionalLineItems.UniqueName = "4F7B8A032FAD42B69485BD8A5F4E589F";
-            // 
-            // loadProgressBar
-            // 
-            this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loadProgressBar.Location = new System.Drawing.Point(0, 675);
-            this.loadProgressBar.Name = "loadProgressBar";
-            this.loadProgressBar.Size = new System.Drawing.Size(1131, 23);
-            this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.loadProgressBar.TabIndex = 1;
-            this.loadProgressBar.Visible = false;
-            // 
-            // loadBillingDetailsWorker
-            // 
-            this.loadBillingDetailsWorker.WorkerReportsProgress = true;
-            this.loadBillingDetailsWorker.WorkerSupportsCancellation = true;
-            this.loadBillingDetailsWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.loadBillingDetailsWorker_DoWork);
-            this.loadBillingDetailsWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.loadBillingDetailsWorker_ProgressChanged);
-            this.loadBillingDetailsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.loadBillingDetailsWorker_RunWorkerCompleted);
-            // 
-            // billingGrid
-            // 
-            this.billingGrid.AllowUserToAddRows = false;
-            this.billingGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.billingGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.billingGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
-            this.billingGrid.GroupCollection = outlookGridGroupCollection4;
-            this.billingGrid.Location = new System.Drawing.Point(0, 0);
-            this.billingGrid.Name = "billingGrid";
-            this.billingGrid.PreviousSelectedGroupRow = -1;
-            this.billingGrid.ReadOnly = true;
-            this.billingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.billingGrid.Size = new System.Drawing.Size(852, 591);
-            this.billingGrid.TabIndex = 1;
-            this.billingGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.billingGrid_UserDeletedRow);
-            // 
             // gridHeaderGroup
             // 
             this.gridHeaderGroup.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
@@ -268,6 +222,53 @@ namespace SurveyManager.forms.userControls
             this.btnEditTime.UniqueName = "E3E3C5B10803428C489F888D84A648C2";
             this.btnEditTime.Click += new System.EventHandler(this.btnEditTime_Click);
             // 
+            // billingGrid
+            // 
+            this.billingGrid.AllowUserToAddRows = false;
+            this.billingGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.billingGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.billingGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
+            this.billingGrid.GroupCollection = outlookGridGroupCollection1;
+            this.billingGrid.Location = new System.Drawing.Point(0, 0);
+            this.billingGrid.Name = "billingGrid";
+            this.billingGrid.PreviousSelectedGroupRow = -1;
+            this.billingGrid.ReadOnly = true;
+            this.billingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.billingGrid.Size = new System.Drawing.Size(852, 591);
+            this.billingGrid.TabIndex = 1;
+            this.billingGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.billingGrid_CellDoubleClick);
+            this.billingGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.billingGrid_UserDeletedRow);
+            // 
+            // pgAdditionalLineItems
+            // 
+            this.pgAdditionalLineItems.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.pgAdditionalLineItems.Flags = 65534;
+            this.pgAdditionalLineItems.LastVisibleSet = true;
+            this.pgAdditionalLineItems.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pgAdditionalLineItems.Name = "pgAdditionalLineItems";
+            this.pgAdditionalLineItems.Size = new System.Drawing.Size(1129, 648);
+            this.pgAdditionalLineItems.Text = "Additional Items";
+            this.pgAdditionalLineItems.ToolTipTitle = "Page ToolTip";
+            this.pgAdditionalLineItems.UniqueName = "4F7B8A032FAD42B69485BD8A5F4E589F";
+            // 
+            // loadProgressBar
+            // 
+            this.loadProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.loadProgressBar.Location = new System.Drawing.Point(0, 675);
+            this.loadProgressBar.Name = "loadProgressBar";
+            this.loadProgressBar.Size = new System.Drawing.Size(1131, 23);
+            this.loadProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.loadProgressBar.TabIndex = 1;
+            this.loadProgressBar.Visible = false;
+            // 
+            // loadBillingDetailsWorker
+            // 
+            this.loadBillingDetailsWorker.WorkerReportsProgress = true;
+            this.loadBillingDetailsWorker.WorkerSupportsCancellation = true;
+            this.loadBillingDetailsWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.loadBillingDetailsWorker_DoWork);
+            this.loadBillingDetailsWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.loadBillingDetailsWorker_ProgressChanged);
+            this.loadBillingDetailsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.loadBillingDetailsWorker_RunWorkerCompleted);
+            // 
             // BillingPortalCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,12 +292,12 @@ namespace SurveyManager.forms.userControls
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
             this.kryptonSplitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridHeaderGroup.Panel)).EndInit();
             this.gridHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridHeaderGroup)).EndInit();
             this.gridHeaderGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).EndInit();
             this.ResumeLayout(false);
 
         }

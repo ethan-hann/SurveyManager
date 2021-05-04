@@ -173,6 +173,20 @@ namespace SurveyManager.utility
         }
 
         /// <summary>
+        /// Converts a <see cref="DateTime"/> object into a <see cref="TimeSpan"/> object.
+        /// </summary>
+        /// <param name="date">The date to convert.</param>
+        /// <returns>A <see cref="TimeSpan"/> representing the date.</returns>
+        public static TimeSpan ToTimeSpan(DateTime date)
+        {
+            int hours = date.Hour;
+            int minutes = date.Minute;
+            int seconds = date.Second;
+            TimeSpan days = date.TimeOfDay;
+            return days;
+        }
+
+        /// <summary>
         /// Convert the specified number of pixels to its inches equivalent.
         /// <para>Assumes the DPI to be 96.</para>
         /// </summary>
