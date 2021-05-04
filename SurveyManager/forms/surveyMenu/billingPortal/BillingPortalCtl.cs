@@ -111,14 +111,19 @@ namespace SurveyManager.forms.userControls
 
             loadProgressBar.Visible = false;
             UpdateTotalTime();
+
+            if (billingGrid.Rows.Count <= 0)
+            {
+                ResetControls();
+            }
         }
 
         private void UpdateTotalTime()
         {
             if (selectedListBoxIndex >= 0)
             {
-                TimeSpan office = TimeSpan.FromTicks(billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Sum(b => b.OfficeTime.Ticks));
-                TimeSpan field = TimeSpan.FromTicks(billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Sum(b => b.FieldTime.Ticks));
+                TimeSpan office = TimeSpan.FromTicks(billingItems.Values.Sum(b => b.Sum(i => i.OfficeTime.Ticks)));
+                TimeSpan field = TimeSpan.FromTicks(billingItems.Values.Sum(b => b.Sum(i => i.FieldTime.Ticks)));
                 lblTotalTime.Text = "Total Time: " + Utility.ToFullString(office + field);
             }
             else
@@ -247,13 +252,16 @@ namespace SurveyManager.forms.userControls
                 selectedListBoxIndex = lbTimeEntries.SelectedIndex;
             }
 
-            UpdateControls();
+            LoadData();
         }
 
         private void btnRemoveTime_Click(object sender, EventArgs e)
         {
             DateTime selected = DateTime.Parse((string)lbTimeEntries.SelectedItem);
-            DialogResult result = CMessageBox.Show($"Are you sure you want to remove {selected.Date.ToShortDateString()} from this job? This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from the job!", "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+            DialogResult result = CMessageBox.Show($"Are you sure you want to remove {selected.Date.ToShortDateString()} from this job? " +
+                $"This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from this job and cannot be reversed!", 
+                "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+
             if (result == DialogResult.No || result == DialogResult.Cancel)
                 return;
 
@@ -263,7 +271,7 @@ namespace SurveyManager.forms.userControls
             lbTimeEntries.SelectedIndex = lbTimeEntries.Items.Count - 1;
             selectedListBoxIndex = lbTimeEntries.SelectedIndex;
 
-            UpdateControls();
+            LoadData();
         }
 
         private void lbTimeEntries_SelectedIndexChanged(object sender, EventArgs e)
@@ -276,6 +284,9 @@ namespace SurveyManager.forms.userControls
                     selectedListBoxIndex = lbTimeEntries.SelectedIndex;
                     LoadData();
                 }
+
+                if (billingGrid.Rows.Count <= 0)
+                    ResetControls();
             }
         }
 
@@ -313,14 +324,39 @@ namespace SurveyManager.forms.userControls
             }
         }
 
-        private void UpdateControls()
+        /// <summary>
+        /// Reset the values of the controls to their default (base) values.
+        /// </summary>
+        private void ResetControls()
         {
             radOfficeTime.Checked = true;
             if (cmbRates.Items.Count > 0)
                 cmbRates.SelectedIndex = 0;
 
+            rtbDescription.Text = "";
+
             dtpTimeEntry.Value = DateTime.MinValue;
-            LoadData();
+        }
+
+        /// <summary>
+        /// Set's the values of the controls to that of the specified billing item.
+        /// </summary>
+        /// <param name="item">The item to set the controls to.</param>
+        private void SetControls(BillingItem item)
+        {
+            radOfficeTime.Checked = item.OfficeTime != TimeSpan.Zero;
+
+            if (radOfficeTime.Checked)
+                cmbRates.SelectedItem = item.OfficeRate;
+            else
+                cmbRates.SelectedItem = item.FieldRate;
+
+            rtbDescription.Text = item.Description;
+
+            if (radOfficeTime.Checked)
+                dtpTimeEntry.Value = DateTime.MinValue + item.OfficeTime;
+            else
+                dtpTimeEntry.Value = DateTime.MinValue + item.FieldTime;
         }
 
         private void rtbDescription_TextChanged(object sender, EventArgs e)
@@ -328,9 +364,29 @@ namespace SurveyManager.forms.userControls
             lblDescCharCount.Text = "Char. Count: " + rtbDescription.Text.Count() + " / 255";
         }
 
+        /// <summary>
+        /// Occurs when the user deletes a row from the grid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void billingGrid_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
-            
+            if (billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Contains((BillingItem)e.Row.Tag))
+            {
+                billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Remove((BillingItem)e.Row.Tag);
+            }
+        }
+
+        /// <summary>
+        /// Occurs when a row in the grid is clicked on.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void billingGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            SetControls((BillingItem)billingGrid.Rows[e.RowIndex].Tag);
         }
     }
 }

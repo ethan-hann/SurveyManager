@@ -56,6 +56,8 @@ namespace SurveyManager.forms.userControls
             this.lblTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.dtpTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSaveTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.billingGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -64,8 +66,6 @@ namespace SurveyManager.forms.userControls
             this.pgAdditionalLineItems = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.loadBillingDetailsWorker = new System.ComponentModel.BackgroundWorker();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddTimeEntry = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
@@ -96,10 +96,10 @@ namespace SurveyManager.forms.userControls
             this.grpDescritpion.SuspendLayout();
             this.statusStrip2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).BeginInit();
-            this.flowLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // hdrGroup
@@ -397,6 +397,25 @@ namespace SurveyManager.forms.userControls
             this.kryptonLabel1.TabIndex = 2;
             this.kryptonLabel1.Values.Text = "Format -> (hours) : (minutes) : (seconds)";
             // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.btnAddTimeEntry);
+            this.flowLayoutPanel5.Controls.Add(this.btnSaveTimeEntry);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 277);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(755, 44);
+            this.flowLayoutPanel5.TabIndex = 9;
+            // 
+            // btnAddTimeEntry
+            // 
+            this.btnAddTimeEntry.Location = new System.Drawing.Point(3, 3);
+            this.btnAddTimeEntry.Name = "btnAddTimeEntry";
+            this.btnAddTimeEntry.Size = new System.Drawing.Size(234, 33);
+            this.btnAddTimeEntry.TabIndex = 9;
+            this.btnAddTimeEntry.Values.Image = global::SurveyManager.Properties.Resources.time_16x16;
+            this.btnAddTimeEntry.Values.Text = "Add New Time Entry to Grid";
+            this.btnAddTimeEntry.Click += new System.EventHandler(this.btnAddTimeEntry_Click);
+            // 
             // btnSaveTimeEntry
             // 
             this.btnSaveTimeEntry.Location = new System.Drawing.Point(243, 3);
@@ -420,6 +439,7 @@ namespace SurveyManager.forms.userControls
             this.billingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.billingGrid.Size = new System.Drawing.Size(854, 296);
             this.billingGrid.TabIndex = 0;
+            this.billingGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.billingGrid_RowEnter);
             this.billingGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.billingGrid_UserDeletedRow);
             // 
             // statusStrip1
@@ -478,25 +498,6 @@ namespace SurveyManager.forms.userControls
             this.loadBillingDetailsWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.loadBillingDetailsWorker_ProgressChanged);
             this.loadBillingDetailsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.loadBillingDetailsWorker_RunWorkerCompleted);
             // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.Controls.Add(this.btnAddTimeEntry);
-            this.flowLayoutPanel5.Controls.Add(this.btnSaveTimeEntry);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 277);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(755, 44);
-            this.flowLayoutPanel5.TabIndex = 9;
-            // 
-            // btnAddTimeEntry
-            // 
-            this.btnAddTimeEntry.Location = new System.Drawing.Point(3, 3);
-            this.btnAddTimeEntry.Name = "btnAddTimeEntry";
-            this.btnAddTimeEntry.Size = new System.Drawing.Size(234, 33);
-            this.btnAddTimeEntry.TabIndex = 9;
-            this.btnAddTimeEntry.Values.Image = global::SurveyManager.Properties.Resources.time_16x16;
-            this.btnAddTimeEntry.Values.Text = "Add New Time Entry to Grid";
-            this.btnAddTimeEntry.Click += new System.EventHandler(this.btnAddTimeEntry_Click);
-            // 
             // BillingPortalCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,11 +542,11 @@ namespace SurveyManager.forms.userControls
             this.statusStrip2.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.billingGrid)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pgAdditionalLineItems)).EndInit();
-            this.flowLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
