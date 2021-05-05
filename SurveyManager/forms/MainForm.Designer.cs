@@ -146,7 +146,7 @@ namespace SurveyManager
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 726);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.mainStatusStrip.Size = new System.Drawing.Size(1370, 23);
+            this.mainStatusStrip.Size = new System.Drawing.Size(1536, 23);
             this.mainStatusStrip.SizingGrip = false;
             this.mainStatusStrip.TabIndex = 3;
             // 
@@ -160,7 +160,7 @@ namespace SurveyManager
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1290, 18);
+            this.lblStatus.Size = new System.Drawing.Size(1456, 18);
             this.lblStatus.Spring = true;
             this.lblStatus.Text = "Ready";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,8 +207,9 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
+            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
-            this.mainRibbon.Size = new System.Drawing.Size(1370, 115);
+            this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
             // 
             // surveyTab
@@ -824,7 +825,7 @@ namespace SurveyManager
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 115);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1370, 611);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1536, 611);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.kryptonPanel1.TabIndex = 5;
             // 
@@ -842,7 +843,7 @@ namespace SurveyManager
             this.dockableWorkspace.Root.UniqueName = "FD3F779B80FA42AB2284FE60B3AE5414";
             this.dockableWorkspace.Root.WorkspaceControl = this.dockableWorkspace;
             this.dockableWorkspace.ShowMaximizeButton = false;
-            this.dockableWorkspace.Size = new System.Drawing.Size(1370, 611);
+            this.dockableWorkspace.Size = new System.Drawing.Size(1536, 611);
             this.dockableWorkspace.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dockableWorkspace.TabIndex = 0;
             this.dockableWorkspace.TabStop = true;
@@ -880,7 +881,7 @@ namespace SurveyManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1536, 749);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
