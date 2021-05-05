@@ -403,7 +403,7 @@ namespace SurveyManager.utility
             NoJob_AddTime,
             [Description("No job is currently opened. There is nothing to add billing items to.")]
             NoJob_AddBillingItems,
-            [Description("No job is currently opened. There is no current bill to open.")]
+            [Description("No job is currently opened. There is nothing to generate a billing report for")]
             NoJob_OpenBill,
             [Description("No job is currently opened. There is nothing to add notes to.")]
             NoJob_AddNotes,

@@ -1310,7 +1310,8 @@ namespace SurveyManager
                     dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
                 } catch (Exception)
                 {
-                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select billing portal page. Perhaps it is floating and not docked?");
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select billing portal page. Perhaps it is a floating window and not docked?");
+                    RuntimeVars.Instance.LogFile.WriteToFile();
                 }
             }
         }
@@ -1603,7 +1604,8 @@ namespace SurveyManager
                 }
                 catch (Exception)
                 {
-                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select notes page. Perhaps it is floating and not docked?");
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select notes page. Perhaps it is a floating window and not docked?");
+                    RuntimeVars.Instance.LogFile.WriteToFile();
                 }
             }
         }

@@ -138,23 +138,61 @@ namespace SurveyManager.utility.PdfGeneration
 
         private static void AddBillingContent(Survey s)
         {
-            DrawStringLarge("Time to Bill", GetLeftPage());
-            //DrawStringLine(new Pair<string, string>("Office Time: ", s.OfficeTime.ToString()), true, new Pair<string, string>("Office SubTotal: ", s.GetOfficeBill().ToString("C2")), true, true);
-            //DrawStringLine(new Pair<string, string>("Field Time: ", s.FieldTime.ToString()), true, new Pair<string, string>("Field SubTotal: ", s.GetFieldBill().ToString("C2")), true, true);
-            //DrawStringBold($"SubTotal: {(s.GetFieldBill() + s.GetOfficeBill()).ToString("C2")}", GetRightPage());
+            //Time and rates table
+            DrawStringLarge("Time Entries", GetLeftPage());
+            Billing bObject = s.BillingObject;
+            Dictionary<string, List<BillingItem>> dict = CreateDictionary(bObject.GetBillingItems());
+            List<LineItem> lineItems = bObject.GetLineItems();
 
-            //DrawStringLarge("Line Items", GetLeftPage());
+            DataTable billingItems = new DataTable();
+            billingItems.Columns.Add("Description");
+            billingItems.Columns.Add("Rate");
+            billingItems.Columns.Add("Time");
+            billingItems.Columns.Add("Tax Included?");
 
-            //foreach (LineItem item in s.LineItems)
-            //{
-            //    DrawStringLine(new Pair<string, string>(item.Description, ""), false, new Pair<string, string>("", item.SubTotal.ToString("C2")), false, true);
-            //}
+            foreach (string date in dict.Keys)
+            {
+                DrawStringBold(date, GetLeftPage());
+                billingItems.Rows.Clear();
+                List<BillingItem> items = dict[date];
+                foreach (BillingItem item in items)
+                {
+                    string desc = TrimString(item.Description).trimmedString;
+                    string rate = item.FieldTime == TimeSpan.Zero ? item.OfficeRate.ToString() : item.FieldRate.ToString();
+                    string time = item.FieldTime == TimeSpan.Zero ? ToFullString(item.OfficeTime) : ToFullString(item.FieldTime);
+                    string taxIncluded = item.FieldTime == TimeSpan.Zero ? (item.FieldRate.TaxIncluded ? "Yes" : "No") : (item.OfficeRate.TaxIncluded ? "Yes" : "No");
+                    billingItems.Rows.Add(desc, rate, time, taxIncluded);
+                }
 
-            //DrawStringBold($"SubTotal: {s.GetBillingLineItemsBill():C2}", GetRightPage());
+                DrawTable(billingItems);
+            }
+            string sub = $"Sub-Total: {(bObject.GetTotalOfficeBill() + bObject.GetTotalFieldBill()).ToString("C2")}";
+            float right = GetRightPage() - pageFontBold.MeasureString(sub).Width - 20;
+            DrawStringBold(sub, right);
 
-            //DrawLineSeperator();
+            //Additional line items table
+            DrawStringLarge("Additional Items", GetLeftPage());
+            DataTable lineItemsTable = new DataTable();
+            lineItemsTable.Columns.Add("Description");
+            lineItemsTable.Columns.Add("Amount");
+            lineItemsTable.Columns.Add("Tax");
+            lineItemsTable.Columns.Add("Total");
 
-            //DrawStringLargeBold($"Total Bill: {s.GetTotalBill():C2}", GetLeftPage());
+            foreach (LineItem item in lineItems)
+            {
+                string desc = item.Description;
+                string amount = item.Amount.ToString("C2");
+                string tax = ((double)item.Amount * item.TaxRate).ToString("C2");
+                string total = item.SubTotal.ToString("C2");
+                lineItemsTable.Rows.Add(desc, amount, tax, total);
+            }
+            DrawTable(lineItemsTable);
+            sub = $"Sub-Total: {bObject.GetBillingLineItemsBill():C2}";
+            right = GetRightPage() - pageFontBold.MeasureString(sub).Width - 20;
+            DrawStringBold(sub, right);
+
+            //Grand total
+            DrawStringLargeBold($"Grand Total: {bObject.GetTotalBill().ToString("C2")}", GetLeftPage());
         }
 
         public static MemoryStream GenerateFullReport(Survey s)
@@ -342,7 +380,15 @@ namespace SurveyManager.utility.PdfGeneration
             table.BeginRowLayout += new BeginRowLayoutEventHandler(table_BeginRowLayout); //ensures cells are transparent as well
 
             //Draw table
-            currentTableLayout = table.Draw(currentPage, new PointF(GetLeftPage(), currentY), tableLayout);
+            try
+            {
+                currentTableLayout = table.Draw(currentPage, new PointF(GetLeftPage(), currentY), tableLayout);
+                currentY += currentTableLayout.Bounds.Height;
+            } catch (PdfTableException)
+            {
+                currentPage = document.Pages.Add();
+                DrawTable(dt);
+            }
         }
 
         private static void table_BeginRowLayout(object sender, BeginRowLayoutEventArgs args)

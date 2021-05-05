@@ -100,6 +100,44 @@ namespace SurveyManager.utility
         }
 
         /// <summary>
+        /// Converts a list of billing items into a dictionary with the key being the date of the billing item and the value being a list
+        /// of billing items for that date.
+        /// </summary>
+        public static Dictionary<string, List<BillingItem>> CreateDictionary(List<BillingItem> items)
+        {
+            Dictionary<string, List<BillingItem>> dict = new Dictionary<string, List<BillingItem>>();
+            List<BillingItem> itemsToAdd;
+            bool[] addedItems = new bool[items.Count];
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                itemsToAdd = new List<BillingItem>();
+                BillingItem item = items[i];
+                DateTime date = item.AssociatedDate;
+
+                for (int j = 1; j < items.Count; j++)
+                {
+                    BillingItem nextItem = items[j];
+
+                    if (nextItem.AssociatedDate.Equals(date) & addedItems[j] == false)
+                    {
+                        addedItems[j] = true;
+                        itemsToAdd.Add(nextItem);
+                    }
+                }
+                if (addedItems[i] == false)
+                {
+                    itemsToAdd.Add(item);
+                    addedItems[i] = true;
+                }
+
+                if (!dict.ContainsKey(date.Date.ToShortDateString()))
+                    dict.Add(date.Date.ToShortDateString(), itemsToAdd);
+            }
+            return dict;
+        }
+
+        /// <summary>
         /// Get a string that represents this applications current version.
         /// </summary>
         /// <returns>A string representing the current version; or "NONE" if the version could not be determined.</returns>

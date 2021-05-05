@@ -27,7 +27,7 @@ namespace SurveyManager.forms.userControls
     {
         private int selectedListBoxIndex;
 
-        private Dictionary<string, List<BillingItem>> billingItems = new Dictionary<string, List<BillingItem>>();
+        private Dictionary<string, List<BillingItem>> billingItems;
 
         public EventHandler StatusUpdate;
 
@@ -46,7 +46,7 @@ namespace SurveyManager.forms.userControls
             billingGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(billingGrid, EntityTypes.BillingItem);
 
-            CreateDictionary();
+            billingItems = Utility.CreateDictionary(RuntimeVars.Instance.OpenJob.BillingObject.GetBillingItems());
             PopulateListBox();
             UpdateTotalTime();
 
@@ -135,43 +135,6 @@ namespace SurveyManager.forms.userControls
             else
             {
                 gridHeaderGroup.ValuesPrimary.Heading = "Total Time: No time for this day yet!";
-            }
-        }
-
-        /// <summary>
-        /// Converts a list of billing items into a dictionary with the key being the date of the billing item and the value being a list
-        /// of billing items for that date.
-        /// </summary>
-        private void CreateDictionary()
-        {
-            List<BillingItem> originalItems = RuntimeVars.Instance.OpenJob.BillingObject.GetBillingItems();
-            List<BillingItem> itemsToAdd;
-            bool[] addedItems = new bool[originalItems.Count];
-
-            for (int i = 0; i < originalItems.Count; i++)
-            {
-                itemsToAdd = new List<BillingItem>();
-                BillingItem item = originalItems[i];
-                DateTime date = item.AssociatedDate;
-
-                for (int j = 1; j < originalItems.Count; j++)
-                {
-                    BillingItem nextItem = originalItems[j];
-
-                    if (nextItem.AssociatedDate.Equals(date) & addedItems[j] == false)
-                    {
-                        addedItems[j] = true;
-                        itemsToAdd.Add(nextItem);
-                    }
-                }
-                if (addedItems[i] == false)
-                {
-                    itemsToAdd.Add(item);
-                    addedItems[i] = true;
-                }
-                
-                if (!billingItems.ContainsKey(date.Date.ToShortDateString()))
-                    billingItems.Add(date.Date.ToShortDateString(), itemsToAdd);
             }
         }
 
