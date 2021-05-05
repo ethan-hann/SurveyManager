@@ -101,10 +101,12 @@ namespace SurveyManager.utility
         public class ObjectCreatedEventArgs : EventArgs
         {
             public object DataValue { get; internal set; }
+            public object Tag { get; internal set; }
 
-            public ObjectCreatedEventArgs(object dataValue)
+            public ObjectCreatedEventArgs(object dataValue, object tag)
             {
                 DataValue = dataValue;
+                Tag = tag;
             }
         }
     }

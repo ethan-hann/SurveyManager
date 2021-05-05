@@ -1906,8 +1906,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@0", item.Description);
                         cmd.Parameters.AddWithValue("@1", item.Amount);
                         cmd.Parameters.AddWithValue("@2", item.TimeUnit.ToString());
-                        cmd.Parameters.AddWithValue("@3", item.County.ID);
-                        cmd.Parameters.AddWithValue("@4", item.TaxIncluded);
+                        cmd.Parameters.AddWithValue("@3", item.TaxIncluded);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1947,8 +1946,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@1", item.Description);
                         cmd.Parameters.AddWithValue("@2", item.Amount);
                         cmd.Parameters.AddWithValue("@3", item.TimeUnit.ToString());
-                        cmd.Parameters.AddWithValue("@4", item.County.ID);
-                        cmd.Parameters.AddWithValue("@5", item.TaxIncluded);
+                        cmd.Parameters.AddWithValue("@4", item.TaxIncluded);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1985,11 +1983,8 @@ namespace SurveyManager.backend
                                 Description = reader.GetString(1),
                                 Amount = reader.GetDecimal(2),
                                 TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
-                                CountyID = reader.GetInt32(4),
-                                TaxIncluded = reader.GetBoolean(5)
+                                TaxIncluded = reader.GetBoolean(4)
                             };
-
-                            item.SetObjects();
                         }
                     }
                 }
@@ -2021,11 +2016,8 @@ namespace SurveyManager.backend
                                     Description = reader.GetString(1),
                                     Amount = reader.GetDecimal(2),
                                     TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
-                                    CountyID = reader.GetInt32(4),
-                                    TaxIncluded = reader.GetBoolean(5)
+                                    TaxIncluded = reader.GetBoolean(4)
                                 };
-
-                                item.SetObjects();
 
                                 items.Add(item);
                             }
@@ -2061,11 +2053,8 @@ namespace SurveyManager.backend
                                     Description = reader.GetString(1),
                                     Amount = reader.GetDecimal(2),
                                     TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
-                                    CountyID = reader.GetInt32(4),
-                                    TaxIncluded = reader.GetBoolean(5)
+                                    TaxIncluded = reader.GetBoolean(4)
                                 };
-
-                                item.SetObjects();
 
                                 items.Add(item);
                             }

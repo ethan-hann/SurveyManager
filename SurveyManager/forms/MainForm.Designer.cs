@@ -60,8 +60,6 @@ namespace SurveyManager
             this.billingRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnBillingPortal = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupTriple15 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.btnAdditionalLineItems = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.assetsRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnAssocClient = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -145,10 +143,10 @@ namespace SurveyManager
             this.progressBar,
             this.lblStatus,
             this.lblStatusDate});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 838);
+            this.mainStatusStrip.Location = new System.Drawing.Point(0, 726);
             this.mainStatusStrip.Name = "mainStatusStrip";
             this.mainStatusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.mainStatusStrip.Size = new System.Drawing.Size(1683, 23);
+            this.mainStatusStrip.Size = new System.Drawing.Size(1370, 23);
             this.mainStatusStrip.SizingGrip = false;
             this.mainStatusStrip.TabIndex = 3;
             // 
@@ -162,7 +160,7 @@ namespace SurveyManager
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1603, 18);
+            this.lblStatus.Size = new System.Drawing.Size(1290, 18);
             this.lblStatus.Spring = true;
             this.lblStatus.Text = "Ready";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +208,7 @@ namespace SurveyManager
             this.objectsTab,
             this.databaseTab});
             this.mainRibbon.SelectedTab = this.surveyTab;
-            this.mainRibbon.Size = new System.Drawing.Size(1683, 115);
+            this.mainRibbon.Size = new System.Drawing.Size(1370, 115);
             this.mainRibbon.TabIndex = 4;
             // 
             // surveyTab
@@ -367,8 +365,7 @@ namespace SurveyManager
             this.billingRibbonGroup.DialogBoxLauncher = false;
             this.billingRibbonGroup.Image = global::SurveyManager.Properties.Resources.billing_rates_16x16;
             this.billingRibbonGroup.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple9,
-            this.kryptonRibbonGroupTriple15});
+            this.kryptonRibbonGroupTriple9});
             this.billingRibbonGroup.TextLine1 = "Billing";
             // 
             // kryptonRibbonGroupTriple9
@@ -382,23 +379,10 @@ namespace SurveyManager
             this.btnBillingPortal.ImageSmall = global::SurveyManager.Properties.Resources.billing_portal_16x16;
             this.btnBillingPortal.TextLine1 = "Billing";
             this.btnBillingPortal.TextLine2 = "Portal";
-            this.btnBillingPortal.ToolTipBody = "Open the main billing portal to add rates and billing objects.";
+            this.btnBillingPortal.ToolTipBody = "Open the main billing portal to manage time entries, rates, and additional line i" +
+    "tems for this job.";
             this.btnBillingPortal.ToolTipTitle = "Billing";
             this.btnBillingPortal.Click += new System.EventHandler(this.btnBillingPortal_Click);
-            // 
-            // kryptonRibbonGroupTriple15
-            // 
-            this.kryptonRibbonGroupTriple15.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnAdditionalLineItems});
-            // 
-            // btnAdditionalLineItems
-            // 
-            this.btnAdditionalLineItems.ImageLarge = global::SurveyManager.Properties.Resources.billing_line_items;
-            this.btnAdditionalLineItems.ImageSmall = global::SurveyManager.Properties.Resources.billing_line_items_16x16;
-            this.btnAdditionalLineItems.TextLine1 = "Additional";
-            this.btnAdditionalLineItems.TextLine2 = "Line Items";
-            this.btnAdditionalLineItems.ToolTipBody = "Manage additional one-off billable items for this survey.";
-            this.btnAdditionalLineItems.Click += new System.EventHandler(this.btnBillingLineItems_Click);
             // 
             // assetsRibbonGroup
             // 
@@ -840,7 +824,7 @@ namespace SurveyManager
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 115);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1683, 723);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1370, 611);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.kryptonPanel1.TabIndex = 5;
             // 
@@ -858,7 +842,7 @@ namespace SurveyManager
             this.dockableWorkspace.Root.UniqueName = "FD3F779B80FA42AB2284FE60B3AE5414";
             this.dockableWorkspace.Root.WorkspaceControl = this.dockableWorkspace;
             this.dockableWorkspace.ShowMaximizeButton = false;
-            this.dockableWorkspace.Size = new System.Drawing.Size(1683, 723);
+            this.dockableWorkspace.Size = new System.Drawing.Size(1370, 611);
             this.dockableWorkspace.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dockableWorkspace.TabIndex = 0;
             this.dockableWorkspace.TabStop = true;
@@ -896,7 +880,7 @@ namespace SurveyManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1683, 861);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
@@ -1006,8 +990,6 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem6;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading kryptonContextMenuHeading1;
         private System.ComponentModel.BackgroundWorker checkConnectionBGWorker;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAdditionalLineItems;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup reportingGroup;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple14;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnGenerateBillingReport;

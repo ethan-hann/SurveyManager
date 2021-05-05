@@ -1276,70 +1276,6 @@ namespace SurveyManager
             }
         }
 
-        private void btnBillingRates_Click(object sender, EventArgs e)
-        {
-            if (licensed)
-            {
-                if (!RuntimeVars.Instance.DatabaseConnected)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
-                    return;
-                }
-
-                if (!RuntimeVars.Instance.IsJobOpen)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_EditRates.ToDescriptionString()));
-                    return;
-                }
-
-                RatesDialog rDialog = new RatesDialog();
-                rDialog.StatusUpdate += ChangeStatusText;
-                rDialog.Show();
-            }
-        }
-
-        private void btnFieldTime_Click(object sender, EventArgs e)
-        {
-            if (licensed)
-            {
-                if (!RuntimeVars.Instance.DatabaseConnected)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
-                    return;
-                }
-
-                if (!RuntimeVars.Instance.IsJobOpen)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
-                    return;
-                }
-
-                TimeEntry te = new TimeEntry(TimeType.Field);
-                te.Show();
-            }
-        }
-
-        private void btnOfficeTime_Click(object sender, EventArgs e)
-        {
-            if (licensed)
-            {
-                if (!RuntimeVars.Instance.DatabaseConnected)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
-                    return;
-                }
-
-                if (!RuntimeVars.Instance.IsJobOpen)
-                {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTime.ToDescriptionString()));
-                    return;
-                }
-
-                TimeEntry te = new TimeEntry(TimeType.Office);
-                te.Show();
-            }
-        }
-
         private void btnBillingPortal_Click(object sender, EventArgs e)
         {
             if (licensed)
@@ -1358,63 +1294,23 @@ namespace SurveyManager
 
                 BillingPortal page = new BillingPortal()
                 {
+                    UniqueName = "Billing Portal",
                     ImageSmall = Resources.billing_portal_16x16,
                     ImageLarge = Resources.billing_portal,
                     Tag = SurveyPage.IsSurveyPage
                 };
 
-                if (!dockingManager.ContainsPage(page))
+                if (!dockingManager.ContainsPage(page.UniqueName))
                 {
                     dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 }
-                else
-                {
-                    dockingManager.RemovePage(page, true);
-                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-                }
 
-                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
-            }
-        }
-
-        private void btnBillingLineItems_Click(object sender, EventArgs e)
-        {
-            if (licensed)
-            {
-                if (!RuntimeVars.Instance.DatabaseConnected)
+                try
                 {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
-                    return;
-                }
-
-                if (!RuntimeVars.Instance.IsJobOpen)
+                    dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+                } catch (Exception)
                 {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddBillingItems.ToDescriptionString()));
-                    return;
-                }
-
-                KryptonPage lineItemPanel = new KryptonPage
-                {
-                    Text = "Billing Items",
-                    TextTitle = "Billing Items",
-                    UniqueName = "Billing Items",
-                    ImageSmall = Resources.billing_line_items_16x16,
-                    ImageLarge = Resources.billing_line_items,
-                    Tag = SurveyPage.IsSurveyPage
-                };
-                LineItemsCtl ctl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingObject.GetLineItems());
-                ctl.StatusUpdate += ChangeStatusText;
-                ctl.Dock = DockStyle.Fill;
-                lineItemPanel.Controls.Add(ctl);
-
-                if (!dockingManager.ContainsPage(lineItemPanel))
-                {
-                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { lineItemPanel });
-                }
-                else
-                {
-                    dockingManager.RemovePage(lineItemPanel, true);
-                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { lineItemPanel });
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select billing portal page. Perhaps it is floating and not docked?");
                 }
             }
         }
@@ -1700,10 +1596,14 @@ namespace SurveyManager
                 {
                     dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
                 }
-                else
+
+                try
                 {
-                    dockingManager.RemovePage(notesPanel, true);
-                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
+                    dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(notesPanel.UniqueName);
+                }
+                catch (Exception)
+                {
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select notes page. Perhaps it is floating and not docked?");
                 }
             }
         }

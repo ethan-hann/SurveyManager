@@ -25,7 +25,6 @@ namespace SurveyManager.forms.userControls
 {
     public partial class BillingPortalCtl : UserControl
     {
-        private bool isOfficeEntry;
         private int selectedListBoxIndex;
 
         private Dictionary<string, List<BillingItem>> billingItems = new Dictionary<string, List<BillingItem>>();
@@ -222,6 +221,7 @@ namespace SurveyManager.forms.userControls
             }
 
             LoadData();
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnRemoveTime_Click(object sender, EventArgs e)
@@ -241,6 +241,7 @@ namespace SurveyManager.forms.userControls
             selectedListBoxIndex = lbTimeEntries.SelectedIndex;
 
             LoadData();
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void lbTimeEntries_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,6 +269,7 @@ namespace SurveyManager.forms.userControls
             {
                 billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Remove((BillingItem)e.Row.Tag);
             }
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnNewEntry_Click(object sender, EventArgs e)
@@ -282,13 +284,11 @@ namespace SurveyManager.forms.userControls
             if (e is ObjectCreatedEventArgs args)
             {
                 BillingItem item = args.DataValue as BillingItem;
+                bool isUpdating = (bool) args.Tag;
+
                 if (item == null)
                     return;
-
-                if (item.ID == 0)
-                    UpdateGrid(item, false);
-                else
-                    UpdateGrid(item, true);
+                UpdateGrid(item, isUpdating);
             }
         }
 
@@ -304,6 +304,7 @@ namespace SurveyManager.forms.userControls
                 billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Add(item);
             }
             LoadData();
+            RuntimeVars.Instance.OpenJob.SavePending = true;
         }
 
         private void btnEditTime_Click(object sender, EventArgs e)
@@ -311,15 +312,10 @@ namespace SurveyManager.forms.userControls
             if (billingGrid.SelectedRows.Count == 1)
             {
                 BillingItem item = billingGrid.SelectedRows[0].Tag as BillingItem;
-                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item);
+                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item, true);
                 dialog.TimeEntryAdded += ProcessItem;
                 dialog.ShowDialog();
             }
-        }
-
-        private void btnSaveAndUpdate_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void billingGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -327,10 +323,45 @@ namespace SurveyManager.forms.userControls
             if (e.RowIndex >= 0)
             {
                 BillingItem item = billingGrid.Rows[e.RowIndex].Tag as BillingItem;
-                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item);
+                NewEntryDlg dialog = new NewEntryDlg(item.AssociatedDate, item, true);
                 dialog.TimeEntryAdded += ProcessItem;
                 dialog.ShowDialog();
             }
+        }
+
+        private void btnSaveAndUpdate_Click(object sender, EventArgs e)
+        {
+            SaveItems();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            //When this user control is disposed (closed), update the currently open job with the new billing line items.
+            SaveItems();
+
+
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void SaveItems()
+        {
+            if (!RuntimeVars.Instance.IsJobOpen)
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("Invalid operation: <Save Billing Portal> => Job is not opened!"));
+                return;
+            }
+
+            List<BillingItem> items = new List<BillingItem>();
+            billingItems.Values.ToList().ForEach(p => p.ForEach(q => items.Add(q)));
+            RuntimeVars.Instance.OpenJob.BillingObject.AddBillingRange(items, true);
+
+            RuntimeVars.Instance.OpenJob.SavePending = true;
+
+            StatusUpdate?.Invoke(this, new StatusArgs("Billing for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
         }
     }
 }

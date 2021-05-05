@@ -8,19 +8,6 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
         #region Component Designer generated code
 
         /// <summary> 
@@ -87,6 +74,10 @@ namespace SurveyManager.forms.userControls
             // 
             // kryptonNavigator1
             // 
+            this.kryptonNavigator1.Bar.TabBorderStyle = ComponentFactory.Krypton.Toolkit.TabBorderStyle.SmoothEqual;
+            this.kryptonNavigator1.Bar.TabStyle = ComponentFactory.Krypton.Toolkit.TabStyle.OneNote;
+            this.kryptonNavigator1.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.kryptonNavigator1.Button.CloseButtonDisplay = ComponentFactory.Krypton.Navigator.ButtonDisplay.Hide;
             this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
@@ -106,7 +97,7 @@ namespace SurveyManager.forms.userControls
             this.pgTimeEntries.LastVisibleSet = true;
             this.pgTimeEntries.MinimumSize = new System.Drawing.Size(50, 50);
             this.pgTimeEntries.Name = "pgTimeEntries";
-            this.pgTimeEntries.Size = new System.Drawing.Size(1129, 648);
+            this.pgTimeEntries.Size = new System.Drawing.Size(1129, 646);
             this.pgTimeEntries.Text = "Time Entries";
             this.pgTimeEntries.ToolTipTitle = "Page ToolTip";
             this.pgTimeEntries.UniqueName = "7E5565BDE95841DBC9BDE8BA804433B8";
@@ -128,7 +119,7 @@ namespace SurveyManager.forms.userControls
             // kryptonSplitContainer1.Panel2
             // 
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.gridHeaderGroup);
-            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1129, 648);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1129, 646);
             this.kryptonSplitContainer1.SplitterDistance = 270;
             this.kryptonSplitContainer1.TabIndex = 0;
             // 
@@ -137,7 +128,7 @@ namespace SurveyManager.forms.userControls
             this.lbTimeEntries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTimeEntries.Location = new System.Drawing.Point(0, 0);
             this.lbTimeEntries.Name = "lbTimeEntries";
-            this.lbTimeEntries.Size = new System.Drawing.Size(270, 616);
+            this.lbTimeEntries.Size = new System.Drawing.Size(270, 614);
             this.lbTimeEntries.TabIndex = 3;
             this.lbTimeEntries.SelectedIndexChanged += new System.EventHandler(this.lbTimeEntries_SelectedIndexChanged);
             // 
@@ -148,7 +139,7 @@ namespace SurveyManager.forms.userControls
             this.flowLayoutPanel1.Controls.Add(this.btnAddTime);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 616);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 614);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(270, 32);
             this.flowLayoutPanel1.TabIndex = 4;
@@ -186,7 +177,7 @@ namespace SurveyManager.forms.userControls
             // gridHeaderGroup.Panel
             // 
             this.gridHeaderGroup.Panel.Controls.Add(this.billingGrid);
-            this.gridHeaderGroup.Size = new System.Drawing.Size(854, 648);
+            this.gridHeaderGroup.Size = new System.Drawing.Size(854, 646);
             this.gridHeaderGroup.TabIndex = 2;
             this.gridHeaderGroup.ValuesPrimary.Heading = "Total Time: ";
             this.gridHeaderGroup.ValuesPrimary.Image = global::SurveyManager.Properties.Resources.time_16x16;
@@ -234,7 +225,7 @@ namespace SurveyManager.forms.userControls
             this.billingGrid.PreviousSelectedGroupRow = -1;
             this.billingGrid.ReadOnly = true;
             this.billingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.billingGrid.Size = new System.Drawing.Size(852, 591);
+            this.billingGrid.Size = new System.Drawing.Size(852, 587);
             this.billingGrid.TabIndex = 1;
             this.billingGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.billingGrid_CellDoubleClick);
             this.billingGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.billingGrid_UserDeletedRow);

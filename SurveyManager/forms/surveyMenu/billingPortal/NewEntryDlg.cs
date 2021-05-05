@@ -30,12 +30,13 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
         public EventHandler TimeEntryAdded;
 
-        public NewEntryDlg(DateTime associatedDate, BillingItem oldItem = null)
+        public NewEntryDlg(DateTime associatedDate, BillingItem oldItem = null, bool isEditing = false)
         {
             InitializeComponent();
 
             this.associatedDate = associatedDate;
             this.oldItem = oldItem;
+            this.isEditing = isEditing;
 
             if (this.oldItem != null)
                 isEditing = true;
@@ -148,7 +149,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
             if (item.IsValidItem)
             {
-                TimeEntryAdded?.Invoke(this, new ObjectCreatedEventArgs(item));
+                TimeEntryAdded?.Invoke(this, new ObjectCreatedEventArgs(item, false));
                 return true;
             }
             else
@@ -181,7 +182,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
 
             if (oldItem.IsValidItem)
             {
-                TimeEntryAdded?.Invoke(this, new ObjectCreatedEventArgs(oldItem));
+                TimeEntryAdded?.Invoke(this, new ObjectCreatedEventArgs(oldItem, true));
                 return true;
             }
             else
@@ -218,9 +219,21 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             radFieldTime.Checked = !radOfficeTime.Checked;
 
             if (radOfficeTime.Checked)
-                cmbRates.SelectedItem = item.OfficeRate;
+            {
+                foreach (object o in cmbRates.Items)
+                {
+                    if ((o as Rate).ID == item.OfficeRate.ID)
+                        cmbRates.SelectedItem = o;
+                }
+            }
             else
-                cmbRates.SelectedItem = item.FieldRate;
+            {
+                foreach (object o in cmbRates.Items)
+                {
+                    if ((o as Rate).ID == item.FieldRate.ID)
+                        cmbRates.SelectedItem = o;
+                }
+            }
 
             rtbDescription.Text = item.Description;
 

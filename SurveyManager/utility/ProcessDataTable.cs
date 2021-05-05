@@ -112,11 +112,9 @@ namespace SurveyManager.utility
                 Description = (string)row["description"],
                 Amount = (decimal)row["amount"],
                 TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), (string)row["time_unit"]),
-                CountyID = (int)row["county_id"],
                 TaxIncluded = (bool)row["include_tax"]
             };
 
-            r.SetObjects();
             return r;
         }
     }

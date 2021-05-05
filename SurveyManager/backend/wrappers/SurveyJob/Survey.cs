@@ -175,11 +175,23 @@ namespace SurveyManager.backend.wrappers
         [Description("The total amount of field time spent on this job.")]
         [Browsable(true)]
         [DisplayName("Field Time")]
-        public TimeSpan TotalFieldTime
+        public string TotalFieldTime
         {
             get
             {
-                return BillingObject.GetTotalFieldTime();
+                return Utility.ToFullString(BillingObject.GetTotalFieldTime());
+            }
+        }
+
+        [Category("Billing")]
+        [Description("The total dollar amount to bill for the field time, including any applicable tax.")]
+        [Browsable(true)]
+        [DisplayName("Field Bill")]
+        public string FieldAmount
+        {
+            get
+            {
+                return BillingObject.GetTotalFieldBill().ToString("C2");
             }
         }
 
@@ -187,11 +199,23 @@ namespace SurveyManager.backend.wrappers
         [Description("The total amount of office time spent on this job.")]
         [Browsable(true)]
         [DisplayName("Office Time")]
-        public TimeSpan TotalOfficeTime
+        public string TotalOfficeTime
         { 
             get
             {
-                return BillingObject.GetTotalOfficeTime();
+                return Utility.ToFullString(BillingObject.GetTotalOfficeTime());
+            }
+        }
+
+        [Category("Billing")]
+        [Description("The total dollar amount to bill for the office time, including any applicable tax.")]
+        [Browsable(true)]
+        [DisplayName("Office Bill")]
+        public string OfficeAmount
+        {
+            get
+            {
+                return BillingObject.GetTotalOfficeBill().ToString("C2");
             }
         }
 

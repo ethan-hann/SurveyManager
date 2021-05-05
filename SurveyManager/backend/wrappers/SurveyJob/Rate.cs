@@ -35,16 +35,6 @@ namespace SurveyManager.backend.wrappers
         [DisplayName("Time Unit")]
         public TimeUnit TimeUnit { get; set; } = TimeUnit.Hour;
 
-        [Browsable(false)]
-        public int CountyID { get; set; }
-
-        [Category("Rate Information")]
-        [Description("The county this rate applies to.")]
-        [Browsable(true)]
-        [ReadOnly(true)]
-        [DisplayName("County")]
-        public County County { get; private set; } = RuntimeVars.Instance.Counties.Find(c => c.CountyName.Equals("Chambers"));
-
         [Category("Rate Information")]
         [Description("Should tax be included in the final amount for this rate? The tax rate can be set in the application's settings.")]
         [Browsable(true)]
@@ -59,48 +49,34 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return !Description.Equals("N/A") && Amount != 0.00m && County.ID != 0;
+                return !Description.Equals("N/A") && Amount != 0.00m;
             }
         }
 
         public Rate() { }
 
-        public Rate(int iD, string description, decimal amount, TimeUnit timeUnit, int countyID, County county, bool taxIncluded)
+        public Rate(int iD, string description, decimal amount, TimeUnit timeUnit, bool taxIncluded)
         {
             ID = iD;
             Description = description;
             Amount = amount;
             TimeUnit = timeUnit;
-            CountyID = countyID;
-            County = county;
             TaxIncluded = taxIncluded;
         }
 
-        public Rate(string description, decimal amount, TimeUnit timeUnit, int countyID, County county, bool taxIncluded)
+        public Rate(string description, decimal amount, TimeUnit timeUnit, bool taxIncluded)
         {
             Description = description;
             Amount = amount;
             TimeUnit = timeUnit;
-            CountyID = countyID;
-            County = county;
             TaxIncluded = taxIncluded;
         }
 
-        public Rate(string description, decimal amount, TimeUnit timeUnit, int countyID, County county)
+        public Rate(string description, decimal amount, TimeUnit timeUnit)
         {
             Description = description;
             Amount = amount;
             TimeUnit = timeUnit;
-            CountyID = countyID;
-            County = county;
-        }
-
-        public void SetObjects()
-        {
-            if (CountyID != 0)
-            {
-                County = RuntimeVars.Instance.Counties.Find(c => c.ID == CountyID);
-            }
         }
 
         public override string ToString()

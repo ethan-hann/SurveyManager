@@ -547,8 +547,7 @@ namespace SurveyManager.forms.userControls
                 row.CreateCells(dataGrid, new object[] {
                     r.ID,
                     r.Description,
-                    $"{r.Amount.ToString("C2")} / {r.TimeUnit}",
-                    r.County
+                    $"{r.Amount.ToString("C2")} / {r.TimeUnit}"
                 });
                 row.Tag = r;
                 rows.Add(row);
