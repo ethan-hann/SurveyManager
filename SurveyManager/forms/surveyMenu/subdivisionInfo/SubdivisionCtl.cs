@@ -14,6 +14,8 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
 {
     public partial class SubdivisionCtl : UserControl, IInfoControl
     {
+        public bool IsEdited { get; set; } = false;
+
         public SubdivisionCtl()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             txtSection.Text = RuntimeVars.Instance.OpenJob.SectionNumber;
             txtBlock.Text = RuntimeVars.Instance.OpenJob.BlockNumber;
             txtLot.Text = RuntimeVars.Instance.OpenJob.LotNumber;
+            IsEdited = true;
         }
 
         private void textBox_Enter(object sender, EventArgs e)

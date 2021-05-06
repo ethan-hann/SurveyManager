@@ -17,6 +17,8 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 {
     public partial class LocationCtl : UserControl, IInfoControl
     {
+        public bool IsEdited { get; set; } = false;
+
         public LocationCtl()
         {
             InitializeComponent();
@@ -24,16 +26,23 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         private void LocationCtl_Load(object sender, EventArgs e)
         {
-            cmbCounty.DataSource = RuntimeVars.Instance.Counties;
+            foreach (County c in RuntimeVars.Instance.Counties)
+            {
+                cmbCounty.Items.Add(c);
+            }
 
             txtStreet.Text = RuntimeVars.Instance.OpenJob.Location.Street;
             txtCity.Text = RuntimeVars.Instance.OpenJob.Location.City;
             txtZipCode.Text = RuntimeVars.Instance.OpenJob.Location.ZipCode;
 
-            if (RuntimeVars.Instance.OpenJob.County.CountyName.Equals(""))
+            if (RuntimeVars.Instance.OpenJob.CountyID == 0)
                 cmbCounty.SelectedIndex = 0;
             else
-                cmbCounty.SelectedItem = RuntimeVars.Instance.OpenJob.County;
+            {
+                cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
+            }
+
+            IsEdited = true;
         }
 
         private void textBox_Enter(object sender, EventArgs e)
@@ -88,26 +97,35 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         private void cmbCounty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RuntimeVars.Instance.OpenJob.County = cmbCounty.SelectedItem as County;
+            RuntimeVars.Instance.OpenJob.CountyID = ((County)cmbCounty.Items[cmbCounty.SelectedIndex]).ID;
+            RuntimeVars.Instance.OpenJob.County = RuntimeVars.Instance.Counties.Find(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
         }
 
         public bool SaveInfo()
         {
-            if ((txtStreet.Text.Length > 0 && !txtStreet.Text.Equals("N/A")) && 
-                (txtCity.Text.Length > 0 && !txtCity.Text.Equals("N/A")) && 
-                (txtZipCode.Text.Length > 0))
+            if (txtStreet.Text.Length <= 0 || txtStreet.Text.Equals("N/A"))
             {
-                RuntimeVars.Instance.OpenJob.Location.Street = txtStreet.Text;
-                RuntimeVars.Instance.OpenJob.Location.City = txtCity.Text;
-                RuntimeVars.Instance.OpenJob.Location.ZipCode = txtZipCode.Text;
-
-                return true;
-            }
-            else
-            {
-                CMessageBox.Show("The job's location cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                CMessageBox.Show("The job's street cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 return false;
             }
+
+            if (txtCity.Text.Length <= 0 || txtCity.Text.Equals("N/A"))
+            {
+                CMessageBox.Show("The job's city cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            if (txtZipCode.Text.Length <= 0)
+            {
+                CMessageBox.Show("The job's zip-code cannot be empty.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            RuntimeVars.Instance.OpenJob.Location.Street = txtStreet.Text;
+            RuntimeVars.Instance.OpenJob.Location.City = txtCity.Text;
+            RuntimeVars.Instance.OpenJob.Location.ZipCode = txtZipCode.Text;
+            RuntimeVars.Instance.OpenJob.County = cmbCounty.SelectedItem as County;
+            return true;
         }
     }
 }

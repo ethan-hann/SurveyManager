@@ -51,17 +51,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bool saveSuccess = true;
-            foreach (IInfoControl ctl in infoControls)
-            {
-                if (!ctl.SaveInfo())
-                {
-                    saveSuccess = false;
-                    break;
-                }
-            }
-
-            if (saveSuccess)
+            if (Save())
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("Job information successfully updated."));
             }
@@ -69,6 +59,39 @@ namespace SurveyManager.forms.surveyMenu
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's information. Please try again."));
             }
+        }
+
+        private bool Save()
+        {
+            foreach (IInfoControl ctl in infoControls)
+            {
+                if (ctl.IsEdited)
+                {
+                    if (!ctl.SaveInfo())
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                if (Save())
+                {
+                    StatusUpdate?.Invoke(this, new StatusArgs("Job information successfully updated internally."));
+                }
+                else
+                {
+                    StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's internal information. Please try again."));
+                }
+
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

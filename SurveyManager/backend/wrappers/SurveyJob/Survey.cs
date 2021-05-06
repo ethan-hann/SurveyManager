@@ -102,7 +102,7 @@ namespace SurveyManager.backend.wrappers
         [ReadOnly(true)]
         [DisplayName("County")]
         [TypeConverter(typeof(CountyTypeConverter))]
-        public County County { get; set; } = new County();
+        public County County { get; set; }
 
         [Browsable(false)]
         public int CountyID { get; set; }

@@ -17,6 +17,8 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
 {
     public partial class EssentialInformationCtl : UserControl, IInfoControl
     {
+        public bool IsEdited { get; set; } = false;
+
         public EssentialInformationCtl()
         {
             InitializeComponent();
@@ -28,6 +30,8 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             txtAbstract.Text = RuntimeVars.Instance.OpenJob.AbstractNumber;
             txtSurvey.Text = RuntimeVars.Instance.OpenJob.SurveyName;
             txtNumOfAcres.Text = RuntimeVars.Instance.OpenJob.Acres.ToString();
+
+            IsEdited = true;
         }
 
         private void textBox_Enter(object sender, EventArgs e)

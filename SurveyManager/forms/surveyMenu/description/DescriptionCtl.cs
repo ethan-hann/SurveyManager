@@ -15,6 +15,8 @@ namespace SurveyManager.forms.surveyMenu.description
 {
     public partial class DescriptionCtl : UserControl, IInfoControl
     {
+        public bool IsEdited { get; set; }
+
         public DescriptionCtl()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace SurveyManager.forms.surveyMenu.description
         private void DescriptionCtl_Load(object sender, EventArgs e)
         {
             txtDescription.Text = RuntimeVars.Instance.OpenJob.Description;
+            IsEdited = true;
         }
 
         private void txtDescription_TextChanged(object sender, EventArgs e)
