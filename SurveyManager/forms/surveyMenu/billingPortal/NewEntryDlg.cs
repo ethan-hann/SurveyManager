@@ -249,6 +249,8 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
                 TimeSpan t = item.FieldTime;
                 dtpTimeEntry.Value = d.Date + t;
             }
+
+            lblFormatBold.Text = $"{dtpTimeEntry.Value.Hour} hour(s) : {dtpTimeEntry.Value.Minute} minute(s) : {dtpTimeEntry.Value.Second} second(s)";
         }
 
         private void rtbDescription_TextChanged(object sender, EventArgs e)
@@ -294,6 +296,11 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
         private void rtbDescription_MouseEnter(object sender, EventArgs e)
         {
             lblHelpText.Text = "Enter a short description (max. 255 characters) describing this time entry. This description can be left empty if not needed.";
+        }
+
+        private void dtpTimeEntry_ValueChanged(object sender, EventArgs e)
+        {
+            lblFormatBold.Text = $"{dtpTimeEntry.Value.Hour} hour(s) : {dtpTimeEntry.Value.Minute} minute(s) : {dtpTimeEntry.Value.Second} second(s)";
         }
     }
 }

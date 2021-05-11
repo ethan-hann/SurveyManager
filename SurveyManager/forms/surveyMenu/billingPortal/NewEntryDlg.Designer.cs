@@ -156,22 +156,22 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.rtbDescription.Margin = new System.Windows.Forms.Padding(6);
             this.rtbDescription.MaxLength = 255;
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(667, 105);
+            this.rtbDescription.Size = new System.Drawing.Size(667, 104);
             this.rtbDescription.TabIndex = 1;
             this.rtbDescription.Text = "";
             this.rtbDescription.TextChanged += new System.EventHandler(this.rtbDescription_TextChanged);
             // 
             // statusStrip2
             // 
-            this.statusStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.statusStrip2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2,
             this.lblDescCharCount});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 105);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 104);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Padding = new System.Windows.Forms.Padding(2, 0, 26, 0);
             this.statusStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip2.Size = new System.Drawing.Size(667, 22);
+            this.statusStrip2.Size = new System.Drawing.Size(667, 23);
             this.statusStrip2.SizingGrip = false;
             this.statusStrip2.TabIndex = 0;
             this.statusStrip2.Text = "statusStrip2";
@@ -179,13 +179,13 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(527, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(521, 18);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // lblDescCharCount
             // 
             this.lblDescCharCount.Name = "lblDescCharCount";
-            this.lblDescCharCount.Size = new System.Drawing.Size(112, 17);
+            this.lblDescCharCount.Size = new System.Drawing.Size(118, 18);
             this.lblDescCharCount.Text = "Char. Count: 0 / 255";
             // 
             // lblTimeEntry
@@ -209,6 +209,7 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             this.dtpTimeEntry.Size = new System.Drawing.Size(123, 37);
             this.dtpTimeEntry.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeEntry.TabIndex = 1;
+            this.dtpTimeEntry.ValueChanged += new System.EventHandler(this.dtpTimeEntry_ValueChanged);
             this.dtpTimeEntry.MouseEnter += new System.EventHandler(this.dtpTimeEntry_MouseEnter);
             this.dtpTimeEntry.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
@@ -231,16 +232,16 @@ namespace SurveyManager.forms.surveyMenu.billingPortal
             // 
             // lblFormatBold
             // 
-            this.lblFormatBold.Location = new System.Drawing.Point(32, 103);
+            this.lblFormatBold.Location = new System.Drawing.Point(78, 103);
             this.lblFormatBold.Name = "lblFormatBold";
-            this.lblFormatBold.Size = new System.Drawing.Size(169, 21);
+            this.lblFormatBold.Size = new System.Drawing.Size(233, 21);
             this.lblFormatBold.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormatBold.TabIndex = 9;
-            this.lblFormatBold.Values.Text = "hours : minutes : seconds";
+            this.lblFormatBold.Values.Text = "0 hour(s) : 0 minute(s) : 0 second(s)";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.statusStrip1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblHelpText});
             this.statusStrip1.Location = new System.Drawing.Point(0, 355);
