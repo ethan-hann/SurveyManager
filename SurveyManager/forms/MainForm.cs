@@ -1799,5 +1799,10 @@ namespace SurveyManager
                 RuntimeVars.Instance.Counties = Database.GetCounties();
             }
         }
+
+        private void btnOpenHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://surveymanager.readthedocs.io/en/latest/");
+        }
     }
 }

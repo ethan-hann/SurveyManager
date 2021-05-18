@@ -209,8 +209,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
-            this.mainRibbon.SelectedTab = this.databaseTab;
+            this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
             // 
@@ -582,6 +581,7 @@ namespace SurveyManager
             this.btnOpenHelp.TextLine1 = "Help";
             this.btnOpenHelp.ToolTipBody = "Opens the help documentation.";
             this.btnOpenHelp.ToolTipTitle = "Survey Manager";
+            this.btnOpenHelp.Click += new System.EventHandler(this.btnOpenHelp_Click);
             // 
             // btnManageLicense
             // 
