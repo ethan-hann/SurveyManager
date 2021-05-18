@@ -195,6 +195,67 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
+        /// Run the _.show_table_status() stored prodedure to get information about tables.
+        /// </summary>
+        /// <returns>A <see cref="DataTable"/> ready to be used as a data source for a DataGridView Control.</returns>
+        public static DataTable GetTableInfo()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Table");
+            dt.Columns.Add("Engine");
+            dt.Columns.Add("Version");
+            dt.Columns.Add("Row Format");
+            dt.Columns.Add("Number of Rows");
+            dt.Columns.Add("Avg. Row Length");
+            dt.Columns.Add("Data Length");
+            dt.Columns.Add("Max Data Length");
+            dt.Columns.Add("Index Length");
+            dt.Columns.Add("Data Free");
+            dt.Columns.Add("Next Auto Increment Value");
+            dt.Columns.Add("Create Time");
+            dt.Columns.Add("Last Update");
+            dt.Columns.Add("Comment");
+
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandText = "_.show_table_status()";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                dt.Rows.Add(reader["Name"],
+                                            reader["Engine"],
+                                            reader["Version"],
+                                            reader["Row_format"],
+                                            reader["Rows"],
+                                            reader["Avg_row_length"],
+                                            reader["Data_length"],
+                                            reader["Max_data_length"],
+                                            reader["Index_length"],
+                                            reader["Data_free"],
+                                            reader["Auto_increment"],
+                                            reader["Create_time"],
+                                            reader["Update_time"],
+                                            reader["Comment"]);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+
+                return dt;
+            }
+        }
+
+        /// <summary>
         /// Get the last row id inserted in the specified table.
         /// </summary>
         /// <param name="tablename">The table's name to search</param>

@@ -129,6 +129,8 @@ namespace SurveyManager
             this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
             this.surveyAutosave = new System.Windows.Forms.Timer(this.components);
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
+            this.dumpDatabaseBGWorker = new System.ComponentModel.BackgroundWorker();
+            this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -207,7 +209,8 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedTab = this.surveyTab;
+            this.mainRibbon.SelectedContext = null;
+            this.mainRibbon.SelectedTab = this.databaseTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
             // 
@@ -797,6 +800,7 @@ namespace SurveyManager
             this.exportDataBtn.ImageSmall = global::SurveyManager.Properties.Resources.export;
             this.exportDataBtn.TextLine1 = "Export";
             this.exportDataBtn.TextLine2 = "Data";
+            this.exportDataBtn.Click += new System.EventHandler(this.exportDataBtn_Click);
             // 
             // importDataBtn
             // 
@@ -804,6 +808,7 @@ namespace SurveyManager
             this.importDataBtn.ImageSmall = global::SurveyManager.Properties.Resources.import;
             this.importDataBtn.TextLine1 = "Import";
             this.importDataBtn.TextLine2 = "Data";
+            this.importDataBtn.Visible = false;
             // 
             // btnSqlQuery
             // 
@@ -874,6 +879,14 @@ namespace SurveyManager
             // logAutoSave
             // 
             this.logAutoSave.Tick += new System.EventHandler(this.logAutoSave_Tick);
+            // 
+            // dumpDatabaseBGWorker
+            // 
+            this.dumpDatabaseBGWorker.WorkerReportsProgress = true;
+            this.dumpDatabaseBGWorker.WorkerSupportsCancellation = true;
+            this.dumpDatabaseBGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.dumpDatabaseBGWorker_DoWork);
+            this.dumpDatabaseBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.dumpDatabaseBGWorker_ProgressChanged);
+            this.dumpDatabaseBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.dumpDatabaseBGWorker_RunWorkerCompleted);
             // 
             // MainForm
             // 
@@ -1002,6 +1015,8 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnFindRate;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnNewRate;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewAllRates;
+        private System.ComponentModel.BackgroundWorker dumpDatabaseBGWorker;
+        private System.Windows.Forms.FolderBrowserDialog csvSaveFolder;
     }
 }
 

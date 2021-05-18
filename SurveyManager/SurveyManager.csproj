@@ -394,6 +394,7 @@
     <Compile Include="utility\CEventArgs.cs" />
     <Compile Include="utility\CFileTypeConverter.cs" />
     <Compile Include="utility\CountyTypeConverter.cs" />
+    <Compile Include="utility\CSVHelper.cs" />
     <Compile Include="utility\CustomControls\CPropertyGrid.cs">
       <SubType>Component</SubType>
     </Compile>

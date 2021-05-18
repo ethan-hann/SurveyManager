@@ -29,6 +29,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
@@ -43,12 +44,17 @@ namespace SurveyManager
         /// </summary>
         public KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
 
+        private delegate void SafeCallChangeStatusText(string text);
+        private SafeCallChangeStatusText del;
+
         private ActivationDlg activationDialog = new ActivationDlg();
         private bool licensed = false; //always assume we are unlicensed until we've checked the product key
 
         public MainForm()
         {
             InitializeComponent();
+
+            del = new SafeCallChangeStatusText(UpdateStatusFromOtherThread);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -112,6 +118,11 @@ namespace SurveyManager
 
             if (logAutoSave.Enabled)
                 logAutoSave.Start();
+        }
+
+        private void UpdateStatusFromOtherThread(string statusText)
+        {
+            ChangeStatusText(this, new StatusArgs(statusText));
         }
 
         private void surveyAutosave_Tick(object sender, EventArgs e)
@@ -750,6 +761,52 @@ namespace SurveyManager
                     break;
                 }
             }
+        }
+
+        private void exportDataBtn_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (csvSaveFolder.ShowDialog() == DialogResult.OK)
+                {
+                    progressBar.Visible = true;
+                    dumpDatabaseBGWorker.RunWorkerAsync();
+                }
+            }
+        }
+
+        private void dumpDatabaseBGWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            List<DataTable> tables = new List<DataTable>();
+            DataTable tableInfos = Database.GetTableInfo();
+            del.Invoke("Getting tables from database...");
+            Thread.Sleep(600);
+
+            foreach (DataRow row in tableInfos.Rows)
+            {
+                tables.Add(Database.ExecuteFilter(Queries.BuildQuery(QType.SELECT, row[0].ToString())));
+                del.Invoke($"Dumping table: {row[0]}");
+            }
+
+            CSVHelper.DumpTables(tables, csvSaveFolder.SelectedPath);
+        }
+
+        private void dumpDatabaseBGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void dumpDatabaseBGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar.Visible = false;
+            progressBar.Value = 0;
+            ChangeStatusText(this, new StatusArgs($"Database information dumped successfully to: {csvSaveFolder.SelectedPath}"));
         }
 
         private void sqlQueryBtn_Click(object sender, EventArgs e)
