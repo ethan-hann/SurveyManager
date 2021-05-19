@@ -66,7 +66,7 @@ namespace SurveyManager.forms.userControls
         List<OutlookGridRow> rows;
         private void loadBillingDetailsWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (selectedListBoxIndex != -1)
+            if (selectedListBoxIndex >= 0)
             {
                 List<BillingItem> items = billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]];
                 OutlookGridRow row;
@@ -111,13 +111,18 @@ namespace SurveyManager.forms.userControls
         {
             if (!Disposing && !IsDisposed)
             {
-                StatusUpdate?.Invoke(this, new StatusArgs($"Billing Details for {(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex])).Date.ToShortDateString()} loaded."));
-                billingGrid.SuspendLayout();
-                billingGrid.ClearInternalRows();
-                billingGrid.ResumeLayout();
-                billingGrid.AssignRows(rows);
-                billingGrid.ForceRefreshGroupBox();
-                billingGrid.Fill();
+                if (selectedListBoxIndex >= 0)
+                {
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Billing Details for {(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex])).Date.ToShortDateString()} loaded."));
+                    billingGrid.SuspendLayout();
+                    billingGrid.ClearInternalRows();
+                    billingGrid.ResumeLayout();
+                    billingGrid.AssignRows(rows);
+                    billingGrid.ForceRefreshGroupBox();
+                    billingGrid.Fill();
+                }
+                else
+                    StatusUpdate?.Invoke(this, new StatusArgs($"No billing items for Job# {RuntimeVars.Instance.OpenJob.JobNumber} yet!"));
             }
 
             loadProgressBar.Visible = false;
