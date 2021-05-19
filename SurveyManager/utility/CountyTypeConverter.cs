@@ -31,6 +31,8 @@ namespace SurveyManager.utility
         {
             if (destinationType != typeof(string))
                 return base.ConvertTo(context, culture, value, destinationType);
+            if (value == null)
+                return "";
             return value.ToString();
         }
 

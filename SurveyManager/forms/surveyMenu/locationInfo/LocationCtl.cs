@@ -26,23 +26,30 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         private void LocationCtl_Load(object sender, EventArgs e)
         {
-            foreach (County c in RuntimeVars.Instance.Counties)
+            try
             {
-                cmbCounty.Items.Add(c);
-            }
+                foreach (County c in RuntimeVars.Instance.Counties)
+                {
+                    cmbCounty.Items.Add(c);
+                }
 
-            txtStreet.Text = RuntimeVars.Instance.OpenJob.Location.Street;
-            txtCity.Text = RuntimeVars.Instance.OpenJob.Location.City;
-            txtZipCode.Text = RuntimeVars.Instance.OpenJob.Location.ZipCode;
+                txtStreet.Text = RuntimeVars.Instance.OpenJob.Location.Street;
+                txtCity.Text = RuntimeVars.Instance.OpenJob.Location.City;
+                txtZipCode.Text = RuntimeVars.Instance.OpenJob.Location.ZipCode;
 
-            if (RuntimeVars.Instance.OpenJob.CountyID == 0)
-                cmbCounty.SelectedIndex = 0;
-            else
+                if (RuntimeVars.Instance.OpenJob.CountyID == 0)
+                    cmbCounty.SelectedIndex = 0;
+                else
+                {
+                    cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
+                }
+
+                IsEdited = true;
+            } catch (Exception)
             {
-                cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
+                RuntimeVars.Instance.LogFile.AddEntry("Something went wrong while loading the location control on the basic information page. It seems there is not an open survey job?");
             }
-
-            IsEdited = true;
+            
         }
 
         private void textBox_Enter(object sender, EventArgs e)

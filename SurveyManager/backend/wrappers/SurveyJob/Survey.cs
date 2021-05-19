@@ -249,7 +249,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return Client != null && County != null && !JobNumber.Equals("N/A") && !Description.Equals("N/A") && !AbstractNumber.Equals("N/A");
+                return (Client != null && Client.IsValidClient) && County != null && !JobNumber.Equals("N/A") && !Description.Equals("N/A") && !AbstractNumber.Equals("N/A");
             }
         }
         
