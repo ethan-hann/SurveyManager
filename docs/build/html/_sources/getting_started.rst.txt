@@ -30,6 +30,7 @@ Before anything can be done, you must connect to a valid Database on a server. T
 
 This will open a dialog where you can enter the connection details. **Important: Only one of these connection dialogs can be opened at a time.** Simply fill out the required fields to connect
 to a database.
+
 * Server: *the IP or hostname of the database server*
 * Port: *the port number the server listens on for database connections*
 * Database: *the name of the database to connect to*
