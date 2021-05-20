@@ -25,9 +25,9 @@ namespace SurveyManager.forms.userControls
 {
     public partial class BillingPortalCtl : UserControl
     {
-        private int selectedListBoxIndex;
+        private int selectedListBoxIndex = -1;
 
-        private Dictionary<string, List<BillingItem>> billingItems;
+        private Dictionary<string, List<BillingItem>> billingItems = new Dictionary<string, List<BillingItem>>();
 
         public EventHandler StatusUpdate;
 

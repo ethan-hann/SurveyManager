@@ -353,6 +353,36 @@ namespace SurveyManager
 
                 if (sender is KryptonRibbonRecentDoc recentDoc)
                 {
+                    if (RuntimeVars.Instance.IsJobOpen && RuntimeVars.Instance.OpenJob.JobNumber.Equals(recentDoc.Text))
+                    {
+                        ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " is already opened. Ignoring re-open command."));
+                        return;
+                    }
+
+                    ExitChoice choice;
+                    if (RuntimeVars.Instance.IsJobOpen && RuntimeVars.Instance.OpenJob.SavePending)
+                    {
+                        choice = ShowCloseDialog(true);
+                        if (choice == ExitChoice.SaveAndExit)
+                        {
+                            SaveSurvey();
+                            CloseJob();
+                        }
+                        else if (choice == ExitChoice.ExitNoSave)
+                        {
+                            CloseJob();
+                        }
+                        else if (choice == ExitChoice.SaveOnly)
+                        {
+                            SaveSurvey();
+                            return;
+                        }
+                        else if (choice == ExitChoice.Cancel)
+                        {
+                            return;
+                        }
+                    }
+
                     RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
                     if (RuntimeVars.Instance.IsJobOpen)
                     {
@@ -841,7 +871,8 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Client, "Clients" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -851,7 +882,8 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Realtor, "Realtors" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -861,7 +893,8 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -871,7 +904,8 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -1271,7 +1305,7 @@ namespace SurveyManager
             RuntimeVars.Instance.OpenJob = null;
 
             //remove pages that are considered survey pages
-            dockingManager.RemovePages(dockingManager.Pages.Where(p => ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage).ToArray(), true);
+            dockingManager.RemovePages(dockingManager.Pages.Where(p => (p.Tag != null && ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage)).ToArray(), true);
 
             for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
             {
@@ -1708,13 +1742,13 @@ namespace SurveyManager
             currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ControlClient;
         }
 
-        private ExitChoice ShowCloseDialog()
+        private ExitChoice ShowCloseDialog(bool hideExitOptions = false)
         {
             if (RuntimeVars.Instance.IsJobOpen)
             {
                 if (RuntimeVars.Instance.OpenJob.SavePending)
                 {
-                    return CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened survey job. What would you like to do?", "Save Changes", MessageBoxButtons.OKCancel, Resources.warning_64x64);
+                    return CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened survey job. What would you like to do?", "Save Changes", MessageBoxButtons.OKCancel, Resources.warning_64x64, hideExitOptions);
                 }
                 else
                 {

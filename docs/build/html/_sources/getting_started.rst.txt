@@ -107,7 +107,10 @@ four Counties are supported: *Chambers*, *Liberty*, *Harris*, and *Galveston*.
   :width: 800
   :alt: Location information
 
-Once all information is entered, simply click the ``Save and Update`` button on the top right of the Job Information page. This will save the changes locally and update the open job.
+Once all information is entered, simply click the ``Save and Update`` button on the top right of the Basic Information page. This will save the changes locally and update the open job.
+Then, you can close the Basic Information page.
+
+.. warning:: If you close the page before clicking the ``Save and Update`` button, none of the changes will be saved to the open job. All of the changes will have to be re-entered and saved correctly.
 
 .. image:: images/save_and_update_button.png
   :width: 300

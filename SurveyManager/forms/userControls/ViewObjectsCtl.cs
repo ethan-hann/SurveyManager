@@ -277,14 +277,15 @@ namespace SurveyManager.forms.userControls
             {
                 if (lastFilterResults != null)
                 {
+                    int rowCount = currentFilterArgs.Results.Rows.Count;
                     if (typeOfData == EntityTypes.TitleCompany)
                     {
-                        UpdateTabName("Title Companies" + $" [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        UpdateTabName("Title Companies" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]");
                         StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} title companies " + "matching search criteria: " + currentFilterArgs.Query));
                     }
                     else
                     {
-                        UpdateTabName(typeOfData.ToString() + $"s [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        UpdateTabName(typeOfData.ToString() + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]");
                         StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} {typeOfData}s " + "matching search criteria: " + currentFilterArgs.Query));
                     }
                 }

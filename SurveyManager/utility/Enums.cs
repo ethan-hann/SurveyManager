@@ -455,6 +455,21 @@ namespace SurveyManager.utility
             Courier,
             TimesNewRoman
         }
+
+        /// <summary>
+        /// Enum representing the various states that a Survey Job can be in at any one moment.
+        /// </summary>
+        public enum JobState
+        {
+            Opened,
+            Opening,
+            Saved,
+            Saving,
+            SavePending,
+            Closed,
+            Closing,
+            InvalidJob
+        }
     }
 
     public static class EnumExtensions
