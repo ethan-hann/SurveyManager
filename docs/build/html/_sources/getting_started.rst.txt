@@ -128,7 +128,8 @@ You will also be asked if you wish to *Create Another?*. If you want to create m
   :width: 800
   :alt: New client page after data entry
 
-**This workflow is the same for the other associated objects. The pages are laid out similar to the New Client page only requiring different data depending on the object being created. See the other sections for more information.**
+.. important:: This workflow is the same for the other associated objects. The pages are laid out similar to the New Client page only requiring different data depending on the object being created. 
+   See :doc:`Working With Objects <allAboutClients>` for more information.
 
 After you have created the client and associated it with the job, if you have the View Panel open, you can click ``Refresh`` to see the new client there.
 

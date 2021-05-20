@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Working With Objects &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tutorials" href="tutorials.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Working With Objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-client">Creating a new Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-an-existing-client">Finding an Existing Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-clients">Editing Clients</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Working With Objects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/allAboutClients.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="working-with-objects">
+<h1>Working With Objects<a class="headerlink" href="#working-with-objects" title="Permalink to this headline">¶</a></h1>
+<p>Objects provide the basis for many of the functions of Survey Manager. There are four types of objects you can create and manipulate:</p>
+<ul class="simple">
+<li><p>Clients</p></li>
+<li><p>Realtors</p></li>
+<li><p>Title Companies</p></li>
+<li><p>Billing Rates</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>All of the steps and UI for creation and editing of these objects is the same. The only differences are in the type of data each object requires and what the object is used for.
+In the following examples, we will walk through how to create, find, and edit a Client object but remember that these steps apply to virtually any object in Survey Manager.</p>
+</div>
+<a class="reference internal image-reference" href="_images/client_group.png"><img alt="Client group under Objects tab" src="_images/client_group.png" style="width: 200px;" /></a>
+<section id="creating-a-new-client">
+<h2>Creating a new Client<a class="headerlink" href="#creating-a-new-client" title="Permalink to this headline">¶</a></h2>
+<p>The following example assumes you have a working database connection ready to accept data.</p>
+<ol class="arabic">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">New</span></code> button in the <strong>Client</strong> group under the <strong>Objects</strong> ribbon tab.</p></li>
+<li><p>The <strong>New Client</strong> page will appear in the workspace.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/new_client_page.png"><img alt="New client page in workspace" src="_images/new_client_page.png" style="width: 800px;" /></a>
+</div></blockquote>
+</li>
+<li><p>This page contains what is known as a <em>property grid</em> and allows you to edit the properties of the Client. This type of grid is used throughout the application to edit various things.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A <strong>Client</strong> object is considered valid when it has an address, name, email address, and phone number. The fax number is optional.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Expand the <strong>Client Address</strong> -&gt; <strong>Address</strong> group and enter the required fields.</p></li>
+<li><p>Enter the client’s name, email address, phone number, and (if needed) a fax number.</p></li>
+<li><p>If you are satisfied with the data entered, click the <code class="docutils literal notranslate"><span class="pre">Save</span></code> button identified by a green check-mark.</p>
+<ol class="arabic simple">
+<li><p>If a job is currently opened, you will get a dialog asking if you want to go ahead and associate this client with the open job.
+In this case, we will select <code class="docutils literal notranslate"><span class="pre">No</span></code>.</p></li>
+<li><p>You will also get a dialog asking if you want to create another client.
+In this case, we will select <code class="docutils literal notranslate"><span class="pre">No</span></code>.</p></li>
+</ol>
+</li>
+<li><p>If you selected <strong>No</strong> when asked if you would like to create another client, the client page will close.
+Either way, the status bar at the bottom of the application window will update to indicate the status of the client creation.</p></li>
+</ol>
+<p>We now have a client object in the database with the name <strong>Bob</strong>.</p>
+</section>
+<section id="finding-an-existing-client">
+<h2>Finding an Existing Client<a class="headerlink" href="#finding-an-existing-client" title="Permalink to this headline">¶</a></h2>
+<p>The following example assumes you have created a client object named <em>Bob</em> and it is present in the database.</p>
+<ol class="arabic">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Find</span></code> button in the <strong>Client</strong> group under the <strong>Objects</strong> ribbon tab.</p></li>
+<li><p>An <a class="reference internal" href="advancedSearch.html"><span class="doc">advanced search dialog</span></a> will show:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/advanced_dialog_clients.png"><img alt="Find clients advanced dialog" src="_images/advanced_dialog_clients.png" style="width: 300px;" /></a>
+</div></blockquote>
+</li>
+<li><p>Let’s assume we know the client’s name, Bob. In this case, select <strong>Like</strong> from the second combo box. Leave the first combo box on <strong>Name</strong> because we are searching by the client’s name.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you know the client’s exact name (case-sensitive), you can instead select <strong>Equals</strong> from the combo box.
+There are many other ways to match the search text to data in the database. See <a class="reference internal" href="advancedSearch.html"><span class="doc">the advanced search dialog</span></a> for more information.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Type the text to search for in the text box. In this case, type <strong>Bob</strong>.</p></li>
+<li><p>Because we are only searching by one parameter, we can go ahead and click the <code class="docutils literal notranslate"><span class="pre">Search</span></code> button.</p></li>
+<li><p>If results were found, the dialog will close and a new page will open in the workspace displaying the filtered results. This page is similar to the <strong>View All</strong> page except it has been
+filtered down to only include the results matching the search criteria. The status bar at the bottom displays the number of clients found and also the SQL query used to search the database.
+The title of the page also changes to indicate that we are in a filtered view.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/client_search_results.png"><img alt="Client search results page" src="_images/client_search_results.png" style="width: 800px;" /></a>
+</section>
+<section id="editing-clients">
+<h2>Editing Clients<a class="headerlink" href="#editing-clients" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorials.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

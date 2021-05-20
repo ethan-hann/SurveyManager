@@ -63,7 +63,12 @@ Now, suppose we were to open a few more pages. Let's open the **Billing Portal**
   :width: 800
   :alt: The workspace after opening a few pages.
 
-We can re-organize these pages so that we have the **Notes** and **New Title Company** docked to the bottom (in their own tab group), and the **Billing Portal** docked to the center. We will also make the **View Panel** a floating window:
+We can re-organize these pages so that we have the **Notes** and **New Title Company** docked to the bottom (in their own tab group), and the **Billing Portal** docked to the center. We will also make the **View Panel** a floating window.
+To move pages, simply drag their title to a new location, following the diamond guide, or use the right click menus on the title of the page.
+
+.. image:: /images/diamond_guide.png
+  :width: 800
+  :alt: Diamond guide
 
 .. image:: /images/after_workspace_rearrange.png
   :width: 800

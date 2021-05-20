@@ -13,3 +13,5 @@ This documentation will explain the use and functionality of the application and
    getting_started
    user_interface
    more_help
+   reference
+   tutorials
