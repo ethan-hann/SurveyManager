@@ -35,14 +35,30 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.nudAutoSaveInterval = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.radLastTwoDigits = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.radCustomText = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.flpCustomText = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtCustomPrefix = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblCharCount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.flpExampleText = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblPrefixPreview = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flpInterval.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flpCustomText.SuspendLayout();
+            this.flpExampleText.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.chkEnableSurveyAutoSave);
             this.flowLayoutPanel1.Controls.Add(this.flpInterval);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel1.Controls.Add(this.flpCustomText);
+            this.flowLayoutPanel1.Controls.Add(this.flpExampleText);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -112,6 +128,100 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.kryptonLabel2.TabIndex = 2;
             this.kryptonLabel2.Values.Text = "minutes";
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.kryptonLabel3);
+            this.flowLayoutPanel2.Controls.Add(this.radLastTwoDigits);
+            this.flowLayoutPanel2.Controls.Add(this.radCustomText);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 64);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(385, 29);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(3, 3);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(76, 20);
+            this.kryptonLabel3.TabIndex = 0;
+            this.kryptonLabel3.Values.Text = "Job # Prefix:";
+            // 
+            // radLastTwoDigits
+            // 
+            this.radLastTwoDigits.Checked = true;
+            this.radLastTwoDigits.Location = new System.Drawing.Point(85, 3);
+            this.radLastTwoDigits.Name = "radLastTwoDigits";
+            this.radLastTwoDigits.Size = new System.Drawing.Size(191, 20);
+            this.radLastTwoDigits.TabIndex = 1;
+            this.radLastTwoDigits.Values.Text = "Last Two Digits of Current Year";
+            this.radLastTwoDigits.CheckedChanged += new System.EventHandler(this.radLastTwoDigits_CheckedChanged);
+            // 
+            // radCustomText
+            // 
+            this.radCustomText.Location = new System.Drawing.Point(282, 3);
+            this.radCustomText.Name = "radCustomText";
+            this.radCustomText.Size = new System.Drawing.Size(91, 20);
+            this.radCustomText.TabIndex = 2;
+            this.radCustomText.Values.Text = "Custom Text";
+            // 
+            // flpCustomText
+            // 
+            this.flpCustomText.Controls.Add(this.kryptonLabel4);
+            this.flpCustomText.Controls.Add(this.txtCustomPrefix);
+            this.flpCustomText.Controls.Add(this.lblCharCount);
+            this.flpCustomText.Location = new System.Drawing.Point(3, 99);
+            this.flpCustomText.Name = "flpCustomText";
+            this.flpCustomText.Size = new System.Drawing.Size(385, 29);
+            this.flpCustomText.TabIndex = 3;
+            this.flpCustomText.Visible = false;
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(3, 3);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel4.TabIndex = 1;
+            this.kryptonLabel4.Values.Text = "Enter Text: ";
+            // 
+            // txtCustomPrefix
+            // 
+            this.txtCustomPrefix.Location = new System.Drawing.Point(77, 3);
+            this.txtCustomPrefix.MaxLength = 128;
+            this.txtCustomPrefix.Name = "txtCustomPrefix";
+            this.txtCustomPrefix.Size = new System.Drawing.Size(172, 23);
+            this.txtCustomPrefix.TabIndex = 2;
+            this.txtCustomPrefix.TextChanged += new System.EventHandler(this.txtCustomPrefix_TextChanged);
+            // 
+            // lblCharCount
+            // 
+            this.lblCharCount.Location = new System.Drawing.Point(255, 3);
+            this.lblCharCount.Name = "lblCharCount";
+            this.lblCharCount.Size = new System.Drawing.Size(119, 20);
+            this.lblCharCount.TabIndex = 3;
+            this.lblCharCount.Values.Text = "Char. Count: 0 / 128 ";
+            // 
+            // flpExampleText
+            // 
+            this.flpExampleText.BackColor = System.Drawing.Color.Silver;
+            this.flpExampleText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpExampleText.Controls.Add(this.lblPrefixPreview);
+            this.flpExampleText.Location = new System.Drawing.Point(3, 134);
+            this.flpExampleText.Name = "flpExampleText";
+            this.flpExampleText.Size = new System.Drawing.Size(385, 34);
+            this.flpExampleText.TabIndex = 4;
+            // 
+            // lblPrefixPreview
+            // 
+            this.lblPrefixPreview.Location = new System.Drawing.Point(3, 3);
+            this.lblPrefixPreview.Name = "lblPrefixPreview";
+            this.lblPrefixPreview.Size = new System.Drawing.Size(187, 26);
+            this.lblPrefixPreview.StateCommon.LongText.Color1 = System.Drawing.Color.Blue;
+            this.lblPrefixPreview.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrefixPreview.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrefixPreview.TabIndex = 3;
+            this.lblPrefixPreview.Values.ExtraText = "21-1252";
+            this.lblPrefixPreview.Values.Text = "Example Job #: ";
+            // 
             // GeneralSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +234,12 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel1.PerformLayout();
             this.flpInterval.ResumeLayout(false);
             this.flpInterval.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flpCustomText.ResumeLayout(false);
+            this.flpCustomText.PerformLayout();
+            this.flpExampleText.ResumeLayout(false);
+            this.flpExampleText.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +252,15 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown nudAutoSaveInterval;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radLastTwoDigits;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radCustomText;
+        private System.Windows.Forms.FlowLayoutPanel flpCustomText;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCustomPrefix;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblCharCount;
+        private System.Windows.Forms.FlowLayoutPanel flpExampleText;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPrefixPreview;
     }
 }

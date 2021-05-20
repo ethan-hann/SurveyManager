@@ -4,8 +4,11 @@ Getting Started
 This section will show you how to quickly get started with creating and editing survey jobs. It will also show you how to setup the initial environment needed for using the application.
 
 
-First Launch and Setup
-^^^^^^^^^^^^^^^^^^^^^^
+Setup
+^^^^^
+
+Licenseing
+----------
 
 The first launch of the application may look something like this:
 
@@ -14,7 +17,7 @@ The first launch of the application may look something like this:
   :alt: First launch of application, unlicensed
 
 If the product is unlicensed, click the ``Activation`` button on the main ribbon and enter your product key. If the product key was valid, the application will be licensed and
-all features will be enabled. If you don't have a product key, email ethan.hann@protonmail.com to request one (either a trial key or a paid key).
+all features will be enabled. If you don't have a product key, you can click ``Purchase New Product Key`` from the activation window.
 
 After successfully licensing the application, the title bar will change to denote the product's current status:
 
@@ -22,14 +25,25 @@ After successfully licensing the application, the title bar will change to denot
   :width: 800
   :alt: After licensing of application
 
-Before anything can be done, you must connect to a valid Database on a server. To connect, navigate to the Database tab on the ribbon and click the ``Connection Settings`` button:
+At any time, you can click the ``Activation`` button to change/update your product key, view information about your license, and purchase a new product key.
+
+.. image:: images/activation_window.png
+  :width: 300
+  :alt: Activation window for Survey Manager
+
+.. important:: Once a product key has been entered, you can not "unlicense" the application. Even if you enter an invalid product key afterwards, Survey Manager will continue to use the
+   last valid product key that was entered. In this way, you are protected from accidently unlicenseing the application.
+
+Connecting to a Database
+------------------------
+
+Before data can be entered and manipulated, you must connect to a valid Database on a server. To connect, navigate to the Database tab on the ribbon and click the ``Connection Settings`` button:
 
 .. image:: images/database_connection_button.png
   :width: 400
   :alt: Database connection button
 
-This will open a dialog where you can enter the connection details. **Important: Only one of these connection dialogs can be opened at a time.** Simply fill out the required fields to connect
-to a database.
+This will open a dialog where you can enter the connection details. Simply fill out the required fields to connect to a database.
 
 * Server: *the IP or hostname of the database server*
 * Port: *the port number the server listens on for database connections*
@@ -41,32 +55,37 @@ to a database.
   :width: 400
   :alt: The database connection dialog
 
-Once all required fields are entered, click the ``Test Connection`` button in the title bar of the dialog to begin connecting to the database. If no error occured, a new button will appear ``Finish``
-that will close the dialog and save the connection.
+.. important:: Only one of these connection dialogs can be opened at a time. If you try to open another one, a pop-up will show giving you an error.
+
+Once all required fields are entered, click the ``Test Connection`` button in the title bar of the dialog to begin connecting to the database. If no error occured, a new button will appear, ``Finished`` that will close the dialog and save the connection.
 
 .. image:: images/database_connection_success.png
   :width: 400
   :alt: Database connection window after successful connection
 
 
-Creating and Editing a Survey Job
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Basic Survey Workflow
+^^^^^^^^^^^^^^^^^^^^^
 
-* Click the ``New`` button under the *Jobs* group and enter a job number. This job number is plain text and can be anything you wish. **Two different jobs cannot have the same job number.**
-* After the job has been created, the title bar (at the top) and the status bar (at the bottom) of the window will change to correspond to the current state of the application:
+Creating the Survey Job
+-----------------------
 
-.. image:: images/after_new_job_title.png
-  :width: 800
-  :alt: After creation of a new job
+1. Click the ``New`` button under the *Jobs* group and enter a job number. This job number is plain text and can be anything you wish. The default prefix is the last two digits of the current year followed by a dash symbol.
+   This can be changed in the application's settings.
+   
+   .. important:: Two different jobs cannot have the same job number.
+
+2. After the job has been created, the title bar (at the top) and the status bar (at the bottom) of the window will change to correspond to the current state of the application:
+
+   .. image:: images/after_new_job_title.png
+     :width: 800
+     :alt: After creation of a new job
+
+   .. image:: images/after_new_job_status.png
+     :width: 800
+     :alt: After creation of a new job
 
 
-.. image:: images/after_new_job_status.png
-  :width: 800
-  :alt: After creation of a new job
-
-**Important: All changes to the currently opened job are only local, meaning they do not become persistently stored in the database until the Save button is clicked!**
-
------------------------------
 Editing the Job's Information
 -----------------------------
 
@@ -102,41 +121,45 @@ in the View Panel are also editable and provide a quick shortcut to edit some at
   :width: 800
   :alt: Open view panel
 
-----------------------
+
 Adding a Client Object
 ----------------------
 
-Let's now add a Client to our new survey job. To do this, click the drop-down arrow underneath the ``Client`` button in the Associated Objects group and then click the ``New...`` button.
+Now that we have a job with basic information, the next step is to add a client object. This can be accomplished a few different ways. See the reference page for :ref:`creating a new client <creating-a-client>` for more information about client objects.
+For now, we will add the client using the **Client** command on the **Survey** ribbon. To do this, click the drop-down arrow underneath the ``Client`` button in the Associated Objects group and then click the ``New...`` button.
 
 .. image:: images/add_client_button.png
   :width: 300
   :alt: Add new client to open job
 
 This will open a new page which allows you to edit the Client's details. It is on this page where you can enter the client's address, name, email address, fax number, and phone number. To
-enter the address, expand the *Address* group and enter the required fields. It is worth noting that you can press the <TAB> key on your keyboard to navigate to the next field. This works most places where
-you enter data.
+enter the address, expand the *Address* group and enter the required fields.
+
+.. tip:: You can press the <TAB> key on your keyboard to navigate to the next field. This works most places where you enter data.
 
 .. image:: images/new_client_page.png
   :width: 800
   :alt: New client page
 
 After entering all of the required data, simply click the ``Save`` button on the page. The client will be inserted into the database and you will be asked if you wish to associate the new client
-with the currently opened job. In this case, click ``Yes``. **If you choose no, you can still add the client to the job a different way. You don't have to recreate the object again.**
+with the currently opened job. In this case, click ``Yes``.
 
-You will also be asked if you wish to *Create Another?*. If you want to create multiple clients in a row, you can click ``Yes``; otherwise, click ``No`` to close the page.
+.. note:: If you choose no, you can still add the client to the job by searching for it. You don't have to recreate the object again.
+
+You will also be asked if you wish to create another client. If you want to create multiple clients in a row, you can click ``Yes``; otherwise, click ``No`` to close the page.
 
 .. image:: images/new_client_page_after_data_entry.png
   :width: 800
   :alt: New client page after data entry
 
 .. important:: This workflow is the same for the other associated objects. The pages are laid out similar to the New Client page only requiring different data depending on the object being created. 
-   See :doc:`Working With Objects <allAboutClients>` for more information.
+   See :doc:`Working With Objects <allAboutClients>` for more information about objects and how to manipulate them.
 
 After you have created the client and associated it with the job, if you have the View Panel open, you can click ``Refresh`` to see the new client there.
 
 We now have the absolute minimum amount of information needed to save the job to the database!
 
----------------------------
+
 Saving the Job Persistently
 ---------------------------
 
@@ -147,3 +170,6 @@ the status bar will update to let you know the status of the saving. **It is wor
 .. image:: images/save_button.png
   :width: 300
   :alt: Save button for current job.
+
+This concludes the quickstart guide. There are many more functions available to you to manipulate surveys. You can add files, billing information, time entries, notes, a realtor, and a title company to the survey job.
+You can also run reports on the data in the database. These reports show an overview of the survey job in an easy to print PDF format. Continue through this documentation to learn more about all of these features!

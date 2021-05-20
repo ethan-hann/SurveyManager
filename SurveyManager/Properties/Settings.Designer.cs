@@ -237,5 +237,29 @@ namespace SurveyManager.Properties {
                 this["SurveyAutoSaveEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string SurveyJobPrefix {
+            get {
+                return ((string)(this["SurveyJobPrefix"]));
+            }
+            set {
+                this["SurveyJobPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DefaultJobPrefixEnabled {
+            get {
+                return ((bool)(this["DefaultJobPrefixEnabled"]));
+            }
+            set {
+                this["DefaultJobPrefixEnabled"] = value;
+            }
+        }
     }
 }

@@ -51,14 +51,17 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         {
             //Log file options
             Settings.Default.OverwriteLogFile = radOverwriteLog.Checked;
-            Settings.Default.LogFilePath = lblPath.Text;
+
+            if (!lblPath.Text.Equals("<PATH>"))
+                Settings.Default.LogFilePath = lblPath.Text;
             Settings.Default.LogAutoSaveInterval = (int)nudAutoSaveInterval.Value;
 
             //Set the new autosave intervals
             RuntimeVars.Instance.MainForm.SetLogAutosaveInterval(Settings.Default.LogAutoSaveInterval);
 
             //Other file options
-            Settings.Default.DefaultSavePath = lblReportPath.Text;
+            if (!lblReportPath.Text.Equals("<PATH>"))
+                Settings.Default.DefaultSavePath = lblReportPath.Text;
 
             Settings.Default.Save();
 

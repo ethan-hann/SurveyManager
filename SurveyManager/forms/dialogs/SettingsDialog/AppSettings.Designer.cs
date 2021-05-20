@@ -69,7 +69,7 @@ namespace SurveyManager.forms.dialogs
             this.controlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlContainer.Location = new System.Drawing.Point(167, 0);
             this.controlContainer.Name = "controlContainer";
-            this.controlContainer.Size = new System.Drawing.Size(424, 276);
+            this.controlContainer.Size = new System.Drawing.Size(424, 277);
             this.controlContainer.StateCommon.Image = global::SurveyManager.Properties.Resources.settings_24x24;
             this.controlContainer.StateCommon.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.controlContainer.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -82,7 +82,7 @@ namespace SurveyManager.forms.dialogs
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(167, 276);
+            this.kryptonPanel1.Size = new System.Drawing.Size(167, 277);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // settingsTreeView
@@ -106,7 +106,7 @@ namespace SurveyManager.forms.dialogs
             treeNode2,
             treeNode3,
             treeNode4});
-            this.settingsTreeView.Size = new System.Drawing.Size(167, 214);
+            this.settingsTreeView.Size = new System.Drawing.Size(167, 215);
             this.settingsTreeView.TabIndex = 0;
             this.settingsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.settingsTreeView_AfterSelect);
             // 
@@ -117,7 +117,7 @@ namespace SurveyManager.forms.dialogs
             this.tableLayoutPanel1.Controls.Add(this.btnToDefaults, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 214);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 215);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -147,13 +147,13 @@ namespace SurveyManager.forms.dialogs
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblHelp});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 276);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 277);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip1.Size = new System.Drawing.Size(591, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(591, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
@@ -161,7 +161,7 @@ namespace SurveyManager.forms.dialogs
             // lblHelp
             // 
             this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(73, 18);
+            this.lblHelp.Size = new System.Drawing.Size(72, 17);
             this.lblHelp.Text = "<Help Text>";
             // 
             // AppSettings

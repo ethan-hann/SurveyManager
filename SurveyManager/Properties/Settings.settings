@@ -56,5 +56,11 @@
     <Setting Name="SurveyAutoSaveEnabled" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="SurveyJobPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Undefined</Value>
+    </Setting>
+    <Setting Name="DefaultJobPrefixEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

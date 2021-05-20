@@ -12,9 +12,16 @@ Objects provide the basis for many of the functions of Survey Manager. There are
 .. attention:: All of the steps and UI for creation and editing of these objects is the same. The only differences are in the type of data each object requires and what the object is used for.
    In the following examples, we will walk through how to create, find, and edit a Client object but remember that these steps apply to virtually any object in Survey Manager.
 
+.. _client-object:
+
+Clients
+^^^^^^^
+
 .. image:: images/client_group.png
   :width: 200
   :alt: Client group under Objects tab
+
+.. _creating-a-client:
 
 Creating a new Client
 ---------------------

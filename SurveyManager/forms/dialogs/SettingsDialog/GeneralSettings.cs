@@ -35,6 +35,16 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             if (chkEnableSurveyAutoSave.Checked)
                 nudAutoSaveInterval.Value = Settings.Default.SurveyAutoSaveInterval;
 
+            radLastTwoDigits.Checked = Settings.Default.DefaultJobPrefixEnabled;
+            if (!Settings.Default.DefaultJobPrefixEnabled)
+                radCustomText.Checked = true;
+
+            string prefix = Settings.Default.SurveyJobPrefix;
+            if (!radLastTwoDigits.Checked && !prefix.Equals("Undefined"))
+            {
+                txtCustomPrefix.Text = prefix;
+            }
+
             Unchanged = false;
         }
 
@@ -42,6 +52,11 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         {
             Settings.Default.SurveyAutoSaveInterval = (int)nudAutoSaveInterval.Value;
             Settings.Default.SurveyAutoSaveEnabled = chkEnableSurveyAutoSave.Checked;
+            Settings.Default.DefaultJobPrefixEnabled = radLastTwoDigits.Checked;
+
+            if (!radLastTwoDigits.Checked)
+                Settings.Default.SurveyJobPrefix = txtCustomPrefix.Text;
+
             Settings.Default.Save();
 
             //Set the new autosave interval
@@ -52,11 +67,34 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         {
             chkEnableSurveyAutoSave.Checked = true;
             nudAutoSaveInterval.Value = 15;
+            radLastTwoDigits.Checked = true;
+            txtCustomPrefix.Text = "";
         }
 
         private void chkEnableSurveyAutoSave_CheckedChanged(object sender, EventArgs e)
         {
             flpInterval.Visible = chkEnableSurveyAutoSave.Checked;
+        }
+
+        private void radLastTwoDigits_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radLastTwoDigits.Checked)
+                flpCustomText.Visible = false;
+            else
+                flpCustomText.Visible = true;
+
+            UpdatePrefixPreview();
+        }
+
+        private void txtCustomPrefix_TextChanged(object sender, EventArgs e)
+        {
+            lblCharCount.Text = "Char. Count: " + txtCustomPrefix.Text.Count() + " / 128";
+            UpdatePrefixPreview();
+        }
+
+        private void UpdatePrefixPreview()
+        {
+            lblPrefixPreview.Values.ExtraText = radLastTwoDigits.Checked ? $"{DateTime.Now.Year.ToString().Substring(2)}-1500" : $"{txtCustomPrefix.Text}-1500";
         }
 
         private void chkEnableSurveyAutoSave_MouseEnter(object sender, EventArgs e)

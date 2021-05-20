@@ -131,7 +131,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.pgLogging,
             this.pgReporting});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 1;
             this.kryptonNavigator1.Size = new System.Drawing.Size(574, 403);
             this.kryptonNavigator1.TabIndex = 2;
             this.kryptonNavigator1.Text = "kryptonNavigator1";
