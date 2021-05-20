@@ -978,7 +978,11 @@ namespace SurveyManager
                     return;
                 }
 
-                string newJobNumber = KryptonInputBox.Show(this, "Enter the new job number:", "New Job", $"{DateTime.Now.Date.Year.ToString().Substring(2)}-");
+                string prefix = $"{DateTime.Now.Date.Year.ToString().Substring(2)}-";
+                if (!Settings.Default.DefaultJobPrefixEnabled)
+                    prefix = Settings.Default.SurveyJobPrefix + "-";
+
+                string newJobNumber = KryptonInputBox.Show(this, "Enter the new job number:", "New Job", prefix);
                 if (newJobNumber.Equals("NONE") || newJobNumber.Length <= 0)
                     return;
 
