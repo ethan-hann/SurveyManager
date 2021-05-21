@@ -71,7 +71,7 @@ namespace SurveyManager.forms.surveyMenu
             lbItems.SelectedIndex = lbItems.Items.Count - 1;
 
             if (selected.ID != 0)
-                RuntimeVars.Instance.OpenJob.BillingObject.RemoveLineItemID(selected.ID);
+                JobHandler.Instance.CurrentJob.BillingObject.RemoveLineItemID(selected.ID);
 
             if (lbItems.Items.Count <= 0)
             {
@@ -96,8 +96,8 @@ namespace SurveyManager.forms.surveyMenu
             if (e.ChangedItem.Label.Contains("Amount") || e.ChangedItem.Label.Contains("Tax"))
                 UpdateSubTotal();
 
-            if (RuntimeVars.Instance.IsJobOpen)
-                RuntimeVars.Instance.OpenJob.SavePending = true;
+            if (JobHandler.Instance.IsJobOpen)
+                JobHandler.Instance.UpdateSavePending(true);
         }
 
         protected override void Dispose(bool disposing)
@@ -120,10 +120,10 @@ namespace SurveyManager.forms.surveyMenu
 
         private void SaveItems()
         {
-            if (RuntimeVars.Instance.IsJobOpen)
+            if (JobHandler.Instance.IsJobOpen)
             {
-                RuntimeVars.Instance.OpenJob.BillingObject.AddLineItemsRange(lbItems.Items.Cast<LineItem>().ToList(), true);
-                StatusUpdate?.Invoke(this, new StatusArgs("Line items for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
+                JobHandler.Instance.CurrentJob.BillingObject.AddLineItemsRange(lbItems.Items.Cast<LineItem>().ToList(), true);
+                StatusUpdate?.Invoke(this, new StatusArgs("Line items for Job# " + JobHandler.Instance.CurrentJob.JobNumber + " updated internally."));
             }
             else
             {

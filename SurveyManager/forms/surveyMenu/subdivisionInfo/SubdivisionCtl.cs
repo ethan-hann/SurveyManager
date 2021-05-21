@@ -23,20 +23,20 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
 
         public bool SaveInfo()
         {
-            RuntimeVars.Instance.OpenJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
-            RuntimeVars.Instance.OpenJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
-            RuntimeVars.Instance.OpenJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
-            RuntimeVars.Instance.OpenJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
+            JobHandler.Instance.CurrentJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
+            JobHandler.Instance.CurrentJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
+            JobHandler.Instance.CurrentJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
+            JobHandler.Instance.CurrentJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
 
             return true;
         }
 
         private void SubdivisionCtl_Load(object sender, EventArgs e)
         {
-            txtName.Text = RuntimeVars.Instance.OpenJob.Subdivision;
-            txtSection.Text = RuntimeVars.Instance.OpenJob.SectionNumber;
-            txtBlock.Text = RuntimeVars.Instance.OpenJob.BlockNumber;
-            txtLot.Text = RuntimeVars.Instance.OpenJob.LotNumber;
+            txtName.Text = JobHandler.Instance.CurrentJob.Subdivision;
+            txtSection.Text = JobHandler.Instance.CurrentJob.SectionNumber;
+            txtBlock.Text = JobHandler.Instance.CurrentJob.BlockNumber;
+            txtLot.Text = JobHandler.Instance.CurrentJob.LotNumber;
             IsEdited = true;
         }
 
@@ -52,6 +52,11 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             KryptonTextBox txtBox = sender as KryptonTextBox;
             if (txtBox != null)
                 txtBox.StateCommon.Back.Color1 = Color.White;
+        }
+
+        private void JobModified(object sender, KeyPressEventArgs e)
+        {
+            JobHandler.Instance.UpdateSavePending(true);
         }
     }
 }

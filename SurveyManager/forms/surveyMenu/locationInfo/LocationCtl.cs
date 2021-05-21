@@ -33,15 +33,15 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                     cmbCounty.Items.Add(c);
                 }
 
-                txtStreet.Text = RuntimeVars.Instance.OpenJob.Location.Street;
-                txtCity.Text = RuntimeVars.Instance.OpenJob.Location.City;
-                txtZipCode.Text = RuntimeVars.Instance.OpenJob.Location.ZipCode;
+                txtStreet.Text = JobHandler.Instance.CurrentJob.Location.Street;
+                txtCity.Text = JobHandler.Instance.CurrentJob.Location.City;
+                txtZipCode.Text = JobHandler.Instance.CurrentJob.Location.ZipCode;
 
-                if (RuntimeVars.Instance.OpenJob.CountyID == 0)
+                if (JobHandler.Instance.CurrentJob.CountyID == 0)
                     cmbCounty.SelectedIndex = 0;
                 else
                 {
-                    cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
+                    cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == JobHandler.Instance.CurrentJob.CountyID);
                 }
 
                 IsEdited = true;
@@ -80,11 +80,11 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         private void btnSameAsClient_Click(object sender, EventArgs e)
         {
-            if (!RuntimeVars.Instance.OpenJob.Client.ClientAddress.IsEmpty)
+            if (!JobHandler.Instance.CurrentJob.Client.ClientAddress.IsEmpty)
             {
-                txtStreet.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.Street;
-                txtCity.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.City;
-                txtZipCode.Text = RuntimeVars.Instance.OpenJob.Client.ClientAddress.ZipCode;
+                txtStreet.Text = JobHandler.Instance.CurrentJob.Client.ClientAddress.Street;
+                txtCity.Text = JobHandler.Instance.CurrentJob.Client.ClientAddress.City;
+                txtZipCode.Text = JobHandler.Instance.CurrentJob.Client.ClientAddress.ZipCode;
             }
             else
             {
@@ -100,12 +100,14 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                 e.Handled = false;
             if (e.KeyChar == '-')
                 e.Handled = false;
+
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void cmbCounty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RuntimeVars.Instance.OpenJob.CountyID = ((County)cmbCounty.Items[cmbCounty.SelectedIndex]).ID;
-            RuntimeVars.Instance.OpenJob.County = RuntimeVars.Instance.Counties.Find(e => e.ID == RuntimeVars.Instance.OpenJob.CountyID);
+            JobHandler.Instance.CurrentJob.CountyID = ((County)cmbCounty.Items[cmbCounty.SelectedIndex]).ID;
+            JobHandler.Instance.CurrentJob.County = RuntimeVars.Instance.Counties.Find(e => e.ID == JobHandler.Instance.CurrentJob.CountyID);
         }
 
         public bool SaveInfo()
@@ -128,11 +130,21 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                 return false;
             }
 
-            RuntimeVars.Instance.OpenJob.Location.Street = txtStreet.Text;
-            RuntimeVars.Instance.OpenJob.Location.City = txtCity.Text;
-            RuntimeVars.Instance.OpenJob.Location.ZipCode = txtZipCode.Text;
-            RuntimeVars.Instance.OpenJob.County = cmbCounty.SelectedItem as County;
+            JobHandler.Instance.CurrentJob.Location.Street = txtStreet.Text;
+            JobHandler.Instance.CurrentJob.Location.City = txtCity.Text;
+            JobHandler.Instance.CurrentJob.Location.ZipCode = txtZipCode.Text;
+            JobHandler.Instance.CurrentJob.County = cmbCounty.SelectedItem as County;
             return true;
+        }
+
+        private void JobModified(object sender, KeyPressEventArgs e)
+        {
+            JobHandler.Instance.UpdateSavePending(true);
+        }
+
+        private void cmbCounty_DropDownClosed(object sender, EventArgs e)
+        {
+            JobHandler.Instance.UpdateSavePending(true);
         }
     }
 }

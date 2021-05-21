@@ -117,7 +117,7 @@ namespace SurveyManager.forms.surveyMenu
         private void txtNoteContents_KeyPress(object sender, KeyPressEventArgs e)
         {
             //If the text has been changed, notify about a pending save.
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
@@ -127,10 +127,10 @@ namespace SurveyManager.forms.surveyMenu
 
         private void SaveNotes()
         {
-            if (RuntimeVars.Instance.IsJobOpen)
+            if (JobHandler.Instance.IsJobOpen)
             {
-                RuntimeVars.Instance.OpenJob.Notes = notes;
-                StatusUpdate?.Invoke(this, new StatusArgs("Notes for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
+                JobHandler.Instance.CurrentJob.Notes = notes;
+                StatusUpdate?.Invoke(this, new StatusArgs("Notes for Job# " + JobHandler.Instance.CurrentJob.JobNumber + " updated internally."));
             }
             else
             {

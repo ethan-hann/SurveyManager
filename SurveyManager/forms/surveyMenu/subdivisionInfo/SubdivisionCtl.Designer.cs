@@ -64,6 +64,7 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             this.txtName.Size = new System.Drawing.Size(367, 23);
             this.txtName.TabIndex = 0;
             this.txtName.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtName.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel1
@@ -92,6 +93,7 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             this.txtLot.Size = new System.Drawing.Size(160, 23);
             this.txtLot.TabIndex = 0;
             this.txtLot.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtLot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtLot.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel2
@@ -120,6 +122,7 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             this.txtBlock.Size = new System.Drawing.Size(150, 23);
             this.txtBlock.TabIndex = 0;
             this.txtBlock.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtBlock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtBlock.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel3
@@ -148,6 +151,7 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             this.txtSection.Size = new System.Drawing.Size(137, 23);
             this.txtSection.TabIndex = 0;
             this.txtSection.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtSection.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtSection.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel4

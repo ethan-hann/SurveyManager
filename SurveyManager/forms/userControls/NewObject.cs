@@ -99,7 +99,7 @@ namespace SurveyManager.forms.userControls
 
         private void CheckForAssociation()
         {
-            if (RuntimeVars.Instance.IsJobOpen)
+            if (JobHandler.Instance.IsJobOpen)
             {
                 if (entity != EntityTypes.Rate) //only associate with the open job if the object is not a Rate object.
                 {
@@ -108,16 +108,16 @@ namespace SurveyManager.forms.userControls
                         switch (entity)
                         {
                             case EntityTypes.Client:
-                            RuntimeVars.Instance.OpenJob.Client = obj as Client;
+                            JobHandler.Instance.CurrentJob.Client = obj as Client;
                             break;
                             case EntityTypes.Realtor:
-                            RuntimeVars.Instance.OpenJob.Realtor = obj as Realtor;
+                            JobHandler.Instance.CurrentJob.Realtor = obj as Realtor;
                             break;
                             case EntityTypes.TitleCompany:
-                            RuntimeVars.Instance.OpenJob.TitleCompany = obj as TitleCompany;
+                            JobHandler.Instance.CurrentJob.TitleCompany = obj as TitleCompany;
                             break;
                         }
-                        RuntimeVars.Instance.OpenJob.SavePending = true;
+                        JobHandler.Instance.UpdateSavePending(true);
                     }
                 }
             }

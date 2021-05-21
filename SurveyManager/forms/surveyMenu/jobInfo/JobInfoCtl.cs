@@ -26,10 +26,10 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
 
         private void JobInfoCtl_Load(object sender, EventArgs e)
         {
-            txtJobNumber.Text = RuntimeVars.Instance.OpenJob.JobNumber;
-            txtAbstract.Text = RuntimeVars.Instance.OpenJob.AbstractNumber;
-            txtSurvey.Text = RuntimeVars.Instance.OpenJob.SurveyName;
-            txtNumOfAcres.Text = RuntimeVars.Instance.OpenJob.Acres.ToString();
+            txtJobNumber.Text = JobHandler.Instance.CurrentJob.JobNumber;
+            txtAbstract.Text = JobHandler.Instance.CurrentJob.AbstractNumber;
+            txtSurvey.Text = JobHandler.Instance.CurrentJob.SurveyName;
+            txtNumOfAcres.Text = JobHandler.Instance.CurrentJob.Acres.ToString();
 
             IsEdited = true;
         }
@@ -52,7 +52,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
         {
             if (double.TryParse(txtNumOfAcres.Text, out double acres))
             {
-                RuntimeVars.Instance.OpenJob.Acres = acres;
+                JobHandler.Instance.CurrentJob.Acres = acres;
             }
         }
 
@@ -87,6 +87,8 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             {
                 e.Handled = true; // Cancel the key press
             }
+
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         public bool SaveInfo()
@@ -115,11 +117,16 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
                 return false;
             }
 
-            RuntimeVars.Instance.OpenJob.JobNumber = txtJobNumber.Text;
-            RuntimeVars.Instance.OpenJob.AbstractNumber = txtAbstract.Text;
-            RuntimeVars.Instance.OpenJob.SurveyName = txtSurvey.Text;
-            RuntimeVars.Instance.OpenJob.Acres = double.Parse(txtNumOfAcres.Text);
+            JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
+            JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
+            JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
+            JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
             return true;
+        }
+
+        private void JobModified(object sender, KeyPressEventArgs e)
+        {
+            JobHandler.Instance.UpdateSavePending(true);
         }
     }
 }

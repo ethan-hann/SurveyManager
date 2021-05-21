@@ -50,6 +50,7 @@ namespace SurveyManager.forms.surveyMenu.description
             this.txtDescription.TabIndex = 0;
             this.txtDescription.Text = "";
             this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             // 
             // statusStrip1
             // 

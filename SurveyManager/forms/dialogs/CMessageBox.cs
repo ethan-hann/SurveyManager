@@ -79,7 +79,7 @@ namespace SurveyManager.forms.dialogs
             }
         }
 
-        public static ExitChoice ShowExitDialog(string text, string caption, MessageBoxButtons buttons, Image image, bool hideExitOption = false)
+        public static ExitChoice ShowExitDialog(string text, string caption, MessageBoxButtons buttons, Image image, bool hideExitOption = false, bool isOpeningOtherJob = true)
         {
             SaveMessageForm message = new SaveMessageForm
             {
@@ -136,11 +136,17 @@ namespace SurveyManager.forms.dialogs
                 if (message.lblText.Height > 64)
                     message.Height = (message.lblText.Top + message.lblText.Height) + 78;
 
-                if (hideExitOption)
+                if (hideExitOption && isOpeningOtherJob)
                 {
                     message.radExitWithoutSaving.Text = "Close Job (Lose Unsaved Changes)";
                     message.radSaveJobAndExit.Text = "Save Job Before Closing";
                     message.radSaveDontExit.Text = "Save Job Only (Ignore Pending Open)";
+                }
+                else if (hideExitOption && !isOpeningOtherJob)
+                {
+                    message.radExitWithoutSaving.Text = "Close Job (Lose Unsaved Changes)";
+                    message.radSaveJobAndExit.Text = "Save Job Before Closing";
+                    message.radSaveDontExit.Text = "Save Job Only (Ignore Pending Close)";
                 }
 
                 DialogResult choice = message.ShowDialog();

@@ -51,25 +51,9 @@ namespace SurveyManager.utility
         public string SelectedPageUniqueName { get; set; } = "";
 
         /// <summary>
-        /// Get or set the currently open survey job.
-        /// </summary>
-        public Survey OpenJob { get; set; }
-
-        /// <summary>
         /// Get or set the applications log file.
         /// </summary>
         public LogFile LogFile { get; set; }
-
-        /// <summary>
-        /// Get a value indicating if a survey job is already open.
-        /// </summary>
-        public bool IsJobOpen
-        {
-            get
-            {
-                return OpenJob != null;
-            }
-        }
 
         /// <summary>
         /// Is the product licensed or not?

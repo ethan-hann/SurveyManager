@@ -65,6 +65,7 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.txtStreet.Size = new System.Drawing.Size(248, 23);
             this.txtStreet.TabIndex = 1;
             this.txtStreet.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtStreet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtStreet.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel1
@@ -92,6 +93,7 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.txtCity.Size = new System.Drawing.Size(107, 23);
             this.txtCity.TabIndex = 1;
             this.txtCity.Enter += new System.EventHandler(this.textBox_Enter);
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
             this.txtCity.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // flowLayoutPanel2
@@ -149,6 +151,7 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             this.cmbCounty.Name = "cmbCounty";
             this.cmbCounty.Size = new System.Drawing.Size(131, 21);
             this.cmbCounty.TabIndex = 1;
+            this.cmbCounty.DropDownClosed += new System.EventHandler(this.cmbCounty_DropDownClosed);
             this.cmbCounty.SelectedIndexChanged += new System.EventHandler(this.cmbCounty_SelectedIndexChanged);
             this.cmbCounty.Enter += new System.EventHandler(this.textBox_Enter);
             this.cmbCounty.Leave += new System.EventHandler(this.textBox_Leave);

@@ -38,7 +38,7 @@ namespace SurveyManager.forms.userControls
 
         private void BillingPortalCtl_Load(object sender, EventArgs e)
         {
-            LineItemsCtl lControl = new LineItemsCtl(RuntimeVars.Instance.OpenJob.BillingObject.GetLineItems());
+            LineItemsCtl lControl = new LineItemsCtl(JobHandler.Instance.CurrentJob.BillingObject.GetLineItems());
             lControl.Dock = DockStyle.Fill;
             lControl.StatusUpdate += ChangeStatusText;
 
@@ -46,7 +46,7 @@ namespace SurveyManager.forms.userControls
             billingGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(billingGrid, EntityTypes.BillingItem);
 
-            billingItems = Utility.CreateDictionary(RuntimeVars.Instance.OpenJob.BillingObject.GetBillingItems());
+            billingItems = Utility.CreateDictionary(JobHandler.Instance.CurrentJob.BillingObject.GetBillingItems());
             PopulateListBox();
             UpdateTotalTime();
 
@@ -122,7 +122,7 @@ namespace SurveyManager.forms.userControls
                     billingGrid.Fill();
                 }
                 else
-                    StatusUpdate?.Invoke(this, new StatusArgs($"No billing items for Job# {RuntimeVars.Instance.OpenJob.JobNumber} yet!"));
+                    StatusUpdate?.Invoke(this, new StatusArgs($"No billing items for Job# {JobHandler.Instance.CurrentJob.JobNumber} yet!"));
             }
 
             loadProgressBar.Visible = false;
@@ -189,7 +189,7 @@ namespace SurveyManager.forms.userControls
             }
 
             LoadData();
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void btnRemoveTime_Click(object sender, EventArgs e)
@@ -209,7 +209,7 @@ namespace SurveyManager.forms.userControls
             selectedListBoxIndex = lbTimeEntries.SelectedIndex;
 
             LoadData();
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void lbTimeEntries_SelectedIndexChanged(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace SurveyManager.forms.userControls
             {
                 billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Remove((BillingItem)e.Row.Tag);
             }
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void btnNewEntry_Click(object sender, EventArgs e)
@@ -272,7 +272,7 @@ namespace SurveyManager.forms.userControls
                 billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]].Add(item);
             }
             LoadData();
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void btnEditTime_Click(object sender, EventArgs e)
@@ -317,7 +317,7 @@ namespace SurveyManager.forms.userControls
 
         private void SaveItems()
         {
-            if (!RuntimeVars.Instance.IsJobOpen)
+            if (!JobHandler.Instance.IsJobOpen)
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("Invalid operation: <Save Billing Portal> => Job is not opened!"));
                 return;
@@ -325,11 +325,11 @@ namespace SurveyManager.forms.userControls
 
             List<BillingItem> items = new List<BillingItem>();
             billingItems.Values.ToList().ForEach(p => p.ForEach(q => items.Add(q)));
-            RuntimeVars.Instance.OpenJob.BillingObject.AddBillingRange(items, true);
+            JobHandler.Instance.CurrentJob.BillingObject.AddBillingRange(items, true);
 
-            RuntimeVars.Instance.OpenJob.SavePending = true;
+            JobHandler.Instance.UpdateSavePending(true);
 
-            StatusUpdate?.Invoke(this, new StatusArgs("Billing for Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " updated internally."));
+            StatusUpdate?.Invoke(this, new StatusArgs("Billing for Job# " + JobHandler.Instance.CurrentJob.JobNumber + " updated internally."));
         }
     }
 }

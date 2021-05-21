@@ -323,12 +323,6 @@
     <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
       <DependentUpon>NotesCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\RatesDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\surveyMenu\RatesDialog.Designer.cs">
-      <DependentUpon>RatesDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\surveyMenu\SearchResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,12 +340,6 @@
     </Compile>
     <Compile Include="forms\surveyMenu\SurveySearchResults.Designer.cs">
       <DependentUpon>SurveySearchResults.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\surveyMenu\TimeEntry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\surveyMenu\TimeEntry.Designer.cs">
-      <DependentUpon>TimeEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\UploadFile.cs">
       <SubType>Form</SubType>
@@ -413,6 +401,7 @@
     <Compile Include="utility\Filtering\TextSearchFilter.cs" />
     <Compile Include="utility\Icons\IconListManager.cs" />
     <Compile Include="utility\Icons\IconReader.cs" />
+    <Compile Include="utility\JobHandler.cs" />
     <Compile Include="utility\Licensing\InvalidProductKeyValidationFailure.cs" />
     <Compile Include="utility\Licensing\LicenseEngine.cs" />
     <Compile Include="utility\Licensing\LicenseInfo.cs" />
@@ -494,9 +483,6 @@
     <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
       <DependentUpon>NotesCtl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\RatesDialog.resx">
-      <DependentUpon>RatesDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\SearchResults.resx">
       <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
@@ -505,9 +491,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">
       <DependentUpon>SurveySearchResults.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\TimeEntry.resx">
-      <DependentUpon>TimeEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
       <DependentUpon>UploadFile.cs</DependentUpon>
