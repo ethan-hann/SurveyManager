@@ -39,8 +39,8 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>Z:\Drive\UI Libraries\DLLS\Forked-Krypton\ComponentFactory.Krypton.Design.dll</HintPath>
@@ -77,6 +77,12 @@
     </Reference>
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.12.0\lib\net48\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.12.0\lib\net48\MimeKit.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\MySql.Data.dll</HintPath>
@@ -151,6 +157,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -277,6 +284,18 @@
     <Compile Include="forms\fileMenu\FileBrowser.Designer.cs">
       <DependentUpon>FileBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\mailClient\SendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\mailClient\SendEmail.Designer.cs">
+      <DependentUpon>SendEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mailClient\ViewEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\mailClient\ViewEmail.Designer.cs">
+      <DependentUpon>ViewEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\pages\BillingPortal.cs" />
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
@@ -389,6 +408,12 @@
     <Compile Include="utility\CustomControls\CPropertyGrid.Designer.cs">
       <DependentUpon>CPropertyGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="utility\CustomControls\CRichTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="utility\CustomControls\CRichTextBox.Designer.cs">
+      <DependentUpon>CRichTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="utility\DataGridViewSetup.cs" />
     <Compile Include="utility\DBMap.cs" />
     <Compile Include="utility\DragDropInfo.cs" />
@@ -459,6 +484,12 @@
     <EmbeddedResource Include="forms\fileMenu\FileBrowser.resx">
       <DependentUpon>FileBrowser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\mailClient\SendEmail.resx">
+      <DependentUpon>SendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mailClient\ViewEmail.resx">
+      <DependentUpon>ViewEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -517,6 +548,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="utility\CustomControls\CRichTextBox.resx">
+      <DependentUpon>CRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -891,6 +925,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sync_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="utility\MailKit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulletList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumbersList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strikeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Superscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Textcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recieve_email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recieve_email_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recieve_email_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

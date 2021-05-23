@@ -9,6 +9,7 @@ using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.fileMenu;
+using SurveyManager.forms.mailClient;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
 using SurveyManager.forms.userControls;
@@ -1600,6 +1601,11 @@ namespace SurveyManager
                 UpdateTitleText();
             }
         }
+
+        private void btnSendFeedback_Click(object sender, EventArgs e)
+        {
+            
+        }
         #endregion
 
         private void dockingManager_DockableWorkspaceCellAdding(object sender, DockableWorkspaceCellEventArgs e)
@@ -1713,6 +1719,12 @@ namespace SurveyManager
         private void btnOpenHelp_Click(object sender, EventArgs e)
         {
             Process.Start("https://surveymanager.readthedocs.io/en/latest/");
+        }
+
+        private void btnOpenEmailClient_Click(object sender, EventArgs e)
+        {
+            ViewEmail viewEmail = new ViewEmail();
+            viewEmail.Show();
         }
     }
 }

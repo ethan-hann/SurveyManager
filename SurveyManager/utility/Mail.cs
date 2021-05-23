@@ -18,10 +18,28 @@ namespace SurveyManager.utility
         /// <summary>
         /// The support email address to send feedback and bug reports to.
         /// </summary>
-        private const string SUPPORT_ADDRESS = "thomasthunderous@protonmail.com";
+        private const string SUPPORT_ADDRESS = "ethan.hann@protonmail.com";
 
         /// <summary>
-        /// Send email to the support email address (supportbayareatx@teamlogicit.com). Allows attaching of optional <see cref="Stream"/> objects to the email.
+        /// Get a value indicating if the mail settings contain empty entries and thus we cannot send e-mail.
+        /// </summary>
+        /// <returns></returns>
+        public static bool SettingsEmpty
+        { 
+            get
+            {
+                string from = Settings.Default.MailFromAddress;
+                string host = Settings.Default.MailServerHost;
+                int port = Settings.Default.MailServerPort;
+                string user = Settings.Default.MailServerUser;
+                string password = Settings.Default.MailServerPassword;
+
+                return from.Equals("") || host.Equals("") || port == 0 || user.Equals("") || password.Equals("");
+            }
+        }
+
+        /// <summary>
+        /// Send email to the support email address (ethan.hann@protonmail.com). Allows attaching of optional <see cref="Stream"/> objects to the email.
         /// </summary>
         /// <param name="subject">The subject for the email.</param>
         /// <param name="body">The text to include in the body of the email.</param>

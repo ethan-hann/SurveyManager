@@ -261,5 +261,89 @@ namespace SurveyManager.Properties {
                 this["DefaultJobPrefixEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string IncomingMailServer {
+            get {
+                return ((string)(this["IncomingMailServer"]));
+            }
+            set {
+                this["IncomingMailServer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int IncomingMailPort {
+            get {
+                return ((int)(this["IncomingMailPort"]));
+            }
+            set {
+                this["IncomingMailPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IncomingMailRequiresSSL {
+            get {
+                return ((bool)(this["IncomingMailRequiresSSL"]));
+            }
+            set {
+                this["IncomingMailRequiresSSL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OutgoingMailRequiresSSL {
+            get {
+                return ((bool)(this["OutgoingMailRequiresSSL"]));
+            }
+            set {
+                this["OutgoingMailRequiresSSL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OutgoingMailRequiresTLS {
+            get {
+                return ((bool)(this["OutgoingMailRequiresTLS"]));
+            }
+            set {
+                this["OutgoingMailRequiresTLS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OutgoingMailRequiresAuthentication {
+            get {
+                return ((bool)(this["OutgoingMailRequiresAuthentication"]));
+            }
+            set {
+                this["OutgoingMailRequiresAuthentication"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("IMAP")]
+        public string IncomingProtocol {
+            get {
+                return ((string)(this["IncomingProtocol"]));
+            }
+            set {
+                this["IncomingProtocol"] = value;
+            }
+        }
     }
 }

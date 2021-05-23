@@ -483,6 +483,12 @@ namespace SurveyManager.utility
             NoJobOpened,
             None
         }
+
+        public enum IncomingMailProtocol
+        {
+            IMAP,
+            POP3
+        }
     }
 
     public static class EnumExtensions

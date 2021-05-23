@@ -130,6 +130,7 @@ namespace SurveyManager
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
             this.dumpDatabaseBGWorker = new System.ComponentModel.BackgroundWorker();
             this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnOpenEmailClient = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -504,7 +505,8 @@ namespace SurveyManager
             // kryptonRibbonGroupTriple13
             // 
             this.kryptonRibbonGroupTriple13.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.btnAddNote});
+            this.btnAddNote,
+            this.btnOpenEmailClient});
             // 
             // btnAddNote
             // 
@@ -601,6 +603,7 @@ namespace SurveyManager
             this.btnSendFeedback.ToolTipBody = "Send your feedback to the developer including any bugs that you might\r\nhave come " +
     "across or new features you would like to see implemented.";
             this.btnSendFeedback.ToolTipTitle = "Survey Manager";
+            this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
             // 
             // objectsTab
             // 
@@ -880,6 +883,14 @@ namespace SurveyManager
             this.dumpDatabaseBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.dumpDatabaseBGWorker_ProgressChanged);
             this.dumpDatabaseBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.dumpDatabaseBGWorker_RunWorkerCompleted);
             // 
+            // btnOpenEmailClient
+            // 
+            this.btnOpenEmailClient.ImageLarge = global::SurveyManager.Properties.Resources.email_32x32;
+            this.btnOpenEmailClient.ImageSmall = global::SurveyManager.Properties.Resources.email_32x32;
+            this.btnOpenEmailClient.TextLine1 = "Email";
+            this.btnOpenEmailClient.TextLine2 = "Client";
+            this.btnOpenEmailClient.Click += new System.EventHandler(this.btnOpenEmailClient_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1008,6 +1019,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnViewAllRates;
         private System.ComponentModel.BackgroundWorker dumpDatabaseBGWorker;
         private System.Windows.Forms.FolderBrowserDialog csvSaveFolder;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnOpenEmailClient;
     }
 }
 
