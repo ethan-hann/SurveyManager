@@ -2,6 +2,7 @@
 using MailKit.Net.Imap;
 using MailKit.Net.Pop3;
 using MimeKit;
+using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,6 @@ namespace SurveyManager.forms.mailClient
 
         private void ViewEmail_Load(object sender, EventArgs e)
         {
-            btnReply.Click += BtnReply_Click;
-
             client.Connect(Settings.Default.IncomingMailServer, Settings.Default.IncomingMailPort, Settings.Default.IncomingMailRequiresSSL);
             client.Authenticate(Settings.Default.MailServerUser, Settings.Default.MailServerPassword);
             
@@ -39,14 +38,7 @@ namespace SurveyManager.forms.mailClient
             fetchMailWorker.RunWorkerAsync();
         }
 
-        private void BtnReply_Click(object sender, EventArgs e)
-        {
-            SendEmail sendForm = new SendEmail();
-            sendForm.Show();
-        }
-
         TreeNode currentNode;
-
         private void fetchMailWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             if (!client.IsAuthenticated)
@@ -123,35 +115,13 @@ namespace SurveyManager.forms.mailClient
                 if (e.Node.Tag == null)
                     return;
 
-                string text = "Message could not be displayed.";
-                messageView.Navigate("about:blank");
-                if (messageView.Document != null)
+                if (e.Node.Tag.GetType() == typeof(MimeMessage))
                 {
-                    if (e.Node.Tag.GetType() == typeof(MimeMessage))
-                    {
-                        MimeMessage msg = e.Node.Tag as MimeMessage;
-                        if (msg.HtmlBody != null)
-                            text = msg.HtmlBody;
-                        else if (msg.TextBody != null)
-                            text = msg.TextBody;
-
-                        lblFrom.Values.ExtraText = msg.From.ToString();
-                        lblTo.Values.ExtraText = msg.To.ToString();
-                        lblSubject.Values.ExtraText = msg.Subject;
-                        lblAttachments.Values.ExtraText = msg.Attachments.Count().ToString();
-                    }
-
-                    messageView.DocumentText = text;
+                    splitContainer.Panel2.Controls.Clear();
+                    splitContainer.Panel2.Controls.Add(new ViewMessageCtl(e.Node.Tag as MimeMessage) { 
+                        Dock = DockStyle.Fill
+                    });
                 }
-            }
-        }
-
-        private void messageView_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-            if (!e.Url.ToString().Equals("about:blank"))
-            {
-                Process.Start(e.Url.ToString());
-                e.Cancel = true;
             }
         }
     }
