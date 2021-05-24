@@ -16,17 +16,24 @@ using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.userControls
 {
-    public partial class ViewMessageCtl : UserControl
+    public partial class ViewMessageCtl : UserControl, IEmailMessageControl
     {
         private MimeMessage currentMessage;
         private ChromiumWebBrowser chromeBrowser;
+        private int uniqueTag;
 
-        public ViewMessageCtl(MimeMessage messageToDisplay)
+        ChromiumWebBrowser IEmailMessageControl.Browser { get => chromeBrowser; set => chromeBrowser = value; }
+        MimeMessage IEmailMessageControl.MessageDetails { get => currentMessage; set => currentMessage = value; }
+
+        int IEmailMessageControl.UniqueHash { get => uniqueTag; set => uniqueTag = value; }
+
+        public ViewMessageCtl(MimeMessage messageToDisplay, int uniqueTag)
         {
             InitializeComponent();
 
             InitializeChromium();
             currentMessage = messageToDisplay;
+            this.uniqueTag = uniqueTag;
         }
 
         private void InitializeChromium()
@@ -56,7 +63,11 @@ namespace SurveyManager.forms.userControls
                 if (currentMessage.Attachments.Count() > 0)
                     PopulateAttachments();
                 else
+                {
                     lvAttachments.Visible = false;
+                    btnDownloadAttachments.Visible = false;
+                }
+                    
             }
         }
 
@@ -105,21 +116,21 @@ namespace SurveyManager.forms.userControls
             if (currentMessage == null)
                 return;
 
+            lvAttachments.Visible = true;
+            btnDownloadAttachments.Visible = true;
+
             foreach (MimeEntity attachment in currentMessage.Attachments)
             {
-                ListViewItem attachItem = new ListViewItem(attachment.ContentId);
-                attachItem.Tag = attachment;
-                lvAttachments.Items.Add(attachItem);
+                try
+                {
+                    ListViewItem attachItem = new ListViewItem(attachment.ContentBase.LocalPath);
+                    attachItem.Tag = attachment;
+                    lvAttachments.Items.Add(attachItem);
+                } catch (Exception)
+                {
+                    RuntimeVars.Instance.LogFile.AddEntry($"Error while processing attachments for email message: {currentMessage.Subject}");
+                }
             }
-        }
-
-        private void messageView_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-            //if (!e.Url.ToString().Equals("about:blank"))
-            //{
-            //    Process.Start(e.Url.ToString());
-            //    e.Cancel = true;
-            //}
         }
 
         private void lvAttachments_MouseDoubleClick(object sender, MouseEventArgs e)

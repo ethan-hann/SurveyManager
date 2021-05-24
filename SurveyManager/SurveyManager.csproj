@@ -441,6 +441,7 @@
     <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.Designer.cs">
       <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\userControls\IEmailMessageControl.cs" />
     <Compile Include="forms\userControls\NewObject.cs">
       <SubType>UserControl</SubType>
     </Compile>

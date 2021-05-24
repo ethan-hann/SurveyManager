@@ -21,6 +21,7 @@ namespace SurveyManager.forms.mailClient
     public partial class ViewEmail : KryptonForm
     {
         private ImapClient client = new ImapClient();
+        private List<IEmailMessageControl> messages = new List<IEmailMessageControl>();
 
         private delegate void AddNode(TreeNode n);
 
@@ -29,13 +30,24 @@ namespace SurveyManager.forms.mailClient
             InitializeComponent();
         }
 
+        public ViewEmail(List<IEmailMessageControl> messages)
+        {
+            InitializeComponent();
+
+            this.messages = messages;
+        }
+
         private void ViewEmail_Load(object sender, EventArgs e)
         {
             client.Connect(Settings.Default.IncomingMailServer, Settings.Default.IncomingMailPort, Settings.Default.IncomingMailRequiresSSL);
             client.Authenticate(Settings.Default.MailServerUser, Settings.Default.MailServerPassword);
             
             tvMailbox.Nodes.Add("inboxNode", "Inbox");
-            fetchMailWorker.RunWorkerAsync();
+
+            if (messages.Count <= 0)
+                fetchMailWorker.RunWorkerAsync();
+            else
+                PopulateMessages();
         }
 
         TreeNode currentNode;
@@ -88,6 +100,21 @@ namespace SurveyManager.forms.mailClient
             lblStatus.Text = "Mailbox up-to-date!";
         }
 
+        private void PopulateMessages()
+        {
+            TreeNode[] messageNodes = new TreeNode[messages.Count];
+            for (int i = 0; i < messages.Count; i++)
+            {
+                MimeMessage message = messages[i].MessageDetails;
+                messageNodes[i] = new TreeNode($"{message.From}: {message.Subject}");
+                messageNodes[i].Tag = message;
+                currentNode = messageNodes[i];
+
+                tvMailbox.Nodes["inboxNode"].Nodes.Add(currentNode);
+                lblStatus.Text = $"Retrieving message {i} of {messages.Count}...";
+            }
+        }
+
         internal struct TreeNodeHelper
         {
             internal TreeNode currentNode;
@@ -118,9 +145,23 @@ namespace SurveyManager.forms.mailClient
                 if (e.Node.Tag.GetType() == typeof(MimeMessage))
                 {
                     splitContainer.Panel2.Controls.Clear();
-                    splitContainer.Panel2.Controls.Add(new ViewMessageCtl(e.Node.Tag as MimeMessage) { 
-                        Dock = DockStyle.Fill
-                    });
+                    bool contains = messages.Where(m => m.UniqueHash == e.Node.GetHashCode()).Any();
+                    if (contains)
+                    {
+                        ViewMessageCtl ctl = messages.Find(m => m.UniqueHash == e.Node.GetHashCode()) as ViewMessageCtl;
+                        if (ctl != null)
+                        {
+                            ctl.Dock = DockStyle.Fill;
+                            splitContainer.Panel2.Controls.Add(ctl);
+                        }
+                    }
+                    else
+                    {
+                        ViewMessageCtl ctl = new ViewMessageCtl(e.Node.Tag as MimeMessage, e.Node.GetHashCode());
+                        messages.Add(ctl);
+                        ctl.Dock = DockStyle.Fill;
+                        splitContainer.Panel2.Controls.Add(ctl);
+                    }
                 }
             }
         }
