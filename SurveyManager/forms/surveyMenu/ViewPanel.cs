@@ -48,11 +48,14 @@ namespace SurveyManager.forms.surveyMenu
             if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening) 
                 || (JobHandler.Instance.CurrentJobState != Enums.JobState.Opened))
             {
-                propGrid.SelectedObject = new Survey();
-                (Parent as KryptonPage).Text = "No Job Opened";
-                (Parent as KryptonPage).TextTitle = "No Job Opened";
-                (Parent as KryptonPage).UniqueName = "No Job Opened";
-                propGrid.Enabled = false;
+                if (propGrid.SelectedObject != null)
+                {
+                    propGrid.SelectedObject = new Survey();
+                    (Parent as KryptonPage).Text = "No Job Opened";
+                    (Parent as KryptonPage).TextTitle = "No Job Opened";
+                    (Parent as KryptonPage).UniqueName = "No Job Opened";
+                    propGrid.Enabled = false;
+                }
             }
         }
 

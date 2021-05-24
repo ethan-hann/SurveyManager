@@ -214,14 +214,12 @@ namespace SurveyManager.utility
                         isClosing = true;
                         Save();
                         Close();
-                        OpenJob(jobNumber);
                         break;
                     }
                     case ExitChoice.ExitNoSave:
                     {
                         isClosing = true;
                         Close();
-                        OpenJob(jobNumber);
                         break;
                     }
                     case ExitChoice.SaveOnly:
@@ -286,49 +284,44 @@ namespace SurveyManager.utility
 
         public bool CreateJob(string jobNumber)
         {
-            _jobState = Create(jobNumber);
-            switch (_jobState)
+            if (IsJobOpen && SavePending)
             {
-                case JobState.SavePending:
-                {
-                    ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
+                ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
                     "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true);
-                    switch (choice)
-                    {
-                        case ExitChoice.SaveAndExit:
-                        {
-                            isClosing = true;
-                            Save();
-                            CreateJob(jobNumber);
-                            break;
-                        }
-                        case ExitChoice.ExitNoSave:
-                        {
-                            isClosing = true;
-                            Close();
-                            CreateJob(jobNumber);
-                            break;
-                        }
-                        case ExitChoice.SaveOnly:
-                        {
-                            Save();
-                            return false;
-                        }
-                        case ExitChoice.Cancel:
-                        {
-                            StatusUpdate?.Invoke(this, new StatusArgs("Creation of Job# " + jobNumber + " canceled."));
-                            _jobState = JobState.CreateCancelled;
-                            return false;
-                        }
-                    }
-                    break;
-                }
-                case JobState.DuplicateJobNumber:
+                switch (choice)
                 {
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Job# {jobNumber} already exists. Try opening it instead."));
-                    _jobState = JobState.DuplicateJobNumber;
-                    return false; 
+                    case ExitChoice.SaveAndExit:
+                    {
+                        isClosing = true;
+                        Save();
+                        break;
+                    }
+                    case ExitChoice.ExitNoSave:
+                    {
+                        isClosing = true;
+                        Close();
+                        break;
+                    }
+                    case ExitChoice.SaveOnly:
+                    {
+                        Save();
+                        return false;
+                    }
+                    case ExitChoice.Cancel:
+                    {
+                        StatusUpdate?.Invoke(this, new StatusArgs("Creation of Job# " + jobNumber + " canceled."));
+                        _jobState = JobState.CreateCancelled;
+                        return false;
+                    }
                 }
+            }
+
+            _jobState = Create(jobNumber);
+            if (_jobState == JobState.DuplicateJobNumber)
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs($"Job# {jobNumber} already exists. Try opening it instead."));
+                _jobState = JobState.DuplicateJobNumber;
+                return false;
             }
 
             if (CurrentJob != null)
@@ -369,6 +362,9 @@ namespace SurveyManager.utility
                 _jobState = JobState.NoJobOpened;
                 return false;
             }
+
+            if (_jobState == JobState.Saving)
+                return false;
 
             _jobState = Save();
             switch (_jobState)

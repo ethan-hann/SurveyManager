@@ -155,6 +155,8 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.radLastTwoDigits.TabIndex = 1;
             this.radLastTwoDigits.Values.Text = "Last Two Digits of Current Year";
             this.radLastTwoDigits.CheckedChanged += new System.EventHandler(this.radLastTwoDigits_CheckedChanged);
+            this.radLastTwoDigits.MouseEnter += new System.EventHandler(this.radLastTwoDigits_MouseEnter);
+            this.radLastTwoDigits.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // radCustomText
             // 
@@ -163,6 +165,8 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.radCustomText.Size = new System.Drawing.Size(91, 20);
             this.radCustomText.TabIndex = 2;
             this.radCustomText.Values.Text = "Custom Text";
+            this.radCustomText.MouseEnter += new System.EventHandler(this.radCustomText_MouseEnter);
+            this.radCustomText.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // flpCustomText
             // 
@@ -209,6 +213,8 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flpExampleText.Name = "flpExampleText";
             this.flpExampleText.Size = new System.Drawing.Size(385, 34);
             this.flpExampleText.TabIndex = 4;
+            this.flpExampleText.MouseEnter += new System.EventHandler(this.flpExampleText_MouseEnter);
+            this.flpExampleText.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
             // lblPrefixPreview
             // 
@@ -217,7 +223,11 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.lblPrefixPreview.Size = new System.Drawing.Size(187, 26);
             this.lblPrefixPreview.StateCommon.LongText.Color1 = System.Drawing.Color.Blue;
             this.lblPrefixPreview.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrefixPreview.StateCommon.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.lblPrefixPreview.StateCommon.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.lblPrefixPreview.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrefixPreview.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.lblPrefixPreview.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.lblPrefixPreview.TabIndex = 3;
             this.lblPrefixPreview.Values.ExtraText = "21-1252";
             this.lblPrefixPreview.Values.Text = "Example Job #: ";

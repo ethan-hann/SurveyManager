@@ -66,6 +66,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(256, 32);
             this.flowLayoutPanel2.TabIndex = 0;
+            this.flowLayoutPanel2.Visible = false;
             this.flowLayoutPanel2.MouseEnter += new System.EventHandler(this.flowLayoutPanel2_MouseEnter);
             this.flowLayoutPanel2.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 
@@ -93,6 +94,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(256, 32);
             this.flowLayoutPanel3.TabIndex = 1;
+            this.flowLayoutPanel3.Visible = false;
             this.flowLayoutPanel3.MouseEnter += new System.EventHandler(this.flowLayoutPanel3_MouseEnter);
             this.flowLayoutPanel3.MouseLeave += new System.EventHandler(this.ResetHelpText);
             // 

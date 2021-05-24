@@ -107,6 +107,21 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
             OnHelpTextChanged(new StatusArgs("Defines the time between autosaves for the currently open survey job. Range: 1 => 180 minutes (3 hours)."));
         }
 
+        private void radLastTwoDigits_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Indicates that the last two digits of the current year will be used as the default job number prefix."));
+        }
+
+        private void radCustomText_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Indicates that specified custom text will be used as the default job number prefix."));
+        }
+
+        private void flpExampleText_MouseEnter(object sender, EventArgs e)
+        {
+            OnHelpTextChanged(new StatusArgs("Shows an example of what a job number may look like based on the selected prefix."));
+        }
+
         private void ResetHelpText(object sender, EventArgs e)
         {
             OnHelpTextChanged(new StatusArgs(""));

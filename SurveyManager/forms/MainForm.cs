@@ -354,14 +354,9 @@ namespace SurveyManager
 
                 if (sender is KryptonRibbonRecentDoc recentDoc)
                 {
-                    if (JobHandler.Instance.CloseJob(true))
+                    if (JobHandler.Instance.OpenJob(recentDoc.Text))
                     {
-                        CloseJob();
-
-                        if (JobHandler.Instance.OpenJob(recentDoc.Text))
-                        {
-                            ChangeTitleText("[JOB# " + recentDoc.Text + "]");
-                        }
+                        ChangeTitleText("[JOB# " + recentDoc.Text + "]");
                     }
 
                     if (JobHandler.Instance.CurrentJobState == JobState.InvalidJob)
