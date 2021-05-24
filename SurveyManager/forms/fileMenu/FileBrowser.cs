@@ -87,7 +87,7 @@ namespace SurveyManager.forms.fileMenu
                 try
                 {
                     File.WriteAllBytes(saveDialog.FileName, file.Contents);
-                    StatusUpdate?.Invoke(this, new StatusArgs(file.FullFileName + " downloaded from Job# " + RuntimeVars.Instance.OpenJob.JobNumber + ". Saved to " + saveDialog.FileName));
+                    StatusUpdate?.Invoke(this, new StatusArgs(file.FullFileName + " downloaded from Job# " + JobHandler.Instance.CurrentJob.JobNumber + ". Saved to " + saveDialog.FileName));
                 } catch (Exception)
                 {
                     CMessageBox.Show("There was an error saving the file: " + saveDialog.FileName + "\nPlease try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
@@ -100,7 +100,7 @@ namespace SurveyManager.forms.fileMenu
         {
             saveDialog.Filter = "Compressed Zip Archive (*.zip)|*.zip";
             saveDialog.Title = "Download Multiple Files";
-            saveDialog.FileName = RuntimeVars.Instance.OpenJob.JobNumber;
+            saveDialog.FileName = JobHandler.Instance.CurrentJob.JobNumber;
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
@@ -119,7 +119,7 @@ namespace SurveyManager.forms.fileMenu
 
                     zip.Save(saveDialog.FileName);
                 }
-                StatusUpdate?.Invoke(this, new StatusArgs(RuntimeVars.Instance.TempFiles.Count + " files downloaded from Job# " + RuntimeVars.Instance.OpenJob.JobNumber + ". Zip archive saved to: " + saveDialog.FileName));
+                StatusUpdate?.Invoke(this, new StatusArgs(RuntimeVars.Instance.TempFiles.Count + " files downloaded from Job# " + JobHandler.Instance.CurrentJob.JobNumber + ". Zip archive saved to: " + saveDialog.FileName));
             }
         }
 

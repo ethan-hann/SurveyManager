@@ -237,9 +237,6 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public string NotesString { get; set; } = "N/A";
 
-        [Browsable(false)]
-        public bool SavePending { get; set; } = false;
-
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
         /// <para>A valid survey has a client, county, job number, and description at the very least.</para>

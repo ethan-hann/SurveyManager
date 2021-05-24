@@ -58,10 +58,11 @@ namespace SurveyManager.forms.surveyMenu
 
         private void OpenJob(object sender, EventArgs e)
         {
-            RuntimeVars.Instance.OpenJob = propGrid.SelectedObject as Survey;
-            StatusUpdate?.Invoke(this, new StatusArgs("Job " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
-            SurveyOpened?.Invoke(this, new SurveyOpenedEventArgs(RuntimeVars.Instance.OpenJob));
-            Close();
+            if (JobHandler.Instance.OpenJob(propGrid.SelectedObject as Survey))
+            {
+                SurveyOpened?.Invoke(this, new SurveyOpenedEventArgs(JobHandler.Instance.CurrentJob));
+                Close();
+            }
         }
 
         private void lbJobs_SelectedIndexChanged(object sender, EventArgs e)

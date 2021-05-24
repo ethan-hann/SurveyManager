@@ -463,12 +463,25 @@ namespace SurveyManager.utility
         {
             Opened,
             Opening,
+            OpenError,
+            OpenCancelled,
             Saved,
             Saving,
+            SaveError,
             SavePending,
+            SaveCancelled,
             Closed,
             Closing,
-            InvalidJob
+            CloseError,
+            CloseCancelled,
+            Creating,
+            Created,
+            CreateError,
+            CreateCancelled,
+            InvalidJob,
+            DuplicateJobNumber,
+            NoJobOpened,
+            None
         }
     }
 

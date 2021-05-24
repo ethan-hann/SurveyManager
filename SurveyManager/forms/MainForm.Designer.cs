@@ -123,7 +123,6 @@ namespace SurveyManager
             this.dockingManager = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
-            this.saveDataBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
             this.checkConnectionBGWorker = new System.ComponentModel.BackgroundWorker();
@@ -209,6 +208,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
+            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
@@ -852,14 +852,6 @@ namespace SurveyManager
             this.dockableWorkspace.TabIndex = 0;
             this.dockableWorkspace.TabStop = true;
             // 
-            // saveDataBackgroundWorker
-            // 
-            this.saveDataBackgroundWorker.WorkerReportsProgress = true;
-            this.saveDataBackgroundWorker.WorkerSupportsCancellation = true;
-            this.saveDataBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.saveDataBackgroundWorker_DoWork);
-            this.saveDataBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.saveDataBackgroundWorker_ProgressChanged);
-            this.saveDataBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.saveDataBackgroundWorker_RunWorkerCompleted);
-            // 
             // kryptonContextMenuHeading1
             // 
             this.kryptonContextMenuHeading1.ExtraText = "";
@@ -984,7 +976,6 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnCloseCurrentJob;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator3;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
-        private System.ComponentModel.BackgroundWorker saveDataBackgroundWorker;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple13;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnAddNote;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenu surveyClientContextMenu;

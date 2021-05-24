@@ -30,19 +30,24 @@ namespace SurveyManager.forms.surveyMenu.description
                 return false;
             }
 
-            RuntimeVars.Instance.OpenJob.Description = txtDescription.Text;
+            JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
             return true;
         }
 
         private void DescriptionCtl_Load(object sender, EventArgs e)
         {
-            txtDescription.Text = RuntimeVars.Instance.OpenJob.Description;
+            txtDescription.Text = JobHandler.Instance.CurrentJob.Description;
             IsEdited = true;
         }
 
         private void txtDescription_TextChanged(object sender, EventArgs e)
         {
             lblDescCharCount.Text = "Char Count: " + txtDescription.Text.Count() + " / 6000";
+        }
+
+        private void JobModified(object sender, KeyPressEventArgs e)
+        {
+            JobHandler.Instance.UpdateSavePending(true);
         }
     }
 }

@@ -118,6 +118,14 @@ namespace SurveyManager
 
             if (logAutoSave.Enabled)
                 logAutoSave.Start();
+
+            JobHandler.Instance.JobOpening += ChangeStatusText;
+            JobHandler.Instance.JobOpened += ChangeStatusText;
+            JobHandler.Instance.JobClosing += ChangeStatusText;
+            JobHandler.Instance.JobClosed += ChangeStatusText;
+            JobHandler.Instance.JobSaving += ChangeStatusText;
+            JobHandler.Instance.JobSaved += ChangeStatusText;
+            JobHandler.Instance.StatusUpdate += ChangeStatusText;
         }
 
         private void UpdateStatusFromOtherThread(string statusText)
@@ -129,21 +137,14 @@ namespace SurveyManager
         {
             if (Settings.Default.SurveyAutoSaveEnabled)
             {
-                if (RuntimeVars.Instance.IsJobOpen)
+                if (JobHandler.Instance.IsJobOpen)
                 {
-                    if (RuntimeVars.Instance.OpenJob.IsValidSurvey)
+                    if (JobHandler.Instance.CurrentJobState != JobState.Saving)
                     {
-                        if (!saveDataBackgroundWorker.IsBusy)
+                        if (JobHandler.Instance.SaveJob(false))
                         {
-                            if (SaveSurvey())
-                            {
-                                ChangeStatusText(this, new StatusArgs($"Autosave completed for Job# {RuntimeVars.Instance.OpenJob.JobNumber}"));
-                            }
+                            ChangeStatusText(this, new StatusArgs($"Autosave completed for Job# {JobHandler.Instance.CurrentJob.JobNumber}."));
                         }
-                    }
-                    else
-                    {
-                        ChangeStatusText(this, new StatusArgs($"Could not autosave Job# {RuntimeVars.Instance.OpenJob.JobNumber}. It is not a valid survey job."));
                     }
                 }
             }
@@ -268,7 +269,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
                     return;
@@ -288,7 +289,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
                     return;
@@ -308,7 +309,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
                     return;
@@ -318,7 +319,7 @@ namespace SurveyManager
             }
         }
 
-        private void UpdateRecentDocs()
+        public void UpdateRecentDocs()
         {
             mainRibbon.RibbonAppButton.AppButtonRecentDocs.Clear();
 
@@ -353,43 +354,17 @@ namespace SurveyManager
 
                 if (sender is KryptonRibbonRecentDoc recentDoc)
                 {
-                    if (RuntimeVars.Instance.IsJobOpen && RuntimeVars.Instance.OpenJob.JobNumber.Equals(recentDoc.Text))
+                    if (JobHandler.Instance.CloseJob(true))
                     {
-                        ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " is already opened. Ignoring re-open command."));
-                        return;
-                    }
+                        CloseJob();
 
-                    ExitChoice choice;
-                    if (RuntimeVars.Instance.IsJobOpen && RuntimeVars.Instance.OpenJob.SavePending)
-                    {
-                        choice = ShowCloseDialog(true);
-                        if (choice == ExitChoice.SaveAndExit)
+                        if (JobHandler.Instance.OpenJob(recentDoc.Text))
                         {
-                            SaveSurvey();
-                            CloseJob();
-                        }
-                        else if (choice == ExitChoice.ExitNoSave)
-                        {
-                            CloseJob();
-                        }
-                        else if (choice == ExitChoice.SaveOnly)
-                        {
-                            SaveSurvey();
-                            return;
-                        }
-                        else if (choice == ExitChoice.Cancel)
-                        {
-                            return;
+                            ChangeTitleText("[JOB# " + recentDoc.Text + "]");
                         }
                     }
 
-                    RuntimeVars.Instance.OpenJob = Database.GetSurvey(recentDoc.Text);
-                    if (RuntimeVars.Instance.IsJobOpen)
-                    {
-                        ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " opened!"));
-                        ChangeTitleText("[JOB# " + recentDoc.Text + "]");
-                    }
-                    else
+                    if (JobHandler.Instance.CurrentJobState == JobState.InvalidJob)
                     {
                         ChangeStatusText(this, new StatusArgs("The selected job no longer exists! It was probably deleted; removing from recent jobs list."));
                         if (Settings.Default.RecentJobs.Contains(recentDoc.Text))
@@ -501,8 +476,8 @@ namespace SurveyManager
             ExitChoice choice = ShowCloseDialog();
             if (choice == ExitChoice.SaveAndExit)
             {
-                SaveSurvey();
-                CloseJob();
+                JobHandler.Instance.SaveJob();
+                JobHandler.Instance.CloseJob();
                 Application.Exit();
             }
             else if (choice == ExitChoice.ExitNoSave)
@@ -511,7 +486,7 @@ namespace SurveyManager
             }
             else if (choice == ExitChoice.SaveOnly)
             {
-                SaveSurvey();
+                JobHandler.Instance.SaveJob();
             }
         }
         #endregion
@@ -917,24 +892,17 @@ namespace SurveyManager
             {
                 SurveySearchResults searchResults = new SurveySearchResults(args.Results);
                 searchResults.StatusUpdate += ChangeStatusText;
-                searchResults.SurveyOpened += AddSurveyToRecentJobs;
+                searchResults.SurveyOpened += UpdateTitleAfterSurveyOpened;
                 searchResults.Show();
             }
         }
 
-        private void AddSurveyToRecentJobs(object sender, EventArgs e)
+        private void UpdateTitleAfterSurveyOpened(object sender, EventArgs e)
         {
             if (e is SurveyOpenedEventArgs args)
             {
-                if (!Settings.Default.RecentJobs.Contains(args.Survey.JobNumber))
-                {
-                    Settings.Default.RecentJobs.Add(args.Survey.JobNumber);
-                    Settings.Default.Save();
-
-                    UpdateRecentDocs();
-                }
-
                 ChangeTitleText("[JOB# " + args.Survey.JobNumber + "]");
+                JobHandler.Instance.AddSurveyToRecentJobs();
             }
         }
 
@@ -956,10 +924,10 @@ namespace SurveyManager
                             + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), texts[0]);
                 else if (texts[0].Contains("\\\\"))
                 {
-                    if (RuntimeVars.Instance.IsJobOpen)
-                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber} OPEN BUT DISABLED]") :
+                    if (JobHandler.Instance.IsJobOpen)
+                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber} OPEN BUT DISABLED]") :
                             string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
                     else
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
                             string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
@@ -974,10 +942,10 @@ namespace SurveyManager
 
         private void UpdateTitleText()
         {
-            if (RuntimeVars.Instance.IsJobOpen)
-                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]") :
+            if (JobHandler.Instance.IsJobOpen)
+                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}" 
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {RuntimeVars.Instance.OpenJob.JobNumber}]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
             else
             {
                 if (RuntimeVars.Instance.DatabaseConnected)
@@ -1020,21 +988,9 @@ namespace SurveyManager
                 if (newJobNumber.Equals("NONE") || newJobNumber.Length <= 0)
                     return;
 
-                if (!Database.DoesSurveyExist(newJobNumber))
+                if (JobHandler.Instance.CreateJob(newJobNumber))
                 {
-                    RuntimeVars.Instance.OpenJob = new Survey()
-                    {
-                        JobNumber = newJobNumber,
-                        SavePending = true
-                    };
-
-                    ChangeTitleText("[JOB# " + RuntimeVars.Instance.OpenJob.JobNumber + " OPENED]");
-                    ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " created successfully!"));
-                }
-                else
-                {
-                    CMessageBox.Show("Job# " + newJobNumber + " already exists. Try opening it instead.", "Job Already Exists", MessageBoxButtons.OK, Resources.error_64x64);
-                    return;
+                    ChangeTitleText("[JOB# " + newJobNumber + "]");
                 }
             }
         }
@@ -1097,7 +1053,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BasicInfo.ToDescriptionString()));
                     return;
@@ -1143,7 +1099,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_View.ToDescriptionString()));
                     return;
@@ -1151,12 +1107,11 @@ namespace SurveyManager
 
                 KryptonPage viewPanel = new KryptonPage
                 {
-                    Text = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
-                    TextTitle = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
-                    UniqueName = "Job #: " + RuntimeVars.Instance.OpenJob.JobNumber + " Info",
+                    Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                    TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                    UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
                     ImageSmall = Resources.view_16x16,
-                    ImageLarge = Resources.view,
-                    Tag = SurveyPage.IsSurveyPage
+                    ImageLarge = Resources.view
                 };
                 viewPanel.Controls.Add(new ViewPanel()
                 {
@@ -1185,31 +1140,16 @@ namespace SurveyManager
                     return;
                 }
 
-                SaveSurvey();
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Save.ToDescriptionString()));
+                    return;
+                }
+
+                JobHandler.Instance.SaveJob();
             }
         }
 
-        private bool SaveSurvey()
-        {
-            if (!RuntimeVars.Instance.IsJobOpen)
-            {
-                ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Save.ToDescriptionString()));
-                return false;
-            }
-
-            if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
-            {
-                CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
-            progressBar.Visible = true;
-            saveDataBackgroundWorker.RunWorkerAsync();
-            return true;
-        }
-
-        private bool isClosingJob = false;
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
         {
             if (licensed)
@@ -1220,101 +1160,33 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Close.ToDescriptionString()));
                     return;
                 }
 
-                if (!RuntimeVars.Instance.OpenJob.SavePending)
-                {
-                    CloseJob();
-                    return;
-                }
-
-                DialogResult result = CMessageBox.Show("Save changes?", "Confirm", MessageBoxButtons.YesNoCancel, Resources.save_64x64);
-                switch (result)
-                {
-                    case DialogResult.Yes:
-                    {
-                        if (!RuntimeVars.Instance.OpenJob.IsValidSurvey)
-                        {
-                            CMessageBox.Show("The survey job does not have all of the required information needed for saving. Please add more information and try again.", "Not enough information", MessageBoxButtons.OK, Resources.error_64x64);
-                            break;
-                        }
-                        ChangeStatusText(this, new StatusArgs("Saving Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " to the database..."));
-                        progressBar.Visible = true;
-                        saveDataBackgroundWorker.RunWorkerAsync();
-                        isClosingJob = true;
-                        break;
-                    }
-                    case DialogResult.No:
-                    CloseJob();
-                    break;
-                    case DialogResult.Cancel:
-                    ChangeStatusText(this, new StatusArgs("Closing of job " + RuntimeVars.Instance.OpenJob.JobNumber + " canceled."));
-                    break;
-                }
-            }
-        }
-
-        DatabaseError surveyError;
-        private void saveDataBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            if (RuntimeVars.Instance.OpenJob.ID == 0)
-                surveyError = RuntimeVars.Instance.OpenJob.Insert();
-            else
-                surveyError = RuntimeVars.Instance.OpenJob.Update();
-
-            if (surveyError == DatabaseError.NoError)
-            {
-                RuntimeVars.Instance.OpenJob.SavePending = false;
-            }
-        }
-
-        private void saveDataBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            progressBar.Value = e.ProgressPercentage;
-        }
-
-        private void saveDataBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (surveyError != DatabaseError.NoError)
-            {
-                RuntimeVars.Instance.OpenJob.SavePending = false;
-                CRichMsgBox.Show("Something went wrong while trying to save the job. Check the information and try again. The message below may help figure out where saving went wrong...", 
-                "Error", surveyError.ToDescriptionString(), MessageBoxButtons.OK, Resources.error_64x64);
-
-                ChangeStatusText(this, new StatusArgs("Saving of Job# " + RuntimeVars.Instance.OpenJob.JobNumber + $" failed with error: {surveyError.ToDescriptionString()}"));
-                progressBar.Visible = false;
-                return;
-            }
-
-            progressBar.Visible = false;
-            ChangeStatusText(this, new StatusArgs("Job# " + RuntimeVars.Instance.OpenJob.JobNumber + " saved successfully!"));
-            AddSurveyToRecentJobs(this, new SurveyOpenedEventArgs(RuntimeVars.Instance.OpenJob));
-
-            if (isClosingJob)
                 CloseJob();
+            }
         }
 
         private void CloseJob()
         {
-            ChangeTitleText("[NO JOB OPEN]");
-            
-            RuntimeVars.Instance.OpenJob = null;
-
-            //remove pages that are considered survey pages
-            dockingManager.RemovePages(dockingManager.Pages.Where(p => (p.Tag != null && ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage)).ToArray(), true);
-
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            if (JobHandler.Instance.CloseJob())
             {
-                if (!Application.OpenForms[i].Equals(this))
-                    Application.OpenForms[i].Close();
-            }
+                ChangeTitleText("[NO JOB OPEN]");
 
-            ChangeStatusText(this, new StatusArgs("Ready"));
-            isClosingJob = false;
+                //remove pages that are considered survey pages
+                dockingManager.RemovePages(dockingManager.Pages.Where(p => (p.Tag != null && ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage)).ToArray(), true);
+
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (!Application.OpenForms[i].Equals(this))
+                        Application.OpenForms[i].Close();
+                }
+
+                ChangeStatusText(this, new StatusArgs("Ready"));
+            }
         }
 
         private void btnAddNewFile_Click(object sender, EventArgs e)
@@ -1327,13 +1199,13 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AttachFile.ToDescriptionString()));
                     return;
                 }
 
-                UploadFile uploadForm = new UploadFile(RuntimeVars.Instance.OpenJob.Files);
+                UploadFile uploadForm = new UploadFile(JobHandler.Instance.CurrentJob.Files);
                 uploadForm.FileUploadDone += AddFiles;
                 uploadForm.StatusUpdate += ChangeStatusText;
                 uploadForm.Show();
@@ -1344,8 +1216,8 @@ namespace SurveyManager
         {
             if (e is FileUploadDoneArgs args)
             {
-                RuntimeVars.Instance.OpenJob.SetFiles(args.Files);
-                RuntimeVars.Instance.OpenJob.SavePending = true;
+                JobHandler.Instance.CurrentJob.SetFiles(args.Files);
+                JobHandler.Instance.UpdateSavePending(true);
             }
         }
 
@@ -1359,13 +1231,13 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_ViewFiles.ToDescriptionString()));
                     return;
                 }
 
-                FileBrowser fb = new FileBrowser(RuntimeVars.Instance.OpenJob.Files);
+                FileBrowser fb = new FileBrowser(JobHandler.Instance.CurrentJob.Files);
                 fb.StatusUpdate += ChangeStatusText;
                 fb.Show();
             }
@@ -1381,7 +1253,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BillingPortal.ToDescriptionString()));
                     return;
@@ -1421,23 +1293,23 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
                     return;
                 }
 
-                string fileName = $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                string fileName = $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
                 PDF.CreateDocument(fileName,
-                        $"BillingReport-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                        $"Billing Report - Job#: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                        $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                        $"Billing Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating billing report for Job# {RuntimeVars.Instance.OpenJob.JobNumber}. Please wait..."));
-                PDF.GenerateBillingReport(RuntimeVars.Instance.OpenJob);
+                ChangeStatusText(this, new StatusArgs($"Generating billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateBillingReport(JobHandler.Instance.CurrentJob);
 
                 string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
                 Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Billing report for Job# {RuntimeVars.Instance.OpenJob.JobNumber} created successfully!"));
+                ChangeStatusText(this, new StatusArgs($"Billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
             }
         }
 
@@ -1451,23 +1323,23 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FullReport.ToDescriptionString()));
                     return;
                 }
 
-                string fileName = $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                string fileName = $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
                 PDF.CreateDocument(fileName,
-                    $"Full Survey Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                    $"Full Survey Report - Job#: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                    $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                    $"Full Survey Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating full report for Job# {RuntimeVars.Instance.OpenJob.JobNumber}. Please wait..."));
-                PDF.GenerateFullReport(RuntimeVars.Instance.OpenJob);
+                ChangeStatusText(this, new StatusArgs($"Generating full report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateFullReport(JobHandler.Instance.CurrentJob);
 
                 string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
                 Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Full report for Job# {RuntimeVars.Instance.OpenJob.JobNumber} created successfully!"));
+                ChangeStatusText(this, new StatusArgs($"Full report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
             }
         }
 
@@ -1481,29 +1353,29 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FileReport.ToDescriptionString()));
                     return;
                 }
 
-                if (!RuntimeVars.Instance.OpenJob.HasFiles)
+                if (!JobHandler.Instance.CurrentJob.HasFiles)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.FileReport_NoFiles.ToDescriptionString()));
                     return;
                 }
 
-                string fileName = $"File Detail Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                string fileName = $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
                 PDF.CreateDocument(fileName,
-                    $"File Detail Report-{RuntimeVars.Instance.OpenJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                    $"File Detail Report - Job#: {RuntimeVars.Instance.OpenJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                    $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                    $"File Detail Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating detailed file report for Job# {RuntimeVars.Instance.OpenJob.JobNumber}. Please wait..."));
-                PDF.GenerateFileReport(RuntimeVars.Instance.OpenJob);
+                ChangeStatusText(this, new StatusArgs($"Generating detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateFileReport(JobHandler.Instance.CurrentJob);
 
                 string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
                 Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Detailed file report for Job# {RuntimeVars.Instance.OpenJob.JobNumber} created successfully!"));
+                ChangeStatusText(this, new StatusArgs($"Detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
             }
         }
 
@@ -1517,19 +1389,19 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
                     return;
                 }
 
                 ArrayList columns = new ArrayList
-            {
-                new DBMap("name", "Name"),
-                new DBMap("phone_number", "Phone #"),
-                new DBMap("email_address", "Email"),
-                new DBMap("fax_number", "Fax #")
-            };
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("phone_number", "Phone #"),
+                    new DBMap("email_address", "Email"),
+                    new DBMap("fax_number", "Fax #")
+                };
 
                 AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
                 filter.FilterDone += SelectClient;
@@ -1552,8 +1424,8 @@ namespace SurveyManager
         {
             if (e is DBObjectArgs args)
             {
-                RuntimeVars.Instance.OpenJob.Client = args.Object as Client;
-                RuntimeVars.Instance.OpenJob.SavePending = true;
+                JobHandler.Instance.CurrentJob.Client = args.Object as Client;
+                JobHandler.Instance.UpdateSavePending(true);
             }
         }
 
@@ -1567,7 +1439,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
                     return;
@@ -1602,8 +1474,8 @@ namespace SurveyManager
         {
             if (e is DBObjectArgs args)
             {
-                RuntimeVars.Instance.OpenJob.Realtor = args.Object as Realtor;
-                RuntimeVars.Instance.OpenJob.SavePending = true;
+                JobHandler.Instance.CurrentJob.Realtor = args.Object as Realtor;
+                JobHandler.Instance.UpdateSavePending(true);
             }
         }
 
@@ -1617,7 +1489,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
                     return;
@@ -1652,8 +1524,8 @@ namespace SurveyManager
         {
             if (e is DBObjectArgs args)
             {
-                RuntimeVars.Instance.OpenJob.TitleCompany = args.Object as TitleCompany;
-                RuntimeVars.Instance.OpenJob.SavePending = true;
+                JobHandler.Instance.CurrentJob.TitleCompany = args.Object as TitleCompany;
+                JobHandler.Instance.UpdateSavePending(true);
             }
         }
 
@@ -1667,7 +1539,7 @@ namespace SurveyManager
                     return;
                 }
 
-                if (!RuntimeVars.Instance.IsJobOpen)
+                if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddNotes.ToDescriptionString()));
                     return;
@@ -1683,7 +1555,7 @@ namespace SurveyManager
                     Tag = SurveyPage.IsSurveyPage
                 };
 
-                NotesCtl ctl = new NotesCtl(RuntimeVars.Instance.OpenJob.Notes);
+                NotesCtl ctl = new NotesCtl(JobHandler.Instance.CurrentJob.Notes);
                 ctl.StatusUpdate += ChangeStatusText;
                 ctl.Dock = DockStyle.Fill;
                 notesPanel.Controls.Add(ctl);
@@ -1720,7 +1592,7 @@ namespace SurveyManager
 
                 if (!licensed)
                 {
-                    if (RuntimeVars.Instance.IsJobOpen)
+                    if (JobHandler.Instance.IsJobOpen)
                         CloseJob();
                     ChangeStatusText(this, new StatusArgs("Running an Unlicensed Copy! Most features are disabled. Please activate!"));
                 }
@@ -1744,9 +1616,9 @@ namespace SurveyManager
 
         private ExitChoice ShowCloseDialog(bool hideExitOptions = false)
         {
-            if (RuntimeVars.Instance.IsJobOpen)
+            if (JobHandler.Instance.IsJobOpen)
             {
-                if (RuntimeVars.Instance.OpenJob.SavePending)
+                if (JobHandler.Instance.SavePending)
                 {
                     return CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened survey job. What would you like to do?", "Save Changes", MessageBoxButtons.OKCancel, Resources.warning_64x64, hideExitOptions);
                 }
@@ -1772,8 +1644,8 @@ namespace SurveyManager
                 ExitChoice choice = ShowCloseDialog();
                 if (choice == ExitChoice.SaveAndExit)
                 {
-                    SaveSurvey();
-                    CloseJob();
+                    JobHandler.Instance.SaveJob();
+                    JobHandler.Instance.CloseJob();
                     Application.Exit();
                 }
                 else if (choice == ExitChoice.ExitNoSave)
@@ -1782,7 +1654,7 @@ namespace SurveyManager
                 }
                 else if (choice == ExitChoice.SaveOnly)
                 {
-                    SaveSurvey();
+                    JobHandler.Instance.SaveJob();
                     e.Cancel = true;
                 }
                 else if (choice == ExitChoice.Cancel)
