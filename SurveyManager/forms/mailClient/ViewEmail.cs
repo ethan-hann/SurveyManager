@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Net.Pop3;
 using MimeKit;
@@ -62,7 +63,7 @@ namespace SurveyManager.forms.mailClient
                 fetchMailWorker.CancelAsync();
 
             var inbox = client.Inbox;
-            inbox.Open(MailKit.FolderAccess.ReadOnly);
+            inbox.Open(FolderAccess.ReadOnly);
 
             TreeNode[] messageNodes = new TreeNode[inbox.Count];
 

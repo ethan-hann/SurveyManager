@@ -29,46 +29,55 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.kryptonHeaderGroup1 = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
+            JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection outlookGridGroupCollection1 = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.OutlookGridGroupCollection();
+            this.headerGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnMoreOptions = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.moreOptionsContext = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuSeparator2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator();
+            this.kryptonContextMenuHeading2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
+            this.kryptonContextMenuItem3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem5 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuItem6 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuSeparator1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
-            this.kryptonContextMenuItems3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
-            this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuHeading2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
-            this.kryptonContextMenuItem3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuSeparator2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator();
-            this.kryptonContextMenuItem4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuItem5 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuItem6 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.lvMessages = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1.Panel)).BeginInit();
-            this.kryptonHeaderGroup1.Panel.SuspendLayout();
-            this.kryptonHeaderGroup1.SuspendLayout();
+            this.emailGrid = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid();
+            this.emailGroupBox = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox();
+            this.loadMailBGWorker = new System.ComponentModel.BackgroundWorker();
+            this.statusColumn = new JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.CustomColumns.KryptonDataGridViewTextAndImageColumn();
+            this.senderColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.headerGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerGroup.Panel)).BeginInit();
+            this.headerGroup.Panel.SuspendLayout();
+            this.headerGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.emailGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // kryptonHeaderGroup1
+            // headerGroup
             // 
-            this.kryptonHeaderGroup1.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
+            this.headerGroup.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
             this.btnMoreOptions});
-            this.kryptonHeaderGroup1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonHeaderGroup1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonHeaderGroup1.Name = "kryptonHeaderGroup1";
+            this.headerGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.headerGroup.Location = new System.Drawing.Point(0, 0);
+            this.headerGroup.Name = "headerGroup";
             // 
-            // kryptonHeaderGroup1.Panel
+            // headerGroup.Panel
             // 
-            this.kryptonHeaderGroup1.Panel.Controls.Add(this.lvMessages);
-            this.kryptonHeaderGroup1.Size = new System.Drawing.Size(1091, 701);
-            this.kryptonHeaderGroup1.TabIndex = 0;
-            this.kryptonHeaderGroup1.ValuesPrimary.Description = "1-50 of 1882";
-            this.kryptonHeaderGroup1.ValuesPrimary.Heading = "Unread";
-            this.kryptonHeaderGroup1.ValuesPrimary.Image = null;
-            this.kryptonHeaderGroup1.ValuesSecondary.Heading = "";
+            this.headerGroup.Panel.Controls.Add(this.emailGrid);
+            this.headerGroup.Panel.Controls.Add(this.emailGroupBox);
+            this.headerGroup.Size = new System.Drawing.Size(1091, 701);
+            this.headerGroup.TabIndex = 0;
+            this.headerGroup.ValuesPrimary.Description = "1-50 of 1882";
+            this.headerGroup.ValuesPrimary.Heading = "Unread";
+            this.headerGroup.ValuesPrimary.Image = null;
+            this.headerGroup.ValuesSecondary.Heading = "";
             // 
             // btnMoreOptions
             // 
@@ -81,14 +90,6 @@ namespace SurveyManager.forms.userControls
             // 
             this.moreOptionsContext.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
             this.kryptonContextMenuItems3});
-            // 
-            // kryptonContextMenuItem1
-            // 
-            this.kryptonContextMenuItem1.Text = "Menu Item";
-            // 
-            // kryptonContextMenuHeading1
-            // 
-            this.kryptonContextMenuHeading1.ExtraText = "";
             // 
             // kryptonContextMenuItems3
             // 
@@ -126,34 +127,100 @@ namespace SurveyManager.forms.userControls
             // 
             this.kryptonContextMenuItem6.Text = "50 items";
             // 
-            // lvMessages
+            // kryptonContextMenuItem1
             // 
-            this.lvMessages.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvMessages.HideSelection = false;
-            this.lvMessages.Location = new System.Drawing.Point(0, 0);
-            this.lvMessages.Name = "lvMessages";
-            this.lvMessages.Size = new System.Drawing.Size(1089, 666);
-            this.lvMessages.TabIndex = 0;
-            this.lvMessages.UseCompatibleStateImageBehavior = false;
+            this.kryptonContextMenuItem1.Text = "Menu Item";
+            // 
+            // kryptonContextMenuHeading1
+            // 
+            this.kryptonContextMenuHeading1.ExtraText = "";
+            // 
+            // emailGrid
+            // 
+            this.emailGrid.AllowUserToAddRows = false;
+            this.emailGrid.AllowUserToDeleteRows = false;
+            this.emailGrid.AllowUserToResizeRows = false;
+            this.emailGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.statusColumn,
+            this.senderColumn,
+            this.contentColumn,
+            this.dateColumn});
+            this.emailGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emailGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.emailGrid.FillMode = JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.FillMode.GROUPSANDNODES;
+            this.emailGrid.GroupBox = this.emailGroupBox;
+            this.emailGrid.GroupCollection = outlookGridGroupCollection1;
+            this.emailGrid.Location = new System.Drawing.Point(0, 37);
+            this.emailGrid.MultiSelect = false;
+            this.emailGrid.Name = "emailGrid";
+            this.emailGrid.PreviousSelectedGroupRow = -1;
+            this.emailGrid.ReadOnly = true;
+            this.emailGrid.Size = new System.Drawing.Size(1089, 629);
+            this.emailGrid.TabIndex = 0;
+            this.emailGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.emailGrid_CellMouseDoubleClick);
+            // 
+            // emailGroupBox
+            // 
+            this.emailGroupBox.AllowDrop = true;
+            this.emailGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.emailGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.emailGroupBox.Name = "emailGroupBox";
+            this.emailGroupBox.Size = new System.Drawing.Size(1089, 37);
+            this.emailGroupBox.TabIndex = 1;
+            // 
+            // loadMailBGWorker
+            // 
+            this.loadMailBGWorker.WorkerReportsProgress = true;
+            this.loadMailBGWorker.WorkerSupportsCancellation = true;
+            this.loadMailBGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.loadMailBGWorker_DoWork);
+            this.loadMailBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.loadMailBGWorker_ProgressChanged);
+            this.loadMailBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.loadMailBGWorker_RunWorkerCompleted);
+            // 
+            // statusColumn
+            // 
+            this.statusColumn.HeaderText = "Status";
+            this.statusColumn.Name = "statusColumn";
+            this.statusColumn.ReadOnly = true;
+            // 
+            // senderColumn
+            // 
+            this.senderColumn.HeaderText = "Sender";
+            this.senderColumn.Name = "senderColumn";
+            this.senderColumn.ReadOnly = true;
+            // 
+            // contentColumn
+            // 
+            this.contentColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contentColumn.HeaderText = "Content";
+            this.contentColumn.Name = "contentColumn";
+            this.contentColumn.ReadOnly = true;
+            // 
+            // dateColumn
+            // 
+            this.dateColumn.HeaderText = "Date";
+            this.dateColumn.Name = "dateColumn";
+            this.dateColumn.ReadOnly = true;
             // 
             // ViewEmailListCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.kryptonHeaderGroup1);
+            this.Controls.Add(this.headerGroup);
             this.Name = "ViewEmailListCtl";
             this.Size = new System.Drawing.Size(1091, 701);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1.Panel)).EndInit();
-            this.kryptonHeaderGroup1.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1)).EndInit();
-            this.kryptonHeaderGroup1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.ViewEmailListCtl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.headerGroup.Panel)).EndInit();
+            this.headerGroup.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.headerGroup)).EndInit();
+            this.headerGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.emailGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup kryptonHeaderGroup1;
+        private ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup headerGroup;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup btnMoreOptions;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenu moreOptionsContext;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems3;
@@ -169,6 +236,12 @@ namespace SurveyManager.forms.userControls
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems2;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator kryptonContextMenuSeparator1;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading kryptonContextMenuHeading1;
-        private System.Windows.Forms.ListView lvMessages;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid emailGrid;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox emailGroupBox;
+        private System.ComponentModel.BackgroundWorker loadMailBGWorker;
+        private JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.CustomColumns.KryptonDataGridViewTextAndImageColumn statusColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contentColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
     }
 }

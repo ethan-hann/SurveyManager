@@ -20,18 +20,18 @@ namespace SurveyManager.forms.userControls
             this.btnForward = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnReply = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this.btnDownloadAttachments = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.chromeContainer = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lvAttachments = new System.Windows.Forms.ListView();
             this.lblTo = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblSenderName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.chromeContainer = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.msgHeaderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msgHeaderGroup.Panel)).BeginInit();
             this.msgHeaderGroup.Panel.SuspendLayout();
             this.msgHeaderGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chromeContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chromeContainer)).BeginInit();
             this.SuspendLayout();
             // 
             // msgHeaderGroup
@@ -78,6 +78,14 @@ namespace SurveyManager.forms.userControls
             this.btnDownloadAttachments.Text = "Download Attachments";
             this.btnDownloadAttachments.UniqueName = "82B2CC24A0AC40A25086391636F8FF24";
             // 
+            // chromeContainer
+            // 
+            this.chromeContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chromeContainer.Location = new System.Drawing.Point(0, 63);
+            this.chromeContainer.Name = "chromeContainer";
+            this.chromeContainer.Size = new System.Drawing.Size(1030, 649);
+            this.chromeContainer.TabIndex = 1;
+            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.lvAttachments);
@@ -123,14 +131,6 @@ namespace SurveyManager.forms.userControls
             this.lblSenderName.Values.ExtraText = "<noreply@youtube.com>";
             this.lblSenderName.Values.Text = "YouTube";
             // 
-            // chromeContainer
-            // 
-            this.chromeContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chromeContainer.Location = new System.Drawing.Point(0, 63);
-            this.chromeContainer.Name = "chromeContainer";
-            this.chromeContainer.Size = new System.Drawing.Size(1030, 647);
-            this.chromeContainer.TabIndex = 1;
-            // 
             // ViewMessageCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,10 +144,10 @@ namespace SurveyManager.forms.userControls
             this.msgHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.msgHeaderGroup)).EndInit();
             this.msgHeaderGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chromeContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chromeContainer)).EndInit();
             this.ResumeLayout(false);
 
         }
