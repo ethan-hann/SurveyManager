@@ -16,7 +16,7 @@ namespace SurveyManager.utility.Licensing
     /// </summary>
     public class LicenseEngine
     {
-        private static SerialsManager manager = new SerialsManager(Resources.developer_name, Resources.developer_key, KeyStrength.Use128Bits);
+        private static SerialsManager manager = new SerialsManager(Settings.Default.DeveloperName, Settings.Default.DeveloperKey, KeyStrength.Use128Bits);
         
         /// <summary>
         /// Get a value indicating if the specified product key is valid for this product.

@@ -198,3 +198,7 @@ D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.C
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.CopyComplete
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.pdb
+D:\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\SurveyManager.exe.manifest
+D:\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\SurveyManager.application
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe.manifest
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.application

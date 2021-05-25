@@ -103,6 +103,15 @@ namespace SurveyManager
             if (!Settings.Default.OverwriteLogFile)
                 RuntimeVars.Instance.LogFile.FileName = Guid.NewGuid().ToString().Substring(0, 10) + DateTime.Now.Date.ToString("MM-dd-yyyy") + ".log";
 
+            //Ensure that we have the trial key for the licensing API
+            if (Settings.Default.DeveloperName.Length <= 0 || Settings.Default.DeveloperKey.Length <= 0)
+            {
+                EllipterActivation ellActivation = new EllipterActivation();
+                DialogResult result = ellActivation.ShowDialog();
+                if (result != DialogResult.OK)
+                    Application.Exit();
+            }
+            
             //Check product key and set license status
             InitializeLicense();
 
@@ -901,7 +910,7 @@ namespace SurveyManager
             }
         }
 
-        private void ChangeTitleText(params string[] texts)
+        public void ChangeTitleText(params string[] texts)
         {
             if (texts.Length == 3)
             {

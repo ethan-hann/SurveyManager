@@ -261,5 +261,29 @@ namespace SurveyManager.Properties {
                 this["DefaultJobPrefixEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeveloperName {
+            get {
+                return ((string)(this["DeveloperName"]));
+            }
+            set {
+                this["DeveloperName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeveloperKey {
+            get {
+                return ((string)(this["DeveloperKey"]));
+            }
+            set {
+                this["DeveloperKey"] = value;
+            }
+        }
     }
 }

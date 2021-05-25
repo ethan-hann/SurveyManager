@@ -54,13 +54,30 @@ namespace SurveyManager.forms.userControls
             {
                 propGrid.GetUploadFilesButton().Click += UploadFiles;
                 propGrid.GetDownloadFilesButton().Click += DownloadFiles;
+                propGrid.GetOpenJobButton().Click += OpenJob;
                 propGrid.GetUploadFilesButton().Visible = true;
                 propGrid.GetDownloadFilesButton().Visible = true;
+                propGrid.GetOpenJobButton().Visible = true;
             }
 
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);
             LoadData();
+        }
+
+        private void OpenJob(object sender, EventArgs e)
+        {
+            if (dataGrid.SelectedRows.Count == 1)
+            {
+                if (dataGrid.SelectedRows[0].Tag != null)
+                {
+                    if (JobHandler.Instance.OpenJob(dataGrid.SelectedRows[0].Tag as Survey))
+                    {
+                        RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + (dataGrid.SelectedRows[0].Tag as Survey).JobNumber + "]");
+                        JobHandler.Instance.AddSurveyToRecentJobs();
+                    }
+                }
+            }
         }
 
         private void DownloadFiles(object sender, EventArgs e)
