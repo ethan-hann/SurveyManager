@@ -1,12 +1,6 @@
 ﻿using SeriousBit.Ellipter;
-using Standard.Licensing;
-using Standard.Licensing.Validation;
 using SurveyManager.Properties;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 
 namespace SurveyManager.utility.Licensing
@@ -17,7 +11,7 @@ namespace SurveyManager.utility.Licensing
     public class LicenseEngine
     {
         private static SerialsManager manager = new SerialsManager(Settings.Default.DeveloperName, Settings.Default.DeveloperKey, KeyStrength.Use128Bits);
-        
+
         /// <summary>
         /// Get a value indicating if the specified product key is valid for this product.
         /// </summary>

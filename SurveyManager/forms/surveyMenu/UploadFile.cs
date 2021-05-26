@@ -105,9 +105,10 @@ namespace SurveyManager.forms.surveyMenu
 
                     counter++;
                 }
-            } catch (ThreadAbortException)
+            }
+            catch (ThreadAbortException)
             {
-                
+
             }
         }
 
@@ -166,7 +167,7 @@ namespace SurveyManager.forms.surveyMenu
             {
                 FileUploadDone?.Invoke(this, new FileUploadDoneArgs(lbFileNames.Items.Cast<CFile>().ToList()));
                 DialogResult = DialogResult.OK;
-                
+
             }
             else
             {

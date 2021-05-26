@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SurveyManager.utility.Filtering
+﻿namespace SurveyManager.utility.Filtering
 {
     /// <summary>
     /// Interace for any class that is a Filter.

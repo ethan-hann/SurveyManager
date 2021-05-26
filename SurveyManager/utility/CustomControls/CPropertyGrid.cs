@@ -1,12 +1,7 @@
 ﻿using SurveyManager.Properties;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SurveyManager.utility.CustomControls
@@ -18,7 +13,7 @@ namespace SurveyManager.utility.CustomControls
         ToolStripButton uploadFiles = new ToolStripButton("Upload Files");
         ToolStripButton downloadFiles = new ToolStripButton("Download Files");
         ToolStripButton openJob = new ToolStripButton("Open Selected Job");
-        
+
         public CPropertyGrid()
         {
             InitializeComponent();

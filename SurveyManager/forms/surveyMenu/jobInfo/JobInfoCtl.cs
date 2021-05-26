@@ -3,14 +3,9 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SurveyManager.forms.surveyMenu.jobInfo

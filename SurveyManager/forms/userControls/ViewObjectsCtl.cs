@@ -14,9 +14,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -319,7 +316,7 @@ namespace SurveyManager.forms.userControls
                         StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
                     }
                 }
-                
+
                 dataGrid.SuspendLayout();
                 dataGrid.ClearInternalRows();
                 dataGrid.ResumeLayout();
@@ -354,7 +351,7 @@ namespace SurveyManager.forms.userControls
                 "Clients       ->\tdelete the client record and the associated address record; can only delete if the client is not referenced anywhere else.\n\n" +
                 "Realtors      ->\tdelete the realtor record only; can only delete if the realtor is not referenced anywhere else.\n\n" +
                 "Title Company ->\tdelete the title company record only; can only delete if the title company is not referenced anywhere else.\n\n";
-                
+
                 DialogResult confirm = CRichMsgBox.Show("Are you sure you want to delete this record?\nTHIS IS A DESTRUCTIVE OPERATION AND CANNOT BE REVERSED!", "Confirm", confirmText, MessageBoxButtons.YesNo, Resources.warning_64x64);
                 if (confirm == DialogResult.Yes)
                 {
@@ -379,7 +376,7 @@ namespace SurveyManager.forms.userControls
         private void deleteBgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             deleteError = objToDelete.Delete();
-            
+
         }
 
         private void deleteBgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -420,11 +417,11 @@ namespace SurveyManager.forms.userControls
             switch (error)
             {
                 case DatabaseError.NoError:
-                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
-                    break;
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
+                break;
                 default:
-                    CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    break;
+                CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                break;
             }
         }
 

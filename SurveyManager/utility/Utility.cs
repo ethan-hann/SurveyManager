@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.Enums;
 
@@ -95,7 +93,7 @@ namespace SurveyManager.utility
             while (components.Any() && components[0].Item1 == 0)
                 components.RemoveAt(0);
 
-            return string.Join(", ", 
+            return string.Join(", ",
                 components.Select(t => t.Item1 + " " + t.Item2 + (t.Item1 != 1 ? "s" : string.Empty)));
         }
 
@@ -176,7 +174,7 @@ namespace SurveyManager.utility
             {
                 case ItemType.Files:
                 {
-                    
+
                     List<CFile> files = items.Cast<CFile>().ToList();
                     foreach (CFile file in files)
                     {

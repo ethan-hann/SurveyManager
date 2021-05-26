@@ -167,7 +167,7 @@ namespace SurveyManager.forms.dialogs
                         return ExitChoice.Cancel;
                     }
                     default:
-                        return ExitChoice.Cancel;
+                    return ExitChoice.Cancel;
                 }
 
                 return ExitChoice.Cancel;

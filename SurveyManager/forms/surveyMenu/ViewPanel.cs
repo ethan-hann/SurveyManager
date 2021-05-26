@@ -3,13 +3,6 @@ using SurveyManager.backend.wrappers;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SurveyManager.forms.surveyMenu
@@ -45,7 +38,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void ClearObject(object sender, EventArgs e)
         {
-            if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening) 
+            if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening)
                 || (JobHandler.Instance.CurrentJobState != Enums.JobState.Opened))
             {
                 if (propGrid.SelectedObject != null)

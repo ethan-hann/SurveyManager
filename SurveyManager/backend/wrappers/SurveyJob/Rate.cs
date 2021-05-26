@@ -1,8 +1,5 @@
-﻿using SurveyManager.utility;
-using SurveyManager.utility.CustomControls;
-using System;
+﻿using System;
 using System.ComponentModel;
-using System.Drawing.Design;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers

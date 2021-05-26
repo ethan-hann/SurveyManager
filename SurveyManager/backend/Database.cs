@@ -7,9 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend
@@ -154,13 +152,14 @@ namespace SurveyManager.backend
                             }
                         }
                     }
-                } catch (MySqlException ex)
+                }
+                catch (MySqlException ex)
                 {
                     dt.Columns.Add("MySQL Error");
                     dt.Columns.Add("Error Code");
                     dt.Rows.Add(ex.Message, ex.ErrorCode);
                 }
-                
+
                 con.Close();
             }
             return dt;
@@ -414,12 +413,13 @@ namespace SurveyManager.backend
                     }
                     con.Close();
                 }
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 RuntimeVars.Instance.LogFile.AddEntry($"Could not delete address: {a.ID}. It might be associated with another object.");
                 return false;
             }
-            
+
             return affectedRows != 0;
         }
         #endregion
@@ -441,7 +441,7 @@ namespace SurveyManager.backend
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
                 con.Open();
-                using(MySqlCommand cmd = new MySqlCommand())
+                using (MySqlCommand cmd = new MySqlCommand())
                 {
                     using (MySqlTransaction tr = con.BeginTransaction())
                     {

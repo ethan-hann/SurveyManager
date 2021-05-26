@@ -1,10 +1,6 @@
-﻿using ComponentFactory.Krypton.Navigator;
-using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
-using SurveyManager.backend;
+﻿using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
 using SurveyManager.backend.wrappers;
-using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
-using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
 using SurveyManager.forms.surveyMenu.billingPortal;
 using SurveyManager.Properties;
@@ -12,11 +8,7 @@ using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -71,7 +63,7 @@ namespace SurveyManager.forms.userControls
                 List<BillingItem> items = billingItems[(string)lbTimeEntries.Items[selectedListBoxIndex]];
                 OutlookGridRow row;
                 rows = new List<OutlookGridRow>();
-                
+
                 foreach (BillingItem item in items)
                 {
                     if (item.OfficeTime == TimeSpan.Zero)
@@ -196,7 +188,7 @@ namespace SurveyManager.forms.userControls
         {
             DateTime selected = DateTime.Parse((string)lbTimeEntries.SelectedItem);
             DialogResult result = CMessageBox.Show($"Are you sure you want to remove {selected.Date.ToShortDateString()} from this job? " +
-                $"This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from this job and cannot be reversed!", 
+                $"This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from this job and cannot be reversed!",
                 "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
 
             if (result == DialogResult.No || result == DialogResult.Cancel)
@@ -252,7 +244,7 @@ namespace SurveyManager.forms.userControls
             if (e is ObjectCreatedEventArgs args)
             {
                 BillingItem item = args.DataValue as BillingItem;
-                bool isUpdating = (bool) args.Tag;
+                bool isUpdating = (bool)args.Tag;
 
                 if (item == null)
                     return;

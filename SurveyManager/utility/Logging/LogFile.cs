@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SurveyManager.utility.Logging
 {
@@ -19,10 +18,10 @@ namespace SurveyManager.utility.Logging
 
         public string FullPath
         {
-             get
-             {
+            get
+            {
                 return Path.Combine(FolderPath, FileName);
-             }
+            }
         }
 
         /// <summary>
@@ -44,7 +43,8 @@ namespace SurveyManager.utility.Logging
             try
             {
                 Entries.Add(DateTime.Now, logtext);
-            } catch (ArgumentException)
+            }
+            catch (ArgumentException)
             {
                 //If we get an argument exception, it is because multiple events were triggered at one time resulting in the same DateTime object as the key.
                 //The solution is to just add 1 second to the DateTime object for each occurance. This should minimize collisions.
@@ -66,7 +66,8 @@ namespace SurveyManager.utility.Logging
             try
             {
                 File.WriteAllText(Path.Combine(FolderPath, FileName), logEntries.ToString());
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 Console.WriteLine("[CRITICAL]: Could not write to log file!!!");
                 return;

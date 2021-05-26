@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers.SurveyJob
@@ -219,7 +218,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 {
                     case TimeUnit.Hour:
                     {
-                        current = (decimal)((double) item.OfficeRate.Amount * item.OfficeTime.TotalHours);
+                        current = (decimal)((double)item.OfficeRate.Amount * item.OfficeTime.TotalHours);
                         break;
                     }
                     case TimeUnit.Minute:
@@ -234,7 +233,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                     }
                 }
                 if (item.OfficeRate.TaxIncluded)
-                    current = (decimal) ((double)current + ((double)current * Settings.Default.DefaultTaxRate));
+                    current = (decimal)((double)current + ((double)current * Settings.Default.DefaultTaxRate));
                 total += current;
             }
             return total;

@@ -4,10 +4,6 @@ using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 

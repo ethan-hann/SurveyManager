@@ -4,13 +4,9 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SurveyManager.forms.surveyMenu.locationInfo
@@ -45,11 +41,12 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                 }
 
                 IsEdited = true;
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 RuntimeVars.Instance.LogFile.AddEntry("Something went wrong while loading the location control on the basic information page. It seems there is not an open survey job?");
             }
-            
+
         }
 
         private void textBox_Enter(object sender, EventArgs e)

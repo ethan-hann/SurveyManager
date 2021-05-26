@@ -1,16 +1,12 @@
 ﻿using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing;
 using System.Drawing.Design;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -74,7 +70,7 @@ namespace SurveyManager.backend.wrappers
         [Description("The size of the file as stored in the database.")]
         [Browsable(true)]
         [DisplayName("File Size")]
-        public string FileSize 
+        public string FileSize
         {
             get
             {
@@ -110,18 +106,18 @@ namespace SurveyManager.backend.wrappers
                         case FileExtension.DXF:
                         case FileExtension.DWT:
                         case FileExtension.DXB:
-                            return Resources.dwg_32x32;
+                        return Resources.dwg_32x32;
                         case FileExtension.PNG:
                         case FileExtension.JPEG:
                         case FileExtension.JPG:
-                            return Resources.png_32x32;
+                        return Resources.png_32x32;
                         case FileExtension.DOC:
                         case FileExtension.DOCX:
-                            return Resources.doc_32x32;
+                        return Resources.doc_32x32;
                         case FileExtension.PDF:
-                            return Resources.pdf_32x32;
+                        return Resources.pdf_32x32;
                         case FileExtension.TXT:
-                            return Resources.txt_32x32;
+                        return Resources.txt_32x32;
                     }
                 }
                 return Resources.file_32x32;

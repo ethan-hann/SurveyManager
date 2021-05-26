@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SurveyManager.Properties;
-using static SurveyManager.utility.CEventArgs;
+﻿using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.dialogs.SettingsDialog
 {

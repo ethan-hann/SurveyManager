@@ -5,13 +5,11 @@ using ComponentFactory.Krypton.Toolkit;
 using ComponentFactory.Krypton.Workspace;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
-using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.fileMenu;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
-using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using SurveyManager.utility.Licensing;
@@ -24,13 +22,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Deployment.Application;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -59,22 +54,74 @@ namespace SurveyManager
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            lblStatusDate.Text = DateTime.Now.ToString();
+
+            //Check for recent jobs
             if (Settings.Default.RecentJobs == null)
                 Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
 
+            //Set up the ribbon UI
             InitializeRibbon();
 
-            mainRibbon.SelectedTab = surveyTab;
+            //Create our docking heirarchy
+            InitializeDock();
 
+            //Set and enable autosave timers
+            InitializeAutoSave();
+
+            //Create, if they dont exist, the temporary files and the log file path
+            InitializeDirectories();
+
+            //Upgrade settings if needed - keeps settings persistent across version updates to the program
+            InitializeSettings();
+
+            //Ask if user wants desktop shortcut created
+            CheckForDesktopShortcut();
+
+            //Check license statuses
+            InitializeLicensing();
+
+            //Subscribe to events from the JobHandler
+            InitializeJobHandler();
+        }
+
+        private void InitializeDock()
+        {
             DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
             dockingManager.ManageControl("Control", kryptonPanel1, DockingWorkspace);
             dockingManager.ManageFloating("Floating", this);
+        }
 
-            lblStatusDate.Text = DateTime.Now.ToString();
-
+        private void InitializeAutoSave()
+        {
             clockTimer.Start();
 
-            //Upgrade settings if needed - keeps settings persistent across version updates to the program
+            surveyAutosave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.SurveyAutoSaveInterval).TotalMilliseconds;
+            logAutoSave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.LogAutoSaveInterval).TotalMilliseconds;
+
+            surveyAutosave.Enabled = Settings.Default.SurveyAutoSaveEnabled;
+            logAutoSave.Enabled = true;
+
+            if (surveyAutosave.Enabled)
+                surveyAutosave.Start();
+
+            if (logAutoSave.Enabled)
+                logAutoSave.Start();
+        }
+
+        private void InitializeDirectories()
+        {
+            Directory.CreateDirectory(RuntimeVars.Instance.TempFiles.TempDir);
+            Directory.CreateDirectory(Settings.Default.LogFilePath);
+
+            //Set log file
+            RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
+            if (!Settings.Default.OverwriteLogFile)
+                RuntimeVars.Instance.LogFile.FileName = Guid.NewGuid().ToString().Substring(0, 10) + DateTime.Now.Date.ToString("MM-dd-yyyy") + ".log";
+        }
+
+        private void InitializeSettings()
+        {
             if (Settings.Default.UpgradeRequired)
             {
                 Settings.Default.Upgrade();
@@ -93,41 +140,43 @@ namespace SurveyManager
                 Settings.Default.DefaultSavePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SurveyManager");
                 Settings.Default.Save();
             }
+        }
 
-            //Create, if they dont exist, the temporary files and the log file path
-            Directory.CreateDirectory(RuntimeVars.Instance.TempFiles.TempDir);
-            Directory.CreateDirectory(Settings.Default.LogFilePath);
+        private void CheckForDesktopShortcut()
+        {
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                if (ApplicationDeployment.CurrentDeployment.IsFirstRun)
+                {
+                    if (!DesktopShortcut.Exists("Survey Manager"))
+                    {
+                        DialogResult result = CMessageBox.Show("No shortcut to the application found on the desktop! Would you like to add one now?", "No Shortcut Found", MessageBoxButtons.YesNo, Resources.info_64x64);
+                        if (result == DialogResult.Yes)
+                        {
+                            DesktopShortcut.Create("Survey Manager");
+                        }
+                    }
+                }
+            }
+        }
 
-            //Set log file
-            RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
-            if (!Settings.Default.OverwriteLogFile)
-                RuntimeVars.Instance.LogFile.FileName = Guid.NewGuid().ToString().Substring(0, 10) + DateTime.Now.Date.ToString("MM-dd-yyyy") + ".log";
-
-            //Ensure that we have the trial key for the licensing API
+        private void InitializeLicensing()
+        {
+            //Ensure that we have the correct key for the licensing API
             if (Settings.Default.DeveloperName.Length <= 0 || Settings.Default.DeveloperKey.Length <= 0)
             {
                 EllipterActivation ellActivation = new EllipterActivation();
                 DialogResult result = ellActivation.ShowDialog();
                 if (result != DialogResult.OK)
-                    Application.Exit();
+                    Application.Exit(); //if we dont, exit the application because the licensing API won't work.
             }
-            
+
             //Check product key and set license status
             InitializeLicense();
+        }
 
-            //Set and enable autosave timers
-            surveyAutosave.Interval = (int) TimeSpan.FromMinutes(Settings.Default.SurveyAutoSaveInterval).TotalMilliseconds;
-            logAutoSave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.LogAutoSaveInterval).TotalMilliseconds;
-
-            surveyAutosave.Enabled = Settings.Default.SurveyAutoSaveEnabled;
-            logAutoSave.Enabled = true;
-
-            if (surveyAutosave.Enabled)
-                surveyAutosave.Start();
-
-            if (logAutoSave.Enabled)
-                logAutoSave.Start();
-
+        private void InitializeJobHandler()
+        {
             JobHandler.Instance.JobOpening += ChangeStatusText;
             JobHandler.Instance.JobOpened += ChangeStatusText;
             JobHandler.Instance.JobClosing += ChangeStatusText;
@@ -266,6 +315,8 @@ namespace SurveyManager
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[0]).Click += btnAssocTitleComp_Click;
             //Survey Associate TitleCompany -> create new title company
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[1]).Click += CreateNewTitleCompany;
+
+            mainRibbon.SelectedTab = surveyTab;
         }
 
         private void CreateNewClient(object sender, EventArgs e)
@@ -752,21 +803,21 @@ namespace SurveyManager
                 switch (args.ExceptionCode)
                 {
                     case 0: //the user specified did not exist or did not have the correct permissions
-                        CMessageBox.Show("The database user did not exist or does not have the appropiate permissions.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    CMessageBox.Show("The database user did not exist or does not have the appropiate permissions.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
                     break;
                     case 1042: //could not reach the hostname
-                        CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
-                        Text = "Survey Manager - " + $"Database: <Not Connected>";
-                        break;
+                    CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    Text = "Survey Manager - " + $"Database: <Not Connected>";
+                    break;
                     case -1: //all good, begin loading database data
                     {
                         if (RuntimeVars.Instance.DatabaseConnected)
                             ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
-                            ChangeStatusText(this, new StatusArgs("Ready"));
+                        ChangeStatusText(this, new StatusArgs("Ready"));
                         break;
                     }
                     default: //unknown error; display error code for debugging
-                        CMessageBox.Show($"An error occured with DB connection. Error code: {args.ExceptionCode}\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    CMessageBox.Show($"An error occured with DB connection. Error code: {args.ExceptionCode}\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
                     break;
                 }
             }
@@ -948,7 +999,7 @@ namespace SurveyManager
         {
             if (JobHandler.Instance.IsJobOpen)
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]") :
-                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}" 
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
                         + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
             else
             {
@@ -1279,7 +1330,8 @@ namespace SurveyManager
                 try
                 {
                     dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
-                } catch (Exception)
+                }
+                catch (Exception)
                 {
                     RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select billing portal page. Perhaps it is a floating window and not docked?");
                     RuntimeVars.Instance.LogFile.WriteToFile();
@@ -1702,7 +1754,7 @@ namespace SurveyManager
                 ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
                 ChangeStatusText(this, new StatusArgs("Ready"));
             }
-                
+
             progressBar.Visible = false;
 
             //Set main form

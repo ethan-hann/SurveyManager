@@ -1,10 +1,5 @@
-﻿using SurveyManager.utility;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -55,7 +50,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return (!Name.Equals("N/A") && Name.Length > 0) && 
+                return (!Name.Equals("N/A") && Name.Length > 0) &&
                 (!PhoneNumber.Equals("N/A") && PhoneNumber.Length > 0) &&
                 (!CompanyName.Equals("N/A") && CompanyName.Length > 0);
             }

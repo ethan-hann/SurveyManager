@@ -1,17 +1,11 @@
 ﻿using SurveyManager.backend.wrappers.SurveyJob;
-using SurveyManager.forms.surveyMenu;
-using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
-using System.ComponentModel.Design;
-using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -200,7 +194,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(true)]
         [DisplayName("Office Time")]
         public string TotalOfficeTime
-        { 
+        {
             get
             {
                 return Utility.ToFullString(BillingObject.GetTotalOfficeTime());
@@ -249,7 +243,7 @@ namespace SurveyManager.backend.wrappers
                 return (Client != null && Client.IsValidClient) && County != null && !JobNumber.Equals("N/A") && !Description.Equals("N/A") && !AbstractNumber.Equals("N/A");
             }
         }
-        
+
         /// <summary>
         /// Populates the objects for this survey with values from the database.
         /// <para>Gets the survey's Client, County, Realtor, TitleCompany, and any files associated with it.</para>
@@ -457,7 +451,7 @@ namespace SurveyManager.backend.wrappers
             //the notes array has a time in ticks followed by the note content:
             //i.e. (0) 18:00:31, (1) NotesGoHere, (2) 19:20:08, (3) More Notes here...
             //need to only iterate every other item containing the time entry, hence i+=2
-            for (int i = 0; i < notes.Length - 1; i+=2)
+            for (int i = 0; i < notes.Length - 1; i += 2)
             {
                 AddNote(new DateTime(long.Parse(notes[i])), notes[i + 1]);
             }

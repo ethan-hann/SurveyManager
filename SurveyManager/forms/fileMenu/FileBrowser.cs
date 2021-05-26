@@ -7,14 +7,9 @@ using SurveyManager.utility;
 using SurveyManager.utility.Icons;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 
@@ -88,7 +83,8 @@ namespace SurveyManager.forms.fileMenu
                 {
                     File.WriteAllBytes(saveDialog.FileName, file.Contents);
                     StatusUpdate?.Invoke(this, new StatusArgs(file.FullFileName + " downloaded from Job# " + JobHandler.Instance.CurrentJob.JobNumber + ". Saved to " + saveDialog.FileName));
-                } catch (Exception)
+                }
+                catch (Exception)
                 {
                     CMessageBox.Show("There was an error saving the file: " + saveDialog.FileName + "\nPlease try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     StatusUpdate?.Invoke(this, new StatusArgs("File " + file.FullFileName + " could not be saved."));

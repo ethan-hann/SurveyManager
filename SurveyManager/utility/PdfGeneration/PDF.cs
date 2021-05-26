@@ -11,7 +11,6 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 using static SurveyManager.utility.Utility;
 
@@ -302,7 +301,7 @@ namespace SurveyManager.utility.PdfGeneration
                         DrawStringLine(new Pair<string, string>(file.FullFileName, ""), false, new Pair<string, string>(file.FileSize, ""), false, true);
                     }
                 }
-                
+
             }
             else
                 DrawStringPair("Files: ", "No files associated with this job.", GetLeftPage());
@@ -384,7 +383,8 @@ namespace SurveyManager.utility.PdfGeneration
             {
                 currentTableLayout = table.Draw(currentPage, new PointF(GetLeftPage(), currentY), tableLayout);
                 currentY += currentTableLayout.Bounds.Height;
-            } catch (PdfTableException)
+            }
+            catch (PdfTableException)
             {
                 currentPage = document.Pages.Add();
                 DrawTable(dt);
@@ -414,7 +414,7 @@ namespace SurveyManager.utility.PdfGeneration
 
             //Figure out what logo to use; either the application's logo or the owning company's logo
             Bitmap logo = null; //Resources.logo.ToBitmap();
-            
+
 
             //Draw image in header if we have one
             if (logo != null)

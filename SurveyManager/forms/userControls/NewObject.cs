@@ -1,18 +1,9 @@
 ﻿using ComponentFactory.Krypton.Navigator;
-using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.dialogs;
-using SurveyManager.forms.surveyMenu;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -38,17 +29,17 @@ namespace SurveyManager.forms.userControls
                 switch (entity)
                 {
                     case EntityTypes.Client:
-                        obj = new Client();
-                        break;
+                    obj = new Client();
+                    break;
                     case EntityTypes.Realtor:
-                        obj = new Realtor();
-                        break;
+                    obj = new Realtor();
+                    break;
                     case EntityTypes.TitleCompany:
-                        obj = new TitleCompany();
-                        break;
+                    obj = new TitleCompany();
+                    break;
                     case EntityTypes.Rate:
-                        obj = new Rate();
-                        break;
+                    obj = new Rate();
+                    break;
                 }
             }
 
@@ -129,20 +120,20 @@ namespace SurveyManager.forms.userControls
             switch (entity)
             {
                 case EntityTypes.Survey:
-                    obj = new Survey();
-                    break;
+                obj = new Survey();
+                break;
                 case EntityTypes.Client:
-                    obj = new Client();
-                    break;
+                obj = new Client();
+                break;
                 case EntityTypes.Realtor:
-                    obj = new Realtor();
-                    break;
+                obj = new Realtor();
+                break;
                 case EntityTypes.TitleCompany:
-                    obj = new TitleCompany();
-                    break;
+                obj = new TitleCompany();
+                break;
                 case EntityTypes.Rate:
-                    obj = new Rate();
-                    break;
+                obj = new Rate();
+                break;
             }
             propGrid.SelectedObject = obj;
         }

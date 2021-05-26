@@ -3,12 +3,7 @@ using SurveyManager.backend.wrappers;
 using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 
@@ -474,7 +469,7 @@ namespace SurveyManager.utility
                         return false;
                     }
                     default:
-                        return false;
+                    return false;
                 }
             }
             else

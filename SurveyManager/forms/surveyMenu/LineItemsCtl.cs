@@ -2,12 +2,8 @@
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 
@@ -78,7 +74,7 @@ namespace SurveyManager.forms.surveyMenu
                 propGrid.SelectedObject = null;
                 propGrid.Enabled = false;
             }
-                
+
 
             UpdateSubTotal();
         }
@@ -104,7 +100,7 @@ namespace SurveyManager.forms.surveyMenu
         {
             //When this user control is disposed (closed), update the currently open job with the new billing line items.
             SaveItems();
-                
+
 
             if (disposing && (components != null))
             {

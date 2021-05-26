@@ -1,15 +1,9 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using Standard.Licensing;
-using SurveyManager.backend.wrappers;
+﻿using SurveyManager.backend.wrappers;
 using SurveyManager.utility.Licensing;
 using SurveyManager.utility.Logging;
-using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SurveyManager.utility
 {
@@ -32,7 +26,7 @@ namespace SurveyManager.utility
                 }
             }
         }
-        
+
         /// <summary>
         /// Get a value indicating the number of database connection forms currently open.
         /// </summary>
@@ -58,7 +52,7 @@ namespace SurveyManager.utility
         /// <summary>
         /// Is the product licensed or not?
         /// </summary>
-        public bool IsLicensed 
+        public bool IsLicensed
         {
             get
             {

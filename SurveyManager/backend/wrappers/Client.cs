@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading;
-using System.Windows.Forms;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers

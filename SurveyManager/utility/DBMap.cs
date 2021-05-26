@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SurveyManager.utility
+﻿namespace SurveyManager.utility
 {
     /// <summary>
     /// Maps an internal database column to its external display member.

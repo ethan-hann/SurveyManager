@@ -1,13 +1,7 @@
 ﻿using SurveyManager.Properties;
-using SurveyManager.utility;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers.SurveyJob
@@ -59,7 +53,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         {
             get
             {
-                return (decimal)((TaxRate * (double) Amount) + (double) Amount);
+                return (decimal)((TaxRate * (double)Amount) + (double)Amount);
             }
         }
 
