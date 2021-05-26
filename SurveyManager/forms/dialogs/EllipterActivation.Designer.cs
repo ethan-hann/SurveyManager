@@ -53,7 +53,7 @@ namespace SurveyManager.forms.dialogs
             // 
             // txtKey
             // 
-            this.txtKey.Location = new System.Drawing.Point(78, 39);
+            this.txtKey.Location = new System.Drawing.Point(65, 39);
             this.txtKey.Name = "txtKey";
             this.txtKey.Size = new System.Drawing.Size(381, 23);
             this.txtKey.TabIndex = 3;
@@ -62,9 +62,9 @@ namespace SurveyManager.forms.dialogs
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(13, 42);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(59, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(33, 20);
             this.kryptonLabel2.TabIndex = 2;
-            this.kryptonLabel2.Values.Text = "Trial Key: ";
+            this.kryptonLabel2.Values.Text = "Key: ";
             // 
             // btnActivate
             // 
