@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PublishUrlHistory>Z:\SurveyManagerPublish\v1.0.0.0\|publish\</PublishUrlHistory>
     <InstallUrlHistory>\\csm-nas01\SurveyManagerApplication\|\\HomeServer\homes\ethan\SurveyManagerPublish\v1.0.0.0\|\\HomeServer\homes\ethan\SurveyManagerPublish\|\\HomeServer\homes\ethan\Drive\SurveyManager\</InstallUrlHistory>
-    <SupportUrlHistory />
+    <SupportUrlHistory>https://surveymanager.readthedocs.io</SupportUrlHistory>
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />

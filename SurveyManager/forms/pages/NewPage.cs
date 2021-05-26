@@ -43,6 +43,12 @@ namespace SurveyManager.forms.pages
                     ImageLarge = Resources.title_company;
                     break;
                 }
+                case EntityTypes.Rate:
+                {
+                    ImageSmall = Resources.billing_rates_16x16;
+                    ImageLarge = Resources.billing_rates;
+                    break;
+                }
             }
 
             ctl.StatusUpdate += UpdateMainFormStatus;

@@ -3,6 +3,7 @@ using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
 using ComponentFactory.Krypton.Workspace;
+using Microsoft.Win32;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.databaseMenu;
@@ -76,7 +77,7 @@ namespace SurveyManager
             InitializeSettings();
 
             //Ask if user wants desktop shortcut created
-            CheckForDesktopShortcut();
+            CheckForControlPanelIcon();
 
             //Check license statuses
             InitializeLicensing();
@@ -142,21 +143,43 @@ namespace SurveyManager
             }
         }
 
-        private void CheckForDesktopShortcut()
+        private void CheckForControlPanelIcon()
         {
-            if (ApplicationDeployment.IsNetworkDeployed)
+            //only run if deployed 
+            if (ApplicationDeployment.IsNetworkDeployed && ApplicationDeployment.CurrentDeployment.IsFirstRun)
             {
-                if (ApplicationDeployment.CurrentDeployment.IsFirstRun)
+                try
                 {
-                    if (!DesktopShortcut.Exists("Survey Manager"))
+                    //the icon is included in this program
+                    string iconSourcePath = Path.Combine(Application.StartupPath, "logo.ico");
+
+                    if (!File.Exists(iconSourcePath))
                     {
-                        DialogResult result = CMessageBox.Show("No shortcut to the application found on the desktop! Would you like to add one now?", "No Shortcut Found", MessageBoxButtons.YesNo, Resources.info_64x64);
-                        if (result == DialogResult.Yes)
+                        RuntimeVars.Instance.LogFile.AddEntry("Icon file for application not found!");
+                        return;
+                    }
+
+                    RegistryKey myUninstallKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
+                    string[] mySubKeyNames = myUninstallKey.GetSubKeyNames();
+                    for (int i = 0; i < mySubKeyNames.Length; i++)
+                    {
+                        RegistryKey myKey = myUninstallKey.OpenSubKey(mySubKeyNames[i], true);
+                        object myValue = myKey.GetValue("DisplayName");
+                        if (myValue != null && myValue.ToString().Equals("Survey Manager"))
                         {
-                            DesktopShortcut.Create("Survey Manager");
+                            myKey.SetValue("DisplayIcon", iconSourcePath);
+                            break;
                         }
                     }
                 }
+                catch (Exception)
+                {
+                    RuntimeVars.Instance.LogFile.AddEntry("Could not create icon for Control Panel - Add/Remove Programs!");
+                }
+            }
+            else
+            {
+                RuntimeVars.Instance.LogFile.AddEntry("Application is not a ClickOnce deployment! Can not change icon in registry.");
             }
         }
 
