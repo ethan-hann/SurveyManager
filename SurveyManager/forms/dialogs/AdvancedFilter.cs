@@ -142,7 +142,7 @@ namespace SurveyManager.forms.dialogs
         {
             string fieldName = ((DBMap)dgvFilters.Rows[0].Cells["columnDBColumn"].Value).InternalField;
             string searchText = (string)dgvFilters.Rows[0].Cells["columnCriteria"].Value;
-            SqlOperators operation = (SqlOperators)dgvFilters.Rows[0].Cells["columnOption"].Value;
+            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)dgvFilters.Rows[0].Cells["columnOption"].Value);
 
             if (tableName.Equals("Survey"))
             {
@@ -169,7 +169,7 @@ namespace SurveyManager.forms.dialogs
 
                     fieldName = ((DBMap)currentRow.Cells["columnDBColumn"].Value).InternalField;
                     searchText = (string)currentRow.Cells["columnCriteria"].Value;
-                    operation = (SqlOperators)currentRow.Cells["columnOption"].Value;
+                    operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)currentRow.Cells["columnOption"].Value);
 
                     if (tableName.Equals("Survey"))
                     {

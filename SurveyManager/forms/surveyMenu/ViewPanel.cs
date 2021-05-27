@@ -29,6 +29,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void RefreshObject(object sender, EventArgs e)
         {
+            if (propGrid == null)
+                return;
+
             propGrid.SelectedObject = JobHandler.Instance.CurrentJob;
             (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
             (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
@@ -38,6 +41,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void ClearObject(object sender, EventArgs e)
         {
+            if (propGrid == null)
+                return;
+
             if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening)
                 || (JobHandler.Instance.CurrentJobState != Enums.JobState.Opened))
             {
