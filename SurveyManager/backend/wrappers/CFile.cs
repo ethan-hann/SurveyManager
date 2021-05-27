@@ -16,7 +16,7 @@ namespace SurveyManager.backend.wrappers
     /// </summary>
     [TypeConverter(typeof(CFileTypeConverter))]
     [Serializable]
-    public class CFile : DatabaseWrapper
+    public class CFile : IDatabaseWrapper
     {
         private string tempPath = string.Empty;
 

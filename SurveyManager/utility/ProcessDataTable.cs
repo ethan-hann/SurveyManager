@@ -90,7 +90,8 @@ namespace SurveyManager.utility
                 TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"],
                 LocationID = (int)row["address_id"],
                 NotesString = (string)row["notes"],
-                SurveyName = (string)row["survey_name"]
+                SurveyName = (string)row["survey_name"],
+                LastUpdated = (DateTime)row["last_update"]
             };
 
             s.BillingObject.BillingIds = (string)row["billing_ids"];

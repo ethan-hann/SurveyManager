@@ -61,7 +61,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void SelectObject(object sender, EventArgs e)
         {
-            DatabaseWrapper obj = propGrid.SelectedObject as DatabaseWrapper;
+            IDatabaseWrapper obj = propGrid.SelectedObject as IDatabaseWrapper;
             if (obj != null)
             {
                 StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData} {obj} selected."));

@@ -222,7 +222,7 @@ namespace SurveyManager
                 {
                     if (JobHandler.Instance.CurrentJobState != JobState.Saving)
                     {
-                        if (JobHandler.Instance.SaveJob(false))
+                        if (JobHandler.Instance.SaveJob())
                         {
                             ChangeStatusText(this, new StatusArgs($"Autosave completed for Job# {JobHandler.Instance.CurrentJob.JobNumber}."));
                         }
@@ -412,9 +412,19 @@ namespace SurveyManager
                 foreach (string str in Settings.Default.RecentJobs)
                 {
                     KryptonRibbonRecentDoc job = new KryptonRibbonRecentDoc();
-                    job.Text = str;
-                    job.Click += OpenRecentJob;
-                    recentJobs.Add(job);
+                    string[] parts = str.Split('\t');
+                    if (parts.Length== 2)
+                    {
+                        string jobNumber = parts[0];
+                        DateTime last_updated = DateTime.Parse(parts[1]);
+                        job.Text = jobNumber;
+                        job.ExtraText = last_updated.ToString("M/dd/yyyy h:mm:ss tt");
+                        job.Click += OpenRecentJob;
+                        recentJobs.Add(job);
+                    }
+                    recentJobs.Sort(new CompareRecentJobs()); //sort the items in the list based on the last accessed date
+                    recentJobs.Reverse();
+                    recentJobs = recentJobs.Take(10).ToList(); //ensure we only show up to 10 items in the list
                 }
                 mainRibbon.RibbonAppButton.AppButtonRecentDocs.AddRange(recentJobs.ToArray());
             }
@@ -422,6 +432,17 @@ namespace SurveyManager
             {
                 Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
                 Settings.Default.Save();
+            }
+        }
+
+
+        private class CompareRecentJobs : IComparer<KryptonRibbonRecentDoc>
+        {
+            public int Compare(KryptonRibbonRecentDoc x, KryptonRibbonRecentDoc y)
+            {
+                DateTime xD = DateTime.Parse(x.ExtraText);
+                DateTime yD = DateTime.Parse(y.ExtraText);
+                return xD.CompareTo(yD);
             }
         }
 
@@ -442,12 +463,12 @@ namespace SurveyManager
                         ChangeTitleText("[JOB# " + recentDoc.Text + "]");
                     }
 
-                    if (JobHandler.Instance.CurrentJobState == JobState.InvalidJob)
+                    if (JobHandler.Instance.CurrentJobState == JobState.InvalidJob || JobHandler.Instance.CurrentJobState == JobState.OpenError)
                     {
-                        ChangeStatusText(this, new StatusArgs("The selected job no longer exists! It was probably deleted; removing from recent jobs list."));
-                        if (Settings.Default.RecentJobs.Contains(recentDoc.Text))
+                        ChangeStatusText(this, new StatusArgs("The selected job no longer exists! It was probably deleted or never existed. Removing from recent jobs list..."));
+                        if (Settings.Default.RecentJobs.Contains($"{recentDoc.Text}\t{recentDoc.ExtraText}"))
                         {
-                            Settings.Default.RecentJobs.Remove(recentDoc.Text);
+                            Settings.Default.RecentJobs.Remove($"{recentDoc.Text}\t{recentDoc.ExtraText}");
                             Settings.Default.Save();
                             UpdateRecentDocs();
                         }

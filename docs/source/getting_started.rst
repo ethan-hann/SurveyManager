@@ -124,11 +124,14 @@ in the View Panel are also editable and provide a quick shortcut to edit some at
   :width: 800
   :alt: Open view panel
 
+.. tip:: Editing a property in the View panel, for instance the name of the **Client** for the job, will also change the underlying object in the database when you save the job.
+   So, if you change the Name property for the **Client**, save the job, and then view all Clients, you will see the changed name in the properties for that client. What this means is that
+   the properties for the objects associated with the job are actually mapped to database tables.
 
 Adding a Client Object
 ----------------------
 
-Now that we have a job with basic information, the next step is to add a client object. This can be accomplished a few different ways. See the reference page for :ref:`creating a new client <creating-a-client>` for more information about client objects.
+Now that we have a job with basic information, the next step is to add a client object. This can be accomplished a few different ways. See the reference page for :ref:`creating a new client <creating-a-client>` for more information about client objects and objects in general.
 For now, we will add the client using the **Client** command on the **Survey** ribbon. To do this, click the drop-down arrow underneath the ``Client`` button in the Associated Objects group and then click the ``New...`` button.
 
 .. image:: images/add_client_button.png

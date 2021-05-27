@@ -268,7 +268,7 @@
     <Compile Include="backend\wrappers\CFile.cs" />
     <Compile Include="backend\wrappers\Client.cs" />
     <Compile Include="backend\wrappers\County.cs" />
-    <Compile Include="backend\wrappers\DatabaseWrapper.cs" />
+    <Compile Include="backend\wrappers\IDatabaseWrapper.cs" />
     <Compile Include="backend\wrappers\SurveyJob\Rate.cs" />
     <Compile Include="backend\wrappers\Realtor.cs" />
     <Compile Include="backend\wrappers\SurveyJob\Billing.cs" />
@@ -316,6 +316,12 @@
     </Compile>
     <Compile Include="forms\dialogs\EllipterActivation.Designer.cs">
       <DependentUpon>EllipterActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\DeleteMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\DeleteMessageForm.Designer.cs">
+      <DependentUpon>DeleteMessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\SettingsDialog\AppSettings.cs">
       <SubType>Form</SubType>
@@ -534,6 +540,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\MessageForm.resx">
       <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\DeleteMessageForm.resx">
+      <DependentUpon>DeleteMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\RichMessageForm.resx">
       <DependentUpon>RichMessageForm.cs</DependentUpon>

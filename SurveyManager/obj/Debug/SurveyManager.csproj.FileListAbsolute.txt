@@ -202,3 +202,8 @@ D:\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\SurveyManager.exe.mani
 D:\Documents\GitHub\SurveyManager\SurveyManager\bin\Debug\SurveyManager.application
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe.manifest
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.application
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.ResolveComReference.cache
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.EllipterActivation.resources
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.TrustInfo.xml
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.forms.dialogs.DeleteMessageForm.resources

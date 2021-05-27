@@ -11,7 +11,7 @@ namespace SurveyManager.forms.pages
 {
     public class NewPage : KryptonPage
     {
-        public NewPage(EntityTypes entity, DatabaseWrapper o = null)
+        public NewPage(EntityTypes entity, IDatabaseWrapper o = null)
         {
             if (entity == EntityTypes.TitleCompany)
                 Text = "New Title Company";

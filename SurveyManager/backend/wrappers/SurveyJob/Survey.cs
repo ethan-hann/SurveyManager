@@ -11,7 +11,7 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    public class Survey : ExpandableObjectConverter, DatabaseWrapper
+    public class Survey : ExpandableObjectConverter, IDatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
@@ -43,6 +43,13 @@ namespace SurveyManager.backend.wrappers
         [ReadOnly(true)]
         [DisplayName("Survey")]
         public string SurveyName { get; set; } = "N/A";
+
+        [Category("Survey Information")]
+        [Description("The time and date this job was last updated.")]
+        [Browsable(true)]
+        [ReadOnly(true)]
+        [DisplayName("Last Updated")]
+        public DateTime LastUpdated { get; set; } = DateTime.Now;
 
         [Category("Subdivision")]
         [Description("The subdivision, if any, this survey job is located. If a subdivision is specified, the lot number, block number, and section number should also be specified.")]

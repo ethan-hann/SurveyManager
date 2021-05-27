@@ -10,7 +10,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
     /// Class to represent one line item in a survey job's bill. Multiple line items can be added to a survey.
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    public class LineItem : DatabaseWrapper
+    public class LineItem : IDatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }

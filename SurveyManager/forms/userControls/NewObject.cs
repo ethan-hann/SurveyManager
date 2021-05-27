@@ -13,11 +13,11 @@ namespace SurveyManager.forms.userControls
     public partial class NewObject : UserControl
     {
         private readonly EntityTypes entity;
-        private DatabaseWrapper obj;
+        private IDatabaseWrapper obj;
 
         public EventHandler StatusUpdate;
 
-        public NewObject(EntityTypes entity, DatabaseWrapper o = null)
+        public NewObject(EntityTypes entity, IDatabaseWrapper o = null)
         {
             InitializeComponent();
 

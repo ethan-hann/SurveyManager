@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Working With Objects &mdash; SurveyManager 1.0.0.0 documentation</title>
@@ -13,6 +14,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -92,12 +95,9 @@
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Working With Objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#clients">Clients</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-client">Creating a new Client</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#finding-an-existing-client">Finding an Existing Client</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editing-clients">Editing Clients</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-client">Creating a new Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-an-existing-client">Finding an Existing Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-clients">Editing Clients</a></li>
 </ul>
 </li>
 </ul>
@@ -171,7 +171,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="working-with-objects">
+  <section id="working-with-objects">
 <h1>Working With Objects<a class="headerlink" href="#working-with-objects" title="Permalink to this headline">¶</a></h1>
 <p>Objects provide the basis for many of the functions of Survey Manager. There are four types of objects you can create and manipulate:</p>
 <ul class="simple">
@@ -185,11 +185,8 @@
 <p>All of the steps and UI for creation and editing of these objects is the same. The only differences are in the type of data each object requires and what the object is used for.
 In the following examples, we will walk through how to create, find, and edit a Client object but remember that these steps apply to virtually any object in Survey Manager.</p>
 </div>
-<div class="section" id="clients">
-<span id="client-object"></span><h2>Clients<a class="headerlink" href="#clients" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/client_group.png"><img alt="Client group under Objects tab" src="_images/client_group.png" style="width: 200px;" /></a>
-<div class="section" id="creating-a-new-client">
-<span id="creating-a-client"></span><h3>Creating a new Client<a class="headerlink" href="#creating-a-new-client" title="Permalink to this headline">¶</a></h3>
+<section id="creating-a-new-client">
+<span id="creating-a-client"></span><h2>Creating a new Client<a class="headerlink" href="#creating-a-new-client" title="Permalink to this headline">¶</a></h2>
 <p>The following example assumes you have a working database connection ready to accept data.</p>
 <ol class="arabic">
 <li><p>Click on the <code class="docutils literal notranslate"><span class="pre">New</span></code> button in the <strong>Client</strong> group under the <strong>Objects</strong> ribbon tab.</p></li>
@@ -219,9 +216,9 @@ In this case, we will select <code class="docutils literal notranslate"><span cl
 Either way, the status bar at the bottom of the application window will update to indicate the status of the client creation.</p></li>
 </ol>
 <p>We now have a client object in the database with the name <strong>Bob</strong>.</p>
-</div>
-<div class="section" id="finding-an-existing-client">
-<h3>Finding an Existing Client<a class="headerlink" href="#finding-an-existing-client" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="finding-an-existing-client">
+<h2>Finding an Existing Client<a class="headerlink" href="#finding-an-existing-client" title="Permalink to this headline">¶</a></h2>
 <p>The following example assumes you have created a client object named <em>Bob</em> and it is present in the database.</p>
 <ol class="arabic">
 <li><p>Click on the <code class="docutils literal notranslate"><span class="pre">Find</span></code> button in the <strong>Client</strong> group under the <strong>Objects</strong> ribbon tab.</p></li>
@@ -245,12 +242,32 @@ filtered down to only include the results matching the search criteria. The stat
 The title of the page also changes to indicate that we are in a filtered view.</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/client_search_results.png"><img alt="Client search results page" src="_images/client_search_results.png" style="width: 800px;" /></a>
+</section>
+<section id="editing-clients">
+<h2>Editing Clients<a class="headerlink" href="#editing-clients" title="Permalink to this headline">¶</a></h2>
+<p>Editing objects is done from the View grid that is displayed either after searching for an object or viewing all objects.</p>
+<p>The following example assumes you have found an existing client object named <em>Bob</em> and you have the View grid open.</p>
+<ol class="arabic simple">
+<li><p>Click any cell in the View Grid, or alteratively select the entire row, for the client named <em>Bob</em>.</p></li>
+<li><p>The property grid below the View grid will update with the selected object’s information. In this case, we see the properties for the client object named <em>Bob</em>.</p></li>
+<li><p>To make edits to the object, simply change the corresponding data in the property grid much like when you created the object.</p></li>
+<li><p>Once done with your edits, click the <code class="docutils literal notranslate"><span class="pre">Save</span></code> button with the green check mark to save and update the selected object in the database.</p></li>
+<li><p>You can verify the object was saved by checking the status text in the bottom left of the application’s window or by clicking the <code class="docutils literal notranslate"><span class="pre">Refresh</span></code> button and viewing the edited objects
+data. The <code class="docutils literal notranslate"><span class="pre">Refresh</span></code> button loads the data straight from the database so whatever is viewed in the grids after clicking Refresh is what’s in the database.</p></li>
+</ol>
+<p>You can also delete objects from the View Grid. To do this, an entire row must be selected by clicking the farthest-left point of the row. All of the cells in that row will be highlighted indicating the row is selected:</p>
+<a class="reference internal image-reference" href="_images/select_grid_row.png"><img alt="Select an entire grid row" src="_images/select_grid_row.png" style="width: 600px;" /></a>
+<p>Once a row or multiple rows are selected, simply click the <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Selected</span> <span class="pre">Rows</span></code> button at the bottom right of the View grid. You will get a pop-up warning you about the pending deletion:</p>
+<a class="reference internal image-reference" href="_images/delete_record_confirm.png"><img alt="Deletion confirmation dialog" src="_images/delete_record_confirm.png" style="width: 400px;" /></a>
+<p>Ensure that the selected objects in the list view on the right of the dialog match what you intended and then confirm the deletion. The dialog will explain what will be deleted in addition to the selected object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you recieve and error after confirming the deletion, it is because the selected object is already being referenced by another object and therefore it cannot be deleted.
+Either delete the object that references the one you are trying to delete or change the reference to be another object. As of now, the application makes no attempt to direct you to
+the object doing the referencing.</p>
 </div>
-<div class="section" id="editing-clients">
-<h3>Editing Clients<a class="headerlink" href="#editing-clients" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

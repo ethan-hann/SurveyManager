@@ -11,14 +11,17 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 {
     /// <summary>
     /// This class is a wrapper for a list of <see cref="BillingItem"/>s and <see cref="LineItem"/>s.
-    /// <para>This class implements the <see cref="DatabaseWrapper"/> interface to facilitate easier database operations with the two internal lists.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations with the two internal lists.
     /// When any of the interface methods are called, each list is iterated and depending on the method called, the objects are inserted, updated, or deleted from the database.</para>
-    /// <para>The objects in each list also implement the <see cref="DatabaseWrapper"/> class so they can also be inserted, updated, or deleted from the database easily.</para>
+    /// <para>The objects in each list also implement the <see cref="IDatabaseWrapper"/> class so they can also be inserted, updated, or deleted from the database easily.</para>
     /// </summary>
-    public class Billing : DatabaseWrapper
+    public class Billing : IDatabaseWrapper
     {
         private readonly List<BillingItem> items = new List<BillingItem>();
         private readonly List<LineItem> lineItems = new List<LineItem>();
+
+        [Browsable(false)]
+        public int ID { get; set; } = 0;
 
         [Browsable(false)]
         public string LineItemIds { get; set; } = "N/A";

@@ -5,8 +5,12 @@ namespace SurveyManager.backend.wrappers
     /// <summary>
     /// All classes that are considered to be database wrappers should implement this interface.
     /// </summary>
-    public interface DatabaseWrapper
+    public interface IDatabaseWrapper
     {
+        /// <summary>
+        /// The id (primary key) of the database record.
+        /// </summary>
+        public int ID { get; set; }
         /// <summary>
         /// Define the behaviour for inserting the object's data into the database.
         /// </summary>

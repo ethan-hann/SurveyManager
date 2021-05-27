@@ -349,7 +349,7 @@ namespace SurveyManager.utility
             }
         }
 
-        public bool SaveJob(bool addToRecents = true)
+        public bool SaveJob()
         {
             if (!IsJobOpen)
             {
@@ -384,11 +384,6 @@ namespace SurveyManager.utility
                 }
             }
 
-            if (addToRecents)
-            {
-                AddSurveyToRecentJobs();
-            }
-
             return true;
         }
 
@@ -410,6 +405,7 @@ namespace SurveyManager.utility
 
         private void SaveBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
+            CurrentJob.LastUpdated = DateTime.Now;
             if (CurrentJob.ID == 0)
                 saveError = CurrentJob.Insert();
             else
@@ -430,10 +426,12 @@ namespace SurveyManager.utility
             if (_jobState != JobState.SaveError && isClosing)
             {
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
+                AddSurveyToRecentJobs();
                 Close();
             }
             else
             {
+                AddSurveyToRecentJobs();
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
             }
         }
@@ -495,13 +493,32 @@ namespace SurveyManager.utility
 
         public void AddSurveyToRecentJobs()
         {
-            if (!Settings.Default.RecentJobs.Contains(CurrentJob.JobNumber))
+            int index = -1;
+            foreach (string str in Settings.Default.RecentJobs)
             {
-                Settings.Default.RecentJobs.Add(CurrentJob.JobNumber);
-                Settings.Default.Save();
-
-                RuntimeVars.Instance.MainForm.UpdateRecentDocs();
+                string[] parts = str.Split('\t');
+                if (parts.Length != 2)
+                    return;
+                string jobNumber = parts[0];
+                if (jobNumber.Equals(CurrentJob.JobNumber))
+                {
+                    index = Settings.Default.RecentJobs.IndexOf(str);
+                    break;
+                }
             }
+
+            if (index != -1)
+            {
+                Settings.Default.RecentJobs[index] = $"{CurrentJob.JobNumber}\t{CurrentJob.LastUpdated}";
+                Settings.Default.Save();
+            }
+            else
+            {
+                Settings.Default.RecentJobs.Add($"{CurrentJob.JobNumber}\t{CurrentJob.LastUpdated}");
+                Settings.Default.Save();
+            }
+
+            RuntimeVars.Instance.MainForm.UpdateRecentDocs();
         }
     }
 }

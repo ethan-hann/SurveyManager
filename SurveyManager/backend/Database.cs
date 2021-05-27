@@ -1458,6 +1458,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@15", s.BillingObject.GetLineItemIds());
                         cmd.Parameters.AddWithValue("@16", s.GetNotesString());
                         cmd.Parameters.AddWithValue("@17", s.SurveyName);
+                        cmd.Parameters.AddWithValue("@18", s.LastUpdated);
 
 
                         cmd.Connection = con;
@@ -1519,6 +1520,7 @@ namespace SurveyManager.backend
                         cmd.Parameters.AddWithValue("@16", s.BillingObject.GetLineItemIds());
                         cmd.Parameters.AddWithValue("@17", s.GetNotesString());
                         cmd.Parameters.AddWithValue("@18", s.SurveyName);
+                        cmd.Parameters.AddWithValue("@19", s.LastUpdated);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1585,7 +1587,8 @@ namespace SurveyManager.backend
                                 FileIds = reader.GetString(13),
                                 LocationID = reader.GetInt32(14),
                                 NotesString = reader.GetString(17),
-                                SurveyName = reader.GetString(18)
+                                SurveyName = reader.GetString(18),
+                                LastUpdated = reader.GetDateTime(19)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1641,7 +1644,8 @@ namespace SurveyManager.backend
                                 FileIds = reader.GetString(13),
                                 LocationID = reader.GetInt32(14),
                                 NotesString = reader.GetString(17),
-                                SurveyName = reader.GetString(18)
+                                SurveyName = reader.GetString(18),
+                                LastUpdated = reader.GetDateTime(19)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1699,7 +1703,8 @@ namespace SurveyManager.backend
                                     FileIds = reader.GetString(13),
                                     LocationID = reader.GetInt32(14),
                                     NotesString = reader.GetString(17),
-                                    SurveyName = reader.GetString(18)
+                                    SurveyName = reader.GetString(18),
+                                    LastUpdated = reader.GetDateTime(19)
                                 };
 
                                 if (reader.IsDBNull(11))

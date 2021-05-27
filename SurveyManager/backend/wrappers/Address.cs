@@ -9,7 +9,7 @@ namespace SurveyManager.backend.wrappers
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
-    public class Address : ExpandableObjectConverter, DatabaseWrapper
+    public class Address : ExpandableObjectConverter, IDatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }

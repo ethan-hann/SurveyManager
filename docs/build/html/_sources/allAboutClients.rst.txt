@@ -12,15 +12,6 @@ Objects provide the basis for many of the functions of Survey Manager. There are
 .. attention:: All of the steps and UI for creation and editing of these objects is the same. The only differences are in the type of data each object requires and what the object is used for.
    In the following examples, we will walk through how to create, find, and edit a Client object but remember that these steps apply to virtually any object in Survey Manager.
 
-.. _client-object:
-
-Clients
-^^^^^^^
-
-.. image:: images/client_group.png
-  :width: 200
-  :alt: Client group under Objects tab
-
 .. _creating-a-client:
 
 Creating a new Client
@@ -83,3 +74,31 @@ The following example assumes you have created a client object named *Bob* and i
 
 Editing Clients
 ---------------
+Editing objects is done from the View grid that is displayed either after searching for an object or viewing all objects.
+
+The following example assumes you have found an existing client object named *Bob* and you have the View grid open.
+
+1. Click any cell in the View Grid, or alteratively select the entire row, for the client named *Bob*.
+2. The property grid below the View grid will update with the selected object's information. In this case, we see the properties for the client object named *Bob*.
+3. To make edits to the object, simply change the corresponding data in the property grid much like when you created the object.
+4. Once done with your edits, click the ``Save`` button with the green check mark to save and update the selected object in the database.
+5. You can verify the object was saved by checking the status text in the bottom left of the application's window or by clicking the ``Refresh`` button and viewing the edited objects
+   data. The ``Refresh`` button loads the data straight from the database so whatever is viewed in the grids after clicking Refresh is what's in the database.
+
+You can also delete objects from the View Grid. To do this, an entire row must be selected by clicking the farthest-left point of the row. All of the cells in that row will be highlighted indicating the row is selected:
+
+.. image:: images/select_grid_row.png
+  :width: 600
+  :alt: Select an entire grid row
+
+Once a row or multiple rows are selected, simply click the ``Delete Selected Rows`` button at the bottom right of the View grid. You will get a pop-up warning you about the pending deletion:
+
+.. image:: images/delete_record_confirm.png
+  :width: 400
+  :alt: Deletion confirmation dialog
+
+Ensure that the selected objects in the list view on the right of the dialog match what you intended and then confirm the deletion. The dialog will explain what will be deleted in addition to the selected object.
+
+.. note:: If you recieve and error after confirming the deletion, it is because the selected object is already being referenced by another object and therefore it cannot be deleted.
+   Either delete the object that references the one you are trying to delete or change the reference to be another object. As of now, the application makes no attempt to direct you to
+   the object doing the referencing.

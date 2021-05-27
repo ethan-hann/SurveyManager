@@ -6,7 +6,7 @@ namespace SurveyManager.backend.wrappers
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
-    public class County : ExpandableObjectConverter, DatabaseWrapper
+    public class County : ExpandableObjectConverter, IDatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }

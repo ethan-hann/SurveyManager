@@ -100,7 +100,7 @@ namespace SurveyManager.forms.userControls
             this.btnDeleteRow.HeaderLocation = ComponentFactory.Krypton.Toolkit.HeaderLocation.SecondaryHeader;
             this.btnDeleteRow.Image = global::SurveyManager.Properties.Resources.delete_16x16;
             this.btnDeleteRow.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Standalone;
-            this.btnDeleteRow.Text = "Delete Row";
+            this.btnDeleteRow.Text = "Delete Selected Rows";
             this.btnDeleteRow.ToolTipBody = "Deletes the selected row entry from the database.";
             this.btnDeleteRow.ToolTipTitle = "Delete";
             this.btnDeleteRow.UniqueName = "12A3525AC11A4985AB8BD4CBA1F36584";
@@ -121,7 +121,6 @@ namespace SurveyManager.forms.userControls
             this.dataGrid.GroupBox = this.groupBox;
             this.dataGrid.GroupCollection = outlookGridGroupCollection1;
             this.dataGrid.Location = new System.Drawing.Point(0, 31);
-            this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.PreviousSelectedGroupRow = -1;
             this.dataGrid.ReadOnly = true;

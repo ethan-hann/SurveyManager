@@ -33,10 +33,10 @@ namespace SurveyManager.utility
 
         public class DBObjectArgs : EventArgs
         {
-            public DatabaseWrapper Object { get; internal set; }
+            public IDatabaseWrapper Object { get; internal set; }
             public EntityTypes Type { get; internal set; }
 
-            public DBObjectArgs(DatabaseWrapper obj, EntityTypes type)
+            public DBObjectArgs(IDatabaseWrapper obj, EntityTypes type)
             {
                 Object = obj;
                 Type = type;

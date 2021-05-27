@@ -4,9 +4,9 @@ namespace SurveyManager.utility
 {
     public class DragDropInfo
     {
-        public DatabaseWrapper Wrapper { get; private set; }
+        public IDatabaseWrapper Wrapper { get; private set; }
 
-        public DragDropInfo(DatabaseWrapper wrapper)
+        public DragDropInfo(IDatabaseWrapper wrapper)
         {
             Wrapper = wrapper;
         }

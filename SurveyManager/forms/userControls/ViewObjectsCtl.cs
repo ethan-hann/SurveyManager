@@ -340,48 +340,102 @@ namespace SurveyManager.forms.userControls
             }
         }
 
-        DatabaseWrapper objToDelete;
+        List<IDatabaseWrapper> objectsToDelete;
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
-            if (dataGrid.SelectedRows.Count == 1)
+            objectsToDelete = new List<IDatabaseWrapper>();
+            if (dataGrid.SelectedRows.Count > 0)
             {
-                string confirmText = "The following is what will be deleted based on the type of object the grid is displaying:\n" +
-                "Surveys       ->\tdelete the survey record, all associated files, and all associated billing line items.\n\n" +
-                "Clients       ->\tdelete the client record and the associated address record; can only delete if the client is not referenced anywhere else.\n\n" +
-                "Realtors      ->\tdelete the realtor record only; can only delete if the realtor is not referenced anywhere else.\n\n" +
-                "Title Company ->\tdelete the title company record only; can only delete if the title company is not referenced anywhere else.\n\n";
-
-                DialogResult confirm = CRichMsgBox.Show("Are you sure you want to delete this record?\nTHIS IS A DESTRUCTIVE OPERATION AND CANNOT BE REVERSED!", "Confirm", confirmText, MessageBoxButtons.YesNo, Resources.warning_64x64);
-                if (confirm == DialogResult.Yes)
+                foreach (DataGridViewRow row in dataGrid.SelectedRows)
                 {
-                    objToDelete = dataGrid.SelectedRows[0].Tag as DatabaseWrapper;
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Attempting to delete {typeOfData} {objToDelete}..."));
-                    loadProgressBar.Value = 0;
-                    loadProgressBar.Visible = true;
-                    deleteBgWorker.RunWorkerAsync();
-                }
-                else
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Canceled deletion of {typeOfData} {objToDelete}..."));
+                    objectsToDelete.Add(row.Tag as IDatabaseWrapper);
                 }
             }
             else
             {
-                StatusUpdate?.Invoke(this, new StatusArgs("No row selected; nothing to delete."));
+                StatusUpdate?.Invoke(this, new StatusArgs("No row(s) are selected. There is nothing to delete."));
+                return;
+            }
+
+            DialogResult confirm = ShowDeleteDialog();
+            if (confirm == DialogResult.Yes)
+            {
+                if (typeOfData == EntityTypes.TitleCompany)
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Attempting to delete {objectsToDelete.Count} Title Companies..."));
+                else
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Attempting to delete {objectsToDelete.Count} {typeOfData}s..."));
+
+                loadProgressBar.Value = 0;
+                loadProgressBar.Visible = true;
+                deleteBgWorker.RunWorkerAsync();
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs($"Canceled deletion of {objectsToDelete.Count} {typeOfData}s."));
             }
         }
 
+        private DialogResult ShowDeleteDialog()
+        {
+            string rtfHeader = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil Segoe UI;}{\\f1\\fnil\fcharset0 Segoe UI;}{\\f2\\fnil\\fcharset0 Arial;}}" +
+                                "{\\colortbl;\\red255\\green0\\blue0; }" +
+                                "{\\*\\generator Riched20 10.0.19041}\\viewkind4\\uc1" +
+                                "\\pard\\ri-1800\\cf1\\f0\\fs19 The following will be deleted based on the type of object the grid is\\f1  \\f0 displaying\\f1  and what is selected:\\par\\cf0\\b\\f2\\fs22\\par";
+            string rtfText = "";
+            string totalText;
+
+            switch (typeOfData)
+            {
+                case EntityTypes.Client:
+                {
+                    rtfText = "\\pard\\b\\f0\\fs22 Client\\f1\\b0 - \\cf1\\f0 delete the client record and the associated address record; can only delete if the client is not referenced anywhere else.\\f2\\fs20\\par}\n";
+                    break;
+                }
+                case EntityTypes.Survey:
+                {
+                    rtfText = "\\pard\\b\\f0\\fs22 Survey\\f1\\b0 - \\cf1\\f0 delete the survey record, all associated files, and all associated billing line items.\\f2\\fs20\\par}\n";
+                    break;
+                }
+                case EntityTypes.Realtor:
+                {
+                    rtfText = "\\pard\\b\\f0\\fs22 Realtor\\f1\\b0 - \\cf1\\f0 delete the realtor record only; can only delete if the realtor is not referenced anywhere else.\\f2\\fs20\\par}\n";
+                    break;
+                }
+                case EntityTypes.TitleCompany:
+                {
+                    rtfText = "\\pard\\b\\f0\\fs22 Title Company\\f1\\b0 - \\cf1\\f0 delete the title company record only; can only delete if the title company is not referenced anywhere else.\\f2\\fs20\\par}\n";
+                    break;
+                }
+                case EntityTypes.Rate:
+                {
+                    rtfText = "\\pard\\b\\f0\\fs22 Rate\\f1\\b0 - \\cf1\\f0 delete the rate record only; can only delete if the rate is not referenced anywhere else.\\f2\\fs20\\par}\n";
+                    break;
+                }
+            }
+            totalText = rtfHeader + "\n" + rtfText;
+            return CRichMsgBox.ShowDeleteDialog("Are you sure you want to delete this record?\nTHIS IS A DESTRUCTIVE OPERATION AND CANNOT BE REVERSED!", "Confirm", totalText, true, MessageBoxButtons.YesNo, Resources.warning_64x64, objectsToDelete);
+        }
+
         DatabaseError deleteError;
+        IDatabaseWrapper currentObjectToDelete;
         private void deleteBgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            deleteError = objToDelete.Delete();
-
+            int i = 0;
+            foreach (IDatabaseWrapper wrap in objectsToDelete)
+            {
+                currentObjectToDelete = wrap;
+                deleteError = wrap.Delete();
+                if (deleteError != DatabaseError.NoError)
+                    break;
+                deleteBgWorker.ReportProgress((i / objectsToDelete.Count) * 100);
+            }
         }
 
         private void deleteBgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             loadProgressBar.Value = e.ProgressPercentage;
+            StatusUpdate?.Invoke(this, new StatusArgs($"Deleting {typeOfData} {currentObjectToDelete}..."));
         }
 
         private void deleteBgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -397,7 +451,10 @@ namespace SurveyManager.forms.userControls
                 {
                     CMessageBox.Show("This object can not be deleted. Most likely it is referenced elsewhere or the database connection was interupted.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                     loadProgressBar.Visible = false;
-                    StatusUpdate?.Invoke(this, new StatusArgs($"Could not perform deletion on {typeOfData} {objToDelete}."));
+                    if (typeOfData == EntityTypes.TitleCompany)
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Could not perform deletion on {objectsToDelete.Count} Title Companies."));
+                    else
+                        StatusUpdate?.Invoke(this, new StatusArgs($"Could not perform deletion on {objectsToDelete.Count} {typeOfData}."));
                     return;
                 }
             }
@@ -412,7 +469,7 @@ namespace SurveyManager.forms.userControls
             if (propGrid.SelectedObject == null)
                 return;
 
-            DatabaseWrapper obj = (DatabaseWrapper)propGrid.SelectedObject;
+            IDatabaseWrapper obj = (IDatabaseWrapper)propGrid.SelectedObject;
             DatabaseError error = obj.Update();
             switch (error)
             {
