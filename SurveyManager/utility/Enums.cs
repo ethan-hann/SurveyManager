@@ -476,6 +476,7 @@ namespace SurveyManager.utility
             InvalidJob,
             DuplicateJobNumber,
             NoJobOpened,
+            ReadOnly,
             None
         }
     }

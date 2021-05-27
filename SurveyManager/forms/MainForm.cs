@@ -435,7 +435,6 @@ namespace SurveyManager
             }
         }
 
-
         private class CompareRecentJobs : IComparer<KryptonRibbonRecentDoc>
         {
             public int Compare(KryptonRibbonRecentDoc x, KryptonRibbonRecentDoc y)
@@ -1020,23 +1019,23 @@ namespace SurveyManager
                 if (texts[0].Contains("JOB"))
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", texts[0]) :
                         string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                            + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), texts[0]);
+                            + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"{texts[0]}{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
                 else if (texts[0].Contains("\\\\"))
                 {
                     if (JobHandler.Instance.IsJobOpen)
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber} OPEN BUT DISABLED]") :
                             string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
                     else
                         Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
                             string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[NO JOB OPEN]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
                 }
             }
             else
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[NO JOB OPEN]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
         }
 
         private void UpdateTitleText()
@@ -1044,17 +1043,17 @@ namespace SurveyManager
             if (JobHandler.Instance.IsJobOpen)
                 Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
             else
             {
                 if (RuntimeVars.Instance.DatabaseConnected)
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[NO JOB OPEN]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
                 else
                     Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
                     string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
-                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[NO JOB OPEN]{(JobHandler.Instance.ReadOnly ? " - READ-ONLY" : "")}");
             }
         }
         #endregion
@@ -1142,6 +1141,27 @@ namespace SurveyManager
             }
         }
 
+        private void btnToggleReadOnly_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                JobHandler.Instance.ReadOnly = !JobHandler.Instance.ReadOnly;
+
+                if (JobHandler.Instance.ReadOnly)
+                {
+                    btnToggleReadOnly.ImageLarge = Resources.toggle_on_64x64;
+                    btnToggleReadOnly.ImageSmall = Resources.toggle_on_16x16;
+                }
+                else
+                {
+                    btnToggleReadOnly.ImageLarge = Resources.toggle_off_64x64;
+                    btnToggleReadOnly.ImageSmall = Resources.toggle_off_16x16;
+                }
+
+                UpdateTitleText();
+            }
+        }
+
         private void btnBasicInfo_Click(object sender, EventArgs e)
         {
             if (licensed)
@@ -1198,33 +1218,44 @@ namespace SurveyManager
                     return;
                 }
 
+                KryptonPage viewPage = new KryptonPage();
+                ViewPanel panel = new ViewPanel();
+                panel.Dock = DockStyle.Fill;
+
                 if (!JobHandler.Instance.IsJobOpen)
                 {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_View.ToDescriptionString()));
-                    return;
-                }
-
-                KryptonPage viewPanel = new KryptonPage
-                {
-                    Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
-                    TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
-                    UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
-                    ImageSmall = Resources.view_16x16,
-                    ImageLarge = Resources.view
-                };
-                viewPanel.Controls.Add(new ViewPanel()
-                {
-                    Dock = DockStyle.Fill
-                });
-
-                if (!dockingManager.ContainsPage(viewPanel))
-                {
-                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+                    viewPage = new KryptonPage
+                    {
+                        Text = "No Job Opened",
+                        TextTitle = "No Job Opened",
+                        UniqueName = "No Job Opened",
+                        ImageSmall = Resources.view_16x16,
+                        ImageLarge = Resources.view
+                    };
+                    viewPage.Controls.Add(panel);
+                    panel.CreateEmptyJob();
                 }
                 else
                 {
-                    dockingManager.RemovePage(viewPanel, true);
-                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+                    viewPage = new KryptonPage
+                    {
+                        Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                        TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                        UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                        ImageSmall = Resources.view_16x16,
+                        ImageLarge = Resources.view
+                    };
+                    viewPage.Controls.Add(panel);
+                }
+
+                if (!dockingManager.ContainsPage(viewPage))
+                {
+                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPage });
+                }
+                else
+                {
+                    dockingManager.RemovePage(viewPage, true);
+                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPage });
                 }
             }
         }
@@ -1745,7 +1776,7 @@ namespace SurveyManager
                 if (choice == ExitChoice.SaveAndExit)
                 {
                     JobHandler.Instance.SaveJob();
-                    JobHandler.Instance.CloseJob();
+                    JobHandler.Instance.CloseJob(true);
                     Application.Exit();
                 }
                 else if (choice == ExitChoice.ExitNoSave)

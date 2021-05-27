@@ -88,6 +88,9 @@ namespace SurveyManager.utility
 
         private bool _savePending = false;
 
+        /// <summary>
+        /// Get a value indicating if the current job needs saving because of modification.
+        /// </summary>
         public bool SavePending
         {
             get
@@ -107,6 +110,11 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Get or set whether this job should be considered read-only and therefore non-editable.
+        /// </summary>
+        public bool ReadOnly { get; set; } = false;
+
         private JobState _jobState = JobState.None;
 
         /// <summary>
@@ -120,12 +128,24 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Update whether there is a save pending on the current job.
+        /// <para>Has no effect if the job is opened as Read-Only.</para>
+        /// </summary>
+        /// <param name="isSavePending">True if a save is pending; False otherwise.</param>
+        /// <returns>The new value for <see cref="SavePending"/></returns>
         public bool UpdateSavePending(bool isSavePending)
         {
-            _savePending = IsJobOpen ? isSavePending : false;
+            _savePending = IsJobOpen && !ReadOnly ? isSavePending : false;
             return SavePending;
         }
 
+        /// <summary>
+        /// Open an existing survey job for editing.
+        /// <para>This method affects the <see cref="CurrentJobState"/> property and Invokes the <see cref="StatusUpdate"/> event.</para>
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to open.</param>
+        /// <returns>True if the job was opened successfully; False otherwise.</returns>
         public bool OpenJob(Survey s)
         {
             if (IsJobOpen)
@@ -138,43 +158,41 @@ namespace SurveyManager.utility
                 }
             }
 
+            if (IsJobOpen && SavePending && !ReadOnly)
+            {
+                ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
+                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true);
+                switch (choice)
+                {
+                    case ExitChoice.SaveAndExit:
+                    {
+                        isClosing = true;
+                        Save();
+                        Close();
+                        break;
+                    }
+                    case ExitChoice.ExitNoSave:
+                    {
+                        isClosing = true;
+                        Close();
+                        break;
+                    }
+                    case ExitChoice.SaveOnly:
+                    {
+                        Save();
+                        return false;
+                    }
+                    case ExitChoice.Cancel:
+                    {
+                        StatusUpdate?.Invoke(this, new StatusArgs("Opening of Job# " + s.JobNumber + " canceled."));
+                        return false;
+                    }
+                }
+            }
+
             _jobState = Open(s);
             switch (_jobState)
             {
-                case JobState.SavePending:
-                {
-                    ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
-                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true);
-                    switch (choice)
-                    {
-                        case ExitChoice.SaveAndExit:
-                        {
-                            isClosing = true;
-                            Save();
-                            Close();
-                            OpenJob(s);
-                            break;
-                        }
-                        case ExitChoice.ExitNoSave:
-                        {
-                            isClosing = true;
-                            Close();
-                            OpenJob(s);
-                            break;
-                        }
-                        case ExitChoice.SaveOnly:
-                        {
-                            Save();
-                            return false;
-                        }
-                        case ExitChoice.Cancel:
-                        {
-                            StatusUpdate?.Invoke(this, new StatusArgs("Opening of Job# " + s.JobNumber + " canceled."));
-                            return false;
-                        }
-                    }
-                    break;
-                }
                 case JobState.OpenError:
                 {
                     StatusUpdate?.Invoke(this, new StatusArgs("An error occured while trying to open Job#: " + s.JobNumber + ". Perhaps it doesn't actually exist."));
@@ -189,6 +207,12 @@ namespace SurveyManager.utility
             return CurrentJob != null;
         }
 
+        /// <summary>
+        /// Open an existing survey job for editing.
+        /// <para>This method affects the <see cref="CurrentJobState"/> property and Invokes the <see cref="StatusUpdate"/> event.</para>
+        /// </summary>
+        /// <param name="jobNumber">The Job# of the survey job to open.</param>
+        /// <returns>True if the job was opened successfully; False otherwise.</returns>
         public bool OpenJob(string jobNumber)
         {
             if (IsJobOpen && jobNumber.Equals(CurrentJob.JobNumber))
@@ -198,7 +222,7 @@ namespace SurveyManager.utility
                 return false;
             }
 
-            if (IsJobOpen && SavePending)
+            if (IsJobOpen && SavePending && !ReadOnly)
             {
                 ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
                     "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true);
@@ -259,27 +283,41 @@ namespace SurveyManager.utility
                 return JobState.OpenError;
             CurrentJob = s;
 
+            _jobState = JobState.Opened;
+
             JobOpened?.Invoke(this, new StatusArgs($"Job# {jobNumber} opened successfully."));
-            return JobState.Opened;
+            return _jobState;
         }
 
         private JobState Open(Survey s)
         {
-            if (IsJobOpen && SavePending)
-                return JobState.SavePending;
+            if (IsJobOpen)
+            {
+                _jobState = Close();
+                if (_jobState != JobState.Closed)
+                    return _jobState;
+            }
 
             JobOpening?.Invoke(this, new StatusArgs($"Opening Job# {s.JobNumber}. Please wait..."));
             if (s == null)
                 return JobState.InvalidJob;
             CurrentJob = s;
 
+            _jobState = JobState.Opened;
+
             JobOpened?.Invoke(this, new StatusArgs($"Job# {s.JobNumber} opened successfully."));
-            return JobState.Opened;
+            return _jobState;
         }
 
+        /// <summary>
+        /// Create a new job and open it for editing.
+        /// <para>This method affects the <see cref="CurrentJobState"/> property and Invokes the <see cref="StatusUpdate"/> event.</para>
+        /// </summary>
+        /// <param name="jobNumber">The Job# of the survey job to create.</param>
+        /// <returns>True if the job was created successfully; False otherwise.</returns>
         public bool CreateJob(string jobNumber)
         {
-            if (IsJobOpen && SavePending)
+            if (IsJobOpen && SavePending && !ReadOnly)
             {
                 ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
                     "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true);
@@ -327,9 +365,6 @@ namespace SurveyManager.utility
 
         private JobState Create(string jobNumber)
         {
-            if (IsJobOpen && SavePending)
-                return JobState.SavePending;
-
             JobCreating?.Invoke(this, new StatusArgs($"Creating Job# {jobNumber}. Please wait..."));
 
             if (!Database.DoesSurveyExist(jobNumber))
@@ -349,8 +384,20 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Save the job to the database on a seperate thread if it is open and not in a Read-Only state.
+        /// <para>This method affects the <see cref="CurrentJobState"/> property and Invokes the <see cref="StatusUpdate"/> event.</para>
+        /// </summary>
+        /// <returns>True if the job was saved successfully; False otherwise.</returns>
         public bool SaveJob()
         {
+            if (ReadOnly && IsJobOpen)
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs($"Job# {CurrentJob.JobNumber} opened in READ-ONLY mode. Cannot save to database."));
+                _jobState = JobState.ReadOnly;
+                return false;
+            }
+                
             if (!IsJobOpen)
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("There is no job currently opened, therefore there is nothing to save."));
@@ -390,12 +437,12 @@ namespace SurveyManager.utility
         DatabaseError saveError = DatabaseError.NoError;
         private JobState Save()
         {
+            if (CurrentJob == null || !CurrentJob.IsValidSurvey)
+                return JobState.InvalidJob;
+
             _jobState = JobState.Saving;
             JobSaving?.Invoke(this, new StatusArgs($"Saving Job# {CurrentJob.JobNumber} to the database. Please wait..."));
             lastJobNumber = CurrentJob.JobNumber;
-
-            if (CurrentJob != null && !CurrentJob.IsValidSurvey)
-                return JobState.InvalidJob;
 
             //start saving the job on a background thread
             saveBackgroundWorker.RunWorkerAsync();
@@ -436,44 +483,59 @@ namespace SurveyManager.utility
             }
         }
 
-        public bool CloseJob(bool isOpeningOtherJob = false)
+        /// <summary>
+        /// Close the currently open job.
+        /// <para>This method affects the <see cref="CurrentJobState"/> property and Invokes the <see cref="StatusUpdate"/> event.</para>
+        /// </summary>
+        /// <param name="isClosingApplication">Whether the main application is exiting.</param>
+        /// <param name="isOpeningOtherJob">Whether another survey job is pending opening.</param>
+        /// <returns>True if the job was closed successfully; False otherwise.</returns>
+        public bool CloseJob(bool isClosingApplication = false, bool isOpeningOtherJob = false)
         {
-            if (IsJobOpen && SavePending)
+            if (IsJobOpen && SavePending && !ReadOnly)
             {
-                ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
-                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true, isOpeningOtherJob);
-                switch (choice)
+                if (isClosingApplication)
                 {
-                    case ExitChoice.SaveAndExit:
+                    _jobState = Close();
+                }
+                else
+                {
+                    ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
+                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true, isOpeningOtherJob);
+                    switch (choice)
                     {
-                        isClosing = true;
-                        Save();
-                        break;
-                    }
-                    case ExitChoice.ExitNoSave:
-                    {
-                        Close();
-                        break;
-                    }
-                    case ExitChoice.SaveOnly:
-                    {
-                        Save();
+                        case ExitChoice.SaveAndExit:
+                        {
+                            isClosing = true;
+                            Save();
+                            break;
+                        }
+                        case ExitChoice.ExitNoSave:
+                        {
+                            Close();
+                            break;
+                        }
+                        case ExitChoice.SaveOnly:
+                        {
+                            Save();
+                            return false;
+                        }
+                        case ExitChoice.Cancel:
+                        {
+                            StatusUpdate?.Invoke(this, new StatusArgs("Closing of Job# " + CurrentJob.JobNumber + " canceled."));
+                            _jobState = JobState.CloseCancelled;
+                            return false;
+                        }
+                        default:
                         return false;
                     }
-                    case ExitChoice.Cancel:
-                    {
-                        StatusUpdate?.Invoke(this, new StatusArgs("Closing of Job# " + CurrentJob.JobNumber + " canceled."));
-                        _jobState = JobState.CloseCancelled;
-                        return false;
-                    }
-                    default:
-                    return false;
                 }
             }
             else
             {
                 _jobState = Close();
             }
+
             return _jobState != JobState.CloseError;
         }
 
@@ -491,6 +553,10 @@ namespace SurveyManager.utility
             return JobState.Closed;
         }
 
+        /// <summary>
+        /// Add the current survey job to <see cref="Settings.RecentJobs"/>.
+        /// If the job is already present in the list of recent jobs, its <see cref="Survey.LastUpdated"/> is updated instead.
+        /// </summary>
         public void AddSurveyToRecentJobs()
         {
             int index = -1;

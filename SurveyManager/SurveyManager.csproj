@@ -1028,6 +1028,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\toggle_on_64x64.png" />
+    <None Include="Resources\toggle_on_16x16.png" />
+    <None Include="Resources\toggle_off_64x64.png" />
+    <None Include="Resources\toggle_off_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
