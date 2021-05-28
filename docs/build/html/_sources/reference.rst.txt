@@ -8,5 +8,5 @@ To get more information about a specific ribbon command or page, select it's top
     :maxdepth: 4
     :caption: Contents:
 
-    newSurveyJob
     advancedSearch
+    surveyRibbon

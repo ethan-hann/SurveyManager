@@ -13,26 +13,26 @@ The Ribbon
 
 The ribbon is similar to Office-style applications and functions in much the same way. It can be collapsed by double-clicking a tab's name or by using the small arrow to the far right of the ribbon.
 The commands on the ribbon are laid out as logically as possible. The main tab, **Survey**, contains commands useful for creating and manipulating existing survey jobs as well as some application specific
-commands such as a link to this Help and the Activation dialog. See **INSERT LINK TO SURVEY TAB REFERENCE HERE**
+commands such as a link to this Help and the Activation dialog.
 
 .. image:: images/survey_tab.png
   :width: 600
   :alt: Survey ribbon tab
 
-The next tab, **Objects**, contains commands for creating, editing, and viewing the different objects that can be created to associate with a survey job. See **INSERT LINK TO OBJECTS TAB REFERENCE HERE**
+The next tab, **Objects**, contains commands for creating, editing, and viewing the different objects that can be created to associate with a survey job.
 
 .. image:: images/objects_tab.png
   :width: 400
   :alt: Objects ribbon tab
 
-The last tab, **Database**, contains commands for defining the database connection and interacting at a lower level with the database. See **INSERT LINK TO DATABASE TAB REFERENCE HERE**
+The last tab, **Database**, contains commands for defining the database connection and interacting at a lower level with the database.
 
 .. image:: images/database_tab.png
   :width: 200
   :alt: Database ribbon tab
 
 The ribbon also has a **Menu** drop-down which contains commands to edit the settings, see the about dialog, and check for updates as well as exit the application. This drop-down also
-houses the most recently opened survey jobs so opening a currently worked on job is quick and easy. See **INSERT LINK TO MENU DROP-DOWN REFERENCE HERE**
+houses the most recently opened survey jobs so opening a currently worked on job is quick and easy. The date and time shown is when the job was last updated/saved not necessarily when it was opened last.
 
 .. image:: images/menu_drop_down.png
   :width: 600
@@ -42,7 +42,7 @@ The Workspace
 ^^^^^^^^^^^^^
 
 The workspace in the center of the application's window allows for dragging and dropping of pages and panels. Pages can be docked to either the top, bottom, left, or right of the window as well as
-become thier own "floating" window which also allows docking. Let's look at a simple example:
+become their own "floating" window which also allows docking. Let's look at a simple example:
 
 Suppose we have the **View Panel** open (which shows us information about the currently opened job). By default, this panel will dock itself to the right of the screen:
 
@@ -77,4 +77,3 @@ To move pages, simply drag their title to a new location, following the diamond 
 Floating windows can be moved around (even to another monitor), resized, and can also contain other windows in what is essentially a floating tab-group.
 
 **The UI is highly customizable and it is up to you how you would like to re-arrange things so that the application can fit your workflow!**
-

@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorials" href="tutorials.html" />
-    <link rel="prev" title="New Survey Job" href="newSurveyJob.html" /> 
+    <link rel="next" title="The Survey Ribbon Tab" href="surveyRibbon.html" />
+    <link rel="prev" title="Reference" href="reference.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,11 +94,11 @@
 <li class="toctree-l1"><a class="reference internal" href="user_interface.html">Introducing the User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_help.html">Need More Help?</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="newSurveyJob.html">New Survey Job</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Advanced Search Dialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#searching-for-a-survey">Searching for a Survey</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="surveyRibbon.html">The Survey Ribbon Tab</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
@@ -172,7 +172,7 @@
            <div itemprop="articleBody">
             
   <section id="advanced-search-dialog">
-<h1>Advanced Search Dialog<a class="headerlink" href="#advanced-search-dialog" title="Permalink to this headline">¶</a></h1>
+<span id="advancedsearch"></span><h1>Advanced Search Dialog<a class="headerlink" href="#advanced-search-dialog" title="Permalink to this headline">¶</a></h1>
 <p>The Advanced Search Dialog is a context-sensitive dialog that is used in multiple places throughout Survey Manager to search, filter, and find objects in the database. It allows multiple criteria to be
 searched against a single database table.</p>
 <p>Let’s walk through the options in the dialog. We will look at the dialog for searching Survey Jobs but the procedure is exactly the same no matter what you are searching for.</p>
@@ -241,12 +241,12 @@ have to add a row first.</p>
 <a class="reference internal image-reference" href="_images/asd_example2.png"><img alt="Editing the search text for newly added row" src="_images/asd_example2.png" style="width: 600px;" /></a>
 <ol class="arabic simple" start="6">
 <li><p>Now, let’s say we also know the acreage of the job. We can also search for that. In the same way as we added the Job# search, let’s add a search for the acreage. However, this time, in the second combo-box,
-select <strong>Greater</strong>. Enter <strong>5</strong> in the search text and click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Filter</span></code> button to add it to the grid.</p></li>
+select <strong>Greater</strong>. Enter <strong>5.00</strong> in the search text and click the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Filter</span></code> button to add it to the grid.</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/asd_example3.png"><img alt="Adding another row to the search" src="_images/asd_example3.png" style="width: 600px;" /></a>
 <ol class="arabic simple" start="7">
 <li><p>You may notice that the <em>Boolean</em> column in the grid for the second row now says <strong>AND</strong>. Any subsequent rows after the first one will have a boolean operation applied on them to combine with the other rows.</p></li>
-<li><p>The search we have built is essentially saying: <em>Find me all Survey Jobs in which the Job# contains 21- AND the Job has an acreage GREATER THAN 5.00</em>.</p></li>
+<li><p>The search we have built is essentially saying: <strong>Find me all Survey Jobs in which the Job# contains 21- AND the Job has an acreage GREATER THAN 5.00</strong>.</p></li>
 <li><p>Clicking the <code class="docutils literal notranslate"><span class="pre">Search</span></code> button will compile the rows into a query and display the results:</p></li>
 </ol>
 <a class="reference internal image-reference" href="_images/asd_survey_results.png"><img alt="Survey search results" src="_images/asd_survey_results.png" style="width: 600px;" /></a>
@@ -259,8 +259,8 @@ select <strong>Greater</strong>. Enter <strong>5</strong> in the search text and
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="newSurveyJob.html" class="btn btn-neutral float-left" title="New Survey Job" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="surveyRibbon.html" class="btn btn-neutral float-right" title="The Survey Ribbon Tab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="reference.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

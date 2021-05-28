@@ -7,7 +7,7 @@ This section will show you how to quickly get started with creating and editing 
 Setup
 ^^^^^
 
-Licenseing
+Licensing
 ----------
 
 The first launch of the application may look something like this:
@@ -31,8 +31,8 @@ At any time, you can click the ``Activation`` button to change/update your produ
   :width: 300
   :alt: Activation window for Survey Manager
 
-.. important:: Once a product key has been entered, you can not "unlicense" the application. Even if you enter an invalid product key afterwards, Survey Manager will continue to use the
-   last valid product key that was entered. In this way, you are protected from accidently unlicenseing the application.
+.. important:: Once a product key has been entered, you can not "un-license" the application. Even if you enter an invalid product key afterwards, Survey Manager will continue to use the
+   last valid product key that was entered. In this way, you are protected from accidentally un-licensing the application.
 
 Connecting to a Database
 ------------------------
@@ -57,7 +57,7 @@ This will open a dialog where you can enter the connection details. Simply fill 
 
 .. important:: Only one of these connection dialogs can be opened at a time. If you try to open another one, a pop-up will show giving you an error.
 
-Once all required fields are entered, click the ``Test Connection`` button in the title bar of the dialog to begin connecting to the database. If no error occured, a new button will appear, ``Finished`` that will close the dialog and save the connection.
+Once all required fields are entered, click the ``Test Connection`` button in the title bar of the dialog to begin connecting to the database. If no error occurred, a new button will appear, ``Finished`` that will close the dialog and save the connection.
 
 .. image:: images/database_connection_success.png
   :width: 400
@@ -118,7 +118,7 @@ Then, you can close the Basic Information page.
 
 At any time, you can open a view panel that will show an overview of the currently opened job. This panel opens to the right side and only one panel can be opened at a time. To open it, click
 the ``Open View Panel`` button under the Current Job group on the Survey Ribbon tab. This view does not update in real time, however it can be refreshed by clicking the ``Refresh`` button on the panel. Certain fields
-in the View Panel are also editable and provide a quick shortcut to edit some attributes of the job.
+in the View Panel are also editable and provide a quick shortcut to edit some attributes of the job. *This panel will update if you open another job with it showing*.
 
 .. image:: images/open_view_panel_1.png
   :width: 800
@@ -169,7 +169,7 @@ We now have the absolute minimum amount of information needed to save the job to
 Saving the Job Persistently
 ---------------------------
 
-All of the changes so far (with the exeception of the Client) have not touched the database. The survey job is still in your local computer's memory. In order to make the survey persistant and allow others to open it,
+All of the changes so far (with the exception of the Client) have not touched the database. The survey job is still in your local computer's memory. In order to make the survey persistent and allow others to open it,
 you must click the ``Save`` button under the Current Job group on the Survey ribbon. This will insert the survey (if it's a new job) or update (if it's an opened one) in the database. After doing this,
 the status bar will update to let you know the status of the saving. **It is worth noting that by default, there is an auto-save feature turned on that will save the opened job every 15 minutes. This is configurable in the Settings.**
 
@@ -177,5 +177,5 @@ the status bar will update to let you know the status of the saving. **It is wor
   :width: 300
   :alt: Save button for current job.
 
-This concludes the quickstart guide. There are many more functions available to you to manipulate surveys. You can add files, billing information, time entries, notes, a realtor, and a title company to the survey job.
+This concludes the quick-start guide. There are many more functions available to you to manipulate surveys. You can add files, billing information, time entries, notes, a realtor, and a title company to the survey job.
 You can also run reports on the data in the database. These reports show an overview of the survey job in an easy to print PDF format. Continue through this documentation to learn more about all of these features!

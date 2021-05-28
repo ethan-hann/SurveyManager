@@ -1,3 +1,5 @@
+.. _advancedSearch:
+
 ======================
 Advanced Search Dialog
 ======================
@@ -74,14 +76,14 @@ The following example will walk through how to use the dialog to find an existin
   :alt: Editing the search text for newly added row
 
 6. Now, let's say we also know the acreage of the job. We can also search for that. In the same way as we added the Job# search, let's add a search for the acreage. However, this time, in the second combo-box,
-   select **Greater**. Enter **5** in the search text and click the ``Add Filter`` button to add it to the grid.
+   select **Greater**. Enter **5.00** in the search text and click the ``Add Filter`` button to add it to the grid.
 
 .. image:: images/asd_example3.png
   :width: 600
   :alt: Adding another row to the search
 
 7. You may notice that the *Boolean* column in the grid for the second row now says **AND**. Any subsequent rows after the first one will have a boolean operation applied on them to combine with the other rows.
-8. The search we have built is essentially saying: *Find me all Survey Jobs in which the Job# contains 21- AND the Job has an acreage GREATER THAN 5.00*.
+8. The search we have built is essentially saying: **Find me all Survey Jobs in which the Job# contains 21- AND the Job has an acreage GREATER THAN 5.00**.
 9. Clicking the ``Search`` button will compile the rows into a query and display the results:
     
 .. image:: images/asd_survey_results.png
