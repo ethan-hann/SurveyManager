@@ -43,6 +43,8 @@ namespace SurveyManager.forms.userControls
             UpdateTotalTime();
 
             kryptonNavigator1.SelectedPage = pgTimeEntries;
+
+            //billingGrid.Enabled = JobHandler.Instance.ReadOnly ? false : true;
         }
 
         private void LoadData()
@@ -73,7 +75,8 @@ namespace SurveyManager.forms.userControls
                             item.ID,
                             item.Description,
                             item.FieldRate,
-                            Utility.ToFullString(item.FieldTime)
+                            Utility.ToFullString(item.FieldTime),
+                            "Field"
                         });
                         row.Tag = item;
                         rows.Add(row);
@@ -85,7 +88,8 @@ namespace SurveyManager.forms.userControls
                             item.ID,
                             item.Description,
                             item.OfficeRate,
-                            Utility.ToFullString(item.OfficeTime)
+                            Utility.ToFullString(item.OfficeTime),
+                            "Office"
                         });
                         row.Tag = item;
                         rows.Add(row);
@@ -165,6 +169,9 @@ namespace SurveyManager.forms.userControls
 
         private void btnAddTime_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             DateTime now = DateTime.Now;
             if (lbTimeEntries.Items.Contains(now.Date.ToShortDateString()))
             {
@@ -186,6 +193,9 @@ namespace SurveyManager.forms.userControls
 
         private void btnRemoveTime_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             DateTime selected = DateTime.Parse((string)lbTimeEntries.SelectedItem);
             DialogResult result = CMessageBox.Show($"Are you sure you want to remove {selected.Date.ToShortDateString()} from this job? " +
                 $"This will remove ALL time entries associated with {selected.Date.ToShortDateString()} from this job and cannot be reversed!",
@@ -217,6 +227,14 @@ namespace SurveyManager.forms.userControls
             }
         }
 
+        private void billingGrid_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (JobHandler.Instance.ReadOnly)
+            {
+                e.Cancel = true;
+                return;
+            }
+        }
 
         /// <summary>
         /// Occurs when the user deletes a row from the grid.
@@ -234,6 +252,9 @@ namespace SurveyManager.forms.userControls
 
         private void btnNewEntry_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             NewEntryDlg dialog = new NewEntryDlg(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]));
             dialog.TimeEntryAdded += ProcessItem;
             dialog.ShowDialog();
@@ -269,6 +290,9 @@ namespace SurveyManager.forms.userControls
 
         private void btnEditTime_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             if (billingGrid.SelectedRows.Count == 1)
             {
                 BillingItem item = billingGrid.SelectedRows[0].Tag as BillingItem;
@@ -280,6 +304,9 @@ namespace SurveyManager.forms.userControls
 
         private void billingGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             if (e.RowIndex >= 0)
             {
                 BillingItem item = billingGrid.Rows[e.RowIndex].Tag as BillingItem;
@@ -291,14 +318,17 @@ namespace SurveyManager.forms.userControls
 
         private void btnSaveAndUpdate_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             SaveItems();
         }
 
         protected override void Dispose(bool disposing)
         {
-            //When this user control is disposed (closed), update the currently open job with the new billing line items.
-            SaveItems();
-
+            if (!JobHandler.Instance.ReadOnly)
+                //When this user control is disposed (closed), update the currently open job with the new billing line items.
+                SaveItems();
 
             if (disposing && (components != null))
             {

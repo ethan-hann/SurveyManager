@@ -165,12 +165,22 @@ namespace SurveyManager.utility
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
                     columnsToAdd.Add(timeColumn);
+                    DataGridViewColumn typeColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Type",
+                        Name = "typeColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(typeColumn);
+
                     grid.Columns.AddRange(columnsToAdd.ToArray());
 
                     grid.AddInternalColumn(billingIdColumn, new OutlookGridDefaultGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(billingDescriptionColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(rateColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(timeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(typeColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 billing item", XXXItemsText = " billing items" }, SortOrder.None, -1, -1);
                     break;
                 }
                 case EntityTypes.Survey:

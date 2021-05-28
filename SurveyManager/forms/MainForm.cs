@@ -23,6 +23,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Deployment.Application;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -89,7 +90,7 @@ namespace SurveyManager
         private void InitializeDock()
         {
             DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
-            dockingManager.ManageControl("Control", kryptonPanel1, DockingWorkspace);
+            dockingManager.ManageControl("Control", borderPanel, DockingWorkspace);
             dockingManager.ManageFloating("Floating", this);
         }
 
@@ -1151,11 +1152,15 @@ namespace SurveyManager
                 {
                     btnToggleReadOnly.ImageLarge = Resources.toggle_on_64x64;
                     btnToggleReadOnly.ImageSmall = Resources.toggle_on_16x16;
+
+                    borderPanel.StateNormal.Color1 = Color.Red;
                 }
                 else
                 {
                     btnToggleReadOnly.ImageLarge = Resources.toggle_off_64x64;
                     btnToggleReadOnly.ImageSmall = Resources.toggle_off_16x16;
+
+                    borderPanel.StateNormal.Color1 = Color.FromArgb(255, 224, 192);
                 }
 
                 UpdateTitleText();
@@ -1332,6 +1337,12 @@ namespace SurveyManager
                 if (!JobHandler.Instance.IsJobOpen)
                 {
                     ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AttachFile.ToDescriptionString()));
+                    return;
+                }
+
+                if (JobHandler.Instance.ReadOnly)
+                {
+                    ChangeStatusText(this, new StatusArgs($"Job# {JobHandler.Instance.CurrentJob.JobNumber} opened in READ-ONLY mode. Cannot change Job's files."));
                     return;
                 }
 
@@ -1526,6 +1537,12 @@ namespace SurveyManager
                     return;
                 }
 
+                if (JobHandler.Instance.ReadOnly)
+                {
+                    ChangeStatusText(this, new StatusArgs($"Job# {JobHandler.Instance.CurrentJob.JobNumber} opened in READ-ONLY mode. Cannot change Job's client."));
+                    return;
+                }
+
                 ArrayList columns = new ArrayList
                 {
                     new DBMap("name", "Name"),
@@ -1576,13 +1593,19 @@ namespace SurveyManager
                     return;
                 }
 
+                if (JobHandler.Instance.ReadOnly)
+                {
+                    ChangeStatusText(this, new StatusArgs($"Job# {JobHandler.Instance.CurrentJob.JobNumber} opened in READ-ONLY mode. Cannot change Job's realtor."));
+                    return;
+                }
+
                 ArrayList columns = new ArrayList
-            {
-                new DBMap("name", "Name"),
-                new DBMap("phone_number", "Phone #"),
-                new DBMap("email_address", "Email"),
-                new DBMap("fax_number", "Fax #")
-            };
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("phone_number", "Phone #"),
+                    new DBMap("email_address", "Email"),
+                    new DBMap("fax_number", "Fax #")
+                };
 
                 AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
                 filter.FilterDone += SelectRealtor;
@@ -1626,13 +1649,19 @@ namespace SurveyManager
                     return;
                 }
 
+                if (JobHandler.Instance.ReadOnly)
+                {
+                    ChangeStatusText(this, new StatusArgs($"Job# {JobHandler.Instance.CurrentJob.JobNumber} opened in READ-ONLY mode. Cannot change Job's title company."));
+                    return;
+                }
+
                 ArrayList columns = new ArrayList
-            {
-                new DBMap("name", "Name"),
-                new DBMap("associate_name", "Associate's Name"),
-                new DBMap("associate_email", "Associate's Email"),
-                new DBMap("office_number", "Office #")
-            };
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("associate_name", "Associate's Name"),
+                    new DBMap("associate_email", "Associate's Email"),
+                    new DBMap("office_number", "Office #")
+                };
 
                 AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
                 filter.FilterDone += SelectTitleCompany;

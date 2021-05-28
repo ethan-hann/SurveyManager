@@ -123,7 +123,7 @@ namespace SurveyManager
             this.importDataBtn = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnSqlQuery = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.dockingManager = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.borderPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.dockableWorkspace = new ComponentFactory.Krypton.Docking.KryptonDockableWorkspace();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
@@ -134,8 +134,8 @@ namespace SurveyManager
             this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.borderPanel)).BeginInit();
+            this.borderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dockableWorkspace)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,6 +190,11 @@ namespace SurveyManager
             // office2013_edited
             // 
             this.office2013_edited.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2013White;
+            this.office2013_edited.FormStyles.FormCustom1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.office2013_edited.FormStyles.FormCustom1.StateCommon.Border.Rounding = 5;
+            this.office2013_edited.FormStyles.FormCustom1.StateCommon.Border.Width = 5;
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripFont = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.office2013_edited.ToolMenuStatus.MenuStrip.MenuStripText = System.Drawing.Color.Black;
@@ -210,7 +215,6 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
@@ -263,8 +267,8 @@ namespace SurveyManager
             // 
             // btnViewAllJobs
             // 
-            this.btnViewAllJobs.ImageLarge = global::SurveyManager.Properties.Resources.view;
-            this.btnViewAllJobs.ImageSmall = global::SurveyManager.Properties.Resources.view_16x16;
+            this.btnViewAllJobs.ImageLarge = global::SurveyManager.Properties.Resources.surveying;
+            this.btnViewAllJobs.ImageSmall = global::SurveyManager.Properties.Resources.surveying_16x16;
             this.btnViewAllJobs.TextLine1 = "View";
             this.btnViewAllJobs.TextLine2 = "All Jobs";
             this.btnViewAllJobs.ToolTipBody = "View all survey jobs.";
@@ -843,15 +847,16 @@ namespace SurveyManager
             this.dockingManager.DefaultCloseRequest = ComponentFactory.Krypton.Docking.DockingCloseRequest.RemovePageAndDispose;
             this.dockingManager.DockableWorkspaceCellAdding += new System.EventHandler<ComponentFactory.Krypton.Docking.DockableWorkspaceCellEventArgs>(this.dockingManager_DockableWorkspaceCellAdding);
             // 
-            // kryptonPanel1
+            // borderPanel
             // 
-            this.kryptonPanel1.Controls.Add(this.dockableWorkspace);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 115);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1536, 611);
-            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.kryptonPanel1.TabIndex = 5;
+            this.borderPanel.Controls.Add(this.dockableWorkspace);
+            this.borderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.borderPanel.Location = new System.Drawing.Point(0, 115);
+            this.borderPanel.Name = "borderPanel";
+            this.borderPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.borderPanel.Size = new System.Drawing.Size(1536, 611);
+            this.borderPanel.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.borderPanel.TabIndex = 5;
             // 
             // dockableWorkspace
             // 
@@ -859,7 +864,7 @@ namespace SurveyManager
             this.dockableWorkspace.CompactFlags = ((ComponentFactory.Krypton.Workspace.CompactFlags)(((ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptyCells | ComponentFactory.Krypton.Workspace.CompactFlags.RemoveEmptySequences) 
             | ComponentFactory.Krypton.Workspace.CompactFlags.PromoteLeafs)));
             this.dockableWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dockableWorkspace.Location = new System.Drawing.Point(0, 0);
+            this.dockableWorkspace.Location = new System.Drawing.Point(1, 1);
             this.dockableWorkspace.Name = "dockableWorkspace";
             // 
             // 
@@ -867,7 +872,7 @@ namespace SurveyManager
             this.dockableWorkspace.Root.UniqueName = "FD3F779B80FA42AB2284FE60B3AE5414";
             this.dockableWorkspace.Root.WorkspaceControl = this.dockableWorkspace;
             this.dockableWorkspace.ShowMaximizeButton = false;
-            this.dockableWorkspace.Size = new System.Drawing.Size(1536, 611);
+            this.dockableWorkspace.Size = new System.Drawing.Size(1534, 609);
             this.dockableWorkspace.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dockableWorkspace.TabIndex = 0;
             this.dockableWorkspace.TabStop = true;
@@ -906,13 +911,15 @@ namespace SurveyManager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1536, 749);
-            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.borderPanel);
             this.Controls.Add(this.mainRibbon);
             this.Controls.Add(this.mainStatusStrip);
-            this.CustomCaptionArea = new System.Drawing.Rectangle(332, 0, 1181, 26);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormCustom1;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.Palette = this.office2013_edited;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Survey Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -921,8 +928,8 @@ namespace SurveyManager
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.borderPanel)).EndInit();
+            this.borderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dockableWorkspace)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -962,7 +969,7 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton exportDataBtn;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton importDataBtn;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnSqlQuery;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel borderPanel;
         private ComponentFactory.Krypton.Docking.KryptonDockableWorkspace dockableWorkspace;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab surveyTab;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup jobsRibbonGroup;

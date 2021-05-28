@@ -31,6 +31,9 @@ namespace SurveyManager.forms.surveyMenu.description
         private void DescriptionCtl_Load(object sender, EventArgs e)
         {
             txtDescription.Text = JobHandler.Instance.CurrentJob.Description;
+
+            txtDescription.ReadOnly = JobHandler.Instance.ReadOnly;
+
             IsEdited = true;
         }
 

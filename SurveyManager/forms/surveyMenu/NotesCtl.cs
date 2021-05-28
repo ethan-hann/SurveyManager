@@ -34,6 +34,8 @@ namespace SurveyManager.forms.surveyMenu
                 txtNoteContents.Enabled = false;
 
             lblTotalNoteCount.Text = "Total # of Notes: " + lbNoteKeys.Items.Count;
+
+            txtNoteContents.ReadOnly = JobHandler.Instance.ReadOnly;
         }
 
         private void lbNoteKeys_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,6 +48,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnAddNote_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             DateTime now = DateTime.Now;
             notes.Add(now, "");
             lbNoteKeys.Items.Add(now);
@@ -61,6 +66,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnRemoveNote_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             DateTime selected = (DateTime)lbNoteKeys.SelectedItem;
             notes.Remove(selected);
             lbNoteKeys.Items.Remove(selected);
@@ -99,8 +107,9 @@ namespace SurveyManager.forms.surveyMenu
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            //When this user control is disposed (closed), update the currently open job with the new notes.
-            SaveNotes();
+            if (!JobHandler.Instance.ReadOnly)
+                //When this user control is disposed (closed), update the currently open job with the new notes.
+                SaveNotes();
 
             if (disposing && (components != null))
             {
@@ -117,7 +126,8 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
-            SaveNotes();
+            if (!JobHandler.Instance.ReadOnly)
+                SaveNotes();
         }
 
         private void SaveNotes()

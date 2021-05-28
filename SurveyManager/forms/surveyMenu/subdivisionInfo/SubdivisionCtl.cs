@@ -31,6 +31,12 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             txtSection.Text = JobHandler.Instance.CurrentJob.SectionNumber;
             txtBlock.Text = JobHandler.Instance.CurrentJob.BlockNumber;
             txtLot.Text = JobHandler.Instance.CurrentJob.LotNumber;
+
+            txtName.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtSection.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtBlock.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtLot.ReadOnly = JobHandler.Instance.ReadOnly;
+
             IsEdited = true;
         }
 

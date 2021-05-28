@@ -55,6 +55,8 @@ namespace SurveyManager.forms.userControls
                 propGrid.GetUploadFilesButton().Visible = true;
                 propGrid.GetDownloadFilesButton().Visible = true;
                 propGrid.GetOpenJobButton().Visible = true;
+                propGrid.GetAcceptButton().Enabled = JobHandler.Instance.ReadOnly ? false : true;
+                propGrid.GetUploadFilesButton().Enabled = JobHandler.Instance.ReadOnly ? false : true;
             }
 
             dataGrid.RegisterGroupBoxEvents();

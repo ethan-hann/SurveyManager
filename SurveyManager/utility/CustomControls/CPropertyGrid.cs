@@ -13,6 +13,7 @@ namespace SurveyManager.utility.CustomControls
         ToolStripButton uploadFiles = new ToolStripButton("Upload Files");
         ToolStripButton downloadFiles = new ToolStripButton("Download Files");
         ToolStripButton openJob = new ToolStripButton("Open Selected Job");
+        ToolStrip toolStrip = null;
 
         public CPropertyGrid()
         {
@@ -54,7 +55,6 @@ namespace SurveyManager.utility.CustomControls
 
         private void AddButtons()
         {
-            ToolStrip toolStrip = null;
             foreach (Control c in Controls)
             {
                 toolStrip = c as ToolStrip;
@@ -77,6 +77,11 @@ namespace SurveyManager.utility.CustomControls
                 downloadFiles.Visible = false;
                 openJob.Visible = false;
             }
+        }
+
+        public ToolStrip GetToolStrip()
+        {
+            return toolStrip;
         }
 
         public ToolStripButton GetAcceptButton()

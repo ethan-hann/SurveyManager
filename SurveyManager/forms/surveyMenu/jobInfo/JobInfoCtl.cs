@@ -26,6 +26,11 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             txtSurvey.Text = JobHandler.Instance.CurrentJob.SurveyName;
             txtNumOfAcres.Text = JobHandler.Instance.CurrentJob.Acres.ToString();
 
+            txtJobNumber.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtAbstract.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtSurvey.ReadOnly = JobHandler.Instance.ReadOnly;
+            txtNumOfAcres.ReadOnly = JobHandler.Instance.ReadOnly;
+
             IsEdited = true;
         }
 

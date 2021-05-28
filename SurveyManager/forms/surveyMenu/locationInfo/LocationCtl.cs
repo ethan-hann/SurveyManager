@@ -40,13 +40,18 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
                     cmbCounty.SelectedIndex = cmbCounty.Items.Cast<County>().ToList().FindIndex(e => e.ID == JobHandler.Instance.CurrentJob.CountyID);
                 }
 
+                txtStreet.ReadOnly = JobHandler.Instance.ReadOnly;
+                txtCity.ReadOnly = JobHandler.Instance.ReadOnly;
+                txtZipCode.ReadOnly = JobHandler.Instance.ReadOnly;
+                cmbCounty.Enabled = JobHandler.Instance.ReadOnly ? false : true;
+                btnSameAsClient.Enabled = JobHandler.Instance.ReadOnly ? false : true;
+
                 IsEdited = true;
             }
             catch (Exception)
             {
                 RuntimeVars.Instance.LogFile.AddEntry("Something went wrong while loading the location control on the basic information page. It seems there is not an open survey job?");
             }
-
         }
 
         private void textBox_Enter(object sender, EventArgs e)

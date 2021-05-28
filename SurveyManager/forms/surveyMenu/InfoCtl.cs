@@ -2,6 +2,7 @@
 using SurveyManager.forms.surveyMenu.jobInfo;
 using SurveyManager.forms.surveyMenu.locationInfo;
 using SurveyManager.forms.surveyMenu.subdivisionInfo;
+using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -45,6 +46,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             if (Save())
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("Job information successfully updated."));
@@ -72,7 +76,7 @@ namespace SurveyManager.forms.surveyMenu
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (!JobHandler.Instance.ReadOnly)
             {
                 if (Save())
                 {
@@ -82,7 +86,10 @@ namespace SurveyManager.forms.surveyMenu
                 {
                     StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's internal information. Please try again."));
                 }
-
+            }
+            
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);

@@ -90,6 +90,9 @@ namespace SurveyManager.forms.userControls
 
         private void CheckForAssociation()
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             if (JobHandler.Instance.IsJobOpen)
             {
                 if (entity != EntityTypes.Rate) //only associate with the open job if the object is not a Rate object.

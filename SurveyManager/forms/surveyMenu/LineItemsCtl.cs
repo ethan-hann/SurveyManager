@@ -36,6 +36,8 @@ namespace SurveyManager.forms.surveyMenu
 
             propGrid.GetAcceptButton().Visible = false;
             propGrid.GetClearButton().Visible = false;
+
+            propGrid.Enabled = JobHandler.Instance.ReadOnly ? false : true;
         }
 
         private void lbItems_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +50,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             LineItem item = new LineItem();
             lbItems.Items.Add(item);
 
@@ -62,6 +67,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             LineItem selected = (LineItem)lbItems.SelectedItem;
             lbItems.Items.Remove(selected);
             lbItems.SelectedIndex = lbItems.Items.Count - 1;
@@ -98,9 +106,9 @@ namespace SurveyManager.forms.surveyMenu
 
         protected override void Dispose(bool disposing)
         {
-            //When this user control is disposed (closed), update the currently open job with the new billing line items.
-            SaveItems();
-
+            if (!JobHandler.Instance.ReadOnly)
+                //When this user control is disposed (closed), update the currently open job with the new billing line items.
+                SaveItems();
 
             if (disposing && (components != null))
             {
@@ -111,6 +119,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+                return;
+
             SaveItems();
         }
 
