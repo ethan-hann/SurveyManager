@@ -14,9 +14,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
     [Serializable]
     public class BillingItem : ExpandableObjectConverter, IDatabaseWrapper
     {
-        /// <summary>
-        /// The id representing this billing item in the database.
-        /// </summary>
         [Browsable(false)]
         public int ID { get; set; }
 

@@ -4,6 +4,10 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
+    /// <summary>
+    /// This class represents a Title Company object. A title company is associated with a <see cref="SurveyJob.Survey"/>.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
     public class TitleCompany : ExpandableObjectConverter, IDatabaseWrapper
@@ -11,24 +15,36 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The full name of the title company.
+        /// </summary>
         [Category("Company Information")]
         [Description("The full name of the Title Company.")]
         [Browsable(true)]
         [DisplayName("Name")]
         public string Name { get; set; } = "N/A";
 
+        /// <summary>
+        /// The full name of the associate (point of contact) for the title company.
+        /// </summary>
         [Category("Company Information")]
         [Description("The full name of the associate at the title company.")]
         [Browsable(true)]
         [DisplayName("Associate's Name")]
         public string AssociateName { get; set; } = "N/A";
 
+        /// <summary>
+        /// The email address for the associated (point of contact) for the title company.
+        /// </summary>
         [Category("Company Information")]
         [Description("The email address of the associate at the title company.")]
         [Browsable(true)]
         [DisplayName("Associates Email")]
         public string AssociateEmail { get; set; } = "N/A";
 
+        /// <summary>
+        /// The phone number for the title company's office.
+        /// </summary>
         [Category("Company Information")]
         [Description("The phone number for the title company's office.")]
         [Browsable(true)]
@@ -37,7 +53,7 @@ namespace SurveyManager.backend.wrappers
 
         /// <summary>
         /// Get a value indiciating if this is a valid TitleCompany.
-        /// <para>A valid TitleCompany is one whose name, associate's name, and associate's email has length greater than 0 and is not equal to N/A.</para>
+        /// <para>A valid TitleCompany is one whose name, associate's name, and associate's email is not "N/A" and is not empty.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidCompany

@@ -269,12 +269,25 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the Address <emphasis>a</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Address to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="288" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="288" bodyend="323"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="293" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="293" bodyend="328"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7ca5707375157569c5baca628368089a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -286,12 +299,25 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Update in the database the Address <emphasis>a</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Address to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="325" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="325" bodyend="357"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="335" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="335" bodyend="367"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a679c26230876caca246e98da0643a252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
@@ -303,12 +329,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Address object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the address object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Address object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="359" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="359" bodyend="387"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="374" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="374" bodyend="402"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a76299dd6082439d9920c082e7908ecf8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -320,12 +359,25 @@
           <declname>a</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the Address object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Address to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the address was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="389" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="389" bodyend="424"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="409" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="409" bodyend="444"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a782b85359fa75b9fc67aa05d9ad183e7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -337,7 +389,7 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Inserts a new client into the database. </para>
+<para>Insert into the database the Client <emphasis>c</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -349,13 +401,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>True if the record was inserted successfully; False otherwise.</para>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="433" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="433" bodyend="470"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="453" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="453" bodyend="490"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a459ceb36fd35674fdf0a77e44152986b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -367,12 +419,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Update in the database the Client <emphasis>c</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Client to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="472" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="472" bodyend="508"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="497" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="497" bodyend="533"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aaddf8d933d882ca2e99c0222ed98baa3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
@@ -384,12 +449,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Client object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the client object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Client object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="510" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="510" bodyend="543"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="540" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="540" bodyend="573"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a905f3e8ddedea2f5131e625ae823daa0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref> &gt;</type>
@@ -397,12 +475,16 @@
         <argsstring>()</argsstring>
         <name>GetClients</name>
         <briefdescription>
+<para>Get from the database all Client objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of Client objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="545" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="545" bodyend="582"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="579" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="579" bodyend="616"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a1c137a5a8be03585d917104c10fa3955" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -414,12 +496,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the Client object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Client to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the client was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="584" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="584" bodyend="634"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="623" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="623" bodyend="673"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7a41f841827d130ea51efabd39b73e52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -431,12 +526,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the County <emphasis>c</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The County to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="638" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="638" bodyend="671"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="682" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="682" bodyend="715"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a51c885654e7e16e4616ca4c1022589d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -448,12 +556,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Update in the database the County <emphasis>c</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The County to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="673" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="673" bodyend="706"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="722" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="722" bodyend="755"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aec2294bfe5da883b774e310e26e4c00f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
@@ -465,12 +586,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the County object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the county object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An County object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="708" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="708" bodyend="734"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="762" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="762" bodyend="788"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1af7e877c814b334a5bbb4fb187e9a096b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref> &gt;</type>
@@ -478,12 +612,16 @@
         <argsstring>()</argsstring>
         <name>GetCounties</name>
         <briefdescription>
+<para>Get from the database all County objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of County objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="736" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="736" bodyend="766"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="794" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="794" bodyend="824"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aa3a5d51a28190e20f625954f74e2a805" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -495,12 +633,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the County object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The County to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the county was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="768" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="768" bodyend="803"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="831" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="831" bodyend="866"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab04025ba40d49b4fc7c4d7e06d059313" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -512,12 +663,25 @@
           <declname>r</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the Realtor <emphasis>r</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Realtor to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="807" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="807" bodyend="844"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="875" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="875" bodyend="912"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a92a433811b532a37502316f1f96f0542" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -529,12 +693,25 @@
           <declname>r</declname>
         </param>
         <briefdescription>
+<para>Update in the database the Realtor <emphasis>r</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Realtor to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="846" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="846" bodyend="883"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="919" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="919" bodyend="956"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a38f4d471619d63335dc78a35fa2a3b81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
@@ -546,12 +723,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Realtor object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the realtor object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Realtor object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="885" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="885" bodyend="915"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="963" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="963" bodyend="993"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a993073c50c460fc0851f94e8155cd675" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> &gt;</type>
@@ -559,12 +749,16 @@
         <argsstring>()</argsstring>
         <name>GetRealtors</name>
         <briefdescription>
+<para>Get from the database all Realtor objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of Realtor objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="917" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="917" bodyend="951"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="999" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="999" bodyend="1033"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a8dc63b69671472e88d3dedfa2d4eec54" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -576,12 +770,25 @@
           <declname>r</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the Realtor object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Realtor to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the realtor was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="953" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="953" bodyend="988"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1040" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1040" bodyend="1075"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a65610b31005f5105d83d985ab1f8b118" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -593,12 +800,25 @@
           <declname>t</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the TitleCompany <emphasis>t</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TitleCompany to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="992" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="992" bodyend="1028"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1084" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1084" bodyend="1120"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad83c18bbe0b9a972e3de357a6bc0ac43" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -610,12 +830,25 @@
           <declname>t</declname>
         </param>
         <briefdescription>
+<para>Update in the database the TitleCompany <emphasis>t</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TitleCompany to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1030" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1030" bodyend="1066"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1127" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1127" bodyend="1163"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a75ef9a4a6c0ae543377ca3ece86c33e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
@@ -627,12 +860,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the TitleCompany object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the title company object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An TitleCompany object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1068" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1068" bodyend="1097"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1170" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1170" bodyend="1199"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aa4040cd6a3577487641fa817d44e0d68" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref> &gt;</type>
@@ -640,12 +886,16 @@
         <argsstring>()</argsstring>
         <name>GetTitleCompanies</name>
         <briefdescription>
+<para>Get from the database all TitleCompany objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of TitleCompany objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1099" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1099" bodyend="1132"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1205" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1205" bodyend="1238"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a2fe185ce912c95acb5413080f782b2a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -657,12 +907,25 @@
           <declname>c</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the TitleCompany object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TitleCompany to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the title company was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1134" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1134" bodyend="1169"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1245" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1245" bodyend="1280"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a8f42c5ca67b3337973990de453e1c407" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -674,7 +937,7 @@
           <declname>file</declname>
         </param>
         <briefdescription>
-<para>Attempts to insert a new record into the File table. If the insert could not be completed, the transaction is rolled back and no data is committed to the database. </para>
+<para>Insert into the database the CFile <emphasis>file</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -682,17 +945,17 @@
 <parametername>file</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The CFile object to insert</para>
+<para>The CFile to insert.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>The row id of the inserted file; 0 if the file was not inserted.</para>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1180" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1180" bodyend="1219"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1290" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1290" bodyend="1329"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad78484feae68c659c192bbb976e736f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -704,7 +967,7 @@
           <declname>file</declname>
         </param>
         <briefdescription>
-<para>Update the CFile object in the database. If the file has an ID of 0, it is inserted instead. </para>
+<para>Update in the database the CFile <emphasis>file</emphasis> . If the file has an ID of 0, it is inserted instead. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -712,17 +975,17 @@
 <parametername>file</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The file to update/insert.</para>
+<para>The CFile to update.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>True if the update/insert completed successfully. False otherwise.</para>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1226" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1226" bodyend="1268"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1336" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1336" bodyend="1378"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a334290072c9a0ee6a25d9be0874f7c42" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
@@ -734,7 +997,7 @@
           <declname>id</declname>
         </param>
         <briefdescription>
-<para>Retrieve a single CFile record from the database. </para>
+<para>Get from the database the CFile object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -742,17 +1005,17 @@
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The id of the file record.</para>
+<para>The id of the file object.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A single CFile object representing the file record or <computeroutput>null</computeroutput> if no file was found</para>
+<simplesect kind="return"><para>An CFile object represented by the id.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1275" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1275" bodyend="1316"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1385" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1385" bodyend="1426"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a6a1b41e964e0f2d28a1854984c6d6d5d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
@@ -764,7 +1027,7 @@
           <declname>ids</declname>
         </param>
         <briefdescription>
-<para>Retrieves multiple files from the database based on the supplied ids. </para>
+<para>Get multiple files from the database based on the supplied ids. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -776,13 +1039,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A List&lt;T&gt; of type CFile containing the file objects or an empty List&lt;T&gt; if no files were found</para>
+<simplesect kind="return"><para>A list of CFile objects or an empty list if no files were found.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1323" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1323" bodyend="1369"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1433" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1433" bodyend="1479"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a61d8f843bf918fabb19a50c46d9b05ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -794,7 +1057,7 @@
           <declname>file</declname>
         </param>
         <briefdescription>
-<para>Attempts to delete a file record from the database. </para>
+<para>Delete from the database the CFile object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -802,17 +1065,17 @@
 <parametername>file</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The file to delete.</para>
+<para>The CFile to delete.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>True if the deleting was successfull; False otherwise.</para>
+<simplesect kind="return"><para>True if the file was deleted successfully; False otherwise.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1376" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1376" bodyend="1411"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1486" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1486" bodyend="1521"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aac9e134fc2ec1290a9775f162f7bdcee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -824,12 +1087,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the Survey <emphasis>s</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1415" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1415" bodyend="1476"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1530" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1530" bodyend="1591"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a455fbae199919d050a4c6992beeb926b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -841,12 +1117,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Update in the database the Survey <emphasis>s</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1478" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1478" bodyend="1538"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1598" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1598" bodyend="1658"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a0e008f2040899a1163fb85ccb044db07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -858,12 +1147,25 @@
           <declname>jobNumber</declname>
         </param>
         <briefdescription>
+<para>Search the database for the specified <emphasis>jobNumber</emphasis>  and get a value indicating if the job already exists. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jobNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job number to search for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the survey job already exists; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1540" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1540" bodyend="1557"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1665" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1665" bodyend="1682"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7fb854885b3a82474e7a1b75969016ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
@@ -875,12 +1177,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Survey object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the survey object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Survey object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1559" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1559" bodyend="1614"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1689" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1689" bodyend="1744"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a35af8a472459ec9c6baeba9919c95cab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
@@ -892,12 +1207,25 @@
           <declname>jobNumber</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Survey object represented by the job number <emphasis>jobNumber</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jobNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job number of the survey object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Survey object represented by the job number.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1616" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1616" bodyend="1671"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1751" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1751" bodyend="1806"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aac7f1560444d00d51719daab33891547" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref> &gt;</type>
@@ -905,12 +1233,16 @@
         <argsstring>()</argsstring>
         <name>GetSurveys</name>
         <briefdescription>
+<para>Get from the database all Survey objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of Survey objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1673" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1673" bodyend="1733"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1812" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1812" bodyend="1872"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a0a9832eb6868c6fae0302ed4d3975d63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -922,12 +1254,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the Survey object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the survey was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1735" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1735" bodyend="1770"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1879" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1879" bodyend="1914"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a28e00b00998596a5050f2b5b1366a6d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -939,12 +1284,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the LineItem <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LineItem to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1774" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1774" bodyend="1809"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1923" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1923" bodyend="1958"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1add7a60004a0f816847270d044fdd03a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -956,12 +1314,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Update in the database the LineItem <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LineItem to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1811" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1811" bodyend="1848"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1965" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1965" bodyend="2002"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a00ea4a3932fe4df81666dd7124725fff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref></type>
@@ -973,12 +1344,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the LineItem object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the line item object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An LineItem object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1850" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1850" bodyend="1878"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2009" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2009" bodyend="2037"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a927e87b7ad94e4db858397537c2e3ff6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref> &gt;</type>
@@ -990,12 +1374,25 @@
           <declname>ids</declname>
         </param>
         <briefdescription>
+<para>Get multiple LineItem objects from the database based on the supplied ids. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A variable length parameter: the list of ids of the line item records to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of LineItem objects or an empty list if no line items were found.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1880" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1880" bodyend="1912"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2044" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2044" bodyend="2076"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ae84caa90c941232ebfc8f12cfc4a0ddf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1007,12 +1404,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the LineItem object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LineItem to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the line item was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1914" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1914" bodyend="1949"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2083" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2083" bodyend="2118"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aea3c098021feb5c1c61139714a6500a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1024,12 +1434,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the Rate <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Rate to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1953" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1953" bodyend="1989"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2127" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2127" bodyend="2163"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ae415393d9ed83fd642050cac256aa1cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1041,12 +1464,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Update in the database the Rate <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Rate to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1991" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1991" bodyend="2029"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2170" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2170" bodyend="2208"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1abdaed10988b5e54352ba43d5e8120d9a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
@@ -1058,12 +1494,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the Rate object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the rate object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An Rate object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2031" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2031" bodyend="2060"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2215" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2215" bodyend="2244"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a9be33b1d9715401054fbf01890d256a8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref> &gt;</type>
@@ -1071,12 +1520,16 @@
         <argsstring>()</argsstring>
         <name>GetRates</name>
         <briefdescription>
+<para>Get from the database all Rate objects. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>A list of Rate objects.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2062" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2062" bodyend="2096"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2250" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2250" bodyend="2284"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab050cd15767263eb4ba08f87c0d1eca3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref> &gt;</type>
@@ -1088,12 +1541,25 @@
           <declname>ids</declname>
         </param>
         <briefdescription>
+<para>Get multiple Rate objects from the database based on the supplied ids. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A variable length parameter: the list of ids of the rate records to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of Rate objects or an empty list if no rates were found.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2098" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2098" bodyend="2133"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2291" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2291" bodyend="2326"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a2c31a9bc2c2279af61cc52179df70e85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1105,12 +1571,25 @@
           <declname>rate</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the Rate object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Rate to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the rate was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2135" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2135" bodyend="2170"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2333" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2333" bodyend="2368"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1acb900ea3fc320da916ab3ffb986d5dc7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1122,12 +1601,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Insert into the database the BillingItem <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BillingItem to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted object.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2173" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2173" bodyend="2211"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2376" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2376" bodyend="2414"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a80789485582df7f95352116a39fe3150" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1139,12 +1631,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Update in the database the BillingItem <emphasis>item</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BillingItem to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update was successfull; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2213" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2213" bodyend="2253"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2421" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2421" bodyend="2461"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab76f4e8f89561a06d063baef16fbec0f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
@@ -1156,12 +1661,25 @@
           <declname>id</declname>
         </param>
         <briefdescription>
+<para>Get from the database the BillingItem object represented by the primary key <emphasis>id</emphasis> . </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the billing item object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An BillingItem object represented by the id.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2255" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2255" bodyend="2288"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2468" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2468" bodyend="2501"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ac1fcbc39e2fef5d9958d8beee66f76c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref> &gt;</type>
@@ -1173,12 +1691,25 @@
           <declname>ids</declname>
         </param>
         <briefdescription>
+<para>Get multiple BillingItem objects from the database based on the supplied ids. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A variable length parameter: the list of ids of the billing item records to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of BillingItem objects or an empty list if no rates were found.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2290" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2290" bodyend="2329"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2508" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2508" bodyend="2547"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aea0b2b3834982c8fd3a5e35d274d77bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1190,12 +1721,25 @@
           <declname>item</declname>
         </param>
         <briefdescription>
+<para>Delete from the database the BillingItem object. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BillingItem to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the billing item was deleted successfully; False otherwise.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2331" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2331" bodyend="2366"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2554" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2554" bodyend="2589"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1203,7 +1747,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="19" bodyend="2368"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="19" bodyend="2591"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1backend_1_1_database_1a44efbc085ed396b144957037f3efef8d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>CheckConnection</name></member>
       <member refid="class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>ConnectionString</name></member>

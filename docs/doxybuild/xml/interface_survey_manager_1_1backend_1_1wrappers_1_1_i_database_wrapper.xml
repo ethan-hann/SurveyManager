@@ -47,7 +47,7 @@
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ac41d66161da30df0ce6fc79983278d71">Insert</reimplementedby>
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9ef5e1ad6e5b803f440fdee0dc80f2ea">Insert</reimplementedby>
         <briefdescription>
-<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+<para>Defines the behaviour for inserting the object&apos;s data into the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -75,7 +75,7 @@
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a54b1a16245a6b9d0f74bdb49373ea538">Update</reimplementedby>
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a4a59cf6b20464a71961fb87e513755c0">Update</reimplementedby>
         <briefdescription>
-<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+<para>Defines the behaviour for updating the object&apos;s data in the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -103,7 +103,7 @@
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ab3310de0c68c754f22d72bbdea99bc73">Delete</reimplementedby>
         <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af7c71c2deef8c85ce287c0ba24d17bb1">Delete</reimplementedby>
         <briefdescription>
-<para>Define the behaviour for deleting the object from the database. </para>
+<para>Defines the behaviour for deleting the object from the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>

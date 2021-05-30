@@ -16,24 +16,36 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// A brief description of the the service or product this rate represents.
+        /// </summary>
         [Category("Rate Information")]
         [Description("The service or product this rate represents.")]
         [Browsable(true)]
         [DisplayName("Description")]
         public string Description { get; set; } = "N/A";
 
+        /// <summary>
+        /// The dollar amount (USD) associated with this rate.
+        /// </summary>
         [Category("Rate Information")]
         [Description("The dollar amount to charge for this rate.")]
         [Browsable(true)]
         [DisplayName("Amount")]
         public decimal Amount { get; set; } = 0.00m;
 
+        /// <summary>
+        /// The <see cref="TimeUnit"/> describing how often this rate should be billed. The default is <see cref="TimeUnit.Hour"/> (per hour).
+        /// </summary>
         [Category("Rate Information")]
         [Description("The time unit describing how often this rate should be billed. The default is per Hour.")]
         [Browsable(true)]
         [DisplayName("Time Unit")]
         public TimeUnit TimeUnit { get; set; } = TimeUnit.Hour;
 
+        /// <summary>
+        /// Should tax be included in the final amount for this rate?
+        /// </summary>
         [Category("Rate Information")]
         [Description("Should tax be included in the final amount for this rate? The tax rate can be set in the application's settings.")]
         [Browsable(true)]
@@ -41,7 +53,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         public bool TaxIncluded { get; set; } = true;
 
         /// <summary>
-        /// Checks the description, amount, and county to ensure this is a valid rate.
+        /// Get a value indicating if this is a valid rate. A valid rate is one whose <see cref="Description"/> is 
+        /// not "N/A" and <see cref="Amount"/> is not 0.00.
         /// </summary>
         [Browsable(false)]
         public bool IsValidRate

@@ -1,0 +1,1056 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Database Class &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Database Class</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/code-reference/database.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="database-class">
+<h1>Database Class<a class="headerlink" href="#database-class" title="Permalink to this headline">¶</a></h1>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.Database">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.Database</span></span><a class="headerlink" href="#class-SurveyManager.backend.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class responsible for handling database connections and is the main class used to insert, update, and select records. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.Server">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a6fee263071bc29c770f2eebe65e9911f"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">Server</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.Server" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname of the database connection </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.Port">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a4e0152f8039081533ca710a336ce8e67"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">Port</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.Port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port the database connection is listening on </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.DB">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a3f3dda477e2db2ef3f743e8f23d82e3c"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">DB</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.DB" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the database to connect to </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.Username">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ad57ac0a6c9da3ce36887241720e1ef17"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">Username</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.Username" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user name for the database </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.Password">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aa8c29c304fc0c6d517a4df5a85736242"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">Password</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.Password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password for the database </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.Database.ConnectionString">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">ConnectionString</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.Database.ConnectionString" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full connection string </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.Initialize">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aa0b19198bfb509d9bf2cfd33e5b17d0c"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">Initialize</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.Initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes properties with values from the connection string saved in settings. Sets the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549"><span class="std std-ref">ConnectionString</span></a> property using these values. </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.SaveConnectionString">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aefc6f852862c5ce19d07966bf2ce36db"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">SaveConnectionString</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.SaveConnectionString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to save the connection string to settings </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.CheckConnection">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a44efbc085ed396b144957037f3efef8d"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">CheckConnection</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.CheckConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a database connection on the given connection string and tests that it can be opened and closed. If it can’t, the error code returned by MySqlException is returned by this function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.ExecuteFilter">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ae094eae944a216fa847e7b72586a4ef7"></span><em class="property"><span class="pre">static</span></em> <span class="pre">DataTable</span> <span class="sig-name descname"><span class="pre">ExecuteFilter</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">query</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.ExecuteFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a filter query built by a forms.dialogs.AdvancedFilter dialog. </p>
+<dl class="field-list">
+<dt class="field-odd">Param query</dt>
+<dd class="field-odd"><p>The query to execute on the database.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A DataTable containing all of the rows that matched the query. </p>
+<p>It is up to the calling class to parse this data appropiately.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetColumns">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ad4af1ffbd09d18accf4d3944accf886f"></span><em class="property"><span class="pre">static</span></em> <span class="pre">ArrayList</span> <span class="sig-name descname"><span class="pre">GetColumns</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">tableName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetColumns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a list of column names from the specified table. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param tableName</dt>
+<dd class="field-odd"><p>The table to get the columns of</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An ArrayList of type string containing the column names.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetTableInfo">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a9aafca29e5b3de2e781fa632f694398f"></span><em class="property"><span class="pre">static</span></em> <span class="pre">DataTable</span> <span class="sig-name descname"><span class="pre">GetTableInfo</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetTableInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the _.show_table_status() stored prodedure to get information about tables. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DataTable ready to be used as a data source for a DataGridView Control.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetLastRowIDInserted">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ad8aa33ea0bb8b77e66232bf4c045ee30"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">GetLastRowIDInserted</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">tablename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetLastRowIDInserted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the last row id inserted in the specified table. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param tablename</dt>
+<dd class="field-odd"><p>The table’s name to search</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The id of the last row inserted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a7d8bd5a335e5e53f47fe40d70cbed4ff"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertAddress</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Address" title="class: SurveyManager.backend.wrappers.Address"><span class="pre">Address</span></a> <em><span class="pre">a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the Address <em>a</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param a</dt>
+<dd class="field-odd"><p>The Address to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a7ca5707375157569c5baca628368089a"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateAddress</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Address" title="class: SurveyManager.backend.wrappers.Address"><span class="pre">Address</span></a> <em><span class="pre">a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the Address <em>a</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param a</dt>
+<dd class="field-odd"><p>The Address to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a679c26230876caca246e98da0643a252"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Address" title="class: SurveyManager.backend.wrappers.Address"><span class="pre">Address</span></a> <span class="sig-name descname"><span class="pre">GetAddress</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the Address object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the address object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Address object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a76299dd6082439d9920c082e7908ecf8"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteAddress</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Address" title="class: SurveyManager.backend.wrappers.Address"><span class="pre">Address</span></a> <em><span class="pre">a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the Address object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param a</dt>
+<dd class="field-odd"><p>The Address to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the address was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertClient">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a782b85359fa75b9fc67aa05d9ad183e7"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertClient</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Client" title="class: SurveyManager.backend.wrappers.Client"><span class="pre">Client</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the Client <em>c</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The Client to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateClient">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a459ceb36fd35674fdf0a77e44152986b"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateClient</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Client" title="class: SurveyManager.backend.wrappers.Client"><span class="pre">Client</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the Client <em>c</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The Client to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetClient">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aaddf8d933d882ca2e99c0222ed98baa3"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Client" title="class: SurveyManager.backend.wrappers.Client"><span class="pre">Client</span></a> <span class="sig-name descname"><span class="pre">GetClient</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the Client object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the client object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Client object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetClients">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a905f3e8ddedea2f5131e625ae823daa0"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Client" title="class: SurveyManager.backend.wrappers.Client"><span class="pre">Client</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetClients</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetClients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all Client objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of Client objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteClient">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a1c137a5a8be03585d917104c10fa3955"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteClient</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Client" title="class: SurveyManager.backend.wrappers.Client"><span class="pre">Client</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the Client object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The Client to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the client was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertCounty">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a7a41f841827d130ea51efabd39b73e52"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertCounty</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.County" title="class: SurveyManager.backend.wrappers.County"><span class="pre">County</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertCounty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the County <em>c</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The County to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateCounty">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a51c885654e7e16e4616ca4c1022589d6"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateCounty</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.County" title="class: SurveyManager.backend.wrappers.County"><span class="pre">County</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateCounty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the County <em>c</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The County to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetCounty">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aec2294bfe5da883b774e310e26e4c00f"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.County" title="class: SurveyManager.backend.wrappers.County"><span class="pre">County</span></a> <span class="sig-name descname"><span class="pre">GetCounty</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetCounty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the County object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the county object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An County object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetCounties">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1af7e877c814b334a5bbb4fb187e9a096b"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.County" title="class: SurveyManager.backend.wrappers.County"><span class="pre">County</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetCounties</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetCounties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all County objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of County objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteCounty">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aa3a5d51a28190e20f625954f74e2a805"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteCounty</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.County" title="class: SurveyManager.backend.wrappers.County"><span class="pre">County</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteCounty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the County object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param c</dt>
+<dd class="field-odd"><p>The County to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the county was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertRealtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ab04025ba40d49b4fc7c4d7e06d059313"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertRealtor</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Realtor" title="class: SurveyManager.backend.wrappers.Realtor"><span class="pre">Realtor</span></a> <em><span class="pre">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertRealtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the Realtor <em>r</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param r</dt>
+<dd class="field-odd"><p>The Realtor to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateRealtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a92a433811b532a37502316f1f96f0542"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateRealtor</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Realtor" title="class: SurveyManager.backend.wrappers.Realtor"><span class="pre">Realtor</span></a> <em><span class="pre">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateRealtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the Realtor <em>r</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param r</dt>
+<dd class="field-odd"><p>The Realtor to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetRealtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a38f4d471619d63335dc78a35fa2a3b81"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Realtor" title="class: SurveyManager.backend.wrappers.Realtor"><span class="pre">Realtor</span></a> <span class="sig-name descname"><span class="pre">GetRealtor</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetRealtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the Realtor object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the realtor object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Realtor object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetRealtors">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a993073c50c460fc0851f94e8155cd675"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Realtor" title="class: SurveyManager.backend.wrappers.Realtor"><span class="pre">Realtor</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetRealtors</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetRealtors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all Realtor objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of Realtor objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteRealtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a8dc63b69671472e88d3dedfa2d4eec54"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteRealtor</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.Realtor" title="class: SurveyManager.backend.wrappers.Realtor"><span class="pre">Realtor</span></a> <em><span class="pre">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteRealtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the Realtor object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param r</dt>
+<dd class="field-odd"><p>The Realtor to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the realtor was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertTitleCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a65610b31005f5105d83d985ab1f8b118"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertTitleCompany</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.TitleCompany" title="class: SurveyManager.backend.wrappers.TitleCompany"><span class="pre">TitleCompany</span></a> <em><span class="pre">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertTitleCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the TitleCompany <em>t</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param t</dt>
+<dd class="field-odd"><p>The TitleCompany to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateTitleCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ad83c18bbe0b9a972e3de357a6bc0ac43"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateTitleCompany</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.TitleCompany" title="class: SurveyManager.backend.wrappers.TitleCompany"><span class="pre">TitleCompany</span></a> <em><span class="pre">t</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateTitleCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the TitleCompany <em>t</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param t</dt>
+<dd class="field-odd"><p>The TitleCompany to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetTitleCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a75ef9a4a6c0ae543377ca3ece86c33e6"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.TitleCompany" title="class: SurveyManager.backend.wrappers.TitleCompany"><span class="pre">TitleCompany</span></a> <span class="sig-name descname"><span class="pre">GetTitleCompany</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetTitleCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the TitleCompany object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the title company object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An TitleCompany object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetTitleCompanies">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aa4040cd6a3577487641fa817d44e0d68"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.TitleCompany" title="class: SurveyManager.backend.wrappers.TitleCompany"><span class="pre">TitleCompany</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetTitleCompanies</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetTitleCompanies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all TitleCompany objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of TitleCompany objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteTitleCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a2fe185ce912c95acb5413080f782b2a5"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteTitleCompany</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.TitleCompany" title="class: SurveyManager.backend.wrappers.TitleCompany"><span class="pre">TitleCompany</span></a> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteTitleCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the TitleCompany object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param t</dt>
+<dd class="field-odd"><p>The TitleCompany to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the title company was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a8f42c5ca67b3337973990de453e1c407"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertFile</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.CFile" title="class: SurveyManager.backend.wrappers.CFile"><span class="pre">CFile</span></a> <em><span class="pre">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the CFile <em>file</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param file</dt>
+<dd class="field-odd"><p>The CFile to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ad78484feae68c659c192bbb976e736f5"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateFile</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.CFile" title="class: SurveyManager.backend.wrappers.CFile"><span class="pre">CFile</span></a> <em><span class="pre">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the CFile <em>file</em> . If the file has an ID of 0, it is inserted instead. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param file</dt>
+<dd class="field-odd"><p>The CFile to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a334290072c9a0ee6a25d9be0874f7c42"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.CFile" title="class: SurveyManager.backend.wrappers.CFile"><span class="pre">CFile</span></a> <span class="sig-name descname"><span class="pre">GetFile</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the CFile object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the file object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An CFile object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetFiles">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a6a1b41e964e0f2d28a1854984c6d6d5d"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.CFile" title="class: SurveyManager.backend.wrappers.CFile"><span class="pre">CFile</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetFiles</span></span> <span class="sig-paren">(</span><em class="property"><span class="pre">params</span></em> <span class="pre">int</span><span class="pre">[]</span> <em><span class="pre">ids</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multiple files from the database based on the supplied ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param ids</dt>
+<dd class="field-odd"><p>A variable length parameter: the list of ids of the file records to retrieve.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A list of CFile objects or an empty list if no files were found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a61d8f843bf918fabb19a50c46d9b05ce"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteFile</span></span> <span class="sig-paren">(</span><a class="reference internal" href="wrappers.html#class-SurveyManager.backend.wrappers.CFile" title="class: SurveyManager.backend.wrappers.CFile"><span class="pre">CFile</span></a> <em><span class="pre">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the CFile object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param file</dt>
+<dd class="field-odd"><p>The CFile to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the file was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertSurvey">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aac9e134fc2ec1290a9775f162f7bdcee"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertSurvey</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertSurvey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the Survey <em>s</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateSurvey">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a455fbae199919d050a4c6992beeb926b"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateSurvey</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateSurvey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the Survey <em>s</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DoesSurveyExist">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a0e008f2040899a1163fb85ccb044db07"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DoesSurveyExist</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">jobNumber</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DoesSurveyExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search the database for the specified <em>jobNumber</em>  and get a value indicating if the job already exists. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param jobNumber</dt>
+<dd class="field-odd"><p>The job number to search for.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the survey job already exists; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetSurvey">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a7fb854885b3a82474e7a1b75969016ab"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <span class="sig-name descname"><span class="pre">GetSurvey</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetSurvey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the Survey object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the survey object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Survey object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a35af8a472459ec9c6baeba9919c95cab"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <span class="sig-name descname"><span class="pre">GetSurvey</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">jobNumber</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get from the database the Survey object represented by the job number <em>jobNumber</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param jobNumber</dt>
+<dd class="field-odd"><p>The job number of the survey object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Survey object represented by the job number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetSurveys">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aac7f1560444d00d51719daab33891547"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetSurveys</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetSurveys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all Survey objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of Survey objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteSurvey">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a0a9832eb6868c6fae0302ed4d3975d63"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteSurvey</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteSurvey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the Survey object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the survey was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a28e00b00998596a5050f2b5b1366a6d5"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertLineItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the LineItem <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The LineItem to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1add7a60004a0f816847270d044fdd03a7"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateLineItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the LineItem <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The LineItem to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a00ea4a3932fe4df81666dd7124725fff"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a> <span class="sig-name descname"><span class="pre">GetLineItem</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the LineItem object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the line item object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An LineItem object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetLineItems">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a927e87b7ad94e4db858397537c2e3ff6"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetLineItems</span></span> <span class="sig-paren">(</span><em class="property"><span class="pre">params</span></em> <span class="pre">int</span><span class="pre">[]</span> <em><span class="pre">ids</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetLineItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multiple LineItem objects from the database based on the supplied ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param ids</dt>
+<dd class="field-odd"><p>A variable length parameter: the list of ids of the line item records to retrieve.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A list of LineItem objects or an empty list if no line items were found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ae84caa90c941232ebfc8f12cfc4a0ddf"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteLineItem</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the LineItem object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The LineItem to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the line item was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aea3c098021feb5c1c61139714a6500a4"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertRate</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the Rate <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The Rate to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ae415393d9ed83fd642050cac256aa1cc"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateRate</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the Rate <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The Rate to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1abdaed10988b5e54352ba43d5e8120d9a"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <span class="sig-name descname"><span class="pre">GetRate</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the Rate object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the rate object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An Rate object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetRates">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a9be33b1d9715401054fbf01890d256a8"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetRates</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetRates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database all Rate objects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of Rate objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ab050cd15767263eb4ba08f87c0d1eca3"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetRates</span></span> <span class="sig-paren">(</span><em class="property"><span class="pre">params</span></em> <span class="pre">int</span><span class="pre">[]</span> <em><span class="pre">ids</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get multiple Rate objects from the database based on the supplied ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param ids</dt>
+<dd class="field-odd"><p>A variable length parameter: the list of ids of the rate records to retrieve.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A list of Rate objects or an empty list if no rates were found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a2c31a9bc2c2279af61cc52179df70e85"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteRate</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <em><span class="pre">rate</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the Rate object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param rate</dt>
+<dd class="field-odd"><p>The Rate to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the rate was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.InsertBillingItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1acb900ea3fc320da916ab3ffb986d5dc7"></span><em class="property"><span class="pre">static</span></em> <span class="pre">int</span> <span class="sig-name descname"><span class="pre">InsertBillingItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.InsertBillingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert into the database the BillingItem <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The BillingItem to insert.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The row id of the inserted object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.UpdateBillingItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a80789485582df7f95352116a39fe3150"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">UpdateBillingItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.UpdateBillingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update in the database the BillingItem <em>item</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The BillingItem to update.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the update was successfull; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetBillingItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ab76f4e8f89561a06d063baef16fbec0f"></span><em class="property"><span class="pre">static</span></em> <a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <span class="sig-name descname"><span class="pre">GetBillingItem</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetBillingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get from the database the BillingItem object represented by the primary key <em>id</em> . </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the billing item object.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>An BillingItem object represented by the id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.GetBillingItems">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1ac1fcbc39e2fef5d9958d8beee66f76c5"></span><em class="property"><span class="pre">static</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetBillingItems</span></span> <span class="sig-paren">(</span><em class="property"><span class="pre">params</span></em> <span class="pre">int</span><span class="pre">[]</span> <em><span class="pre">ids</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.GetBillingItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multiple BillingItem objects from the database based on the supplied ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param ids</dt>
+<dd class="field-odd"><p>A variable length parameter: the list of ids of the billing item records to retrieve.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A list of BillingItem objects or an empty list if no rates were found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Database.DeleteBillingItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1aea0b2b3834982c8fd3a5e35d274d77bf"></span><em class="property"><span class="pre">static</span></em> <span class="pre">bool</span> <span class="sig-name descname"><span class="pre">DeleteBillingItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Database.DeleteBillingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete from the database the BillingItem object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The BillingItem to delete.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the billing item was deleted successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cs var">
+<dt class="sig sig-object cs" id="var-SurveyManager.backend.Database.MAX_ALLOWED_PACKET_SIZE">
+<span class="target" id="class_survey_manager_1_1backend_1_1_database_1a3d2a84d1784c6b21df200a3cc313881e"></span><em class="property"><span class="pre">static</span></em> <span class="pre">constint</span> <span class="sig-name descname"><span class="pre">MAX_ALLOWED_PACKET_SIZE</span></span> <span class="pre">=</span> <span class="pre">1073741824</span><a class="headerlink" href="#var-SurveyManager.backend.Database.MAX_ALLOWED_PACKET_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum allowed packet size in bytes for a file upload </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

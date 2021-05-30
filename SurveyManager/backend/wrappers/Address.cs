@@ -5,7 +5,9 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     /// <summary>
-    /// Defines a basic address used for surveys and clients.
+    /// This class represents an address. An address in the case of Survey Manager does not have a state associated with it.
+    /// <para>All addresses are assumed to be in the state of Texas.</para>
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
@@ -14,24 +16,37 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The street component of the address.
+        /// </summary>
         [Category("Address")]
         [Description("The street component of the address.")]
         [Browsable(true)]
         [DisplayName("Street")]
         public string Street { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The city component of the address.
+        /// </summary>
         [Category("Address")]
         [Description("The city component of the address.")]
         [Browsable(true)]
         [DisplayName("City")]
         public string City { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The zip-code component of the address.
+        /// </summary>
         [Category("Address")]
         [Description("The zip code for the address; must be 5 characters long.")]
         [Browsable(true)]
         [DisplayName("Zip Code")]
         public string ZipCode { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Get a value indicating if this address is considered to be empty.
+        /// <para>Returns true if the street, city, or zip-code are empty strings.</para>
+        /// </summary>
         [Browsable(false)]
         public bool IsEmpty
         {

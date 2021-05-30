@@ -249,7 +249,6 @@
   <compound refid="class_survey_manager_1_1utility_1_1_c_event_args" kind="class"><name>SurveyManager::utility::CEventArgs</name>
   </compound>
   <compound refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kind="class"><name>SurveyManager::backend::wrappers::CFile</name>
-    <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a22f5cd02a77e42db0137c4472937a69c" kind="variable"><name>tempPath</name></member>
     <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1afbae6269d3d76fd1e8a5b382323e5119" kind="property"><name>ID</name></member>
     <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac4c212f9d50b8eccba6de3c093f17eb9" kind="property"><name>FileName</name></member>
     <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae3c9ae44b829dd9d75b22f16f9eb895e" kind="property"><name>Description</name></member>

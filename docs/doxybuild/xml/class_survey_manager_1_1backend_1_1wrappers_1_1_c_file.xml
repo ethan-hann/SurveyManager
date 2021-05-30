@@ -3,22 +3,6 @@
   <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kind="class" language="C#" prot="public">
     <compoundname>SurveyManager::backend::wrappers::CFile</compoundname>
     <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a22f5cd02a77e42db0137c4472937a69c" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string SurveyManager.backend.wrappers.CFile.tempPath</definition>
-        <argsstring></argsstring>
-        <name>tempPath</name>
-        <initializer>= string.Empty</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="21" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="property">
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1afbae6269d3d76fd1e8a5b382323e5119" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -40,12 +24,13 @@
         <name>FileName</name>
         <initializer>= &quot;&quot;</initializer>
         <briefdescription>
+<para>The file name, without an extension, for this file. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="30" bodyend="30"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="33" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae3c9ae44b829dd9d75b22f16f9eb895e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -54,12 +39,13 @@
         <name>Description</name>
         <initializer>= &quot;&quot;</initializer>
         <briefdescription>
+<para>A brief description for this file explaining what it is. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="37" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="37" bodyend="37"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="43" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a96d897a06c7775d78bea0aef7f2e9cc5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>FileExtension</type>
@@ -68,12 +54,13 @@
         <name>Extension</name>
         <initializer>= FileExtension.NONE</initializer>
         <briefdescription>
+<para>The extension of this file. This is limited to the options in FileExtension. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="40" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="40" bodyend="40"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="49" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a129d54183dea809ac2b8d82fe0b05c29" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -81,12 +68,13 @@
         <argsstring></argsstring>
         <name>FullFileName</name>
         <briefdescription>
+<para>The full file name including its extension. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="46" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="47" bodyend="52"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="58" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="59" bodyend="64"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a902240463a6d1769d25384e3578ca8e9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -94,12 +82,13 @@
         <argsstring></argsstring>
         <name>TempPath</name>
         <briefdescription>
+<para>A temporary path on disk to this file object. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="55" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="55" bodyend="55"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="70" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a202ed464f00ae89096174241d836f730" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>byte[]</type>
@@ -107,13 +96,13 @@
         <argsstring></argsstring>
         <name>Contents</name>
         <briefdescription>
-<para>The RAW byte array representing the file&apos;s contents. </para>
+<para>The raw byte array representing the file&apos;s contents. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="61" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="61" bodyend="61"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="76" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="76" bodyend="76"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a3dcbecc4aea1dc8fa586c19b332cac28" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Encoding</type>
@@ -128,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="67" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="67" bodyend="67"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="82" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="82" bodyend="82"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1aa633a6a3763d4c35e318edcb520341cf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string?</type>
@@ -136,12 +125,13 @@
         <argsstring></argsstring>
         <name>FileSize</name>
         <briefdescription>
+<para>The size of the file as a formatted string. The string will be formatted as {size} {unit}, i.e. 5 MB for 5 megabytes. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="73" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="74" bodyend="79"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="91" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="92" bodyend="97"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ad77cc0662959e460c028fd0c89b27b75" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -156,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="86" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="87" bodyend="92"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="104" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="105" bodyend="110"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a197956279a229607726e8251b5a139a6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>Bitmap</type>
@@ -164,12 +154,13 @@
         <argsstring></argsstring>
         <name>DisplayIcon</name>
         <briefdescription>
+<para>Get the icon to display for this file based on its <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a96d897a06c7775d78bea0aef7f2e9cc5" kindref="member">Extension</ref> property. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="97" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="98" bodyend="125"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="118" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="119" bodyend="146"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -184,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="127" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="127" bodyend="127"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="148" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="148" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1acc3dd0e36031b7e992df7ef5d7da3c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -221,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="129" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="129" bodyend="137"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="150" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="150" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a975f57453e11888c801e9be2ea10d649" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -254,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="139" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="139" bodyend="146"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="160" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="160" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a590627f35aeb283d5fa48c5ba1551c42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -283,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="148" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="148" bodyend="154"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="169" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="169" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a5c98824c72aed54d9b81aa334290dce3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -316,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="156" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="156" bodyend="163"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="177" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="177" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae21c36e8863bad0df67045d24af6bb4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -345,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="165" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="165" bodyend="171"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="186" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="186" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1aa4d7b18ddd5d152475a505c823912cb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -370,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="173" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="173" bodyend="178"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="194" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="194" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac9e0f190fb10c1a658f50f9c1fa201ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -382,7 +373,7 @@
           <declname>path</declname>
         </param>
         <briefdescription>
-<para>Reads the contents in <emphasis>path</emphasis>  into the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a202ed464f00ae89096174241d836f730" kindref="member">Contents</ref> property. </para>
+<para>Reads all of the bytes of the file in <emphasis>path</emphasis>  into the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a202ed464f00ae89096174241d836f730" kindref="member">Contents</ref> property. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -400,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="185" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="185" bodyend="198"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="206" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="206" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1aa5b9d52dd82cf46608d681b48b87a0a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -411,13 +402,13 @@
 <para>Get a file path to this <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> object. The temporary file is deleted after the program is closed. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para></para>
+<para><simplesect kind="return"><para>The path to the temporary file.</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="213" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="213" bodyend="225"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="234" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="234" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1af34508df6235592763c9be8172d25514" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -434,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="231" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="231" bodyend="234"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="252" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="252" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a412d870317ccc5bd4584e1f0ee0a03a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -443,7 +434,7 @@
         <name>Insert</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
         <briefdescription>
-<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+<para>Defines the behaviour for inserting the object&apos;s data into the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -452,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="236" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="236" bodyend="253"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="257" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="257" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae32f185f24e6574e564274fabc29df8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -461,7 +452,7 @@
         <name>Update</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
         <briefdescription>
-<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+<para>Defines the behaviour for updating the object&apos;s data in the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -470,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="255" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="255" bodyend="258"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="276" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="276" bodyend="279"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a6d1248c58c421a3474402146e817704a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -479,7 +470,7 @@
         <name>Delete</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
         <briefdescription>
-<para>Define the behaviour for deleting the object from the database. </para>
+<para>Defines the behaviour for deleting the object from the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -488,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="260" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="260" bodyend="263"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="281" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="281" bodyend="284"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -507,13 +498,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="200" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="200" bodyend="207"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="221" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="221" bodyend="228"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>A class which represents a custom file that can be stored in the database. </para>
+<para>This class represents files. The main method of note in this class is <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac9e0f190fb10c1a658f50f9c1fa201ef" kindref="member">ReadAllBytes(string)</ref>. This method will actually populate this file object with the data in the actual file on disk. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class implements the <ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref> interface to facilitate easier database operations.</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -539,7 +531,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="19" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="20" bodyend="264"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" line="21" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/CFile.cs" bodystart="22" bodyend="285"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac36bb73ac4284d28c9cd34b09d532e82" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>CFile</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1acc3dd0e36031b7e992df7ef5d7da3c3a" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>CFile</name></member>
@@ -563,7 +555,6 @@
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ad77cc0662959e460c028fd0c89b27b75" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>IsValidFile</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac9e0f190fb10c1a658f50f9c1fa201ef" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>ReadAllBytes</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ab0167655b66c581f74f2a05bb3592b68" prot="private" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>SetEncoding</name></member>
-      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a22f5cd02a77e42db0137c4472937a69c" prot="private" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>tempPath</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a902240463a6d1769d25384e3578ca8e9" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>TempPath</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1af34508df6235592763c9be8172d25514" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>ToString</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae32f185f24e6574e564274fabc29df8d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::CFile</scope><name>Update</name></member>

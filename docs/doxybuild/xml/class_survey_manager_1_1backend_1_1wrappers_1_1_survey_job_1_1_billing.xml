@@ -41,13 +41,12 @@
         <name>ID</name>
         <initializer>= 0</initializer>
         <briefdescription>
-<para>The id representing this billing object in the database. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="27" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="27" bodyend="27"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="24" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="24" bodyend="24"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab68969e2b10ee8f530f6d1ce0e59eb0c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -62,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="33" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="33" bodyend="33"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0fed5bb84fb3a643de9bf023035943af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -77,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="39" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="39" bodyend="39"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="36" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="36" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -92,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="41" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="41" bodyend="41"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="38" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a9390aca931d430e680c99f554e0889f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref> &gt;</type>
@@ -109,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="47" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="47" bodyend="50"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="44" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a4c80818155637b8cecb678df07d0ff2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref> &gt;</type>
@@ -126,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="56" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="56" bodyend="59"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="53" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a7e5782a17770b0febc41da950a0633a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -140,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="65" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="65" bodyend="93"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="62" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="62" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a641353351a5b0ecefd26e98c2eaaff55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -157,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="113" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="113" bodyend="122"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="110" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="110" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5674f52219b7611d0d7df1376d1da86d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -174,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="128" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="128" bodyend="137"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="125" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="125" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a10ba4dbd46b8c2b08719c958d573fe53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -202,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="143" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="143" bodyend="146"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="140" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="140" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0f74c812563ea44e2081c3c307b2e6f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -242,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="153" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="153" bodyend="159"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="150" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="150" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aac0552db55dece1c20ffc9cec9bb64c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -269,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="165" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="165" bodyend="169"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="162" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="162" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ae042d5c215a527f5dbae5f43b5e96f28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -297,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="175" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="175" bodyend="186"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="172" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="172" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aec1a46f1a2806a025bf976e653f3b69e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -325,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="192" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="192" bodyend="199"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="189" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="189" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a09565a2dc18c923727907a6da5ac185b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -353,7 +352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="205" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="205" bodyend="208"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="202" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="202" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1adc01df53c373c31eafe85d6b0915523a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -393,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="215" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="215" bodyend="221"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="212" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="212" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5266a96a81c866a030bdc502c71fdd82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -421,7 +420,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="227" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="227" bodyend="231"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="224" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="224" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a2a2945cc521daf81bf5e3042284c5797" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -449,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="237" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="237" bodyend="247"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="234" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="234" bodyend="244"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1abeaec882f86326d56bf33ef16d40f3ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -477,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="253" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="253" bodyend="260"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="250" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="250" bodyend="257"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab775f32ec6e34e7746ae3ca3bc47e36b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>TimeSpan</type>
@@ -494,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="266" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="266" bodyend="269"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="263" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="263" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a6b27f77c60bad9722c86020b3564d295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>TimeSpan</type>
@@ -511,7 +510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="275" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="275" bodyend="278"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="272" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="272" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5d82f5e2ec3804584edab5f6e96d8d5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>TimeSpan</type>
@@ -528,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="284" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="284" bodyend="287"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="281" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="281" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a09a8179a6fe40d28ff62324b6e8ffaa9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decimal</type>
@@ -545,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="293" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="293" bodyend="322"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="290" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="290" bodyend="319"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a59380d10f7cc81adde92e117d2e778e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decimal</type>
@@ -562,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="328" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="328" bodyend="357"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="325" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="325" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ad814b43b19e83c721efc44482e0b6438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decimal</type>
@@ -579,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="363" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="363" bodyend="366"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="360" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="360" bodyend="363"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a347fd975dba0b87d3e87fa876427e494" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decimal</type>
@@ -596,7 +595,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="372" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="372" bodyend="375"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="369" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="369" bodyend="372"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a643dc4b6a7518ec2e7e0832970cc1b59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -605,7 +604,7 @@
         <name>Insert</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
         <briefdescription>
-<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+<para>Defines the behaviour for inserting the object&apos;s data into the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -614,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="377" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="377" bodyend="395"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="374" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="374" bodyend="392"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a24cd09abda72b8a7adf08817ad09a8c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -623,7 +622,7 @@
         <name>Update</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
         <briefdescription>
-<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+<para>Defines the behaviour for updating the object&apos;s data in the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -632,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="397" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="397" bodyend="400"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="394" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="394" bodyend="397"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aecdafa97c515fe407d7cb63c7abb4ebe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -641,7 +640,7 @@
         <name>Delete</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
         <briefdescription>
-<para>Define the behaviour for deleting the object from the database. </para>
+<para>Defines the behaviour for deleting the object from the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -650,7 +649,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="402" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="402" bodyend="420"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="399" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="399" bodyend="417"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -669,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="95" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="95" bodyend="107"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="92" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="92" bodyend="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -703,7 +702,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="19" bodyend="421"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" bodystart="19" bodyend="418"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a09565a2dc18c923727907a6da5ac185b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::Billing</scope><name>AddBilling</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a2a2945cc521daf81bf5e3042284c5797" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::Billing</scope><name>AddBillingID</name></member>

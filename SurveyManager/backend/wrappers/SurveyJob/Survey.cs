@@ -10,12 +10,19 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers.SurveyJob
 {
+    /// <summary>
+    /// This class represents a full Survey job. Objects are added to this job using the various properties present in this class.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class Survey : ExpandableObjectConverter, IDatabaseWrapper
     {
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The job number assigned to this survey.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The job number assigned to this survey.")]
         [Browsable(true)]
@@ -23,6 +30,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Job Number")]
         public string JobNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// A brief description for this survey.
+        /// </summary>
         [Category("Survey Information")]
         [Description("A description for this survey job.")]
         [Browsable(true)]
@@ -30,6 +40,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Description")]
         public string Description { get; set; } = "N/A";
 
+        /// <summary>
+        /// The abstract number where this survey is located.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The abstract number where this survey job is located.")]
         [Browsable(true)]
@@ -37,6 +50,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Abstract")]
         public string AbstractNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The name of the survey this job is located in.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The survey this job is located in.")]
         [Browsable(true)]
@@ -44,6 +60,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Survey")]
         public string SurveyName { get; set; } = "N/A";
 
+        /// <summary>
+        /// The timestamp this survey was last updated.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The time and date this job was last updated.")]
         [Browsable(true)]
@@ -51,13 +70,20 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Last Updated")]
         public DateTime LastUpdated { get; set; } = DateTime.Now;
 
+        /// <summary>
+        /// The subdivisions name, if any, this job is located in. If this is specified, the <see cref="LotNumber"/>,
+        /// <see cref="BlockNumber"/>, and <see cref="SectionNumber"/> should also be specified.
+        /// </summary>
         [Category("Subdivision")]
-        [Description("The subdivision, if any, this survey job is located. If a subdivision is specified, the lot number, block number, and section number should also be specified.")]
+        [Description("The subdivision, if any, this survey job is located in. If a subdivision is specified, the lot number, block number, and section number should also be specified.")]
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Subdivision")]
         public string Subdivision { get; set; } = "N/A";
 
+        /// <summary>
+        /// The lot number in the subdivision this job is located at.
+        /// </summary>
         [Category("Subdivision")]
         [Description("The lot number in the subdivision for this survey job.")]
         [Browsable(true)]
@@ -65,6 +91,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Lot Number")]
         public string LotNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The block number in the subdivision this job is located at.
+        /// </summary>
         [Category("Subdivision")]
         [Description("The block number in the subdivision for this survey job.")]
         [Browsable(true)]
@@ -72,6 +101,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Block Number")]
         public string BlockNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The section number in the subdivision this job is located at.
+        /// </summary>
         [Category("Subdivision")]
         [Description("The section in the subdivision for this survey job.")]
         [Browsable(true)]
@@ -79,6 +111,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Section Number")]
         public string SectionNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The number of acres this survey is for.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The number of acres this survey is for.")]
         [Browsable(true)]
@@ -86,6 +121,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [DisplayName("Acres")]
         public double Acres { get; set; }
 
+        /// <summary>
+        /// The <see cref="wrappers.Client"/> object associated with this survey.
+        /// </summary>
         [Category("Associated Objects")]
         [Description("The client who ordered the survey.")]
         [Browsable(true)]
@@ -94,9 +132,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Client Client { get; set; } = new Client();
 
+        /// <summary>
+        /// The id of the <see cref="Client"/> associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public int ClientID { get; set; }
 
+        /// <summary>
+        /// The <see cref="wrappers.County"/> object associated with this survey.
+        /// </summary>
         [Category("Associated Objects")]
         [Description("The county this survey is located in.")]
         [Browsable(true)]
@@ -105,9 +149,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [TypeConverter(typeof(CountyTypeConverter))]
         public County County { get; set; }
 
+        /// <summary>
+        /// The id of the <see cref="County"/> associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public int CountyID { get; set; }
 
+        /// <summary>
+        /// The <see cref="wrappers.Realtor"/> object associated with this survey.
+        /// </summary>
         [Category("Associated Objects")]
         [Description("The realtor, if any, for this survey.")]
         [Browsable(true)]
@@ -116,9 +166,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Realtor Realtor { get; set; } = new Realtor();
 
+        /// <summary>
+        /// The id of the <see cref="Realtor"/> associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public int RealtorID { get; set; }
 
+        /// <summary>
+        /// The <see cref="wrappers.TitleCompany"/> object associated with this survey.
+        /// </summary>
         [Category("Associated Objects")]
         [Description("The title company, if any, for this survey.")]
         [Browsable(true)]
@@ -127,9 +183,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public TitleCompany TitleCompany { get; set; } = new TitleCompany();
 
+        /// <summary>
+        /// The id of the <see cref="TitleCompany"/> associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public int TitleCompanyID { get; set; }
 
+        /// <summary>
+        /// The <see cref="Address"/> object associated with this survey.
+        /// </summary>
         [Category("Survey Information")]
         [Description("The location for this survey job.")]
         [Browsable(true)]
@@ -138,15 +200,27 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [TypeConverter(typeof(ExpandableObjectConverter))]
         public Address Location { get; set; } = new Address();
 
+        /// <summary>
+        /// The id of the <see cref="Location"/> associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public int LocationID { get; set; }
 
+        /// <summary>
+        /// The comma seperated list string of file ids associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public string FileIds { get; set; } = "N/A";
 
+        /// <summary>
+        /// The list of <see cref="CFile"/> objects associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public List<CFile> Files { get; private set; } = new List<CFile>();
 
+        /// <summary>
+        /// Get the total number of files associated with this survey job.
+        /// </summary>
         [Category("Files")]
         [Description("The total number of files associated with this survey job.")]
         [Browsable(true)]
@@ -160,6 +234,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// Get a value indicating whether this survey job has files associated with it.
+        /// </summary>
         [Browsable(false)]
         public bool HasFiles
         {
@@ -169,9 +246,15 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// The <see cref="Billing"/> object associated with this survey.
+        /// </summary>
         [Browsable(false)]
         public Billing BillingObject { get; set; } = new Billing();
 
+        /// <summary>
+        /// Get the total field time as represented by the <see cref="BillingObject"/>.
+        /// </summary>
         [Category("Billing")]
         [Description("The total amount of field time spent on this job.")]
         [Browsable(true)]
@@ -184,6 +267,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// Get the total dollar amount to bill for the field time as represented by the <see cref="BillingObject"/>.
+        /// </summary>
         [Category("Billing")]
         [Description("The total dollar amount to bill for the field time, including any applicable tax.")]
         [Browsable(true)]
@@ -196,6 +282,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// Get the total office time as represented by the <see cref="BillingObject"/>.
+        /// </summary>
         [Category("Billing")]
         [Description("The total amount of office time spent on this job.")]
         [Browsable(true)]
@@ -208,6 +297,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// Get the total dollar amount to bill for the office time as represented by the <see cref="BillingObject"/>.
+        /// </summary>
         [Category("Billing")]
         [Description("The total dollar amount to bill for the office time, including any applicable tax.")]
         [Browsable(true)]
@@ -220,6 +312,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// Get the total dollar amount to bill for all items (office time, field time, and additional line items) as represented by the <see cref="BillingObject"/>.
+        /// </summary>
         [Category("Billing")]
         [Description("The total billing amount including office time, field time, and all additional line items for this survey.")]
         [Browsable(true)]
@@ -232,15 +327,22 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        /// <summary>
+        /// The dictionary of notes associated with this survey job. The key of the dictionary is a timestamp representing when the note was created.
+        /// The value is the note's contents (up to 4,000 characters).
+        /// </summary>
         [Browsable(false)]
         public Dictionary<DateTime, string> Notes { get; internal set; } = new Dictionary<DateTime, string>();
 
+        /// <summary>
+        /// The complete string of notes ready to be saved to the database or parsed into <see cref="Notes"/> by <see cref="ParseNotes(string)"/>.
+        /// </summary>
         [Browsable(false)]
         public string NotesString { get; set; } = "N/A";
 
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
-        /// <para>A valid survey has a client, county, job number, and description at the very least.</para>
+        /// <para>A valid survey has a valid client, county, job number, and description at the very least.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidSurvey
@@ -252,8 +354,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         }
 
         /// <summary>
-        /// Populates the objects for this survey with values from the database.
-        /// <para>Gets the survey's Client, County, Realtor, TitleCompany, and any files associated with it.</para>
+        /// Set the objects in this survey to those from the database based on the various ID properties.
+        /// <para>Gets the survey's Client, County, Realtor, TitleCompany, Location, any files associated with this job, the notes, and the billing objects.</para>
+        /// <para>All database operations here run on a seperate thread.</para>
         /// </summary>
         public void SetObjects()
         {
@@ -422,17 +525,32 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 FileIds = "N/A";
         }
 
+        /// <summary>
+        /// Add a new note to the <see cref="Notes"/> dictionary. If the key already exists, it is updated instead.
+        /// </summary>
+        /// <param name="time">The timestamp for the note (key) to add.</param>
+        /// <param name="newNote">The notes contents (value) to add.</param>
         public void AddNote(DateTime time, string newNote)
         {
             if (!Notes.ContainsKey(time))
                 Notes.Add(time, newNote);
+            else
+                Notes[time] = newNote;
         }
 
+        /// <summary>
+        /// Add a new note the <see cref="Notes"/> dictionary using the current <see cref="DateTime.Now"/> value as the key.
+        /// </summary>
+        /// <param name="newNote">The notes contents (value) to add.</param>
         public void AddNote(string newNote)
         {
             Notes.Add(DateTime.Now, newNote);
         }
 
+        /// <summary>
+        /// Remove, if it exists, the note specified by the <see cref="DateTime"/> key.
+        /// </summary>
+        /// <param name="time">The timestamp for the note (key).</param>
         public void RemoveNote(DateTime time)
         {
             if (Notes.ContainsKey(time))
@@ -480,6 +598,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return ids;
         }
 
+        /// <summary>
+        /// Get the string value of the <see cref="Notes"/> dictionary. The notes are seperated by <c>/*--*/</c>.
+        /// </summary>
+        /// <returns>The complete notes string ready to be saved to the database.</returns>
         public string GetNotesString()
         {
             StringBuilder bldr = new StringBuilder();
@@ -546,10 +668,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return JobNumber;
         }
 
-        /// <summary>
-        /// Handles insertion of this survey and any files associated with it.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Insert operation.</returns>
         public DatabaseError Insert()
         {
             if (IsValidSurvey)
@@ -571,11 +689,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return DatabaseError.SurveyIncomplete;
         }
 
-        /// <summary>
-        /// Handles updating this survey and any files associated with it as well. 
-        /// If there is a file with an ID of 0 (meaning it hasn't been inserted yet), inserts it.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Update operation.</returns>
         public DatabaseError Update()
         {
             return Insert();
@@ -602,10 +715,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return DatabaseError.NoError;
         }
 
-        /// <summary>
-        /// Delete this survey from the database, along with the associated files and billing line items.
-        /// </summary>
-        /// <returns>A <see cref="DatabaseError"/> with the result of the Delete operation.</returns>
         public DatabaseError Delete()
         {
             DatabaseError e = DeleteObjects();

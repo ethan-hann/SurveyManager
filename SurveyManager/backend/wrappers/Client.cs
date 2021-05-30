@@ -6,7 +6,8 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     /// <summary>
-    /// Defines a survey client.
+    /// This class represents a Client object. A client is associated with a <see cref="SurveyJob.Survey"/>.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
@@ -15,33 +16,51 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ID { get; set; } = 0;
 
+        /// <summary>
+        /// The full name of the client.
+        /// </summary>
         [Category("Client Information")]
         [Description("The full name of the client.")]
         [Browsable(true)]
         [DisplayName("Client Name")]
         public string Name { get; set; } = "N/A";
 
+        /// <summary>
+        /// The phone number of the client.
+        /// </summary>
         [Category("Client Information")]
-        [Description("The phone number for the client.")]
+        [Description("The phone number of the client.")]
         [Browsable(true)]
         [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The email address of the client.
+        /// </summary>
         [Category("Client Information")]
         [Description("The email address of the client.")]
         [Browsable(true)]
         [DisplayName("Email Address")]
         public string Email { get; set; } = "N/A";
 
+        /// <summary>
+        /// The fax number, if any, of the client.
+        /// </summary>
         [Category("Client Information")]
         [Description("The fax number, if any, of the client.")]
         [Browsable(true)]
         [DisplayName("Fax Number")]
         public string FaxNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The id for this client's address in the database.
+        /// </summary>
         [Browsable(false)]
         public int AddressID { get; set; }
 
+        /// <summary>
+        /// The <see cref="Address"/> for this client object.
+        /// </summary>
         [Category("Client Address")]
         [Description("The address of the client.")]
         [Browsable(true)]
@@ -50,7 +69,8 @@ namespace SurveyManager.backend.wrappers
         public Address ClientAddress { get; set; } = new Address();
 
         /// <summary>
-        /// Checks the name and phone number to ensure they are not the default values.
+        /// Get a value indicating if the client is valid. A valid client is one whose name and phone number is not "N/A" and whose address is 
+        /// not empty.
         /// </summary>
         [Browsable(false)]
         public bool IsValidClient
@@ -110,6 +130,9 @@ namespace SurveyManager.backend.wrappers
             AddressID = address.ID;
         }
 
+        /// <summary>
+        /// Set the <see cref="ClientAddress"/> object from the database based on the id in <see cref="AddressID"/>. Runs on a seperate thread.
+        /// </summary>
         public void SetAddress()
         {
             if (AddressID != 0)

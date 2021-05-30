@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="16" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="16" bodyend="16"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="17" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="17" bodyend="17"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1acd5d5c1d7030ff1a75f35b04fc2268fe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -26,12 +26,13 @@
         <name>Name</name>
         <initializer>= &quot;N/A&quot;</initializer>
         <briefdescription>
+<para>The full name of the client. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="22" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="22" bodyend="22"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="26" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1aa5d18d07f57328e09cddec33818a967b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -40,12 +41,13 @@
         <name>PhoneNumber</name>
         <initializer>= &quot;N/A&quot;</initializer>
         <briefdescription>
+<para>The phone number of the client. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="28" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="28" bodyend="28"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="35" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1adc0c31f83e43e79149e1f981c1597812" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -54,12 +56,13 @@
         <name>Email</name>
         <initializer>= &quot;N/A&quot;</initializer>
         <briefdescription>
+<para>The email address of the client. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="34" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="34" bodyend="34"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="44" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a086f47f34d7e9ab85047f8e3f7c75280" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -68,12 +71,13 @@
         <name>FaxNumber</name>
         <initializer>= &quot;N/A&quot;</initializer>
         <briefdescription>
+<para>The fax number, if any, of the client. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="40" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="40" bodyend="40"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="53" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a1c1f8173dcdde62d6196ec4e5e9bf78b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -81,12 +85,13 @@
         <argsstring></argsstring>
         <name>AddressID</name>
         <briefdescription>
+<para>The id for this client&apos;s address in the database. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="43" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="43" bodyend="43"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="59" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a17264b3ea0ff5c1b06c3776b3ec3c279" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
@@ -95,12 +100,13 @@
         <name>ClientAddress</name>
         <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref>()</initializer>
         <briefdescription>
+<para>The <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref> for this client object. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="50" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="50" bodyend="50"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="69" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="69" bodyend="69"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ab6b3b12050645c8e8422007c4ac5046c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -108,13 +114,13 @@
         <argsstring></argsstring>
         <name>IsValidClient</name>
         <briefdescription>
-<para>Checks the name and phone number to ensure they are not the default values. </para>
+<para>Get a value indicating if the client is valid. A valid client is one whose name and phone number is not &quot;N/A&quot; and whose address is not empty. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="56" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="57" bodyend="62"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="76" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="77" bodyend="82"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -129,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="64" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="64" bodyend="64"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="84" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="84" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a6af9ae3bf0628dc6055d0dc9a86ef27c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -167,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="66" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="66" bodyend="74"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="86" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="86" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1aa2f22f522439dcdfd8d6707ba3c3be38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -201,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="76" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="76" bodyend="83"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="96" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="96" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a9811568e1438077e6d47941da49254e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -231,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="85" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="85" bodyend="91"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="105" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="105" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a04e18e8e5e0c4b76c5c332517f5a2c1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -265,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="93" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="93" bodyend="100"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="113" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="113" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a6772f466ce227cb29bf7cf55e53ca081" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -303,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="102" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="102" bodyend="111"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="122" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="122" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a3e7ba258011d989206f6322d3fa6339f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -311,12 +317,13 @@
         <argsstring>()</argsstring>
         <name>SetAddress</name>
         <briefdescription>
+<para>Set the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a17264b3ea0ff5c1b06c3776b3ec3c279" kindref="member">ClientAddress</ref> object from the database based on the id in <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a1c1f8173dcdde62d6196ec4e5e9bf78b" kindref="member">AddressID</ref>. Runs on a seperate thread. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="113" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="113" bodyend="127"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="136" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="136" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ac1c3703077e242493dbcde779c0d32e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -329,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="129" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="129" bodyend="132"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="152" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="152" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ab2f1cb0de0d3683fa7a6be8d880c9cdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -338,7 +345,7 @@
         <name>Insert</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
         <briefdescription>
-<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+<para>Defines the behaviour for inserting the object&apos;s data into the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -347,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="134" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="134" bodyend="166"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="157" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="157" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a52b4a07f40ff2201ace237c33c112722" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -356,7 +363,7 @@
         <name>Update</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
         <briefdescription>
-<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+<para>Defines the behaviour for updating the object&apos;s data in the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -365,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="168" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="168" bodyend="171"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="191" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="191" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a79a7d8f2c40c4aa111f50337ddef84db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -374,7 +381,7 @@
         <name>Delete</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
         <briefdescription>
-<para>Define the behaviour for deleting the object from the database. </para>
+<para>Defines the behaviour for deleting the object from the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -383,13 +390,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="173" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="173" bodyend="176"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="196" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="196" bodyend="199"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Defines a survey client. </para>
+<para>This class represents a <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref> object. A client is associated with a <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">SurveyJob.Survey</ref>. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class implements the <ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref> interface to facilitate easier database operations.</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -425,7 +433,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="13" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="14" bodyend="177"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Client.cs" bodystart="15" bodyend="200"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a1c1f8173dcdde62d6196ec4e5e9bf78b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Client</scope><name>AddressID</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a2e5be7f202a630701d2a56a2cec9803c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Client</scope><name>Client</name></member>

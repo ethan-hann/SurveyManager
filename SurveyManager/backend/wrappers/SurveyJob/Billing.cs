@@ -20,9 +20,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         private readonly List<BillingItem> items = new List<BillingItem>();
         private readonly List<LineItem> lineItems = new List<LineItem>();
 
-        /// <summary>
-        /// The id representing this billing object in the database.
-        /// </summary>
         [Browsable(false)]
         public int ID { get; set; } = 0;
 

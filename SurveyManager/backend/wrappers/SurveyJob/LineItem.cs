@@ -14,11 +14,9 @@ namespace SurveyManager.backend.wrappers.SurveyJob
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class LineItem : IDatabaseWrapper
     {
-        /// <summary>
-        /// The 
-        /// </summary>
         [Browsable(false)]
         public int ID { get; set; }
+
         /// <summary>
         /// The amount in US dollars to charge for this line item.
         /// </summary>

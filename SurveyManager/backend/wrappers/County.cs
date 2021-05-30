@@ -4,6 +4,10 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
+    /// <summary>
+    /// This class represents a county object. A county is simple and has only an id and name. A County is associated with a <see cref="SurveyJob.Survey"/>.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
     public class County : ExpandableObjectConverter, IDatabaseWrapper
@@ -11,12 +15,18 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The name for this county.
+        /// </summary>
         [Category("County Information")]
         [Description("The full name of the county.")]
         [Browsable(true)]
         [DisplayName("Name")]
         public string CountyName { get; set; } = "N/A";
 
+        /// <summary>
+        /// Get a value indicating if this county is valid. A valid county is one whose name is not "N/A".
+        /// </summary>
         public bool IsValidCounty
         {
             get

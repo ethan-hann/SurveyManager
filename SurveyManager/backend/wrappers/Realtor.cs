@@ -4,6 +4,10 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
+    /// <summary>
+    /// This class represents a Realtor object. A realtor is associated with a <see cref="SurveyJob.Survey"/>.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]
     public class Realtor : ExpandableObjectConverter, IDatabaseWrapper
@@ -11,39 +15,54 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The full name of the realtor.
+        /// </summary>
         [Category("Realtor Information")]
         [Description("The full name of the realtor.")]
         [Browsable(true)]
         [DisplayName("Realtor Name")]
         public string Name { get; set; } = "N/A";
 
+        /// <summary>
+        /// The company name where the realtor works.
+        /// </summary>
         [Category("Realtor Information")]
         [Description("The realtor's company's name.")]
         [Browsable(true)]
         [DisplayName("Company Name")]
         public string CompanyName { get; set; } = "N/A";
 
+        /// <summary>
+        /// The email address for the realtor.
+        /// </summary>
         [Category("Realtor Information")]
-        [Description("The email address of the realtor.")]
+        [Description("The email address for the realtor.")]
         [Browsable(true)]
         [DisplayName("Email Address")]
         public string Email { get; set; } = "N/A";
 
+        /// <summary>
+        /// The phone number for the realtor.
+        /// </summary>
         [Category("Realtor Information")]
         [Description("The phone number for the realtor.")]
         [Browsable(true)]
         [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; } = "N/A";
 
+        /// <summary>
+        /// The fax number, if any, for the realtor.
+        /// </summary>
         [Category("Realtor Information")]
-        [Description("The fax number, if any, of the realtor.")]
+        [Description("The fax number, if any, for the realtor.")]
         [Browsable(true)]
         [DisplayName("Fax Number")]
         public string FaxNumber { get; set; } = "N/A";
 
         /// <summary>
         /// Get a value representing whether this Realtor is valid or not.
-        /// <para>A valid Realtor is one whose name and email is not equal to N/A and also not an empty string.</para>
+        /// <para>A valid Realtor is one whose name, email, and company name is not equal to "N/A" and not an empty string.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidRealtor

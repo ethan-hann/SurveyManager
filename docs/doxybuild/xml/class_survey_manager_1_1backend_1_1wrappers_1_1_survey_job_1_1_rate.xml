@@ -25,12 +25,13 @@
         <name>Description</name>
         <initializer>= &quot;N/A&quot;</initializer>
         <briefdescription>
+<para>A brief description of the the service or product this rate represents. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="23" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="23" bodyend="23"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="26" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1af78c86a2b25fea790baa0aa36c88b921" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>decimal</type>
@@ -39,12 +40,13 @@
         <name>Amount</name>
         <initializer>= 0.00m</initializer>
         <briefdescription>
+<para>The dollar amount (USD) associated with this rate. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="29" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="29" bodyend="29"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="35" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a8de2956d52916107a2d78c585fbe88a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>TimeUnit</type>
@@ -53,12 +55,13 @@
         <name>TimeUnit</name>
         <initializer>= TimeUnit.Hour</initializer>
         <briefdescription>
+<para>The <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a8de2956d52916107a2d78c585fbe88a2" kindref="member">TimeUnit</ref> describing how often this rate should be billed. The default is TimeUnit.Hour (per hour). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="35" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="35" bodyend="35"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="44" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a7562a53f64fbc031e7efbdaa9b4465fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -67,12 +70,13 @@
         <name>TaxIncluded</name>
         <initializer>= true</initializer>
         <briefdescription>
+<para>Should tax be included in the final amount for this rate? </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="41" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="41" bodyend="41"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="53" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a3434f3ba8a4415e1dd1c244eb342318c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -80,13 +84,13 @@
         <argsstring></argsstring>
         <name>IsValidRate</name>
         <briefdescription>
-<para>Checks the description, amount, and county to ensure this is a valid rate. </para>
+<para>Get a value indicating if this is a valid rate. A valid rate is one whose <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a420f30e717196cb2e497bf2e559f498b" kindref="member">Description</ref> is not &quot;N/A&quot; and <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1af78c86a2b25fea790baa0aa36c88b921" kindref="member">Amount</ref> is not 0.00. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="47" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="48" bodyend="53"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="60" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="61" bodyend="66"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -101,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="55" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="55" bodyend="55"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="68" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a9a891f9f9f0bc9170bec434fceb3c85a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -134,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="57" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="57" bodyend="64"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="70" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="70" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1af64170ece196223c99c35db3baddc859" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -163,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="66" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="66" bodyend="72"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="79" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="79" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1aba48b25eccaf6cdf80babce3a67dfc24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -188,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="74" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="74" bodyend="79"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="87" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="87" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a02a9ed3df606fd0e6da20fa452a663a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -201,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="81" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="81" bodyend="84"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="94" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="94" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a608f8796ad12fce4a22dd91c5d758db5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -210,7 +214,7 @@
         <name>Insert</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
         <briefdescription>
-<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+<para>Defines the behaviour for inserting the object&apos;s data into the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -219,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="86" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="86" bodyend="103"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="99" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="99" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a9b5e70746d24faa40ba17f59e8256a00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -228,7 +232,7 @@
         <name>Update</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
         <briefdescription>
-<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+<para>Defines the behaviour for updating the object&apos;s data in the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -237,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="105" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="105" bodyend="108"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="118" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="118" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a5e160790f7d61ec3d9a73bd1714d87ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DatabaseError</type>
@@ -246,7 +250,7 @@
         <name>Delete</name>
         <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
         <briefdescription>
-<para>Define the behaviour for deleting the object from the database. </para>
+<para>Defines the behaviour for deleting the object from the database. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
@@ -255,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="110" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="110" bodyend="113"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="123" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="123" bodyend="126"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -299,7 +303,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="15" bodyend="114"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Rate.cs" bodystart="15" bodyend="127"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1af78c86a2b25fea790baa0aa36c88b921" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::Rate</scope><name>Amount</name></member>
       <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a5e160790f7d61ec3d9a73bd1714d87ff" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::Rate</scope><name>Delete</name></member>

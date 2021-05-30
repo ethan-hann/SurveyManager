@@ -285,6 +285,11 @@ namespace SurveyManager.backend
         }
 
         #region Address
+        /// <summary>
+        /// Insert into the database the <see cref="Address"/> <paramref name="a"/>.
+        /// </summary>
+        /// <param name="a">The <see cref="Address"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertAddress(Address a)
         {
             int affectedRows = 0;
@@ -322,6 +327,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Address") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="Address"/> <paramref name="a"/>.
+        /// </summary>
+        /// <param name="a">The <see cref="Address"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateAddress(Address a)
         {
             int affectedRows = 0;
@@ -356,6 +366,11 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Address"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the address object.</param>
+        /// <returns>An <see cref="Address"/> object represented by the id.</returns>
         public static Address GetAddress(int id)
         {
             Address a = null;
@@ -386,6 +401,11 @@ namespace SurveyManager.backend
             return a;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="Address"/> object.
+        /// </summary>
+        /// <param name="a">The <see cref="Address"/> to delete.</param>
+        /// <returns>True if the address was deleted successfully; False otherwise.</returns>
         public static bool DeleteAddress(Address a)
         {
             int affectedRows = 0;
@@ -426,10 +446,10 @@ namespace SurveyManager.backend
 
         #region Client
         /// <summary>
-        /// Inserts a new client into the database.
+        /// Insert into the database the <see cref="Client"/> <paramref name="c"/>.
         /// </summary>
         /// <param name="c">The <see cref="Client"/> to insert.</param>
-        /// <returns>True if the record was inserted successfully; False otherwise.</returns>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertClient(Client c)
         {
             int affectedRows = 0;
@@ -469,6 +489,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Client") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="Client"/> <paramref name="c"/>.
+        /// </summary>
+        /// <param name="c">The <see cref="Client"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateClient(Client c)
         {
             int affectedRows = 0;
@@ -507,6 +532,11 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Client"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the client object.</param>
+        /// <returns>An <see cref="Client"/> object represented by the id.</returns>
         public static Client GetClient(int id)
         {
             Client c = null;
@@ -542,6 +572,10 @@ namespace SurveyManager.backend
             return c;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="Client"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="Client"/> objects.</returns>
         public static List<Client> GetClients()
         {
             List<Client> clients = new List<Client>();
@@ -581,6 +615,11 @@ namespace SurveyManager.backend
             return clients;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="Client"/> object.
+        /// </summary>
+        /// <param name="c">The <see cref="Client"/> to delete.</param>
+        /// <returns>True if the client was deleted successfully; False otherwise.</returns>
         public static bool DeleteClient(Client c)
         {
             int affectedRows = 0;
@@ -635,6 +674,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region County
+        /// <summary>
+        /// Insert into the database the <see cref="County"/> <paramref name="c"/>.
+        /// </summary>
+        /// <param name="c">The <see cref="County"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertCounty(County c)
         {
             int affectedRows = 0;
@@ -670,6 +714,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("County") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="County"/> <paramref name="c"/>.
+        /// </summary>
+        /// <param name="c">The <see cref="County"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateCounty(County c)
         {
             int affectedRows = 0;
@@ -705,6 +754,11 @@ namespace SurveyManager.backend
 
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="County"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the county object.</param>
+        /// <returns>An <see cref="County"/> object represented by the id.</returns>
         public static County GetCounty(int id)
         {
             County c = null;
@@ -733,6 +787,10 @@ namespace SurveyManager.backend
             return c;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="County"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="County"/> objects.</returns>
         public static List<County> GetCounties()
         {
             List<County> counties = new List<County>();
@@ -765,6 +823,11 @@ namespace SurveyManager.backend
             return counties;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="County"/> object.
+        /// </summary>
+        /// <param name="c">The <see cref="County"/> to delete.</param>
+        /// <returns>True if the county was deleted successfully; False otherwise.</returns>
         public static bool DeleteCounty(County c)
         {
             int affectedRows = 0;
@@ -804,6 +867,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region Realtor
+        /// <summary>
+        /// Insert into the database the <see cref="Realtor"/> <paramref name="r"/>.
+        /// </summary>
+        /// <param name="r">The <see cref="Realtor"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertRealtor(Realtor r)
         {
             int affectedRows = 0;
@@ -843,6 +911,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Realtor") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="Realtor"/> <paramref name="r"/>.
+        /// </summary>
+        /// <param name="r">The <see cref="Realtor"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateRealtor(Realtor r)
         {
             int affectedRows = 0;
@@ -882,6 +955,11 @@ namespace SurveyManager.backend
 
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Realtor"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the realtor object.</param>
+        /// <returns>An <see cref="Realtor"/> object represented by the id.</returns>
         public static Realtor GetRealtor(int id)
         {
             Realtor r = null;
@@ -914,6 +992,10 @@ namespace SurveyManager.backend
             return r;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="Realtor"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="Realtor"/> objects.</returns>
         public static List<Realtor> GetRealtors()
         {
             List<Realtor> realtors = new List<Realtor>();
@@ -950,6 +1032,11 @@ namespace SurveyManager.backend
             return realtors;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="Realtor"/> object.
+        /// </summary>
+        /// <param name="r">The <see cref="Realtor"/> to delete.</param>
+        /// <returns>True if the realtor was deleted successfully; False otherwise.</returns>
         public static bool DeleteRealtor(Realtor r)
         {
             int affectedRows = 0;
@@ -989,6 +1076,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region Title Company
+        /// <summary>
+        /// Insert into the database the <see cref="TitleCompany"/> <paramref name="t"/>.
+        /// </summary>
+        /// <param name="t">The <see cref="TitleCompany"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertTitleCompany(TitleCompany t)
         {
             int affectedRows = 0;
@@ -1027,6 +1119,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("TitleCompany") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="TitleCompany"/> <paramref name="t"/>.
+        /// </summary>
+        /// <param name="t">The <see cref="TitleCompany"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateTitleCompany(TitleCompany t)
         {
             int affectedRows = 0;
@@ -1065,6 +1162,11 @@ namespace SurveyManager.backend
 
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="TitleCompany"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the title company object.</param>
+        /// <returns>An <see cref="TitleCompany"/> object represented by the id.</returns>
         public static TitleCompany GetTitleCompany(int id)
         {
             TitleCompany t = null;
@@ -1096,6 +1198,10 @@ namespace SurveyManager.backend
             return t;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="TitleCompany"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="TitleCompany"/> objects.</returns>
         public static List<TitleCompany> GetTitleCompanies()
         {
             List<TitleCompany> companies = new List<TitleCompany>();
@@ -1131,6 +1237,11 @@ namespace SurveyManager.backend
             return companies;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="TitleCompany"/> object.
+        /// </summary>
+        /// <param name="t">The <see cref="TitleCompany"/> to delete.</param>
+        /// <returns>True if the title company was deleted successfully; False otherwise.</returns>
         public static bool DeleteTitleCompany(TitleCompany c)
         {
             int affectedRows = 0;
@@ -1172,11 +1283,10 @@ namespace SurveyManager.backend
         #region Files
 
         /// <summary>
-        /// Attempts to insert a new record into the File table. If the insert could not be completed, the transaction is rolled back
-        /// and no data is committed to the database.
+        /// Insert into the database the <see cref="CFile"/> <paramref name="file"/>.
         /// </summary>
-        /// <param name="file">The <see cref="CFile"/> object to insert</param>
-        /// <returns>The row id of the inserted file; 0 if the file was not inserted.</returns>
+        /// <param name="file">The <see cref="CFile"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertFile(CFile file)
         {
             int affectedRows = 0;
@@ -1219,10 +1329,10 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
-        /// Update the <see cref="CFile"/> object in the database. If the file has an ID of 0, it is inserted instead.
+        /// Update in the database the <see cref="CFile"/> <paramref name="file"/>. If the file has an ID of 0, it is inserted instead.
         /// </summary>
-        /// <param name="file">The file to update/insert.</param>
-        /// <returns>True if the update/insert completed successfully. False otherwise.</returns>
+        /// <param name="file">The <see cref="CFile"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateFile(CFile file)
         {
             if (file.ID == 0)
@@ -1268,10 +1378,10 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
-        /// Retrieve a single <see cref="CFile"/> record from the database.
+        /// Get from the database the <see cref="CFile"/> object represented by the primary key <paramref name="id"/>.
         /// </summary>
-        /// <param name="id">The id of the file record.</param>
-        /// <returns>A single <see cref="CFile"/> object representing the file record or <c>null</c> if no file was found</returns>
+        /// <param name="id">The id of the file object.</param>
+        /// <returns>An <see cref="CFile"/> object represented by the id.</returns>
         public static CFile GetFile(int id)
         {
             CFile f = null;
@@ -1316,10 +1426,10 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
-        /// Retrieves multiple files from the database based on the supplied ids.
+        /// Get multiple files from the database based on the supplied ids.
         /// </summary>
         /// <param name="ids">A variable length parameter: the list of ids of the file records to retrieve.</param>
-        /// <returns>A <see cref="List{T}"/> of type <see cref="CFile"/> containing the file objects or an empty <see cref="List{T}"/> if no files were found</returns>
+        /// <returns>A list of <see cref="CFile"/> objects or an empty list if no files were found.</returns>
         public static List<CFile> GetFiles(params int[] ids)
         {
             List<CFile> files = new List<CFile>();
@@ -1369,10 +1479,10 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
-        /// Attempts to delete a file record from the database.
+        /// Delete from the database the <see cref="CFile"/> object.
         /// </summary>
-        /// <param name="file">The file to delete.</param>
-        /// <returns>True if the deleting was successfull; False otherwise.</returns>
+        /// <param name="file">The <see cref="CFile"/> to delete.</param>
+        /// <returns>True if the file was deleted successfully; False otherwise.</returns>
         public static bool DeleteFile(CFile file)
         {
             int affectedRows = 0;
@@ -1412,6 +1522,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region Survey
+        /// <summary>
+        /// Insert into the database the <see cref="Survey"/> <paramref name="s"/>.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertSurvey(Survey s)
         {
             int affectedRows = 0;
@@ -1475,6 +1590,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Survey") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="Survey"/> <paramref name="s"/>.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateSurvey(Survey s)
         {
             int affectedRows = 0;
@@ -1537,6 +1657,11 @@ namespace SurveyManager.backend
 
         }
 
+        /// <summary>
+        /// Search the database for the specified <paramref name="jobNumber"/> and get a value indicating if the job already exists.
+        /// </summary>
+        /// <param name="jobNumber">The job number to search for.</param>
+        /// <returns>True if the survey job already exists; False otherwise.</returns>
         public static bool DoesSurveyExist(string jobNumber)
         {
             bool exists = false;
@@ -1556,6 +1681,11 @@ namespace SurveyManager.backend
             return exists;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Survey"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the survey object.</param>
+        /// <returns>An <see cref="Survey"/> object represented by the id.</returns>
         public static Survey GetSurvey(int id)
         {
             Survey s = null;
@@ -1613,6 +1743,11 @@ namespace SurveyManager.backend
             return s;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Survey"/> object represented by the job number <paramref name="jobNumber"/>.
+        /// </summary>
+        /// <param name="jobNumber">The job number of the survey object.</param>
+        /// <returns>An <see cref="Survey"/> object represented by the job number.</returns>
         public static Survey GetSurvey(string jobNumber)
         {
             Survey s = null;
@@ -1670,6 +1805,10 @@ namespace SurveyManager.backend
             return s;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="Survey"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="Survey"/> objects.</returns>
         public static List<Survey> GetSurveys()
         {
             List<Survey> surveys = new List<Survey>();
@@ -1732,6 +1871,11 @@ namespace SurveyManager.backend
             return surveys;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="Survey"/> object.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to delete.</param>
+        /// <returns>True if the survey was deleted successfully; False otherwise.</returns>
         public static bool DeleteSurvey(Survey s)
         {
             int affectedRows = 0;
@@ -1771,6 +1915,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region Line Items
+        /// <summary>
+        /// Insert into the database the <see cref="LineItem"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="LineItem"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertLineItem(LineItem item)
         {
             int affectedRows = 0;
@@ -1808,6 +1957,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("LineItem") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="LineItem"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="LineItem"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateLineItem(LineItem item)
         {
             if (item.ID == 0)
@@ -1847,6 +2001,11 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="LineItem"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the line item object.</param>
+        /// <returns>An <see cref="LineItem"/> object represented by the id.</returns>
         public static LineItem GetLineItem(int id)
         {
             LineItem item = null;
@@ -1877,6 +2036,11 @@ namespace SurveyManager.backend
             return item;
         }
 
+        /// <summary>
+        /// Get multiple <see cref="LineItem"/> objects from the database based on the supplied ids.
+        /// </summary>
+        /// <param name="ids">A variable length parameter: the list of ids of the line item records to retrieve.</param>
+        /// <returns>A list of <see cref="LineItem"/> objects or an empty list if no line items were found.</returns>
         public static List<LineItem> GetLineItems(params int[] ids)
         {
             List<LineItem> items = new List<LineItem>();
@@ -1911,6 +2075,11 @@ namespace SurveyManager.backend
             return items;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="LineItem"/> object.
+        /// </summary>
+        /// <param name="s">The <see cref="LineItem"/> to delete.</param>
+        /// <returns>True if the line item was deleted successfully; False otherwise.</returns>
         public static bool DeleteLineItem(int id)
         {
             int affectedRows = 0;
@@ -1950,6 +2119,11 @@ namespace SurveyManager.backend
         #endregion
 
         #region Rates
+        /// <summary>
+        /// Insert into the database the <see cref="Rate"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="Rate"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertRate(Rate item)
         {
             int affectedRows = 0;
@@ -1988,6 +2162,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Rates") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="Rate"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="Rate"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateRate(Rate item)
         {
             if (item.ID == 0)
@@ -2028,6 +2207,11 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="Rate"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the rate object.</param>
+        /// <returns>An <see cref="Rate"/> object represented by the id.</returns>
         public static Rate GetRate(int id)
         {
             Rate item = null;
@@ -2059,6 +2243,10 @@ namespace SurveyManager.backend
             return item;
         }
 
+        /// <summary>
+        /// Get from the database all <see cref="Rate"/> objects.
+        /// </summary>
+        /// <returns>A list of <see cref="Rate"/> objects.</returns>
         public static List<Rate> GetRates()
         {
             List<Rate> items = new List<Rate>();
@@ -2095,6 +2283,11 @@ namespace SurveyManager.backend
             return items;
         }
 
+        /// <summary>
+        /// Get multiple <see cref="Rate"/> objects from the database based on the supplied ids.
+        /// </summary>
+        /// <param name="ids">A variable length parameter: the list of ids of the rate records to retrieve.</param>
+        /// <returns>A list of <see cref="Rate"/> objects or an empty list if no rates were found.</returns>
         public static List<Rate> GetRates(params int[] ids)
         {
             List<Rate> items = new List<Rate>();
@@ -2132,6 +2325,11 @@ namespace SurveyManager.backend
             return items;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="Rate"/> object.
+        /// </summary>
+        /// <param name="rate">The <see cref="Rate"/> to delete.</param>
+        /// <returns>True if the rate was deleted successfully; False otherwise.</returns>
         public static bool DeleteRate(Rate rate)
         {
             int affectedRows = 0;
@@ -2170,6 +2368,11 @@ namespace SurveyManager.backend
         }
         #endregion
         #region Billing Items
+        /// <summary>
+        /// Insert into the database the <see cref="BillingItem"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="BillingItem"/> to insert.</param>
+        /// <returns>The row id of the inserted object.</returns>
         public static int InsertBillingItem(BillingItem item)
         {
             int affectedRows = 0;
@@ -2210,6 +2413,11 @@ namespace SurveyManager.backend
             return affectedRows != 0 ? GetLastRowIDInserted("Billing") : 0;
         }
 
+        /// <summary>
+        /// Update in the database the <see cref="BillingItem"/> <paramref name="item"/>.
+        /// </summary>
+        /// <param name="item">The <see cref="BillingItem"/> to update.</param>
+        /// <returns>True if the update was successfull; False otherwise.</returns>
         public static bool UpdateBillingItem(BillingItem item)
         {
             if (item.ID == 0)
@@ -2252,6 +2460,11 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
 
+        /// <summary>
+        /// Get from the database the <see cref="BillingItem"/> object represented by the primary key <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">The id of the billing item object.</param>
+        /// <returns>An <see cref="BillingItem"/> object represented by the id.</returns>
         public static BillingItem GetBillingItem(int id)
         {
             BillingItem item = null;
@@ -2287,6 +2500,11 @@ namespace SurveyManager.backend
             return item;
         }
 
+        /// <summary>
+        /// Get multiple <see cref="BillingItem"/> objects from the database based on the supplied ids.
+        /// </summary>
+        /// <param name="ids">A variable length parameter: the list of ids of the billing item records to retrieve.</param>
+        /// <returns>A list of <see cref="BillingItem"/> objects or an empty list if no rates were found.</returns>
         public static List<BillingItem> GetBillingItems(params int[] ids)
         {
             List<BillingItem> items = new List<BillingItem>();
@@ -2328,6 +2546,11 @@ namespace SurveyManager.backend
             return items;
         }
 
+        /// <summary>
+        /// Delete from the database the <see cref="BillingItem"/> object.
+        /// </summary>
+        /// <param name="item">The <see cref="BillingItem"/> to delete.</param>
+        /// <returns>True if the billing item was deleted successfully; False otherwise.</returns>
         public static bool DeleteBillingItem(BillingItem item)
         {
             int affectedRows = 0;

@@ -12,23 +12,29 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers
 {
     /// <summary>
-    /// A class which represents a custom file that can be stored in the database.
+    /// This class represents files. The main method of note in this class is <see cref="ReadAllBytes(string)"/>. This method will actually
+    /// populate this file object with the data in the actual file on disk.
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
     /// </summary>
     [TypeConverter(typeof(CFileTypeConverter))]
     [Serializable]
     public class CFile : IDatabaseWrapper
     {
-        private string tempPath = string.Empty;
-
         [Browsable(false)]
         public int ID { get; set; }
 
+        /// <summary>
+        /// The file name, without an extension, for this file.
+        /// </summary>
         [Category("File Information")]
         [Description("The file's name, without extension.")]
         [Browsable(true)]
         [DisplayName("File Name")]
         public string FileName { get; set; } = "";
 
+        /// <summary>
+        /// A brief description for this file explaining what it is.
+        /// </summary>
         [Category("File Information")]
         [Description("A description explaining the contents of the file.")]
         [Browsable(true)]
@@ -36,9 +42,15 @@ namespace SurveyManager.backend.wrappers
         [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
         public string Description { get; set; } = "";
 
+        /// <summary>
+        /// The extension of this file. This is limited to the options in <see cref="FileExtension"/>.
+        /// </summary>
         [Browsable(false)]
         public FileExtension Extension { get; set; } = FileExtension.NONE;
 
+        /// <summary>
+        /// The full file name including its extension.
+        /// </summary>
         [Category("File Contents")]
         [Description("The full file's name.")]
         [Browsable(true)]
@@ -51,11 +63,14 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        /// <summary>
+        /// A temporary path on disk to this file object.
+        /// </summary>
         [Browsable(false)]
         public string TempPath { get; internal set; }
 
         /// <summary>
-        /// The RAW byte array representing the file's contents.
+        /// The raw byte array representing the file's contents.
         /// </summary>
         [Browsable(false)]
         public byte[] Contents { get; set; }
@@ -66,6 +81,9 @@ namespace SurveyManager.backend.wrappers
         [Browsable(false)]
         public Encoding FileEncoding { get; set; } = Encoding.Default;
 
+        /// <summary>
+        /// The size of the file as a formatted string. The string will be formatted as {size} {unit}, i.e. 5 MB for 5 megabytes.
+        /// </summary>
         [Category("File Contents")]
         [Description("The size of the file as stored in the database.")]
         [Browsable(true)]
@@ -91,6 +109,9 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        /// <summary>
+        /// Get the icon to display for this file based on its <see cref="Extension"/> property.
+        /// </summary>
         [Category("File Contents")]
         [Browsable(false)]
         [DisplayName("Icon")]
@@ -178,7 +199,7 @@ namespace SurveyManager.backend.wrappers
         }
 
         /// <summary>
-        /// Reads the contents in <paramref name="path"/> into the <see cref="Contents"/> property.
+        /// Reads all of the bytes of the file in <paramref name="path"/> into the <see cref="Contents"/> property.
         /// </summary>
         /// <param name="path">The path to the file to read from.</param>
         /// <returns>True if the file was read successfully; False otherwise.</returns>
@@ -209,7 +230,7 @@ namespace SurveyManager.backend.wrappers
         /// <summary>
         /// Get a file path to this CFile object. The temporary file is deleted after the program is closed.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The path to the temporary file.</returns>
         public string GetTempFile()
         {
             if (Contents.Length == 0)

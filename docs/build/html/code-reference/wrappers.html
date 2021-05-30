@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Wrapper Classes &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Survey Job Classes" href="survey_job.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="survey_job.html">Survey Job Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Wrapper Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#address">Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cfile">CFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#county">County</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idatabasewrapper">IDatabaseWrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#realtor">Realtor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#titlecompany">TitleCompany</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="code_reference.html">Code Reference Documentation</a> &raquo;</li>
+        
+      <li>Wrapper Classes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/code-reference/wrappers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="wrapper-classes">
+<h1>Wrapper Classes<a class="headerlink" href="#wrapper-classes" title="Permalink to this headline">¶</a></h1>
+<section id="address">
+<h2>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.Address">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.Address</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.Address" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents an address. An address in the case of Survey Manager does not have a state associated with it. </p>
+<p>All addresses are assumed to be in the state of Texas.</p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Address.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ad5e5d731c0888fe898c8e963c5465ed7"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Address.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Address.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a4f719330414bec233801d2f5153b83d4"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Address.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Address.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a3c1fe632cf75066c20aefca13c923ab6"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Address.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Address.Street">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a1e7125c9d039e38ae3e47a510068b6d9"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Street</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">string.Empty</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Address.Street" title="Permalink to this definition">¶</a></dt>
+<dd><p>The street component of the address. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Address.City">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ae39f4e4d5e6db53a8781047ef26c67a6"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">City</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">string.Empty</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Address.City" title="Permalink to this definition">¶</a></dt>
+<dd><p>The city component of the address. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Address.ZipCode">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a35d9fc227e4c958d94eb9f770970f1bb"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">ZipCode</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">string.Empty</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Address.ZipCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zip-code component of the address. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Address.IsEmpty">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1aedd60b0a6b2592f0a5845d1f0d5df0d5"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsEmpty</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Address.IsEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indicating if this address is considered to be empty. </p>
+<p>Returns true if the street, city, or zip-code are empty strings.</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="cfile">
+<h2>CFile<a class="headerlink" href="#cfile" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.CFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.CFile</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.CFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents files. The main method of note in this class is <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac9e0f190fb10c1a658f50f9c1fa201ef"><span class="std std-ref">ReadAllBytes(string)</span></a>. This method will actually populate this file object with the data in the actual file on disk. </p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.ReadAllBytes">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac9e0f190fb10c1a658f50f9c1fa201ef"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">ReadAllBytes</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.ReadAllBytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads all of the bytes of the file in <em>path</em>  into the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a202ed464f00ae89096174241d836f730"><span class="std std-ref">Contents</span></a> property. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param path</dt>
+<dd class="field-odd"><p>The path to the file to read from.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>True if the file was read successfully; False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.GetTempFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1aa5b9d52dd82cf46608d681b48b87a0a9"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">GetTempFile</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.GetTempFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a file path to this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file"><span class="std std-ref">CFile</span></a> object. The temporary file is deleted after the program is closed. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The path to the temporary file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.ToString">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1af34508df6235592763c9be8172d25514"></span><em class="property"><span class="pre">override</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">ToString</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override for object.ToString() that returns a readable version of this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file"><span class="std std-ref">CFile</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">FileName.Extension</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a412d870317ccc5bd4584e1f0ee0a03a1"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae32f185f24e6574e564274fabc29df8d"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.CFile.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a6d1248c58c421a3474402146e817704a"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.CFile.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.FileName">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ac4c212f9d50b8eccba6de3c093f17eb9"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FileName</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.FileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file name, without an extension, for this file. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.Description">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae3c9ae44b829dd9d75b22f16f9eb895e"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Description</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.Description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A brief description for this file explaining what it is. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.Extension">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a96d897a06c7775d78bea0aef7f2e9cc5"></span><span class="pre">FileExtension</span> <span class="sig-name descname"><span class="pre">Extension</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">FileExtension.NONE</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.Extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>The extension of this file. This is limited to the options in FileExtension. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.FullFileName">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a129d54183dea809ac2b8d82fe0b05c29"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FullFileName</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.FullFileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full file name including its extension. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.TempPath">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a902240463a6d1769d25384e3578ca8e9"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">TempPath</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.TempPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>A temporary path on disk to this file object. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.Contents">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a202ed464f00ae89096174241d836f730"></span><span class="pre">byte</span><span class="pre">[]</span> <span class="sig-name descname"><span class="pre">Contents</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.Contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>The raw byte array representing the file’s contents. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.FileEncoding">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a3dcbecc4aea1dc8fa586c19b332cac28"></span><span class="pre">Encoding</span> <span class="sig-name descname"><span class="pre">FileEncoding</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">Encoding.Default</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.FileEncoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the encoding for this file. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.FileSize">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1aa633a6a3763d4c35e318edcb520341cf"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FileSize</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.FileSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the file as a formatted string. The string will be formatted as {size} {unit}, i.e. 5 MB for 5 megabytes. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.IsValidFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ad77cc0662959e460c028fd0c89b27b75"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidFile</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.IsValidFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indicating if this is a valid file and thus ready to be saved to the database. </p>
+<p>A valid file is one whose contents are not null or empty and has a file name and extension.</p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.CFile.DisplayIcon">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a197956279a229607726e8251b5a139a6"></span><span class="pre">Bitmap</span> <span class="sig-name descname"><span class="pre">DisplayIcon</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.CFile.DisplayIcon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the icon to display for this file based on its <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a96d897a06c7775d78bea0aef7f2e9cc5"><span class="std std-ref">Extension</span></a> property. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="client">
+<h2>Client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.Client">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.Client</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_client"><span class="std std-ref">Client</span></a> object. A client is associated with a <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">SurveyJob.Survey</span></a>. </p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Client.SetAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a3e7ba258011d989206f6322d3fa6339f"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">SetAddress</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Client.SetAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a17264b3ea0ff5c1b06c3776b3ec3c279"><span class="std std-ref">ClientAddress</span></a> object from the database based on the id in <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a1c1f8173dcdde62d6196ec4e5e9bf78b"><span class="std std-ref">AddressID</span></a>. Runs on a seperate thread. </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Client.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ab2f1cb0de0d3683fa7a6be8d880c9cdf"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Client.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Client.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a52b4a07f40ff2201ace237c33c112722"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Client.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Client.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a79a7d8f2c40c4aa111f50337ddef84db"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Client.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.Name">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1acd5d5c1d7030ff1a75f35b04fc2268fe"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Name</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.Name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the client. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.PhoneNumber">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1aa5d18d07f57328e09cddec33818a967b"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">PhoneNumber</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.PhoneNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phone number of the client. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.Email">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1adc0c31f83e43e79149e1f981c1597812"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Email</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.Email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address of the client. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.FaxNumber">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a086f47f34d7e9ab85047f8e3f7c75280"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FaxNumber</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.FaxNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fax number, if any, of the client. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.AddressID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a1c1f8173dcdde62d6196ec4e5e9bf78b"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">AddressID</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.AddressID" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id for this client’s address in the database. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.ClientAddress">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a17264b3ea0ff5c1b06c3776b3ec3c279"></span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.Address" title="class: SurveyManager.backend.wrappers.Address"><span class="pre">Address</span></a> <span class="sig-name descname"><span class="pre">ClientAddress</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Address()</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.ClientAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_address"><span class="std std-ref">Address</span></a> for this client object. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Client.IsValidClient">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ab6b3b12050645c8e8422007c4ac5046c"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidClient</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Client.IsValidClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indicating if the client is valid. A valid client is one whose name and phone number is not “N/A” and whose address is not empty. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="county">
+<h2>County<a class="headerlink" href="#county" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.County">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.County</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.County" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a county object. A county is simple and has only an id and name. A <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_county"><span class="std std-ref">County</span></a> is associated with a <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">SurveyJob.Survey</span></a>. </p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.County.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a39636790289ff2d80c28e49458f8cf98"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.County.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.County.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a3296cb46fcc1d0ff679d92f8c11ed210"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.County.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.County.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a8a41ac45533de8c2470c8194936d1882"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.County.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.County.CountyName">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a85ec4de75933998cf969835ef79e2e4f"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">CountyName</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.County.CountyName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for this county. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.County.IsValidCounty">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a9613acca3e710cf7b6cdb92533acaf76"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidCounty</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.County.IsValidCounty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indicating if this county is valid. A valid county is one whose name is not “N/A”. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="idatabasewrapper">
+<h2>IDatabaseWrapper<a class="headerlink" href="#idatabasewrapper" title="Permalink to this headline">¶</a></h2>
+<dl class="cs interface">
+<dt class="sig sig-object cs" id="interface-SurveyManager.backend.wrappers.IDatabaseWrapper">
+<span class="target" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"></span><em class="property"><span class="pre">interface</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></span><a class="headerlink" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>All classes that are considered to be database wrappers should implement this interface. </p>
+<p>Subclassed by <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_address"><span class="std std-ref">SurveyManager.backend.wrappers.Address</span></a>, <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_c_file"><span class="std std-ref">SurveyManager.backend.wrappers.CFile</span></a>, <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_client"><span class="std std-ref">SurveyManager.backend.wrappers.Client</span></a>, <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_county"><span class="std std-ref">SurveyManager.backend.wrappers.County</span></a>, <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"><span class="std std-ref">SurveyManager.backend.wrappers.Realtor</span></a>, <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">SurveyManager.backend.wrappers.SurveyJob.Billing</span></a>, <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">SurveyManager.backend.wrappers.SurveyJob.BillingItem</span></a>, <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">SurveyManager.backend.wrappers.SurveyJob.LineItem</span></a>, <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate"><span class="std std-ref">SurveyManager.backend.wrappers.SurveyJob.Rate</span></a>, <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">SurveyManager.backend.wrappers.SurveyJob.Survey</span></a>, <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"><span class="std std-ref">SurveyManager.backend.wrappers.TitleCompany</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.IDatabaseWrapper.Insert">
+<span class="target" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.IDatabaseWrapper.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.IDatabaseWrapper.Update">
+<span class="target" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.IDatabaseWrapper.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.IDatabaseWrapper.Delete">
+<span class="target" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.IDatabaseWrapper.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.IDatabaseWrapper.ID">
+<span class="target" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1ae9756f31ef20966c4984a4bb14f432ab"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">ID</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.IDatabaseWrapper.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id (primary key) of the database record. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="realtor">
+<h2>Realtor<a class="headerlink" href="#realtor" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.Realtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.Realtor</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.Realtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"><span class="std std-ref">Realtor</span></a> object. A realtor is associated with a <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">SurveyJob.Survey</span></a>. </p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Realtor.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a8ce1b813053408118223097df276bdb8"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Realtor.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Realtor.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a1881b1eabcb37cc545f030499afb0547"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Realtor.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.Realtor.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a3fbc65f4ac3a795306bdf9a44dca4315"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.Realtor.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.Name">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aaaa59815398c9bed21d3b457d3986a2c"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Name</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.Name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the realtor. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.CompanyName">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a708bcf8770f36914b25bbb49d21a9b26"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">CompanyName</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.CompanyName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The company name where the realtor works. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.Email">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aabaf6a1422f94bdc9e897226e84da20b"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Email</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.Email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address for the realtor. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.PhoneNumber">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ab9931bac941d98614d3d0ff5f1cb1d89"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">PhoneNumber</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.PhoneNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phone number for the realtor. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.FaxNumber">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a6f24e8021566b6da339a5e153e0a700c"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FaxNumber</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.FaxNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fax number, if any, for the realtor. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.Realtor.IsValidRealtor">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aca0188f4a9ba3b70bf3cf11b90e76d93"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidRealtor</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.Realtor.IsValidRealtor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value representing whether this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"><span class="std std-ref">Realtor</span></a> is valid or not. </p>
+<p>A valid <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"><span class="std std-ref">Realtor</span></a> is one whose name, email, and company name is not equal to “N/A” and not an empty string.</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="titlecompany">
+<h2>TitleCompany<a class="headerlink" href="#titlecompany" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.TitleCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.TitleCompany</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.backend.wrappers.IDatabaseWrapper" title="interface: SurveyManager.backend.wrappers.IDatabaseWrapper"><span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span></a><a class="headerlink" href="#class-SurveyManager.backend.wrappers.TitleCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a Title Company object. A title company is associated with a <a class="reference internal" href="survey_job.html#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">SurveyJob.Survey</span></a>. </p>
+<p>This class implements the <a class="reference internal" href="#interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"><span class="std std-ref">IDatabaseWrapper</span></a> interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.TitleCompany.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9ef5e1ad6e5b803f440fdee0dc80f2ea"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.TitleCompany.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.TitleCompany.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a4a59cf6b20464a71961fb87e513755c0"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.TitleCompany.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.TitleCompany.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af7c71c2deef8c85ce287c0ba24d17bb1"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.TitleCompany.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.TitleCompany.Name">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9e27ee7611923652b5a164dd844111ce"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Name</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.TitleCompany.Name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the title company. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.TitleCompany.AssociateName">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1ab59229d198069f84f93d13fd72303ba2"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">AssociateName</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.TitleCompany.AssociateName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the associate (point of contact) for the title company. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.TitleCompany.AssociateEmail">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9047c646054a7e02787fc39e9470a08e"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">AssociateEmail</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.TitleCompany.AssociateEmail" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email address for the associated (point of contact) for the title company. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.TitleCompany.OfficeNumber">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8bc69815c2e4a5bcaf2e4c3166ee4776"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">OfficeNumber</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.TitleCompany.OfficeNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phone number for the title company’s office. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.TitleCompany.IsValidCompany">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8f0954b8eb5061d4fd155d24ac74a759"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidCompany</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.TitleCompany.IsValidCompany" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indiciating if this is a valid <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"><span class="std std-ref">TitleCompany</span></a>. </p>
+<p>A valid <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"><span class="std std-ref">TitleCompany</span></a> is one whose name, associate’s name, and associate’s email is not “N/A” and is not empty.</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="survey_job.html" class="btn btn-neutral float-left" title="Survey Job Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
