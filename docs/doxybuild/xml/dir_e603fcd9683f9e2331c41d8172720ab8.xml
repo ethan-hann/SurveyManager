@@ -14,7 +14,6 @@
     <innerfile refid="_c_s_v_helper_8cs">CSVHelper.cs</innerfile>
     <innerfile refid="_data_grid_view_setup_8cs">DataGridViewSetup.cs</innerfile>
     <innerfile refid="_d_b_map_8cs">DBMap.cs</innerfile>
-    <innerfile refid="_drag_drop_info_8cs">DragDropInfo.cs</innerfile>
     <innerfile refid="_enums_8cs">Enums.cs</innerfile>
     <innerfile refid="_job_handler_8cs">JobHandler.cs</innerfile>
     <innerfile refid="_mail_8cs">Mail.cs</innerfile>

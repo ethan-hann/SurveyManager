@@ -3,7 +3,7 @@
 namespace SurveyManager.utility
 {
     /// <summary>
-    /// Class that handles various RegEx validation.
+    /// This class that handles various RegEx validation.
     /// </summary>
     public class Validator
     {

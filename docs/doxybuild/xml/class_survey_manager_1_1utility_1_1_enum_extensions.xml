@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="486" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="486" bodyend="493"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="510" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="510" bodyend="517"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_enum_extensions_1a2f73ae825c345504036de9ae2bf1af00" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -35,14 +35,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="495" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="495" bodyend="502"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="519" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="519" bodyend="526"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Extension class used for enums to get a description string. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="484" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="485" bodyend="503"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="508" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="509" bodyend="527"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_enum_extensions_1a1d40866da2ab884247bc66c48f13a76d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::EnumExtensions</scope><name>ToDescriptionString</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_enum_extensions_1a2f73ae825c345504036de9ae2bf1af00" prot="public" virt="non-virtual"><scope>SurveyManager::utility::EnumExtensions</scope><name>ToDescriptionString</name></member>

@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PDF Classes &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utility Classes" href="utility.html" />
+    <link rel="prev" title="Logging Classes" href="log.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="survey_job.html">Survey Job Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrappers.html">Wrapper Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filtering.html">Filtering Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="icons.html">Icon Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">Licensing Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PDF Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pdf">PDF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">Utility Classes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="code_reference.html">Code Reference Documentation</a> &raquo;</li>
+        
+      <li>PDF Classes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/code-reference/pdf.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="pdf-classes">
+<h1>PDF Classes<a class="headerlink" href="#pdf-classes" title="Permalink to this headline">¶</a></h1>
+<section id="pdf">
+<h2>PDF<a class="headerlink" href="#pdf" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.utility.PdfGeneration.PDF">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.PdfGeneration.PDF</span></span><a class="headerlink" href="#class-SurveyManager.utility.PdfGeneration.PDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is responsible for creating PDFs for reports. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.CreateDocument">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">CreateDocument</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">filename</span></em>, <span class="pre">string</span> <em><span class="pre">title</span></em>, <span class="pre">string</span> <em><span class="pre">author</span></em>, <span class="pre">string</span> <em><span class="pre">subject</span></em>, <span class="pre">string</span> <em><span class="pre">headerString</span></em>, <span class="pre">Fonts</span> <em><span class="pre">documentFont</span></em>, <span class="pre">bool</span> <em><span class="pre">includeHeader</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em>, <span class="pre">bool</span> <em><span class="pre">includeFooter</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em>, <span class="pre">bool</span> <em><span class="pre">landscape</span></em><em> <span class="pre">=</span> <span class="pre">false</span></em>, <span class="pre">int</span> <em><span class="pre">fontSize</span></em><em> <span class="pre">=</span> <span class="pre">11</span></em>, <span class="pre">bool</span> <em><span class="pre">stream</span></em><em> <span class="pre">=</span> <span class="pre">false</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.CreateDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> Document with the specified information. </p>
+<p>This should be called before any Generation methods in this class as it sets up variables relevant to the next Generate method call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param filename</dt>
+<dd class="field-odd"><p>The file name of the new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document.</p>
+</dd>
+<dt class="field-even">Param title</dt>
+<dd class="field-even"><p>The title (for metadata) of the new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document.</p>
+</dd>
+<dt class="field-odd">Param author</dt>
+<dd class="field-odd"><p>The author (for metadata) of the new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document.</p>
+</dd>
+<dt class="field-even">Param subject</dt>
+<dd class="field-even"><p>The subject (for metadata) of the new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document.</p>
+</dd>
+<dt class="field-odd">Param headerString</dt>
+<dd class="field-odd"><p>The text for the header.</p>
+</dd>
+<dt class="field-even">Param documentFont</dt>
+<dd class="field-even"><p>The font family to use for this new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document. See Fonts for valid options.</p>
+</dd>
+<dt class="field-odd">Param fontSize</dt>
+<dd class="field-odd"><p>The normal font size for the text in this new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> document. Default is 11. The header font size will be this font size plus 4.</p>
+</dd>
+<dt class="field-even">Param stream</dt>
+<dd class="field-even"><p>Should the new document be created as a MemoryStream instead of a file? Default is false.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.GenerateBillingReport">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa25496a2772c8fd385adcc5866c9d16c"></span><em class="property"><span class="pre">static</span></em> <span class="pre">MemoryStream</span> <span class="sig-name descname"><span class="pre">GenerateBillingReport</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.GenerateBillingReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> billing report. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to generate the report for.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>If <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6"><span class="std std-ref">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</span></a> was called with isStream as true, returns a MemoryStream object to this <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a>. Otherwise, returns null.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.GenerateFullReport">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2ec97b0e5a23753bd6428c44f605c1dc"></span><em class="property"><span class="pre">static</span></em> <span class="pre">MemoryStream</span> <span class="sig-name descname"><span class="pre">GenerateFullReport</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.GenerateFullReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> full report for a survey. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to generate the report for.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>If <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6"><span class="std std-ref">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</span></a> was called with isStream as true, returns a MemoryStream object to this <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a>. Otherwise, returns null.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.GenerateFileReport">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a4b5d82b9ff662f4e3ab22ffaf151c580"></span><em class="property"><span class="pre">static</span></em> <span class="pre">MemoryStream</span> <span class="sig-name descname"><span class="pre">GenerateFileReport</span></span> <span class="sig-paren">(</span><a class="reference internal" href="survey_job.html#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="class: SurveyManager.backend.wrappers.SurveyJob.Survey"><span class="pre">Survey</span></a> <em><span class="pre">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.GenerateFileReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a> file report. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param s</dt>
+<dd class="field-odd"><p>The Survey to generate the report for.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>If <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6"><span class="std std-ref">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</span></a> was called with isStream as true, returns a MemoryStream object to this <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f"><span class="std std-ref">PDF</span></a>. Otherwise, returns null.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawString">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a08adc05d0192b4b406dad74ee8856f32"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">DrawString</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">text</span></em>, <span class="pre">float</span> <em><span class="pre">x</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a string to the page at the specified x-position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param text</dt>
+<dd class="field-odd"><p>The text to draw.</p>
+</dd>
+<dt class="field-even">Param x</dt>
+<dd class="field-even"><p>The x-position to start drawing the string at.</p>
+</dd>
+<dt class="field-odd">Param updateCurrentY</dt>
+<dd class="field-odd"><p>Should this method update the current y-position variable after drawing?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawStringBold">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afbc75211a936539f5a841ef10f24f2fa"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">DrawStringBold</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">text</span></em>, <span class="pre">float</span> <em><span class="pre">x</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawStringBold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a bold string to the page at the specified x-position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param text</dt>
+<dd class="field-odd"><p>The text to draw.</p>
+</dd>
+<dt class="field-even">Param x</dt>
+<dd class="field-even"><p>The x-position to start drawing the string at.</p>
+</dd>
+<dt class="field-odd">Param updateCurrentY</dt>
+<dd class="field-odd"><p>Should this method update the current y-position variable after drawing?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLarge">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2d0113e3f140a182bf44f694ff36ad57"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">DrawStringLarge</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">text</span></em>, <span class="pre">float</span> <em><span class="pre">x</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLarge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a large string to the page at the specified x-position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param text</dt>
+<dd class="field-odd"><p>The text to draw.</p>
+</dd>
+<dt class="field-even">Param x</dt>
+<dd class="field-even"><p>The x-position to start drawing the string at.</p>
+</dd>
+<dt class="field-odd">Param updateCurrentY</dt>
+<dd class="field-odd"><p>Should this method update the current y-position variable after drawing?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLargeBold">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0c16e289c01663dad8322ad8bb7707e4"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">DrawStringLargeBold</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">text</span></em>, <span class="pre">float</span> <em><span class="pre">x</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLargeBold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a bold, large string to the page at the specified x-position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param text</dt>
+<dd class="field-odd"><p>The text to draw.</p>
+</dd>
+<dt class="field-even">Param x</dt>
+<dd class="field-even"><p>The x-position to start drawing the string at.</p>
+</dd>
+<dt class="field-odd">Param updateCurrentY</dt>
+<dd class="field-odd"><p>Should this method update the current y-position variable after drawing?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawStringPair">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ace7fb1dd8534c9250e1a1a39c693dd80"></span><em class="property"><span class="pre">static</span></em> <span class="pre">SizeF</span> <span class="sig-name descname"><span class="pre">DrawStringPair</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">title</span></em>, <span class="pre">string</span> <em><span class="pre">description</span></em>, <span class="pre">float</span> <em><span class="pre">x</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><em> <span class="pre">=</span> <span class="pre">true</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawStringPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a string pair with a bolded title and normal description on the same line. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param title</dt>
+<dd class="field-odd"><p>The title text to draw.</p>
+</dd>
+<dt class="field-even">Param description</dt>
+<dd class="field-even"><p>The description text to draw.</p>
+</dd>
+<dt class="field-odd">Param x</dt>
+<dd class="field-odd"><p>The starting x position to draw the two strings at.</p>
+</dd>
+<dt class="field-even">Param updateCurrentY</dt>
+<dd class="field-even"><p>Should this method update the current y-position variable after drawing?</p>
+</dd>
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The SizeF of the new string pair.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLine">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af5eec04a137c79892394bae8d41df104"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <span class="sig-name descname"><span class="pre">DrawStringLine</span></span> <span class="sig-paren">(</span><a class="reference internal" href="utility.html#class-SurveyManager.utility.Pair" title="class: SurveyManager.utility.Pair"><span class="pre">Pair</span></a><span class="pre">&lt;</span><span class="pre">string</span><span class="pre">,</span> <span class="pre">string</span><span class="pre">&gt;</span> <em><span class="pre">left</span></em>, <span class="pre">bool</span> <em><span class="pre">leftIsPair</span></em>, <a class="reference internal" href="utility.html#class-SurveyManager.utility.Pair" title="class: SurveyManager.utility.Pair"><span class="pre">Pair</span></a><span class="pre">&lt;</span><span class="pre">string</span><span class="pre">,</span> <span class="pre">string</span><span class="pre">&gt;</span> <em><span class="pre">right</span></em>, <span class="pre">bool</span> <em><span class="pre">rightIsPair</span></em>, <span class="pre">bool</span> <em><span class="pre">updateCurrentY</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.DrawStringLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw two text pairs, one left aligned and one right aligned. The strings to draw are specified by the Pair&lt;K, V&gt; parameters. </p>
+<p>A pair can be any two strings; i.e. “Customer ID:” and “Test Customer”. To draw the text, this method needs to know if the left and right text should be considered as pairs. This means that the Key of the Pair&lt;K, V&gt; will be drawn bolded while the Value will be drawn using the regular text font.</p>
+<p>You should also specify whether the current y-position should be updated after execution of this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param left</dt>
+<dd class="field-odd"><p>The text to draw left aligned.</p>
+</dd>
+<dt class="field-even">Param leftIsPair</dt>
+<dd class="field-even"><p>Is the left text considered a pair?</p>
+</dd>
+<dt class="field-odd">Param right</dt>
+<dd class="field-odd"><p>The text to draw right aligned.</p>
+</dd>
+<dt class="field-even">Param rightIsPair</dt>
+<dd class="field-even"><p>Is the right text considered a pair?</p>
+</dd>
+<dt class="field-odd">Param updateCurrentY</dt>
+<dd class="field-odd"><p>Should this method update the value of the current y-position?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.PdfGeneration.PDF.UpdateCurrentY">
+<span class="target" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa91a25e2800f9fccd6471d43da0d2369"></span><em class="property"><span class="pre">static</span></em> <span class="pre">float</span> <span class="sig-name descname"><span class="pre">UpdateCurrentY</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">lastLineText</span></em>, <span class="pre">bool</span> <em><span class="pre">wasBolded</span></em>, <span class="pre">bool</span> <em><span class="pre">usingHeaderFont</span></em><em> <span class="pre">=</span> <span class="pre">false</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.PdfGeneration.PDF.UpdateCurrentY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the y-position using the last line of text and the specified parameters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param lastLineText</dt>
+<dd class="field-odd"><p>The last line of text drawn.</p>
+</dd>
+<dt class="field-even">Param wasBolded</dt>
+<dd class="field-even"><p>Was the text drawn with the bold font?</p>
+</dd>
+<dt class="field-odd">Param usingHeaderFont</dt>
+<dd class="field-odd"><p>Was the text draw with the header font?</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>The new currentY position.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="utility.html" class="btn btn-neutral float-right" title="Utility Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="log.html" class="btn btn-neutral float-left" title="Logging Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

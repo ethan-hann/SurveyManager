@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Filtering Classes &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Icon Classes" href="icons.html" />
+    <link rel="prev" title="Database Classes" href="database.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="survey_job.html">Survey Job Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrappers.html">Wrapper Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Filtering Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#andfilter">ANDFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#orfilter">ORFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filterexpressionlist">FilterExpressionList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ifilter">IFilter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="icons.html">Icon Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">Licensing Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdf.html">PDF Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">Utility Classes</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="code_reference.html">Code Reference Documentation</a> &raquo;</li>
+        
+      <li>Filtering Classes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/code-reference/filtering.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="filtering-classes">
+<h1>Filtering Classes<a class="headerlink" href="#filtering-classes" title="Permalink to this headline">¶</a></h1>
+<section id="andfilter">
+<h2>ANDFilter<a class="headerlink" href="#andfilter" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.utility.Filtering.ANDFilter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.Filtering.ANDFilter</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">SurveyManager.utility.Filtering.IFilter</span></a><a class="headerlink" href="#class-SurveyManager.utility.Filtering.ANDFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an AND boolean filter statement. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.Filtering.ANDFilter.ANDFilter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter_1a1060b60a046cdf8528e929435a71418c"></span><span class="sig-name descname"><span class="pre">ANDFilter</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">IFilter</span></a> <em><span class="pre">filterExpressionLeft</span></em>, <a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">IFilter</span></a> <em><span class="pre">filterExpressionRight</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.Filtering.ANDFilter.ANDFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new AND filter statement. The left and right hand sides of the supplied statements are conjoined with an AND between them. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param filterExpressionLeft</dt>
+<dd class="field-odd"><p>The left hand side of the statement.</p>
+</dd>
+<dt class="field-even">Param filterExpressionRight</dt>
+<dd class="field-even"><p>The right hand side of the statement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.utility.Filtering.ANDFilter.FilterString">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter_1af01ec26e1887ae7346ca30e9ce6a68f6"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FilterString</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.utility.Filtering.ANDFilter.FilterString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the filter string for this statement. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="orfilter">
+<h2>ORFilter<a class="headerlink" href="#orfilter" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.utility.Filtering.ORFilter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.Filtering.ORFilter</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">SurveyManager.utility.Filtering.IFilter</span></a><a class="headerlink" href="#class-SurveyManager.utility.Filtering.ORFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an OR boolean filter statement. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.Filtering.ORFilter.ORFilter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1a3f3241b02f90cd5fdadb06ff10a3cfa1"></span><span class="sig-name descname"><span class="pre">ORFilter</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">IFilter</span></a> <em><span class="pre">filterExpressionLeft</span></em>, <a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">IFilter</span></a> <em><span class="pre">filterExpressionRight</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.Filtering.ORFilter.ORFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new OR filter statement. The left and right hand sides of the supplied statements are conjoined with an OR between them. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param filterExpressionLeft</dt>
+<dd class="field-odd"><p>The left hand side of the statement.</p>
+</dd>
+<dt class="field-even">Param filterExpressionRight</dt>
+<dd class="field-even"><p>The right hand side of the statement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.utility.Filtering.ORFilter.FilterString">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1aecb175b33895d9c40037123af56f1fc6"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FilterString</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.utility.Filtering.ORFilter.FilterString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the filter string for this statement. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="filter">
+<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.utility.Filtering.Filter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.Filtering.Filter</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="#interface-SurveyManager.utility.Filtering.IFilter" title="interface: SurveyManager.utility.Filtering.IFilter"><span class="pre">SurveyManager.utility.Filtering.IFilter</span></a><a class="headerlink" href="#class-SurveyManager.utility.Filtering.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing a <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_filter"><span class="std std-ref">Filter</span></a> statement using various SqlOperators. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.utility.Filtering.Filter.Filter">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_1a022cd06229e81ea7c504e31a4e52646a"></span><span class="sig-name descname"><span class="pre">Filter</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">strFilterName</span></em>, <span class="pre">SqlOperators</span> <em><span class="pre">sqlOperator</span></em>, <span class="pre">string</span> <em><span class="pre">strFilterValue</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.utility.Filtering.Filter.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_filter"><span class="std std-ref">Filter</span></a> statement with the specified name (column), SqlOperators operator, and value (search text). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param strFilterName</dt>
+<dd class="field-odd"><p>The name of the column this statement is for.</p>
+</dd>
+<dt class="field-even">Param sqlOperator</dt>
+<dd class="field-even"><p>The SqlOperators that this statement applies.</p>
+</dd>
+<dt class="field-odd">Param strFilterValue</dt>
+<dd class="field-odd"><p>The search text to apply to the column using the specified SqlOperators.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.utility.Filtering.Filter.FilterString">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_1a82a52e88a8d85dc37154b9ae0c7271b4"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FilterString</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.utility.Filtering.Filter.FilterString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the actual filter string of this statement. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="filterexpressionlist">
+<h2>FilterExpressionList<a class="headerlink" href="#filterexpressionlist" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.utility.Filtering.FilterExpressionList">
+<span class="target" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.Filtering.FilterExpressionList</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1" title="type: msdn ~&gt; System.Collections.Generic.IEnumerable"><span class="pre">IEnumerable</span></a><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" title="type: msdn ~&gt; System.Collections.IEnumerator"><span class="pre">IEnumerator</span></a><a class="headerlink" href="#class-SurveyManager.utility.Filtering.FilterExpressionList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing a list of enumerable filter expressions. </p>
+</dd></dl>
+
+</section>
+<section id="ifilter">
+<h2>IFilter<a class="headerlink" href="#ifilter" title="Permalink to this headline">¶</a></h2>
+<dl class="cs interface">
+<dt class="sig sig-object cs" id="interface-SurveyManager.utility.Filtering.IFilter">
+<span class="target" id="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter"></span><em class="property"><span class="pre">interface</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.utility.Filtering.IFilter</span></span><a class="headerlink" href="#interface-SurveyManager.utility.Filtering.IFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interace for any class that is a <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_filter"><span class="std std-ref">Filter</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter"><span class="std std-ref">SurveyManager.utility.Filtering.ANDFilter</span></a>, <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_filter"><span class="std std-ref">SurveyManager.utility.Filtering.Filter</span></a>, <a class="reference internal" href="#class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter"><span class="std std-ref">SurveyManager.utility.Filtering.ORFilter</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.utility.Filtering.IFilter.FilterString">
+<span class="target" id="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter_1a2eaf6b7cb87c325191dc59466cc56428"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">FilterString</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.utility.Filtering.IFilter.FilterString" title="Permalink to this definition">¶</a></dt>
+<dd><p>All implementing classes must implement this property to get their filter string. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="icons.html" class="btn btn-neutral float-right" title="Icon Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="database.html" class="btn btn-neutral float-left" title="Database Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

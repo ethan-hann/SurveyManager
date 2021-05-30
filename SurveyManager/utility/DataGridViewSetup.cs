@@ -6,8 +6,16 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class is used to setup <see cref="KryptonOutlookGrid"/>s used throughout Survey Manager.
+    /// </summary>
     public class DataGridViewSetup
     {
+        /// <summary>
+        /// Setup the data grid view using the specified type of entity.
+        /// </summary>
+        /// <param name="grid">The <see cref="KryptonOutlookGrid"/> to setup.</param>
+        /// <param name="typeOfData">The <see cref="EntityTypes"/> of the data.</param>
         public static void SetupDGV(KryptonOutlookGrid grid, EntityTypes typeOfData)
         {
             grid.ClearEverything();

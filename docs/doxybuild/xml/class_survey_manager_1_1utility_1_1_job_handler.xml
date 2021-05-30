@@ -133,7 +133,7 @@
         <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="26" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="27" bodyend="37"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1a02d1ce67ccaef03bd859ef1ff084eefb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
-        <type>Survey</type>
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
         <definition>Survey SurveyManager.utility.JobHandler.CurrentJob</definition>
         <argsstring></argsstring>
         <name>CurrentJob</name>
@@ -370,7 +370,7 @@
         <argsstring>(Survey s)</argsstring>
         <name>Open</name>
         <param>
-          <type>Survey</type>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
           <declname>s</declname>
         </param>
         <briefdescription>
@@ -505,7 +505,7 @@
         <argsstring>(Survey s)</argsstring>
         <name>OpenJob</name>
         <param>
-          <type>Survey</type>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
           <declname>s</declname>
         </param>
         <briefdescription>

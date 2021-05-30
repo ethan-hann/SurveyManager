@@ -7,7 +7,6 @@
     <innerfile refid="_filter_expression_list_8cs">FilterExpressionList.cs</innerfile>
     <innerfile refid="_i_filter_8cs">IFilter.cs</innerfile>
     <innerfile refid="_o_r_filter_8cs">ORFilter.cs</innerfile>
-    <innerfile refid="_text_search_filter_8cs">TextSearchFilter.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

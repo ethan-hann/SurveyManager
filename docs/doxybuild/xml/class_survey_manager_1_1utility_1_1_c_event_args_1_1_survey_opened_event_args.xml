@@ -5,7 +5,7 @@
     <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
       <sectiondef kind="property">
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>Survey</type>
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
         <definition>Survey SurveyManager.utility.CEventArgs.SurveyOpenedEventArgs.Survey</definition>
         <argsstring></argsstring>
         <name>Survey</name>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="58" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="58" bodyend="58"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="77" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="77" bodyend="77"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -25,7 +25,7 @@
         <argsstring>(Survey survey)</argsstring>
         <name>SurveyOpenedEventArgs</name>
         <param>
-          <type><ref refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" kindref="member">Survey</ref></type>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
           <declname>survey</declname>
         </param>
         <briefdescription>
@@ -34,10 +34,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="60" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="60" bodyend="63"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="79" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="79" bodyend="82"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Event args representing when a survey is opened. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -63,7 +64,7 @@
         <label>EventArgs</label>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="56" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="57" bodyend="64"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="75" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="76" bodyend="83"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</scope><name>Survey</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a9b5a164f8fde49fbf3649a5da1e1db7d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</scope><name>SurveyOpenedEventArgs</name></member>

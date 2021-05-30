@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="135" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="135" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="133" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a2bd4d23bddbffa8652724fa07aa6c68e" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="165" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="165" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="163" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="163" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a58cc58a1d8b4fb0806111b4d1ddce01d" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="166" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="166" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="164" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="164" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a8a55c756e51cded41cbc34534b65267c" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="167" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="167" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="165" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="165" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a86a0e7c1a6dc2946b5ee45e2981c9cea" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="168" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="168" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="166" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="166" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1aac0b4a999bceb1020e986293f9c2b805" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="169" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="169" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="167" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="167" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1ac6453a747b853468ea6dd0dab83797d3" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="170" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="170" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="168" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="168" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a7898c34adfb4219130c0cb2cc9268ce9" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="171" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="171" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="169" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="169" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a46f2a893a159aaac125b24664c8f2071" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="172" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="172" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="170" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="170" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1af5f47f472533fee553d50d7fbf4066d2" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="173" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="173" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="171" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="171" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1aa287426d45c06ba07fc9b8cbf04043e0" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="174" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="174" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="172" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="172" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a0bce1e96e0297b294a9c06e34bbb59df" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="175" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="175" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="173" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="173" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a45c935606900335272fda606b3ef2461" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="176" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="176" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="174" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="174" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1adeae0aebff13a95b87b9bc3efeb9b20a" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="177" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="177" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="175" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="175" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1aba5e0987a1be18fc063655c9528b3d87" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="192" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="192" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="190" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="190" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a914b61fe4d10f552c2a7cb9eb916dc0e" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="193" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="193" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="191" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="191" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1ab6f9807f933b94c2bf8c5b0682e990a5" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="194" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="194" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="192" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a774c420ae02f20dd3ca8caa56f3a8c5a" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="195" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="195" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="193" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="193" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a4f5ee241b75cf60040b55fd2843fb55e" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="196" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="196" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="194" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="194" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a57d583ca7b8533d6425a211cbdd20c09" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="197" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="197" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="195" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="195" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a13ae1c432d8672b183fcaca7e3cbdb40" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="198" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="198" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="196" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="196" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a4bce3bcf6a39c4a7991aea54ba9df400" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="199" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="199" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="197" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="197" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1adfd278c519c32d54dc93787d557abf27" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="200" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="200" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="198" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a9a0e8665cf4b12115095d71fd459159c" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="201" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="201" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="199" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1acf9e6a8ce9c1149455a201495d0e6e42" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="202" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="202" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="200" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="200" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a0cec9150e447ec804bba62421b972c7c" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -369,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="203" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="203" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="201" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="201" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1ad520a3506c4a9e62570a5adea53037a5" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="204" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="204" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="202" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="202" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a3cf8b6e458ee2cba387fbcc57bea7091" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="205" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="205" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="203" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a640342b58316e6435d499dc2a84a1616" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -411,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="206" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="206" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="204" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="204" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1aeb76b91effeb5f217e8ece4f2177754a" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -425,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="207" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="207" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="205" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a2698eeffae589dbe7b76096ffd96f172" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="208" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="208" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="206" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="206" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a592e0d01cf61f060043f58df0c697d23" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -453,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="209" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="209" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="207" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1ab596808daed3eae40276691f728cc65c" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -467,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="211" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="211" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="209" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a0e63ca7cc97b24aac30427704d58a1fb" prot="public" static="yes" mutable="no">
         <type>const uint</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="212" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="212" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="210" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="210" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -516,7 +516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="215" column="37"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="213" column="37"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -524,7 +524,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="132" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="133" bodyend="222"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="130" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="131" bodyend="220"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1aa287426d45c06ba07fc9b8cbf04043e0" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32</scope><name>BIF_BROWSEFORCOMPUTER</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_shell32_1a0bce1e96e0297b294a9c06e34bbb59df" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32</scope><name>BIF_BROWSEFORPRINTER</name></member>

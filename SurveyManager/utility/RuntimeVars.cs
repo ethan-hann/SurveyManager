@@ -7,6 +7,9 @@ using System.IO;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class holds various runtime variables need throughout Survey Manager.
+    /// </summary>
     public class RuntimeVars
     {
         private static RuntimeVars instance = null;
@@ -42,6 +45,9 @@ namespace SurveyManager.utility
         /// </summary>
         public List<County> Counties { get; set; }
 
+        /// <summary>
+        /// The selected KryptonPage's unique name.
+        /// </summary>
         public string SelectedPageUniqueName { get; set; } = "";
 
         /// <summary>
@@ -70,6 +76,9 @@ namespace SurveyManager.utility
         /// </summary>
         public string LicenseHolder { get; set; } = "N/A";
 
+        /// <summary>
+        /// A collection of temporary files created by Survey Manager.
+        /// </summary>
 
         public TempFileCollection TempFiles = new TempFileCollection(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
 

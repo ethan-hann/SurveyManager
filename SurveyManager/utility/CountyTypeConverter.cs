@@ -4,6 +4,9 @@ using System.Globalization;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// Converts a <see cref="backend.wrappers.County"/> object into a string for use in a property grid.
+    /// </summary>
     public class CountyTypeConverter : TypeConverter
     {
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)

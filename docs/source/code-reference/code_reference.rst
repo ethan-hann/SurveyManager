@@ -11,3 +11,9 @@ The following is a listing of source code documentation.
     survey_job
     wrappers
     database
+    filtering
+    icons
+    licensing
+    log
+    pdf
+    utility

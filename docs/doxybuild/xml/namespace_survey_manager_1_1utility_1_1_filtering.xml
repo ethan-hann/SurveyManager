@@ -7,7 +7,6 @@
     <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list" prot="public">SurveyManager::utility::Filtering::FilterExpressionList</innerclass>
     <innerclass refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" prot="public">SurveyManager::utility::Filtering::IFilter</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter" prot="public">SurveyManager::utility::Filtering::ORFilter</innerclass>
-    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter" prot="public">SurveyManager::utility::Filtering::TextSearchFilter</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" prot="public" static="no" strong="yes">
         <type></type>

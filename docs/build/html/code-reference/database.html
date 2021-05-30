@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Database Class &mdash; SurveyManager 1.0.0.0 documentation</title>
+  <title>Database Classes &mdash; SurveyManager 1.0.0.0 documentation</title>
   
 
   
@@ -41,7 +41,9 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Filtering Classes" href="filtering.html" />
+    <link rel="prev" title="Wrapper Classes" href="wrappers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,13 +89,28 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="survey_job.html">Survey Job Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrappers.html">Wrapper Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Database Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database">Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#queries">Queries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="filtering.html">Filtering Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="icons.html">Icon Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">Licensing Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdf.html">PDF Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utility.html">Utility Classes</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -142,7 +159,9 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Database Class</li>
+          <li><a href="code_reference.html">Code Reference Documentation</a> &raquo;</li>
+        
+      <li>Database Classes</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,8 +180,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="database-class">
-<h1>Database Class<a class="headerlink" href="#database-class" title="Permalink to this headline">¶</a></h1>
+  <section id="database-classes">
+<h1>Database Classes<a class="headerlink" href="#database-classes" title="Permalink to this headline">¶</a></h1>
+<section id="database">
+<h2>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h2>
 <dl class="cs class">
 <dt class="sig sig-object cs" id="class-SurveyManager.backend.Database">
 <span class="target" id="class_survey_manager_1_1backend_1_1_database"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.Database</span></span><a class="headerlink" href="#class-SurveyManager.backend.Database" title="Permalink to this definition">¶</a></dt>
@@ -1008,12 +1029,55 @@
 </dd></dl>
 
 </section>
+<section id="queries">
+<h2>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.Queries">
+<span class="target" id="class_survey_manager_1_1backend_1_1_queries"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.Queries</span></span><a class="headerlink" href="#class-SurveyManager.backend.Queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a class responsible for building dynamic SQL queries using one static method: <a class="reference internal" href="#class_survey_manager_1_1backend_1_1_queries_1a7edbec007cc53b6f0482fa6b8c22fae5"><span class="std std-ref">BuildQuery(QType, string, ArrayList, ArrayList, string)</span></a> </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.Queries.BuildQuery">
+<span class="target" id="class_survey_manager_1_1backend_1_1_queries_1a7edbec007cc53b6f0482fa6b8c22fae5"></span><em class="property"><span class="pre">static</span></em> <span class="pre">string</span> <span class="sig-name descname"><span class="pre">BuildQuery</span></span> <span class="sig-paren">(</span><span class="pre">QType</span> <em><span class="pre">qtype</span></em>, <span class="pre">string</span> <em><span class="pre">tableName</span></em>, <span class="pre">ArrayList</span> <em><span class="pre">values</span></em><em> <span class="pre">=</span> <span class="pre">null</span></em>, <span class="pre">ArrayList</span> <em><span class="pre">columnNames</span></em><em> <span class="pre">=</span> <span class="pre">null</span></em>, <span class="pre">string</span> <em><span class="pre">condition</span></em><em> <span class="pre">=</span> <span class="pre">null</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.Queries.BuildQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a query string based on the supplied arguments. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param qtype</dt>
+<dd class="field-odd"><p>The type of query to build. See QType for valid options.</p>
+</dd>
+<dt class="field-even">Param tableName</dt>
+<dd class="field-even"><p>The table name this query is for.</p>
+</dd>
+<dt class="field-odd">Param values</dt>
+<dd class="field-odd"><p>A ArrayList of values for Inserting or Updating.</p>
+</dd>
+<dt class="field-even">Param columnNames</dt>
+<dd class="field-even"><p>A ArrayList of column names that should be considered.</p>
+</dd>
+<dt class="field-odd">Param condition</dt>
+<dd class="field-odd"><p>The condition, if any, the query should include.</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>A new string that represents the query and can be passed to a DB connection for execution.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
 
 
            </div>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="filtering.html" class="btn btn-neutral float-right" title="Filtering Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="wrappers.html" class="btn btn-neutral float-left" title="Wrapper Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="16" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="16" bodyend="28"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="19" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="19" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a17a84546479a40aa37e50d9c89fa034a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -108,14 +108,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="37" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="37" bodyend="58"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="40" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="40" bodyend="61"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class is used to create comma-seperated value files. Mainly, it used to dump the database data. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="8" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="9" bodyend="59"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="11" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="12" bodyend="62"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a79b913fc16ef6879992ddacee561baec" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CSVHelper</scope><name>CreateCSV</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a17a84546479a40aa37e50d9c89fa034a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CSVHelper</scope><name>DumpTables</name></member>

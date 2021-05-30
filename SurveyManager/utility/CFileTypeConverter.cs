@@ -6,6 +6,9 @@ using System.Globalization;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// Converts a <see cref="CFile"/> object into a string for use in a property grid.
+    /// </summary>
     public class CFileTypeConverter : TypeConverter
     {
         public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)

@@ -3,6 +3,9 @@ using System.Collections;
 
 namespace SurveyManager.utility.Filtering
 {
+    /// <summary>
+    /// Class representing a list of enumerable filter expressions.
+    /// </summary>
     [Serializable()]
     public class FilterExpressionList : IEnumerable, IEnumerator
     {

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="10" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="10" bodyend="19"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="14" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="14" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1a7da94f2350bb5e9fb3213619b8838a30" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="21" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="21" bodyend="37"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="25" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="25" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1a2b5e49549f0b7b81575d11956f0b0a72" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="39" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="39" bodyend="50"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="43" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="43" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1a34cb183b0ff457f6dcedc4fdc690f30b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="52" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="52" bodyend="59"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="56" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="56" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1add85dde7496a0bdb0b679777cb3e940f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
@@ -86,10 +86,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="61" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="61" bodyend="71"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="65" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="65" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1a70971c06affee323aeba4d8334e27cde" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>Survey</type>
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
         <definition>static Survey SurveyManager.utility.ProcessDataTable.GetSurvey</definition>
         <argsstring>(DataRow row)</argsstring>
         <name>GetSurvey</name>
@@ -103,10 +103,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="73" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="73" bodyend="102"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="77" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="77" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_process_data_table_1a593617f2f90318cb97aa6c7e4cddb3a6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>Rate</type>
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
         <definition>static Rate SurveyManager.utility.ProcessDataTable.GetRate</definition>
         <argsstring>(DataRow row)</argsstring>
         <name>GetRate</name>
@@ -120,14 +120,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="104" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="104" bodyend="116"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="108" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="108" bodyend="120"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class facilitates processing DataRows into a database object. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="8" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="9" bodyend="117"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" line="12" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/ProcessDataTable.cs" bodystart="13" bodyend="121"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_process_data_table_1a9a7af78b05d6cc2342a3773baf124b21" prot="public" virt="non-virtual"><scope>SurveyManager::utility::ProcessDataTable</scope><name>GetAddress</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_process_data_table_1a7da94f2350bb5e9fb3213619b8838a30" prot="public" virt="non-virtual"><scope>SurveyManager::utility::ProcessDataTable</scope><name>GetClient</name></member>

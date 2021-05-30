@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="11" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="12" bodyend="21"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="14" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="15" bodyend="24"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72" prot="public" static="no" strong="yes">
         <type></type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="26" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="27" bodyend="44"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="29" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="30" bodyend="47"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87" prot="public" static="no" strong="yes">
         <type></type>
@@ -413,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="49" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="50" bodyend="256"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="52" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="53" bodyend="259"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6" prot="public" static="no" strong="yes">
         <type></type>
@@ -473,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="261" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="262" bodyend="287"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="264" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="265" bodyend="290"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1aa819a8a44bff8d1c8866d5ef7fc358a6" prot="public" static="no" strong="yes">
         <type></type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="292" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="293" bodyend="302"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="295" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="296" bodyend="305"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bc" prot="public" static="no" strong="yes">
         <type></type>
@@ -537,7 +537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="307" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="308" bodyend="321"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="310" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="311" bodyend="324"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3" prot="public" static="no" strong="yes">
         <type></type>
@@ -639,12 +639,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing the various file extensions available to use in Survey Manager. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="323" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="324" bodyend="373"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="329" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="330" bodyend="379"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952" prot="public" static="no" strong="yes">
         <type></type>
@@ -790,12 +791,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing the status texts that are predefined for use on the status label. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="375" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="376" bodyend="417"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="384" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="385" bodyend="426"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37" prot="public" static="no" strong="yes">
         <type></type>
@@ -828,7 +830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="422" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="423" bodyend="427"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="431" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="432" bodyend="436"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0a" prot="public" static="no" strong="yes">
         <type></type>
@@ -862,12 +864,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing an exit choice on a exit dialog. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="429" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="430" bodyend="435"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="441" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="442" bodyend="447"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a8c897f1d645b300a31f564ab7036d987" prot="public" static="no" strong="yes">
         <type></type>
@@ -880,12 +883,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing that a KryptonPage is a considered a survey page. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="437" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="438" bodyend="440"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="452" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="453" bodyend="455"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1ad67935cec57c94f279aab4a9a9a40003" prot="public" static="no" strong="yes">
         <type></type>
@@ -905,12 +909,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing the type of time entries that can be created. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="442" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="443" bodyend="446"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="460" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="461" bodyend="464"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a812ce62caa40cf69f4b593ce3a87b9ac" prot="public" static="no" strong="yes">
         <type></type>
@@ -930,12 +935,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing the fonts available to use in <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PdfGeneration.PDF</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="448" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="449" bodyend="452"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="469" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="470" bodyend="473"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873" prot="public" static="no" strong="yes">
         <type></type>
@@ -1101,14 +1107,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="457" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="458" bodyend="481"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="478" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="479" bodyend="502"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class represents the various <ref refid="class_survey_manager_1_1utility_1_1_enums" kindref="compound">Enums</ref> used throughout Survey Manager. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="6" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="7" bodyend="482"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="10" bodyend="503"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_enums_1a2b5a4b13a07938b0777c46e750a217e5" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>BooleanOps</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>CloseReasons</name></member>

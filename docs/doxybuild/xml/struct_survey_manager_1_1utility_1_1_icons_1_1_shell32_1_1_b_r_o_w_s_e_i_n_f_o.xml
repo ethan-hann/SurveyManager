@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="153" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="153" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="151" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1abbb9f0f6370e3d7041cd56fe6a6da295" prot="public" static="no" mutable="no">
         <type>IntPtr</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="154" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="154" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="152" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1a833bb30270413d770c24a22ebcaa26d4" prot="public" static="no" mutable="no">
         <type>IntPtr</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="155" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="155" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="153" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1a19b47100d29e69b564b576328451d5eb" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="157" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="157" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="155" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1a02acfdfabd4baaf4d3c2b09964b41739" prot="public" static="no" mutable="no">
         <type>uint</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="158" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="158" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="156" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="156" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1abb26915bf9b9b9b711eaa26419c29839" prot="public" static="no" mutable="no">
         <type>IntPtr</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="159" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="159" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="157" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1ad9865d65f2f407162564f1a1277a958f" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="160" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="160" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="158" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="158" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1a3f519ff7c31a64006b149226dffeda47" prot="public" static="no" mutable="no">
         <type>IntPtr</type>
@@ -105,14 +105,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="161" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="161" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="159" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="159" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="151" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="152" bodyend="162"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="149" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="150" bodyend="160"/>
     <listofallmembers>
       <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1abc8c3ea2ac51dd9d1cd187d96be68cb7" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::BROWSEINFO</scope><name>hwndOwner</name></member>
       <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_b_r_o_w_s_e_i_n_f_o_1a3f519ff7c31a64006b149226dffeda47" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::BROWSEINFO</scope><name>iImage</name></member>

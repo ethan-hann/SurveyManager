@@ -3,6 +3,9 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class represents the various Enums used throughout Survey Manager.
+    /// </summary>
     public class Enums
     {
         /// <summary>
@@ -320,6 +323,9 @@ namespace SurveyManager.utility
             Updating
         }
 
+        /// <summary>
+        /// Enum representing the various file extensions available to use in Survey Manager.
+        /// </summary>
         public enum FileExtension
         {
             /// <summary>
@@ -372,6 +378,9 @@ namespace SurveyManager.utility
             NONE
         }
 
+        /// <summary>
+        /// Enum representing the status texts that are predefined for use on the status label.
+        /// </summary>
         public enum StatusText
         {
             [Description("No job is currently opened. There is nothing to add a Client to.")]
@@ -426,6 +435,9 @@ namespace SurveyManager.utility
             Day
         }
 
+        /// <summary>
+        /// Enum representing an exit choice on a exit dialog.
+        /// </summary>
         public enum ExitChoice
         {
             SaveAndExit,
@@ -434,17 +446,26 @@ namespace SurveyManager.utility
             Cancel
         }
 
+        /// <summary>
+        /// Enum representing that a KryptonPage is a considered a survey page.
+        /// </summary>
         public enum SurveyPage
         {
             IsSurveyPage
         }
 
+        /// <summary>
+        /// Enum representing the type of time entries that can be created.
+        /// </summary>
         public enum TimeType
         {
             Office,
             Field
         }
 
+        /// <summary>
+        /// Enum representing the fonts available to use in <see cref="PdfGeneration.PDF"/>.
+        /// </summary>
         public enum Fonts
         {
             Courier,
@@ -481,6 +502,9 @@ namespace SurveyManager.utility
         }
     }
 
+    /// <summary>
+    /// Extension class used for enums to get a description string.
+    /// </summary>
     public static class EnumExtensions
     {
         public static string ToDescriptionString(this StatusText val)

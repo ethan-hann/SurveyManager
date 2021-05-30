@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="147" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="147" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="145" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="145" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -34,7 +34,7 @@
         <link refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d"/>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="145" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="146" bodyend="148"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="143" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="144" bodyend="146"/>
     <listofallmembers>
       <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_i_t_e_m_i_d_l_i_s_t_1af531ae7e4b0445fdc3e738c5aa941d45" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::ITEMIDLIST</scope><name>mkid</name></member>
     </listofallmembers>

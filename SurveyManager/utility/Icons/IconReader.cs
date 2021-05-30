@@ -5,11 +5,9 @@ using System.Runtime.InteropServices;
 namespace SurveyManager.utility.Icons
 {
     /// <summary>
-    /// Provides static methods to read system icons for both folders and files.
+    /// Provides static methods to read system icons for both folders and files. i.e., 
+    /// <para><code>IconReader.GetFileIcon("c:\\general.xls");</code></para>
     /// </summary>
-    /// <example>
-    /// <code>IconReader.GetFileIcon("c:\\general.xls");</code>
-    /// </example>
     public class IconReader
     {
         /// <summary>

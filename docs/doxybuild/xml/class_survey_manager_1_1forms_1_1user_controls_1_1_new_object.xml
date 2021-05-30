@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="15" column="38" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="15" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="16" column="38" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1a1c4cf801337ffd80adbac3ddf3761612" prot="private" static="no" mutable="no">
         <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="16" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="16" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="17" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1aa9bac3151dcd201f17b5537db4a1e06d" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="18" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="18" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="19" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="20" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="20" bodyend="52"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="21" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="21" bodyend="53"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="54" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="54" bodyend="58"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="55" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="55" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1a1f796c8bb8bd4013c61ba504c1568fcf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="61" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="61" bodyend="89"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="62" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="62" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1ab8cd4115b2211f5492389c5dc6e46abc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="91" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="91" bodyend="118"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="92" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="92" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1a3197d50fdeae64b1c715301c96f904b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="121" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="121" bodyend="142"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="122" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="122" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1a76266d75c84ac9c2ba689eed426faf0f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="144" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="144" bodyend="151"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="145" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="145" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1adbc942e4f5261f76b53fcbae1cfb19b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
         <label>UserControl</label>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="13" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="14" bodyend="152"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" line="14" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/NewObject.cs" bodystart="15" bodyend="153"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1ab8cd4115b2211f5492389c5dc6e46abc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::NewObject</scope><name>CheckForAssociation</name></member>
       <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object_1a3197d50fdeae64b1c715301c96f904b5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::NewObject</scope><name>Clear</name></member>

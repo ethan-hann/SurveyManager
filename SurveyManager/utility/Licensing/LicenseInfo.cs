@@ -9,41 +9,65 @@ namespace SurveyManager.utility.Licensing
     [Serializable]
     public class LicenseInfo
     {
+        /// <summary>
+        /// The name of the customer whom this product is licensed to.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Registered To")]
         public string CustomerName { get; set; }
 
+        /// <summary>
+        /// The email of the customer.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Registration Email")]
         public string CustomerEmail { get; set; }
 
+        /// <summary>
+        /// The number of uses left for this product key.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Uses Left")]
         public string NumberOfUses { get; set; }
 
+        /// <summary>
+        /// The id of the serial number.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Serial ID")]
         public string SerialID { get; set; }
 
+        /// <summary>
+        /// The date this license was purchased/obtained.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Purchase Date")]
         public DateTime PurchaseDate { get; set; }
 
+        /// <summary>
+        /// The date this license expires.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("Expiration Date")]
         public DateTime ExpirationDate { get; set; }
 
+        /// <summary>
+        /// The type of license this customer has.
+        /// </summary>
         [Browsable(true)]
         [ReadOnly(true)]
         [DisplayName("License Type")]
         public LicenseType Type { get; set; }
 
+        /// <summary>
+        /// Get a value indicating if this license info is empty.
+        /// </summary>
         [Browsable(false)]
         public bool IsEmpty
         {

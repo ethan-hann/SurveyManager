@@ -16,6 +16,9 @@ using static SurveyManager.utility.Utility;
 
 namespace SurveyManager.utility.PdfGeneration
 {
+    /// <summary>
+    /// This class is responsible for creating PDFs for reports.
+    /// </summary>
     public class PDF
     {
         private static PdfDocument document; //the top level document of this PDF object
@@ -110,6 +113,12 @@ namespace SurveyManager.utility.PdfGeneration
             savePath = Path.Combine(Settings.Default.DefaultSavePath, $"{filename}.pdf");
         }
 
+        /// <summary>
+        /// Generate a PDF billing report.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to generate the report for.</param>
+        /// <returns>If <see cref="CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)"/>
+        /// was called with isStream as true, returns a <see cref="MemoryStream"/> object to this PDF. Otherwise, returns null.</returns>
         public static MemoryStream GenerateBillingReport(Survey s)
         {
             if (document == null)
@@ -194,6 +203,12 @@ namespace SurveyManager.utility.PdfGeneration
             DrawStringLargeBold($"Grand Total: {bObject.GetTotalBill().ToString("C2")}", GetLeftPage());
         }
 
+        /// <summary>
+        /// Generate a PDF full report for a survey.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to generate the report for.</param>
+        /// <returns>If <see cref="CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)"/>
+        /// was called with isStream as true, returns a <see cref="MemoryStream"/> object to this PDF. Otherwise, returns null.</returns>
         public static MemoryStream GenerateFullReport(Survey s)
         {
             if (document == null)
@@ -325,6 +340,12 @@ namespace SurveyManager.utility.PdfGeneration
             AddBillingContent(s);
         }
 
+        /// <summary>
+        /// Generate a PDF file report.
+        /// </summary>
+        /// <param name="s">The <see cref="Survey"/> to generate the report for.</param>
+        /// <returns>If <see cref="CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)"/>
+        /// was called with isStream as true, returns a <see cref="MemoryStream"/> object to this PDF. Otherwise, returns null.</returns>
         public static MemoryStream GenerateFileReport(Survey s)
         {
             if (document == null)

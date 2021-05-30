@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="68" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="68" bodyend="68"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="90" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="90" bodyend="90"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -34,10 +34,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="70" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="70" bodyend="73"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="92" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="92" bodyend="95"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Event args representing when a query is ran against the database. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -63,7 +64,7 @@
         <label>EventArgs</label>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="66" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="67" bodyend="74"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="88" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="89" bodyend="96"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1ae26a3c2d9b2a1e74676a4400de4ef8d9" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::QueryRanArgs</scope><name>QueryRanArgs</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1a4299092babf1eb4ad239af4720a4fcbe" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::QueryRanArgs</scope><name>TableName</name></member>

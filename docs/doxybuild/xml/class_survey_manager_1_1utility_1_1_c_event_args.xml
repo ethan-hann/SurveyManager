@@ -12,10 +12,11 @@
     <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args" prot="public">SurveyManager::utility::CEventArgs::StatusArgs</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args" prot="public">SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</innerclass>
     <briefdescription>
+<para>This class represents custom event args classes. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="11" bodyend="109"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="15" bodyend="140"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

@@ -3,6 +3,7 @@ using Ionic.Zip;
 using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.surveyMenu;
 using SurveyManager.Properties;

@@ -493,14 +493,12 @@
     </Compile>
     <Compile Include="utility\DataGridViewSetup.cs" />
     <Compile Include="utility\DBMap.cs" />
-    <Compile Include="utility\DragDropInfo.cs" />
     <Compile Include="utility\Enums.cs" />
     <Compile Include="utility\Filtering\ANDFilter.cs" />
     <Compile Include="utility\Filtering\Filter.cs" />
     <Compile Include="utility\Filtering\FilterExpressionList.cs" />
     <Compile Include="utility\Filtering\IFilter.cs" />
     <Compile Include="utility\Filtering\ORFilter.cs" />
-    <Compile Include="utility\Filtering\TextSearchFilter.cs" />
     <Compile Include="utility\Icons\IconListManager.cs" />
     <Compile Include="utility\Icons\IconReader.cs" />
     <Compile Include="utility\JobHandler.cs" />

@@ -1,7 +1,7 @@
 ﻿namespace SurveyManager.utility
 {
     /// <summary>
-    /// Maps an internal database column to its external display member.
+    /// This class maps an internal database column to its external display member.
     /// </summary>
     public class DBMap
     {

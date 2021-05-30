@@ -92,7 +92,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Maps an internal database column to its external display member. </para>
+<para>This class maps an internal database column to its external display member. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

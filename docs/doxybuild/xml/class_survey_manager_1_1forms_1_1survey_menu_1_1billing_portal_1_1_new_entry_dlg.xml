@@ -44,7 +44,7 @@
         <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="22" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a84221fcd94923f55488b290fe36c3771" prot="private" static="no" mutable="no">
-        <type>readonly BillingItem</type>
+        <type>readonly <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
         <definition>readonly BillingItem SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.oldItem</definition>
         <argsstring></argsstring>
         <name>oldItem</name>
@@ -345,7 +345,7 @@
           <declname>associatedDate</declname>
         </param>
         <param>
-          <type>BillingItem</type>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
           <declname>oldItem</declname>
           <defval>null</defval>
         </param>
@@ -570,7 +570,7 @@
         <argsstring>(BillingItem item)</argsstring>
         <name>SetControls</name>
         <param>
-          <type>BillingItem</type>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
           <declname>item</declname>
         </param>
         <briefdescription>

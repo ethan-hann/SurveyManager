@@ -12,10 +12,19 @@ namespace SurveyManager.utility.Logging
     /// </summary>
     public class LogFile
     {
+        /// <summary>
+        /// The folder that log files should be saved in.
+        /// </summary>
         public string FolderPath { get; set; }
 
+        /// <summary>
+        /// The name of the log file to be saved in the <see cref="FolderPath"/>.
+        /// </summary>
         public string FileName { get; set; } = "default.log";
 
+        /// <summary>
+        /// The full path to the log file; combines the <see cref="FolderPath"/> and <see cref="FileName"/>.
+        /// </summary>
         public string FullPath
         {
             get

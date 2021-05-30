@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="236" column="34"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="234" column="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -39,7 +39,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="227" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="228" bodyend="237"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="225" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="226" bodyend="235"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_user32_1aeda1ae015911f133cee2528d0f8d83a8" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::User32</scope><name>DestroyIcon</name></member>
     </listofallmembers>

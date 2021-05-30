@@ -1,4 +1,5 @@
 ﻿using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.utility.Licensing;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,14 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class represents custom event args classes.
+    /// </summary>
     public class CEventArgs
     {
+        /// <summary>
+        /// Event args representing when a filter is done searching.
+        /// </summary>
         public class FilterDoneEventArgs : EventArgs
         {
             public DataTable Results { get; internal set; }
@@ -21,6 +28,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when a database connection is done connecting.
+        /// </summary>
         public class DBArgs : EventArgs
         {
             public int ExceptionCode { get; internal set; }
@@ -31,6 +41,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when a search in the database has been finished.
+        /// </summary>
         public class DBObjectArgs : EventArgs
         {
             public IDatabaseWrapper Object { get; internal set; }
@@ -43,6 +56,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when the status label is updated.
+        /// </summary>
         public class StatusArgs : EventArgs
         {
             public string StatusString { get; internal set; }
@@ -53,6 +69,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when a survey is opened.
+        /// </summary>
         public class SurveyOpenedEventArgs : EventArgs
         {
             public Survey Survey { get; internal set; }
@@ -63,6 +82,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when a query is ran against the database.
+        /// </summary>
         public class QueryRanArgs : EventArgs
         {
             public string TableName { get; internal set; }
@@ -73,6 +95,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when a file upload is done.
+        /// </summary>
         public class FileUploadDoneArgs : EventArgs
         {
             public List<CFile> Files { get; internal set; }
@@ -83,6 +108,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when the license engine is finished licensing.
+        /// </summary>
         public class LicensingEventArgs : EventArgs
         {
             public CloseReasons CloseReason { get; internal set; }
@@ -95,6 +123,9 @@ namespace SurveyManager.utility
             }
         }
 
+        /// <summary>
+        /// Event args representing when an object is created.
+        /// </summary>
         public class ObjectCreatedEventArgs : EventArgs
         {
             public object DataValue { get; internal set; }

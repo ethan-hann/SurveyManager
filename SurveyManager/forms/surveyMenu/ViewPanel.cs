@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Navigator;
-using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;

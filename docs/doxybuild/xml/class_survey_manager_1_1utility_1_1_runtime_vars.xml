@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="12" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="12" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="15" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ad34ecc4b4495d154547449717aa6c7a7" prot="private" static="yes" mutable="no">
         <type>readonly object</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="13" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="13" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="16" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="17" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="18" bodyend="28"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="20" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="21" bodyend="31"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a24896cad39eecd99808d00dbe0c9aee4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="33" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="33" bodyend="33"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="36" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="36" bodyend="36"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a058308f8ceab7b90c61dee13e610947c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="38" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="38" bodyend="38"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="41" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ad96bc07d256d22363998ca11dd07c752" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref> &gt;</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="43" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="43" bodyend="43"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="46" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="46" bodyend="46"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ae16060ffd1476f94369dcf1b61c39417" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -97,12 +97,13 @@
         <name>SelectedPageUniqueName</name>
         <initializer>= &quot;&quot;</initializer>
         <briefdescription>
+<para>The selected KryptonPage&apos;s unique name. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="45" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="45" bodyend="45"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="51" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="51" bodyend="51"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ae42a14e992d29a8ef97f4ac73903e334" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_survey_manager_1_1utility_1_1_logging_1_1_log_file" kindref="compound">LogFile</ref></type>
@@ -116,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="50" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="50" bodyend="50"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="56" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="56" bodyend="56"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a3675d2172009309a14e782d9dcecf4ff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -130,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="55" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="56" bodyend="61"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="61" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="62" bodyend="67"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ac29183e7636af82ca94e833f17854d86" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
@@ -145,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="66" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="66" bodyend="66"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="72" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1aa5d84ccd0a560c73c07fee0e7c807536" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -160,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="71" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="71" bodyend="71"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="77" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a63c687f4ed23d642222faa08f0954503" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_survey_manager_1_1_main_form" kindref="compound">MainForm</ref></type>
@@ -174,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="79" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="79" bodyend="79"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="88" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="88" bodyend="88"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -185,12 +186,13 @@
         <name>TempFiles</name>
         <initializer>= new TempFileCollection(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()))</initializer>
         <briefdescription>
+<para>A collection of temporary files created by Survey Manager. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="74" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="74" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="83" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="83" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -205,14 +207,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="15" column="17" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="15" bodyend="15"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="18" column="17" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="18" bodyend="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class holds various runtime variables need throughout Survey Manager. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="11" bodyend="80"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="13" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="14" bodyend="89"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ad96bc07d256d22363998ca11dd07c752" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>Counties</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a058308f8ceab7b90c61dee13e610947c" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>DatabaseConnected</name></member>

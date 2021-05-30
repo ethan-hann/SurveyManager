@@ -12,6 +12,7 @@
         <enumvalue id="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546ea1b52c526b858eb9dd2c66da1c0b8f44d" prot="public">
           <name>Trial</name>
           <briefdescription>
+<para>A trial license key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -19,6 +20,7 @@
         <enumvalue id="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546eab26dd80be05f4bca75c45f42d564a933" prot="public">
           <name>FullLicense</name>
           <briefdescription>
+<para>A full license key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -26,17 +28,19 @@
         <enumvalue id="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546ea10a1bd292ce94ac1ef375ee577f0f33e" prot="public">
           <name>Unlicensed</name>
           <briefdescription>
+<para>Unlicensed key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Enum representing the various license types that are valid. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseType.cs" line="3" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseType.cs" bodystart="4" bodyend="8"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseType.cs" line="6" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseType.cs" bodystart="7" bodyend="20"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

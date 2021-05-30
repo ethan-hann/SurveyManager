@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="26" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="26" bodyend="26"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="36" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="36" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -34,10 +34,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="28" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="28" bodyend="31"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="38" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="38" bodyend="41"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Event args representing when a database connection is done connecting. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -63,7 +64,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="24" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="25" bodyend="32"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="34" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="35" bodyend="42"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1a337653b3a4149abd976e47b84a25fb3e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBArgs</scope><name>DBArgs</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1ae571c5aab299f95377233c5685e5132b" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBArgs</scope><name>ExceptionCode</name></member>

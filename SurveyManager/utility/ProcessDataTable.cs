@@ -1,10 +1,14 @@
 ﻿using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using System;
 using System.Data;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class facilitates processing <see cref="DataRow"/>s into a database object.
+    /// </summary>
     public class ProcessDataTable
     {
         public static Address GetAddress(DataRow row)

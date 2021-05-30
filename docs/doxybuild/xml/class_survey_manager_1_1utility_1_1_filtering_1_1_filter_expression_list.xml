@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="9" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="9" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="12" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a3455edff990815678a21dc6068435132" prot="private" static="no" mutable="no">
         <type>readonly IEnumerator</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="10" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="10" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="13" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="23" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="24" bodyend="29"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="26" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="27" bodyend="32"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a2d2da0ad9b59a9d71c2c4f68b8e3950f" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>object IEnumerator.</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="31" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="32" bodyend="37"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="34" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="35" bodyend="40"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1aaf00c115fbad768058dcc764dea9ddaf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" kindref="compound">IFilter</ref></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="54" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="55" bodyend="64"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="57" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="58" bodyend="67"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1aef65903c3d9554709d38a55e72637ac9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="66" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="67" bodyend="72"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="69" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="70" bodyend="75"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="12" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="12" bodyend="16"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="15" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="15" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a1c1a6fe099f1b2d4d97fe66528a7e519" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IEnumerator</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="18" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="18" bodyend="21"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="21" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a09ae038584ac2ee61e9b652efb29542c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="39" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="39" bodyend="42"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="42" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="42" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a24112d541c3e3a1337c3353a015e1b6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="44" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="44" bodyend="47"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="47" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a02aa3c92046dd79e8cc6c164bdddb293" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -154,10 +154,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="49" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="49" bodyend="52"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="52" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="52" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Class representing a list of enumerable filter expressions. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -193,7 +194,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="7" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="8" bodyend="73"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/FilterExpressionList.cs" bodystart="11" bodyend="76"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a02aa3c92046dd79e8cc6c164bdddb293" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Filtering::FilterExpressionList</scope><name>Add</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list_1a810a374bcfcc7cd9ef3fe164a88d982f" prot="private" virt="non-virtual"><scope>SurveyManager::utility::Filtering::FilterExpressionList</scope><name>alItems</name></member>

@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.backend;
-using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.pages;
 using SurveyManager.Properties;

@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="9" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="9" bodyend="12"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="12" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="12" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a0585c24e51bba7bf35238db186521591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override bool</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="14" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="14" bodyend="17"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="17" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="17" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a133bfbc5d2863bd9bc707f9b74acd869" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override object</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="19" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="19" bodyend="24"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="22" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="22" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a1cee6f70eb288d1b1bdfacd23e28e619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override object</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="26" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="26" bodyend="33"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="29" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="29" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a538adc54f00b9ca8b83a9dbf253adb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override StandardValuesCollection</type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="35" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="35" bodyend="38"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="38" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1aa4ec2bb395863fd805638fb1b11d1e79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override bool</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="40" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="40" bodyend="43"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="43" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a27ad569df5133bb4b7c19f73967080f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override bool</type>
@@ -149,10 +149,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="45" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="45" bodyend="48"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="48" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="48" bodyend="51"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Converts a <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">backend.wrappers.County</ref> object into a string for use in a property grid. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -178,7 +179,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="7" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="8" bodyend="49"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="11" bodyend="52"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a1b3850600235893fd00af41d12b356cb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>CanConvertFrom</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a0585c24e51bba7bf35238db186521591" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>CanConvertTo</name></member>

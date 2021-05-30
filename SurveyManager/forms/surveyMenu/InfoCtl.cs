@@ -87,7 +87,7 @@ namespace SurveyManager.forms.surveyMenu
                     StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's internal information. Please try again."));
                 }
             }
-            
+
             if (disposing && (components != null))
             {
                 components.Dispose();

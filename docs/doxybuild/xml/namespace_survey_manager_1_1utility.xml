@@ -8,7 +8,6 @@
     <innerclass refid="class_survey_manager_1_1utility_1_1_c_s_v_helper" prot="public">SurveyManager::utility::CSVHelper</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_data_grid_view_setup" prot="public">SurveyManager::utility::DataGridViewSetup</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_d_b_map" prot="public">SurveyManager::utility::DBMap</innerclass>
-    <innerclass refid="class_survey_manager_1_1utility_1_1_drag_drop_info" prot="public">SurveyManager::utility::DragDropInfo</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_enums" prot="public">SurveyManager::utility::Enums</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_enum_extensions" prot="public">SurveyManager::utility::EnumExtensions</innerclass>
     <innerclass refid="class_survey_manager_1_1utility_1_1_job_handler" prot="public">SurveyManager::utility::JobHandler</innerclass>
@@ -28,6 +27,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="8" column="1"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="9" column="1"/>
   </compounddef>
 </doxygen>

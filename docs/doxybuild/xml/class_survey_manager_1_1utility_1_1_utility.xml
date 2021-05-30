@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="23" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="23" bodyend="46"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="27" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="27" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a45e121cc502fc443b899e66ac8d237bb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="54" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="54" bodyend="66"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="58" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="58" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1abeade00483803e75f4c628875df7b5ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Point</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="73" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="73" bodyend="76"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="77" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1aa4ebb2b6b52b80bb4be70bf215f72473" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -146,15 +146,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="84" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="84" bodyend="98"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="88" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="88" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a605f88ed087e2e8cde73c4b931d048b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>Dictionary&lt; string, List&lt; BillingItem &gt; &gt;</type>
+        <type>Dictionary&lt; string, List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref> &gt; &gt;</type>
         <definition>static Dictionary&lt;string, List&lt;BillingItem&gt; &gt; SurveyManager.utility.Utility.CreateDictionary</definition>
         <argsstring>(List&lt; BillingItem &gt; items)</argsstring>
         <name>CreateDictionary</name>
         <param>
-          <type>List&lt; BillingItem &gt;</type>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref> &gt;</type>
           <declname>items</declname>
         </param>
         <briefdescription>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="104" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="104" bodyend="136"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="108" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="108" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a72b80ba668eb04e11cf71667e84ae98b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="142" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="142" bodyend="159"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="146" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="146" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1adaf0a4ec668e2b8cde592dc61158a264" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>DataTable</type>
@@ -202,12 +202,50 @@
           <defval>null</defval>
         </param>
         <briefdescription>
+<para>Convert a list of items into a data table. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type this table is created for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of items in the table.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ItemType this table represents.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dictItems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A dictionary of items, for use when creating a table of billing items.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="161" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="161" bodyend="209"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="173" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="173" bodyend="221"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1ac13f8fbbe6318cf5f9bf2682680f8705" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>TimeSpan</type>
@@ -237,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="216" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="216" bodyend="223"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="228" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="228" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1aa30e4778ae464d4825f1cea8288cf631" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -281,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="232" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="232" bodyend="235"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="244" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="244" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a2e2e5f0bc9682007e75ccd3cb961f2dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -325,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="244" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="244" bodyend="247"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="256" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="256" bodyend="259"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a57318bc6b7abdeef4d32c7ea23915683" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars" kindref="compound">TrimVars</ref></type>
@@ -370,14 +408,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="258" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="258" bodyend="286"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="270" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="270" bodyend="298"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class holds utility methods that are used throughout Survey Manager. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="15" bodyend="312"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="19" bodyend="324"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_utility_1a605f88ed087e2e8cde73c4b931d048b3" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>CreateDictionary</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_utility_1a45e121cc502fc443b899e66ac8d237bb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>FormatSize</name></member>

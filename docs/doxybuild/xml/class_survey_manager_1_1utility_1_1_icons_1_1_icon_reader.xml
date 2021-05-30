@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="18" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="19" bodyend="28"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="16" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="17" bodyend="26"/>
       </memberdef>
       <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader_1a2192a347932b08c742bdf62c5f2bb54b" prot="public" static="no" strong="yes">
         <type></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="33" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="34" bodyend="43"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="31" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="32" bodyend="41"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="52" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="52" bodyend="79"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="50" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="50" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader_1a67c736f007b98a88c25b581ff0390b63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>System.Drawing.Icon</type>
@@ -159,17 +159,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="87" column="41" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="87" bodyend="121"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="85" column="41" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="85" bodyend="119"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Provides static methods to read system icons for both folders and files. </para>
+<para>Provides static methods to read system icons for both folders and files. i.e., </para>
     </briefdescription>
     <detaileddescription>
-<para><programlisting><codeline><highlight class="normal">IconReader.GetFileIcon(&quot;c:\\general.xls&quot;);</highlight></codeline>
-</programlisting> </para>
+<para><computeroutput><ref refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader_1a1bbfa3d3c342ec66de0ea4bf68efe756" kindref="member">IconReader.GetFileIcon</ref>(&quot;c:\\general.xls&quot;);</computeroutput></para>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="13" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="14" bodyend="122"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="11" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="12" bodyend="120"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader_1a2192a347932b08c742bdf62c5f2bb54b" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::IconReader</scope><name>FolderType</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader_1a1bbfa3d3c342ec66de0ea4bf68efe756" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::IconReader</scope><name>GetFileIcon</name></member>

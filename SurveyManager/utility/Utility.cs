@@ -1,4 +1,5 @@
 ﻿using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,9 @@ using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class holds utility methods that are used throughout Survey Manager.
+    /// </summary>
     public class Utility
     {
         /// <summary>
@@ -158,6 +162,14 @@ namespace SurveyManager.utility
             return "NONE";
         }
 
+        /// <summary>
+        /// Convert a list of items into a data table.
+        /// </summary>
+        /// <typeparam name="T">The type this table is created for.</typeparam>
+        /// <param name="items">The list of items in the table.</param>
+        /// <param name="type">The <see cref="ItemType"/> this table represents.</param>
+        /// <param name="dictItems">A dictionary of items, for use when creating a table of billing items.</param>
+        /// <returns></returns>
         public static DataTable ToTable<T>(List<T> items, ItemType type, Dictionary<DateTime, string> dictItems = null)
         {
             string[] data;

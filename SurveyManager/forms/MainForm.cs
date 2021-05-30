@@ -414,7 +414,7 @@ namespace SurveyManager
                 {
                     KryptonRibbonRecentDoc job = new KryptonRibbonRecentDoc();
                     string[] parts = str.Split('\t');
-                    if (parts.Length== 2)
+                    if (parts.Length == 2)
                     {
                         string jobNumber = parts[0];
                         DateTime last_updated = DateTime.Parse(parts[1]);

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="21" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="21" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="24" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afa5c8b482f2b1947eb1e034d3dc4f7d9" prot="private" static="yes" mutable="no">
         <type>PdfPageBase</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="22" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="22" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="25" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1abb733f7bc2fc5d7a7f73e3f8065d59d3" prot="private" static="yes" mutable="no">
         <type>PdfLayoutResult</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="23" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="23" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="26" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5183c6214ee3522d44a2c872f996fd09" prot="private" static="yes" mutable="no">
         <type>PdfMargins</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="24" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="24" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="27" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1012a1dd8907e57f5eede1234c2a511d" prot="private" static="yes" mutable="no">
         <type>PdfTrueTypeFont</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="25" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="25" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="28" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a68168a7e89010a0fd32dcda97fe14432" prot="private" static="yes" mutable="no">
         <type>PdfTrueTypeFont</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="26" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="26" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="29" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9d6fe90e9697b879de0e904b8e2565ba" prot="private" static="yes" mutable="no">
         <type>PdfTrueTypeFont</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="27" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="27" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="30" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0ac28c5e52c431bfb3fa3f8033c8317f" prot="private" static="yes" mutable="no">
         <type>PdfTrueTypeFont</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="28" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="28" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="31" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa1a4b1da20517f4ddcd495d1941766e0" prot="private" static="yes" mutable="no">
         <type>string</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="30" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="30" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="33" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae2adf2fd7377fba717d86f76c1c5a0e9" prot="private" static="yes" mutable="no">
         <type>bool</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="32" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="32" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="35" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a33e544110c143610f018840f62917c4a" prot="private" static="yes" mutable="no">
         <type>float</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="34" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="34" bodyend="-1"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="37" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="48" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="48" bodyend="111"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="51" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="51" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa25496a2772c8fd385adcc5866c9d16c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>MemoryStream</type>
@@ -288,12 +288,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Generate a <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> billing report. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to generate the report for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6" kindref="member">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</ref> was called with isStream as true, returns a MemoryStream object to this <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref>. Otherwise, returns null.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="113" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="113" bodyend="136"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="122" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="122" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2ec97b0e5a23753bd6428c44f605c1dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>MemoryStream</type>
@@ -305,12 +318,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Generate a <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> full report for a survey. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to generate the report for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6" kindref="member">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</ref> was called with isStream as true, returns a MemoryStream object to this <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref>. Otherwise, returns null.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="197" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="197" bodyend="221"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="212" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="212" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a4b5d82b9ff662f4e3ab22ffaf151c580" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>MemoryStream</type>
@@ -322,12 +348,25 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Generate a <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> file report. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to generate the report for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6" kindref="member">CreateDocument(string, string, string, string, string, Fonts, bool, bool, bool, int, bool)</ref> was called with isStream as true, returns a MemoryStream object to this <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref>. Otherwise, returns null.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="328" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="328" bodyend="356"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="349" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="349" bodyend="377"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -346,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="138" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="138" bodyend="195"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="147" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="147" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8df82ad35d8421e88d7ce8db2cd21d46" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -363,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="223" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="223" bodyend="250"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="238" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="238" bodyend="265"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a98c4add5bc11bccd8a0150e1234e6e0d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -380,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="252" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="252" bodyend="259"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="267" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="267" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a6b164324fa9da3e96905a41996c23922" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -397,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="261" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="261" bodyend="326"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="276" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="276" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ac42eb0c5dd4f5b7725d8bbae60bab894" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -414,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="358" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="358" bodyend="392"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="379" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="379" bodyend="413"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a21c672340e2641f785b4456347074b4d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -435,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="394" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="394" bodyend="400"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="415" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="415" bodyend="421"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1cdf943af1afde0719474e754f84d602" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>PdfPageTemplateElement</type>
@@ -460,7 +499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="403" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="403" bodyend="436"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="424" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="424" bodyend="457"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9aff59e78f6cf4ac3333aa2dc5e53e2a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>PdfPageTemplateElement</type>
@@ -481,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="438" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="438" bodyend="464"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="459" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="459" bodyend="485"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab803a26db046b078a0c77c57a1b74d92" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -514,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="467" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="467" bodyend="475"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="488" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="488" bodyend="496"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a90aa372daee8362e70cf57aed3732e2d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -532,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="477" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="477" bodyend="482"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="498" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="498" bodyend="503"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a08adc05d0192b4b406dad74ee8856f32" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -585,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="490" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="490" bodyend="506"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="511" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="511" bodyend="527"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afbc75211a936539f5a841ef10f24f2fa" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -638,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="514" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="514" bodyend="531"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="535" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="535" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2d0113e3f140a182bf44f694ff36ad57" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -691,7 +730,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="539" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="539" bodyend="555"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="560" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="560" bodyend="576"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0c16e289c01663dad8322ad8bb7707e4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -744,7 +783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="563" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="563" bodyend="579"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="584" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="584" bodyend="600"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ace7fb1dd8534c9250e1a1a39c693dd80" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>SizeF</type>
@@ -811,7 +850,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="589" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="589" bodyend="610"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="610" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="610" bodyend="631"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af5eec04a137c79892394bae8d41df104" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -889,7 +928,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="623" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="623" bodyend="653"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="644" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="644" bodyend="674"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab34365a8c172244f856205023cfde811" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -902,7 +941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="656" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="656" bodyend="659"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="677" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="677" bodyend="680"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a84023319be719fc6eef8be13940e16f7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -915,7 +954,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="661" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="661" bodyend="664"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="682" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="682" bodyend="685"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a26c98a1021b9a13c0a83ccae8ce59118" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -928,7 +967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="666" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="666" bodyend="672"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="687" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="687" bodyend="693"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab85b1fa79727b5d292ffd1d6990e2873" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -941,7 +980,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="674" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="674" bodyend="685"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="695" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="695" bodyend="706"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae35fbdc44470e8da2075018e1b090e35" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -954,7 +993,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="687" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="687" bodyend="690"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="708" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="708" bodyend="711"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8bc020848428388c80ff8c293e0ae0bf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -967,7 +1006,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="692" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="692" bodyend="695"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="713" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="713" bodyend="716"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af15438dd49ea2c646f1dc5e26ee1a31e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>PointF</type>
@@ -980,7 +1019,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="697" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="697" bodyend="700"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="718" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="718" bodyend="721"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa91a25e2800f9fccd6471d43da0d2369" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1035,7 +1074,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="709" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="709" bodyend="722"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="730" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="730" bodyend="743"/>
       </memberdef>
       <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5958abdcb67046787fe6da465373bad3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1061,14 +1100,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="724" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="724" bodyend="737"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="745" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="745" bodyend="758"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class is responsible for creating PDFs for reports. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="19" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="20" bodyend="740"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="22" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="23" bodyend="761"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae9e41508632b0401e60cfe1668c8d7fb" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddBillingContent</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a98c4add5bc11bccd8a0150e1234e6e0d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddDescriptionString</name></member>

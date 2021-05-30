@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace SurveyManager.utility
 {
+    /// <summary>
+    /// This class is used to create comma-seperated value files. Mainly, it used to dump the database data.
+    /// </summary>
     public class CSVHelper
     {
         /// <summary>

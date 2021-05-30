@@ -1,5 +1,4 @@
-﻿using SurveyManager.backend.wrappers.SurveyJob;
-using SurveyManager.utility;
+﻿using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

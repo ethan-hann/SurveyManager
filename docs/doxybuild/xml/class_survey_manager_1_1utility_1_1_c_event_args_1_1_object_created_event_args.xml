@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="100" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="100" bodyend="100"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="131" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a020af9996c0d1d4e2a4311f2e6fe110c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>object</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="101" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="101" bodyend="101"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="132" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="132" bodyend="132"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -51,10 +51,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="103" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="103" bodyend="107"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="134" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="134" bodyend="138"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Event args representing when an object is created. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -80,7 +81,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="98" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="99" bodyend="108"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="129" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="130" bodyend="139"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a875b80a597d8ff19b2371b70e91b8fff" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</scope><name>DataValue</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a76925a7703dce76c0520fc0e04adc8aa" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</scope><name>ObjectCreatedEventArgs</name></member>

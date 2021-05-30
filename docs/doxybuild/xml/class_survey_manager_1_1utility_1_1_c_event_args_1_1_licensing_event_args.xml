@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="88" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="88" bodyend="88"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="116" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="116" bodyend="116"/>
       </memberdef>
       <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a4eca210bc12a283007bfe38a97a409ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="89" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="89" bodyend="89"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="117" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="117" bodyend="117"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -51,10 +51,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="91" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="91" bodyend="95"/>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="119" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="119" bodyend="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Event args representing when the license engine is finished licensing. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -80,7 +81,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="86" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="87" bodyend="96"/>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="114" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="115" bodyend="124"/>
     <listofallmembers>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a6fbb529f9921bd0d0d37bd82b52e9544" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::LicensingEventArgs</scope><name>CloseReason</name></member>
       <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a4eca210bc12a283007bfe38a97a409ae" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::LicensingEventArgs</scope><name>License</name></member>

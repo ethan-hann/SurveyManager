@@ -1,5 +1,5 @@
 ﻿using SurveyManager.backend;
-using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using System;
@@ -397,7 +397,7 @@ namespace SurveyManager.utility
                 _jobState = JobState.ReadOnly;
                 return false;
             }
-                
+
             if (!IsJobOpen)
             {
                 StatusUpdate?.Invoke(this, new StatusArgs("There is no job currently opened, therefore there is nothing to save."));

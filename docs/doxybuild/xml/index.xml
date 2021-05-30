@@ -541,10 +541,6 @@
     <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a2374448315a33a2d5f4d7120bf244359" kind="function"><name>InitializeComponent</name></member>
     <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a5e815da61e85e862caa2fc6585b7c526" kind="function"><name>Dispose</name></member>
   </compound>
-  <compound refid="class_survey_manager_1_1utility_1_1_drag_drop_info" kind="class"><name>SurveyManager::utility::DragDropInfo</name>
-    <member refid="class_survey_manager_1_1utility_1_1_drag_drop_info_1aece710d647fee29f7276e41fbc562ec4" kind="property"><name>Wrapper</name></member>
-    <member refid="class_survey_manager_1_1utility_1_1_drag_drop_info_1a6932e22ed1ebf3e739ad11d6080793b6" kind="function"><name>DragDropInfo</name></member>
-  </compound>
   <compound refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation" kind="class"><name>SurveyManager::forms::dialogs::EllipterActivation</name>
     <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ac9d5210a8314eb99184fc414fa1cf569" kind="variable"><name>SettingsSaved</name></member>
     <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ae3b41b4c3203b657d7aad0827378958e" kind="variable"><name>components</name></member>
@@ -1972,9 +1968,6 @@
     <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_survey_search_results_1afd983f795cf1f8f598beca4735ebfe64" kind="function"><name>InitializeComponent</name></member>
     <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_survey_search_results_1a80acb7c4e665f76d722479d7d2b39ae3" kind="function"><name>Dispose</name></member>
   </compound>
-  <compound refid="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter" kind="class"><name>SurveyManager::utility::Filtering::TextSearchFilter</name>
-    <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter_1aee942ff05a6506871bdbe26954aba9cb" kind="function"><name>TextSearchFilter</name></member>
-  </compound>
   <compound refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kind="class"><name>SurveyManager::backend::wrappers::TitleCompany</name>
     <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9eea61296f8014f3c1b24157d9fd96e6" kind="property"><name>ID</name></member>
     <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9e27ee7611923652b5a164dd844111ce" kind="property"><name>Name</name></member>
@@ -2497,8 +2490,6 @@
   </compound>
   <compound refid="_d_b_map_8cs" kind="file"><name>DBMap.cs</name>
   </compound>
-  <compound refid="_drag_drop_info_8cs" kind="file"><name>DragDropInfo.cs</name>
-  </compound>
   <compound refid="_enums_8cs" kind="file"><name>Enums.cs</name>
   </compound>
   <compound refid="_a_n_d_filter_8cs" kind="file"><name>ANDFilter.cs</name>
@@ -2510,8 +2501,6 @@
   <compound refid="_i_filter_8cs" kind="file"><name>IFilter.cs</name>
   </compound>
   <compound refid="_o_r_filter_8cs" kind="file"><name>ORFilter.cs</name>
-  </compound>
-  <compound refid="_text_search_filter_8cs" kind="file"><name>TextSearchFilter.cs</name>
   </compound>
   <compound refid="_icon_list_manager_8cs" kind="file"><name>IconListManager.cs</name>
   </compound>
