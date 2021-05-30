@@ -1,0 +1,1982 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1_properties_1_1_resources" kind="class" language="C#" prot="package">
+    <compoundname>SurveyManager::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1_properties_1_1_resources_1a887ac5759be38df676aa8edae4d6b9bc" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager SurveyManager.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="27" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1_properties_1_1_resources_1adb84035dff7f3355731049e932013ff6" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo SurveyManager.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="29" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a3a271c67365e6ccfecef68f383418cfa" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager SurveyManager.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="39" column="64" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1af712cbee0c850d3174d4bcaf4a52c8ae" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo SurveyManager.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="54" column="64" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a812e3ecab0cf4cc3c6e95702ebe8b497" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.add</definition>
+        <argsstring></argsstring>
+        <name>add</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="66" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aa8b68b418527624419db73bbf3213762" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.add_16x16</definition>
+        <argsstring></argsstring>
+        <name>add_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="76" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a71e08a049be98f8908c1cc9c4e70f49e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.attachment</definition>
+        <argsstring></argsstring>
+        <name>attachment</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="86" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a54b0864e5a881538ab15ebfb533a32bb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.attachment_16x16</definition>
+        <argsstring></argsstring>
+        <name>attachment_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="96" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="96" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a2711c9fe2cb987b06aee64bd8dda82ec" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_line_items</definition>
+        <argsstring></argsstring>
+        <name>billing_line_items</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="106" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aae303ed61b17186ef138086c875c4851" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_line_items_16x16</definition>
+        <argsstring></argsstring>
+        <name>billing_line_items_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="116" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="116" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a205d90aa06230772bbbb3042e7385d25" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_portal</definition>
+        <argsstring></argsstring>
+        <name>billing_portal</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="126" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ab62722025c203271d3f46beaead91c0a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_portal_16x16</definition>
+        <argsstring></argsstring>
+        <name>billing_portal_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="136" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="136" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ad3cd3ad94f7eca04db12151c6de7ea87" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_portal_32x32</definition>
+        <argsstring></argsstring>
+        <name>billing_portal_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="146" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="146" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1adb0e57c56cea49c7bae989fc2b941bb8" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_rates</definition>
+        <argsstring></argsstring>
+        <name>billing_rates</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="156" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ac3a8153a228b5ccc42e80977f7bcd4a4" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.billing_rates_16x16</definition>
+        <argsstring></argsstring>
+        <name>billing_rates_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="166" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="166" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a2b0c6ff995159c870fc42659074c76e1" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="176" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a017866e180a67b28ce78b0f48d513cac" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.client_16x16</definition>
+        <argsstring></argsstring>
+        <name>client_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="186" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="186" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a12833d3d14154c962b165f5ba5e53d61" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.close</definition>
+        <argsstring></argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="196" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="196" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ad3e8dce9f491b5e37bf1d3ebf922326a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.close_16x16</definition>
+        <argsstring></argsstring>
+        <name>close_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="206" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="206" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a4394617e97d8327d258111ed51a93778" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.computer_16x16</definition>
+        <argsstring></argsstring>
+        <name>computer_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="216" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aab49fc417c8eeee7df02477372f8a456" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.current_bill</definition>
+        <argsstring></argsstring>
+        <name>current_bill</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="226" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="226" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a0d38f04ee977d2d8b3d0ed7341158db1" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.current_bill_16x16</definition>
+        <argsstring></argsstring>
+        <name>current_bill_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="236" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a05cadeab652b9819258fa0002472efa7" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.db_connection</definition>
+        <argsstring></argsstring>
+        <name>db_connection</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="246" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="246" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a63dadb06f53b6d92e3b34e0f2bda3373" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.delete</definition>
+        <argsstring></argsstring>
+        <name>delete</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="256" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="256" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a1078b5be7a44f1b015e6560052407efb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.delete_16x16</definition>
+        <argsstring></argsstring>
+        <name>delete_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="266" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="266" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a58d3eb1cdbbb5a5a0cc938bc7d17277e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Resources.developer_key</definition>
+        <argsstring></argsstring>
+        <name>developer_key</name>
+        <briefdescription>
+<para>Looks up a localized string similar to YAE8NGR3K776G9ZTB8XW76ACDFMRF7Y21QU24K6HX. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="276" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="276" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a9cf18831819f23ce566cdeb9a7e67c8f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Resources.developer_name</definition>
+        <argsstring></argsstring>
+        <name>developer_name</name>
+        <briefdescription>
+<para>Looks up a localized string similar to Thomas Smith. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="285" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="285" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aacf77770914736c27730a025bc505de7" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.doc</definition>
+        <argsstring></argsstring>
+        <name>doc</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="294" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="294" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a3b8f2f54ff78112b594ecd28d484a2e3" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.doc_16x16</definition>
+        <argsstring></argsstring>
+        <name>doc_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="304" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="304" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5ed18f0afdc81ed9723cf9962dddbc9b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.doc_32x32</definition>
+        <argsstring></argsstring>
+        <name>doc_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="314" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="314" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a384d4674fa0ed941e64449d57722527b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.doc_64x64</definition>
+        <argsstring></argsstring>
+        <name>doc_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="324" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="324" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a1298dad579ed493eb1d62953d1bac58b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.down_arrow</definition>
+        <argsstring></argsstring>
+        <name>down_arrow</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="334" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="334" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a06ad4a3cbe9a2028a15f9a47cfe8eee3" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.down_arrow_32x32</definition>
+        <argsstring></argsstring>
+        <name>down_arrow_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="344" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="344" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5f51fe6df9f905c56bf8b22f965326b5" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.down_arrow_64x64</definition>
+        <argsstring></argsstring>
+        <name>down_arrow_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="354" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="354" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1abab37fdecbb2b2e6793481e51d3c04be" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.download_16x16</definition>
+        <argsstring></argsstring>
+        <name>download_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="364" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="364" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a15739230b22f3dfbda3145739fb23cb2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.dwg</definition>
+        <argsstring></argsstring>
+        <name>dwg</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="374" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="374" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ab8606803ad9935ba383f2cc0c618528b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.dwg_16x16</definition>
+        <argsstring></argsstring>
+        <name>dwg_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="384" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="384" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a36ace740f2db9377ff5907851edf6e42" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.dwg_32x32</definition>
+        <argsstring></argsstring>
+        <name>dwg_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="394" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="394" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1af5e2d03a7c990945818681639ef982d2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.dwg_64x64</definition>
+        <argsstring></argsstring>
+        <name>dwg_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="404" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="404" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ab789c3d0f5c4ff5e7b1d145b757de8f6" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.edit</definition>
+        <argsstring></argsstring>
+        <name>edit</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="414" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="414" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5e2fdc9c554eef5893aeba317a650511" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.edit_16x16</definition>
+        <argsstring></argsstring>
+        <name>edit_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="424" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="424" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a62385430abfe3cbe9b172b21c2f87c8e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="434" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="434" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a0aa6fa5e7f42ca59f50e0a9821d5a2d6" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.error_16x16</definition>
+        <argsstring></argsstring>
+        <name>error_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="444" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="444" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5a12520d218b36c3e0884626f796141a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.error_64x64</definition>
+        <argsstring></argsstring>
+        <name>error_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="454" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="454" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a7072b55c5b6d8015879d52a2ccfdbcb0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.execute</definition>
+        <argsstring></argsstring>
+        <name>execute</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="464" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="464" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a30b12d2b04d231c204d6441e6ab4624d" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.execute_16x16</definition>
+        <argsstring></argsstring>
+        <name>execute_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="474" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="474" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1afdea84ba20dfeb6cc721c6b360b62017" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.export</definition>
+        <argsstring></argsstring>
+        <name>export</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="484" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="484" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ac6bf8c8d81ca1d9bbabc96938a821cc8" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.feedback</definition>
+        <argsstring></argsstring>
+        <name>feedback</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="494" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="494" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a8cf10a2e50e53dc5fe8e5b585d04f25d" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.feedback_16x16</definition>
+        <argsstring></argsstring>
+        <name>feedback_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="504" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="504" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aae9083e32ac28f2377f463c22eb607e0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="514" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="514" bodyend="519"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a34b82ec80717a80602c34a935320ffb3" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.file_16x16</definition>
+        <argsstring></argsstring>
+        <name>file_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="524" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="524" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aa68aada6bcf8a8cc480551bd6521be3e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.file_32x32</definition>
+        <argsstring></argsstring>
+        <name>file_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="534" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="534" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ab6564097027fb1649ba835758cccbab2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.file_64x64</definition>
+        <argsstring></argsstring>
+        <name>file_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="544" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="544" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a724c4306b1c5942d212f86722f453d6a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="554" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="554" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a6d702c2ec0e3223904a64e85c3dee225" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.filter_16x16</definition>
+        <argsstring></argsstring>
+        <name>filter_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="564" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="564" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a30acacbd556cfa5634b6dddfd5ca8639" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.filter_24x24</definition>
+        <argsstring></argsstring>
+        <name>filter_24x24</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="574" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="574" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a0dbad9f6276bf2200087408ba2b32cec" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.folder</definition>
+        <argsstring></argsstring>
+        <name>folder</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="584" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="584" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ad1c7b5ab6e7e3982fce197546cfcc403" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.folder_16x16</definition>
+        <argsstring></argsstring>
+        <name>folder_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="594" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="594" bodyend="599"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1acd17991a7c69ef0abd29cb6e451e6960" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.folder_64x64</definition>
+        <argsstring></argsstring>
+        <name>folder_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="604" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="604" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a702649dbb8baaa2fb33721164f38afce" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.import</definition>
+        <argsstring></argsstring>
+        <name>import</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="614" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="614" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1abdf969625d3a6f6ee6faa4a59d8fa8aa" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="624" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="624" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aacc025ab1b9b56037ba72fab04fb1223" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.info_16x16</definition>
+        <argsstring></argsstring>
+        <name>info_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="634" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="634" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a38593c712c8626aee4abbbc1b2c5130c" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.info_64x64</definition>
+        <argsstring></argsstring>
+        <name>info_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="644" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="644" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a2bf23daf96a4073e0d9acdf676f1ae5d" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.instrument</definition>
+        <argsstring></argsstring>
+        <name>instrument</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="654" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="654" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a4edc09ec7ad3eef76adf3fed9dfbd655" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.instrument_16x16</definition>
+        <argsstring></argsstring>
+        <name>instrument_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="664" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="664" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a4dd7373d58c6702aa95fd0aab847d3db" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.instrument_24x24</definition>
+        <argsstring></argsstring>
+        <name>instrument_24x24</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="674" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="674" bodyend="679"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5359603a8fcf26f4d3586c7270cc6bbf" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.license</definition>
+        <argsstring></argsstring>
+        <name>license</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="684" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="684" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a0dccbd7498f668e849221b91a123b9a5" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.license_16x16</definition>
+        <argsstring></argsstring>
+        <name>license_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="694" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="694" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a1a31c7057f2b8b928f5f65924c1f80b4" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="704" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="704" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a6964bb8e9c5f8a2da79817c97a5805d3" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.location_16x16</definition>
+        <argsstring></argsstring>
+        <name>location_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="714" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="714" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a6742ecaf5cc0121154f476c9952b7feb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon SurveyManager.Properties.Resources.logo</definition>
+        <argsstring></argsstring>
+        <name>logo</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (Icon). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="724" column="43" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="724" bodyend="729"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a8c63487256053533911930bd88cdfef6" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="734" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="734" bodyend="739"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aa79b39fa7be2596c0e7a725b89f645e9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.map_16x16</definition>
+        <argsstring></argsstring>
+        <name>map_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="744" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="744" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a4495f810dd9104b4fb9370c505ca1082" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.notes</definition>
+        <argsstring></argsstring>
+        <name>notes</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="754" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="754" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a38c9670eec17ed77a00503efb39bce1f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.notes_16x16</definition>
+        <argsstring></argsstring>
+        <name>notes_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="764" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="764" bodyend="769"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a27e223b7470a31108662155ea6128d5c" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="774" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="774" bodyend="779"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a70a6b46983879d9a168c338fb9c13ea6" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.open_16x16</definition>
+        <argsstring></argsstring>
+        <name>open_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="784" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="784" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aad91cf91d372d5388c39fc6e42b71d8b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.pdf</definition>
+        <argsstring></argsstring>
+        <name>pdf</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="794" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="794" bodyend="799"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ac9c6b3f88beea104493f9fab81b213a0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.pdf_16x16</definition>
+        <argsstring></argsstring>
+        <name>pdf_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="804" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="804" bodyend="809"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a54506436ed289ffcd24abacd1c01721e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.pdf_32x32</definition>
+        <argsstring></argsstring>
+        <name>pdf_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="814" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="814" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aedccd635356c71f47006362da8f93328" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.pdf_64x64</definition>
+        <argsstring></argsstring>
+        <name>pdf_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="824" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="824" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a020489a78eac3301ac7e8eea5f718e21" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.png</definition>
+        <argsstring></argsstring>
+        <name>png</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="834" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="834" bodyend="839"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a8cff786a9799e4bee11388f26f81cea0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.png_16x16</definition>
+        <argsstring></argsstring>
+        <name>png_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="844" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="844" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a34ff5c405c210c5d52056069561d0967" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.png_32x32</definition>
+        <argsstring></argsstring>
+        <name>png_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="854" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="854" bodyend="859"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1abb4191900cb34212c4afecd52cbe0995" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.png_64x64</definition>
+        <argsstring></argsstring>
+        <name>png_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="864" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="864" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a43b3ad8b264f1f60c7255db4821977ec" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Resources.public_key</definition>
+        <argsstring></argsstring>
+        <name>public_key</name>
+        <briefdescription>
+<para>Looks up a localized string similar to WUA3PRSJ62ZBWMDCUQ5SUA3PCKW3CJZQPBKJWZRMWPN44DVXZ2JVQ. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="874" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="874" bodyend="878"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a86651d26bc0810b06b49993a1ec4cd22" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.realtor</definition>
+        <argsstring></argsstring>
+        <name>realtor</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="883" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="883" bodyend="888"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a9bc72f571ef0dbe8db6134c552b4fdae" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.realtor_16x16</definition>
+        <argsstring></argsstring>
+        <name>realtor_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="893" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="893" bodyend="898"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a7cc10820fd56cbaec50e59b1fd4911f6" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.reload</definition>
+        <argsstring></argsstring>
+        <name>reload</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="903" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="903" bodyend="908"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a297b5f56a34c3556b0b4a3f49026dfe9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.reload_16x16</definition>
+        <argsstring></argsstring>
+        <name>reload_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="913" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="913" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ae3e4765395122df5bd2fef4453e12072" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.save</definition>
+        <argsstring></argsstring>
+        <name>save</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="923" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="923" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1adaed152242b389e8325a154dc348fa0b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.save_16x16</definition>
+        <argsstring></argsstring>
+        <name>save_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="933" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="933" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a2315806fd2eaef0e3c51846063a669ae" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.save_64x64</definition>
+        <argsstring></argsstring>
+        <name>save_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="943" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="943" bodyend="948"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1abd750f9f8b71d23e28e809f2d3be8cfd" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.search</definition>
+        <argsstring></argsstring>
+        <name>search</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="953" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="953" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a934832f795700e272a16d54d51fe088b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.search_16x16</definition>
+        <argsstring></argsstring>
+        <name>search_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="963" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="963" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a05896c465fd190d4ea102f7062b5cb5a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.search_32x32</definition>
+        <argsstring></argsstring>
+        <name>search_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="973" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="973" bodyend="978"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a17187d9fd10bf1b0f38d13be9b2f1091" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.settings</definition>
+        <argsstring></argsstring>
+        <name>settings</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="983" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="983" bodyend="988"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a98347b3d0dd35018cd22df0bf940ba4b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.settings_24x24</definition>
+        <argsstring></argsstring>
+        <name>settings_24x24</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="993" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="993" bodyend="998"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1af0ac4fefcb7915bdc3a5be0a2d0d96bb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.sql</definition>
+        <argsstring></argsstring>
+        <name>sql</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1003" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1003" bodyend="1008"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a6679919b6fcfb006f054e651f94e66b7" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.sql_16x16</definition>
+        <argsstring></argsstring>
+        <name>sql_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1013" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1013" bodyend="1018"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aa649b39a5584adfd0574bda6723a9599" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.success</definition>
+        <argsstring></argsstring>
+        <name>success</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1023" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1023" bodyend="1028"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1addd2746fcdab889130a3e8ad24739990" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.success_16x16</definition>
+        <argsstring></argsstring>
+        <name>success_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1033" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1033" bodyend="1038"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1adbfd338ee285518cb1c2a445308dfc2b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.success_64x64</definition>
+        <argsstring></argsstring>
+        <name>success_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1043" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1043" bodyend="1048"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a5d53dc302dad1a66c173a76f29dbff9f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.surveying</definition>
+        <argsstring></argsstring>
+        <name>surveying</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1053" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1053" bodyend="1058"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1adbc8d9b440f16a2ab2716b362b0ea585" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.surveying_16x16</definition>
+        <argsstring></argsstring>
+        <name>surveying_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1063" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1063" bodyend="1068"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a172c15f1b56a7bccbbb2ded82c2ae135" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.sync</definition>
+        <argsstring></argsstring>
+        <name>sync</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1073" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1073" bodyend="1078"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a7f1d6618917ecd30f7e560261e5e9c98" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.sync_16x16</definition>
+        <argsstring></argsstring>
+        <name>sync_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1083" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1083" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ae0eae21195a745eb45d9538c7076b6b4" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.sync_32x32</definition>
+        <argsstring></argsstring>
+        <name>sync_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1093" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1093" bodyend="1098"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1abd9f1455aa41f19a490aab9c56a6d5fb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1103" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1103" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a8a57f4cb97288c1d55475162fc7c925a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.time_16x16</definition>
+        <argsstring></argsstring>
+        <name>time_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1113" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1113" bodyend="1118"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a06ed8ff1bee37fb8c027fe3b03212a86" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.title_company</definition>
+        <argsstring></argsstring>
+        <name>title_company</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1123" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1123" bodyend="1128"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a55e2d7a41b94b254db4e3a3f76f6e9a7" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.title_company_16x16</definition>
+        <argsstring></argsstring>
+        <name>title_company_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1133" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1133" bodyend="1138"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ae63e7eb341b881c89049586260e13228" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.toggle_off_16x16</definition>
+        <argsstring></argsstring>
+        <name>toggle_off_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1143" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1143" bodyend="1148"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a23c2100c249752804fe6875b26317f8b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.toggle_off_64x64</definition>
+        <argsstring></argsstring>
+        <name>toggle_off_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1153" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1153" bodyend="1158"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a8873db22c00741a7c168c5cc6bf0fb1d" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.toggle_on_16x16</definition>
+        <argsstring></argsstring>
+        <name>toggle_on_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1163" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1163" bodyend="1168"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a43be3810fe3f36be45e37868f7d0b475" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.toggle_on_64x64</definition>
+        <argsstring></argsstring>
+        <name>toggle_on_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1173" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1173" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a0cb843271562c61b0abc12fdde299af0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.txt</definition>
+        <argsstring></argsstring>
+        <name>txt</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1183" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1183" bodyend="1188"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a1738f338c0e9ecb5070ff78669e21ec2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.txt_16x16</definition>
+        <argsstring></argsstring>
+        <name>txt_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1193" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1193" bodyend="1198"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ac41a34b31b6f8bb1ea027de3f4b6c501" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.txt_32x32</definition>
+        <argsstring></argsstring>
+        <name>txt_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1203" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1203" bodyend="1208"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a2398d96fded19c1d6c270258bb7b7217" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.up_arrow</definition>
+        <argsstring></argsstring>
+        <name>up_arrow</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1213" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1213" bodyend="1218"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a756d5bb7d6338434049e1ba65620884f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.up_arrow_32x32</definition>
+        <argsstring></argsstring>
+        <name>up_arrow_32x32</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1223" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1223" bodyend="1228"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a37fb14f5608770b5c3d4d4c25c9c66c2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.up_arrow_64x64</definition>
+        <argsstring></argsstring>
+        <name>up_arrow_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1233" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1233" bodyend="1238"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1aae5f951d0403c6780cd8d506c90c4f47" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.updated</definition>
+        <argsstring></argsstring>
+        <name>updated</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1243" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1243" bodyend="1248"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ae99c140493ceac3088f7fbca02ee4ab3" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.updated_24x24</definition>
+        <argsstring></argsstring>
+        <name>updated_24x24</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1253" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1253" bodyend="1258"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ac658e50d4b22379c0eb3466297662dbd" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1263" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1263" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ad76c7cbff1ffc95c4409d64a6071c177" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.view_16x16</definition>
+        <argsstring></argsstring>
+        <name>view_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1273" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1273" bodyend="1278"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a189b68d20db092fa8b9a96b168846ea9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.view_files</definition>
+        <argsstring></argsstring>
+        <name>view_files</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1283" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1283" bodyend="1288"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a79044f68e92aa878c46746f0fbce58f5" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.view_files_16x16</definition>
+        <argsstring></argsstring>
+        <name>view_files_16x16</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1293" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1293" bodyend="1298"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1a80a003576ec18b9cbb3ec4a6e35a51b8" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.warning</definition>
+        <argsstring></argsstring>
+        <name>warning</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1303" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1303" bodyend="1308"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_resources_1ad19917f43db1b01e83e0a1cb92a56d3e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap SurveyManager.Properties.Resources.warning_64x64</definition>
+        <argsstring></argsstring>
+        <name>warning_64x64</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="1313" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="1313" bodyend="1318"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_survey_manager_1_1_properties_1_1_resources_1a61ee25c21a530c86fe3fe9450a46861f" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="32" column="18" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" line="25" column="13" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Resources.Designer.cs" bodystart="25" bodyend="1319"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a812e3ecab0cf4cc3c6e95702ebe8b497" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>add</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aa8b68b418527624419db73bbf3213762" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>add_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a71e08a049be98f8908c1cc9c4e70f49e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>attachment</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a54b0864e5a881538ab15ebfb533a32bb" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>attachment_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a2711c9fe2cb987b06aee64bd8dda82ec" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_line_items</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aae303ed61b17186ef138086c875c4851" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_line_items_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a205d90aa06230772bbbb3042e7385d25" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_portal</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ab62722025c203271d3f46beaead91c0a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_portal_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ad3cd3ad94f7eca04db12151c6de7ea87" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_portal_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1adb0e57c56cea49c7bae989fc2b941bb8" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_rates</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ac3a8153a228b5ccc42e80977f7bcd4a4" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>billing_rates_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a2b0c6ff995159c870fc42659074c76e1" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>client</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a017866e180a67b28ce78b0f48d513cac" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>client_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a12833d3d14154c962b165f5ba5e53d61" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>close</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ad3e8dce9f491b5e37bf1d3ebf922326a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>close_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a4394617e97d8327d258111ed51a93778" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>computer_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1af712cbee0c850d3174d4bcaf4a52c8ae" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aab49fc417c8eeee7df02477372f8a456" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>current_bill</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a0d38f04ee977d2d8b3d0ed7341158db1" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>current_bill_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a05cadeab652b9819258fa0002472efa7" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>db_connection</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a63dadb06f53b6d92e3b34e0f2bda3373" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>delete</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a1078b5be7a44f1b015e6560052407efb" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>delete_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a58d3eb1cdbbb5a5a0cc938bc7d17277e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>developer_key</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a9cf18831819f23ce566cdeb9a7e67c8f" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>developer_name</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aacf77770914736c27730a025bc505de7" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>doc</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a3b8f2f54ff78112b594ecd28d484a2e3" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>doc_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5ed18f0afdc81ed9723cf9962dddbc9b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>doc_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a384d4674fa0ed941e64449d57722527b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>doc_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a1298dad579ed493eb1d62953d1bac58b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>down_arrow</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a06ad4a3cbe9a2028a15f9a47cfe8eee3" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>down_arrow_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5f51fe6df9f905c56bf8b22f965326b5" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>down_arrow_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1abab37fdecbb2b2e6793481e51d3c04be" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>download_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a15739230b22f3dfbda3145739fb23cb2" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>dwg</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ab8606803ad9935ba383f2cc0c618528b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>dwg_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a36ace740f2db9377ff5907851edf6e42" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>dwg_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1af5e2d03a7c990945818681639ef982d2" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>dwg_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ab789c3d0f5c4ff5e7b1d145b757de8f6" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>edit</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5e2fdc9c554eef5893aeba317a650511" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>edit_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a62385430abfe3cbe9b172b21c2f87c8e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>error</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a0aa6fa5e7f42ca59f50e0a9821d5a2d6" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>error_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5a12520d218b36c3e0884626f796141a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>error_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a7072b55c5b6d8015879d52a2ccfdbcb0" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>execute</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a30b12d2b04d231c204d6441e6ab4624d" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>execute_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1afdea84ba20dfeb6cc721c6b360b62017" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>export</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ac6bf8c8d81ca1d9bbabc96938a821cc8" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>feedback</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a8cf10a2e50e53dc5fe8e5b585d04f25d" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>feedback_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aae9083e32ac28f2377f463c22eb607e0" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>file</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a34b82ec80717a80602c34a935320ffb3" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>file_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aa68aada6bcf8a8cc480551bd6521be3e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>file_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ab6564097027fb1649ba835758cccbab2" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>file_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a724c4306b1c5942d212f86722f453d6a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>filter</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a6d702c2ec0e3223904a64e85c3dee225" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>filter_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a30acacbd556cfa5634b6dddfd5ca8639" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>filter_24x24</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a0dbad9f6276bf2200087408ba2b32cec" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>folder</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ad1c7b5ab6e7e3982fce197546cfcc403" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>folder_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1acd17991a7c69ef0abd29cb6e451e6960" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>folder_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a702649dbb8baaa2fb33721164f38afce" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>import</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1abdf969625d3a6f6ee6faa4a59d8fa8aa" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>info</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aacc025ab1b9b56037ba72fab04fb1223" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>info_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a38593c712c8626aee4abbbc1b2c5130c" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>info_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a2bf23daf96a4073e0d9acdf676f1ae5d" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>instrument</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a4edc09ec7ad3eef76adf3fed9dfbd655" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>instrument_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a4dd7373d58c6702aa95fd0aab847d3db" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>instrument_24x24</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5359603a8fcf26f4d3586c7270cc6bbf" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>license</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a0dccbd7498f668e849221b91a123b9a5" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>license_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a1a31c7057f2b8b928f5f65924c1f80b4" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>location</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a6964bb8e9c5f8a2da79817c97a5805d3" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>location_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a6742ecaf5cc0121154f476c9952b7feb" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>logo</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a8c63487256053533911930bd88cdfef6" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>map</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aa79b39fa7be2596c0e7a725b89f645e9" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>map_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a4495f810dd9104b4fb9370c505ca1082" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>notes</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a38c9670eec17ed77a00503efb39bce1f" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>notes_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a27e223b7470a31108662155ea6128d5c" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>open</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a70a6b46983879d9a168c338fb9c13ea6" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>open_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aad91cf91d372d5388c39fc6e42b71d8b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>pdf</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ac9c6b3f88beea104493f9fab81b213a0" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>pdf_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a54506436ed289ffcd24abacd1c01721e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>pdf_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aedccd635356c71f47006362da8f93328" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>pdf_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a020489a78eac3301ac7e8eea5f718e21" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>png</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a8cff786a9799e4bee11388f26f81cea0" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>png_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a34ff5c405c210c5d52056069561d0967" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>png_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1abb4191900cb34212c4afecd52cbe0995" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>png_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a43b3ad8b264f1f60c7255db4821977ec" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>public_key</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a86651d26bc0810b06b49993a1ec4cd22" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>realtor</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a9bc72f571ef0dbe8db6134c552b4fdae" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>realtor_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a7cc10820fd56cbaec50e59b1fd4911f6" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>reload</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a297b5f56a34c3556b0b4a3f49026dfe9" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>reload_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1adb84035dff7f3355731049e932013ff6" prot="private" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a887ac5759be38df676aa8edae4d6b9bc" prot="private" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a3a271c67365e6ccfecef68f383418cfa" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a61ee25c21a530c86fe3fe9450a46861f" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>Resources</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ae3e4765395122df5bd2fef4453e12072" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>save</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1adaed152242b389e8325a154dc348fa0b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>save_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a2315806fd2eaef0e3c51846063a669ae" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>save_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1abd750f9f8b71d23e28e809f2d3be8cfd" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>search</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a934832f795700e272a16d54d51fe088b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>search_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a05896c465fd190d4ea102f7062b5cb5a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>search_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a17187d9fd10bf1b0f38d13be9b2f1091" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>settings</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a98347b3d0dd35018cd22df0bf940ba4b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>settings_24x24</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1af0ac4fefcb7915bdc3a5be0a2d0d96bb" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>sql</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a6679919b6fcfb006f054e651f94e66b7" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>sql_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aa649b39a5584adfd0574bda6723a9599" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>success</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1addd2746fcdab889130a3e8ad24739990" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>success_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1adbfd338ee285518cb1c2a445308dfc2b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>success_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a5d53dc302dad1a66c173a76f29dbff9f" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>surveying</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1adbc8d9b440f16a2ab2716b362b0ea585" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>surveying_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a172c15f1b56a7bccbbb2ded82c2ae135" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>sync</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a7f1d6618917ecd30f7e560261e5e9c98" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>sync_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ae0eae21195a745eb45d9538c7076b6b4" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>sync_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1abd9f1455aa41f19a490aab9c56a6d5fb" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>time</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a8a57f4cb97288c1d55475162fc7c925a" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>time_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a06ed8ff1bee37fb8c027fe3b03212a86" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>title_company</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a55e2d7a41b94b254db4e3a3f76f6e9a7" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>title_company_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ae63e7eb341b881c89049586260e13228" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>toggle_off_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a23c2100c249752804fe6875b26317f8b" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>toggle_off_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a8873db22c00741a7c168c5cc6bf0fb1d" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>toggle_on_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a43be3810fe3f36be45e37868f7d0b475" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>toggle_on_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a0cb843271562c61b0abc12fdde299af0" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>txt</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a1738f338c0e9ecb5070ff78669e21ec2" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>txt_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ac41a34b31b6f8bb1ea027de3f4b6c501" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>txt_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a2398d96fded19c1d6c270258bb7b7217" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>up_arrow</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a756d5bb7d6338434049e1ba65620884f" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>up_arrow_32x32</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a37fb14f5608770b5c3d4d4c25c9c66c2" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>up_arrow_64x64</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1aae5f951d0403c6780cd8d506c90c4f47" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>updated</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ae99c140493ceac3088f7fbca02ee4ab3" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>updated_24x24</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ac658e50d4b22379c0eb3466297662dbd" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>view</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ad76c7cbff1ffc95c4409d64a6071c177" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>view_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a189b68d20db092fa8b9a96b168846ea9" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>view_files</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a79044f68e92aa878c46746f0fbce58f5" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>view_files_16x16</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1a80a003576ec18b9cbb3ec4a6e35a51b8" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>warning</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_resources_1ad19917f43db1b01e83e0a1cb92a56d3e" prot="package" virt="non-virtual"><scope>SurveyManager::Properties::Resources</scope><name>warning_64x64</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.IInfoControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a2930ca5b61e74c7a68d09874910d891f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.IsEdited</definition>
+        <argsstring></argsstring>
+        <name>IsEdited</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="11" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a02f49fe4074b5a9cf4f6fdfc8dad7b55" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ab04d3f7c9f0c6f27148fc82685219ed3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="192" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ae796a496e2398328709b25c1dc2b4b4c" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="193" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ab2afba8847c12bf6864e01a595ebcd39" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="194" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a24cf0c736a1e52ea7ae09e6d340d566e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="195" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ac50695330bb3f55dbb98b2a6748fa0df" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.txtLot</definition>
+        <argsstring></argsstring>
+        <name>txtLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="196" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a917c4f59ee3b2cfc307c91e272ff4815" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="197" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a4020ddee9a5d641afbcd0852b12ead0f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="198" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a8b2576bdb658f516375a3bf20447f51c" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.txtBlock</definition>
+        <argsstring></argsstring>
+        <name>txtBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="199" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a180242ee4ce8f7684d55cc1a730dec29" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.flowLayoutPanel3</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="200" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1abdbae2ea1a7d523c52b6036470be6a72" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.kryptonLabel4</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="201" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ac67cce2204f147328e0c36fa3dcaf442" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.txtSection</definition>
+        <argsstring></argsstring>
+        <name>txtSection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="202" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a84bfc384f33bf6fd460f91b1d9924d48" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.flowLayoutPanel4</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="203" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1aa3f8b97df83537797fda372f581b49d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.SubdivisionCtl</definition>
+        <argsstring>()</argsstring>
+        <name>SubdivisionCtl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="13" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1adbd6133602dad4951e39f7a5ba749d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.SaveInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SaveInfo</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633">SaveInfo</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="18" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ace6673446e4907e1c2aac09ca8e5010b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.SubdivisionCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SubdivisionCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="28" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="28" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a15ac271cb44f4422d47294264a7d4f01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.textBox_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="43" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a8c8524f2d49c52e51d953acebe9e4f1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.textBox_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="50" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a428bd83dc466dc678eedeb9678c34a8c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.JobModified</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>JobModified</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="57" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a7b8c86a27743b36f491a750c67ca0b04" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="30" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ae5c009cf765107ebb03948b1865e0dae" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" line="9" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo/SubdivisionCtl.cs" bodystart="10" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a02f49fe4074b5a9cf4f6fdfc8dad7b55" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ae5c009cf765107ebb03948b1865e0dae" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ab2afba8847c12bf6864e01a595ebcd39" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a917c4f59ee3b2cfc307c91e272ff4815" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a180242ee4ce8f7684d55cc1a730dec29" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>flowLayoutPanel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a84bfc384f33bf6fd460f91b1d9924d48" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>flowLayoutPanel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a7b8c86a27743b36f491a750c67ca0b04" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a2930ca5b61e74c7a68d09874910d891f" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>IsEdited</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a428bd83dc466dc678eedeb9678c34a8c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>JobModified</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ab04d3f7c9f0c6f27148fc82685219ed3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a24cf0c736a1e52ea7ae09e6d340d566e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a4020ddee9a5d641afbcd0852b12ead0f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1abdbae2ea1a7d523c52b6036470be6a72" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>kryptonLabel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1adbd6133602dad4951e39f7a5ba749d02" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>SaveInfo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1aa3f8b97df83537797fda372f581b49d7" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>SubdivisionCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ace6673446e4907e1c2aac09ca8e5010b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>SubdivisionCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a15ac271cb44f4422d47294264a7d4f01" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>textBox_Enter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a8c8524f2d49c52e51d953acebe9e4f1e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>textBox_Leave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1a8b2576bdb658f516375a3bf20447f51c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>txtBlock</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ac50695330bb3f55dbb98b2a6748fa0df" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>txtLot</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ae796a496e2398328709b25c1dc2b4b4c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>txtName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1ac67cce2204f147328e0c36fa3dcaf442" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::subdivisionInfo::SubdivisionCtl</scope><name>txtSection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

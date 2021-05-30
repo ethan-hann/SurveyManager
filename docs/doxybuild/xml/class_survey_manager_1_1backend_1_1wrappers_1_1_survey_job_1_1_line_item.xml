@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::SurveyJob::LineItem</compoundname>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ac2c8dbb6fbd3290534a86dd4fca99415" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.SurveyJob.LineItem.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+<para>The </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="21" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ad12524b3ae7e029ca75188b38506d2e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal SurveyManager.backend.wrappers.SurveyJob.LineItem.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+<para>The amount in US dollars to charge for this line item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="29" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a289e4c4681d1d4dd7842c101b01223e2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.SurveyJob.LineItem.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+<para>A brief description about this charge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="39" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a76ef53516b5a20f3e9404d3bf42c154f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SurveyManager.backend.wrappers.SurveyJob.LineItem.TaxRate</definition>
+        <argsstring></argsstring>
+        <name>TaxRate</name>
+        <initializer>= Settings.Default.DefaultTaxRate</initializer>
+        <briefdescription>
+<para>Any applicable tax to add to the total for this line item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="48" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1add6f76793b173618f7d0c5a4021175b0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal SurveyManager.backend.wrappers.SurveyJob.LineItem.SubTotal</definition>
+        <argsstring></argsstring>
+        <name>SubTotal</name>
+        <briefdescription>
+<para>Get a value representing the subtotal for this line item. The subtotal is calculated using the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ad12524b3ae7e029ca75188b38506d2e6" kindref="member">Amount</ref> and the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a76ef53516b5a20f3e9404d3bf42c154f" kindref="member">TaxRate</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="57" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a2f47d11d46c7cb3bad7d0cb9e41c17c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.SurveyJob.LineItem.IsValidLineItem</definition>
+        <argsstring></argsstring>
+        <name>IsValidLineItem</name>
+        <briefdescription>
+<para>Get a value indicating if this is a valid billing line item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A valid line item is one whose amount is not $0.00 and has a description.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="70" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="71" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1afa1ecf33d4bb46fe8537bc29fd4294f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.SurveyJob.LineItem.LineItem</definition>
+        <argsstring>()</argsstring>
+        <name>LineItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="78" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a057e55c21411a337959e54dec97ef616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.SurveyJob.LineItem.LineItem</definition>
+        <argsstring>(decimal amount, string description, double taxRate=0.0)</argsstring>
+        <name>LineItem</name>
+        <param>
+          <type>decimal</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>taxRate</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Create a new line item with the necessary information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount for this charge.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A brief description of the charge.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taxRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any applicable tax that should be considered for this charge.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="86" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a1339830ccc9370837dcba1713b144f65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.SurveyJob.LineItem.LineItem</definition>
+        <argsstring>(int id, decimal amount, string description, double taxRate=0.0)</argsstring>
+        <name>LineItem</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>taxRate</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Create a new line item with the necessary information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the row in the database.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount for this charge.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A brief description of the charge.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taxRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any applicable tax that should be considered for this charge.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="100" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a504118d9c520a706127740186ff02cf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.SurveyJob.LineItem.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="108" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a70e79cec8619f687768b646dd110d000" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.SurveyJob.LineItem.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="113" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="113" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a4b5935da15c11ddd9cfdf648fad369ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.SurveyJob.LineItem.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="132" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a8d48095247a4177e975f2597ad5597e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.SurveyJob.LineItem.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="137" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="137" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a single line item for a survey job. A line item is simply an extra charge to bill for on this survey. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Multiple line items can be added to a survey using the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing" kindref="compound">Billing</ref> class.</para>
+<para>This class implements the <ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref> interface to facilitate easier database operations.</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.SurveyJob.LineItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.SurveyJob.LineItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" line="15" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/LineItem.cs" bodystart="16" bodyend="141"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ad12524b3ae7e029ca75188b38506d2e6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>Amount</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a8d48095247a4177e975f2597ad5597e0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a289e4c4681d1d4dd7842c101b01223e2" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>Description</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ac2c8dbb6fbd3290534a86dd4fca99415" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a70e79cec8619f687768b646dd110d000" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a2f47d11d46c7cb3bad7d0cb9e41c17c5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>IsValidLineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1afa1ecf33d4bb46fe8537bc29fd4294f6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>LineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a057e55c21411a337959e54dec97ef616" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>LineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a1339830ccc9370837dcba1713b144f65" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>LineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1add6f76793b173618f7d0c5a4021175b0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>SubTotal</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a76ef53516b5a20f3e9404d3bf42c154f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>TaxRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a504118d9c520a706127740186ff02cf9" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a4b5935da15c11ddd9cfdf648fad369ae" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::SurveyJob::LineItem</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

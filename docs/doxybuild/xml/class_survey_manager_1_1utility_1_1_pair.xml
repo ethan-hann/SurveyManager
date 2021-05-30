@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_pair" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Pair</compoundname>
+    <templateparamlist>
+      <param>
+        <type>K</type>
+      </param>
+      <param>
+        <type>V</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_pair_1adfee0a46921a42e90b752c2ce065b879" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>K</type>
+        <definition>K SurveyManager.utility.Pair&lt; K, V &gt;.Key</definition>
+        <argsstring></argsstring>
+        <name>Key</name>
+        <briefdescription>
+<para>The key of the pair. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" line="13" column="18" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_pair_1a9089833a0ddb92fdf9ad39d4dfc3cf22" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>V</type>
+        <definition>V SurveyManager.utility.Pair&lt; K, V &gt;.Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <briefdescription>
+<para>The value of the pair. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" line="17" column="18" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pair_1a3a5e10f26bdee7b5b81ebf0d17787a14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Pair&lt; K, V &gt;.Pair</definition>
+        <argsstring>(K key, V value)</argsstring>
+        <name>Pair</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>V</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new pair with the specified key and value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key for this pair.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for this pair.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" line="24" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pair_1a27c8133b77fa6e70e5d8d8554ed25d28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Pair&lt; K, V &gt;.Pair</definition>
+        <argsstring>()</argsstring>
+        <name>Pair</name>
+        <briefdescription>
+<para>Construct an empty pair with no key or value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" line="33" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic class to represent a single Key, Value pair. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>K</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key type</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" line="8" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs" bodystart="9" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_pair_1adfee0a46921a42e90b752c2ce065b879" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Pair</scope><name>Key</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pair_1a3a5e10f26bdee7b5b81ebf0d17787a14" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Pair</scope><name>Pair</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pair_1a27c8133b77fa6e70e5d8d8554ed25d28" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Pair</scope><name>Pair</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pair_1a9089833a0ddb92fdf9ad39d4dfc3cf22" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Pair</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

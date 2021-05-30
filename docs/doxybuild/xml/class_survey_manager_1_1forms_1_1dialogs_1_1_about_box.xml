@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::AboutBox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9ab173e33c6c160939288d28741e3174" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyTitle</definition>
+        <argsstring></argsstring>
+        <name>AssemblyTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="22" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="23" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae12c0f2332d9bf55fc4c55a2ffafd898" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyVersion</definition>
+        <argsstring></argsstring>
+        <name>AssemblyVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="39" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a66b166ea8967207dff1aee28c6921107" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyDescription</definition>
+        <argsstring></argsstring>
+        <name>AssemblyDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="47" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="48" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a5778b89d3e2b066fef68a221bb07ec48" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyProduct</definition>
+        <argsstring></argsstring>
+        <name>AssemblyProduct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="60" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9857cf51b85b3f9e54b8a0a0e0ec7fb3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyCopyright</definition>
+        <argsstring></argsstring>
+        <name>AssemblyCopyright</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="73" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="74" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1af379a399fe6767e454ad779c7f2de520" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AboutBox.AssemblyCompany</definition>
+        <argsstring></argsstring>
+        <name>AssemblyCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="86" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="87" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a33be01d938303a0484b1ca275510f38a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.AboutBox.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a232c546cdc93ac7ac9a3ad5e3212f363" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.dialogs.AboutBox.tableLayoutPanel</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="179" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae1d0054bd290e528bdf8171793b4e21d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox SurveyManager.forms.dialogs.AboutBox.logoPictureBox</definition>
+        <argsstring></argsstring>
+        <name>logoPictureBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="180" column="46" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a5f6a10ed10592b1a4d7f9be0059e632e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.AboutBox.labelProductName</definition>
+        <argsstring></argsstring>
+        <name>labelProductName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="181" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a41121c66d563d19cc96dafd852609c68" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.AboutBox.labelVersion</definition>
+        <argsstring></argsstring>
+        <name>labelVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="182" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a443e50db5a4d1c50a3004db5e69c644a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.AboutBox.labelCopyright</definition>
+        <argsstring></argsstring>
+        <name>labelCopyright</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="183" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae6061020631168a327b80d8eeed261c3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.AboutBox.labelCompanyName</definition>
+        <argsstring></argsstring>
+        <name>labelCompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="184" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ad29a4f7043c6a8e038e181156d2df7d8" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.AboutBox.textBoxDescription</definition>
+        <argsstring></argsstring>
+        <name>textBoxDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="185" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a868a40a20ae3a80ee6e015f8b6183dea" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.AboutBox.okButton</definition>
+        <argsstring></argsstring>
+        <name>okButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="186" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a1c34dd3ccee1ff4bbd1d9cd0b9e815e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.AboutBox.AboutBox</definition>
+        <argsstring>()</argsstring>
+        <name>AboutBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="9" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="9" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a6fc5a25211179d9ea9b1e29592d3c0eb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.AboutBox.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="14" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9cb6f0907e0d148aaef457c460a0624d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AboutBox.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" line="29" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.Designer.cs" bodystart="29" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AboutBox</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AboutBox</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="7" column="12" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" bodystart="8" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a1c34dd3ccee1ff4bbd1d9cd0b9e815e0" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AboutBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1af379a399fe6767e454ad779c7f2de520" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyCompany</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9857cf51b85b3f9e54b8a0a0e0ec7fb3" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyCopyright</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a66b166ea8967207dff1aee28c6921107" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyDescription</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a5778b89d3e2b066fef68a221bb07ec48" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyProduct</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9ab173e33c6c160939288d28741e3174" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyTitle</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae12c0f2332d9bf55fc4c55a2ffafd898" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>AssemblyVersion</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a33be01d938303a0484b1ca275510f38a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a6fc5a25211179d9ea9b1e29592d3c0eb" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a9cb6f0907e0d148aaef457c460a0624d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae6061020631168a327b80d8eeed261c3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>labelCompanyName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a443e50db5a4d1c50a3004db5e69c644a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>labelCopyright</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a5f6a10ed10592b1a4d7f9be0059e632e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>labelProductName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a41121c66d563d19cc96dafd852609c68" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>labelVersion</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ae1d0054bd290e528bdf8171793b4e21d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>logoPictureBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a868a40a20ae3a80ee6e015f8b6183dea" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>okButton</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1a232c546cdc93ac7ac9a3ad5e3212f363" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>tableLayoutPanel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box_1ad29a4f7043c6a8e038e181156d2df7d8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AboutBox</scope><name>textBoxDescription</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

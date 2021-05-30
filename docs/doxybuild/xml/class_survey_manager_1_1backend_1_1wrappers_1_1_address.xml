@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::Address</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a9b8a0a62fe41a23f7bd08bbc381a6a96" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Address.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="15" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a1e7125c9d039e38ae3e47a510068b6d9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Address.Street</definition>
+        <argsstring></argsstring>
+        <name>Street</name>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="21" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ae39f4e4d5e6db53a8781047ef26c67a6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Address.City</definition>
+        <argsstring></argsstring>
+        <name>City</name>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="27" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a35d9fc227e4c958d94eb9f770970f1bb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Address.ZipCode</definition>
+        <argsstring></argsstring>
+        <name>ZipCode</name>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="33" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1aedd60b0a6b2592f0a5845d1f0d5df0d5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.Address.IsEmpty</definition>
+        <argsstring></argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="36" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1add4bc1f48e03662a6edb1dd1d619d930" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Address.Address</definition>
+        <argsstring>()</argsstring>
+        <name>Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="44" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1af51b6cd5c35d79bfba6ba3dd90f9d88f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Address.Address</definition>
+        <argsstring>(int iD, string street, string city, string zipCode)</argsstring>
+        <name>Address</name>
+        <param>
+          <type>int</type>
+          <declname>iD</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>street</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>city</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>zipCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="46" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a7eab48b2ba77e7970b7a4ef55fbf31e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Address.Address</definition>
+        <argsstring>(string street, string city, string zipCode)</argsstring>
+        <name>Address</name>
+        <param>
+          <type>string</type>
+          <declname>street</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>city</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>zipCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="54" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a82bb348671b7c7a662bf8bfa23880eb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.Address.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="61" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ad5e5d731c0888fe898c8e963c5465ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Address.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="68" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="68" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a4f719330414bec233801d2f5153b83d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Address.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="88" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a3c1fe632cf75066c20aefca13c923ab6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Address.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="93" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="93" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a basic address used for surveys and clients. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Address</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Address</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" line="12" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Address.cs" bodystart="13" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1add4bc1f48e03662a6edb1dd1d619d930" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Address</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1af51b6cd5c35d79bfba6ba3dd90f9d88f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Address</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a7eab48b2ba77e7970b7a4ef55fbf31e7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Address</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ae39f4e4d5e6db53a8781047ef26c67a6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>City</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a3c1fe632cf75066c20aefca13c923ab6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a9b8a0a62fe41a23f7bd08bbc381a6a96" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ad5e5d731c0888fe898c8e963c5465ed7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1aedd60b0a6b2592f0a5845d1f0d5df0d5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>IsEmpty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a1e7125c9d039e38ae3e47a510068b6d9" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Street</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a82bb348671b7c7a662bf8bfa23880eb8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a4f719330414bec233801d2f5153b83d4" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>Update</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a35d9fc227e4c958d94eb9f770970f1bb" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Address</scope><name>ZipCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

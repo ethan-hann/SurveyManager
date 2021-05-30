@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::LicensingEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a6fbb529f9921bd0d0d37bd82b52e9544" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>CloseReasons</type>
+        <definition>CloseReasons SurveyManager.utility.CEventArgs.LicensingEventArgs.CloseReason</definition>
+        <argsstring></argsstring>
+        <name>CloseReason</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="88" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a4eca210bc12a283007bfe38a97a409ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+        <definition>LicenseInfo SurveyManager.utility.CEventArgs.LicensingEventArgs.License</definition>
+        <argsstring></argsstring>
+        <name>License</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="89" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="89" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a8c93e6dfa871c2d44a7febd7cb4eac61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.LicensingEventArgs.LicensingEventArgs</definition>
+        <argsstring>(LicenseInfo info, CloseReasons closeReason)</argsstring>
+        <name>LicensingEventArgs</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>CloseReasons</type>
+          <declname>closeReason</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="91" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="91" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.LicensingEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.LicensingEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="86" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="87" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a6fbb529f9921bd0d0d37bd82b52e9544" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::LicensingEventArgs</scope><name>CloseReason</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a4eca210bc12a283007bfe38a97a409ae" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::LicensingEventArgs</scope><name>License</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args_1a8c93e6dfa871c2d44a7febd7cb4eac61" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::LicensingEventArgs</scope><name>LicensingEventArgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Survey</type>
+        <definition>Survey SurveyManager.utility.CEventArgs.SurveyOpenedEventArgs.Survey</definition>
+        <argsstring></argsstring>
+        <name>Survey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="58" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a9b5a164f8fde49fbf3649a5da1e1db7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.SurveyOpenedEventArgs.SurveyOpenedEventArgs</definition>
+        <argsstring>(Survey survey)</argsstring>
+        <name>SurveyOpenedEventArgs</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" kindref="member">Survey</ref></type>
+          <declname>survey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="60" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.SurveyOpenedEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.SurveyOpenedEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="56" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="57" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a4f50db4e15e18a9401ece785e0cf1319" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</scope><name>Survey</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args_1a9b5a164f8fde49fbf3649a5da1e1db7d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</scope><name>SurveyOpenedEventArgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

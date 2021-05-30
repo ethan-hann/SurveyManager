@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::description::DescriptionCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.IInfoControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1ac56fa67f57363dd3e9c40adfc13f97d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.description.DescriptionCtl.IsEdited</definition>
+        <argsstring></argsstring>
+        <name>IsEdited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="12" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1af40b491b6294391646c2538184500d97" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.description.DescriptionCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1adfc5d58dc38f8bd5d5946dc90375539d" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.surveyMenu.description.DescriptionCtl.txtDescription</definition>
+        <argsstring></argsstring>
+        <name>txtDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="108" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a644215405356848a5e193bf535c94102" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.description.DescriptionCtl.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="109" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1aabda3b271621cd6f04b49120d0eeeb0d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.description.DescriptionCtl.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="110" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1af86d5ef8d880a470b5ee96f445dded95" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.description.DescriptionCtl.lblDescCharCount</definition>
+        <argsstring></argsstring>
+        <name>lblDescCharCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="111" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1ac12b3484a7e7248d9e7ae8f465434f1e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.surveyMenu.description.DescriptionCtl.kryptonPanel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="112" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a86b4e76cd974b5886dab98c6ae925b40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.description.DescriptionCtl.DescriptionCtl</definition>
+        <argsstring>()</argsstring>
+        <name>DescriptionCtl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="14" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a412c624bf4c21192c32d4476dc6c66fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.description.DescriptionCtl.SaveInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SaveInfo</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633">SaveInfo</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="19" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="19" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a1def2c53e14e5904b889776009db7023" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.description.DescriptionCtl.DescriptionCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DescriptionCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="31" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a126418151f7bbb2f141d1c88d9bef592" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.description.DescriptionCtl.txtDescription_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtDescription_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="40" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a35294e6db7715bb258821c9b8defaf2a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.description.DescriptionCtl.JobModified</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>JobModified</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="45" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a2374448315a33a2d5f4d7120bf244359" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.description.DescriptionCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="30" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a5e815da61e85e862caa2fc6585b7c526" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.description.DescriptionCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.description.DescriptionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.description.DescriptionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="10" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" bodystart="11" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1af40b491b6294391646c2538184500d97" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a86b4e76cd974b5886dab98c6ae925b40" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>DescriptionCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a1def2c53e14e5904b889776009db7023" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>DescriptionCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a5e815da61e85e862caa2fc6585b7c526" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a2374448315a33a2d5f4d7120bf244359" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1ac56fa67f57363dd3e9c40adfc13f97d1" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>IsEdited</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a35294e6db7715bb258821c9b8defaf2a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>JobModified</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1ac12b3484a7e7248d9e7ae8f465434f1e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>kryptonPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1af86d5ef8d880a470b5ee96f445dded95" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>lblDescCharCount</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a412c624bf4c21192c32d4476dc6c66fd" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>SaveInfo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a644215405356848a5e193bf535c94102" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1aabda3b271621cd6f04b49120d0eeeb0d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1adfc5d58dc38f8bd5d5946dc90375539d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>txtDescription</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a126418151f7bbb2f141d1c88d9bef592" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::description::DescriptionCtl</scope><name>txtDescription_TextChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3f0f03525190630c1d2203b98bf3ff4e" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls</compoundname>
+    <innerfile refid="_new_object_8cs">NewObject.cs</innerfile>
+    <innerfile refid="_new_object_8_designer_8cs">NewObject.Designer.cs</innerfile>
+    <innerfile refid="_view_objects_ctl_8cs">ViewObjectsCtl.cs</innerfile>
+    <innerfile refid="_view_objects_ctl_8_designer_8cs">ViewObjectsCtl.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/"/>
+  </compounddef>
+</doxygen>

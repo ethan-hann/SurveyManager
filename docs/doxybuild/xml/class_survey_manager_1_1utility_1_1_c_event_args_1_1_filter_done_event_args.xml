@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::FilterDoneEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1a06153644907c784ae260afb58f8ba224" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DataTable</type>
+        <definition>DataTable SurveyManager.utility.CEventArgs.FilterDoneEventArgs.Results</definition>
+        <argsstring></argsstring>
+        <name>Results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="14" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1afcdd2c7f5166ff5abbdbf7c33dd6b9c2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.CEventArgs.FilterDoneEventArgs.Query</definition>
+        <argsstring></argsstring>
+        <name>Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="15" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1ad7986a174194f995eb2df585a0149090" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.FilterDoneEventArgs.FilterDoneEventArgs</definition>
+        <argsstring>(DataTable results, string query)</argsstring>
+        <name>FilterDoneEventArgs</name>
+        <param>
+          <type>DataTable</type>
+          <declname>results</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="17" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="17" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.FilterDoneEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.FilterDoneEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="12" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1ad7986a174194f995eb2df585a0149090" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::FilterDoneEventArgs</scope><name>FilterDoneEventArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1afcdd2c7f5166ff5abbdbf7c33dd6b9c2" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::FilterDoneEventArgs</scope><name>Query</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args_1a06153644907c784ae260afb58f8ba224" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::FilterDoneEventArgs</scope><name>Results</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

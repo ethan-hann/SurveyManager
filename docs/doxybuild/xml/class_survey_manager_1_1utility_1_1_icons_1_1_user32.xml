@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_icons_1_1_user32" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Icons::User32</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_icons_1_1_user32_1aeda1ae015911f133cee2528d0f8d83a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.utility.Icons.User32.DestroyIcon</definition>
+        <argsstring>(IntPtr hIcon)</argsstring>
+        <name>DestroyIcon</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hIcon</declname>
+        </param>
+        <briefdescription>
+<para>Provides access to function required to delete handle. This method is used internally and is not required to be called separately. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hIcon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to icon handle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>N/A</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="236" column="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wraps necessary functions imported from User32.dll. Code courtesy of MSDN Cold Rooster Consulting example. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="227" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="228" bodyend="237"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_icons_1_1_user32_1aeda1ae015911f133cee2528d0f8d83a8" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::User32</scope><name>DestroyIcon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

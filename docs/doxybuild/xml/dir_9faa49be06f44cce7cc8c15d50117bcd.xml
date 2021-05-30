@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_9faa49be06f44cce7cc8c15d50117bcd" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu</compoundname>
+    <innerdir refid="dir_462c95df1ca4480751620c09cdacdddc">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal</innerdir>
+    <innerdir refid="dir_e7bc7999f28d1849bdd954a35d798178">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description</innerdir>
+    <innerdir refid="dir_59579bf1dbd3c41e4e40b0d0fbf021ee">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo</innerdir>
+    <innerdir refid="dir_295efc96edcc1430cef8be863d03b604">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo</innerdir>
+    <innerdir refid="dir_ab90c970174f3a559c5a5a135561b5d5">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/subdivisionInfo</innerdir>
+    <innerfile refid="_i_info_control_8cs">IInfoControl.cs</innerfile>
+    <innerfile refid="_info_ctl_8cs">InfoCtl.cs</innerfile>
+    <innerfile refid="_info_ctl_8_designer_8cs">InfoCtl.Designer.cs</innerfile>
+    <innerfile refid="_line_items_ctl_8cs">LineItemsCtl.cs</innerfile>
+    <innerfile refid="_line_items_ctl_8_designer_8cs">LineItemsCtl.Designer.cs</innerfile>
+    <innerfile refid="_notes_ctl_8cs">NotesCtl.cs</innerfile>
+    <innerfile refid="_notes_ctl_8_designer_8cs">NotesCtl.Designer.cs</innerfile>
+    <innerfile refid="_search_results_8cs">SearchResults.cs</innerfile>
+    <innerfile refid="_search_results_8_designer_8cs">SearchResults.Designer.cs</innerfile>
+    <innerfile refid="_survey_search_results_8cs">SurveySearchResults.cs</innerfile>
+    <innerfile refid="_survey_search_results_8_designer_8cs">SurveySearchResults.Designer.cs</innerfile>
+    <innerfile refid="_upload_file_8cs">UploadFile.cs</innerfile>
+    <innerfile refid="_upload_file_8_designer_8cs">UploadFile.Designer.cs</innerfile>
+    <innerfile refid="_view_panel_8cs">ViewPanel.cs</innerfile>
+    <innerfile refid="_view_panel_8_designer_8cs">ViewPanel.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/"/>
+  </compounddef>
+</doxygen>

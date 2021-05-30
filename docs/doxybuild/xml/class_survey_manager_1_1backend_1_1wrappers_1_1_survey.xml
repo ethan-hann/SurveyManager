@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::Survey</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1af43ecadebb20096d0028215e76b548ff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="17" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a43077cd7980106992122254cec4e4fe1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.JobNumber</definition>
+        <argsstring></argsstring>
+        <name>JobNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="24" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae0224163b2b67fe12666e4f714fc8bb1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="31" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1acea92d44343e6edadc3630993c9cbd06" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.AbstractNumber</definition>
+        <argsstring></argsstring>
+        <name>AbstractNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="38" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a5dc4e72f66ad6b16195e5323a9b4d672" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.SurveyName</definition>
+        <argsstring></argsstring>
+        <name>SurveyName</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="45" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ab9949a688d03d99663ebd98ef9e1e6d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime SurveyManager.backend.wrappers.Survey.LastUpdated</definition>
+        <argsstring></argsstring>
+        <name>LastUpdated</name>
+        <initializer>= DateTime.Now</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="52" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a2f789626e4196634ae680ccb13c01c60" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.Subdivision</definition>
+        <argsstring></argsstring>
+        <name>Subdivision</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="59" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abde3c92edd89cf0fd097a57143b6fe71" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.LotNumber</definition>
+        <argsstring></argsstring>
+        <name>LotNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="66" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ad4c6bc701cf7ffd680e5b8d3b6d7fcad" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.BlockNumber</definition>
+        <argsstring></argsstring>
+        <name>BlockNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="73" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a2faf4ccaf184d8a7ee1f0eede406b2fb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.SectionNumber</definition>
+        <argsstring></argsstring>
+        <name>SectionNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="80" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a765a293150549728db6810e17815c1b3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SurveyManager.backend.wrappers.Survey.Acres</definition>
+        <argsstring></argsstring>
+        <name>Acres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="87" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ad92ea8fb4264be43977181446aed6ca7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
+        <definition>Client SurveyManager.backend.wrappers.Survey.Client</definition>
+        <argsstring></argsstring>
+        <name>Client</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="95" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a870cd308821f97e8c75b83c616549e4c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.ClientID</definition>
+        <argsstring></argsstring>
+        <name>ClientID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="98" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a04d9b9aab041753b4e837d229cd9d14b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
+        <definition>County SurveyManager.backend.wrappers.Survey.County</definition>
+        <argsstring></argsstring>
+        <name>County</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="106" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abd5180f09ac3a23f3179f28af450fd2b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.CountyID</definition>
+        <argsstring></argsstring>
+        <name>CountyID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="109" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa0ec1342f89a7bc148567de9cc78b889" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
+        <definition>Realtor SurveyManager.backend.wrappers.Survey.Realtor</definition>
+        <argsstring></argsstring>
+        <name>Realtor</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="117" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a31265f27234e05e8e84dded414d3ea69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.RealtorID</definition>
+        <argsstring></argsstring>
+        <name>RealtorID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="120" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a7bcd57b8757fcefb1c1534771fadd5f7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
+        <definition>TitleCompany SurveyManager.backend.wrappers.Survey.TitleCompany</definition>
+        <argsstring></argsstring>
+        <name>TitleCompany</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="128" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a89577a0cae43c85cec649733681b45c8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.TitleCompanyID</definition>
+        <argsstring></argsstring>
+        <name>TitleCompanyID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="131" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40977c22f9c32d379e5533abfc28b254" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
+        <definition>Address SurveyManager.backend.wrappers.Survey.Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="139" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a22d2224beb5a36cee3e19ab6ade8fab5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.LocationID</definition>
+        <argsstring></argsstring>
+        <name>LocationID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="142" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a79c7dac0d46ec2116fccc7a4f93517c1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.FileIds</definition>
+        <argsstring></argsstring>
+        <name>FileIds</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="145" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ac0e293b2c7012c4b3d72f4a755e10a86" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+        <definition>List&lt;CFile&gt; SurveyManager.backend.wrappers.Survey.Files</definition>
+        <argsstring></argsstring>
+        <name>Files</name>
+        <initializer>= new List&lt;<ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="148" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa18de2c789af62d80fdf16f9e1814f46" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Survey.NumOfFiles</definition>
+        <argsstring></argsstring>
+        <name>NumOfFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="155" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a3e7d49a586c4752be5e9e526e14239f7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.Survey.HasFiles</definition>
+        <argsstring></argsstring>
+        <name>HasFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="164" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="165" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a1ab5ebe871d4e633e07c86ba0c160754" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing" kindref="compound">Billing</ref></type>
+        <definition>Billing SurveyManager.backend.wrappers.Survey.BillingObject</definition>
+        <argsstring></argsstring>
+        <name>BillingObject</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing" kindref="compound">Billing</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="173" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a0e8ad5524df7904208627450bd732489" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.TotalFieldTime</definition>
+        <argsstring></argsstring>
+        <name>TotalFieldTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="179" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="180" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa55ec31240e98b62e78c3927d09d708d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.FieldAmount</definition>
+        <argsstring></argsstring>
+        <name>FieldAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="191" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="192" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40ff9f9a1183e4625994f3152eaddff0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.TotalOfficeTime</definition>
+        <argsstring></argsstring>
+        <name>TotalOfficeTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="203" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="204" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aba36824acabb0968bb829a3c30944b07" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.OfficeAmount</definition>
+        <argsstring></argsstring>
+        <name>OfficeAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="215" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a67ba06686d9f3cf655d745a78788379f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.BillingTotal</definition>
+        <argsstring></argsstring>
+        <name>BillingTotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="227" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="228" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abba9124fb1b346b8a05f702f8a52ff87" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; DateTime, string &gt;</type>
+        <definition>Dictionary&lt;DateTime, string&gt; SurveyManager.backend.wrappers.Survey.Notes</definition>
+        <argsstring></argsstring>
+        <name>Notes</name>
+        <initializer>= new Dictionary&lt;DateTime, string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="236" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="236" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4f85d91c3f7f0d55ffc796afe0bd601d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.NotesString</definition>
+        <argsstring></argsstring>
+        <name>NotesString</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="239" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="239" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aac6fcba70b324a9fce6a24117810e89a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.Survey.IsValidSurvey</definition>
+        <argsstring></argsstring>
+        <name>IsValidSurvey</name>
+        <briefdescription>
+<para>Get a value that indicates if this is a valid <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey" kindref="compound">Survey</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A valid survey has a client, county, job number, and description at the very least.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="246" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="247" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a9a7524192a1730139fd4c8e8387172ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.SetObjects</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjects</name>
+        <briefdescription>
+<para>Populates the objects for this survey with values from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the survey&apos;s <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref>, <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref>, <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref>, <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref>, and any files associated with it.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="258" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="258" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a61c206d74b185d32aa293bcaae68db01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.AddFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>AddFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Add a new file to the associated file list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="339" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="339" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a65c6b62d66a555bc32131ee40b866287" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.AddFiles</definition>
+        <argsstring>(ICollection&lt; CFile &gt; files)</argsstring>
+        <name>AddFiles</name>
+        <param>
+          <type>ICollection&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>files</declname>
+        </param>
+        <briefdescription>
+<para>Adds the files to the associated file list if they are not already present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>files</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The files to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="348" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="348" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a520dbfc05e5dced562558c2fe7a562c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.SetFiles</definition>
+        <argsstring>(ICollection&lt; CFile &gt; files)</argsstring>
+        <name>SetFiles</name>
+        <param>
+          <type>ICollection&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>files</declname>
+        </param>
+        <briefdescription>
+<para>Overwrites the files list to be the specified files instead. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>files</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The files to set as the new <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ac0e293b2c7012c4b3d72f4a755e10a86" kindref="member">Files</ref> list.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="361" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a30aaa808d53de4f619a53ddb05d875dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.RemoveFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>RemoveFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Remove a file, if it exists, from the associated file list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="371" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="371" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aeb3181bfc80dcb500eb8ccdf35fce6ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.RemoveFiles</definition>
+        <argsstring>(ICollection&lt; CFile &gt; files)</argsstring>
+        <name>RemoveFiles</name>
+        <param>
+          <type>ICollection&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>files</declname>
+        </param>
+        <briefdescription>
+<para>Remove all files in <emphasis>files</emphasis>  from <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ac0e293b2c7012c4b3d72f4a755e10a86" kindref="member">Files</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>files</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collection of files to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="381" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae713aab6da6ec3e9c6c50e829e39ec6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.ClearFiles</definition>
+        <argsstring>()</argsstring>
+        <name>ClearFiles</name>
+        <briefdescription>
+<para>Clear this survey&apos;s associated files and file ids. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="389" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="389" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ace8d597944136d7f62dab722b098c64d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.AddFileId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>AddFileId</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Add a new file id to the id list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="399" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="399" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a3f973c9cd48e2fad39a621cbe0d27089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.RemoveFileId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>RemoveFileId</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Remove a file id from the id list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="416" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="416" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aca80c25b460c18ab6fda1a2bdc5bc0a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.AddNote</definition>
+        <argsstring>(DateTime time, string newNote)</argsstring>
+        <name>AddNote</name>
+        <param>
+          <type>DateTime</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>newNote</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="425" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="425" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4c13c044c4fc28ff8f867b326bb372c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.AddNote</definition>
+        <argsstring>(string newNote)</argsstring>
+        <name>AddNote</name>
+        <param>
+          <type>string</type>
+          <declname>newNote</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="431" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="431" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aff9a67194697f79fdb3042d5a2155857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.Survey.RemoveNote</definition>
+        <argsstring>(DateTime time)</argsstring>
+        <name>RemoveNote</name>
+        <param>
+          <type>DateTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="436" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="436" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1acd1c37716b54d7a9bda533bad0bc7645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.Survey.ParseNotes</definition>
+        <argsstring>(string notesString)</argsstring>
+        <name>ParseNotes</name>
+        <param>
+          <type>string</type>
+          <declname>notesString</declname>
+        </param>
+        <briefdescription>
+<para>Parses a string containing notes and times into the appropiate dictionary in this class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A note is specified by a dateTime in ticks (i.e., 637539336310000000) followed by a string; these two components are seperated by <computeroutput>/*<ndash/>*<zwj/>/</computeroutput></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>notesString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string containing the notes and time information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="447" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="447" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa70977142c5d84234deb75e98b3ff41f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Survey.GetNotesString</definition>
+        <argsstring>()</argsstring>
+        <name>GetNotesString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="483" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="483" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae84fa85be87f3306921762441fce2c96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.Survey.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="544" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="544" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4403116138569a29a0f4ecac178e19b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Survey.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Handles insertion of this survey and any files associated with it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError with the result of the Insert operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="553" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="553" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a967bd683c29d319a708acb96e8c2f40c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Survey.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Handles updating this survey and any files associated with it as well. If there is a file with an ID of 0 (meaning it hasn&apos;t been inserted yet), inserts it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError with the result of the Update operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="579" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="579" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ab0338c54b8121125bbaeb9c5869c5f76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Survey.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Delete this survey from the database, along with the associated files and billing line items. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError with the result of the Delete operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="609" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="609" bodyend="616"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a7e68ad9b94333954a19b1c001c4736a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int [] SurveyManager.backend.wrappers.Survey.ParseIds</definition>
+        <argsstring>(string strids)</argsstring>
+        <name>ParseIds</name>
+        <param>
+          <type>string</type>
+          <declname>strids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="469" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="469" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40846790c119abfe6244e16aa5688629" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Survey.UpdateObjects</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="493" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="493" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aded64ada9e143a0b09bd7bd0bec9080d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Survey.DeleteObjects</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="584" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="584" bodyend="603"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Survey</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Survey</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Survey.cs" bodystart="15" bodyend="617"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1acea92d44343e6edadc3630993c9cbd06" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AbstractNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a765a293150549728db6810e17815c1b3" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Acres</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a61c206d74b185d32aa293bcaae68db01" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AddFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ace8d597944136d7f62dab722b098c64d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AddFileId</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a65c6b62d66a555bc32131ee40b866287" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AddFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aca80c25b460c18ab6fda1a2bdc5bc0a6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AddNote</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4c13c044c4fc28ff8f867b326bb372c0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>AddNote</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a1ab5ebe871d4e633e07c86ba0c160754" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>BillingObject</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a67ba06686d9f3cf655d745a78788379f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>BillingTotal</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ad4c6bc701cf7ffd680e5b8d3b6d7fcad" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>BlockNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae713aab6da6ec3e9c6c50e829e39ec6d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ClearFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ad92ea8fb4264be43977181446aed6ca7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Client</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a870cd308821f97e8c75b83c616549e4c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ClientID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a04d9b9aab041753b4e837d229cd9d14b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>County</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abd5180f09ac3a23f3179f28af450fd2b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>CountyID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ab0338c54b8121125bbaeb9c5869c5f76" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aded64ada9e143a0b09bd7bd0bec9080d" prot="private" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>DeleteObjects</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae0224163b2b67fe12666e4f714fc8bb1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Description</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa55ec31240e98b62e78c3927d09d708d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>FieldAmount</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a79c7dac0d46ec2116fccc7a4f93517c1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>FileIds</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ac0e293b2c7012c4b3d72f4a755e10a86" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Files</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa70977142c5d84234deb75e98b3ff41f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>GetNotesString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a3e7d49a586c4752be5e9e526e14239f7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>HasFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1af43ecadebb20096d0028215e76b548ff" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4403116138569a29a0f4ecac178e19b2" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aac6fcba70b324a9fce6a24117810e89a" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>IsValidSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a43077cd7980106992122254cec4e4fe1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>JobNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ab9949a688d03d99663ebd98ef9e1e6d1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>LastUpdated</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40977c22f9c32d379e5533abfc28b254" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Location</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a22d2224beb5a36cee3e19ab6ade8fab5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>LocationID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abde3c92edd89cf0fd097a57143b6fe71" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>LotNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1abba9124fb1b346b8a05f702f8a52ff87" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Notes</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a4f85d91c3f7f0d55ffc796afe0bd601d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>NotesString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa18de2c789af62d80fdf16f9e1814f46" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>NumOfFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aba36824acabb0968bb829a3c30944b07" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>OfficeAmount</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a7e68ad9b94333954a19b1c001c4736a2" prot="private" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ParseIds</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1acd1c37716b54d7a9bda533bad0bc7645" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ParseNotes</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aa0ec1342f89a7bc148567de9cc78b889" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Realtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a31265f27234e05e8e84dded414d3ea69" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>RealtorID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a30aaa808d53de4f619a53ddb05d875dc" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>RemoveFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a3f973c9cd48e2fad39a621cbe0d27089" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>RemoveFileId</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aeb3181bfc80dcb500eb8ccdf35fce6ed" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>RemoveFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1aff9a67194697f79fdb3042d5a2155857" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>RemoveNote</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a2faf4ccaf184d8a7ee1f0eede406b2fb" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>SectionNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a520dbfc05e5dced562558c2fe7a562c7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>SetFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a9a7524192a1730139fd4c8e8387172ac" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>SetObjects</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a2f789626e4196634ae680ccb13c01c60" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Subdivision</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a5dc4e72f66ad6b16195e5323a9b4d672" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>SurveyName</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a7bcd57b8757fcefb1c1534771fadd5f7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>TitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a89577a0cae43c85cec649733681b45c8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>TitleCompanyID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1ae84fa85be87f3306921762441fce2c96" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a0e8ad5524df7904208627450bd732489" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>TotalFieldTime</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40ff9f9a1183e4625994f3152eaddff0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>TotalOfficeTime</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a967bd683c29d319a708acb96e8c2f40c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>Update</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_1a40846790c119abfe6244e16aa5688629" prot="private" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Survey</scope><name>UpdateObjects</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

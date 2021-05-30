@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" kind="interface" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::IInfoControl</compoundname>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.description.DescriptionCtl</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.locationInfo.LocationCtl</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1a9fa83baa76f11a6c760a1f7bc2889f25" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.IInfoControl.IsEdited</definition>
+        <argsstring></argsstring>
+        <name>IsEdited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs" line="6" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.IInfoControl.SaveInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SaveInfo</name>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl_1a412c624bf4c21192c32d4476dc6c66fd">SaveInfo</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a53fbba1488e0ead5bb0ee0c1540c3bc3">SaveInfo</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aeb586009f9d5cd8dbb6b6b2e752e17b7">SaveInfo</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl_1adbd6133602dad4951e39f7a5ba749d02">SaveInfo</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs" line="5" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SurveyManager.forms.surveyMenu.subdivisionInfo.SubdivisionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info_1_1_subdivision_ctl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SurveyManager.forms.surveyMenu.locationInfo.LocationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>SurveyManager.forms.surveyMenu.description.DescriptionCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs" line="3" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs" bodystart="4" bodyend="7"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1a9fa83baa76f11a6c760a1f7bc2889f25" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::IInfoControl</scope><name>IsEdited</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::IInfoControl</scope><name>SaveInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

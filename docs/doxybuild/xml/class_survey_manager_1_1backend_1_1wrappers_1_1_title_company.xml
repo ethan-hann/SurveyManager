@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::TitleCompany</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9eea61296f8014f3c1b24157d9fd96e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.TitleCompany.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="12" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9e27ee7611923652b5a164dd844111ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.TitleCompany.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="18" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1ab59229d198069f84f93d13fd72303ba2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.TitleCompany.AssociateName</definition>
+        <argsstring></argsstring>
+        <name>AssociateName</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="24" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9047c646054a7e02787fc39e9470a08e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.TitleCompany.AssociateEmail</definition>
+        <argsstring></argsstring>
+        <name>AssociateEmail</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8bc69815c2e4a5bcaf2e4c3166ee4776" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.TitleCompany.OfficeNumber</definition>
+        <argsstring></argsstring>
+        <name>OfficeNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="36" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8f0954b8eb5061d4fd155d24ac74a759" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.TitleCompany.IsValidCompany</definition>
+        <argsstring></argsstring>
+        <name>IsValidCompany</name>
+        <briefdescription>
+<para>Get a value indiciating if this is a valid <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A valid <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref> is one whose name, associate&apos;s name, and associate&apos;s email has length greater than 0 and is not equal to N/A.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="43" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="44" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af6b15604c666133c8049fbea4d28b056" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.TitleCompany.TitleCompany</definition>
+        <argsstring>()</argsstring>
+        <name>TitleCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="53" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a1c89d1d1d56ab2cf428b67e2f056c415" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.TitleCompany.TitleCompany</definition>
+        <argsstring>(int iD, string name, string associateName, string associateEmail, string officeNumber)</argsstring>
+        <name>TitleCompany</name>
+        <param>
+          <type>int</type>
+          <declname>iD</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>associateName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>associateEmail</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>officeNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="55" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1aef46bbfbcc57364625fa62b4073bf443" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.TitleCompany.TitleCompany</definition>
+        <argsstring>(string name, string associateName, string associateEmail, string officeNumber)</argsstring>
+        <name>TitleCompany</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>associateName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>associateEmail</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>officeNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="64" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1aad14b8035a79e1be1ee3c4e36ad92826" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.TitleCompany.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="72" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9ef5e1ad6e5b803f440fdee0dc80f2ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.TitleCompany.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="80" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="80" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a4a59cf6b20464a71961fb87e513755c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.TitleCompany.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="99" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af7c71c2deef8c85ce287c0ba24d17bb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.TitleCompany.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="104" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="104" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.TitleCompany</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.TitleCompany</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/TitleCompany.cs" bodystart="10" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9047c646054a7e02787fc39e9470a08e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>AssociateEmail</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1ab59229d198069f84f93d13fd72303ba2" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>AssociateName</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af7c71c2deef8c85ce287c0ba24d17bb1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9eea61296f8014f3c1b24157d9fd96e6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9ef5e1ad6e5b803f440fdee0dc80f2ea" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8f0954b8eb5061d4fd155d24ac74a759" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>IsValidCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9e27ee7611923652b5a164dd844111ce" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>Name</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a8bc69815c2e4a5bcaf2e4c3166ee4776" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>OfficeNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af6b15604c666133c8049fbea4d28b056" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>TitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a1c89d1d1d56ab2cf428b67e2f056c415" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>TitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1aef46bbfbcc57364625fa62b4073bf443" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>TitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1aad14b8035a79e1be1ee3c4e36ad92826" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a4a59cf6b20464a71961fb87e513755c0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::TitleCompany</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::County</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a550ddc7be94cf7a6de18e1a26c208e2b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.County.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="12" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a85ec4de75933998cf969835ef79e2e4f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.County.CountyName</definition>
+        <argsstring></argsstring>
+        <name>CountyName</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="18" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a9613acca3e710cf7b6cdb92533acaf76" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.County.IsValidCounty</definition>
+        <argsstring></argsstring>
+        <name>IsValidCounty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="20" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a2bb46c5f475dd6c282e2b7e44914e6ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.County.County</definition>
+        <argsstring>()</argsstring>
+        <name>County</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="28" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a9002588db62ec40eefcc0a5a0a32a498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.County.County</definition>
+        <argsstring>(int id, string name)</argsstring>
+        <name>County</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="30" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1acb5cd707071388ed590d37b7595dfc59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.County.County</definition>
+        <argsstring>(string name)</argsstring>
+        <name>County</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="36" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a5e41c3c695761d100797303c240d65f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.County.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="41" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a39636790289ff2d80c28e49458f8cf98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.County.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="46" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="46" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a3296cb46fcc1d0ff679d92f8c11ed210" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.County.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="68" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a8a41ac45533de8c2470c8194936d1882" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.County.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="73" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.County</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.County</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/County.cs" bodystart="10" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a2bb46c5f475dd6c282e2b7e44914e6ae" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>County</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a9002588db62ec40eefcc0a5a0a32a498" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>County</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1acb5cd707071388ed590d37b7595dfc59" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>County</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a85ec4de75933998cf969835ef79e2e4f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>CountyName</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a8a41ac45533de8c2470c8194936d1882" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a550ddc7be94cf7a6de18e1a26c208e2b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a39636790289ff2d80c28e49458f8cf98" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a9613acca3e710cf7b6cdb92533acaf76" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>IsValidCounty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a5e41c3c695761d100797303c240d65f5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a3296cb46fcc1d0ff679d92f8c11ed210" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::County</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

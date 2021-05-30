@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::DBArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1ae571c5aab299f95377233c5685e5132b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.utility.CEventArgs.DBArgs.ExceptionCode</definition>
+        <argsstring></argsstring>
+        <name>ExceptionCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="26" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1a337653b3a4149abd976e47b84a25fb3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.DBArgs.DBArgs</definition>
+        <argsstring>(int exCode)</argsstring>
+        <name>DBArgs</name>
+        <param>
+          <type>int</type>
+          <declname>exCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="28" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.DBArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.DBArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="24" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="25" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1a337653b3a4149abd976e47b84a25fb3e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBArgs</scope><name>DBArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args_1ae571c5aab299f95377233c5685e5132b" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBArgs</scope><name>ExceptionCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

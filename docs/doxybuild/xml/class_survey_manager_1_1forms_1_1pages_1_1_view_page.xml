@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1pages_1_1_view_page" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::pages::ViewPage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonPage</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_view_page_1aaf7f256a1d95c6ffcdcb17b37cb0e4ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.pages.ViewPage.ViewPage</definition>
+        <argsstring>(EntityTypes entity, string titleText, FilterDoneEventArgs args=null)</argsstring>
+        <name>ViewPage</name>
+        <param>
+          <type>EntityTypes</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>titleText</declname>
+        </param>
+        <param>
+          <type>FilterDoneEventArgs</type>
+          <declname>args</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" line="13" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" bodystart="13" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_view_page_1a688ef8df7abfd1c0cc4797a385515577" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.pages.ViewPage.UpdateMainFormStatus</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UpdateMainFormStatus</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" bodystart="30" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.ViewPage</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_view_page"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.ViewPage</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_view_page"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" line="11" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/ViewPage.cs" bodystart="12" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_view_page_1a688ef8df7abfd1c0cc4797a385515577" prot="private" virt="non-virtual"><scope>SurveyManager::forms::pages::ViewPage</scope><name>UpdateMainFormStatus</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_view_page_1aaf7f256a1d95c6ffcdcb17b37cb0e4ce" prot="public" virt="non-virtual"><scope>SurveyManager::forms::pages::ViewPage</scope><name>ViewPage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

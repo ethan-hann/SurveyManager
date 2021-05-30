@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1utility_1_1_icons" kind="namespace" language="C#">
+    <compoundname>SurveyManager::utility::Icons</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_list_manager" prot="public">SurveyManager::utility::Icons::IconListManager</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_reader" prot="public">SurveyManager::utility::Icons::IconReader</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_icons_1_1_shell32" prot="public">SurveyManager::utility::Icons::Shell32</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_icons_1_1_user32" prot="public">SurveyManager::utility::Icons::User32</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconListManager.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

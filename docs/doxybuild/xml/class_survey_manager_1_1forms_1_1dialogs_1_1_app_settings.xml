@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::AppSettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1ab2d442aad0cb3ea5b24a52fed0dab188" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; <ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" kindref="compound">ISettingsControl</ref> &gt;</type>
+        <definition>readonly List&lt;ISettingsControl&gt; SurveyManager.forms.dialogs.AppSettings.settingControls</definition>
+        <argsstring></argsstring>
+        <name>settingControls</name>
+        <initializer>= new List&lt;<ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" kindref="compound">ISettingsControl</ref>&gt;
+        {
+            new <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings" kindref="compound">CurrencySettings</ref>(), new <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings" kindref="compound">GeneralSettings</ref>(), new <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings" kindref="compound">EmailSettings</ref>(), new <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings" kindref="compound">FileSettings</ref>()
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="16" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a9ffa13746568ff597b579acc29b0c27a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.AppSettings.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a91bd25355fe6180314edff1028d7a686" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.dialogs.AppSettings.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="202" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a2fbdc47d4b5c24a0fa2209e73f802010" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTreeView</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTreeView SurveyManager.forms.dialogs.AppSettings.settingsTreeView</definition>
+        <argsstring></argsstring>
+        <name>settingsTreeView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="203" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1aece96ea4a5e294824f704e5774914d58" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.dialogs.AppSettings.controlContainer</definition>
+        <argsstring></argsstring>
+        <name>controlContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="204" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a202703ed6e0eab5ff144e65b303bdeaf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.dialogs.AppSettings.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="205" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a72711de23776c0b701046971e2851dff" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.dialogs.AppSettings.lblHelp</definition>
+        <argsstring></argsstring>
+        <name>lblHelp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="206" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a54b875814ad32bdb63a68d403f097d0c" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.dialogs.AppSettings.kryptonPanel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="207" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a716744b3b39e634d74cdb15eb1b2b4d6" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.AppSettings.btnSave</definition>
+        <argsstring></argsstring>
+        <name>btnSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="208" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1af2f18be1b5dca6fc269402749c4ac1bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.dialogs.AppSettings.tableLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="209" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a83679dfd29f3b476f5c5d0e51948f7d0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.AppSettings.btnToDefaults</definition>
+        <argsstring></argsstring>
+        <name>btnToDefaults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="210" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a8eebf525a9090d334e00b1333b856ca7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.AppSettings.AppSettings</definition>
+        <argsstring>()</argsstring>
+        <name>AppSettings</name>
+        <briefdescription>
+<para>Create an instance of the settings form that contains settings related to the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="24" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="24" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1afdba6d0465bc448fe05e7155093fb92a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.Settings_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Settings_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="35" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a4d48e99c32791730061fa6827fa7249d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.ChangeStatusText</definition>
+        <argsstring>(StatusArgs args)</argsstring>
+        <name>ChangeStatusText</name>
+        <param>
+          <type>StatusArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="41" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a000ad8679e41f3b6d434e50a07729912" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.settingsTreeView_AfterSelect</definition>
+        <argsstring>(object sender, TreeViewEventArgs e)</argsstring>
+        <name>settingsTreeView_AfterSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TreeViewEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fill the right side of the form with the correct UserControl based on the selected item in the tree view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="51" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a867e7329b35a286e71a0ca142787dc80" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.btnSave_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSave_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>All of the User controls that are considered setting screens implement the ISettingsControl interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through all of them that have been opened and calls the SaveSettings() method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="65" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a3bc41fc43060e26492d39253c7ef51cd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.btnToDefaults_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnToDefaults_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>All of the User controls that are considered setting screens implement the ISettingsControl interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through all of them that have been opened and calls the ToDefaults() method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="82" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="82" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a86e2d7f9379436d1b9d40a09c6295c25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AppSettings.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="30" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a8408d74656e994baad1b49f35ec93244" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.AppSettings.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AppSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AppSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" line="13" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/AppSettings.cs" bodystart="14" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a8eebf525a9090d334e00b1333b856ca7" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>AppSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a716744b3b39e634d74cdb15eb1b2b4d6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>btnSave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a867e7329b35a286e71a0ca142787dc80" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>btnSave_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a83679dfd29f3b476f5c5d0e51948f7d0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>btnToDefaults</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a3bc41fc43060e26492d39253c7ef51cd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>btnToDefaults_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a4d48e99c32791730061fa6827fa7249d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>ChangeStatusText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a9ffa13746568ff597b579acc29b0c27a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1aece96ea4a5e294824f704e5774914d58" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>controlContainer</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a8408d74656e994baad1b49f35ec93244" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a86e2d7f9379436d1b9d40a09c6295c25" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a54b875814ad32bdb63a68d403f097d0c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>kryptonPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a72711de23776c0b701046971e2851dff" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>lblHelp</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a91bd25355fe6180314edff1028d7a686" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>panel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1ab2d442aad0cb3ea5b24a52fed0dab188" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>settingControls</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1afdba6d0465bc448fe05e7155093fb92a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>Settings_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a2fbdc47d4b5c24a0fa2209e73f802010" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>settingsTreeView</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a000ad8679e41f3b6d434e50a07729912" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>settingsTreeView_AfterSelect</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1a202703ed6e0eab5ff144e65b303bdeaf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings_1af2f18be1b5dca6fc269402749c4ac1bc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AppSettings</scope><name>tableLayoutPanel1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

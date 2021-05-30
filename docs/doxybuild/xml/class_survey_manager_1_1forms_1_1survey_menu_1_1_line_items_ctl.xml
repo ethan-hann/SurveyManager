@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::LineItemsCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a8d8816a362454f58cf6f0b85670e355a" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref> &gt;</type>
+        <definition>List&lt;LineItem&gt; SurveyManager.forms.surveyMenu.LineItemsCtl.items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="14" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ac7023a43073afcb1c8fd3061e80643a5" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.LineItemsCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1af9fd68356cd928c13c5ee84e6fc1da79" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer SurveyManager.forms.surveyMenu.LineItemsCtl.kryptonSplitContainer1</definition>
+        <argsstring></argsstring>
+        <name>kryptonSplitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="196" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4a73c54a4980cf07c227cc76941410c1" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonListBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonListBox SurveyManager.forms.surveyMenu.LineItemsCtl.lbItems</definition>
+        <argsstring></argsstring>
+        <name>lbItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="197" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a313ccc37b0dac020e01d78011006ee6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid" kindref="compound">utility.CustomControls.CPropertyGrid</ref></type>
+        <definition>utility.CustomControls.CPropertyGrid SurveyManager.forms.surveyMenu.LineItemsCtl.propGrid</definition>
+        <argsstring></argsstring>
+        <name>propGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="198" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4a78765c83f75cda7f4d9c267de5bad3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.LineItemsCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="199" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a48d236dd6b4dcefc1ab3052de9eaaba9" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.LineItemsCtl.btnRemoveItem</definition>
+        <argsstring></argsstring>
+        <name>btnRemoveItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="200" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a3d334542da6a5188d7b024ed6bc91112" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.LineItemsCtl.btnAddItem</definition>
+        <argsstring></argsstring>
+        <name>btnAddItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="201" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4203201fb03e0cdbbdcf919b3a775bd9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.LineItemsCtl.statusStrip</definition>
+        <argsstring></argsstring>
+        <name>statusStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="202" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a7afd815dad3313b1434e5bfcd0d287b2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.LineItemsCtl.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="203" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ae1d4e5c375929ea0e61e5e4cb4a0f955" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.LineItemsCtl.lblSubTotal</definition>
+        <argsstring></argsstring>
+        <name>lblSubTotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="204" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a1c23a2fa16281ab95076fc91a9423468" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.surveyMenu.LineItemsCtl.hdrGroup</definition>
+        <argsstring></argsstring>
+        <name>hdrGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="205" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a89a8e22dab0c7c680fd8fd05048115e9" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.surveyMenu.LineItemsCtl.btnSaveUpdate</definition>
+        <argsstring></argsstring>
+        <name>btnSaveUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="206" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a54814352e92d06a20f77d77df714f636" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.surveyMenu.LineItemsCtl.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="16" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a5e116cd15bf7c0eba5c053d628db4067" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.LineItemsCtl.LineItemsCtl</definition>
+        <argsstring>(List&lt; LineItem &gt; items)</argsstring>
+        <name>LineItemsCtl</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref> &gt;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="18" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ad95b9c321087f466c35372d05beb2193" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.LineItemsCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>LineItemsCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="25" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="25" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1acb15b5613defac0a3b207328e0caffb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.lbItems_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lbItems_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="43" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a1395b0bcf8880166c464152305874429" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.btnAddItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="51" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="51" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ae55aa0ae59fab4bd438177a44cc601fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.btnRemoveItem_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRemoveItem_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="68" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="68" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1abb3a930b8260f788a40fcb64e73be79f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.UpdateSubTotal</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateSubTotal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="90" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a05726b06447a0982189bd599e3d44966" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.propGrid_PropertyValueChanged</definition>
+        <argsstring>(object s, PropertyValueChangedEventArgs e)</argsstring>
+        <name>propGrid_PropertyValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>PropertyValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="98" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a3c38e6a2ff39fc448fd32d12fcd358a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.btnSaveUpdate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSaveUpdate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="120" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="120" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a5ca4b96a4ff601f3264f9f4e3911a8ae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.SaveItems</definition>
+        <argsstring>()</argsstring>
+        <name>SaveItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="128" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="128" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1aa187be31f4cf7fdb4fc1aac1a14df260" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.LineItemsCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" line="17" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.Designer.cs" bodystart="17" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a0af8ff13aeeb56e495aa8a8f6230edab" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.LineItemsCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="107" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="107" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.LineItemsCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.LineItemsCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" line="12" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/LineItemsCtl.cs" bodystart="13" bodyend="140"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a3d334542da6a5188d7b024ed6bc91112" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnAddItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a1395b0bcf8880166c464152305874429" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnAddItem_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a48d236dd6b4dcefc1ab3052de9eaaba9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnRemoveItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ae55aa0ae59fab4bd438177a44cc601fd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnRemoveItem_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a89a8e22dab0c7c680fd8fd05048115e9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnSaveUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a3c38e6a2ff39fc448fd32d12fcd358a3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>btnSaveUpdate_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ac7023a43073afcb1c8fd3061e80643a5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a0af8ff13aeeb56e495aa8a8f6230edab" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4a78765c83f75cda7f4d9c267de5bad3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a1c23a2fa16281ab95076fc91a9423468" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>hdrGroup</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1aa187be31f4cf7fdb4fc1aac1a14df260" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a8d8816a362454f58cf6f0b85670e355a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>items</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1af9fd68356cd928c13c5ee84e6fc1da79" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>kryptonSplitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4a73c54a4980cf07c227cc76941410c1" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>lbItems</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1acb15b5613defac0a3b207328e0caffb9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>lbItems_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ae1d4e5c375929ea0e61e5e4cb4a0f955" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>lblSubTotal</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a5e116cd15bf7c0eba5c053d628db4067" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>LineItemsCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1ad95b9c321087f466c35372d05beb2193" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>LineItemsCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a313ccc37b0dac020e01d78011006ee6f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>propGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a05726b06447a0982189bd599e3d44966" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>propGrid_PropertyValueChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a5ca4b96a4ff601f3264f9f4e3911a8ae" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>SaveItems</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a4203201fb03e0cdbbdcf919b3a775bd9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>statusStrip</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a54814352e92d06a20f77d77df714f636" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1a7afd815dad3313b1434e5bfcd0d287b2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl_1abb3a930b8260f788a40fcb64e73be79f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::LineItemsCtl</scope><name>UpdateSubTotal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

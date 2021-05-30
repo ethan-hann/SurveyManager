@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::QueryRanArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1a4299092babf1eb4ad239af4720a4fcbe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.CEventArgs.QueryRanArgs.TableName</definition>
+        <argsstring></argsstring>
+        <name>TableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="68" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1ae26a3c2d9b2a1e74676a4400de4ef8d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.QueryRanArgs.QueryRanArgs</definition>
+        <argsstring>(string tableName)</argsstring>
+        <name>QueryRanArgs</name>
+        <param>
+          <type>string</type>
+          <declname>tableName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="70" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.QueryRanArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.QueryRanArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="66" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="67" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1ae26a3c2d9b2a1e74676a4400de4ef8d9" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::QueryRanArgs</scope><name>QueryRanArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args_1a4299092babf1eb4ad239af4720a4fcbe" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::QueryRanArgs</scope><name>TableName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

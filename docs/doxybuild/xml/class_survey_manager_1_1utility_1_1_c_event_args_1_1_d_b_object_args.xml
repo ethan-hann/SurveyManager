@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::DBObjectArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a1d2827c14b6b462a5060cd9256cae1ef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+        <definition>IDatabaseWrapper SurveyManager.utility.CEventArgs.DBObjectArgs.Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="36" column="37" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a4a8cea0e9a85fe23185c30f20ac6f780" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>EntityTypes</type>
+        <definition>EntityTypes SurveyManager.utility.CEventArgs.DBObjectArgs.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="37" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a4c3c9987da069812a78b82c91e3a9136" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.DBObjectArgs.DBObjectArgs</definition>
+        <argsstring>(IDatabaseWrapper obj, EntityTypes type)</argsstring>
+        <name>DBObjectArgs</name>
+        <param>
+          <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>EntityTypes</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="39" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="39" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.DBObjectArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.DBObjectArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="34" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="35" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a4c3c9987da069812a78b82c91e3a9136" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBObjectArgs</scope><name>DBObjectArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a1d2827c14b6b462a5060cd9256cae1ef" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBObjectArgs</scope><name>Object</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args_1a4a8cea0e9a85fe23185c30f20ac6f780" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::DBObjectArgs</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

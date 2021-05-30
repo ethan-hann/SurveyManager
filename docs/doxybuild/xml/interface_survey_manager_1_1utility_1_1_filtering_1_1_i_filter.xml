@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" kind="interface" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Filtering::IFilter</compoundname>
+    <derivedcompoundref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter" prot="public" virt="non-virtual">SurveyManager.utility.Filtering.ANDFilter</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter" prot="public" virt="non-virtual">SurveyManager.utility.Filtering.Filter</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter" prot="public" virt="non-virtual">SurveyManager.utility.Filtering.ORFilter</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter_1a2eaf6b7cb87c325191dc59466cc56428" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Filtering.IFilter.FilterString</definition>
+        <argsstring></argsstring>
+        <name>FilterString</name>
+        <briefdescription>
+<para>All implementing classes must implement this property to get their filter string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/IFilter.cs" line="11" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/IFilter.cs" bodystart="12" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interace for any class that is a <ref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter" kindref="compound">Filter</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SurveyManager.utility.Filtering.ANDFilter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SurveyManager.utility.Filtering.ORFilter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SurveyManager.utility.Filtering.Filter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.Filtering.IFilter</label>
+        <link refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter"/>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/IFilter.cs" line="6" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/IFilter.cs" bodystart="7" bodyend="15"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter_1a2eaf6b7cb87c325191dc59466cc56428" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Filtering::IFilter</scope><name>FilterString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::BillingItem</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1acfd2161b5d94da1d8c1afe2b06fa805b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.BillingItem.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+<para>The id representing this billing item in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="21" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aa219f9fba0df7eb51a03d5dbe94ce662" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.BillingItem.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+<para>A description of this billing item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a0d51adedae957e077a0a58dea7bc435b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+        <definition>Rate SurveyManager.backend.wrappers.BillingItem.FieldRate</definition>
+        <argsstring></argsstring>
+        <name>FieldRate</name>
+        <briefdescription>
+<para>The <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref> that should be associated with the Field time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="40" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a7cce3e6f7aeed1b34e67f32f4e382cc5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.BillingItem.FieldRateId</definition>
+        <argsstring></argsstring>
+        <name>FieldRateId</name>
+        <briefdescription>
+<para>The id in the database of the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a0d51adedae957e077a0a58dea7bc435b" kindref="member">FieldRate</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="46" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adf63d4618fdb01f7eee0c368afe4dfb7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+        <definition>Rate SurveyManager.backend.wrappers.BillingItem.OfficeRate</definition>
+        <argsstring></argsstring>
+        <name>OfficeRate</name>
+        <briefdescription>
+<para>The <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref> that should be associated with the Office time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="56" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2111ddf7d2870d09f0fc85b651143e8e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.BillingItem.OfficeRateId</definition>
+        <argsstring></argsstring>
+        <name>OfficeRateId</name>
+        <briefdescription>
+<para>The id in the database of the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adf63d4618fdb01f7eee0c368afe4dfb7" kindref="member">OfficeRate</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="62" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2069040f695b70278844aad64ef6d848" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan SurveyManager.backend.wrappers.BillingItem.FieldTime</definition>
+        <argsstring></argsstring>
+        <name>FieldTime</name>
+        <briefdescription>
+<para>The time entry for this billing item&apos;s field time. This is used in conjuction with the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a0d51adedae957e077a0a58dea7bc435b" kindref="member">FieldRate</ref> to determine the field bill. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="72" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2000e383de873c3566510ed923809cd1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan SurveyManager.backend.wrappers.BillingItem.OfficeTime</definition>
+        <argsstring></argsstring>
+        <name>OfficeTime</name>
+        <briefdescription>
+<para>The time entry for this billing item&apos;s office time. This is used in conjuction with the <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adf63d4618fdb01f7eee0c368afe4dfb7" kindref="member">OfficeRate</ref> to determine the office bill. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="82" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adbad44dfdade9947814288446c863049" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime SurveyManager.backend.wrappers.BillingItem.AssociatedDate</definition>
+        <argsstring></argsstring>
+        <name>AssociatedDate</name>
+        <initializer>= DateTime.Now</initializer>
+        <briefdescription>
+<para>The date this entry was created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="88" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ad8ea52465e5fd838c27b59a4baeeb9bf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.BillingItem.IsValidItem</definition>
+        <argsstring></argsstring>
+        <name>IsValidItem</name>
+        <briefdescription>
+<para>Checks the description, the field rate, and the office rate to ensure this is a valid billing item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="94" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="95" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a8b7ab2303e3516997da59a820cd5fa23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.BillingItem.BillingItem</definition>
+        <argsstring>()</argsstring>
+        <name>BillingItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="102" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a66eb6db3197b4bcae34372b3624f4426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.BillingItem.BillingItem</definition>
+        <argsstring>(int iD, string description, Rate fieldRate, int fieldRateId, Rate officeRate, int officeRateId, TimeSpan fieldTime, TimeSpan officeTime)</argsstring>
+        <name>BillingItem</name>
+        <param>
+          <type>int</type>
+          <declname>iD</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>fieldRate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fieldRateId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>officeRate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>officeRateId</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>fieldTime</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>officeTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="104" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="104" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ae134e641c6a02069f04b3f2d828374c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.BillingItem.BillingItem</definition>
+        <argsstring>(int iD, string description, Rate fieldRate, Rate officeRate, TimeSpan fieldTime, TimeSpan officeTime)</argsstring>
+        <name>BillingItem</name>
+        <param>
+          <type>int</type>
+          <declname>iD</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>fieldRate</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>officeRate</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>fieldTime</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>officeTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="116" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="116" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aeea0cade69bcdb67beaeb9d41935c447" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.BillingItem.BillingItem</definition>
+        <argsstring>(string description, Rate fieldRate, Rate officeRate)</argsstring>
+        <name>BillingItem</name>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>fieldRate</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>officeRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="126" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aee028983b96c14d09598a47224f61b3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.BillingItem.BillingItem</definition>
+        <argsstring>(string description, Rate fieldRate, Rate officeRate, TimeSpan fieldTime, TimeSpan officeTime)</argsstring>
+        <name>BillingItem</name>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>fieldRate</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>officeRate</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>fieldTime</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>officeTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="133" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a9a10504e4c46e2196bf86317e350e9bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.backend.wrappers.BillingItem.SetObjects</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjects</name>
+        <briefdescription>
+<para>Set this billing item&apos;s objects with those from the database based on the Ids. Each database operation runs on a seperate thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="142" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="142" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a1e997a6be12d1c5fea068f91ad4dd732" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.BillingItem.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="168" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ada0605bb7adcdab0a2f58f5f6b223553" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.BillingItem.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="173" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="173" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ac982f93f683c5327764eb3789a6e304e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.BillingItem.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="200" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a4981fccb9929a485caf070f45580509a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.BillingItem.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="205" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="205" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a single billing item for a survey job. A billing item has a field rate and time as well as an office rate and time. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>There is also an associated date that corresponds to when the entry was created.</para>
+<para>This class implements the <ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref> interface to facilitate easier database operations.</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.BillingItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.BillingItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" line="15" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/BillingItem.cs" bodystart="16" bodyend="209"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adbad44dfdade9947814288446c863049" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>AssociatedDate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a8b7ab2303e3516997da59a820cd5fa23" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>BillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a66eb6db3197b4bcae34372b3624f4426" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>BillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ae134e641c6a02069f04b3f2d828374c4" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>BillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aeea0cade69bcdb67beaeb9d41935c447" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>BillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aee028983b96c14d09598a47224f61b3e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>BillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a4981fccb9929a485caf070f45580509a" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1aa219f9fba0df7eb51a03d5dbe94ce662" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>Description</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a0d51adedae957e077a0a58dea7bc435b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>FieldRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a7cce3e6f7aeed1b34e67f32f4e382cc5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>FieldRateId</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2069040f695b70278844aad64ef6d848" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>FieldTime</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1acfd2161b5d94da1d8c1afe2b06fa805b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ada0605bb7adcdab0a2f58f5f6b223553" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ad8ea52465e5fd838c27b59a4baeeb9bf" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>IsValidItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1adf63d4618fdb01f7eee0c368afe4dfb7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>OfficeRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2111ddf7d2870d09f0fc85b651143e8e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>OfficeRateId</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a2000e383de873c3566510ed923809cd1" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>OfficeTime</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a9a10504e4c46e2196bf86317e350e9bc" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>SetObjects</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1a1e997a6be12d1c5fea068f91ad4dd732" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_billing_item_1ac982f93f683c5327764eb3789a6e304e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::BillingItem</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

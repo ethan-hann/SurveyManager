@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_drag_drop_info" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::DragDropInfo</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_drag_drop_info_1aece710d647fee29f7276e41fbc562ec4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+        <definition>IDatabaseWrapper SurveyManager.utility.DragDropInfo.Wrapper</definition>
+        <argsstring></argsstring>
+        <name>Wrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" line="7" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_drag_drop_info_1a6932e22ed1ebf3e739ad11d6080793b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.DragDropInfo.DragDropInfo</definition>
+        <argsstring>(IDatabaseWrapper wrapper)</argsstring>
+        <name>DragDropInfo</name>
+        <param>
+          <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" line="9" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" bodystart="9" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" line="5" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DragDropInfo.cs" bodystart="6" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_drag_drop_info_1a6932e22ed1ebf3e739ad11d6080793b6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DragDropInfo</scope><name>DragDropInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_drag_drop_info_1aece710d647fee29f7276e41fbc562ec4" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DragDropInfo</scope><name>Wrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

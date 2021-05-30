@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::DeleteMessageForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a95745e2fb6ea17b10aa4f5f447af9dfd" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.DeleteMessageForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ae122cab248a2a79b2c7596e5e6545bf0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer SurveyManager.forms.dialogs.DeleteMessageForm.kryptonSplitContainer1</definition>
+        <argsstring></argsstring>
+        <name>kryptonSplitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="205" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4c85961c97a5a79459614de704f3ed59" prot="package" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox SurveyManager.forms.dialogs.DeleteMessageForm.picImage</definition>
+        <argsstring></argsstring>
+        <name>picImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="198" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a9f9474aa5cfd260339be901844a85ad3" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel SurveyManager.forms.dialogs.DeleteMessageForm.lblText</definition>
+        <argsstring></argsstring>
+        <name>lblText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="199" column="65" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4e5ed35fbd955ebc1b68fcfdb7c5c0ef" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.dialogs.DeleteMessageForm.rtbMessage</definition>
+        <argsstring></argsstring>
+        <name>rtbMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="200" column="67" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a7afab83b749a6b8314677b09cfe7a7a2" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.DeleteMessageForm.btnYes</definition>
+        <argsstring></argsstring>
+        <name>btnYes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="201" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4e49a11754c1a01d0e04645b6d84f4ce" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.DeleteMessageForm.btnNo</definition>
+        <argsstring></argsstring>
+        <name>btnNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="202" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a7b206dec24087e4978e8f8ca50255151" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.DeleteMessageForm.btnCancel</definition>
+        <argsstring></argsstring>
+        <name>btnCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="203" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a1f1a43e78b3ef10abe01d842297d9b17" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.DeleteMessageForm.btnOK</definition>
+        <argsstring></argsstring>
+        <name>btnOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="204" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a27cf7f5f07b7274258c3931077d4c2ed" prot="package" static="no" mutable="no">
+        <type>System.Windows.Forms.ListView</type>
+        <definition>System.Windows.Forms.ListView SurveyManager.forms.dialogs.DeleteMessageForm.lvObjects</definition>
+        <argsstring></argsstring>
+        <name>lvObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="206" column="45" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a95b79a2d6987fdfcf8af372637108ff1" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel SurveyManager.forms.dialogs.DeleteMessageForm.lblListViewCaption</definition>
+        <argsstring></argsstring>
+        <name>lblListViewCaption</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="207" column="65" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ad3aade55ea10ad837fecb66589b7b63c" prot="package" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.DeleteMessageForm.DeleteMessageForm</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteMessageForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="9" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a766db0bb9784091d751d08bce612e33a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.DeleteMessageForm.btnYes_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnYes_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="11" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ac0867752f54136702f4784964fbfe025" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.DeleteMessageForm.btnNo_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNo_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="14" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ad812ce444af5e2dd7424b1bf495c2272" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.DeleteMessageForm.btnCancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnCancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="17" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a675bed50181b35f7f49beacff4d8ca01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.DeleteMessageForm.btnOK_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnOK_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="20" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a722ba3caa22b8129d2df4e5a1fac722e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.DeleteMessageForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="30" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1adf514df82d812ffc20cd1f14be6d4e6f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.DeleteMessageForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.DeleteMessageForm</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Toolkit</label>
+      </node>
+      <node id="4">
+        <label>System</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.DeleteMessageForm</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>btnCancel</edgelabel>
+          <edgelabel>btnNo</edgelabel>
+          <edgelabel>btnOK</edgelabel>
+          <edgelabel>btnYes</edgelabel>
+          <edgelabel>lblListViewCaption</edgelabel>
+          <edgelabel>lblText</edgelabel>
+          <edgelabel>rtbMessage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>lvObjects</edgelabel>
+          <edgelabel>picImage</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" line="7" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/DeleteMessageForm.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a7b206dec24087e4978e8f8ca50255151" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnCancel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ad812ce444af5e2dd7424b1bf495c2272" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnCancel_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4e49a11754c1a01d0e04645b6d84f4ce" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnNo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ac0867752f54136702f4784964fbfe025" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnNo_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a1f1a43e78b3ef10abe01d842297d9b17" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnOK</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a675bed50181b35f7f49beacff4d8ca01" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnOK_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a7afab83b749a6b8314677b09cfe7a7a2" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnYes</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a766db0bb9784091d751d08bce612e33a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>btnYes_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a95745e2fb6ea17b10aa4f5f447af9dfd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ad3aade55ea10ad837fecb66589b7b63c" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>DeleteMessageForm</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1adf514df82d812ffc20cd1f14be6d4e6f" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a722ba3caa22b8129d2df4e5a1fac722e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1ae122cab248a2a79b2c7596e5e6545bf0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>kryptonSplitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a95b79a2d6987fdfcf8af372637108ff1" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>lblListViewCaption</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a9f9474aa5cfd260339be901844a85ad3" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>lblText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a27cf7f5f07b7274258c3931077d4c2ed" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>lvObjects</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4c85961c97a5a79459614de704f3ed59" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>picImage</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form_1a4e5ed35fbd955ebc1b68fcfdb7c5c0ef" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::DeleteMessageForm</scope><name>rtbMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

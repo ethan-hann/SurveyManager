@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::dialogs::SettingsDialog</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings" prot="public">SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings" prot="public">SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings" prot="public">SurveyManager::forms::dialogs::SettingsDialog::FileSettings</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings" prot="public">SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</innerclass>
+    <innerclass refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" prot="public">SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

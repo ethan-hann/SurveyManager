@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_component_factory_1_1_krypton_1_1_docking" kind="namespace" language="C#">
+    <compoundname>ComponentFactory::Krypton::Docking</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/MainForm.cs" line="1" column="39"/>
+  </compounddef>
+</doxygen>

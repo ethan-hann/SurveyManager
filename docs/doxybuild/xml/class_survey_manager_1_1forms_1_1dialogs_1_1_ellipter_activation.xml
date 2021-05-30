@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::EllipterActivation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ac9d5210a8314eb99184fc414fa1cf569" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.dialogs.EllipterActivation.SettingsSaved</definition>
+        <argsstring></argsstring>
+        <name>SettingsSaved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" line="10" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ae3b41b4c3203b657d7aad0827378958e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.EllipterActivation.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a552db28e0ca15bc421ebb27cec2597bd" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.EllipterActivation.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="101" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a8fe5cf8022b35511bf5c03c9bda3e5a5" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.EllipterActivation.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="102" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1aa05d9607e25c1aeb3fd6cf7dd4ecffda" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.EllipterActivation.txtKey</definition>
+        <argsstring></argsstring>
+        <name>txtKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="103" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a6a54015e34eeaf1380fd721d86c76374" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.EllipterActivation.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="104" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a437f09ac91a3a3188f1ba877debdb773" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.dialogs.EllipterActivation.btnActivate</definition>
+        <argsstring></argsstring>
+        <name>btnActivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="105" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a8725e3f206f6c0ed58ddff5105ffa3b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.EllipterActivation.EllipterActivation</definition>
+        <argsstring>()</argsstring>
+        <name>EllipterActivation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" line="12" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ad35c60809fe9b5852c71fa683b294913" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.EllipterActivation.BtnActivate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnActivate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" line="19" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" bodystart="19" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a6e01843287ac5969c609a7d6dd11a261" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.EllipterActivation.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="30" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1af2c2e3dbc9f5651808724bf4de46fb3e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.EllipterActivation.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.EllipterActivation</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.EllipterActivation</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" line="8" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/EllipterActivation.cs" bodystart="9" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a437f09ac91a3a3188f1ba877debdb773" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>btnActivate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ad35c60809fe9b5852c71fa683b294913" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>BtnActivate_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ae3b41b4c3203b657d7aad0827378958e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1af2c2e3dbc9f5651808724bf4de46fb3e" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a8725e3f206f6c0ed58ddff5105ffa3b4" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>EllipterActivation</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a6e01843287ac5969c609a7d6dd11a261" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a552db28e0ca15bc421ebb27cec2597bd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a6a54015e34eeaf1380fd721d86c76374" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1ac9d5210a8314eb99184fc414fa1cf569" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>SettingsSaved</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1aa05d9607e25c1aeb3fd6cf7dd4ecffda" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>txtKey</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation_1a8fe5cf8022b35511bf5c03c9bda3e5a5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::EllipterActivation</scope><name>txtName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

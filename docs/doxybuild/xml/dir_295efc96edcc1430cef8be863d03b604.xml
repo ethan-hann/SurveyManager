@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_295efc96edcc1430cef8be863d03b604" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo</compoundname>
+    <innerfile refid="_location_ctl_8cs">LocationCtl.cs</innerfile>
+    <innerfile refid="_location_ctl_8_designer_8cs">LocationCtl.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/"/>
+  </compounddef>
+</doxygen>

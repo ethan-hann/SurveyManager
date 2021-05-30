@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o" kind="struct" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Icons::Shell32::SHFILEINFO</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1a60b75c52f5a3bed111baf345948ed280" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SurveyManager.utility.Icons.Shell32.SHFILEINFO.NAMESIZE</definition>
+        <argsstring></argsstring>
+        <name>NAMESIZE</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="182" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1ad7214c124bffb89fa53412baf623430b" prot="public" static="no" mutable="no">
+        <type>IntPtr</type>
+        <definition>IntPtr SurveyManager.utility.Icons.Shell32.SHFILEINFO.hIcon</definition>
+        <argsstring></argsstring>
+        <name>hIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="183" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1ada6fedfa517bd87c94e911c6b0602c74" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SurveyManager.utility.Icons.Shell32.SHFILEINFO.iIcon</definition>
+        <argsstring></argsstring>
+        <name>iIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="184" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1af6bd7ba01d43c1a2173176c79770279e" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint SurveyManager.utility.Icons.Shell32.SHFILEINFO.dwAttributes</definition>
+        <argsstring></argsstring>
+        <name>dwAttributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="185" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1af6a19b01f6f37d23629a4cfbdc09014d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Icons.Shell32.SHFILEINFO.szDisplayName</definition>
+        <argsstring></argsstring>
+        <name>szDisplayName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="187" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1a100ff6ee48f8a1edd40648e3b63143ba" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Icons.Shell32.SHFILEINFO.szTypeName</definition>
+        <argsstring></argsstring>
+        <name>szTypeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="189" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="180" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="181" bodyend="190"/>
+    <listofallmembers>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1af6bd7ba01d43c1a2173176c79770279e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>dwAttributes</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1ad7214c124bffb89fa53412baf623430b" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>hIcon</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1ada6fedfa517bd87c94e911c6b0602c74" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>iIcon</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1a60b75c52f5a3bed111baf345948ed280" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>NAMESIZE</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1af6a19b01f6f37d23629a4cfbdc09014d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>szDisplayName</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_f_i_l_e_i_n_f_o_1a100ff6ee48f8a1edd40648e3b63143ba" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHFILEINFO</scope><name>szTypeName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

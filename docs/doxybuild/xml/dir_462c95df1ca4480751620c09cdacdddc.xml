@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_462c95df1ca4480751620c09cdacdddc" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal</compoundname>
+    <innerfile refid="_billing_portal_ctl_8cs">BillingPortalCtl.cs</innerfile>
+    <innerfile refid="_billing_portal_ctl_8_designer_8cs">BillingPortalCtl.Designer.cs</innerfile>
+    <innerfile refid="_new_entry_dlg_8cs">NewEntryDlg.cs</innerfile>
+    <innerfile refid="_new_entry_dlg_8_designer_8cs">NewEntryDlg.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/"/>
+  </compounddef>
+</doxygen>

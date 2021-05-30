@@ -2,10 +2,12 @@
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.backend.wrappers
+namespace SurveyManager.backend.wrappers.SurveyJob
 {
     /// <summary>
-    /// Class to represents a single rate. A rate is what is used in billing to determine how much to bill.
+    /// This class represents a single rate.
+    /// <para>A rate is associated with a <see cref="BillingItem"/> and is used to determine how much to bill.</para>
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     [Serializable]

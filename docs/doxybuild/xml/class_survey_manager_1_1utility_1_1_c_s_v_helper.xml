@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_s_v_helper" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CSVHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a79b913fc16ef6879992ddacee561baec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.CSVHelper.CreateCSV</definition>
+        <argsstring>(DataTable dataTable, string filePath, string delimiter=&quot;,&quot;)</argsstring>
+        <name>CreateCSV</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dataTable</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>delimiter</declname>
+          <defval>&quot;,&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Creates a CSV file from the specified DataTable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DataTable to dump.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path with the file name the CSV file should be saved to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delimiter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional delimiter to seperate fields.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="16" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="16" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a17a84546479a40aa37e50d9c89fa034a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.CSVHelper.DumpTables</definition>
+        <argsstring>(List&lt; DataTable &gt; tables, string folderPath, string delimiter=&quot;,&quot;)</argsstring>
+        <name>DumpTables</name>
+        <param>
+          <type>List&lt; DataTable &gt;</type>
+          <declname>tables</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>folderPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>delimiter</declname>
+          <defval>&quot;,&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Dumps all data to CSV files from the specified list of data tables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The CSV filenames are the same as the table names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The List&lt;T&gt; of DataTables to dump.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folderPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the folder where the files should be saved.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delimiter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional delimiter to seperate fields.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="37" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="37" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" line="8" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CSVHelper.cs" bodystart="9" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a79b913fc16ef6879992ddacee561baec" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CSVHelper</scope><name>CreateCSV</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_s_v_helper_1a17a84546479a40aa37e50d9c89fa034a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CSVHelper</scope><name>DumpTables</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

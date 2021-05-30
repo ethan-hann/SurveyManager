@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_runtime_vars" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::RuntimeVars</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a4a910e12575df697bc03ea40fdcaff67" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_runtime_vars" kindref="compound">RuntimeVars</ref></type>
+        <definition>RuntimeVars SurveyManager.utility.RuntimeVars.instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="12" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ad34ecc4b4495d154547449717aa6c7a7" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object SurveyManager.utility.RuntimeVars.padlock</definition>
+        <argsstring></argsstring>
+        <name>padlock</name>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="13" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a7ce2d297913adbc4f735b6ef568756be" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_runtime_vars" kindref="compound">RuntimeVars</ref></type>
+        <definition>RuntimeVars SurveyManager.utility.RuntimeVars.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="17" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="18" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a24896cad39eecd99808d00dbe0c9aee4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.utility.RuntimeVars.NumberOfDBConnectionFormsOpen</definition>
+        <argsstring></argsstring>
+        <name>NumberOfDBConnectionFormsOpen</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Get a value indicating the number of database connection forms currently open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="33" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a058308f8ceab7b90c61dee13e610947c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.RuntimeVars.DatabaseConnected</definition>
+        <argsstring></argsstring>
+        <name>DatabaseConnected</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Get a value indicating if the database is currently connected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="38" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ad96bc07d256d22363998ca11dd07c752" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref> &gt;</type>
+        <definition>List&lt;County&gt; SurveyManager.utility.RuntimeVars.Counties</definition>
+        <argsstring></argsstring>
+        <name>Counties</name>
+        <briefdescription>
+<para>Get the list of supported counties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="43" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ae16060ffd1476f94369dcf1b61c39417" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.RuntimeVars.SelectedPageUniqueName</definition>
+        <argsstring></argsstring>
+        <name>SelectedPageUniqueName</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="45" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ae42a14e992d29a8ef97f4ac73903e334" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_logging_1_1_log_file" kindref="compound">LogFile</ref></type>
+        <definition>LogFile SurveyManager.utility.RuntimeVars.LogFile</definition>
+        <argsstring></argsstring>
+        <name>LogFile</name>
+        <briefdescription>
+<para>Get or set the applications log file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="50" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a3675d2172009309a14e782d9dcecf4ff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.RuntimeVars.IsLicensed</definition>
+        <argsstring></argsstring>
+        <name>IsLicensed</name>
+        <briefdescription>
+<para>Is the product licensed or not? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="55" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1ac29183e7636af82ca94e833f17854d86" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+        <definition>LicenseInfo SurveyManager.utility.RuntimeVars.License</definition>
+        <argsstring></argsstring>
+        <name>License</name>
+        <initializer>= LicenseInfo.CreateUnlicensedInfo()</initializer>
+        <briefdescription>
+<para>The information assocatied with the license. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="66" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1aa5d84ccd0a560c73c07fee0e7c807536" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.RuntimeVars.LicenseHolder</definition>
+        <argsstring></argsstring>
+        <name>LicenseHolder</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+<para>Get the name or company of the user for whom the license is valid for. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="71" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a63c687f4ed23d642222faa08f0954503" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1_main_form" kindref="compound">MainForm</ref></type>
+        <definition>MainForm SurveyManager.utility.RuntimeVars.MainForm</definition>
+        <argsstring></argsstring>
+        <name>MainForm</name>
+        <briefdescription>
+<para>Get a reference to the main form of the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="79" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="79" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a49260fe8f6a91351d87d8880d6ac988a" prot="public" static="no" mutable="no">
+        <type>TempFileCollection</type>
+        <definition>TempFileCollection SurveyManager.utility.RuntimeVars.TempFiles</definition>
+        <argsstring></argsstring>
+        <name>TempFiles</name>
+        <initializer>= new TempFileCollection(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="74" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_runtime_vars_1a57925103b23f0ca7adb90738f9725972" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.RuntimeVars.RuntimeVars</definition>
+        <argsstring>()</argsstring>
+        <name>RuntimeVars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="15" column="17" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/RuntimeVars.cs" bodystart="11" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ad96bc07d256d22363998ca11dd07c752" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>Counties</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a058308f8ceab7b90c61dee13e610947c" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>DatabaseConnected</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a4a910e12575df697bc03ea40fdcaff67" prot="private" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>instance</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a7ce2d297913adbc4f735b6ef568756be" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>Instance</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a3675d2172009309a14e782d9dcecf4ff" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>IsLicensed</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ac29183e7636af82ca94e833f17854d86" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>License</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1aa5d84ccd0a560c73c07fee0e7c807536" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>LicenseHolder</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ae42a14e992d29a8ef97f4ac73903e334" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>LogFile</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a63c687f4ed23d642222faa08f0954503" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>MainForm</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a24896cad39eecd99808d00dbe0c9aee4" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>NumberOfDBConnectionFormsOpen</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ad34ecc4b4495d154547449717aa6c7a7" prot="private" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>padlock</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a57925103b23f0ca7adb90738f9725972" prot="private" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>RuntimeVars</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1ae16060ffd1476f94369dcf1b61c39417" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>SelectedPageUniqueName</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_runtime_vars_1a49260fe8f6a91351d87d8880d6ac988a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::RuntimeVars</scope><name>TempFiles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

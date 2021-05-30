@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Licensing::LicenseInfo</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1adbb3c4221428a5c108f114242bc333f9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.LicenseInfo.CustomerName</definition>
+        <argsstring></argsstring>
+        <name>CustomerName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="15" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a559becd815947172a0952e2c9c43bebb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.LicenseInfo.CustomerEmail</definition>
+        <argsstring></argsstring>
+        <name>CustomerEmail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="20" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a99ccb6aafb03ac4bc37dabc48a4a35da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.LicenseInfo.NumberOfUses</definition>
+        <argsstring></argsstring>
+        <name>NumberOfUses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="25" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0e43fc02f8a18972cca97c9d7b95dbc4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.LicenseInfo.SerialID</definition>
+        <argsstring></argsstring>
+        <name>SerialID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1ac3b906788c8178438b41795c2e3281f9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime SurveyManager.utility.Licensing.LicenseInfo.PurchaseDate</definition>
+        <argsstring></argsstring>
+        <name>PurchaseDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="35" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1abb745af3c7323b469ea22fd7007d325c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime SurveyManager.utility.Licensing.LicenseInfo.ExpirationDate</definition>
+        <argsstring></argsstring>
+        <name>ExpirationDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="40" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a4bbf331b27fa7c834d9042c2e12c667e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546e" kindref="member">LicenseType</ref></type>
+        <definition>LicenseType SurveyManager.utility.Licensing.LicenseInfo.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="45" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1ae82519491ae0ba8d997f303c669e7821" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.Licensing.LicenseInfo.IsEmpty</definition>
+        <argsstring></argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="48" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="49" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a7a9d026474476d1250f694826f24af1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Licensing.LicenseInfo.LicenseInfo</definition>
+        <argsstring>(string customerName, string customerEmail, string numberOfUses, string serialID, LicenseType license)</argsstring>
+        <name>LicenseInfo</name>
+        <param>
+          <type>string</type>
+          <declname>customerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>customerEmail</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>numberOfUses</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>serialID</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546e" kindref="member">LicenseType</ref></type>
+          <declname>license</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="57" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="57" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0cd66815f35f26014b44357ffbded2c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Licensing.LicenseInfo.LicenseInfo</definition>
+        <argsstring>(string customerName, string customerEmail, string numberOfUses, string serialID, DateTime purchaseDate, DateTime expirationDate, LicenseType license)</argsstring>
+        <name>LicenseInfo</name>
+        <param>
+          <type>string</type>
+          <declname>customerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>customerEmail</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>numberOfUses</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>serialID</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>purchaseDate</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>expirationDate</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546e" kindref="member">LicenseType</ref></type>
+          <declname>license</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="69" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a05075082b0026b683ff49ec1521eff05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Licensing.LicenseInfo.LicenseInfo</definition>
+        <argsstring>(string customerName, string customerEmail, string numberOfUses, string serialID, DateTime purchaseDate, LicenseType license)</argsstring>
+        <name>LicenseInfo</name>
+        <param>
+          <type>string</type>
+          <declname>customerName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>customerEmail</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>numberOfUses</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>serialID</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>purchaseDate</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_survey_manager_1_1utility_1_1_licensing_1ae873a6f646fc4a0b337007bd3e45546e" kindref="member">LicenseType</ref></type>
+          <declname>license</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="75" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="75" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0eca6660e9b53f5fa6e5854870592283" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+        <definition>static LicenseInfo SurveyManager.utility.Licensing.LicenseInfo.CreateUnlicensedInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CreateUnlicensedInfo</name>
+        <briefdescription>
+<para>Get a license information object that represents an unlicensed product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="85" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="85" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the information associated with a product key. This class can also create an empty, unlicensed information object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseInfo.cs" bodystart="11" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0eca6660e9b53f5fa6e5854870592283" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>CreateUnlicensedInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a559becd815947172a0952e2c9c43bebb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>CustomerEmail</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1adbb3c4221428a5c108f114242bc333f9" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>CustomerName</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1abb745af3c7323b469ea22fd7007d325c" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>ExpirationDate</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1ae82519491ae0ba8d997f303c669e7821" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>IsEmpty</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a7a9d026474476d1250f694826f24af1e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>LicenseInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0cd66815f35f26014b44357ffbded2c1" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>LicenseInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a05075082b0026b683ff49ec1521eff05" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>LicenseInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a99ccb6aafb03ac4bc37dabc48a4a35da" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>NumberOfUses</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1ac3b906788c8178438b41795c2e3281f9" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>PurchaseDate</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a0e43fc02f8a18972cca97c9d7b95dbc4" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>SerialID</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info_1a4bbf331b27fa7c834d9042c2e12c667e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseInfo</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

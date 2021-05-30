@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.IInfoControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ab244b0c2da137dcef0f52fd76e9eb3dd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.IsEdited</definition>
+        <argsstring></argsstring>
+        <name>IsEdited</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="16" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aaeb52e87f4ac515de5f28618a4560c0a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a9cde702f2e0abbfea16cda7dc7581ba3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="205" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aff030dd9867dfe3fcce985a9c9634870" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.txtStreet</definition>
+        <argsstring></argsstring>
+        <name>txtStreet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="206" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a35ae446feda7e70df5c8305daa3dab05" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="207" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a91bacbabd346372429987ac697114d73" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="208" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a15b493110e15186bc4e13e63c4bb25cb" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.txtCity</definition>
+        <argsstring></argsstring>
+        <name>txtCity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="209" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ae2f62b3a6f66d54a9f28a0eb41ce78b7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="210" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a84fdfb956a7c778074465fe4a0d9b6a5" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="211" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a973ade663f188cb437fd4fafb8a85fc7" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.txtZipCode</definition>
+        <argsstring></argsstring>
+        <name>txtZipCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="212" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a64afbc66f42afef7a0138a53804040ab" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.flowLayoutPanel3</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="213" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a386a15f6f7fb5d56de6be09dc1ba3ac0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.kryptonLabel4</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="214" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a0f2effab6811372265736c51abdca1a6" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonComboBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonComboBox SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.cmbCounty</definition>
+        <argsstring></argsstring>
+        <name>cmbCounty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="215" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a2d948cd618213e6fc9bf94e177269462" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.flowLayoutPanel4</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="216" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a21707be7fca6a4d35a94633b0b877d81" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.btnSameAsClient</definition>
+        <argsstring></argsstring>
+        <name>btnSameAsClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="217" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1acfa859bc2f26de1bee78f650d3301cc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.LocationCtl</definition>
+        <argsstring>()</argsstring>
+        <name>LocationCtl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aeb586009f9d5cd8dbb6b6b2e752e17b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.SaveInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SaveInfo</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633">SaveInfo</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="115" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="115" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a948d6e835da1259389c8e22bc18be1b4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.LocationCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>LocationCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="23" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="23" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a527a73767b352dff764b967a849fbc08" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.textBox_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="57" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="57" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a548e8fc0732cd10b5c2e3290f7170eef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.textBox_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="70" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="70" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a36e5e9729ab8a75f756ea7b31929e718" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.btnSameAsClient_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSameAsClient_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="83" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ad5ffc47cb367f6a9790698b1d877799e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.txtZipCode_KeyPress</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>txtZipCode_KeyPress</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="97" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="97" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aa91e74dc85b79c21cf4ef1729659e3f6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.cmbCounty_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbCounty_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="109" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ab97048d64d7f0a682f2cfaaea9f2b67b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.JobModified</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>JobModified</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="142" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ad5a7244769db83d9e37ed7dfac420e9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.cmbCounty_DropDownClosed</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbCounty_DropDownClosed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="147" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a862fa7fc95fd15670b55adb718404e38" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="30" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a23efd1fc09ff0ff18976e6355e039c6e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.locationInfo.LocationCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.locationInfo.LocationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.locationInfo.LocationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" line="14" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/locationInfo/LocationCtl.cs" bodystart="15" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a21707be7fca6a4d35a94633b0b877d81" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>btnSameAsClient</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a36e5e9729ab8a75f756ea7b31929e718" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>btnSameAsClient_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a0f2effab6811372265736c51abdca1a6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>cmbCounty</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ad5a7244769db83d9e37ed7dfac420e9e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>cmbCounty_DropDownClosed</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aa91e74dc85b79c21cf4ef1729659e3f6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>cmbCounty_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aaeb52e87f4ac515de5f28618a4560c0a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a23efd1fc09ff0ff18976e6355e039c6e" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a35ae446feda7e70df5c8305daa3dab05" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ae2f62b3a6f66d54a9f28a0eb41ce78b7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a64afbc66f42afef7a0138a53804040ab" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>flowLayoutPanel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a2d948cd618213e6fc9bf94e177269462" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>flowLayoutPanel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a862fa7fc95fd15670b55adb718404e38" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ab244b0c2da137dcef0f52fd76e9eb3dd" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>IsEdited</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ab97048d64d7f0a682f2cfaaea9f2b67b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>JobModified</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a9cde702f2e0abbfea16cda7dc7581ba3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a91bacbabd346372429987ac697114d73" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a84fdfb956a7c778074465fe4a0d9b6a5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a386a15f6f7fb5d56de6be09dc1ba3ac0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>kryptonLabel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1acfa859bc2f26de1bee78f650d3301cc0" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>LocationCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a948d6e835da1259389c8e22bc18be1b4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>LocationCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aeb586009f9d5cd8dbb6b6b2e752e17b7" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>SaveInfo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a527a73767b352dff764b967a849fbc08" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>textBox_Enter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a548e8fc0732cd10b5c2e3290f7170eef" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>textBox_Leave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a15b493110e15186bc4e13e63c4bb25cb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>txtCity</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1aff030dd9867dfe3fcce985a9c9634870" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>txtStreet</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1a973ade663f188cb437fd4fafb8a85fc7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>txtZipCode</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1location_info_1_1_location_ctl_1ad5ffc47cb367f6a9790698b1d877799e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::locationInfo::LocationCtl</scope><name>txtZipCode_KeyPress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

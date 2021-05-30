@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_enum_extensions" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::EnumExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_enum_extensions_1a1d40866da2ab884247bc66c48f13a76d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.utility.EnumExtensions.ToDescriptionString</definition>
+        <argsstring>(this StatusText val)</argsstring>
+        <name>ToDescriptionString</name>
+        <param>
+          <type>this StatusText</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="486" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="486" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_enum_extensions_1a2f73ae825c345504036de9ae2bf1af00" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.utility.EnumExtensions.ToDescriptionString</definition>
+        <argsstring>(this DatabaseError val)</argsstring>
+        <name>ToDescriptionString</name>
+        <param>
+          <type>this DatabaseError</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="495" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="495" bodyend="502"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="484" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="485" bodyend="503"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_enum_extensions_1a1d40866da2ab884247bc66c48f13a76d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::EnumExtensions</scope><name>ToDescriptionString</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enum_extensions_1a2f73ae825c345504036de9ae2bf1af00" prot="public" virt="non-virtual"><scope>SurveyManager::utility::EnumExtensions</scope><name>ToDescriptionString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

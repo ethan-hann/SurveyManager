@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_utility" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Utility</compoundname>
+    <innerclass refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars" prot="public">SurveyManager::utility::Utility::TrimVars</innerclass>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a2d337df88ee9447644999cf871fb87b5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Bitmap</type>
+        <definition>static Bitmap SurveyManager.utility.Utility.ResizeImage</definition>
+        <argsstring>(Image image, int width, int height)</argsstring>
+        <name>ResizeImage</name>
+        <param>
+          <type>Image</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Resize the image to the specified width and height. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image to resize.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width to resize to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height to resize to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resized image.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="23" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="23" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a45e121cc502fc443b899e66ac8d237bb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.utility.Utility.FormatSize</definition>
+        <argsstring>(long bytes)</argsstring>
+        <name>FormatSize</name>
+        <param>
+          <type>long</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>Formats a number in bytes to the next closest size representation and appends its suffix to the end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a quick alternative to using the DGV.FileSizeFormatProvider class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bytes to format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number formatted with its suffix.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="54" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="54" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1abeade00483803e75f4c628875df7b5ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Point</type>
+        <definition>static Point SurveyManager.utility.Utility.GetCenterPoint</definition>
+        <argsstring>(Size clientSize)</argsstring>
+        <name>GetCenterPoint</name>
+        <param>
+          <type>Size</type>
+          <declname>clientSize</declname>
+        </param>
+        <briefdescription>
+<para>Get the center Point of the specified <emphasis>clientSize</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clientSize</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="73" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1aa4ebb2b6b52b80bb4be70bf215f72473" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.utility.Utility.ToFullString</definition>
+        <argsstring>(TimeSpan span)</argsstring>
+        <name>ToFullString</name>
+        <param>
+          <type>TimeSpan</type>
+          <declname>span</declname>
+        </param>
+        <briefdescription>
+<para>Converts a timespan object into a human readable string in the form of: x days, x hours, x minutes, x seconds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>span</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timespan to convert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string representing the timespan as words.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="84" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a605f88ed087e2e8cde73c4b931d048b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, List&lt; BillingItem &gt; &gt;</type>
+        <definition>static Dictionary&lt;string, List&lt;BillingItem&gt; &gt; SurveyManager.utility.Utility.CreateDictionary</definition>
+        <argsstring>(List&lt; BillingItem &gt; items)</argsstring>
+        <name>CreateDictionary</name>
+        <param>
+          <type>List&lt; BillingItem &gt;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Converts a list of billing items into a dictionary with the key being the date of the billing item and the value being a list of billing items for that date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="104" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="104" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a72b80ba668eb04e11cf71667e84ae98b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.utility.Utility.GetAppVersion</definition>
+        <argsstring>()</argsstring>
+        <name>GetAppVersion</name>
+        <briefdescription>
+<para>Get a string that represents this applications current version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A string representing the current version; or &quot;NONE&quot; if the version could not be determined.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="142" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="142" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1adaf0a4ec668e2b8cde592dc61158a264" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable SurveyManager.utility.Utility.ToTable&lt; T &gt;</definition>
+        <argsstring>(List&lt; T &gt; items, ItemType type, Dictionary&lt; DateTime, string &gt; dictItems=null)</argsstring>
+        <name>ToTable&lt; T &gt;</name>
+        <param>
+          <type>List&lt; T &gt;</type>
+          <declname>items</declname>
+        </param>
+        <param>
+          <type>ItemType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; DateTime, string &gt;</type>
+          <declname>dictItems</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="161" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="161" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1ac13f8fbbe6318cf5f9bf2682680f8705" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TimeSpan</type>
+        <definition>static TimeSpan SurveyManager.utility.Utility.ToTimeSpan</definition>
+        <argsstring>(DateTime date)</argsstring>
+        <name>ToTimeSpan</name>
+        <param>
+          <type>DateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+<para>Converts a DateTime object into a TimeSpan object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The date to convert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A TimeSpan representing the date.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="216" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="216" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1aa30e4778ae464d4825f1cea8288cf631" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double SurveyManager.utility.Utility.ToInches</definition>
+        <argsstring>(double pixels, double dpi=96)</argsstring>
+        <name>ToInches</name>
+        <param>
+          <type>double</type>
+          <declname>pixels</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dpi</declname>
+          <defval>96</defval>
+        </param>
+        <briefdescription>
+<para>Convert the specified number of pixels to its inches equivalent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assumes the DPI to be 96.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pixels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of pixels to convert from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dpi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pixel density to use in the conversion.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A double representing the number of inches equal to the number of pixels.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="232" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a2e2e5f0bc9682007e75ccd3cb961f2dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double SurveyManager.utility.Utility.ToPixels</definition>
+        <argsstring>(double inches, double dpi=96)</argsstring>
+        <name>ToPixels</name>
+        <param>
+          <type>double</type>
+          <declname>inches</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dpi</declname>
+          <defval>96</defval>
+        </param>
+        <briefdescription>
+<para>Convert the specified number of inches to its pixel equivalent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assumes the DPI to be 96.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inches</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of inches to convert from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dpi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pixel density to use in the conversion.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A double representing the number of pixels equal to the number of inches.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="244" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_utility_1a57318bc6b7abdeef4d32c7ea23915683" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars" kindref="compound">TrimVars</ref></type>
+        <definition>static TrimVars SurveyManager.utility.Utility.TrimString</definition>
+        <argsstring>(string text, int lineLength=80)</argsstring>
+        <name>TrimString</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lineLength</declname>
+          <defval>80</defval>
+        </param>
+        <briefdescription>
+<para>Trims the string to be the length specified before a new-line character is inserted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the new-line character would be inserted at the position of a period (.), the new line is inserted at the index of the period + 1.</para>
+<para>If the line being checked contains a new-line character already, nothing is done for that line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to trim.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lineLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters in the line. Default is 80.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars" kindref="compound">TrimVars</ref> structure containing the trimmed string and the number of new lines.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="258" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="258" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="14" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="15" bodyend="312"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a605f88ed087e2e8cde73c4b931d048b3" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>CreateDictionary</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a45e121cc502fc443b899e66ac8d237bb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>FormatSize</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a72b80ba668eb04e11cf71667e84ae98b" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>GetAppVersion</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1abeade00483803e75f4c628875df7b5ae" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>GetCenterPoint</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a2d337df88ee9447644999cf871fb87b5" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ResizeImage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1aa4ebb2b6b52b80bb4be70bf215f72473" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ToFullString</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1aa30e4778ae464d4825f1cea8288cf631" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ToInches</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a2e2e5f0bc9682007e75ccd3cb961f2dd" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ToPixels</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1adaf0a4ec668e2b8cde592dc61158a264" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ToTable&lt; T &gt;</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1ac13f8fbbe6318cf5f9bf2682680f8705" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>ToTimeSpan</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_utility_1a57318bc6b7abdeef4d32c7ea23915683" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility</scope><name>TrimString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -15,3 +15,4 @@ This documentation will explain the use and functionality of the application and
    more_help
    reference
    tutorials
+   code-reference/code_reference

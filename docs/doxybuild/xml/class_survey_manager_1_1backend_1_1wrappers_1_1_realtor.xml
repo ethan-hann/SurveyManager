@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::Realtor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ExpandableObjectConverter</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.IDatabaseWrapper</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a9cf4bb9014ccecc9d098d5666e1effe2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.Realtor.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="12" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aaaa59815398c9bed21d3b457d3986a2c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Realtor.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="18" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a708bcf8770f36914b25bbb49d21a9b26" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Realtor.CompanyName</definition>
+        <argsstring></argsstring>
+        <name>CompanyName</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="24" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aabaf6a1422f94bdc9e897226e84da20b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Realtor.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="30" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ab9931bac941d98614d3d0ff5f1cb1d89" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Realtor.PhoneNumber</definition>
+        <argsstring></argsstring>
+        <name>PhoneNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="36" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a6f24e8021566b6da339a5e153e0a700c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.wrappers.Realtor.FaxNumber</definition>
+        <argsstring></argsstring>
+        <name>FaxNumber</name>
+        <initializer>= &quot;N/A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="42" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aca0188f4a9ba3b70bf3cf11b90e76d93" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.backend.wrappers.Realtor.IsValidRealtor</definition>
+        <argsstring></argsstring>
+        <name>IsValidRealtor</name>
+        <briefdescription>
+<para>Get a value representing whether this <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> is valid or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A valid <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> is one whose name and email is not equal to N/A and also not an empty string.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="49" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="50" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ac1c6f612bc6782b6efdae46eb9a92ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Realtor.Realtor</definition>
+        <argsstring>()</argsstring>
+        <name>Realtor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="59" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ac05c39b067099ca382cbf281b02aa141" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Realtor.Realtor</definition>
+        <argsstring>(int iD, string name, string companyName, string email, string phoneNumber, string faxNumber)</argsstring>
+        <name>Realtor</name>
+        <param>
+          <type>int</type>
+          <declname>iD</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>companyName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>phoneNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>faxNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="61" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a751973dbefaec537fa212b35766b431e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.backend.wrappers.Realtor.Realtor</definition>
+        <argsstring>(string name, string companyName, string email, string phoneNumber, string faxNumber)</argsstring>
+        <name>Realtor</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>companyName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>phoneNumber</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>faxNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="71" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1afd5f8357e46523119df85ec481b0a389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.backend.wrappers.Realtor.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="80" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a8ce1b813053408118223097df276bdb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Realtor.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd">Insert</reimplements>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="88" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="88" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a1881b1eabcb37cc545f030499afb0547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Realtor.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8">Update</reimplements>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="107" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a3fbc65f4ac3a795306bdf9a44dca4315" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.Realtor.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplements refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7">Delete</reimplements>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="112" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="112" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Realtor</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="2">
+        <label>ExpandableObjectConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.Realtor</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/Realtor.cs" bodystart="10" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a708bcf8770f36914b25bbb49d21a9b26" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>CompanyName</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a3fbc65f4ac3a795306bdf9a44dca4315" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Delete</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aabaf6a1422f94bdc9e897226e84da20b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Email</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a6f24e8021566b6da339a5e153e0a700c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>FaxNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a9cf4bb9014ccecc9d098d5666e1effe2" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>ID</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a8ce1b813053408118223097df276bdb8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Insert</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aca0188f4a9ba3b70bf3cf11b90e76d93" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>IsValidRealtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1aaaa59815398c9bed21d3b457d3986a2c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Name</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ab9931bac941d98614d3d0ff5f1cb1d89" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>PhoneNumber</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ac1c6f612bc6782b6efdae46eb9a92ed7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Realtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1ac05c39b067099ca382cbf281b02aa141" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Realtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a751973dbefaec537fa212b35766b431e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Realtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1afd5f8357e46523119df85ec481b0a389" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>ToString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a1881b1eabcb37cc545f030499afb0547" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::Realtor</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

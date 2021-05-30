@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1_properties_1_1_settings" kind="class" language="C#" prot="package">
+    <compoundname>SurveyManager::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">global.SystemConfiguration.ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1_properties_1_1_settings_1a167a12bdbe025a28bbc1318efd291d99" prot="private" static="yes" mutable="no">
+        <type>Settings</type>
+        <definition>Settings SurveyManager.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="18" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a5b7084a157c8ae5f756c73ac17009419" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Settings</type>
+        <definition>Settings SurveyManager.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="20" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a2bf505da0c2f86012376e8c867d983a0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.ConnectionString</definition>
+        <argsstring></argsstring>
+        <name>ConnectionString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="29" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1ac0793c0f2f47a40da686fe0bf3845b7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.Properties.Settings.UpgradeRequired</definition>
+        <argsstring></argsstring>
+        <name>UpgradeRequired</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="41" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="41" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a6656bcc194a160809fdf08149b2c6656" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>global::System.Collections.Specialized.StringCollection</type>
+        <definition>global::System.Collections.Specialized.StringCollection SurveyManager.Properties.Settings.RecentJobs</definition>
+        <argsstring></argsstring>
+        <name>RecentJobs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="52" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a35567a387261dfd6152e58344fcd0235" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.LogFilePath</definition>
+        <argsstring></argsstring>
+        <name>LogFilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="64" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="64" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a5046de32a3ebb6842e9e1eacce41e645" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.DefaultSavePath</definition>
+        <argsstring></argsstring>
+        <name>DefaultSavePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="76" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="76" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1ac7de42495ac12c13d54537511f2240ac" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.ProductKey</definition>
+        <argsstring></argsstring>
+        <name>ProductKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="88" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="88" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1af9707dab088c9d24de3f7ae2b2abc9fb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.MailFromAddress</definition>
+        <argsstring></argsstring>
+        <name>MailFromAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="100" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1aaaa78e91b91a81ccb3106bc3ae2197ec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.MailServerUser</definition>
+        <argsstring></argsstring>
+        <name>MailServerUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="112" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="112" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a0421e823f213e1cee055d6952f7c3e01" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.MailServerPassword</definition>
+        <argsstring></argsstring>
+        <name>MailServerPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="124" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="124" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1ad243c71435877501bba162fd545d3ef0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.MailServerHost</definition>
+        <argsstring></argsstring>
+        <name>MailServerHost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="136" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="136" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1afcd08f634eedbdef457a7e7614bf82f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.Properties.Settings.MailServerPort</definition>
+        <argsstring></argsstring>
+        <name>MailServerPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="148" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="148" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1aee6a54f2db1a01f24293ff6c4ab7c2d7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal SurveyManager.Properties.Settings.DefaultFieldRate</definition>
+        <argsstring></argsstring>
+        <name>DefaultFieldRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="160" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="160" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1ac5aafca9a262ac0169cc6875f26da35e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal SurveyManager.Properties.Settings.DefaultOfficeRate</definition>
+        <argsstring></argsstring>
+        <name>DefaultOfficeRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="172" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="172" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a63c170ebd418bc552a220311c42cc8eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SurveyManager.Properties.Settings.DefaultTaxRate</definition>
+        <argsstring></argsstring>
+        <name>DefaultTaxRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="184" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="184" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a69bc7fd4ff12e1d6669e29fd20864214" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.Properties.Settings.OverwriteLogFile</definition>
+        <argsstring></argsstring>
+        <name>OverwriteLogFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="196" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="196" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a787ef450758dfd8dd596a514ddc69cbc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.Properties.Settings.LogAutoSaveInterval</definition>
+        <argsstring></argsstring>
+        <name>LogAutoSaveInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="208" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="208" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a41f02d88c17d09194662ddddf129e9e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.Properties.Settings.SurveyAutoSaveInterval</definition>
+        <argsstring></argsstring>
+        <name>SurveyAutoSaveInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="220" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="220" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a780bcdbdc56cf8c9a4f119039213b43b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.Properties.Settings.SurveyAutoSaveEnabled</definition>
+        <argsstring></argsstring>
+        <name>SurveyAutoSaveEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="232" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="232" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1af65eef849ddf7dfd66bca4d7a009ca31" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.SurveyJobPrefix</definition>
+        <argsstring></argsstring>
+        <name>SurveyJobPrefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="244" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="244" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1aa63364387e5ad47ac6eb54bd3781e5de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.Properties.Settings.DefaultJobPrefixEnabled</definition>
+        <argsstring></argsstring>
+        <name>DefaultJobPrefixEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="256" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="256" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a45bb119a1db88155fb2ff96848b9b5de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.DeveloperName</definition>
+        <argsstring></argsstring>
+        <name>DeveloperName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="268" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="268" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1_properties_1_1_settings_1a9bb7f28ec0954267da09cd20a6b12c18" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.Properties.Settings.DeveloperKey</definition>
+        <argsstring></argsstring>
+        <name>DeveloperKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="280" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="280" bodyend="287"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.Properties.Settings</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.Properties.Settings</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" line="16" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Properties/Settings.Designer.cs" bodystart="16" bodyend="288"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a2bf505da0c2f86012376e8c867d983a0" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>ConnectionString</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a5b7084a157c8ae5f756c73ac17009419" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>Default</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1aee6a54f2db1a01f24293ff6c4ab7c2d7" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DefaultFieldRate</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a167a12bdbe025a28bbc1318efd291d99" prot="private" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>defaultInstance</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1aa63364387e5ad47ac6eb54bd3781e5de" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DefaultJobPrefixEnabled</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1ac5aafca9a262ac0169cc6875f26da35e" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DefaultOfficeRate</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a5046de32a3ebb6842e9e1eacce41e645" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DefaultSavePath</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a63c170ebd418bc552a220311c42cc8eb" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DefaultTaxRate</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a9bb7f28ec0954267da09cd20a6b12c18" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DeveloperKey</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a45bb119a1db88155fb2ff96848b9b5de" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>DeveloperName</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a787ef450758dfd8dd596a514ddc69cbc" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>LogAutoSaveInterval</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a35567a387261dfd6152e58344fcd0235" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>LogFilePath</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1af9707dab088c9d24de3f7ae2b2abc9fb" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>MailFromAddress</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1ad243c71435877501bba162fd545d3ef0" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>MailServerHost</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a0421e823f213e1cee055d6952f7c3e01" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>MailServerPassword</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1afcd08f634eedbdef457a7e7614bf82f8" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>MailServerPort</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1aaaa78e91b91a81ccb3106bc3ae2197ec" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>MailServerUser</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a69bc7fd4ff12e1d6669e29fd20864214" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>OverwriteLogFile</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1ac7de42495ac12c13d54537511f2240ac" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>ProductKey</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a6656bcc194a160809fdf08149b2c6656" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>RecentJobs</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a780bcdbdc56cf8c9a4f119039213b43b" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>SurveyAutoSaveEnabled</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1a41f02d88c17d09194662ddddf129e9e0" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>SurveyAutoSaveInterval</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1af65eef849ddf7dfd66bca4d7a009ca31" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>SurveyJobPrefix</name></member>
+      <member refid="class_survey_manager_1_1_properties_1_1_settings_1ac0793c0f2f47a40da686fe0bf3845b7f" prot="public" virt="non-virtual"><scope>SurveyManager::Properties::Settings</scope><name>UpgradeRequired</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

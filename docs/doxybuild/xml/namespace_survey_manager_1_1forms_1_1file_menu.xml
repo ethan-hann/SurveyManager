@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1file_menu" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::fileMenu</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser" prot="public">SurveyManager::forms::fileMenu::FileBrowser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="16" column="1"/>
+  </compounddef>
+</doxygen>

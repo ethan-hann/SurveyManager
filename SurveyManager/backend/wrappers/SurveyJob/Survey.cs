@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.backend.wrappers
+namespace SurveyManager.backend.wrappers.SurveyJob
 {
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class Survey : ExpandableObjectConverter, IDatabaseWrapper

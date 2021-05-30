@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1utility" kind="namespace" language="C#">
+    <compoundname>SurveyManager::utility</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args" prot="public">SurveyManager::utility::CEventArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_file_type_converter" prot="public">SurveyManager::utility::CFileTypeConverter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_county_type_converter" prot="public">SurveyManager::utility::CountyTypeConverter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_s_v_helper" prot="public">SurveyManager::utility::CSVHelper</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_data_grid_view_setup" prot="public">SurveyManager::utility::DataGridViewSetup</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_d_b_map" prot="public">SurveyManager::utility::DBMap</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_drag_drop_info" prot="public">SurveyManager::utility::DragDropInfo</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_enums" prot="public">SurveyManager::utility::Enums</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_enum_extensions" prot="public">SurveyManager::utility::EnumExtensions</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_job_handler" prot="public">SurveyManager::utility::JobHandler</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_mail" prot="public">SurveyManager::utility::Mail</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_pair" prot="public">SurveyManager::utility::Pair</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_process_data_table" prot="public">SurveyManager::utility::ProcessDataTable</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_runtime_vars" prot="public">SurveyManager::utility::RuntimeVars</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_utility" prot="public">SurveyManager::utility::Utility</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_validator" prot="public">SurveyManager::utility::Validator</innerclass>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_custom_controls">SurveyManager::utility::CustomControls</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_filtering">SurveyManager::utility::Filtering</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_icons">SurveyManager::utility::Icons</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_licensing">SurveyManager::utility::Licensing</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_logging">SurveyManager::utility::Logging</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility_1_1_pdf_generation">SurveyManager::utility::PdfGeneration</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

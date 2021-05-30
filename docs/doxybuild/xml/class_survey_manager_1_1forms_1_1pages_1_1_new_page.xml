@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1pages_1_1_new_page" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::pages::NewPage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonPage</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_new_page_1a8878446486d4a6657aa9bc0b609c6ee8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.pages.NewPage.NewPage</definition>
+        <argsstring>(EntityTypes entity, IDatabaseWrapper o=null)</argsstring>
+        <name>NewPage</name>
+        <param>
+          <type>EntityTypes</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+          <declname>o</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" line="14" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" bodystart="14" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_new_page_1aec3f9ed51f11cf578ecdd6ff0435fbb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.pages.NewPage.UpdateMainFormStatus</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UpdateMainFormStatus</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" line="59" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" bodystart="59" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.NewPage</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_new_page"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.NewPage</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_new_page"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" line="12" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/NewPage.cs" bodystart="13" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_new_page_1a8878446486d4a6657aa9bc0b609c6ee8" prot="public" virt="non-virtual"><scope>SurveyManager::forms::pages::NewPage</scope><name>NewPage</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_new_page_1aec3f9ed51f11cf578ecdd6ff0435fbb9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::pages::NewPage</scope><name>UpdateMainFormStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

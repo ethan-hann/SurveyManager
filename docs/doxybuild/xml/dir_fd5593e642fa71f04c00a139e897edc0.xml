@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_fd5593e642fa71f04c00a139e897edc0" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs</compoundname>
+    <innerdir refid="dir_6879a2ba84fb018508c1309db04c8265">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog</innerdir>
+    <innerfile refid="_about_box_8cs">AboutBox.cs</innerfile>
+    <innerfile refid="_about_box_8_designer_8cs">AboutBox.Designer.cs</innerfile>
+    <innerfile refid="_activation_dlg_8cs">ActivationDlg.cs</innerfile>
+    <innerfile refid="_activation_dlg_8_designer_8cs">ActivationDlg.Designer.cs</innerfile>
+    <innerfile refid="_advanced_filter_8cs">AdvancedFilter.cs</innerfile>
+    <innerfile refid="_advanced_filter_8_designer_8cs">AdvancedFilter.Designer.cs</innerfile>
+    <innerfile refid="_c_message_box_8cs">CMessageBox.cs</innerfile>
+    <innerfile refid="_c_rich_msg_box_8cs">CRichMsgBox.cs</innerfile>
+    <innerfile refid="_delete_message_form_8cs">DeleteMessageForm.cs</innerfile>
+    <innerfile refid="_delete_message_form_8_designer_8cs">DeleteMessageForm.Designer.cs</innerfile>
+    <innerfile refid="_ellipter_activation_8cs">EllipterActivation.cs</innerfile>
+    <innerfile refid="_ellipter_activation_8_designer_8cs">EllipterActivation.Designer.cs</innerfile>
+    <innerfile refid="_message_form_8cs">MessageForm.cs</innerfile>
+    <innerfile refid="_message_form_8_designer_8cs">MessageForm.Designer.cs</innerfile>
+    <innerfile refid="_rich_message_form_8cs">RichMessageForm.cs</innerfile>
+    <innerfile refid="_rich_message_form_8_designer_8cs">RichMessageForm.Designer.cs</innerfile>
+    <innerfile refid="_save_message_form_8cs">SaveMessageForm.cs</innerfile>
+    <innerfile refid="_save_message_form_8_designer_8cs">SaveMessageForm.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/"/>
+  </compounddef>
+</doxygen>

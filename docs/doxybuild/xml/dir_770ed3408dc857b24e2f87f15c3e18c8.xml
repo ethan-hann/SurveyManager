@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_770ed3408dc857b24e2f87f15c3e18c8" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/obj</compoundname>
+    <innerdir refid="dir_a57222ea5aab87bc553bd0239bbe139a">D:/Documents/GitHub/SurveyManager/SurveyManager/obj/Debug</innerdir>
+    <innerdir refid="dir_a4f6a71ab8fc62856ea7d9fc1f809d05">D:/Documents/GitHub/SurveyManager/SurveyManager/obj/Release</innerdir>
+    <innerdir refid="dir_7aeb25903fefb0000827c25f2d85baaf">D:/Documents/GitHub/SurveyManager/SurveyManager/obj/x64</innerdir>
+    <innerdir refid="dir_c9c905c6affdadc8d5834f4edcd6aead">D:/Documents/GitHub/SurveyManager/SurveyManager/obj/x86</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/obj/"/>
+  </compounddef>
+</doxygen>

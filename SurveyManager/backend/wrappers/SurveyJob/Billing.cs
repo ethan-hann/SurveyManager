@@ -20,27 +20,48 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         private readonly List<BillingItem> items = new List<BillingItem>();
         private readonly List<LineItem> lineItems = new List<LineItem>();
 
+        /// <summary>
+        /// The id representing this billing object in the database.
+        /// </summary>
         [Browsable(false)]
         public int ID { get; set; } = 0;
 
+        /// <summary>
+        /// The string of comma seperated line item ids.
+        /// </summary>
         [Browsable(false)]
         public string LineItemIds { get; set; } = "N/A";
 
+        /// <summary>
+        /// The string of comma seperated billing item ids.
+        /// </summary>
         [Browsable(false)]
         public string BillingIds { get; set; } = "N/A";
 
         public Billing() { }
 
+        /// <summary>
+        /// Get a list of <see cref="BillingItem"/> objects associated with this <see cref="Billing"/> object.
+        /// </summary>
+        /// <returns>A list of BillingItems.</returns>
         public List<BillingItem> GetBillingItems()
         {
             return items;
         }
 
+        /// <summary>
+        /// Get a list of <see cref="LineItem"/> objects associated with this <see cref="Billing"/> object.
+        /// </summary>
+        /// <returns></returns>
         public List<LineItem> GetLineItems()
         {
             return lineItems;
         }
 
+
+        /// <summary>
+        /// Set this <see cref="Billing"/> object's associated objects based on the ids in <see cref="BillingIds"/> and <see cref="LineItemIds"/>.
+        /// </summary>
         public void SetObjects()
         {
             if (!BillingIds.Equals("N/A"))
@@ -100,6 +121,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return str.ToString();
         }
 
+        /// <summary>
+        /// Get the line item ids as a comma seperated list of ids.
+        /// </summary>
+        /// <returns>A comma seperated list of line item ids.</returns>
         public string GetLineItemIds()
         {
             StringBuilder str = new StringBuilder();
@@ -111,11 +136,20 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return str.ToString();
         }
 
+        /// <summary>
+        /// Add a new <see cref="LineItem"/> to this <see cref="Billing"/> object's internal list.
+        /// </summary>
+        /// <param name="item">The line item to add.</param>
         public void AddLineItem(LineItem item)
         {
             lineItems.Add(item);
         }
 
+        /// <summary>
+        /// Add a collection of <see cref="LineItem"/> objects to this <see cref="Billing"/> object.
+        /// </summary>
+        /// <param name="lItems">The collection of items to add.</param>
+        /// <param name="clearListFirst">Should the internal list be cleared first?</param>
         public void AddLineItemsRange(ICollection<LineItem> lItems, bool clearListFirst)
         {
             if (clearListFirst)
@@ -124,12 +158,20 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             lineItems.AddRange(lItems);
         }
 
+        /// <summary>
+        /// Remove, if it exists, a line item from this <see cref="Billing"/> object's internal list.
+        /// </summary>
+        /// <param name="item"></param>
         public void RemoveLineItem(LineItem item)
         {
             if (lineItems.Contains(item))
                 lineItems.Remove(item);
         }
 
+        /// <summary>
+        /// Add, if not already present, a line item id to the <see cref="LineItemIds"/> string.
+        /// </summary>
+        /// <param name="id">The id to add.</param>
         public void AddLineItemID(int id)
         {
             if (LineItemIds.Equals("N/A"))
@@ -143,6 +185,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             LineItemIds = str.ToString().Trim();
         }
 
+        /// <summary>
+        /// Remove, if it exists, a line item id from the <see cref="LineItemIds"/> string.
+        /// </summary>
+        /// <param name="id">The id to remove.</param>
         public void RemoveLineItemID(int id)
         {
             StringBuilder str = new StringBuilder(LineItemIds);
@@ -152,11 +198,20 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 LineItemIds = "N/A";
         }
 
+        /// <summary>
+        /// Add a new <see cref="BillingItem"/> to this <see cref="Billing"/> object's internal list.
+        /// </summary>
+        /// <param name="item">The billing item to add.</param>
         public void AddBilling(BillingItem item)
         {
             items.Add(item);
         }
 
+        /// <summary>
+        /// Add a collection of <see cref="BillingItem"/> objects to this <see cref="Billing"/> object.
+        /// </summary>
+        /// <param name="billingItems">The collection of items to add.</param>
+        /// <param name="clearListFirst">Should the internal list be cleared first?</param>
         public void AddBillingRange(ICollection<BillingItem> billingItems, bool clearListFirst)
         {
             if (clearListFirst)
@@ -165,12 +220,20 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             items.AddRange(billingItems);
         }
 
+        /// <summary>
+        /// Remove, if it exists, a billing item from this <see cref="Billing"/> object's internal list.
+        /// </summary>
+        /// <param name="item">The item to remove.</param>
         public void RemoveBilling(BillingItem item)
         {
             if (items.Contains(item))
                 items.Remove(item);
         }
 
+        /// <summary>
+        /// Add, if not already present, a billing item id to the <see cref="BillingIds"/> string.
+        /// </summary>
+        /// <param name="id">The id to add.</param>
         public void AddBillingID(int id)
         {
             if (BillingIds.Equals("N/A"))
@@ -183,6 +246,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             BillingIds = str.ToString().Trim();
         }
 
+        /// <summary>
+        /// Remove, if it exists, a billing item id from the <see cref="BillingIds"/> string.
+        /// </summary>
+        /// <param name="id">The id to remove.</param>
         public void RemoveBillingId(int id)
         {
             StringBuilder str = new StringBuilder(BillingIds);
@@ -192,16 +259,28 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 BillingIds = "N/A";
         }
 
+        /// <summary>
+        /// Get the total field time spent on this job based on the list of <see cref="BillingItem"/>s.
+        /// </summary>
+        /// <returns>A <see cref="TimeSpan"/> representing the total field time.</returns>
         public TimeSpan GetTotalFieldTime()
         {
             return TimeSpan.FromTicks(items.Sum(b => b.FieldTime.Ticks));
         }
 
+        /// <summary>
+        /// Get the total office time spent on this job based on the list of <see cref="BillingItem"/>s.
+        /// </summary>
+        /// <returns>A <see cref="TimeSpan"/> representing the total office time.</returns>
         public TimeSpan GetTotalOfficeTime()
         {
             return TimeSpan.FromTicks(items.Sum(b => b.OfficeTime.Ticks));
         }
 
+        /// <summary>
+        /// Get the total time spent on this job based on the list of <see cref="BillingItem"/>s.
+        /// </summary>
+        /// <returns>A <see cref="TimeSpan"/> representing the total time.</returns>
         public TimeSpan GetTotalTime()
         {
             return GetTotalFieldTime() + GetTotalOfficeTime();
@@ -277,6 +356,10 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             return total;
         }
 
+        /// <summary>
+        /// Get the total bill amount for the <see cref="LineItem"/>s.
+        /// </summary>
+        /// <returns>The total line items bill.</returns>
         public decimal GetBillingLineItemsBill()
         {
             return lineItems.Sum(l => l.SubTotal);

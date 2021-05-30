@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Filtering::ORFilter</compoundname>
+    <basecompoundref refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" prot="public" virt="non-virtual">SurveyManager.utility.Filtering.IFilter</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1af41497e64c61c97112016d5fbc7a030b" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list" kindref="compound">FilterExpressionList</ref></type>
+        <definition>readonly FilterExpressionList SurveyManager.utility.Filtering.ORFilter.m_filterExpressionList</definition>
+        <argsstring></argsstring>
+        <name>m_filterExpressionList</name>
+        <initializer>= new <ref refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list" kindref="compound">FilterExpressionList</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" line="11" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1aecb175b33895d9c40037123af56f1fc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Filtering.ORFilter.FilterString</definition>
+        <argsstring></argsstring>
+        <name>FilterString</name>
+        <briefdescription>
+<para>Get the filter string for this statement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" line="27" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" bodystart="28" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1a3f3241b02f90cd5fdadb06ff10a3cfa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Filtering.ORFilter.ORFilter</definition>
+        <argsstring>(IFilter filterExpressionLeft, IFilter filterExpressionRight)</argsstring>
+        <name>ORFilter</name>
+        <param>
+          <type><ref refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" kindref="compound">IFilter</ref></type>
+          <declname>filterExpressionLeft</declname>
+        </param>
+        <param>
+          <type><ref refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" kindref="compound">IFilter</ref></type>
+          <declname>filterExpressionRight</declname>
+        </param>
+        <briefdescription>
+<para>Create a new OR filter statement. The left and right hand sides of the supplied statements are conjoined with an OR between them. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filterExpressionLeft</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left hand side of the statement.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filterExpressionRight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right hand side of the statement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" bodystart="18" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents an OR boolean filter statement. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IFilter</label>
+        <link refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.Filtering.ORFilter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IFilter</label>
+        <link refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.Filtering.ORFilter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ORFilter.cs" bodystart="10" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1aecb175b33895d9c40037123af56f1fc6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Filtering::ORFilter</scope><name>FilterString</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1af41497e64c61c97112016d5fbc7a030b" prot="private" virt="non-virtual"><scope>SurveyManager::utility::Filtering::ORFilter</scope><name>m_filterExpressionList</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter_1a3f3241b02f90cd5fdadb06ff10a3cfa1" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Filtering::ORFilter</scope><name>ORFilter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::CMessageBox</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box_1a23153b0d16ddcc372add379efdfd4644" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DialogResult</type>
+        <definition>static DialogResult SurveyManager.forms.dialogs.CMessageBox.Show</definition>
+        <argsstring>(string text, string caption, MessageBoxButtons buttons, Image image)</argsstring>
+        <name>Show</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>MessageBoxButtons</type>
+          <declname>buttons</declname>
+        </param>
+        <param>
+          <type>Image</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Creates a custom MessageBox popup </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The body text of the popup</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The caption (title) of the popup</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buttons</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MessageBoxButtons this popup should contain </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An image to display left of the body text; Valid sizes for the image are from 0 to 64</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" line="21" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" bodystart="21" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box_1ae065089d5c8ba846eb9cd357e0f9cd97" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ExitChoice</type>
+        <definition>static ExitChoice SurveyManager.forms.dialogs.CMessageBox.ShowExitDialog</definition>
+        <argsstring>(string text, string caption, MessageBoxButtons buttons, Image image, bool hideExitOption=false, bool isOpeningOtherJob=true)</argsstring>
+        <name>ShowExitDialog</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>MessageBoxButtons</type>
+          <declname>buttons</declname>
+        </param>
+        <param>
+          <type>Image</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hideExitOption</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isOpeningOtherJob</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" line="82" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" bodystart="82" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class to create custom message boxes; functions similar to the standard MessageBox class, except an Image can be used. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" line="11" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/CMessageBox.cs" bodystart="12" bodyend="176"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box_1a23153b0d16ddcc372add379efdfd4644" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::CMessageBox</scope><name>Show</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box_1ae065089d5c8ba846eb9cd357e0f9cd97" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::CMessageBox</scope><name>ShowExitDialog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

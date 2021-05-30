@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_args" prot="public">SurveyManager::utility::CEventArgs::DBArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_d_b_object_args" prot="public">SurveyManager::utility::CEventArgs::DBObjectArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args" prot="public">SurveyManager::utility::CEventArgs::FileUploadDoneArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_filter_done_event_args" prot="public">SurveyManager::utility::CEventArgs::FilterDoneEventArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_licensing_event_args" prot="public">SurveyManager::utility::CEventArgs::LicensingEventArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args" prot="public">SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_query_ran_args" prot="public">SurveyManager::utility::CEventArgs::QueryRanArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args" prot="public">SurveyManager::utility::CEventArgs::StatusArgs</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_survey_opened_event_args" prot="public">SurveyManager::utility::CEventArgs::SurveyOpenedEventArgs</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="11" bodyend="109"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

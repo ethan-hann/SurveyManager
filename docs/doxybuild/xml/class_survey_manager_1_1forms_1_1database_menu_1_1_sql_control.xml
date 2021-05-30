@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::databaseMenu::SqlControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a6feb92d681f4ae2821193edf41ce5d5a" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.databaseMenu.SqlControl.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="12" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a020e2abbb509e72327e4b1eda5211fb2" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.databaseMenu.SqlControl.QueryRan</definition>
+        <argsstring></argsstring>
+        <name>QueryRan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="14" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a0e1fc7f9444879d3405f67d65613b85a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.databaseMenu.SqlControl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a1881b162a00e46c273d66b4f178a2e90" prot="private" static="no" mutable="no">
+        <type>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid</type>
+        <definition>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid SurveyManager.forms.databaseMenu.SqlControl.resultsGrid</definition>
+        <argsstring></argsstring>
+        <name>resultsGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="128" column="79" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a76bf02930a2881c6164ba423c4ea4052" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.databaseMenu.SqlControl.kryptonHeaderGroup1</definition>
+        <argsstring></argsstring>
+        <name>kryptonHeaderGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="129" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a8b72dc0d5dd5496ee7112bf580623ddf" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.databaseMenu.SqlControl.btnExecuteQuery</definition>
+        <argsstring></argsstring>
+        <name>btnExecuteQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="130" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1aef2c69366fc596d540a3320ec8e7b568" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.databaseMenu.SqlControl.btnSqlHelp</definition>
+        <argsstring></argsstring>
+        <name>btnSqlHelp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="131" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1ae13dd4f67854764378b80a2351a6dbd9" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.databaseMenu.SqlControl.txtQuery</definition>
+        <argsstring></argsstring>
+        <name>txtQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="132" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1aef03f9c036750830ce4ec9a9a278f0fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.databaseMenu.SqlControl.SqlControl</definition>
+        <argsstring>()</argsstring>
+        <name>SqlControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="16" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a28e3b8d63ff2a85ee2cdb7fde2b4d99f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.SqlControl.btnExecuteQuery_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnExecuteQuery_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="21" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a70529b5c95abcf438d8d0c9712ce1bd7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.SqlControl.btnSqlHelp_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSqlHelp_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="36" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a24b60a3f300c5308f1571247edf167b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.SqlControl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="30" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a253018952cadb90de04749ca98967275" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.databaseMenu.SqlControl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.databaseMenu.SqlControl</label>
+        <link refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.databaseMenu.SqlControl</label>
+        <link refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" line="10" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/SqlControl.cs" bodystart="11" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a8b72dc0d5dd5496ee7112bf580623ddf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>btnExecuteQuery</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a28e3b8d63ff2a85ee2cdb7fde2b4d99f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>btnExecuteQuery_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1aef2c69366fc596d540a3320ec8e7b568" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>btnSqlHelp</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a70529b5c95abcf438d8d0c9712ce1bd7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>btnSqlHelp_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a0e1fc7f9444879d3405f67d65613b85a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a253018952cadb90de04749ca98967275" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a24b60a3f300c5308f1571247edf167b0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a76bf02930a2881c6164ba423c4ea4052" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>kryptonHeaderGroup1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a020e2abbb509e72327e4b1eda5211fb2" prot="public" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>QueryRan</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a1881b162a00e46c273d66b4f178a2e90" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>resultsGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1aef03f9c036750830ce4ec9a9a278f0fc" prot="public" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>SqlControl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1a6feb92d681f4ae2821193edf41ce5d5a" prot="public" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control_1ae13dd4f67854764378b80a2351a6dbd9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::SqlControl</scope><name>txtQuery</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

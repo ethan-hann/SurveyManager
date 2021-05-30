@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::FileUploadDoneArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args_1aba68c7f697c5bf26724e2568b51f4ec2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+        <definition>List&lt;CFile&gt; SurveyManager.utility.CEventArgs.FileUploadDoneArgs.Files</definition>
+        <argsstring></argsstring>
+        <name>Files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="78" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args_1a0d8d6addd67d2a02be0257a893da8c82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.FileUploadDoneArgs.FileUploadDoneArgs</definition>
+        <argsstring>(List&lt; CFile &gt; files)</argsstring>
+        <name>FileUploadDoneArgs</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>files</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="80" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.FileUploadDoneArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.FileUploadDoneArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="76" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="77" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args_1aba68c7f697c5bf26724e2568b51f4ec2" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::FileUploadDoneArgs</scope><name>Files</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_file_upload_done_args_1a0d8d6addd67d2a02be0257a893da8c82" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::FileUploadDoneArgs</scope><name>FileUploadDoneArgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

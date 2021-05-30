@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::StatusArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args_1a618d7daba4a34cbac1d87779899826dc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.CEventArgs.StatusArgs.StatusString</definition>
+        <argsstring></argsstring>
+        <name>StatusString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="48" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args_1abe3891d4059e566ec04a79593567c59a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.StatusArgs.StatusArgs</definition>
+        <argsstring>(string status)</argsstring>
+        <name>StatusArgs</name>
+        <param>
+          <type>string</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="50" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.StatusArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.StatusArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="46" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="47" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args_1abe3891d4059e566ec04a79593567c59a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::StatusArgs</scope><name>StatusArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_status_args_1a618d7daba4a34cbac1d87779899826dc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::StatusArgs</scope><name>StatusString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

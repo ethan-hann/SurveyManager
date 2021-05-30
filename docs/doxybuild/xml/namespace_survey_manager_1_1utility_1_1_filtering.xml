@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1utility_1_1_filtering" kind="namespace" language="C#">
+    <compoundname>SurveyManager::utility::Filtering</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_a_n_d_filter" prot="public">SurveyManager::utility::Filtering::ANDFilter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter" prot="public">SurveyManager::utility::Filtering::Filter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_filter_expression_list" prot="public">SurveyManager::utility::Filtering::FilterExpressionList</innerclass>
+    <innerclass refid="interface_survey_manager_1_1utility_1_1_filtering_1_1_i_filter" prot="public">SurveyManager::utility::Filtering::IFilter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_o_r_filter" prot="public">SurveyManager::utility::Filtering::ORFilter</innerclass>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter" prot="public">SurveyManager::utility::Filtering::TextSearchFilter</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>SqlOperators</name>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba8768a6821cd735aea4f5b0df88c1fc6a" prot="public">
+          <name>Greater</name>
+          <briefdescription>
+<para>&gt; - The column value is greater than the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba1cfdf0e8d0c87a228c1f40d9bee7888b" prot="public">
+          <name>Less</name>
+          <briefdescription>
+<para>&lt; - The column value is less than the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba0ccb67e7eaae09d9e4078d161eeca100" prot="public">
+          <name>Equals</name>
+          <briefdescription>
+<para>= - The column value equals the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba595e487905a91288feae2e6177f9fa49" prot="public">
+          <name>StartsLike</name>
+          <briefdescription>
+<para>value.* - The column value begins with the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba9458adc3bc450d2155252c4e66181395" prot="public">
+          <name>EndsLike</name>
+          <briefdescription>
+<para>.*value% - The column value ends with the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba98b82c200a2e309b24cb481970f3fcc4" prot="public">
+          <name>Like</name>
+          <briefdescription>
+<para>value% - The column value contains the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba4a099d34042d925bb0baa06718a5a140" prot="public">
+          <name>NotLike</name>
+          <briefdescription>
+<para>NOT value% - The column value does not contain the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824baa4cbdbb6070a5abb35fc95ecf1e22c14" prot="public">
+          <name>LessOrEqual</name>
+          <briefdescription>
+<para>&lt;= - The column value is less than or equal to the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba6f2f0aefb3d22da0f3839453add5f937" prot="public">
+          <name>GreaterOrEqual</name>
+          <briefdescription>
+<para>&gt;= - The column value is greater than or equal to the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824ba19bb0af2c3c530538cb41aff7f235b96" prot="public">
+          <name>NotEqual</name>
+          <briefdescription>
+<para>&lt;&gt; - The column value is not equal to the search value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the various operations that can be applied on search text and column names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/Filter.cs" line="80" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/Filter.cs" bodystart="81" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/ANDFilter.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

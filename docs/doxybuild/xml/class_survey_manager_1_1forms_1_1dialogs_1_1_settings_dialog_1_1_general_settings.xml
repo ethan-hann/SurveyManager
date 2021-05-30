@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ade12944d2c9bc18916c798ba2eec8438" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.UniqueName</definition>
+        <argsstring></argsstring>
+        <name>UniqueName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="12" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1adda059e96a6f255b9926db7449cec741" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.Unchanged</definition>
+        <argsstring></argsstring>
+        <name>Unchanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="14" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a25af92394420d1759b5d18f3daf92bb9" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" kindref="member">ISettingsControl.ChangeStatusText</ref></type>
+        <definition>ISettingsControl.ChangeStatusText SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.HelpTextChanged</definition>
+        <argsstring></argsstring>
+        <name>HelpTextChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="16" column="55" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a80f824fde358beb95146c21ca5fadc6a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae20b0c002bf13f2cf17efc15af38049e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="259" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a7d4eae716f1c9cabe8feab2e2a7230d2" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonCheckBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonCheckBox SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.chkEnableSurveyAutoSave</definition>
+        <argsstring></argsstring>
+        <name>chkEnableSurveyAutoSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="260" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a58dd96b840e8a6faaaa4740d1d548f5a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flpInterval</definition>
+        <argsstring></argsstring>
+        <name>flpInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="261" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a938c04e9d5a5b0ac162f3c501d0bcd7e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="262" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a6191ad5eb68b601b5244a0f3058e7d79" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.nudAutoSaveInterval</definition>
+        <argsstring></argsstring>
+        <name>nudAutoSaveInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="263" column="68" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae94353885e69b4c2506da330b3cd0cc4" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="264" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aed558bd7d1811f4b167d114bb49a1cf2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="265" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a0e36f7eaf85bab52f3757205eec7b063" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="266" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3307d3786a06991ccca9b1af945e94ca" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRadioButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRadioButton SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.radLastTwoDigits</definition>
+        <argsstring></argsstring>
+        <name>radLastTwoDigits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="267" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a00acbe0fda1c77794c4daa1771616bcc" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRadioButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRadioButton SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.radCustomText</definition>
+        <argsstring></argsstring>
+        <name>radCustomText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="268" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a2f3fa09d6842e0ce517265e9092c257f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flpCustomText</definition>
+        <argsstring></argsstring>
+        <name>flpCustomText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="269" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3fbb6ff9adcda8fd06f7be78e8b3e501" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.kryptonLabel4</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="270" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae57d90aa75af90b15cf84ef2ab61c050" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.txtCustomPrefix</definition>
+        <argsstring></argsstring>
+        <name>txtCustomPrefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="271" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aef9ad5012f202e0e04f474ba8ee608be" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.lblCharCount</definition>
+        <argsstring></argsstring>
+        <name>lblCharCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="272" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3c201f1db228790bd259a3bb1a04f181" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flpExampleText</definition>
+        <argsstring></argsstring>
+        <name>flpExampleText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="273" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a629853b268b423b4f39e544b2def95cc" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.lblPrefixPreview</definition>
+        <argsstring></argsstring>
+        <name>lblPrefixPreview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="274" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a5caaa4e1f8f26e752f13558b63cd2230" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.GeneralSettings</definition>
+        <argsstring>()</argsstring>
+        <name>GeneralSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a03c4100149caa987526e690bc49a93f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.SaveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>SaveSettings</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aa2bb3f6b0b7263bca89b38dba1ade165">SaveSettings</reimplements>
+        <briefdescription>
+<para>The method that should be implemented to define how to save the control&apos;s settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="45" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="45" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a44444497f18fac52991f8a5374318a39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.ToDefaults</definition>
+        <argsstring>()</argsstring>
+        <name>ToDefaults</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a6a43635e2a80fb7c1aba1f9ae07917ac">ToDefaults</reimplements>
+        <briefdescription>
+<para>The method that should be implemented to define how to reset the control&apos;s settings to defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="60" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aa8741add395f5ee8ece59b8c4d795395" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.GeneralSettings_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>GeneralSettings_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="24" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="24" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a56d6b6a2c585d14fc7ad6bf22cef8b3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.chkEnableSurveyAutoSave_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>chkEnableSurveyAutoSave_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="68" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a4034b8e0284024a8d2d75a8352b2f88a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.radLastTwoDigits_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radLastTwoDigits_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="73" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a281b345772229bfd7d6d57eb43d48a3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.txtCustomPrefix_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtCustomPrefix_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="83" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a32c675189efa2a9e0060f70f409cc0f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.UpdatePrefixPreview</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePrefixPreview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="89" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a165f7a45d3d6095b026374065fae8b6d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.chkEnableSurveyAutoSave_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>chkEnableSurveyAutoSave_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="94" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a20712e374c46ef907edc173b31a76639" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flpInterval_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flpInterval_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="99" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ab7d6f95b53380369f7907a2a8c4330a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.radLastTwoDigits_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radLastTwoDigits_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="104" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a95a2f1cd9de38f9a8b538a378f969f1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.radCustomText_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radCustomText_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="109" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3527b0f4d5229e8eddca79e332cdac1a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.flpExampleText_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flpExampleText_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="114" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a9ab849562b32d3d6694873c2b42c33b4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.ResetHelpText</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ResetHelpText</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="119" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ab1eea210a660c2c10cc776383655dcbe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="30" bodyend="255"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a2dbb930142d3f256e932bf4d89a969c4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.OnHelpTextChanged</definition>
+        <argsstring>(StatusArgs args)</argsstring>
+        <name>OnHelpTextChanged</name>
+        <param>
+          <type>StatusArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="124" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aa4e16efa08c8a6078ba89bc9047b3041" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" line="10" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/GeneralSettings.cs" bodystart="11" bodyend="128"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>ChangeStatusText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a7d4eae716f1c9cabe8feab2e2a7230d2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>chkEnableSurveyAutoSave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a56d6b6a2c585d14fc7ad6bf22cef8b3b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>chkEnableSurveyAutoSave_CheckedChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a165f7a45d3d6095b026374065fae8b6d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>chkEnableSurveyAutoSave_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a80f824fde358beb95146c21ca5fadc6a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aa4e16efa08c8a6078ba89bc9047b3041" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae20b0c002bf13f2cf17efc15af38049e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aed558bd7d1811f4b167d114bb49a1cf2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a2f3fa09d6842e0ce517265e9092c257f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flpCustomText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3c201f1db228790bd259a3bb1a04f181" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flpExampleText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3527b0f4d5229e8eddca79e332cdac1a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flpExampleText_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a58dd96b840e8a6faaaa4740d1d548f5a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flpInterval</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a20712e374c46ef907edc173b31a76639" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>flpInterval_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a5caaa4e1f8f26e752f13558b63cd2230" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>GeneralSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aa8741add395f5ee8ece59b8c4d795395" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>GeneralSettings_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a25af92394420d1759b5d18f3daf92bb9" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>HelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ab1eea210a660c2c10cc776383655dcbe" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a938c04e9d5a5b0ac162f3c501d0bcd7e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae94353885e69b4c2506da330b3cd0cc4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a0e36f7eaf85bab52f3757205eec7b063" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3fbb6ff9adcda8fd06f7be78e8b3e501" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>kryptonLabel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1aef9ad5012f202e0e04f474ba8ee608be" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>lblCharCount</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a629853b268b423b4f39e544b2def95cc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>lblPrefixPreview</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a6191ad5eb68b601b5244a0f3058e7d79" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>nudAutoSaveInterval</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a2dbb930142d3f256e932bf4d89a969c4" prot="protected" virt="virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>OnHelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a00acbe0fda1c77794c4daa1771616bcc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>radCustomText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a95a2f1cd9de38f9a8b538a378f969f1e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>radCustomText_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a3307d3786a06991ccca9b1af945e94ca" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>radLastTwoDigits</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a4034b8e0284024a8d2d75a8352b2f88a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>radLastTwoDigits_CheckedChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ab7d6f95b53380369f7907a2a8c4330a0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>radLastTwoDigits_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a9ab849562b32d3d6694873c2b42c33b4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>ResetHelpText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a03c4100149caa987526e690bc49a93f1" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>SaveSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a44444497f18fac52991f8a5374318a39" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>ToDefaults</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ae57d90aa75af90b15cf84ef2ab61c050" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>txtCustomPrefix</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a281b345772229bfd7d6d57eb43d48a3b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>txtCustomPrefix_TextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1adda059e96a6f255b9926db7449cec741" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>Unchanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1ade12944d2c9bc18916c798ba2eec8438" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>UniqueName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a32c675189efa2a9e0060f70f409cc0f5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::GeneralSettings</scope><name>UpdatePrefixPreview</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

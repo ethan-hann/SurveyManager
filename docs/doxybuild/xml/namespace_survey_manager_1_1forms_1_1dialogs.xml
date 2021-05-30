@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1dialogs" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::dialogs</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_about_box" prot="public">SurveyManager::forms::dialogs::AboutBox</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg" prot="public">SurveyManager::forms::dialogs::ActivationDlg</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter" prot="public">SurveyManager::forms::dialogs::AdvancedFilter</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_c_message_box" prot="public">SurveyManager::forms::dialogs::CMessageBox</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_c_rich_msg_box" prot="public">SurveyManager::forms::dialogs::CRichMsgBox</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_delete_message_form" prot="public">SurveyManager::forms::dialogs::DeleteMessageForm</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_ellipter_activation" prot="public">SurveyManager::forms::dialogs::EllipterActivation</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form" prot="package">SurveyManager::forms::dialogs::MessageForm</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form" prot="public">SurveyManager::forms::dialogs::RichMessageForm</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_save_message_form" prot="package">SurveyManager::forms::dialogs::SaveMessageForm</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1dialogs_1_1_app_settings" prot="public">SurveyManager::forms::dialogs::AppSettings</innerclass>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog">SurveyManager::forms::dialogs::SettingsDialog</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AboutBox.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

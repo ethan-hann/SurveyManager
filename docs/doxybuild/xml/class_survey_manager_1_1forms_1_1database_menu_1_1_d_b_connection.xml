@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::databaseMenu::DBConnection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a0ec36c08f5baa8909307cfd1cb20ac96" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SurveyManager.forms.databaseMenu.DBConnection.errorCode</definition>
+        <argsstring></argsstring>
+        <name>errorCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="14" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a176cc731f9ccb3796855c402732ce73b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.databaseMenu.DBConnection.isConnected</definition>
+        <argsstring></argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="15" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a1e741dd9dc1182c4bdd12d3724779ccb" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.databaseMenu.DBConnection.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a09d95c1f5dc119767f69486c4aaf8493" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.databaseMenu.DBConnection.tableLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="272" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a5e2a498191c02c31b2b71bdfd4da5008" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.kryptonLabel4</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="273" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1acfdececa0cd78061636060bb072572d2" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="274" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af04faef9ee93353bc18f196f8d3c04e0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.databaseMenu.DBConnection.txtUsername</definition>
+        <argsstring></argsstring>
+        <name>txtUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="275" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad808e95a60440cfd75b1a933d3690434" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="276" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1abba5e94542614abdbe642cbd0501c5d3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.databaseMenu.DBConnection.txtPort</definition>
+        <argsstring></argsstring>
+        <name>txtPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="277" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a1d851d20485e71338fc05368d99f4d12" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.lblServer</definition>
+        <argsstring></argsstring>
+        <name>lblServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="278" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a7cf1e84edc0bdd916db873f813177617" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.databaseMenu.DBConnection.txtServer</definition>
+        <argsstring></argsstring>
+        <name>txtServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="279" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad0db1c2f15b5113b73affbccddac470b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="280" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a452cb8df5c19c39c3102c6db4d5bcd1f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.databaseMenu.DBConnection.txtDB</definition>
+        <argsstring></argsstring>
+        <name>txtDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="281" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad89b22e7947ddfb65f282a30c805a2bd" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox SurveyManager.forms.databaseMenu.DBConnection.txtPassword</definition>
+        <argsstring></argsstring>
+        <name>txtPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="282" column="68" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a409ff394cadd11885611df5d774a8e39" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.databaseMenu.DBConnection.btnTestConnection</definition>
+        <argsstring></argsstring>
+        <name>btnTestConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="283" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a7ade375f025a4c522ada189cca5c1def" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.databaseMenu.DBConnection.btnFinish</definition>
+        <argsstring></argsstring>
+        <name>btnFinish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="284" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ac64d81aa6cf269808f9e2326ea1569c8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.BackgroundWorker</type>
+        <definition>System.ComponentModel.BackgroundWorker SurveyManager.forms.databaseMenu.DBConnection.bgWorker</definition>
+        <argsstring></argsstring>
+        <name>bgWorker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="285" column="54" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1aeafb202b3d50114b83bbe1672885ed2a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ProgressBar</type>
+        <definition>System.Windows.Forms.ProgressBar SurveyManager.forms.databaseMenu.DBConnection.progressBarLoad</definition>
+        <argsstring></argsstring>
+        <name>progressBarLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="286" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a733cbdeaa86109aa61c6a8a685ca130b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.databaseMenu.DBConnection.tlpStatus</definition>
+        <argsstring></argsstring>
+        <name>tlpStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="287" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a3a91b0fc8a0bd59b4d7817e03dd95f68" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.databaseMenu.DBConnection.txtStatus</definition>
+        <argsstring></argsstring>
+        <name>txtStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="288" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a6229aa1f3eb4c5d2b0ee05a655547a85" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.databaseMenu.DBConnection.DatabaseConnectFinished</definition>
+        <argsstring></argsstring>
+        <name>DatabaseConnectFinished</name>
+        <briefdescription>
+<para>When this event is fired, a DBArgs object that represents the error code of the <ref refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection" kindref="compound">DBConnection</ref> attempt, is returned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="20" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a918c28920f235c3a0fe00dce89441ea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.databaseMenu.DBConnection.DBConnection</definition>
+        <argsstring>()</argsstring>
+        <name>DBConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="22" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="22" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ae1ce359e5ed534642993240b8d9afd25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.DBConnection_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DBConnection_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af8bc973333004d12256a85112b429717" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.TestConnection</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TestConnection</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="42" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a61a5212441ee3629a94aa40c886849a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.bgWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>bgWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="53" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="53" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a706e0e6db7cfb672ae5f1ae190c68a73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.bgWorker_ProgressChanged</definition>
+        <argsstring>(object sender, ProgressChangedEventArgs e)</argsstring>
+        <name>bgWorker_ProgressChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ProgressChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="104" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af959d028a774b2d4b080fb1d70e9faab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.bgWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>bgWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="109" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="109" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a9dc04cd353c650fdcd48919b26bb2597" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.Finish</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Finish</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="128" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="128" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af3b5b8af4515864e6a4fbb3d946dbff4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.databaseMenu.DBConnection.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="30" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1aec889c461085af23af59b64ab455d2f9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.databaseMenu.DBConnection.OnFormClosed</definition>
+        <argsstring>(FormClosedEventArgs e)</argsstring>
+        <name>OnFormClosed</name>
+        <param>
+          <type>FormClosedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="138" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="138" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1acdb9a8dbbe8ee869a4c0b75766d167e4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.databaseMenu.DBConnection.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.databaseMenu.DBConnection</label>
+        <link refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.databaseMenu.DBConnection</label>
+        <link refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="12" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" bodystart="13" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ac64d81aa6cf269808f9e2326ea1569c8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>bgWorker</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a61a5212441ee3629a94aa40c886849a3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>bgWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a706e0e6db7cfb672ae5f1ae190c68a73" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>bgWorker_ProgressChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af959d028a774b2d4b080fb1d70e9faab" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>bgWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a7ade375f025a4c522ada189cca5c1def" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>btnFinish</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a409ff394cadd11885611df5d774a8e39" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>btnTestConnection</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a1e741dd9dc1182c4bdd12d3724779ccb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a6229aa1f3eb4c5d2b0ee05a655547a85" prot="public" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>DatabaseConnectFinished</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a918c28920f235c3a0fe00dce89441ea4" prot="public" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>DBConnection</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ae1ce359e5ed534642993240b8d9afd25" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>DBConnection_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1acdb9a8dbbe8ee869a4c0b75766d167e4" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a0ec36c08f5baa8909307cfd1cb20ac96" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>errorCode</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a9dc04cd353c650fdcd48919b26bb2597" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>Finish</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af3b5b8af4515864e6a4fbb3d946dbff4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a176cc731f9ccb3796855c402732ce73b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>isConnected</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad808e95a60440cfd75b1a933d3690434" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1acfdececa0cd78061636060bb072572d2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad0db1c2f15b5113b73affbccddac470b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a5e2a498191c02c31b2b71bdfd4da5008" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>kryptonLabel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a1d851d20485e71338fc05368d99f4d12" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>lblServer</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1aec889c461085af23af59b64ab455d2f9" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>OnFormClosed</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1aeafb202b3d50114b83bbe1672885ed2a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>progressBarLoad</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a09d95c1f5dc119767f69486c4aaf8493" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>tableLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af8bc973333004d12256a85112b429717" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>TestConnection</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a733cbdeaa86109aa61c6a8a685ca130b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>tlpStatus</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a452cb8df5c19c39c3102c6db4d5bcd1f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtDB</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1ad89b22e7947ddfb65f282a30c805a2bd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtPassword</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1abba5e94542614abdbe642cbd0501c5d3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtPort</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a7cf1e84edc0bdd916db873f813177617" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtServer</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1a3a91b0fc8a0bd59b4d7817e03dd95f68" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtStatus</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection_1af04faef9ee93353bc18f196f8d3c04e0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::databaseMenu::DBConnection</scope><name>txtUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

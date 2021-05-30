@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::fileMenu::FileBrowser</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ae49d91f31742a3fe44a77e38bcf68e66" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+        <definition>List&lt;CFile&gt; SurveyManager.forms.fileMenu.FileBrowser.files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="20" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a77eba4ba40d7553431ed2fb2dee29101" prot="private" static="no" mutable="no">
+        <type>ImageList</type>
+        <definition>ImageList SurveyManager.forms.fileMenu.FileBrowser._smallImageList</definition>
+        <argsstring></argsstring>
+        <name>_smallImageList</name>
+        <initializer>= new ImageList()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="21" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a83f4048364966141a4831d92c461d475" prot="private" static="no" mutable="no">
+        <type>ImageList</type>
+        <definition>ImageList SurveyManager.forms.fileMenu.FileBrowser._largeImageList</definition>
+        <argsstring></argsstring>
+        <name>_largeImageList</name>
+        <initializer>= new ImageList()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="22" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1af78f8e0e122fba4694cb2f08437fe251" prot="private" static="no" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_icons_1_1_icon_list_manager" kindref="compound">IconListManager</ref></type>
+        <definition>IconListManager SurveyManager.forms.fileMenu.FileBrowser._iconListManager</definition>
+        <argsstring></argsstring>
+        <name>_iconListManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="23" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aac64a8b183e0b0bbb3e387bfb8c939b0" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.fileMenu.FileBrowser.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a39af08868bf8c895890eed9f47ef8151" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListView</type>
+        <definition>System.Windows.Forms.ListView SurveyManager.forms.fileMenu.FileBrowser.filesList</definition>
+        <argsstring></argsstring>
+        <name>filesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="123" column="44" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aad1f8b7a9b03a97f9cdd5cc56e8f2f20" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PropertyGrid</type>
+        <definition>System.Windows.Forms.PropertyGrid SurveyManager.forms.fileMenu.FileBrowser.propGrid</definition>
+        <argsstring></argsstring>
+        <name>propGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="124" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ac2d58b277997425f857e002f88ebfa9f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.fileMenu.FileBrowser.btnDownloadFiles</definition>
+        <argsstring></argsstring>
+        <name>btnDownloadFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="125" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a586e4cfd56b6bffda0272ec6ae96591b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.SaveFileDialog</type>
+        <definition>System.Windows.Forms.SaveFileDialog SurveyManager.forms.fileMenu.FileBrowser.saveDialog</definition>
+        <argsstring></argsstring>
+        <name>saveDialog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="126" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ab709ab2a82d519d05334090af89ef99a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.SplitContainer</type>
+        <definition>System.Windows.Forms.SplitContainer SurveyManager.forms.fileMenu.FileBrowser.splitPanels</definition>
+        <argsstring></argsstring>
+        <name>splitPanels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="127" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a130730f9b5119bb77f52af51a78b001e" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.fileMenu.FileBrowser.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="25" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a8a23249d9388d4c07bdf1720c36cb006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.fileMenu.FileBrowser.FileBrowser</definition>
+        <argsstring>(List&lt; CFile &gt; filesToView)</argsstring>
+        <name>FileBrowser</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>filesToView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="27" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="27" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a4135e233ca88c349d4bb23d5c28dae81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.DownloadFiles</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DownloadFiles</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="55" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="55" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a8a7e8ced892ae1cee99cc102234fcf9d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.SaveOneFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>SaveOneFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="74" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="74" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aead791ac26ec40e90bd9b0d5d38c7dff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.SaveMultipleFiles</definition>
+        <argsstring>()</argsstring>
+        <name>SaveMultipleFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="95" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="95" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ae3107b84ad1ac3fb02982ed3cc81a305" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.FileBrowser_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FileBrowser_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="122" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a3e455fd64c6eb54c48fa96f96ea8c9e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.filesList_MouseDoubleClick</definition>
+        <argsstring>(object sender, MouseEventArgs e)</argsstring>
+        <name>filesList_MouseDoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="127" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="127" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a5e8c350acdab23aed608425319c9718a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.filesList_MouseClick</definition>
+        <argsstring>(object sender, MouseEventArgs e)</argsstring>
+        <name>filesList_MouseClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="138" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="138" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a135ce59923bf0762af83cb390549200a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.FileBrowser_FormClosed</definition>
+        <argsstring>(object sender, FormClosedEventArgs e)</argsstring>
+        <name>FileBrowser_FormClosed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="153" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a7e625b19884b47e6fe8297dbb8581630" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.fileMenu.FileBrowser.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="30" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a034c467ac0d6a8307fa9b24d81c889ad" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.fileMenu.FileBrowser.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.fileMenu.FileBrowser</label>
+        <link refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.fileMenu.FileBrowser</label>
+        <link refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" line="18" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu/FileBrowser.cs" bodystart="19" bodyend="157"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1af78f8e0e122fba4694cb2f08437fe251" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>_iconListManager</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a83f4048364966141a4831d92c461d475" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>_largeImageList</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a77eba4ba40d7553431ed2fb2dee29101" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>_smallImageList</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ac2d58b277997425f857e002f88ebfa9f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>btnDownloadFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aac64a8b183e0b0bbb3e387bfb8c939b0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a034c467ac0d6a8307fa9b24d81c889ad" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a4135e233ca88c349d4bb23d5c28dae81" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>DownloadFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a8a23249d9388d4c07bdf1720c36cb006" prot="public" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>FileBrowser</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a135ce59923bf0762af83cb390549200a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>FileBrowser_FormClosed</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ae3107b84ad1ac3fb02982ed3cc81a305" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>FileBrowser_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ae49d91f31742a3fe44a77e38bcf68e66" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>files</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a39af08868bf8c895890eed9f47ef8151" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>filesList</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a5e8c350acdab23aed608425319c9718a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>filesList_MouseClick</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a3e455fd64c6eb54c48fa96f96ea8c9e6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>filesList_MouseDoubleClick</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a7e625b19884b47e6fe8297dbb8581630" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aad1f8b7a9b03a97f9cdd5cc56e8f2f20" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>propGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a586e4cfd56b6bffda0272ec6ae96591b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>saveDialog</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1aead791ac26ec40e90bd9b0d5d38c7dff" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>SaveMultipleFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a8a7e8ced892ae1cee99cc102234fcf9d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>SaveOneFile</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1ab709ab2a82d519d05334090af89ef99a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>splitPanels</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1file_menu_1_1_file_browser_1a130730f9b5119bb77f52af51a78b001e" prot="public" virt="non-virtual"><scope>SurveyManager::forms::fileMenu::FileBrowser</scope><name>StatusUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

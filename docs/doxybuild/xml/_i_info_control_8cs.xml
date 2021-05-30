@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_i_info_control_8cs" kind="file" language="C#">
+    <compoundname>IInfoControl.cs</compoundname>
+    <innerclass refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public">SurveyManager::forms::surveyMenu::IInfoControl</innerclass>
+    <innernamespace refid="namespace_survey_manager">SurveyManager</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms">SurveyManager::forms</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu">SurveyManager::forms::surveyMenu</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_survey_manager_1_1forms_1_1survey_menu" kindref="compound">SurveyManager.forms.surveyMenu</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" kindref="compound">IInfoControl</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633" kindref="member">SaveInfo</ref>();</highlight></codeline>
+<codeline lineno="6" refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1a9fa83baa76f11a6c760a1f7bc2889f25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1a9fa83baa76f11a6c760a1f7bc2889f25" kindref="member">IsEdited</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/IInfoControl.cs"/>
+  </compounddef>
+</doxygen>

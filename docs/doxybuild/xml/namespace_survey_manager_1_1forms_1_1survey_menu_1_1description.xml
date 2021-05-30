@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1survey_menu_1_1description" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::surveyMenu::description</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1description_1_1_description_ctl" prot="public">SurveyManager::forms::surveyMenu::description::DescriptionCtl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/description/DescriptionCtl.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

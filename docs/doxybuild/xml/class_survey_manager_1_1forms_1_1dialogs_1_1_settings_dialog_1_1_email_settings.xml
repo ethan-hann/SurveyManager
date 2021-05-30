@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl</basecompoundref>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1acaa921842726fb69634173b87e066661" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" kindref="member">ISettingsControl.ChangeStatusText</ref></type>
+        <definition>ISettingsControl.ChangeStatusText SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.HelpTextChanged</definition>
+        <argsstring></argsstring>
+        <name>HelpTextChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="11" column="55" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a07bbcf9921dc86718626e430495cd482" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.UniqueName</definition>
+        <argsstring></argsstring>
+        <name>UniqueName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="12" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1abd4c2ba040bca269ed6048e5a7e3fc1d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.Unchanged</definition>
+        <argsstring></argsstring>
+        <name>Unchanged</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="14" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a71ca7c21524c65151df7918cb5edda4d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ac505adcdb6e9deec078fe043e2b9bc80" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="245" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af51db62c9a58190228d7deb6280ee16e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel10</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="246" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ab47dcd92d82348e486c0e581673f7bcd" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="247" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ae10d11d85ca2c8cc61649c9468f2f949" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.txtSMTPUsername</definition>
+        <argsstring></argsstring>
+        <name>txtSMTPUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="248" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ada35eafe9ea07b9a1590965ef20f3b17" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel11</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="249" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8f0bfe3796f062a743191af9b0fa341d" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonLabel6</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="250" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a2b1f3e4195d41ee336b4627e78114e5f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.txtSMTPPassword</definition>
+        <argsstring></argsstring>
+        <name>txtSMTPPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="251" column="68" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a31b930f458bafbcb1172cb5bf65a85d1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel13</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="252" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ad8475d21b29ab157737cbe131cf2a4d7" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonLabel9</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="253" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1136dbce183f02eea47f3c6096631d18" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.txtSMTPServer</definition>
+        <argsstring></argsstring>
+        <name>txtSMTPServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="254" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af39633cad345c72cd4f3a7a090f53a5e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel12</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="255" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a80dc357390414fa0fd6933412886a2b9" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonLabel7</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="256" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1aad3d19aeb877ca637e6b8d11a98e5d0f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.txtSMTPPort</definition>
+        <argsstring></argsstring>
+        <name>txtSMTPPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="257" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af1adf10def796b8a8bcc8dcf5489a85b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel14</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="258" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a05e04b354d09cd3216bcd3aee794d3aa" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonLabel11</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="259" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a704bb4af65827d4feac3c2df10bc9690" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.txtFromAddress</definition>
+        <argsstring></argsstring>
+        <name>txtFromAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="260" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a42ec40d101765e7d538648408386d459" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.kryptonWrapLabel8</definition>
+        <argsstring></argsstring>
+        <name>kryptonWrapLabel8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="261" column="64" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ad5d7524ae0d2a5d46858b9fe3f17c19c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.EmailSettings</definition>
+        <argsstring>()</argsstring>
+        <name>EmailSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="16" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a18b6dd32916dd8e75027b782ea1bab8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.SaveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>SaveSettings</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aa2bb3f6b0b7263bca89b38dba1ade165">SaveSettings</reimplements>
+        <briefdescription>
+<para>Save the settings to Settings.Default. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="41" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="41" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a43476af4a32e4f3b67164b3077b65f52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.ToDefaults</definition>
+        <argsstring>()</argsstring>
+        <name>ToDefaults</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a6a43635e2a80fb7c1aba1f9ae07917ac">ToDefaults</reimplements>
+        <briefdescription>
+<para>Set the defaults for this settings screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="71" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="71" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a92e4946ed017bd5a04ac176c02f20f0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.EmailSettings_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>EmailSettings_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Load the current settings, or defaults if no settings exist yet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="27" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a838d174b9db832f0b7e525115790b853" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel10_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel10_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="85" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a9e8279a8d4555f06f1ee4dceb866cafb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel10_MouseLeave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel10_MouseLeave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="90" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a3c88bdf5f5518f33238a3e26818b5c06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel11_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel11_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="95" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a082c8e01d3f32720809aa73b43f0f9dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel11_MouseLeave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel11_MouseLeave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="100" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a63bbde526c151a2da87ea9b45f8ffd06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel13_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel13_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="105" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a95cb00915fffcf58db286261b672f850" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel13_MouseLeave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel13_MouseLeave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="110" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1921dc927b6fa8e1de160e986e26cfb2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel12_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel12_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="115" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a557e1439fc8c103ad77ce3e7e276eebd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel12_MouseLeave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel12_MouseLeave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="120" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8891f6219d58a58e60cdaaf3af3aceac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel14_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel14_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="125" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8eaf164db68c3767166fa6d4b6dc02eb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.flowLayoutPanel14_MouseLeave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel14_MouseLeave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="130" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1decf1744924826f13138c57cd91274a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="30" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1aa587465ad393790058a595a69db289f4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.OnHelpTextChanged</definition>
+        <argsstring>(StatusArgs args)</argsstring>
+        <name>OnHelpTextChanged</name>
+        <param>
+          <type>StatusArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="80" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a3f8223fbb867e54934e6fb6b6bab82df" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.SettingsDialog.EmailSettings.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.EmailSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.EmailSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" line="9" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/EmailSettings.cs" bodystart="10" bodyend="134"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>ChangeStatusText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a71ca7c21524c65151df7918cb5edda4d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a3f8223fbb867e54934e6fb6b6bab82df" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ad5d7524ae0d2a5d46858b9fe3f17c19c" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>EmailSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a92e4946ed017bd5a04ac176c02f20f0e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>EmailSettings_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ac505adcdb6e9deec078fe043e2b9bc80" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af51db62c9a58190228d7deb6280ee16e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel10</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a838d174b9db832f0b7e525115790b853" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel10_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a9e8279a8d4555f06f1ee4dceb866cafb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel10_MouseLeave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ada35eafe9ea07b9a1590965ef20f3b17" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel11</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a3c88bdf5f5518f33238a3e26818b5c06" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel11_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a082c8e01d3f32720809aa73b43f0f9dc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel11_MouseLeave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af39633cad345c72cd4f3a7a090f53a5e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel12</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1921dc927b6fa8e1de160e986e26cfb2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel12_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a557e1439fc8c103ad77ce3e7e276eebd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel12_MouseLeave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a31b930f458bafbcb1172cb5bf65a85d1" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel13</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a63bbde526c151a2da87ea9b45f8ffd06" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel13_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a95cb00915fffcf58db286261b672f850" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel13_MouseLeave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1af1adf10def796b8a8bcc8dcf5489a85b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel14</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8891f6219d58a58e60cdaaf3af3aceac" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel14_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8eaf164db68c3767166fa6d4b6dc02eb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>flowLayoutPanel14_MouseLeave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1acaa921842726fb69634173b87e066661" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>HelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1decf1744924826f13138c57cd91274a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a05e04b354d09cd3216bcd3aee794d3aa" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonLabel11</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ab47dcd92d82348e486c0e581673f7bcd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a8f0bfe3796f062a743191af9b0fa341d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonLabel6</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a80dc357390414fa0fd6933412886a2b9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonLabel7</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ad8475d21b29ab157737cbe131cf2a4d7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonLabel9</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a42ec40d101765e7d538648408386d459" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>kryptonWrapLabel8</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1aa587465ad393790058a595a69db289f4" prot="protected" virt="virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>OnHelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a18b6dd32916dd8e75027b782ea1bab8f" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>SaveSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a43476af4a32e4f3b67164b3077b65f52" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>ToDefaults</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a704bb4af65827d4feac3c2df10bc9690" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>txtFromAddress</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a2b1f3e4195d41ee336b4627e78114e5f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>txtSMTPPassword</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1aad3d19aeb877ca637e6b8d11a98e5d0f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>txtSMTPPort</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a1136dbce183f02eea47f3c6096631d18" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>txtSMTPServer</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1ae10d11d85ca2c8cc61649c9468f2f949" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>txtSMTPUsername</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1abd4c2ba040bca269ed6048e5a7e3fc1d" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>Unchanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a07bbcf9921dc86718626e430495cd482" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::EmailSettings</scope><name>UniqueName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

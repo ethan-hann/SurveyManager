@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3dd830dae71a3048930cfb3afec959c2" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager</compoundname>
+    <innerdir refid="dir_a924b688000d11d5f34ca4b74f8aa83a">D:/Documents/GitHub/SurveyManager/SurveyManager/backend</innerdir>
+    <innerdir refid="dir_37ef9ff1ce78b2abe3f1dd216232f95e">D:/Documents/GitHub/SurveyManager/SurveyManager/forms</innerdir>
+    <innerdir refid="dir_770ed3408dc857b24e2f87f15c3e18c8">D:/Documents/GitHub/SurveyManager/SurveyManager/obj</innerdir>
+    <innerdir refid="dir_3aba08593924ec3fc2872a1850adf993">D:/Documents/GitHub/SurveyManager/SurveyManager/Properties</innerdir>
+    <innerdir refid="dir_e603fcd9683f9e2331c41d8172720ab8">D:/Documents/GitHub/SurveyManager/SurveyManager/utility</innerdir>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/"/>
+  </compounddef>
+</doxygen>

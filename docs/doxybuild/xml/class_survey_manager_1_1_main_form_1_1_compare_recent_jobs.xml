@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1_main_form_1_1_compare_recent_jobs" kind="class" language="C#" prot="private">
+    <compoundname>SurveyManager::MainForm::CompareRecentJobs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IComparer&lt; KryptonRibbonRecentDoc &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1_main_form_1_1_compare_recent_jobs_1adc290479b1ef0601733b4b7d1422b04b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SurveyManager.MainForm.CompareRecentJobs.Compare</definition>
+        <argsstring>(KryptonRibbonRecentDoc x, KryptonRibbonRecentDoc y)</argsstring>
+        <name>Compare</name>
+        <param>
+          <type>KryptonRibbonRecentDoc</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>KryptonRibbonRecentDoc</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/MainForm.cs" line="441" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/MainForm.cs" bodystart="441" bodyend="446"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.MainForm.CompareRecentJobs</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IComparer&lt; KryptonRibbonRecentDoc &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.MainForm.CompareRecentJobs</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IComparer&lt; KryptonRibbonRecentDoc &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/MainForm.cs" line="439" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/MainForm.cs" bodystart="440" bodyend="447"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1_main_form_1_1_compare_recent_jobs_1adc290479b1ef0601733b4b7d1422b04b" prot="public" virt="non-virtual"><scope>SurveyManager::MainForm::CompareRecentJobs</scope><name>Compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

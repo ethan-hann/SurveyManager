@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Licensing::LicenseEngine</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1a1131cd99a42dfc7a236ee794eb68b384" prot="private" static="yes" mutable="no">
+        <type>SerialsManager</type>
+        <definition>SerialsManager SurveyManager.utility.Licensing.LicenseEngine.manager</definition>
+        <argsstring></argsstring>
+        <name>manager</name>
+        <initializer>= new SerialsManager(Settings.Default.DeveloperName, Settings.Default.DeveloperKey, KeyStrength.Use128Bits)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" line="13" column="39" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1ae62203fd54d3a9814c151e5090e739c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.utility.Licensing.LicenseEngine.CheckIfValid</definition>
+        <argsstring>(string productKey)</argsstring>
+        <name>CheckIfValid</name>
+        <param>
+          <type>string</type>
+          <declname>productKey</declname>
+        </param>
+        <briefdescription>
+<para>Get a value indicating if the specified product key is valid for this product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The product key to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the product key is valid; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" line="20" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1a18da06d864de85d90d92a6443acf8340" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+        <definition>static LicenseInfo SurveyManager.utility.Licensing.LicenseEngine.GetLicenseInfo</definition>
+        <argsstring>(string productKey)</argsstring>
+        <name>GetLicenseInfo</name>
+        <param>
+          <type>string</type>
+          <declname>productKey</declname>
+        </param>
+        <briefdescription>
+<para>Get the License information associated with the specified product key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The product key to get the information for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the License information is in the correct format, returns the correct license info. If not, returns a <ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref> object representing an Unlicensed entity.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" line="32" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" bodystart="32" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespace_survey_manager_1_1utility_1_1_licensing" kindref="compound">Licensing</ref> Engine for validating and getting the information associated with product keys. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" line="11" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/LicenseEngine.cs" bodystart="12" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1ae62203fd54d3a9814c151e5090e739c7" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseEngine</scope><name>CheckIfValid</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1a18da06d864de85d90d92a6443acf8340" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseEngine</scope><name>GetLicenseInfo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_engine_1a1131cd99a42dfc7a236ee794eb68b384" prot="private" virt="non-virtual"><scope>SurveyManager::utility::Licensing::LicenseEngine</scope><name>manager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

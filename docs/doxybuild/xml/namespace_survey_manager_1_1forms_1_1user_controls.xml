@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1user_controls" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::userControls</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl" prot="public">SurveyManager::forms::userControls::BillingPortalCtl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1user_controls_1_1_new_object" prot="public">SurveyManager::forms::userControls::NewObject</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl" prot="public">SurveyManager::forms::userControls::ViewObjectsCtl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="16" column="1"/>
+  </compounddef>
+</doxygen>

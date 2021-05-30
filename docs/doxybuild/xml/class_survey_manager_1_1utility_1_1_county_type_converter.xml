@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_county_type_converter" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CountyTypeConverter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TypeConverter</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a1b3850600235893fd00af41d12b356cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CountyTypeConverter.CanConvertFrom</definition>
+        <argsstring>(ITypeDescriptorContext context, Type sourceType)</argsstring>
+        <name>CanConvertFrom</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>sourceType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="9" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a0585c24e51bba7bf35238db186521591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CountyTypeConverter.CanConvertTo</definition>
+        <argsstring>(ITypeDescriptorContext context, Type destinationType)</argsstring>
+        <name>CanConvertTo</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>destinationType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="14" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a133bfbc5d2863bd9bc707f9b74acd869" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override object</type>
+        <definition>override object SurveyManager.utility.CountyTypeConverter.ConvertFrom</definition>
+        <argsstring>(ITypeDescriptorContext context, CultureInfo culture, object value)</argsstring>
+        <name>ConvertFrom</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>CultureInfo</type>
+          <declname>culture</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="19" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a1cee6f70eb288d1b1bdfacd23e28e619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override object</type>
+        <definition>override object SurveyManager.utility.CountyTypeConverter.ConvertTo</definition>
+        <argsstring>(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)</argsstring>
+        <name>ConvertTo</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>CultureInfo</type>
+          <declname>culture</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>destinationType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="26" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a538adc54f00b9ca8b83a9dbf253adb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override StandardValuesCollection</type>
+        <definition>override StandardValuesCollection SurveyManager.utility.CountyTypeConverter.GetStandardValues</definition>
+        <argsstring>(ITypeDescriptorContext context)</argsstring>
+        <name>GetStandardValues</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="35" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1aa4ec2bb395863fd805638fb1b11d1e79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CountyTypeConverter.GetStandardValuesExclusive</definition>
+        <argsstring>(ITypeDescriptorContext context)</argsstring>
+        <name>GetStandardValuesExclusive</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="40" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_county_type_converter_1a27ad569df5133bb4b7c19f73967080f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CountyTypeConverter.GetStandardValuesSupported</definition>
+        <argsstring>(ITypeDescriptorContext context)</argsstring>
+        <name>GetStandardValuesSupported</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="45" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="45" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>TypeConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CountyTypeConverter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_county_type_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>TypeConverter</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CountyTypeConverter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_county_type_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" line="7" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CountyTypeConverter.cs" bodystart="8" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a1b3850600235893fd00af41d12b356cb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>CanConvertFrom</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a0585c24e51bba7bf35238db186521591" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>CanConvertTo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a133bfbc5d2863bd9bc707f9b74acd869" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>ConvertFrom</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a1cee6f70eb288d1b1bdfacd23e28e619" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>ConvertTo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a538adc54f00b9ca8b83a9dbf253adb64" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>GetStandardValues</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1aa4ec2bb395863fd805638fb1b11d1e79" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>GetStandardValuesExclusive</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_county_type_converter_1a27ad569df5133bb4b7c19f73967080f8" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CountyTypeConverter</scope><name>GetStandardValuesSupported</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

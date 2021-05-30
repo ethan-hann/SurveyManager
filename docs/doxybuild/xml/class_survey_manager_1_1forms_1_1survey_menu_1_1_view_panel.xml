@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::ViewPanel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a40f27f2741360b2ebd17fda668e88095" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.ViewPanel.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a59c4fc54ec6d8547c9f8a5b5a26b9558" prot="private" static="no" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid" kindref="compound">SurveyManager.utility.CustomControls.CPropertyGrid</ref></type>
+        <definition>SurveyManager.utility.CustomControls.CPropertyGrid SurveyManager.forms.surveyMenu.ViewPanel.propGrid</definition>
+        <argsstring></argsstring>
+        <name>propGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" line="60" column="65" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a917d282b89eb3406b096f8c1d2a20e10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.ViewPanel.ViewPanel</definition>
+        <argsstring>()</argsstring>
+        <name>ViewPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="12" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a159f585096e09efebc1b559ae2de9ac9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.CreateEmptyJob</definition>
+        <argsstring>()</argsstring>
+        <name>CreateEmptyJob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="30" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="30" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1ae901eb58affc3f43146e02168995c785" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.ViewPanel_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ViewPanel_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="17" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a5532bf87e54171c30eae66913a7bbeb3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.RefreshObject</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RefreshObject</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="39" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="39" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a254911f436ae69c55bd3a56b4ee1c5ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.RefreshButton</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RefreshButton</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="58" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="58" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a14b8b9eda4be8455054d654246a2cba6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.ClearObject</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ClearObject</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="73" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="73" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a392efa0802d4fc767a09728bad7e7b33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.propGrid_PropertyValueChanged</definition>
+        <argsstring>(object s, PropertyValueChangedEventArgs e)</argsstring>
+        <name>propGrid_PropertyValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>PropertyValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="88" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a0f081ba6d21178c4ff43d2454e48602e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.ViewPanel.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" bodystart="30" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a2ce1e5d61681502c9c913eae3b7a975b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.ViewPanel.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.ViewPanel</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.ViewPanel</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" line="10" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/ViewPanel.cs" bodystart="11" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a14b8b9eda4be8455054d654246a2cba6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>ClearObject</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a40f27f2741360b2ebd17fda668e88095" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a159f585096e09efebc1b559ae2de9ac9" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>CreateEmptyJob</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a2ce1e5d61681502c9c913eae3b7a975b" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a0f081ba6d21178c4ff43d2454e48602e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a59c4fc54ec6d8547c9f8a5b5a26b9558" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>propGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a392efa0802d4fc767a09728bad7e7b33" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>propGrid_PropertyValueChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a254911f436ae69c55bd3a56b4ee1c5ca" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>RefreshButton</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a5532bf87e54171c30eae66913a7bbeb3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>RefreshObject</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1a917d282b89eb3406b096f8c1d2a20e10" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>ViewPanel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel_1ae901eb58affc3f43146e02168995c785" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::ViewPanel</scope><name>ViewPanel_Load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

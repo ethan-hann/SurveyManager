@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::NotesCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ab97a3cdb42480daf423954c943301e1a" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; DateTime, string &gt;</type>
+        <definition>Dictionary&lt;DateTime, string&gt; SurveyManager.forms.surveyMenu.NotesCtl.notes</definition>
+        <argsstring></argsstring>
+        <name>notes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="13" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ab14734f994e2a7268049a7fb9a3cf32f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.NotesCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1aba82694970a594ca9424517c180ef637" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonListBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonListBox SurveyManager.forms.surveyMenu.NotesCtl.lbNoteKeys</definition>
+        <argsstring></argsstring>
+        <name>lbNoteKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="205" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a2996faeb5bf6340252c290bcb5373b87" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.surveyMenu.NotesCtl.txtNoteContents</definition>
+        <argsstring></argsstring>
+        <name>txtNoteContents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="206" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1af98a7892c666f1f1b73b7eac7667d6a3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.NotesCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="207" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a4e2e85e947c56b6087dc38634dff29cb" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.NotesCtl.btnRemoveNote</definition>
+        <argsstring></argsstring>
+        <name>btnRemoveNote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="208" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a671631891fd1e704fb390083bf072e4a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.NotesCtl.btnAddNote</definition>
+        <argsstring></argsstring>
+        <name>btnAddNote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="209" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a329306b15eba7fff1aedfc732f5e9dab" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.NotesCtl.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="210" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a116dd946085c0292685c0faa95328a67" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.NotesCtl.lblTotalNoteCount</definition>
+        <argsstring></argsstring>
+        <name>lblTotalNoteCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="211" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1aeaafcb9c85415240bf09d585b908dbdf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.NotesCtl.lblCharCount</definition>
+        <argsstring></argsstring>
+        <name>lblCharCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="212" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a032b31e3d6b7e061e2709162fdf4e8f0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.NotesCtl.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="213" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a8a24ed2010d8727a50aae8a72df97c5f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.surveyMenu.NotesCtl.kryptonHeaderGroup1</definition>
+        <argsstring></argsstring>
+        <name>kryptonHeaderGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="214" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ac935091aab1bacf1c2d6092560a79e78" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer SurveyManager.forms.surveyMenu.NotesCtl.kryptonSplitContainer1</definition>
+        <argsstring></argsstring>
+        <name>kryptonSplitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="215" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a84f678c315092285ac09da87e46fcab0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.surveyMenu.NotesCtl.btnSaveUpdate</definition>
+        <argsstring></argsstring>
+        <name>btnSaveUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="216" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a41b6e7cf348bb4db4c23645948e0f3e2" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.surveyMenu.NotesCtl.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="15" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a8544a6d6172fa004d38d664272072129" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.NotesCtl.NotesCtl</definition>
+        <argsstring>(Dictionary&lt; DateTime, string &gt; notes)</argsstring>
+        <name>NotesCtl</name>
+        <param>
+          <type>Dictionary&lt; DateTime, string &gt;</type>
+          <declname>notes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="17" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="17" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a23e1b71ee8995d3b96250321827532db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.NotesCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>NotesCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="24" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="24" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1af70de57a6efb2fb6619f05080c4de292" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.lbNoteKeys_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lbNoteKeys_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="41" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1abd2bd0a874dd6bfc23195d7e12abb138" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.btnAddNote_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddNote_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="49" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="49" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a24e9d2dc2bb7930591e24215f23e78c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.btnRemoveNote_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRemoveNote_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="67" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="67" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a6b5ce19ca66c5fbbbe1b36a10b7e4717" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.txtNoteContents_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtNoteContents_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="85" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="85" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a3dfbc4e3f614ec4724422e7b5cb594af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.txtNoteContents_KeyPress</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>txtNoteContents_KeyPress</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="121" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a135714fca7122eecfc9b1ec4c9df1d4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.btnSaveUpdate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSaveUpdate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="127" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="127" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a3da1264bae54de47fc0fe0066c61d9d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.SaveNotes</definition>
+        <argsstring>()</argsstring>
+        <name>SaveNotes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="133" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="133" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a99c0d4b263e3d86ca73cf26be8531952" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.NotesCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" line="17" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.Designer.cs" bodystart="17" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ad51d6a5820c63f34c21a90a3fba27ec2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.NotesCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="108" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="108" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.NotesCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.NotesCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" line="11" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/NotesCtl.cs" bodystart="12" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a671631891fd1e704fb390083bf072e4a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnAddNote</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1abd2bd0a874dd6bfc23195d7e12abb138" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnAddNote_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a4e2e85e947c56b6087dc38634dff29cb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnRemoveNote</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a24e9d2dc2bb7930591e24215f23e78c5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnRemoveNote_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a84f678c315092285ac09da87e46fcab0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnSaveUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a135714fca7122eecfc9b1ec4c9df1d4d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>btnSaveUpdate_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ab14734f994e2a7268049a7fb9a3cf32f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ad51d6a5820c63f34c21a90a3fba27ec2" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1af98a7892c666f1f1b73b7eac7667d6a3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a99c0d4b263e3d86ca73cf26be8531952" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a8a24ed2010d8727a50aae8a72df97c5f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>kryptonHeaderGroup1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ac935091aab1bacf1c2d6092560a79e78" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>kryptonSplitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1aeaafcb9c85415240bf09d585b908dbdf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>lblCharCount</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a116dd946085c0292685c0faa95328a67" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>lblTotalNoteCount</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1aba82694970a594ca9424517c180ef637" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>lbNoteKeys</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1af70de57a6efb2fb6619f05080c4de292" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>lbNoteKeys_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1ab97a3cdb42480daf423954c943301e1a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>notes</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a8544a6d6172fa004d38d664272072129" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>NotesCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a23e1b71ee8995d3b96250321827532db" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>NotesCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a3da1264bae54de47fc0fe0066c61d9d0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>SaveNotes</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a329306b15eba7fff1aedfc732f5e9dab" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a41b6e7cf348bb4db4c23645948e0f3e2" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a032b31e3d6b7e061e2709162fdf4e8f0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a2996faeb5bf6340252c290bcb5373b87" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>txtNoteContents</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a3dfbc4e3f614ec4724422e7b5cb594af" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>txtNoteContents_KeyPress</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl_1a6b5ce19ca66c5fbbbe1b36a10b7e4717" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::NotesCtl</scope><name>txtNoteContents_TextChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

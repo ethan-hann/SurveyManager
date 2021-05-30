@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_mail" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Mail</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_mail_1aa9f022a4b056dd352b586fb70cb0e270" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string SurveyManager.utility.Mail.SUPPORT_ADDRESS</definition>
+        <argsstring></argsstring>
+        <name>SUPPORT_ADDRESS</name>
+        <initializer>= &quot;thomasthunderous@protonmail.com&quot;</initializer>
+        <briefdescription>
+<para>The support email address to send feedback and bug reports to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="20" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_mail_1af258e7fc8d7339152d28a4f35033275f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.Mail.SendHTML</definition>
+        <argsstring>(string subject, string body, ArrayList attachments=null, string ccRecipients=null)</argsstring>
+        <name>SendHTML</name>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>attachments</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ccRecipients</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Send email to the support email address (<ulink url="mailto:supportbayareatx@teamlogicit.com">supportbayareatx@teamlogicit.com</ulink>). Allows attaching of optional Stream objects to the email. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject for the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to include in the body of the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attachments to send with this email, as Stream objects.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ccRecipients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional CC recipients seperated by semi-colons.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="29" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="29" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_mail_1aeae11825188926600e603c4962a0ce25" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.Mail.SendHTML</definition>
+        <argsstring>(string subject, string body, string toAddress, Stream attachment=null, string ccRecipients=null)</argsstring>
+        <name>SendHTML</name>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>toAddress</declname>
+        </param>
+        <param>
+          <type>Stream</type>
+          <declname>attachment</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ccRecipients</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Send an email in which the body of the email is considered to be HTML. Allows attaching of an optional Stream object to the email. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject for the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to include in the body of the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to send the email to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attachment to send with this email, as a Stream.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ccRecipients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional CC recipients seperated by semi-colons.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="79" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="79" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_mail_1a80c16dbe251876f17c19d17844aa254d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.Mail.SendHTML</definition>
+        <argsstring>(string subject, string body, string toAddress, CFile attachment, string ccRecipients=null)</argsstring>
+        <name>SendHTML</name>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>toAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ccRecipients</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Send an email in which the body of the email is considered to be HTML. Allows attaching of a CFile object to the email. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject for the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to include in the body of the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to send the email to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attachment to send with this email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ccRecipients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional CC recipients seperated by semi-colons.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="123" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="123" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_mail_1a5d359a8ff22a842b21fb326f33737224" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.Mail.SendMail</definition>
+        <argsstring>(string subject, string body, string to_address, string ccRecipients=null)</argsstring>
+        <name>SendMail</name>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>to_address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ccRecipients</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Send regular email to the specified address and optional CC recipients. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject for the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to include in the body of the email.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to send the email to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ccRecipients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional CC recipients seperated by semi-colons.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="167" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="167" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Static class that facilitates sending email. <ref refid="class_survey_manager_1_1utility_1_1_mail" kindref="compound">Mail</ref> can be sent using the various Send methods. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A valid MailInfo structure is required before attempting to send email. Thus, it is recommended to call Initialize before any other methods.</para>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" line="15" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Mail.cs" bodystart="16" bodyend="192"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_mail_1af258e7fc8d7339152d28a4f35033275f" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Mail</scope><name>SendHTML</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_mail_1aeae11825188926600e603c4962a0ce25" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Mail</scope><name>SendHTML</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_mail_1a80c16dbe251876f17c19d17844aa254d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Mail</scope><name>SendHTML</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_mail_1a5d359a8ff22a842b21fb326f33737224" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Mail</scope><name>SendMail</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_mail_1aa9f022a4b056dd352b586fb70cb0e270" prot="private" virt="non-virtual"><scope>SurveyManager::utility::Mail</scope><name>SUPPORT_ADDRESS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::AdvancedFilter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1aae01bd95071eff81d361e0b9c380ddfb" prot="private" static="no" mutable="no">
+        <type>ArrayList</type>
+        <definition>ArrayList SurveyManager.forms.dialogs.AdvancedFilter.filters</definition>
+        <argsstring></argsstring>
+        <name>filters</name>
+        <initializer>= new ArrayList()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="28" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8d5c87eebd4f0c8d73aed2c3bd012401" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AdvancedFilter.whereClause</definition>
+        <argsstring></argsstring>
+        <name>whereClause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="29" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1adca5eb5de82a9665d6bf980cadeb7e48" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string SurveyManager.forms.dialogs.AdvancedFilter.optionalClause</definition>
+        <argsstring></argsstring>
+        <name>optionalClause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="30" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a957a446971abd779df1fe92285f3ef17" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AdvancedFilter.query</definition>
+        <argsstring></argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="31" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a2afd6713a6b27d44803ac44fe8f2e892" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string SurveyManager.forms.dialogs.AdvancedFilter.tableName</definition>
+        <argsstring></argsstring>
+        <name>tableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="32" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a103dd3415d3a195626f058a5d828d276" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref> &gt;</type>
+        <definition>List&lt;SqlOperators&gt; SurveyManager.forms.dialogs.AdvancedFilter.originalOperators</definition>
+        <argsstring></argsstring>
+        <name>originalOperators</name>
+        <initializer>= new List&lt;<ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref>&gt;((<ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref>[])Enum.GetValues(typeof(<ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref>)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="33" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a694a041b26f863c573fd71b49a01a221" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref> &gt;</type>
+        <definition>List&lt;SqlOperators&gt; SurveyManager.forms.dialogs.AdvancedFilter.likeOperatorOnly</definition>
+        <argsstring></argsstring>
+        <name>likeOperatorOnly</name>
+        <initializer>= new List&lt;<ref refid="namespace_survey_manager_1_1utility_1_1_filtering_1a86b5e8014780c6d52519fbbd88ff824b" kindref="member">SqlOperators</ref>&gt;
+        {
+            SqlOperators.Like
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="34" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1afa472fd3c428eee150269baf6e1a1a6d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SurveyManager.forms.dialogs.AdvancedFilter.selectedOperationIndex</definition>
+        <argsstring></argsstring>
+        <name>selectedOperationIndex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="39" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a7e6c6b83de26552c722e8061a0afd958" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.AdvancedFilter.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="11" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1af62cbdc1711e3bf8d77813520e70ca7e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.AdvancedFilter.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="299" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0f8d412e725274996087162d891e6a75" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonDataGridView</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonDataGridView SurveyManager.forms.dialogs.AdvancedFilter.dgvFilters</definition>
+        <argsstring></argsstring>
+        <name>dgvFilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="300" column="67" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a83c240f06c140fc52b73123f6c2803ad" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.AdvancedFilter.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="301" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab4f38eb2a9c50f12a8a0e71196842716" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonComboBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonComboBox SurveyManager.forms.dialogs.AdvancedFilter.cmbColumns</definition>
+        <argsstring></argsstring>
+        <name>cmbColumns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="302" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ad7e0f5a940ed5a6f6bbb52e26a6d8422" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonComboBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonComboBox SurveyManager.forms.dialogs.AdvancedFilter.cmbChoices</definition>
+        <argsstring></argsstring>
+        <name>cmbChoices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="303" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a62dc5c5856b8cde727aeaee9a76523ae" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.AdvancedFilter.txtSearch1</definition>
+        <argsstring></argsstring>
+        <name>txtSearch1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="304" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a4c978c049fb7f68f1a82b0fda0dedbad" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonDropButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonDropButton SurveyManager.forms.dialogs.AdvancedFilter.btnAddFilter</definition>
+        <argsstring></argsstring>
+        <name>btnAddFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="305" column="65" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8b32402a0c5bd075331de54831f36b5f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenu</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenu SurveyManager.forms.dialogs.AdvancedFilter.booleanOptions</definition>
+        <argsstring></argsstring>
+        <name>booleanOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="306" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0b05d0a731793d4ee0f29e92f43a466a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems SurveyManager.forms.dialogs.AdvancedFilter.kryptonContextMenuItems1</definition>
+        <argsstring></argsstring>
+        <name>kryptonContextMenuItems1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="307" column="71" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ae9325bc1e8ac48bed266faf1616ac9e8" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem SurveyManager.forms.dialogs.AdvancedFilter.andContextItem</definition>
+        <argsstring></argsstring>
+        <name>andContextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="308" column="70" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a53de6158f4e3478984ade5f6513dfa41" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem SurveyManager.forms.dialogs.AdvancedFilter.orContextItem</definition>
+        <argsstring></argsstring>
+        <name>orContextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="309" column="70" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a026ccdfba3b8c553d1530fe68fcf6f25" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource SurveyManager.forms.dialogs.AdvancedFilter.customerBindingSource</definition>
+        <argsstring></argsstring>
+        <name>customerBindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="310" column="49" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a483c6b3d5639986467a6c38de18eafe5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.dialogs.AdvancedFilter.tableLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="311" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0d8137c35091c2fc73e882fc2849c033" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.AdvancedFilter.btnSearch</definition>
+        <argsstring></argsstring>
+        <name>btnSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="312" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a74e4e98e9c404ea00f5181cec814eb88" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.AdvancedFilter.btnClear</definition>
+        <argsstring></argsstring>
+        <name>btnClear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="313" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0376b99a17e3dc239f92b0ace2f58b6a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenu</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenu SurveyManager.forms.dialogs.AdvancedFilter.boolContext</definition>
+        <argsstring></argsstring>
+        <name>boolContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="314" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab130b2cd8ac64bd664473263d41f6d08" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems SurveyManager.forms.dialogs.AdvancedFilter.kryptonContextMenuItems2</definition>
+        <argsstring></argsstring>
+        <name>kryptonContextMenuItems2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="315" column="71" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0e0ddbb7fae0c3cd8d3b9580b9a9bff0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem SurveyManager.forms.dialogs.AdvancedFilter.kryptonContextMenuItem1</definition>
+        <argsstring></argsstring>
+        <name>kryptonContextMenuItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="316" column="70" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ac30bee7e74037ad7f1cdfa450565975f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem SurveyManager.forms.dialogs.AdvancedFilter.kryptonContextMenuItem2</definition>
+        <argsstring></argsstring>
+        <name>kryptonContextMenuItem2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="317" column="70" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a2cbfc8263a61852947f1e81cc12efe19" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource SurveyManager.forms.dialogs.AdvancedFilter.dBMapBindingSource</definition>
+        <argsstring></argsstring>
+        <name>dBMapBindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="318" column="49" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1af5398d3ab1ce590d05ed9f9b13e2433a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn SurveyManager.forms.dialogs.AdvancedFilter.columnDBColumn</definition>
+        <argsstring></argsstring>
+        <name>columnDBColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="319" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0adbf46e4614da9b64c0afd7942a4ea8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn SurveyManager.forms.dialogs.AdvancedFilter.columnOption</definition>
+        <argsstring></argsstring>
+        <name>columnOption</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="320" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a952ede9b64e4fa499aab233b593f4b6f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn SurveyManager.forms.dialogs.AdvancedFilter.columnCriteria</definition>
+        <argsstring></argsstring>
+        <name>columnCriteria</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="321" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab3ac1c33f520a1eb1d0e0b8087b4c0ef" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn SurveyManager.forms.dialogs.AdvancedFilter.columnBoolean</definition>
+        <argsstring></argsstring>
+        <name>columnBoolean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="322" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8bda5d9d9ede6d878561d5c6821d497c" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.dialogs.AdvancedFilter.FilterDone</definition>
+        <argsstring></argsstring>
+        <name>FilterDone</name>
+        <briefdescription>
+<para>Occurs whenever the filtering is done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="44" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9d468e4d41a7c683d3f612a9aa8d5513" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.AdvancedFilter.AdvancedFilter</definition>
+        <argsstring>(string tableName, ArrayList columns, string title=&quot;&quot;, string additionalColumnFilter=&quot;&quot;, Icon windowIcon=null)</argsstring>
+        <name>AdvancedFilter</name>
+        <param>
+          <type>string</type>
+          <declname>tableName</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>columns</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>additionalColumnFilter</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>Icon</type>
+          <declname>windowIcon</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter" kindref="compound">AdvancedFilter</ref> dialog with the specified table name, columns, and optional title. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table name in the backing database.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column options available for the user to select from. This ArrayList must contain items of type DBMap.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional title displayed in the titlebar of this dialog.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalColumnFilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional, additional filter to search by. Example: <computeroutput>company_id=1</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="53" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="53" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a79fb67cad902461de4a25071a74a846a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.AddFilterToGrid</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AddFilterToGrid</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="93" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="93" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab24617c0f466fee63754bd726f92caa0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.AddAndOperation</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AddAndOperation</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="109" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="109" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9807589715c05be71644a14caef80b43" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.AddOrOperation</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AddOrOperation</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="125" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="125" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a28a68c03c91772d13d9a79f4232f16e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AdvancedFilter.BuildFilter</definition>
+        <argsstring>()</argsstring>
+        <name>BuildFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="141" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="141" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9f8c8014302ff661d30b10467a47b2fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.AdvancedFilter.BuildFilterNoRows</definition>
+        <argsstring>()</argsstring>
+        <name>BuildFilterNoRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="203" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="203" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a240c6fe76b489192ca6f73699a8e02d7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.btnSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="227" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="227" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8419e03a4002ceb36ce1b49a2ab80a12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.btnClear_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnClear_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="263" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="263" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a50b15bafe76721f3f889c094b82355da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.txtSearch1_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtSearch1_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="270" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="270" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a64b51f4be6375ac128e1a22574dfa4e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.txtSearch1_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtSearch1_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="279" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="279" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9fe73fa1ed7ba1548c87d189b1d664b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.AdvancedFilter_HelpRequested</definition>
+        <argsstring>(object sender, HelpEventArgs hlpevent)</argsstring>
+        <name>AdvancedFilter_HelpRequested</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>HelpEventArgs</type>
+          <declname>hlpevent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="288" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="288" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ad7c786911be1e937db22bc18831cd6b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.cmbColumns_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbColumns_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="294" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="294" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1aa7438b2c2574aeb4b32fce4534c444f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.AdvancedFilter.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="32" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="32" bodyend="295"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a4d28f1ef9cda85370270c4189d45ef3d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.AdvancedFilter.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" line="17" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.Designer.cs" bodystart="17" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is an advanced filter dialog that makes use of the classes in the <ref refid="namespace_survey_manager_1_1utility_1_1_filtering" kindref="compound">utility.Filtering</ref> namespace. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>To filter, a user adds a row to the DataGridView by using the combo boxes and text input, along with a drop-down button with two BooleanOps (AND, OR). </para>
+<para>To use this dialog, an ArrayList of columns of type DBMap must be provided to populate the combo boxes. The table name in the actual database must also be provided for use in creating the final query string. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AdvancedFilter</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.AdvancedFilter</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" line="26" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/AdvancedFilter.cs" bodystart="27" bodyend="310"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab24617c0f466fee63754bd726f92caa0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>AddAndOperation</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a79fb67cad902461de4a25071a74a846a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>AddFilterToGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9807589715c05be71644a14caef80b43" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>AddOrOperation</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9d468e4d41a7c683d3f612a9aa8d5513" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>AdvancedFilter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9fe73fa1ed7ba1548c87d189b1d664b0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>AdvancedFilter_HelpRequested</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ae9325bc1e8ac48bed266faf1616ac9e8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>andContextItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0376b99a17e3dc239f92b0ace2f58b6a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>boolContext</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8b32402a0c5bd075331de54831f36b5f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>booleanOptions</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a4c978c049fb7f68f1a82b0fda0dedbad" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>btnAddFilter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a74e4e98e9c404ea00f5181cec814eb88" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>btnClear</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8419e03a4002ceb36ce1b49a2ab80a12" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>btnClear_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0d8137c35091c2fc73e882fc2849c033" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>btnSearch</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a240c6fe76b489192ca6f73699a8e02d7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>btnSearch_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a28a68c03c91772d13d9a79f4232f16e4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>BuildFilter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a9f8c8014302ff661d30b10467a47b2fc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>BuildFilterNoRows</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ad7e0f5a940ed5a6f6bbb52e26a6d8422" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>cmbChoices</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab4f38eb2a9c50f12a8a0e71196842716" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>cmbColumns</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ad7c786911be1e937db22bc18831cd6b1" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>cmbColumns_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab3ac1c33f520a1eb1d0e0b8087b4c0ef" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>columnBoolean</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a952ede9b64e4fa499aab233b593f4b6f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>columnCriteria</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1af5398d3ab1ce590d05ed9f9b13e2433a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>columnDBColumn</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0adbf46e4614da9b64c0afd7942a4ea8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>columnOption</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a7e6c6b83de26552c722e8061a0afd958" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a026ccdfba3b8c553d1530fe68fcf6f25" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>customerBindingSource</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a2cbfc8263a61852947f1e81cc12efe19" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>dBMapBindingSource</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0f8d412e725274996087162d891e6a75" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>dgvFilters</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a4d28f1ef9cda85370270c4189d45ef3d" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8bda5d9d9ede6d878561d5c6821d497c" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>FilterDone</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1aae01bd95071eff81d361e0b9c380ddfb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>filters</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1af62cbdc1711e3bf8d77813520e70ca7e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a83c240f06c140fc52b73123f6c2803ad" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1aa7438b2c2574aeb4b32fce4534c444f5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0e0ddbb7fae0c3cd8d3b9580b9a9bff0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>kryptonContextMenuItem1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ac30bee7e74037ad7f1cdfa450565975f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>kryptonContextMenuItem2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a0b05d0a731793d4ee0f29e92f43a466a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>kryptonContextMenuItems1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1ab130b2cd8ac64bd664473263d41f6d08" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>kryptonContextMenuItems2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a694a041b26f863c573fd71b49a01a221" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>likeOperatorOnly</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1adca5eb5de82a9665d6bf980cadeb7e48" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>optionalClause</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a53de6158f4e3478984ade5f6513dfa41" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>orContextItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a103dd3415d3a195626f058a5d828d276" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>originalOperators</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a957a446971abd779df1fe92285f3ef17" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>query</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1afa472fd3c428eee150269baf6e1a1a6d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>selectedOperationIndex</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a483c6b3d5639986467a6c38de18eafe5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>tableLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a2afd6713a6b27d44803ac44fe8f2e892" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>tableName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a62dc5c5856b8cde727aeaee9a76523ae" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>txtSearch1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a50b15bafe76721f3f889c094b82355da" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>txtSearch1_Enter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a64b51f4be6375ac128e1a22574dfa4e5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>txtSearch1_Leave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter_1a8d5c87eebd4f0c8d73aed2c3bd012401" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::AdvancedFilter</scope><name>whereClause</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

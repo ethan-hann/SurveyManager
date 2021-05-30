@@ -1,0 +1,1115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::PdfGeneration::PDF</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a31ba62060386a386a104a7eda367540a" prot="private" static="yes" mutable="no">
+        <type>PdfDocument</type>
+        <definition>PdfDocument SurveyManager.utility.PdfGeneration.PDF.document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="21" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afa5c8b482f2b1947eb1e034d3dc4f7d9" prot="private" static="yes" mutable="no">
+        <type>PdfPageBase</type>
+        <definition>PdfPageBase SurveyManager.utility.PdfGeneration.PDF.currentPage</definition>
+        <argsstring></argsstring>
+        <name>currentPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="22" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1abb733f7bc2fc5d7a7f73e3f8065d59d3" prot="private" static="yes" mutable="no">
+        <type>PdfLayoutResult</type>
+        <definition>PdfLayoutResult SurveyManager.utility.PdfGeneration.PDF.currentTableLayout</definition>
+        <argsstring></argsstring>
+        <name>currentTableLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="23" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5183c6214ee3522d44a2c872f996fd09" prot="private" static="yes" mutable="no">
+        <type>PdfMargins</type>
+        <definition>PdfMargins SurveyManager.utility.PdfGeneration.PDF.margins</definition>
+        <argsstring></argsstring>
+        <name>margins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="24" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1012a1dd8907e57f5eede1234c2a511d" prot="private" static="yes" mutable="no">
+        <type>PdfTrueTypeFont</type>
+        <definition>PdfTrueTypeFont SurveyManager.utility.PdfGeneration.PDF.pageFont</definition>
+        <argsstring></argsstring>
+        <name>pageFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="25" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a68168a7e89010a0fd32dcda97fe14432" prot="private" static="yes" mutable="no">
+        <type>PdfTrueTypeFont</type>
+        <definition>PdfTrueTypeFont SurveyManager.utility.PdfGeneration.PDF.pageFontBold</definition>
+        <argsstring></argsstring>
+        <name>pageFontBold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="26" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9d6fe90e9697b879de0e904b8e2565ba" prot="private" static="yes" mutable="no">
+        <type>PdfTrueTypeFont</type>
+        <definition>PdfTrueTypeFont SurveyManager.utility.PdfGeneration.PDF.headerFont</definition>
+        <argsstring></argsstring>
+        <name>headerFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="27" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0ac28c5e52c431bfb3fa3f8033c8317f" prot="private" static="yes" mutable="no">
+        <type>PdfTrueTypeFont</type>
+        <definition>PdfTrueTypeFont SurveyManager.utility.PdfGeneration.PDF.headerFontBold</definition>
+        <argsstring></argsstring>
+        <name>headerFontBold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="28" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa1a4b1da20517f4ddcd495d1941766e0" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.PdfGeneration.PDF.savePath</definition>
+        <argsstring></argsstring>
+        <name>savePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="30" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae2adf2fd7377fba717d86f76c1c5a0e9" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.PdfGeneration.PDF.isStream</definition>
+        <argsstring></argsstring>
+        <name>isStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="32" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a33e544110c143610f018840f62917c4a" prot="private" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float SurveyManager.utility.PdfGeneration.PDF.currentY</definition>
+        <argsstring></argsstring>
+        <name>currentY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="34" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.CreateDocument</definition>
+        <argsstring>(string filename, string title, string author, string subject, string headerString, Fonts documentFont, bool includeHeader=true, bool includeFooter=true, bool landscape=false, int fontSize=11, bool stream=false)</argsstring>
+        <name>CreateDocument</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>headerString</declname>
+        </param>
+        <param>
+          <type>Fonts</type>
+          <declname>documentFont</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>includeHeader</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>includeFooter</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>landscape</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fontSize</declname>
+          <defval>11</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stream</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> Document with the specified information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This should be called before any Generation methods in this class as it sets up variables relevant to the next Generate method call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name of the new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title (for metadata) of the new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>author</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The author (for metadata) of the new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject (for metadata) of the new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>headerString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text for the header.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>documentFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font family to use for this new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document. See Fonts for valid options.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fontSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normal font size for the text in this new <ref refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f" kindref="compound">PDF</ref> document. Default is 11. The header font size will be this font size plus 4.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should the new document be created as a MemoryStream instead of a file? Default is false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="48" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="48" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa25496a2772c8fd385adcc5866c9d16c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MemoryStream</type>
+        <definition>static MemoryStream SurveyManager.utility.PdfGeneration.PDF.GenerateBillingReport</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>GenerateBillingReport</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="113" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="113" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2ec97b0e5a23753bd6428c44f605c1dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MemoryStream</type>
+        <definition>static MemoryStream SurveyManager.utility.PdfGeneration.PDF.GenerateFullReport</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>GenerateFullReport</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="197" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="197" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a4b5d82b9ff662f4e3ab22ffaf151c580" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MemoryStream</type>
+        <definition>static MemoryStream SurveyManager.utility.PdfGeneration.PDF.GenerateFileReport</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>GenerateFileReport</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="328" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="328" bodyend="356"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae9e41508632b0401e60cfe1668c8d7fb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.AddBillingContent</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>AddBillingContent</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="138" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="138" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8df82ad35d8421e88d7ce8db2cd21d46" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.AddReportHeader</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>AddReportHeader</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="223" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="223" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a98c4add5bc11bccd8a0150e1234e6e0d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.AddDescriptionString</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>AddDescriptionString</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="252" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="252" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a6b164324fa9da3e96905a41996c23922" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.AddReportContent</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>AddReportContent</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="261" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="261" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ac42eb0c5dd4f5b7725d8bbae60bab894" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawTable</definition>
+        <argsstring>(DataTable dt)</argsstring>
+        <name>DrawTable</name>
+        <param>
+          <type>DataTable</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="358" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="358" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a21c672340e2641f785b4456347074b4d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.table_BeginRowLayout</definition>
+        <argsstring>(object sender, BeginRowLayoutEventArgs args)</argsstring>
+        <name>table_BeginRowLayout</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>BeginRowLayoutEventArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="394" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="394" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1cdf943af1afde0719474e754f84d602" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PdfPageTemplateElement</type>
+        <definition>static PdfPageTemplateElement SurveyManager.utility.PdfGeneration.PDF.CreateHeaderTemplate</definition>
+        <argsstring>(PdfDocument doc, PdfMargins margins, string headerString)</argsstring>
+        <name>CreateHeaderTemplate</name>
+        <param>
+          <type>PdfDocument</type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type>PdfMargins</type>
+          <declname>margins</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>headerString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="403" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="403" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9aff59e78f6cf4ac3333aa2dc5e53e2a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PdfPageTemplateElement</type>
+        <definition>static PdfPageTemplateElement SurveyManager.utility.PdfGeneration.PDF.CreateFooterTemplate</definition>
+        <argsstring>(PdfDocument doc, PdfMargins margins)</argsstring>
+        <name>CreateFooterTemplate</name>
+        <param>
+          <type>PdfDocument</type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type>PdfMargins</type>
+          <declname>margins</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="438" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="438" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab803a26db046b078a0c77c57a1b74d92" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawLine</definition>
+        <argsstring>(PdfCanvas graphics, float x, float y, float x2, float y2)</argsstring>
+        <name>DrawLine</name>
+        <param>
+          <type>PdfCanvas</type>
+          <declname>graphics</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="467" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="467" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a90aa372daee8362e70cf57aed3732e2d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawLineSeperator</definition>
+        <argsstring>(bool updateCurrentY=true)</argsstring>
+        <name>DrawLineSeperator</name>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="477" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="477" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a08adc05d0192b4b406dad74ee8856f32" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawString</definition>
+        <argsstring>(string text, float x, bool updateCurrentY=true)</argsstring>
+        <name>DrawString</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Draw a string to the page at the specified x-position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-position to start drawing the string at.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the current y-position variable after drawing?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="490" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="490" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afbc75211a936539f5a841ef10f24f2fa" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawStringBold</definition>
+        <argsstring>(string text, float x, bool updateCurrentY=true)</argsstring>
+        <name>DrawStringBold</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Draw a bold string to the page at the specified x-position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-position to start drawing the string at.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the current y-position variable after drawing?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="514" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="514" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2d0113e3f140a182bf44f694ff36ad57" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawStringLarge</definition>
+        <argsstring>(string text, float x, bool updateCurrentY=true)</argsstring>
+        <name>DrawStringLarge</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Draw a large string to the page at the specified x-position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-position to start drawing the string at.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the current y-position variable after drawing?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="539" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="539" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0c16e289c01663dad8322ad8bb7707e4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawStringLargeBold</definition>
+        <argsstring>(string text, float x, bool updateCurrentY=true)</argsstring>
+        <name>DrawStringLargeBold</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Draw a bold, large string to the page at the specified x-position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-position to start drawing the string at.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the current y-position variable after drawing?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="563" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="563" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ace7fb1dd8534c9250e1a1a39c693dd80" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SizeF</type>
+        <definition>static SizeF SurveyManager.utility.PdfGeneration.PDF.DrawStringPair</definition>
+        <argsstring>(string title, string description, float x, bool updateCurrentY=true)</argsstring>
+        <name>DrawStringPair</name>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Draw a string pair with a bolded title and normal description on the same line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description text to draw.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting x position to draw the two strings at.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the current y-position variable after drawing?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The SizeF of the new string pair.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="589" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="589" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af5eec04a137c79892394bae8d41df104" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.utility.PdfGeneration.PDF.DrawStringLine</definition>
+        <argsstring>(Pair&lt; string, string &gt; left, bool leftIsPair, Pair&lt; string, string &gt; right, bool rightIsPair, bool updateCurrentY)</argsstring>
+        <name>DrawStringLine</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1utility_1_1_pair" kindref="compound">Pair</ref>&lt; string, string &gt;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>leftIsPair</declname>
+        </param>
+        <param>
+          <type><ref refid="class_survey_manager_1_1utility_1_1_pair" kindref="compound">Pair</ref>&lt; string, string &gt;</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>rightIsPair</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updateCurrentY</declname>
+        </param>
+        <briefdescription>
+<para>Draw two text pairs, one left aligned and one right aligned. The strings to draw are specified by the Pair&lt;K, V&gt; parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A pair can be any two strings; i.e. &quot;Customer ID:&quot; and &quot;Test Customer&quot;. To draw the text, this method needs to know if the left and right text should be considered as pairs. This means that the Key of the Pair&lt;K, V&gt; will be drawn bolded while the Value will be drawn using the regular text font.</para>
+<para>You should also specify whether the current y-position should be updated after execution of this method.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw left aligned.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>leftIsPair</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Is the left text considered a pair?</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to draw right aligned.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rightIsPair</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Is the right text considered a pair?</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updateCurrentY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should this method update the value of the current y-position?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="623" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="623" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab34365a8c172244f856205023cfde811" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetLeftPage</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeftPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="656" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="656" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a84023319be719fc6eef8be13940e16f7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetRightPage</definition>
+        <argsstring>()</argsstring>
+        <name>GetRightPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="661" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="661" bodyend="664"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a26c98a1021b9a13c0a83ccae8ce59118" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetTopPage</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="666" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="666" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab85b1fa79727b5d292ffd1d6990e2873" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetBottomPage</definition>
+        <argsstring>()</argsstring>
+        <name>GetBottomPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="674" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="674" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae35fbdc44470e8da2075018e1b090e35" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetCenterPageX</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenterPageX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="687" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="687" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8bc020848428388c80ff8c293e0ae0bf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.GetCenterPageY</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenterPageY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="692" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="692" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af15438dd49ea2c646f1dc5e26ee1a31e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PointF</type>
+        <definition>static PointF SurveyManager.utility.PdfGeneration.PDF.GetCenterPage</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenterPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="697" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="697" bodyend="700"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa91a25e2800f9fccd6471d43da0d2369" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.UpdateCurrentY</definition>
+        <argsstring>(string lastLineText, bool wasBolded, bool usingHeaderFont=false)</argsstring>
+        <name>UpdateCurrentY</name>
+        <param>
+          <type>string</type>
+          <declname>lastLineText</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wasBolded</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>usingHeaderFont</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Updates the y-position using the last line of text and the specified parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lastLineText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last line of text drawn.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wasBolded</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Was the text drawn with the bold font?</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usingHeaderFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Was the text draw with the header font?</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new currentY position.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="709" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="709" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5958abdcb67046787fe6da465373bad3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float SurveyManager.utility.PdfGeneration.PDF.BacktrackCurrentY</definition>
+        <argsstring>(string lastLineText, bool wasBolded, bool usingHeaderFont=false)</argsstring>
+        <name>BacktrackCurrentY</name>
+        <param>
+          <type>string</type>
+          <declname>lastLineText</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wasBolded</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>usingHeaderFont</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="724" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="724" bodyend="737"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" line="19" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration/PDF.cs" bodystart="20" bodyend="740"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae9e41508632b0401e60cfe1668c8d7fb" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddBillingContent</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a98c4add5bc11bccd8a0150e1234e6e0d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddDescriptionString</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a6b164324fa9da3e96905a41996c23922" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddReportContent</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8df82ad35d8421e88d7ce8db2cd21d46" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>AddReportHeader</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5958abdcb67046787fe6da465373bad3" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>BacktrackCurrentY</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a314b0d95abf6da543335cd98f13284a6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>CreateDocument</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9aff59e78f6cf4ac3333aa2dc5e53e2a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>CreateFooterTemplate</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1cdf943af1afde0719474e754f84d602" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>CreateHeaderTemplate</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afa5c8b482f2b1947eb1e034d3dc4f7d9" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>currentPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1abb733f7bc2fc5d7a7f73e3f8065d59d3" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>currentTableLayout</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a33e544110c143610f018840f62917c4a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>currentY</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a31ba62060386a386a104a7eda367540a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>document</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab803a26db046b078a0c77c57a1b74d92" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawLine</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a90aa372daee8362e70cf57aed3732e2d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawLineSeperator</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a08adc05d0192b4b406dad74ee8856f32" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawString</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1afbc75211a936539f5a841ef10f24f2fa" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawStringBold</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2d0113e3f140a182bf44f694ff36ad57" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawStringLarge</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0c16e289c01663dad8322ad8bb7707e4" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawStringLargeBold</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af5eec04a137c79892394bae8d41df104" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawStringLine</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ace7fb1dd8534c9250e1a1a39c693dd80" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawStringPair</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ac42eb0c5dd4f5b7725d8bbae60bab894" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>DrawTable</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa25496a2772c8fd385adcc5866c9d16c" prot="public" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GenerateBillingReport</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a4b5d82b9ff662f4e3ab22ffaf151c580" prot="public" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GenerateFileReport</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a2ec97b0e5a23753bd6428c44f605c1dc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GenerateFullReport</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab85b1fa79727b5d292ffd1d6990e2873" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetBottomPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1af15438dd49ea2c646f1dc5e26ee1a31e" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetCenterPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae35fbdc44470e8da2075018e1b090e35" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetCenterPageX</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a8bc020848428388c80ff8c293e0ae0bf" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetCenterPageY</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ab34365a8c172244f856205023cfde811" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetLeftPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a84023319be719fc6eef8be13940e16f7" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetRightPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a26c98a1021b9a13c0a83ccae8ce59118" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>GetTopPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a9d6fe90e9697b879de0e904b8e2565ba" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>headerFont</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a0ac28c5e52c431bfb3fa3f8033c8317f" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>headerFontBold</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1ae2adf2fd7377fba717d86f76c1c5a0e9" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>isStream</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a5183c6214ee3522d44a2c872f996fd09" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>margins</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a1012a1dd8907e57f5eede1234c2a511d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>pageFont</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a68168a7e89010a0fd32dcda97fe14432" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>pageFontBold</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa1a4b1da20517f4ddcd495d1941766e0" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>savePath</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1a21c672340e2641f785b4456347074b4d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>table_BeginRowLayout</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_pdf_generation_1_1_p_d_f_1aa91a25e2800f9fccd6471d43da0d2369" prot="private" virt="non-virtual"><scope>SurveyManager::utility::PdfGeneration::PDF</scope><name>UpdateCurrentY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

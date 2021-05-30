@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::pages::BillingPortal</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonPage</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal_1a297387ec95335c79ec0d884330e8b045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.pages.BillingPortal.BillingPortal</definition>
+        <argsstring>(string titleText=&quot;Billing Portal&quot;)</argsstring>
+        <name>BillingPortal</name>
+        <param>
+          <type>string</type>
+          <declname>titleText</declname>
+          <defval>&quot;Billing Portal&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" line="11" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" bodystart="11" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal_1a2c7c1de6283ba8d2fbae8306533bc13d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.pages.BillingPortal.UpdateMainFormStatus</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UpdateMainFormStatus</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" line="26" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.BillingPortal</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>KryptonPage</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.pages.BillingPortal</label>
+        <link refid="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages/BillingPortal.cs" bodystart="10" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal_1a297387ec95335c79ec0d884330e8b045" prot="public" virt="non-virtual"><scope>SurveyManager::forms::pages::BillingPortal</scope><name>BillingPortal</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1pages_1_1_billing_portal_1a2c7c1de6283ba8d2fbae8306533bc13d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::pages::BillingPortal</scope><name>UpdateMainFormStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

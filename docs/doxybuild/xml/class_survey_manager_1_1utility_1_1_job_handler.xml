@@ -1,0 +1,721 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_job_handler" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::JobHandler</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a3b45db8533fbbaf27d70381377260899" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_job_handler" kindref="compound">JobHandler</ref></type>
+        <definition>JobHandler SurveyManager.utility.JobHandler.instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="20" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a66c93394d490893f5c6dca4f88158278" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object SurveyManager.utility.JobHandler.padlock</definition>
+        <argsstring></argsstring>
+        <name>padlock</name>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="21" column="40" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a7dfadc113f27bc1413ad3f2e4fbe1767" prot="private" static="no" mutable="no">
+        <type>BackgroundWorker</type>
+        <definition>BackgroundWorker SurveyManager.utility.JobHandler.saveBackgroundWorker</definition>
+        <argsstring></argsstring>
+        <name>saveBackgroundWorker</name>
+        <initializer>= new BackgroundWorker()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="22" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a8d389d3ae9497945806ddf26d8d9763c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.isClosing</definition>
+        <argsstring></argsstring>
+        <name>isClosing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="23" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a68caede35b28d136605c604875c2b071" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.JobHandler.lastJobNumber</definition>
+        <argsstring></argsstring>
+        <name>lastJobNumber</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="24" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a9640fa1f45547c9f4e54ab442906f8e5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler._savePending</definition>
+        <argsstring></argsstring>
+        <name>_savePending</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="89" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a3e8f5a321e09229c45be764e57a4bb37" prot="private" static="no" mutable="no">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler._jobState</definition>
+        <argsstring></argsstring>
+        <name>_jobState</name>
+        <initializer>= JobState.None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="118" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1ac43301232f564be1638c696d9ca3042d" prot="private" static="no" mutable="no">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.utility.JobHandler.saveError</definition>
+        <argsstring></argsstring>
+        <name>saveError</name>
+        <initializer>= DatabaseError.NoError</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="437" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1ab02ecd3d8a318d28f63327057c2bf4b7" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_job_handler" kindref="compound">JobHandler</ref></type>
+        <definition>JobHandler SurveyManager.utility.JobHandler.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="26" column="34" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1a02d1ce67ccaef03bd859ef1ff084eefb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Survey</type>
+        <definition>Survey SurveyManager.utility.JobHandler.CurrentJob</definition>
+        <argsstring></argsstring>
+        <name>CurrentJob</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Get the currently opened survey job. If no job is open, returns null. It is recommended to use <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a8f4c1570ae472b880deec4698c53578a" kindref="member">IsJobOpen</ref> to make sure there is actually a job opened. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="87" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1a0a6eff804071da6862c9007aff2558e8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool?</type>
+        <definition>bool? SurveyManager.utility.JobHandler.SavePending</definition>
+        <argsstring></argsstring>
+        <name>SavePending</name>
+        <briefdescription>
+<para>Get a value indicating if the current job needs saving because of modification. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="94" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1a8f4c1570ae472b880deec4698c53578a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.IsJobOpen</definition>
+        <argsstring></argsstring>
+        <name>IsJobOpen</name>
+        <briefdescription>
+<para>Get a value indicating if a job is currently opened. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="105" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1ad32a5f7119b9e134673d71ca61087b47" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.ReadOnly</definition>
+        <argsstring></argsstring>
+        <name>ReadOnly</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Get or set whether this job should be considered read-only and therefore non-editable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="116" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.CurrentJobState</definition>
+        <argsstring></argsstring>
+        <name>CurrentJobState</name>
+        <briefdescription>
+<para>Get a JobState enum value representing the current state of the job handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="123" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="124" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a281751496c31fbb347456dffb6ce47ed" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobOpening</definition>
+        <argsstring></argsstring>
+        <name>JobOpening</name>
+        <briefdescription>
+<para>Occurs when a survey job is being opened. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="48" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1ad51417ff03984f31ba3b7d7d548392c6" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobClosing</definition>
+        <argsstring></argsstring>
+        <name>JobClosing</name>
+        <briefdescription>
+<para>Occurs when a survey job is being closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="52" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1ac591febf03f7857bff68c00c59f0b778" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobOpened</definition>
+        <argsstring></argsstring>
+        <name>JobOpened</name>
+        <briefdescription>
+<para>Occurs after a survey job has been successfully opened. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="56" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a11550012474f36b521a47da8bf1fc714" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobClosed</definition>
+        <argsstring></argsstring>
+        <name>JobClosed</name>
+        <briefdescription>
+<para>Occurs after a survey job has been successfully closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="60" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1ac654b0061addb516fa10b2d9ffc4fa96" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobSaving</definition>
+        <argsstring></argsstring>
+        <name>JobSaving</name>
+        <briefdescription>
+<para>Occurs when a survey job is being saved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="64" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a83be75e8a0f7f09860bcb45995f491bc" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobSaved</definition>
+        <argsstring></argsstring>
+        <name>JobSaved</name>
+        <briefdescription>
+<para>Occurs after a survey job has been successfully saved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="68" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1a42d96d1dc3a01faa22fbc22a97f44a48" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobCreating</definition>
+        <argsstring></argsstring>
+        <name>JobCreating</name>
+        <briefdescription>
+<para>Occurs when a new survey job is being created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="72" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1af6b4c245ffba7cd92ad7fc9eaf7693ed" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.JobCreated</definition>
+        <argsstring></argsstring>
+        <name>JobCreated</name>
+        <briefdescription>
+<para>Occurs after a new survey job has been created successfully. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="76" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.utility.JobHandler.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+<para>Occurs when the status of the main form needs to be updated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="81" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a150584f7fbdeae40f6f4cf4f8a13af80" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.JobHandler.JobHandler</definition>
+        <argsstring>()</argsstring>
+        <name>JobHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="39" column="17" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a179d0a26110f170f83833b753f50ce6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.Open</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="270" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="270" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a56d2bcdb48c371683366a9feb50ff3e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.Open</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>Survey</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="292" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="292" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a5bb1345df4c0061f71318cf08514360c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.Create</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="366" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="366" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1ae53d8d860e762c2f3267830e277a93d3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.Save</definition>
+        <argsstring>()</argsstring>
+        <name>Save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="438" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="438" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a4ac1d6693945b245acd577d1d601819a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.utility.JobHandler.SaveBackgroundWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>SaveBackgroundWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="453" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="453" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1ad290137139f30d39eec0cb646e2c22b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.utility.JobHandler.SaveBackgroundWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>SaveBackgroundWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="471" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="471" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1ad8246647985fdee74df31e699bb9061d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JobState</type>
+        <definition>JobState SurveyManager.utility.JobHandler.Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="542" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="542" bodyend="554"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a450d94c67c4bb5e06057936cd229c788" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.UpdateSavePending</definition>
+        <argsstring>(bool isSavePending)</argsstring>
+        <name>UpdateSavePending</name>
+        <param>
+          <type>bool</type>
+          <declname>isSavePending</declname>
+        </param>
+        <briefdescription>
+<para>Update whether there is a save pending on the current job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Has no effect if the job is opened as Read-Only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isSavePending</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if a save is pending; False otherwise.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new value for <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a0a6eff804071da6862c9007aff2558e8" kindref="member">SavePending</ref></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="137" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a917344de0bb2c6f2a9373672ebf12f59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.OpenJob</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>OpenJob</name>
+        <param>
+          <type>Survey</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Open an existing survey job for editing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method affects the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" kindref="member">CurrentJobState</ref> property and Invokes the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" kindref="member">StatusUpdate</ref> event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Survey to open.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the job was opened successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="149" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="149" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a064374bff30685af21514069164f0566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.OpenJob</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>OpenJob</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+<para>Open an existing survey job for editing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method affects the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" kindref="member">CurrentJobState</ref> property and Invokes the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" kindref="member">StatusUpdate</ref> event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jobNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Job# of the survey job to open.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the job was opened successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="216" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="216" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a56a458509ccd77351bdbdbd6f036d068" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.CreateJob</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>CreateJob</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+<para>Create a new job and open it for editing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method affects the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" kindref="member">CurrentJobState</ref> property and Invokes the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" kindref="member">StatusUpdate</ref> event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jobNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Job# of the survey job to create.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the job was created successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="318" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="318" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a604b4c9911071f896b50f95c01e5c5cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.SaveJob</definition>
+        <argsstring>()</argsstring>
+        <name>SaveJob</name>
+        <briefdescription>
+<para>Save the job to the database on a seperate thread if it is open and not in a Read-Only state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method affects the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" kindref="member">CurrentJobState</ref> property and Invokes the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" kindref="member">StatusUpdate</ref> event.</para>
+<para><simplesect kind="return"><para>True if the job was saved successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="392" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="392" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1a2a8bf59a579267608811f971085b0d30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.utility.JobHandler.CloseJob</definition>
+        <argsstring>(bool isClosingApplication=false, bool isOpeningOtherJob=false)</argsstring>
+        <name>CloseJob</name>
+        <param>
+          <type>bool</type>
+          <declname>isClosingApplication</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isOpeningOtherJob</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Close the currently open job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method affects the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" kindref="member">CurrentJobState</ref> property and Invokes the <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" kindref="member">StatusUpdate</ref> event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isClosingApplication</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the main application is exiting.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isOpeningOtherJob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether another survey job is pending opening.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the job was closed successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="493" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="493" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_job_handler_1aee5ec7a19a501c7cc396dcd5582e7506" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.utility.JobHandler.AddSurveyToRecentJobs</definition>
+        <argsstring>()</argsstring>
+        <name>AddSurveyToRecentJobs</name>
+        <briefdescription>
+<para>Add the current survey job to Settings.RecentJobs. If the job is already present in the list of recent jobs, its Survey.LastUpdated is updated instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="560" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="560" bodyend="588"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class handles all tasks relating to survey jobs. It is responsible for opening, closing, keeping track of the current job, saving, and updating the recent docs for surveys. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class cannot be instantiated. Instead, it must be referenced through its single <ref refid="class_survey_manager_1_1utility_1_1_job_handler_1ab02ecd3d8a318d28f63327057c2bf4b7" kindref="member">Instance</ref> property.</para>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/JobHandler.cs" bodystart="19" bodyend="589"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a3e8f5a321e09229c45be764e57a4bb37" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>_jobState</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a9640fa1f45547c9f4e54ab442906f8e5" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>_savePending</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1aee5ec7a19a501c7cc396dcd5582e7506" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>AddSurveyToRecentJobs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ad8246647985fdee74df31e699bb9061d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Close</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a2a8bf59a579267608811f971085b0d30" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>CloseJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a5bb1345df4c0061f71318cf08514360c" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Create</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a56a458509ccd77351bdbdbd6f036d068" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>CreateJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a02d1ce67ccaef03bd859ef1ff084eefb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>CurrentJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a4cd23b75a088eb329fc0d6ad2a0bd921" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>CurrentJobState</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ab02ecd3d8a318d28f63327057c2bf4b7" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Instance</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a3b45db8533fbbaf27d70381377260899" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>instance</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a8d389d3ae9497945806ddf26d8d9763c" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>isClosing</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a8f4c1570ae472b880deec4698c53578a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>IsJobOpen</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a11550012474f36b521a47da8bf1fc714" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobClosed</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ad51417ff03984f31ba3b7d7d548392c6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobClosing</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1af6b4c245ffba7cd92ad7fc9eaf7693ed" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobCreated</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a42d96d1dc3a01faa22fbc22a97f44a48" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobCreating</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a150584f7fbdeae40f6f4cf4f8a13af80" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobHandler</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ac591febf03f7857bff68c00c59f0b778" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobOpened</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a281751496c31fbb347456dffb6ce47ed" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobOpening</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a83be75e8a0f7f09860bcb45995f491bc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobSaved</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ac654b0061addb516fa10b2d9ffc4fa96" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>JobSaving</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a68caede35b28d136605c604875c2b071" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>lastJobNumber</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a179d0a26110f170f83833b753f50ce6a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Open</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a56d2bcdb48c371683366a9feb50ff3e2" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Open</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a917344de0bb2c6f2a9373672ebf12f59" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>OpenJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a064374bff30685af21514069164f0566" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>OpenJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a66c93394d490893f5c6dca4f88158278" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>padlock</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ad32a5f7119b9e134673d71ca61087b47" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>ReadOnly</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ae53d8d860e762c2f3267830e277a93d3" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>Save</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a7dfadc113f27bc1413ad3f2e4fbe1767" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>saveBackgroundWorker</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a4ac1d6693945b245acd577d1d601819a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>SaveBackgroundWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ad290137139f30d39eec0cb646e2c22b8" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>SaveBackgroundWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ac43301232f564be1638c696d9ca3042d" prot="private" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>saveError</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a604b4c9911071f896b50f95c01e5c5cc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>SaveJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a0a6eff804071da6862c9007aff2558e8" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>SavePending</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1ac7e8b70eb15f84426631b75b670abfe1" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_job_handler_1a450d94c67c4bb5e06057936cd229c788" prot="public" virt="non-virtual"><scope>SurveyManager::utility::JobHandler</scope><name>UpdateSavePending</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

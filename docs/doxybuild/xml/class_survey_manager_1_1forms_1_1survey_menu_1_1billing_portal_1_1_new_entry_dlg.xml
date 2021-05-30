@@ -1,0 +1,930 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1afe6af59b883bb31f9048a8417cb34d3e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.isOfficeEntry</definition>
+        <argsstring></argsstring>
+        <name>isOfficeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="19" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0a172633a195779ac12ad44780d9f2d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.isEditing</definition>
+        <argsstring></argsstring>
+        <name>isEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="20" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2de8919e86125184045bc860fb92de0d" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.associatedDate</definition>
+        <argsstring></argsstring>
+        <name>associatedDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="22" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a84221fcd94923f55488b290fe36c3771" prot="private" static="no" mutable="no">
+        <type>readonly BillingItem</type>
+        <definition>readonly BillingItem SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.oldItem</definition>
+        <argsstring></argsstring>
+        <name>oldItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="23" column="38" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6dd55e33479919271ec8e9c570a8ec40" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad5927bd81ba266e2f68c3dc47398c473" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRadioButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRadioButton SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.radOfficeTime</definition>
+        <argsstring></argsstring>
+        <name>radOfficeTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="314" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a46c3581b812e62590139cb2ed52a9ac7" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRadioButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRadioButton SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.radFieldTime</definition>
+        <argsstring></argsstring>
+        <name>radFieldTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="315" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a523d06fe3bbfe4f3e4192d2c870618ce" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.lblRate</definition>
+        <argsstring></argsstring>
+        <name>lblRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="316" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa2157bf36ae625a96a9eddeab671fe1e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonComboBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonComboBox SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.cmbRates</definition>
+        <argsstring></argsstring>
+        <name>cmbRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="317" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a67f7ad946336b892d5b20aa7779fe413" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnRefreshRates</definition>
+        <argsstring></argsstring>
+        <name>btnRefreshRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="318" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ac3f76dc9528643a32657283c2b9e5db4" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnAddNewRate</definition>
+        <argsstring></argsstring>
+        <name>btnAddNewRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="319" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1af643fe24831277d37605a9e3ae2fde95" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonGroupBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonGroupBox SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.grpDescritpion</definition>
+        <argsstring></argsstring>
+        <name>grpDescritpion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="320" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2985b86c6ac01679949efed4865a78f3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.rtbDescription</definition>
+        <argsstring></argsstring>
+        <name>rtbDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="321" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ab2c139bc4c047c42e002ba07b5e19139" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.statusStrip2</definition>
+        <argsstring></argsstring>
+        <name>statusStrip2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="322" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a830cddb4fc10f525edd1bd28071dd17c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.toolStripStatusLabel2</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="323" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a4592852a25ff83da510250178c1679e5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.lblDescCharCount</definition>
+        <argsstring></argsstring>
+        <name>lblDescCharCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="324" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0d099dce3e697032ca5db367392eb05f" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.lblTimeEntry</definition>
+        <argsstring></argsstring>
+        <name>lblTimeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="325" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa442a3d97edd0ec01aac2a882af32b7a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.dtpTimeEntry</definition>
+        <argsstring></argsstring>
+        <name>dtpTimeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="326" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a442c2d7aeccb57bd8ae64d12d5f4497b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnSaveEntry</definition>
+        <argsstring></argsstring>
+        <name>btnSaveEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="327" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a89d95e8f6ff22588204c9bf7f0a9dab2" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnReset</definition>
+        <argsstring></argsstring>
+        <name>btnReset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="328" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad8eb71e8585e9136f3c0cceafd6ef60c" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.lblFormatBold</definition>
+        <argsstring></argsstring>
+        <name>lblFormatBold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="329" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aac0fb59022a58aa5e79202fcce06c569" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="330" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a1e24b61e857d5a93781d6c78b830fb51" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.lblHelpText</definition>
+        <argsstring></argsstring>
+        <name>lblHelpText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="331" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a681d21b1fd73d1fe3e556286cb29163e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="332" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa5a1c9c92823182be7983b0a9da724d6" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.TimeEntryAdded</definition>
+        <argsstring></argsstring>
+        <name>TimeEntryAdded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="25" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a9a5952e44aeb48d55b9b521082202450" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.NewEntryDlg</definition>
+        <argsstring>(DateTime associatedDate, BillingItem oldItem=null, bool isEditing=false)</argsstring>
+        <name>NewEntryDlg</name>
+        <param>
+          <type>DateTime</type>
+          <declname>associatedDate</declname>
+        </param>
+        <param>
+          <type>BillingItem</type>
+          <declname>oldItem</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isEditing</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="27" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="27" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a95fae6dc5f0e203ee635c1d20d5d4963" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.NewEntryDlg_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>NewEntryDlg_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="44" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="44" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a22308d030fb638212101a053bdb0cdd4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.RefreshRates</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="61" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a076662d521bfd9afe29529aaa26e56ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.SaveEntry</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SaveEntry</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="71" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="71" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a09d1da4136bd1f19b3a261e4b550c7a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.Reset</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="89" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a4457832152ba6bc81a7e56aa9ff9e95d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.radOfficeTime_CheckedChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radOfficeTime_CheckedChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="94" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad7ca4e3f920749746425629b9e3a758e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnRefreshRates_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRefreshRates_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="99" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0ae0e08a7a26e44877672e65d528bb9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnAddTimeEntry_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddTimeEntry_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="105" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="105" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1adecc91cb897afde83e603b4569693e26" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnAddNewRate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddNewRate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="113" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="113" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a89e38c0098bb1d2522fc04531665785a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.AddTimeEntry</definition>
+        <argsstring>()</argsstring>
+        <name>AddTimeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="123" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="123" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a8c74062d127bf578fcf1ec33cb5ce9c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.UpdateTimeEntry</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateTimeEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="157" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="157" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa0fb58a3ab67ce1f9d22fd470acee12c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.ResetControls</definition>
+        <argsstring>()</argsstring>
+        <name>ResetControls</name>
+        <briefdescription>
+<para>Reset the values of the controls to their default (base) values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="193" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="193" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abbea9e53294a68007ff02e8dd5b572ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.SetControls</definition>
+        <argsstring>(BillingItem item)</argsstring>
+        <name>SetControls</name>
+        <param>
+          <type>BillingItem</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Set&apos;s the values of the controls to that of the specified billing item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to set the controls to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="208" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="208" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a7ad41853ca541812554817095bd6dc21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.rtbDescription_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>rtbDescription_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="250" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6aa31525df1451300d00eba79935e652" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.radOfficeTime_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radOfficeTime_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="255" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a3ecf066513c9bed6a411fadab8f56232" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.ResetHelpText</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ResetHelpText</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="260" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1af0533e5430819e4a8122289792c58c9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.radFieldTime_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>radFieldTime_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="265" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6060c1d8aa4bf43d3726c542a867c9c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.dtpTimeEntry_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>dtpTimeEntry_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="270" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abb84884f059a6e2c1b6d2eb1ff2e8654" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.cmbRates_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbRates_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="275" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="275" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abb9065dff49b3d2b99c0f6aa15680528" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnRefreshRates_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRefreshRates_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="280" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="280" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2cdbdc2b5aaf73abdd08bba2e6e33822" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.btnAddNewRate_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddNewRate_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="285" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a7dd849228ab7f8828aef80d94350325a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.rtbDescription_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>rtbDescription_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="290" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="290" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a72363672cde82d8a029f15f35f059b71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.dtpTimeEntry_ValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>dtpTimeEntry_ValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="295" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="295" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad9a8956af9dd1f793c1590458642bc1a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="30" bodyend="311"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ac884e461fb40db4524b9f8b8787d6150" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.billingPortal.NewEntryDlg</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="17" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" bodystart="18" bodyend="299"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a89e38c0098bb1d2522fc04531665785a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>AddTimeEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2de8919e86125184045bc860fb92de0d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>associatedDate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ac3f76dc9528643a32657283c2b9e5db4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnAddNewRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1adecc91cb897afde83e603b4569693e26" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnAddNewRate_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2cdbdc2b5aaf73abdd08bba2e6e33822" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnAddNewRate_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0ae0e08a7a26e44877672e65d528bb9a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnAddTimeEntry_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a67f7ad946336b892d5b20aa7779fe413" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnRefreshRates</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad7ca4e3f920749746425629b9e3a758e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnRefreshRates_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abb9065dff49b3d2b99c0f6aa15680528" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnRefreshRates_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a89d95e8f6ff22588204c9bf7f0a9dab2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnReset</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a442c2d7aeccb57bd8ae64d12d5f4497b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>btnSaveEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa2157bf36ae625a96a9eddeab671fe1e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>cmbRates</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abb84884f059a6e2c1b6d2eb1ff2e8654" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>cmbRates_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6dd55e33479919271ec8e9c570a8ec40" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ac884e461fb40db4524b9f8b8787d6150" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa442a3d97edd0ec01aac2a882af32b7a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>dtpTimeEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6060c1d8aa4bf43d3726c542a867c9c2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>dtpTimeEntry_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a72363672cde82d8a029f15f35f059b71" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>dtpTimeEntry_ValueChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1af643fe24831277d37605a9e3ae2fde95" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>grpDescritpion</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad9a8956af9dd1f793c1590458642bc1a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0a172633a195779ac12ad44780d9f2d5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>isEditing</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1afe6af59b883bb31f9048a8417cb34d3e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>isOfficeEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a681d21b1fd73d1fe3e556286cb29163e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a4592852a25ff83da510250178c1679e5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>lblDescCharCount</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad8eb71e8585e9136f3c0cceafd6ef60c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>lblFormatBold</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a1e24b61e857d5a93781d6c78b830fb51" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>lblHelpText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a523d06fe3bbfe4f3e4192d2c870618ce" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>lblRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a0d099dce3e697032ca5db367392eb05f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>lblTimeEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a9a5952e44aeb48d55b9b521082202450" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>NewEntryDlg</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a95fae6dc5f0e203ee635c1d20d5d4963" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>NewEntryDlg_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a84221fcd94923f55488b290fe36c3771" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>oldItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a46c3581b812e62590139cb2ed52a9ac7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>radFieldTime</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1af0533e5430819e4a8122289792c58c9a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>radFieldTime_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ad5927bd81ba266e2f68c3dc47398c473" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>radOfficeTime</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a4457832152ba6bc81a7e56aa9ff9e95d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>radOfficeTime_CheckedChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a6aa31525df1451300d00eba79935e652" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>radOfficeTime_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a22308d030fb638212101a053bdb0cdd4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>RefreshRates</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a09d1da4136bd1f19b3a261e4b550c7a7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>Reset</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa0fb58a3ab67ce1f9d22fd470acee12c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>ResetControls</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a3ecf066513c9bed6a411fadab8f56232" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>ResetHelpText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a2985b86c6ac01679949efed4865a78f3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>rtbDescription</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a7dd849228ab7f8828aef80d94350325a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>rtbDescription_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a7ad41853ca541812554817095bd6dc21" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>rtbDescription_TextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a076662d521bfd9afe29529aaa26e56ec" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>SaveEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1abbea9e53294a68007ff02e8dd5b572ed" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>SetControls</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aac0fb59022a58aa5e79202fcce06c569" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1ab2c139bc4c047c42e002ba07b5e19139" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>statusStrip2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1aa5a1c9c92823182be7983b0a9da724d6" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>TimeEntryAdded</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a830cddb4fc10f525edd1bd28071dd17c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>toolStripStatusLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal_1_1_new_entry_dlg_1a8c74062d127bf578fcf1ec33cb5ce9c3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::billingPortal::NewEntryDlg</scope><name>UpdateTimeEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

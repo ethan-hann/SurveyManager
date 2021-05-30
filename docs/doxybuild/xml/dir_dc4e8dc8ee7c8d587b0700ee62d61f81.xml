@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_dc4e8dc8ee7c8d587b0700ee62d61f81" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls</compoundname>
+    <innerfile refid="_c_property_grid_8cs">CPropertyGrid.cs</innerfile>
+    <innerfile refid="_c_property_grid_8_designer_8cs">CPropertyGrid.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/"/>
+  </compounddef>
+</doxygen>

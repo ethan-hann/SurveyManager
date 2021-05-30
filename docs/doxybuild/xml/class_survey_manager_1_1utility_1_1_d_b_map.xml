@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_d_b_map" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::DBMap</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_d_b_map_1aba38b3441a54aba6574a3d1274692126" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.DBMap.InternalField</definition>
+        <argsstring></argsstring>
+        <name>InternalField</name>
+        <briefdescription>
+<para>The column name as it appears in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" line="11" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.DBMap.DisplayField</definition>
+        <argsstring></argsstring>
+        <name>DisplayField</name>
+        <briefdescription>
+<para>The display name that should appear in things like FilterDialogs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" line="15" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_d_b_map_1adb4533f77ac41bd891bfc167b6b20eed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.DBMap.DBMap</definition>
+        <argsstring>(string internalField, string displayField)</argsstring>
+        <name>DBMap</name>
+        <param>
+          <type>string</type>
+          <declname>internalField</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>displayField</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="class_survey_manager_1_1utility_1_1_d_b_map" kindref="compound">DBMap</ref> object with the required information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>internalField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column name as it appears in the database.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>displayField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The display name that should appear in things like FilterDialogs.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" line="22" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_d_b_map_1a5c276ce5c36bf006bad9d12b0d52206d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string SurveyManager.utility.DBMap.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Override for object.ToString() that returns this class&apos;s <ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" kindref="member">DisplayField</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" line="32" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Maps an internal database column to its external display member. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" line="6" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs" bodystart="7" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_d_b_map_1adb4533f77ac41bd891bfc167b6b20eed" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DBMap</scope><name>DBMap</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DBMap</scope><name>DisplayField</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_d_b_map_1aba38b3441a54aba6574a3d1274692126" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DBMap</scope><name>InternalField</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_d_b_map_1a5c276ce5c36bf006bad9d12b0d52206d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::DBMap</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

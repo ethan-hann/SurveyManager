@@ -1,0 +1,816 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::userControls::BillingPortalCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae8d70264f1c1caa1b816f4370541cc61" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SurveyManager.forms.userControls.BillingPortalCtl.selectedListBoxIndex</definition>
+        <argsstring></argsstring>
+        <name>selectedListBoxIndex</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="20" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a914374ff5657eb6af57526ff4613b8c8" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, List&lt; BillingItem &gt; &gt;</type>
+        <definition>Dictionary&lt;string, List&lt;BillingItem&gt; &gt; SurveyManager.forms.userControls.BillingPortalCtl.billingItems</definition>
+        <argsstring></argsstring>
+        <name>billingItems</name>
+        <initializer>= new Dictionary&lt;string, List&lt;BillingItem&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="22" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ab44e103af94827e78a36cbeac78e379a" prot="private" static="no" mutable="no">
+        <type>List&lt; OutlookGridRow &gt;</type>
+        <definition>List&lt;OutlookGridRow&gt; SurveyManager.forms.userControls.BillingPortalCtl.rows</definition>
+        <argsstring></argsstring>
+        <name>rows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="60" column="14" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ac68e682ccbb82bb69373184e2546e75b" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.userControls.BillingPortalCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a53c58cb0b3051d1ab1726488481950eb" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.userControls.BillingPortalCtl.hdrGroup</definition>
+        <argsstring></argsstring>
+        <name>hdrGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="301" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae5483f0c2195b261c53fe4856f9f6401" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer SurveyManager.forms.userControls.BillingPortalCtl.kryptonSplitContainer1</definition>
+        <argsstring></argsstring>
+        <name>kryptonSplitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="302" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a7de8899190778540f84a6483b1609b7e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonListBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonListBox SurveyManager.forms.userControls.BillingPortalCtl.lbTimeEntries</definition>
+        <argsstring></argsstring>
+        <name>lbTimeEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="303" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a77e651fae735295bd3d605d44388af0d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.userControls.BillingPortalCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="304" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a4d31862d1a03aa1b41532bf52e3294a4" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.userControls.BillingPortalCtl.btnRemoveTime</definition>
+        <argsstring></argsstring>
+        <name>btnRemoveTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="305" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a5049caac101df0a46b40e75ada295d54" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.userControls.BillingPortalCtl.btnAddTime</definition>
+        <argsstring></argsstring>
+        <name>btnAddTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="306" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a1b3848f6aa857b3087ae0a8f3cf93cb6" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Navigator.KryptonNavigator</type>
+        <definition>ComponentFactory.Krypton.Navigator.KryptonNavigator SurveyManager.forms.userControls.BillingPortalCtl.kryptonNavigator1</definition>
+        <argsstring></argsstring>
+        <name>kryptonNavigator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="307" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2d7251baa7f2ce5ac3a94ed29ad714d2" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Navigator.KryptonPage</type>
+        <definition>ComponentFactory.Krypton.Navigator.KryptonPage SurveyManager.forms.userControls.BillingPortalCtl.pgTimeEntries</definition>
+        <argsstring></argsstring>
+        <name>pgTimeEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="308" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a3f76da36520782791500c9604f67737b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Navigator.KryptonPage</type>
+        <definition>ComponentFactory.Krypton.Navigator.KryptonPage SurveyManager.forms.userControls.BillingPortalCtl.pgAdditionalLineItems</definition>
+        <argsstring></argsstring>
+        <name>pgAdditionalLineItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="309" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a9f98d5b07dbf0da960e41fa317ffbb2e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.BackgroundWorker</type>
+        <definition>System.ComponentModel.BackgroundWorker SurveyManager.forms.userControls.BillingPortalCtl.loadBillingDetailsWorker</definition>
+        <argsstring></argsstring>
+        <name>loadBillingDetailsWorker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="310" column="54" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a92b6d9305b6efc3d59a20ff35f54ae30" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ProgressBar</type>
+        <definition>System.Windows.Forms.ProgressBar SurveyManager.forms.userControls.BillingPortalCtl.loadProgressBar</definition>
+        <argsstring></argsstring>
+        <name>loadProgressBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="311" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae8a0153bef5648c2f0e159d412aec494" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.userControls.BillingPortalCtl.gridHeaderGroup</definition>
+        <argsstring></argsstring>
+        <name>gridHeaderGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="312" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a008220dc9c4a3713f9c1c04dabe28b40" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.BillingPortalCtl.btnNewEntry</definition>
+        <argsstring></argsstring>
+        <name>btnNewEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="313" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1afb7494eb13103641751017ef5c43f080" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.BillingPortalCtl.btnSaveAndUpdate</definition>
+        <argsstring></argsstring>
+        <name>btnSaveAndUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="314" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1aa41efc6fba2e534e26fe3880b432afcd" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.BillingPortalCtl.btnEditTime</definition>
+        <argsstring></argsstring>
+        <name>btnEditTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="315" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a976c90f48769a0d31601715e8dea462d" prot="private" static="no" mutable="no">
+        <type>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid</type>
+        <definition>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid SurveyManager.forms.userControls.BillingPortalCtl.billingGrid</definition>
+        <argsstring></argsstring>
+        <name>billingGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="316" column="79" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a917af4a67617fab0c2bf0eb78fcfb1bd" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.userControls.BillingPortalCtl.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="24" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a384be8098c731816f0b8a582d1533cb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.userControls.BillingPortalCtl.BillingPortalCtl</definition>
+        <argsstring>()</argsstring>
+        <name>BillingPortalCtl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="26" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a683bffc29ce951de7f205b030b9e6aaf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.BillingPortalCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BillingPortalCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="31" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a310ab2188154910c1faefa6757f8940e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.LoadData</definition>
+        <argsstring>()</argsstring>
+        <name>LoadData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="50" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a779c2bcc40985779e6f9408e4234eda1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.loadBillingDetailsWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>loadBillingDetailsWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="61" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="61" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2ca62cec979b8dff3c0bf1b48ce2a471" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.loadBillingDetailsWorker_ProgressChanged</definition>
+        <argsstring>(object sender, ProgressChangedEventArgs e)</argsstring>
+        <name>loadBillingDetailsWorker_ProgressChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ProgressChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="101" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a23d9272efad1ec34bed012e23223c785" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.loadBillingDetailsWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>loadBillingDetailsWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="106" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="106" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2cc33b09f934b4c3b0d7e26b10739564" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.UpdateTotalTime</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateTotalTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="128" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="128" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae9350c34153871761796464161ad160a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.PopulateListBox</definition>
+        <argsstring>()</argsstring>
+        <name>PopulateListBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="142" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="142" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ac57e8dc615f792287121689cd3fa693f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.ChangeStatusText</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ChangeStatusText</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="162" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="162" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ab789045fe86026400a87d8776f8d720e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.btnAddTime_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddTime_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="170" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="170" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a889bfe1255774a6f619c27f97e21a52b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.btnRemoveTime_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRemoveTime_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="194" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="194" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a5bdf7d182d3fb465ab939428936c6826" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.lbTimeEntries_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lbTimeEntries_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="217" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="217" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1afc230315eddd1e850d376f00fa641b23" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.billingGrid_UserDeletingRow</definition>
+        <argsstring>(object sender, DataGridViewRowCancelEventArgs e)</argsstring>
+        <name>billingGrid_UserDeletingRow</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewRowCancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="230" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="230" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a64cdcbeffc9b73e974acb2f4c1b16cc2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.billingGrid_UserDeletedRow</definition>
+        <argsstring>(object sender, DataGridViewRowEventArgs e)</argsstring>
+        <name>billingGrid_UserDeletedRow</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewRowEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Occurs when the user deletes a row from the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="244" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="244" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a28e62a7f81b81da7543ab709b9f618cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.btnNewEntry_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNewEntry_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="253" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="253" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a8bf097355e28320860e37dbeb71bd0a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.ProcessItem</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ProcessItem</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="263" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="263" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a67469fa85bf1d5c862a45c5157a21b26" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.UpdateGrid</definition>
+        <argsstring>(BillingItem item, bool updating)</argsstring>
+        <name>UpdateGrid</name>
+        <param>
+          <type>BillingItem</type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>updating</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="276" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="276" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2a21f016513707e4c02afddb6c95ab06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.btnEditTime_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnEditTime_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="291" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="291" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ad7f2d7dd476d50886747b5b8e73c87af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.billingGrid_CellDoubleClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>billingGrid_CellDoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="305" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="305" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a00491f1891bcdc153b22d8e1b65453d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.btnSaveAndUpdate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSaveAndUpdate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="319" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="319" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a4a9444353d515403309086865185562d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.SaveItems</definition>
+        <argsstring>()</argsstring>
+        <name>SaveItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="340" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="340" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a63cbcf569121590d8410c9044649bbd8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.BillingPortalCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" line="17" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.Designer.cs" bodystart="17" bodyend="297"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a39c386ace5547ea8aa0e76a67dbb39b9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.userControls.BillingPortalCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="327" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="327" bodyend="338"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.userControls.BillingPortalCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.userControls.BillingPortalCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" line="18" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/BillingPortalCtl.cs" bodystart="19" bodyend="356"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a976c90f48769a0d31601715e8dea462d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>billingGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ad7f2d7dd476d50886747b5b8e73c87af" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>billingGrid_CellDoubleClick</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a64cdcbeffc9b73e974acb2f4c1b16cc2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>billingGrid_UserDeletedRow</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1afc230315eddd1e850d376f00fa641b23" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>billingGrid_UserDeletingRow</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a914374ff5657eb6af57526ff4613b8c8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>billingItems</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a384be8098c731816f0b8a582d1533cb2" prot="public" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>BillingPortalCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a683bffc29ce951de7f205b030b9e6aaf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>BillingPortalCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a5049caac101df0a46b40e75ada295d54" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnAddTime</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ab789045fe86026400a87d8776f8d720e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnAddTime_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1aa41efc6fba2e534e26fe3880b432afcd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnEditTime</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2a21f016513707e4c02afddb6c95ab06" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnEditTime_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a008220dc9c4a3713f9c1c04dabe28b40" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnNewEntry</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a28e62a7f81b81da7543ab709b9f618cc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnNewEntry_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a4d31862d1a03aa1b41532bf52e3294a4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnRemoveTime</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a889bfe1255774a6f619c27f97e21a52b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnRemoveTime_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1afb7494eb13103641751017ef5c43f080" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnSaveAndUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a00491f1891bcdc153b22d8e1b65453d8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>btnSaveAndUpdate_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ac57e8dc615f792287121689cd3fa693f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>ChangeStatusText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ac68e682ccbb82bb69373184e2546e75b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a39c386ace5547ea8aa0e76a67dbb39b9" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a77e651fae735295bd3d605d44388af0d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae8a0153bef5648c2f0e159d412aec494" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>gridHeaderGroup</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a53c58cb0b3051d1ab1726488481950eb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>hdrGroup</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a63cbcf569121590d8410c9044649bbd8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a1b3848f6aa857b3087ae0a8f3cf93cb6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>kryptonNavigator1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae5483f0c2195b261c53fe4856f9f6401" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>kryptonSplitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a7de8899190778540f84a6483b1609b7e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>lbTimeEntries</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a5bdf7d182d3fb465ab939428936c6826" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>lbTimeEntries_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a9f98d5b07dbf0da960e41fa317ffbb2e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>loadBillingDetailsWorker</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a779c2bcc40985779e6f9408e4234eda1" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>loadBillingDetailsWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2ca62cec979b8dff3c0bf1b48ce2a471" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>loadBillingDetailsWorker_ProgressChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a23d9272efad1ec34bed012e23223c785" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>loadBillingDetailsWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a310ab2188154910c1faefa6757f8940e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>LoadData</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a92b6d9305b6efc3d59a20ff35f54ae30" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>loadProgressBar</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a3f76da36520782791500c9604f67737b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>pgAdditionalLineItems</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2d7251baa7f2ce5ac3a94ed29ad714d2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>pgTimeEntries</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae9350c34153871761796464161ad160a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>PopulateListBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a8bf097355e28320860e37dbeb71bd0a3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>ProcessItem</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ab44e103af94827e78a36cbeac78e379a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>rows</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a4a9444353d515403309086865185562d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>SaveItems</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1ae8d70264f1c1caa1b816f4370541cc61" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>selectedListBoxIndex</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a917af4a67617fab0c2bf0eb78fcfb1bd" prot="public" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a67469fa85bf1d5c862a45c5157a21b26" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>UpdateGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_billing_portal_ctl_1a2cc33b09f934b4c3b0d7e26b10739564" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::BillingPortalCtl</scope><name>UpdateTotalTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

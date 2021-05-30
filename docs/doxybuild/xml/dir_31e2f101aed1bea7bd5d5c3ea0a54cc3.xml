@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_31e2f101aed1bea7bd5d5c3ea0a54cc3" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons</compoundname>
+    <innerfile refid="_icon_list_manager_8cs">IconListManager.cs</innerfile>
+    <innerfile refid="_icon_reader_8cs">IconReader.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/"/>
+  </compounddef>
+</doxygen>

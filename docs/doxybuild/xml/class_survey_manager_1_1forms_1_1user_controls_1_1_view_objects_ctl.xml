@@ -1,0 +1,989 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::userControls::ViewObjectsCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6d08f4d03cd29a6837b6d667f3178779" prot="private" static="no" mutable="no">
+        <type>EntityTypes</type>
+        <definition>EntityTypes SurveyManager.forms.userControls.ViewObjectsCtl.typeOfData</definition>
+        <argsstring></argsstring>
+        <name>typeOfData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="25" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ab707b46d4859f4dcb97f7007a0432b11" prot="private" static="no" mutable="no">
+        <type>DataTable</type>
+        <definition>DataTable SurveyManager.forms.userControls.ViewObjectsCtl.lastFilterResults</definition>
+        <argsstring></argsstring>
+        <name>lastFilterResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="26" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4170b31fa749f22e5b0c848a30741f7e" prot="private" static="no" mutable="no">
+        <type>List&lt; OutlookGridRow &gt;</type>
+        <definition>List&lt;OutlookGridRow&gt; SurveyManager.forms.userControls.ViewObjectsCtl.rows</definition>
+        <argsstring></argsstring>
+        <name>rows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="27" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a0310e9ff97685ccf643b391cbaaf054c" prot="private" static="no" mutable="no">
+        <type>FilterDoneEventArgs</type>
+        <definition>FilterDoneEventArgs SurveyManager.forms.userControls.ViewObjectsCtl.currentFilterArgs</definition>
+        <argsstring></argsstring>
+        <name>currentFilterArgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="28" column="37" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af33e40d6300d32336f91a713efd4413b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref> &gt;</type>
+        <definition>List&lt;IDatabaseWrapper&gt; SurveyManager.forms.userControls.ViewObjectsCtl.objectsToDelete</definition>
+        <argsstring></argsstring>
+        <name>objectsToDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="345" column="14" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4e673acb6a513aadc84cd21414cc9572" prot="private" static="no" mutable="no">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.forms.userControls.ViewObjectsCtl.deleteError</definition>
+        <argsstring></argsstring>
+        <name>deleteError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="422" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6f0cf6fbd93c38b1b9744cc0c0624cb9" prot="private" static="no" mutable="no">
+        <type><ref refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kindref="compound">IDatabaseWrapper</ref></type>
+        <definition>IDatabaseWrapper SurveyManager.forms.userControls.ViewObjectsCtl.currentObjectToDelete</definition>
+        <argsstring></argsstring>
+        <name>currentObjectToDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="423" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a752d753432e4dfbad7e899dd6c7f64c2" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.userControls.ViewObjectsCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a22273e053f8ac20a436f7bb7e73fbd3d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid" kindref="compound">utility.CustomControls.CPropertyGrid</ref></type>
+        <definition>utility.CustomControls.CPropertyGrid SurveyManager.forms.userControls.ViewObjectsCtl.propGrid</definition>
+        <argsstring></argsstring>
+        <name>propGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="228" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a79a8840c69691880e1254195e551c67d" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup SurveyManager.forms.userControls.ViewObjectsCtl.hdrGroup</definition>
+        <argsstring></argsstring>
+        <name>hdrGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="229" column="66" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aeab31d50ebb8f2b0161e894e3cb6993b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.ViewObjectsCtl.btnFilter</definition>
+        <argsstring></argsstring>
+        <name>btnFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="230" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a36fd8aab48f919b5a4df96bc7a0b0c45" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.ViewObjectsCtl.btnRefresh</definition>
+        <argsstring></argsstring>
+        <name>btnRefresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="231" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a67569e917e59ea92e8ac29d09f5f78a9" prot="private" static="no" mutable="no">
+        <type>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid</type>
+        <definition>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGrid SurveyManager.forms.userControls.ViewObjectsCtl.dataGrid</definition>
+        <argsstring></argsstring>
+        <name>dataGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="232" column="79" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a69d4ead921ffb269873dd649ea375941" prot="private" static="no" mutable="no">
+        <type>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox</type>
+        <definition>JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.KryptonOutlookGridGroupBox SurveyManager.forms.userControls.ViewObjectsCtl.groupBox</definition>
+        <argsstring></argsstring>
+        <name>groupBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="233" column="87" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad387482c562dee97f3b5e2fb67378ed9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ProgressBar</type>
+        <definition>System.Windows.Forms.ProgressBar SurveyManager.forms.userControls.ViewObjectsCtl.loadProgressBar</definition>
+        <argsstring></argsstring>
+        <name>loadProgressBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="234" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a97a273979d2c99b98faf1cbaa2ec9716" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.BackgroundWorker</type>
+        <definition>System.ComponentModel.BackgroundWorker SurveyManager.forms.userControls.ViewObjectsCtl.bgWorker</definition>
+        <argsstring></argsstring>
+        <name>bgWorker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="235" column="54" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a978d124e5dc18c97ab7f3354cfbe3e56" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.SaveFileDialog</type>
+        <definition>System.Windows.Forms.SaveFileDialog SurveyManager.forms.userControls.ViewObjectsCtl.saveDialog</definition>
+        <argsstring></argsstring>
+        <name>saveDialog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="236" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af2ac8e92306384617a1624e00e44ce59" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup SurveyManager.forms.userControls.ViewObjectsCtl.btnDeleteRow</definition>
+        <argsstring></argsstring>
+        <name>btnDeleteRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="237" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac5403f9891c671e6e5026549e26b670e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonSplitContainer SurveyManager.forms.userControls.ViewObjectsCtl.kryptonSplitContainer1</definition>
+        <argsstring></argsstring>
+        <name>kryptonSplitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="238" column="69" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a3169009df4f7a86f679e187d456de4ed" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.BackgroundWorker</type>
+        <definition>System.ComponentModel.BackgroundWorker SurveyManager.forms.userControls.ViewObjectsCtl.deleteBgWorker</definition>
+        <argsstring></argsstring>
+        <name>deleteBgWorker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="239" column="54" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a7cb19fea6caa13baa9c98f33fe6b8c01" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.userControls.ViewObjectsCtl.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="30" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a9630ca4b42fa6a9feb9236f4205548b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.userControls.ViewObjectsCtl.ViewObjectsCtl</definition>
+        <argsstring>(EntityTypes typeToDisplay, FilterDoneEventArgs args=null)</argsstring>
+        <name>ViewObjectsCtl</name>
+        <param>
+          <type>EntityTypes</type>
+          <declname>typeToDisplay</declname>
+        </param>
+        <param>
+          <type>FilterDoneEventArgs</type>
+          <declname>args</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="32" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="32" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a64284206a69db3cd8552ca8ce3d8cca3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.ViewObjects_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ViewObjects_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="45" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="45" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a3ff752197b220f2788f141cc177f7681" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.OpenJob</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OpenJob</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="67" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="67" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a5e0ccbbe341d6f2ebdc383b04e51b1a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.DownloadFiles</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DownloadFiles</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="82" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="82" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aa12b74f9b607b23155504b2fc6279db0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.UploadFiles</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UploadFiles</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="107" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="107" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a427ebe41f3213ae5b03e19982e5093d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.SetFiles</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SetFiles</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="119" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="119" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a960ae740736f89a552bcc5498a8774bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.UpdateTabName</definition>
+        <argsstring>(string newTitle)</argsstring>
+        <name>UpdateTabName</name>
+        <param>
+          <type>string</type>
+          <declname>newTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="129" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="129" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac788c42cc06291bef652103ee10dac65" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.LoadData</definition>
+        <argsstring>()</argsstring>
+        <name>LoadData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="141" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="141" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a09ec0879322678aefea998a82cadb043" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.btnRefresh_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRefresh_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="149" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a7f024285d9755e975cc124c1aad48cd9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.btnFilter_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnFilter_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="155" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="155" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a9f0277bb26d78b4112cd44c0a0abe74b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.ProcessSearch</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ProcessSearch</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="243" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="243" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad4dc00304e51d05ed1b42567c069fb9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.bgWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>bgWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="253" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="253" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1afd5aa5d51bec3413eab0b91894ad756b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.bgWorker_ProgressChanged</definition>
+        <argsstring>(object sender, ProgressChangedEventArgs e)</argsstring>
+        <name>bgWorker_ProgressChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ProgressChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="285" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aebb33e3fbab5ce589a8b419058a96897" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.bgWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>bgWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="290" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="290" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a881830f0ff1ce0ff7ad6f4a7d2b59d17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.btnDeleteRow_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnDeleteRow_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="347" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="347" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a215e55a736ae15ecf68afc7b5856b931" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DialogResult</type>
+        <definition>DialogResult SurveyManager.forms.userControls.ViewObjectsCtl.ShowDeleteDialog</definition>
+        <argsstring>()</argsstring>
+        <name>ShowDeleteDialog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="381" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="381" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af9c10cf78bd8c7e5c7ccdde83ef9750a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.deleteBgWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>deleteBgWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="424" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="424" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad4cfcb5321da3f3104237b628f7dad1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.deleteBgWorker_ProgressChanged</definition>
+        <argsstring>(object sender, ProgressChangedEventArgs e)</argsstring>
+        <name>deleteBgWorker_ProgressChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ProgressChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="437" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="437" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6ed3c34d8c5bc71672dafa42bf936caa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.deleteBgWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>deleteBgWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="443" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="443" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a45739acbad3dc5441b0368beb6944b0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.SaveData</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SaveData</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="469" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="469" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af524591ca530138c37329da50058435a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref> &gt;</type>
+        <definition>List&lt;Client&gt; SurveyManager.forms.userControls.ViewObjectsCtl.LoadClients</definition>
+        <argsstring>()</argsstring>
+        <name>LoadClients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="488" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="488" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac3b096ad261f1beb056f0c297ae2f2fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.PopulateClientGrid</definition>
+        <argsstring>(List&lt; Client &gt; clients)</argsstring>
+        <name>PopulateClientGrid</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref> &gt;</type>
+          <declname>clients</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="505" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="505" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a852c75b2d73862c9e3e755bb1666def6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> &gt;</type>
+        <definition>List&lt;Realtor&gt; SurveyManager.forms.userControls.ViewObjectsCtl.LoadRealtors</definition>
+        <argsstring>()</argsstring>
+        <name>LoadRealtors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="524" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="524" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a433034be6d2b0a3bfdbd3126ace1ec2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.PopulateRealtorGrid</definition>
+        <argsstring>(List&lt; Realtor &gt; realtors)</argsstring>
+        <name>PopulateRealtorGrid</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> &gt;</type>
+          <declname>realtors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="541" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="541" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a411adc44c58e3f3b6fa1c63e41086f1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref> &gt;</type>
+        <definition>List&lt;TitleCompany&gt; SurveyManager.forms.userControls.ViewObjectsCtl.LoadTitleCompanies</definition>
+        <argsstring>()</argsstring>
+        <name>LoadTitleCompanies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="560" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="560" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a1ccc163a98a6189ee17ceac125ce6797" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.PopulateTitleCompanyGrid</definition>
+        <argsstring>(List&lt; TitleCompany &gt; companies)</argsstring>
+        <name>PopulateTitleCompanyGrid</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref> &gt;</type>
+          <declname>companies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="577" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="577" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a63f96a4381ace7734d69249462db7d90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Rate &gt;</type>
+        <definition>List&lt;Rate&gt; SurveyManager.forms.userControls.ViewObjectsCtl.LoadRates</definition>
+        <argsstring>()</argsstring>
+        <name>LoadRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="596" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="596" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a99b61298afc3eee8990954ce4152fe20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.PopulateRateGrid</definition>
+        <argsstring>(List&lt; Rate &gt; rates)</argsstring>
+        <name>PopulateRateGrid</name>
+        <param>
+          <type>List&lt; Rate &gt;</type>
+          <declname>rates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="613" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="613" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad63fa83b4583f7d1fd562409e7c9fe1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Survey &gt;</type>
+        <definition>List&lt;Survey&gt; SurveyManager.forms.userControls.ViewObjectsCtl.LoadSurveys</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSurveys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="633" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="633" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aefc2565148326cf4091fb015acc126ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.PopulateSurveyGrid</definition>
+        <argsstring>(List&lt; Survey &gt; surveys)</argsstring>
+        <name>PopulateSurveyGrid</name>
+        <param>
+          <type>List&lt; Survey &gt;</type>
+          <declname>surveys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="650" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="650" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a717af3f41f1029642090b191a0f87583" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.dataGrid_CellClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>dataGrid_CellClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="671" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="671" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4b4d904c8381146fb8ff39c19afc2afd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.userControls.ViewObjectsCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="30" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad328f0b802407fa16778b4aa21cb8f4e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.userControls.ViewObjectsCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.userControls.ViewObjectsCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.userControls.ViewObjectsCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" line="23" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls/ViewObjectsCtl.cs" bodystart="24" bodyend="679"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a97a273979d2c99b98faf1cbaa2ec9716" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>bgWorker</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad4dc00304e51d05ed1b42567c069fb9a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>bgWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1afd5aa5d51bec3413eab0b91894ad756b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>bgWorker_ProgressChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aebb33e3fbab5ce589a8b419058a96897" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>bgWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af2ac8e92306384617a1624e00e44ce59" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnDeleteRow</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a881830f0ff1ce0ff7ad6f4a7d2b59d17" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnDeleteRow_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aeab31d50ebb8f2b0161e894e3cb6993b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnFilter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a7f024285d9755e975cc124c1aad48cd9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnFilter_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a36fd8aab48f919b5a4df96bc7a0b0c45" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnRefresh</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a09ec0879322678aefea998a82cadb043" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>btnRefresh_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a752d753432e4dfbad7e899dd6c7f64c2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a0310e9ff97685ccf643b391cbaaf054c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>currentFilterArgs</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6f0cf6fbd93c38b1b9744cc0c0624cb9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>currentObjectToDelete</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a67569e917e59ea92e8ac29d09f5f78a9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>dataGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a717af3f41f1029642090b191a0f87583" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>dataGrid_CellClick</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a3169009df4f7a86f679e187d456de4ed" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>deleteBgWorker</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af9c10cf78bd8c7e5c7ccdde83ef9750a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>deleteBgWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad4cfcb5321da3f3104237b628f7dad1c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>deleteBgWorker_ProgressChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6ed3c34d8c5bc71672dafa42bf936caa" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>deleteBgWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4e673acb6a513aadc84cd21414cc9572" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>deleteError</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad328f0b802407fa16778b4aa21cb8f4e" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a5e0ccbbe341d6f2ebdc383b04e51b1a9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>DownloadFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a69d4ead921ffb269873dd649ea375941" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>groupBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a79a8840c69691880e1254195e551c67d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>hdrGroup</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4b4d904c8381146fb8ff39c19afc2afd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac5403f9891c671e6e5026549e26b670e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>kryptonSplitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ab707b46d4859f4dcb97f7007a0432b11" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>lastFilterResults</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af524591ca530138c37329da50058435a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadClients</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac788c42cc06291bef652103ee10dac65" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadData</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad387482c562dee97f3b5e2fb67378ed9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>loadProgressBar</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a63f96a4381ace7734d69249462db7d90" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadRates</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a852c75b2d73862c9e3e755bb1666def6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadRealtors</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ad63fa83b4583f7d1fd562409e7c9fe1c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadSurveys</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a411adc44c58e3f3b6fa1c63e41086f1c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>LoadTitleCompanies</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1af33e40d6300d32336f91a713efd4413b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>objectsToDelete</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a3ff752197b220f2788f141cc177f7681" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>OpenJob</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1ac3b096ad261f1beb056f0c297ae2f2fd" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>PopulateClientGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a99b61298afc3eee8990954ce4152fe20" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>PopulateRateGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a433034be6d2b0a3bfdbd3126ace1ec2d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>PopulateRealtorGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aefc2565148326cf4091fb015acc126ba" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>PopulateSurveyGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a1ccc163a98a6189ee17ceac125ce6797" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>PopulateTitleCompanyGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a9f0277bb26d78b4112cd44c0a0abe74b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>ProcessSearch</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a22273e053f8ac20a436f7bb7e73fbd3d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>propGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a4170b31fa749f22e5b0c848a30741f7e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>rows</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a45739acbad3dc5441b0368beb6944b0c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>SaveData</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a978d124e5dc18c97ab7f3354cfbe3e56" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>saveDialog</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a427ebe41f3213ae5b03e19982e5093d4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>SetFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a215e55a736ae15ecf68afc7b5856b931" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>ShowDeleteDialog</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a7cb19fea6caa13baa9c98f33fe6b8c01" prot="public" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a6d08f4d03cd29a6837b6d667f3178779" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>typeOfData</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a960ae740736f89a552bcc5498a8774bf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>UpdateTabName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1aa12b74f9b607b23155504b2fc6279db0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>UploadFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a64284206a69db3cd8552ca8ce3d8cca3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>ViewObjects_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1user_controls_1_1_view_objects_ctl_1a9630ca4b42fa6a9feb9236f4205548b2" prot="public" virt="non-virtual"><scope>SurveyManager::forms::userControls::ViewObjectsCtl</scope><name>ViewObjectsCtl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

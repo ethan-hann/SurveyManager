@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e603fcd9683f9e2331c41d8172720ab8" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/utility</compoundname>
+    <innerdir refid="dir_dc4e8dc8ee7c8d587b0700ee62d61f81">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls</innerdir>
+    <innerdir refid="dir_2e5bc24a6a8140f913e62785fa9d9377">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering</innerdir>
+    <innerdir refid="dir_31e2f101aed1bea7bd5d5c3ea0a54cc3">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons</innerdir>
+    <innerdir refid="dir_7f08c861da91baa603618e6a7d05ed32">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing</innerdir>
+    <innerdir refid="dir_558f596fd569925ce803a916a161129c">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Logging</innerdir>
+    <innerdir refid="dir_11b0b1bdc60e9235f5a02b792670d224">D:/Documents/GitHub/SurveyManager/SurveyManager/utility/PdfGeneration</innerdir>
+    <innerfile refid="_c_event_args_8cs">CEventArgs.cs</innerfile>
+    <innerfile refid="_c_file_type_converter_8cs">CFileTypeConverter.cs</innerfile>
+    <innerfile refid="_county_type_converter_8cs">CountyTypeConverter.cs</innerfile>
+    <innerfile refid="_c_s_v_helper_8cs">CSVHelper.cs</innerfile>
+    <innerfile refid="_data_grid_view_setup_8cs">DataGridViewSetup.cs</innerfile>
+    <innerfile refid="_d_b_map_8cs">DBMap.cs</innerfile>
+    <innerfile refid="_drag_drop_info_8cs">DragDropInfo.cs</innerfile>
+    <innerfile refid="_enums_8cs">Enums.cs</innerfile>
+    <innerfile refid="_job_handler_8cs">JobHandler.cs</innerfile>
+    <innerfile refid="_mail_8cs">Mail.cs</innerfile>
+    <innerfile refid="_pair_8cs">Pair.cs</innerfile>
+    <innerfile refid="_process_data_table_8cs">ProcessDataTable.cs</innerfile>
+    <innerfile refid="_runtime_vars_8cs">RuntimeVars.cs</innerfile>
+    <innerfile refid="_utility_8cs">Utility.cs</innerfile>
+    <innerfile refid="_validator_8cs">Validator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/"/>
+  </compounddef>
+</doxygen>

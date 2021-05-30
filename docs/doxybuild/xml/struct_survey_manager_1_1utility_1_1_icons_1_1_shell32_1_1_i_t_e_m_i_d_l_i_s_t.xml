@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_i_t_e_m_i_d_l_i_s_t" kind="struct" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Icons::Shell32::ITEMIDLIST</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_i_t_e_m_i_d_l_i_s_t_1af531ae7e4b0445fdc3e738c5aa941d45" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d" kindref="compound">SHITEMID</ref></type>
+        <definition>SHITEMID SurveyManager.utility.Icons.Shell32.ITEMIDLIST.mkid</definition>
+        <argsstring></argsstring>
+        <name>mkid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="147" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.Icons.Shell32.ITEMIDLIST</label>
+        <link refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_i_t_e_m_i_d_l_i_s_t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mkid</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SurveyManager.utility.Icons.Shell32.SHITEMID</label>
+        <link refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="145" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="146" bodyend="148"/>
+    <listofallmembers>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_i_t_e_m_i_d_l_i_s_t_1af531ae7e4b0445fdc3e738c5aa941d45" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::ITEMIDLIST</scope><name>mkid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

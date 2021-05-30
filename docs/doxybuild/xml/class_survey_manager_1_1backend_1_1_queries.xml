@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1_queries" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::Queries</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_queries_1a7edbec007cc53b6f0482fa6b8c22fae5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SurveyManager.backend.Queries.BuildQuery</definition>
+        <argsstring>(QType qtype, string tableName, ArrayList values=null, ArrayList columnNames=null, string condition=null)</argsstring>
+        <name>BuildQuery</name>
+        <param>
+          <type>QType</type>
+          <declname>qtype</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tableName</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>values</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>columnNames</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>condition</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Builds a query string based on the supplied arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of query to build. See QType for valid options.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table name this query is for.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ArrayList of values for Inserting or Updating.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ArrayList of column names that should be considered.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition, if any, the query should include.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new string that represents the query and can be passed to a DB connection for execution.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Queries.cs" line="21" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Queries.cs" bodystart="21" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a class responsible for building dynamic SQL queries using one static method: <ref refid="class_survey_manager_1_1backend_1_1_queries_1a7edbec007cc53b6f0482fa6b8c22fae5" kindref="member">BuildQuery(QType, string, ArrayList, ArrayList, string)</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Queries.cs" line="10" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Queries.cs" bodystart="11" bodyend="127"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1_queries_1a7edbec007cc53b6f0482fa6b8c22fae5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Queries</scope><name>BuildQuery</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

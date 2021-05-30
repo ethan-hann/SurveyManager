@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1database_menu" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::databaseMenu</compoundname>
+    <innerclass refid="class_survey_manager_1_1forms_1_1database_menu_1_1_d_b_connection" prot="public">SurveyManager::forms::databaseMenu::DBConnection</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1database_menu_1_1_sql_control" prot="public">SurveyManager::forms::databaseMenu::SqlControl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1database_menu_1_1_s_q_l_query" prot="public">SurveyManager::forms::databaseMenu::SQLQuery</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/DBConnection.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

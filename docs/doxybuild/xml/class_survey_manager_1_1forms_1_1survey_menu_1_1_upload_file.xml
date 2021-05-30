@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::UploadFile</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ac894b0c8aed4edfe44a19c3ddc4d1178" prot="private" static="no" mutable="no">
+        <type>StringBuilder</type>
+        <definition>StringBuilder SurveyManager.forms.surveyMenu.UploadFile.bldr</definition>
+        <argsstring></argsstring>
+        <name>bldr</name>
+        <initializer>= new StringBuilder()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="24" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af6b71e7f5bb296715a78a97199efab28" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+        <definition>List&lt;CFile&gt; SurveyManager.forms.surveyMenu.UploadFile.filesToAdd</definition>
+        <argsstring></argsstring>
+        <name>filesToAdd</name>
+        <initializer>= new List&lt;<ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="25" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ab0e7cd80b95c541bbc69be5e2f2214a9" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.surveyMenu.UploadFile.currentFileName</definition>
+        <argsstring></argsstring>
+        <name>currentFileName</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="26" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a133c7fa144791b75432b76c8dfa98380" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.UploadFile.saved</definition>
+        <argsstring></argsstring>
+        <name>saved</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="27" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a265f7f7f6a123d5be556d9365a88f8a5" prot="private" static="no" mutable="no">
+        <type>Thread</type>
+        <definition>Thread SurveyManager.forms.surveyMenu.UploadFile.backgroundThread</definition>
+        <argsstring></argsstring>
+        <name>backgroundThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="29" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af6e02aedea44ad124590152b443bc046" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.UploadFile.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a1c857cf2ad0f8a1c6f8fe65e35111948" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonListBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonListBox SurveyManager.forms.surveyMenu.UploadFile.lbFileNames</definition>
+        <argsstring></argsstring>
+        <name>lbFileNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="291" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a600b2695ce23263bdac5aae146b9f473" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.surveyMenu.UploadFile.kryptonPanel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="292" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a3aed011a3d8cd232e6e5df3c88401e28" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.UploadFile.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="293" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a07f382919881363f4edc0f39a62bca17" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.UploadFile.btnRemoveSelected</definition>
+        <argsstring></argsstring>
+        <name>btnRemoveSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="294" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6830f0587a5f0e5bd9e86b5879e492bb" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.UploadFile.btnAddFile</definition>
+        <argsstring></argsstring>
+        <name>btnAddFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="295" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1affcc6d05dbd73a874c58e8228185d20f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PropertyGrid</type>
+        <definition>System.Windows.Forms.PropertyGrid SurveyManager.forms.surveyMenu.UploadFile.propGrid</definition>
+        <argsstring></argsstring>
+        <name>propGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="296" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a9f7060f44cb75846a3ae900a2227af02" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.surveyMenu.UploadFile.btnSave</definition>
+        <argsstring></argsstring>
+        <name>btnSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="297" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1acdd3e9653bcb5045ec6801b7ae368465" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.OpenFileDialog</type>
+        <definition>System.Windows.Forms.OpenFileDialog SurveyManager.forms.surveyMenu.UploadFile.fileDialog</definition>
+        <argsstring></argsstring>
+        <name>fileDialog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="298" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a56a36e7d9449c6dbdcca57150c7653f6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ProgressBar</type>
+        <definition>System.Windows.Forms.ProgressBar SurveyManager.forms.surveyMenu.UploadFile.progressBar</definition>
+        <argsstring></argsstring>
+        <name>progressBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="299" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8309a745c5a81a8ea0944ef3c7b940ba" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.BackgroundWorker</type>
+        <definition>System.ComponentModel.BackgroundWorker SurveyManager.forms.surveyMenu.UploadFile.bgWorker</definition>
+        <argsstring></argsstring>
+        <name>bgWorker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="300" column="54" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6ab5a5f5259e49365020e49f002b965e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox SurveyManager.forms.surveyMenu.UploadFile.picBox</definition>
+        <argsstring></argsstring>
+        <name>picBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="301" column="46" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abecd0ed6b887c903dc1c3958c0d363e0" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonPanel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonPanel SurveyManager.forms.surveyMenu.UploadFile.picPanel</definition>
+        <argsstring></argsstring>
+        <name>picPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="302" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af3194ce0b41e08b59650819f8c7ff872" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel SurveyManager.forms.surveyMenu.UploadFile.tblProgress</definition>
+        <argsstring></argsstring>
+        <name>tblProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="303" column="52" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aabd9f411c76ce7b71b5930e8d5bc5351" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.surveyMenu.UploadFile.btnCancelLoading</definition>
+        <argsstring></argsstring>
+        <name>btnCancelLoading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="304" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abfd0bd64b167bad0c16c51d08a4d7179" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.ButtonSpecAny</type>
+        <definition>ComponentFactory.Krypton.Toolkit.ButtonSpecAny SurveyManager.forms.surveyMenu.UploadFile.btnPreview</definition>
+        <argsstring></argsstring>
+        <name>btnPreview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="305" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aaa7503ed486913ebbd947b2543269478" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.surveyMenu.UploadFile.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="306" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a0b3810e61fde6499722c1eeaec7b2465" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.UploadFile.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="307" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af2cd6e4fafd8fc7677a1a3ab2f40f9ba" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.surveyMenu.UploadFile.lblFileSize</definition>
+        <argsstring></argsstring>
+        <name>lblFileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="308" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abb6386025c7731808f3898c30098997f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.SplitContainer</type>
+        <definition>System.Windows.Forms.SplitContainer SurveyManager.forms.surveyMenu.UploadFile.splitContainer1</definition>
+        <argsstring></argsstring>
+        <name>splitContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="309" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8c4aba17e23331520b5487b5bf8791ec" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.surveyMenu.UploadFile.StatusUpdate</definition>
+        <argsstring></argsstring>
+        <name>StatusUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="31" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a273186ad76cba7acbb0831ce86a86bda" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.surveyMenu.UploadFile.FileUploadDone</definition>
+        <argsstring></argsstring>
+        <name>FileUploadDone</name>
+        <briefdescription>
+<para>Occurs whenever the file upload is done and the user clicks the Save button. Simply passes the list of files along to the subscriber of this event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="36" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ab899fd9829298700dcab014a1d73b651" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.UploadFile.UploadFile</definition>
+        <argsstring>(List&lt; CFile &gt; files=null)</argsstring>
+        <name>UploadFile</name>
+        <param>
+          <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+          <declname>files</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="38" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="38" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abe0c13eb964f726cffece72919b19d4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.UploadFile_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UploadFile_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="46" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="46" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6a5c1cea8b7011559b395f55c21258ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.btnAddFile_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAddFile_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="60" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="60" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ad05d26d06f7e49370e74e94f9cac0145" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.bgWorker_DoWork</definition>
+        <argsstring>(object sender, DoWorkEventArgs e)</argsstring>
+        <name>bgWorker_DoWork</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DoWorkEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="71" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="71" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a982424c27db5b4880065b277ef555323" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.bgWorker_ProgressChanged</definition>
+        <argsstring>(object sender, ProgressChangedEventArgs e)</argsstring>
+        <name>bgWorker_ProgressChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ProgressChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="115" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a7088776edfcd90c18d657ede0f938f0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.bgWorker_RunWorkerCompleted</definition>
+        <argsstring>(object sender, RunWorkerCompletedEventArgs e)</argsstring>
+        <name>bgWorker_RunWorkerCompleted</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RunWorkerCompletedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="121" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="121" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6ae46f3a77869ae10bf71fcd01500e14" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.btnRemoveSelected_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnRemoveSelected_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="138" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="138" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8d03d1f0488851ca5777c70c86571624" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.SaveFiles</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SaveFiles</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="164" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="164" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1adf0a755f71b08a473c9c691c017bd228" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.lbFileNames_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lbFileNames_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="183" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="183" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ae64b67eead029781c8f72f34d8d36537" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.UploadFile_FormClosing</definition>
+        <argsstring>(object sender, FormClosingEventArgs e)</argsstring>
+        <name>UploadFile_FormClosing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="197" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="197" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a05513fa5369497f1b6c8f2ae364c45cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.btnCancelLoading_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnCancelLoading_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="212" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="212" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aa57fb87557f7c160fd14404bd71b36a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.UploadFile.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="30" bodyend="287"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a37d76de841181b9235e668018ba1f1e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.UploadFile.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.UploadFile</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.UploadFile</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" line="22" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/UploadFile.cs" bodystart="23" bodyend="226"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a265f7f7f6a123d5be556d9365a88f8a5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>backgroundThread</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8309a745c5a81a8ea0944ef3c7b940ba" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>bgWorker</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ad05d26d06f7e49370e74e94f9cac0145" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>bgWorker_DoWork</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a982424c27db5b4880065b277ef555323" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>bgWorker_ProgressChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a7088776edfcd90c18d657ede0f938f0e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>bgWorker_RunWorkerCompleted</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ac894b0c8aed4edfe44a19c3ddc4d1178" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>bldr</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6830f0587a5f0e5bd9e86b5879e492bb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnAddFile</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6a5c1cea8b7011559b395f55c21258ee" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnAddFile_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aabd9f411c76ce7b71b5930e8d5bc5351" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnCancelLoading</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a05513fa5369497f1b6c8f2ae364c45cf" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnCancelLoading_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abfd0bd64b167bad0c16c51d08a4d7179" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnPreview</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a07f382919881363f4edc0f39a62bca17" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnRemoveSelected</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6ae46f3a77869ae10bf71fcd01500e14" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnRemoveSelected_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a9f7060f44cb75846a3ae900a2227af02" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>btnSave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af6e02aedea44ad124590152b443bc046" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ab0e7cd80b95c541bbc69be5e2f2214a9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>currentFileName</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a37d76de841181b9235e668018ba1f1e9" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1acdd3e9653bcb5045ec6801b7ae368465" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>fileDialog</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af6b71e7f5bb296715a78a97199efab28" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>filesToAdd</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a273186ad76cba7acbb0831ce86a86bda" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>FileUploadDone</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a3aed011a3d8cd232e6e5df3c88401e28" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aa57fb87557f7c160fd14404bd71b36a4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a600b2695ce23263bdac5aae146b9f473" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>kryptonPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a1c857cf2ad0f8a1c6f8fe65e35111948" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>lbFileNames</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1adf0a755f71b08a473c9c691c017bd228" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>lbFileNames_SelectedIndexChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af2cd6e4fafd8fc7677a1a3ab2f40f9ba" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>lblFileSize</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a6ab5a5f5259e49365020e49f002b965e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>picBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abecd0ed6b887c903dc1c3958c0d363e0" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>picPanel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a56a36e7d9449c6dbdcca57150c7653f6" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>progressBar</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1affcc6d05dbd73a874c58e8228185d20f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>propGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a133c7fa144791b75432b76c8dfa98380" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>saved</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8d03d1f0488851ca5777c70c86571624" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>SaveFiles</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abb6386025c7731808f3898c30098997f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>splitContainer1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1aaa7503ed486913ebbd947b2543269478" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a8c4aba17e23331520b5487b5bf8791ec" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>StatusUpdate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1af3194ce0b41e08b59650819f8c7ff872" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>tblProgress</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1a0b3810e61fde6499722c1eeaec7b2465" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ab899fd9829298700dcab014a1d73b651" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>UploadFile</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1ae64b67eead029781c8f72f34d8d36537" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>UploadFile_FormClosing</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file_1abe0c13eb964f726cffece72919b19d4d" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::UploadFile</scope><name>UploadFile_Load</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

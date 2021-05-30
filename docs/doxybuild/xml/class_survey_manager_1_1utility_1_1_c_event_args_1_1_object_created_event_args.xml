@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EventArgs</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a875b80a597d8ff19b2371b70e91b8fff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>object</type>
+        <definition>object SurveyManager.utility.CEventArgs.ObjectCreatedEventArgs.DataValue</definition>
+        <argsstring></argsstring>
+        <name>DataValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="100" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a020af9996c0d1d4e2a4311f2e6fe110c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>object</type>
+        <definition>object SurveyManager.utility.CEventArgs.ObjectCreatedEventArgs.Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="101" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="101" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a76925a7703dce76c0520fc0e04adc8aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CEventArgs.ObjectCreatedEventArgs.ObjectCreatedEventArgs</definition>
+        <argsstring>(object dataValue, object tag)</argsstring>
+        <name>ObjectCreatedEventArgs</name>
+        <param>
+          <type>object</type>
+          <declname>dataValue</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="103" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="103" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.ObjectCreatedEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EventArgs</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CEventArgs.ObjectCreatedEventArgs</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" line="98" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CEventArgs.cs" bodystart="99" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a875b80a597d8ff19b2371b70e91b8fff" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</scope><name>DataValue</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a76925a7703dce76c0520fc0e04adc8aa" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</scope><name>ObjectCreatedEventArgs</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_event_args_1_1_object_created_event_args_1a020af9996c0d1d4e2a4311f2e6fe110c" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CEventArgs::ObjectCreatedEventArgs</scope><name>Tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

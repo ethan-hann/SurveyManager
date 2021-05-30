@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_standard_1_1_licensing_1_1_validation" kind="namespace" language="C#">
+    <compoundname>Standard::Licensing::Validation</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" line="1" column="36"/>
+  </compounddef>
+</doxygen>

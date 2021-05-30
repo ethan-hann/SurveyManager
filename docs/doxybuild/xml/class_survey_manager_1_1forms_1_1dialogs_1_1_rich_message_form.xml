@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::RichMessageForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a3492385735ff30ba84551bad8cca3134" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.RichMessageForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aa675d987c55d7a88dba1ac5c25713dbc" prot="package" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox SurveyManager.forms.dialogs.RichMessageForm.picImage</definition>
+        <argsstring></argsstring>
+        <name>picImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="138" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a4cf35c7b0ab1c8c13a78b606f3484940" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonWrapLabel SurveyManager.forms.dialogs.RichMessageForm.lblText</definition>
+        <argsstring></argsstring>
+        <name>lblText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="139" column="65" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a136c9e45c90594ff317e7bcb25cc986a" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonRichTextBox SurveyManager.forms.dialogs.RichMessageForm.rtbMessage</definition>
+        <argsstring></argsstring>
+        <name>rtbMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="140" column="67" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a4181a9e8d182c8de46d3cd1013d83f13" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.RichMessageForm.btnYes</definition>
+        <argsstring></argsstring>
+        <name>btnYes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="141" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a006cd4c95a4defc60a137c154a5654bf" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.RichMessageForm.btnNo</definition>
+        <argsstring></argsstring>
+        <name>btnNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="142" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1ad5b7c7dcbae551f7f5c92c200362a95c" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.RichMessageForm.btnCancel</definition>
+        <argsstring></argsstring>
+        <name>btnCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="143" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aae51e4f4621931090f23a5a7225c4af0" prot="package" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.RichMessageForm.btnOK</definition>
+        <argsstring></argsstring>
+        <name>btnOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="144" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a06b3afbc3cab5d6156986a48ffa83011" prot="package" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.RichMessageForm.RichMessageForm</definition>
+        <argsstring>()</argsstring>
+        <name>RichMessageForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="9" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a399dbf1566b7f38892388c3a2dcc9ea3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.RichMessageForm.btnYes_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnYes_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="11" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a781ca0badc3649a2fc9262152c7dd67e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.RichMessageForm.btnNo_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNo_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="14" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aec3f51bb06256c6c52f3186ae22a7ebb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.RichMessageForm.btnCancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnCancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="17" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a2e0d89cce12113caf3e1740887fd32a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.RichMessageForm.btnOK_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnOK_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="20" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a45bd139a4a9ebb65e302f9d0aa79b898" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.RichMessageForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="30" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1ad56defa4ea4b6261ccae02a0abd3e12d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.RichMessageForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.RichMessageForm</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.RichMessageForm</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>btnCancel</edgelabel>
+          <edgelabel>btnNo</edgelabel>
+          <edgelabel>btnOK</edgelabel>
+          <edgelabel>btnYes</edgelabel>
+          <edgelabel>lblText</edgelabel>
+          <edgelabel>rtbMessage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>picImage</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toolkit</label>
+      </node>
+      <node id="4">
+        <label>System</label>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" line="7" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/RichMessageForm.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1ad5b7c7dcbae551f7f5c92c200362a95c" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnCancel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aec3f51bb06256c6c52f3186ae22a7ebb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnCancel_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a006cd4c95a4defc60a137c154a5654bf" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnNo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a781ca0badc3649a2fc9262152c7dd67e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnNo_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aae51e4f4621931090f23a5a7225c4af0" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnOK</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a2e0d89cce12113caf3e1740887fd32a3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnOK_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a4181a9e8d182c8de46d3cd1013d83f13" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnYes</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a399dbf1566b7f38892388c3a2dcc9ea3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>btnYes_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a3492385735ff30ba84551bad8cca3134" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1ad56defa4ea4b6261ccae02a0abd3e12d" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a45bd139a4a9ebb65e302f9d0aa79b898" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a4cf35c7b0ab1c8c13a78b606f3484940" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>lblText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1aa675d987c55d7a88dba1ac5c25713dbc" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>picImage</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a06b3afbc3cab5d6156986a48ffa83011" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>RichMessageForm</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_rich_message_form_1a136c9e45c90594ff317e7bcb25cc986a" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::RichMessageForm</scope><name>rtbMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

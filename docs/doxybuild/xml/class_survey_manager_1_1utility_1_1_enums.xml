@@ -1,0 +1,1129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_enums" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Enums</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a2b5a4b13a07938b0777c46e750a217e5" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>BooleanOps</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a2b5a4b13a07938b0777c46e750a217e5a558ffc8f5770d8e4f95f51d822685532" prot="public">
+          <name>AND</name>
+          <briefdescription>
+<para>Represents the boolean operation AND </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a2b5a4b13a07938b0777c46e750a217e5a1d00e7dce692e8dc3f6877f035e3a616" prot="public">
+          <name>OR</name>
+          <briefdescription>
+<para>Represents the boolean operation OR </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum reprenting the two boolean operations available for filtering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="11" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="12" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>QType</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72a61ee777e7f71dc466c3b2c685d8d313b" prot="public">
+          <name>INSERT</name>
+          <briefdescription>
+<para>Represents an Insert SQL Query </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72a63225f19fccb18e7c709f1fa11bc738e" prot="public">
+          <name>SELECT</name>
+          <briefdescription>
+<para>Represents a Select SQL Query </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72a15a8022d0ed9cd9c2a2e756822703eb4" prot="public">
+          <name>UPDATE</name>
+          <briefdescription>
+<para>Represents an Update SQL Query </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72a32f68a60cef40faedbc6af20298c1a1e" prot="public">
+          <name>DELETE</name>
+          <briefdescription>
+<para>Represents a Delete SQL Query </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the different SQL Query types that can be built </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="26" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="27" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>DatabaseError</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a70a47cae4eb221930f2663fd244369ea" prot="public">
+          <name>NoError</name>
+          <briefdescription>
+<para>No error has occured. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a3c69eb2f306c4ba9c802b3419d6c44ef" prot="public">
+          <name>ClientIncomplete</name>
+          <briefdescription>
+<para>Error when a client&apos;s data is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87ab99c713515d7b0b579a996ed97c8f87d" prot="public">
+          <name>ClientInsert</name>
+          <briefdescription>
+<para>Error when inserting client data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a92aabfc1cdf601156dcd696f9c3e5d0d" prot="public">
+          <name>ClientUpdate</name>
+          <briefdescription>
+<para>Error when updating client data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a25e4da5055029acd5a1bf03dcbb1dd65" prot="public">
+          <name>ClientDelete</name>
+          <briefdescription>
+<para>Error when deleting client data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a81983b13d8dbadfee237955614204875" prot="public">
+          <name>AddressInsert</name>
+          <briefdescription>
+<para>Error when inserting address data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87aefd5cae7c7f4fa03344ca454095db8f3" prot="public">
+          <name>AddressUpdate</name>
+          <briefdescription>
+<para>Error when updating address data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a7a3798161b710382cef875cf0e3a98b2" prot="public">
+          <name>AddressDelete</name>
+          <briefdescription>
+<para>Error when deleting address data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a59a470d520e9e2097bc21d25fdacb1e0" prot="public">
+          <name>AddressIncomplete</name>
+          <briefdescription>
+<para>Error when an address is missing important information </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87ad129ca0cc1e977e8bac39f63d564121d" prot="public">
+          <name>CountyInsert</name>
+          <briefdescription>
+<para>Error when inserting county data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a33530c91981f8e0d5cdaa400e5240ef1" prot="public">
+          <name>CountyUpdate</name>
+          <briefdescription>
+<para>Error when updating county data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87abaa89ff6f3de8891ebdb999e72a82efb" prot="public">
+          <name>CountyDelete</name>
+          <briefdescription>
+<para>Error when deleting county data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87abbfa8e8681a76d8037a94d9a389c16fa" prot="public">
+          <name>CountyIncomplete</name>
+          <briefdescription>
+<para>Error when a county is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a80dabe47bd286acad9c2654824d4bc12" prot="public">
+          <name>RealtorInsert</name>
+          <briefdescription>
+<para>Error when inserting realtor data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87adca5c8f859a032571077d7fca31f60b3" prot="public">
+          <name>RealtorUpdate</name>
+          <briefdescription>
+<para>Error when updating realtor data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a8150aa1005464c82ee1e59087a880c64" prot="public">
+          <name>RealtorDelete</name>
+          <briefdescription>
+<para>Error when deleting realtor data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a41c0eaa0a045971f0691940b997c8ba7" prot="public">
+          <name>RealtorIncomplete</name>
+          <briefdescription>
+<para>Error when a realtor is missing important information </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a10a46e80622186981c88f079a4deed42" prot="public">
+          <name>TitleCompanyInsert</name>
+          <briefdescription>
+<para>Error when inseting title company data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a9fea36e6167695328c042775a00f19da" prot="public">
+          <name>TitleCompanyUpdate</name>
+          <briefdescription>
+<para>Error when updating title company data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87ae5276e88f8b7464dfe9e8be1c0a337e6" prot="public">
+          <name>TitleCompanyDelete</name>
+          <briefdescription>
+<para>Error when deleting title company data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a9fc35100974b4b7498b407a0fc79af4c" prot="public">
+          <name>TitleCompanyIncomplete</name>
+          <briefdescription>
+<para>Error when a title company is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a7ef11a3f44bfc1aef02b2e0bbdbef5c6" prot="public">
+          <name>FileInsert</name>
+          <briefdescription>
+<para>Error when inserting file data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a46a0c0a04dbff906e25e583211323a52" prot="public">
+          <name>FileUpdate</name>
+          <briefdescription>
+<para>Error when updating file data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a3d83379e971f75984d1dee2a42cd8768" prot="public">
+          <name>FileDelete</name>
+          <briefdescription>
+<para>Error when deleting file data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a76b36af6a113f9526a2b064380850327" prot="public">
+          <name>FileIncomplete</name>
+          <briefdescription>
+<para>Error when a file is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87ad40cd98e5d7dd5c9355424a51267fe9e" prot="public">
+          <name>SurveyInsert</name>
+          <briefdescription>
+<para>Error when inserting survey data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a32ba79587d9734370c3e5407bd75784c" prot="public">
+          <name>SurveyUpdate</name>
+          <briefdescription>
+<para>Error when updating survey data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a75bc311e2a3566c89cefe59cbda99354" prot="public">
+          <name>SurveyDelete</name>
+          <briefdescription>
+<para>Error when deleting survey data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a6f8abac75bbd059609cc60b4af853917" prot="public">
+          <name>SurveyIncomplete</name>
+          <briefdescription>
+<para>Error when a survey is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a00f39ee80bd79d78c7033ddd30c72d07" prot="public">
+          <name>LineItemInsert</name>
+          <briefdescription>
+<para>Error when inserting a billing line item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a77a1a9cd00a9adee68431b052559925c" prot="public">
+          <name>LineItemUpdate</name>
+          <briefdescription>
+<para>Error when updating a billing line item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a928332e1fb24300a9b69d011185e8b9a" prot="public">
+          <name>LineItemDelete</name>
+          <briefdescription>
+<para>Error when deleting a billing line item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87abcfbacdd927f3d1d4620d21571264de7" prot="public">
+          <name>LineItemIncomplete</name>
+          <briefdescription>
+<para>Error when a billing line item is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87aea9ffcec118f987c7e58191611bcdd8a" prot="public">
+          <name>RateInsert</name>
+          <briefdescription>
+<para>Error when inserting a rate item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a395e6a2d27c4d7f7e3489e6f1ac05496" prot="public">
+          <name>RateUpdate</name>
+          <briefdescription>
+<para>Error when updating a rate item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87aa4bf3a1494501d9c42a08e1857de8e10" prot="public">
+          <name>RateDelete</name>
+          <briefdescription>
+<para>Error when deleting a rate item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87af5621518ae4fa050e645f3519571ef03" prot="public">
+          <name>RateIncomplete</name>
+          <briefdescription>
+<para>Error when a rate item is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a2c18af1db672a2b4a7c91b44e8ab63b5" prot="public">
+          <name>BillingItemInsert</name>
+          <briefdescription>
+<para>Error when inserting a billing item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a6785361f01fd191b0575ae575a42919e" prot="public">
+          <name>BillingItemUpdate</name>
+          <briefdescription>
+<para>Error when updating a billing item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a508dcd5c4b0aa03913fa8b29c36ad714" prot="public">
+          <name>BillingItemDelete</name>
+          <briefdescription>
+<para>Error when deleting a billing item. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87a4d8a40b972878d95af3eed63b77f4463" prot="public">
+          <name>BillingItemIncomplete</name>
+          <briefdescription>
+<para>Error when a billing item is missing important information. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the different errors that can happen when interacting with the database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="49" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="50" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EntityTypes</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6a577d7068826de925ea2aec01dbadf5e4" prot="public">
+          <name>Client</name>
+          <briefdescription>
+<para>Represents a client entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6a9fd9f9ccd630cd4b6894051c35710572" prot="public">
+          <name>Survey</name>
+          <briefdescription>
+<para>Represents a survey entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6a681c2d57eed5a4f1f48501f8ba51c5cb" prot="public">
+          <name>TitleCompany</name>
+          <briefdescription>
+<para>Represents a title company entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6aa5c8c5b31606d77048201565a5bab933" prot="public">
+          <name>Realtor</name>
+          <briefdescription>
+<para>Represents a realtor entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6adcb66ff6e4a2517ade22183779939c9d" prot="public">
+          <name>Rate</name>
+          <briefdescription>
+<para>Represents a rate entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6a5167b7bc045cb15e79223cfa57151450" prot="public">
+          <name>BillingItem</name>
+          <briefdescription>
+<para>Represents a billing item entity. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the different entities for the program. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="261" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="262" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1aa819a8a44bff8d1c8866d5ef7fc358a6" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ItemType</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aa819a8a44bff8d1c8866d5ef7fc358a6af4c6f851b00d5518bf888815de279aba" prot="public">
+          <name>Notes</name>
+          <briefdescription>
+<para>Represents that Survey notes should be considered. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1aa819a8a44bff8d1c8866d5ef7fc358a6a91f3a2c0e4424c87689525da44c4db11" prot="public">
+          <name>Files</name>
+          <briefdescription>
+<para>Represents that Survey files should be considered. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the various item types that a Survey contains. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="292" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="293" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bc" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>CloseReasons</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bca82e3d407504f0d6040bbcb3cf5e0cee8" prot="public">
+          <name>Licensed</name>
+          <briefdescription>
+<para>The dialog was closed and the current license is valid. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bca10a1bd292ce94ac1ef375ee577f0f33e" prot="public">
+          <name>Unlicensed</name>
+          <briefdescription>
+<para>The dialog was closed and the current license is invalid. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bca6909beea5b50605780e3411f879fe916" prot="public">
+          <name>Updating</name>
+          <briefdescription>
+<para>The dialog was closed and the current license was updated. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the various close reasons a License Activation dialog can have. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="307" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="308" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>FileExtension</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3ae4dfa0bab1ca9fd7f6b980ed3c995f72" prot="public">
+          <name>DWG</name>
+          <briefdescription>
+<para>An AutoCAD file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a95382e19cba08e260c9981e453eda8d0" prot="public">
+          <name>DXF</name>
+          <briefdescription>
+<para>An AutoCAD file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3af7685336754be510e4456974aa968bad" prot="public">
+          <name>DWT</name>
+          <briefdescription>
+<para>An AutoCAD file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a0a106538f41b9a35d0d63f7a8c3537f8" prot="public">
+          <name>DXB</name>
+          <briefdescription>
+<para>An AutoCAD file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a5956a437e724cdfc8b1c70dc7bdeebcb" prot="public">
+          <name>TXT</name>
+          <briefdescription>
+<para>A plain text file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a2e09a5b01eac28408404f266726d465c" prot="public">
+          <name>DOC</name>
+          <briefdescription>
+<para>A legacy word document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a7cfd9a9f0f8957f851d1f18224e85cfe" prot="public">
+          <name>DOCX</name>
+          <briefdescription>
+<para>A word document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3abcd1b68617759b1dfcff0403a6b5a8d1" prot="public">
+          <name>PDF</name>
+          <briefdescription>
+<para>A PDF document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a55505ba281b015ec31f03ccb151b2a34" prot="public">
+          <name>PNG</name>
+          <briefdescription>
+<para>A picture file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a92769fe7c40229f4301d6125e0a9e928" prot="public">
+          <name>JPG</name>
+          <briefdescription>
+<para>A picture file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3a907e06a16862d82ca6907a28a68d0ad6" prot="public">
+          <name>JPEG</name>
+          <briefdescription>
+<para>An alternate form of a JPG file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+<para>Represents no file extension. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="323" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="324" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>StatusText</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952af6f93b8ae657708784b85c2e5124a39b" prot="public">
+          <name>NoJob_AddClient</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952ae11fa86a114dc088b21b961ad378a21c" prot="public">
+          <name>NoJob_AddRealtor</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a8efd7b98e590ca02610d973f57ef4d02" prot="public">
+          <name>NoJob_AddTitleCompany</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952ac652dc43162f08b187cc204df0f20f67" prot="public">
+          <name>NoJob_BasicInfo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952ae6ad1a5ff95925eeaf3fc8e712bca186" prot="public">
+          <name>NoJob_View</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a07d894f616137adfa0a9aa0bb724605a" prot="public">
+          <name>NoJob_Save</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a8bb1903491ffba58abf7691a50611b69" prot="public">
+          <name>NoJob_Close</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a86b3821ab910bbd33cafe4378d9fd839" prot="public">
+          <name>NoJob_AttachFile</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a4ccf1370669d9a587f1d817a9a5099f3" prot="public">
+          <name>NoJob_ViewFiles</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a9a9ec0997a09c312e54b1d3ccbeea7aa" prot="public">
+          <name>NoJob_EditRates</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a32257c46289dbcd216e17ee22fe97261" prot="public">
+          <name>NoJob_AddTime</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a955487205bdd5fb28c99ac831e7a0e3d" prot="public">
+          <name>NoJob_AddBillingItems</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a882db01fe4bff90321fd4d68f47a8f03" prot="public">
+          <name>NoJob_OpenBill</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952ad2e7092e65b89895e8dc79372b2db65c" prot="public">
+          <name>NoJob_AddNotes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952aab4f9738f65d75e96ff482ad5ee50b57" prot="public">
+          <name>NoJob_BillingPortal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a4ae1b610b758a7553d2dc236c8164222" prot="public">
+          <name>NoDatabaseConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952af12eaea74cbeea8ca31daf5cb8bd7313" prot="public">
+          <name>TitleText</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a9049b7774a8f7676f9d892a34a101ef9" prot="public">
+          <name>NoJob_FullReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a97da34345665eb993b57708828e4c435" prot="public">
+          <name>NoJob_FileReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952a6e5472ce297e27d6d03dcf5191674c84" prot="public">
+          <name>FileReport_NoFiles</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="375" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="376" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TimeUnit</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37a62902641c38f3a4a8eb3212454360e24" prot="public">
+          <name>Minute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37ab55e509c697e4cca0e1d160a7806698f" prot="public">
+          <name>Hour</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37a03727ac48595a24daed975559c944a44" prot="public">
+          <name>Day</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the various time units to use for billing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="422" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="423" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ExitChoice</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0aa35b43051b7d9a02095cdd7cd26cc5236" prot="public">
+          <name>SaveAndExit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0aaa8e84b0862d33fdcb4e796e59e49ae7a" prot="public">
+          <name>SaveOnly</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0aac156c30eaa658cd40e8ed72ee04ad897" prot="public">
+          <name>ExitNoSave</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0aaea4788705e6873b424c65e91c2846b19" prot="public">
+          <name>Cancel</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="429" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="430" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a8c897f1d645b300a31f564ab7036d987" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>SurveyPage</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a8c897f1d645b300a31f564ab7036d987a668d28e5fa024b49a4aa9d2c89023c64" prot="public">
+          <name>IsSurveyPage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="437" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="438" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1ad67935cec57c94f279aab4a9a9a40003" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TimeType</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ad67935cec57c94f279aab4a9a9a40003adf814135652a5a308fea15bff37ea284" prot="public">
+          <name>Office</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ad67935cec57c94f279aab4a9a9a40003a6f16a5f8ff5d75ab84c018adacdfcbb7" prot="public">
+          <name>Field</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="442" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="443" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1a812ce62caa40cf69f4b593ce3a87b9ac" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Fonts</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a812ce62caa40cf69f4b593ce3a87b9aca5055d1a4444c630d6839f48ab48aef91" prot="public">
+          <name>Courier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1a812ce62caa40cf69f4b593ce3a87b9acabf103d5f351643099afbb4cc28ba9946" prot="public">
+          <name>TimesNewRoman</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="448" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="449" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>JobState</name>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a1a11b1adc359c03db0ca798a00e2632c" prot="public">
+          <name>Opened</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a9bd99a0beea48f10663fc4a7d7a33140" prot="public">
+          <name>Opening</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873ac51a07a6d1b3c8609dc095cc4d540e23" prot="public">
+          <name>OpenError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a470daf310ab09024099a70552250b587" prot="public">
+          <name>OpenCancelled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a248336101b461380a4b2391a7625493d" prot="public">
+          <name>Saved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a4e11db406c6c9f234fe8579cc9bc5ef6" prot="public">
+          <name>Saving</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a02d61e1b206d494e3418dd2202ee5f0a" prot="public">
+          <name>SaveError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a83a461727f58d761362d83c7d4948418" prot="public">
+          <name>SavePending</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a9f731966306e3564ff5ea580fa58076f" prot="public">
+          <name>SaveCancelled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a03f4a47830f97377a35321051685071e" prot="public">
+          <name>Closed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a5c8de6f894682fdb1786037b2040a26e" prot="public">
+          <name>Closing</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873ac55707538f37b3498ae8e9d213df1885" prot="public">
+          <name>CloseError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873afba5dddc42404bcaa7a00036f2bcce4f" prot="public">
+          <name>CloseCancelled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873aa6fff580feaafda7ffe5c5d61e0ab6a7" prot="public">
+          <name>Creating</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a0eceeb45861f9585dd7a97a3e36f85c6" prot="public">
+          <name>Created</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a32ea92c755f73b2cb68fd5c264466f59" prot="public">
+          <name>CreateError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873ab92caa6f63c61f5469be72772500f346" prot="public">
+          <name>CreateCancelled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873abe8a1cd98e25537cdd3496ef031dfba5" prot="public">
+          <name>InvalidJob</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873af146b245a5e7d7d5e3321163f1cb48bb" prot="public">
+          <name>DuplicateJobNumber</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a5de9f5892dbb85b37150bed47808e556" prot="public">
+          <name>NoJobOpened</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a131fb182a881796e7606ed6da27f1197" prot="public">
+          <name>ReadOnly</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum representing the various states that a Survey Job can be in at any one moment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="457" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="458" bodyend="481"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" line="6" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Enums.cs" bodystart="7" bodyend="482"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a2b5a4b13a07938b0777c46e750a217e5" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>BooleanOps</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a9655e1052428d25653f05d138534d3bc" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>CloseReasons</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a236f69e6b8aa7b8cf054e33f3e5cbb87" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>DatabaseError</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1adc7ab07c2b872b8129b4fd3fc13e49e6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>EntityTypes</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1abdd0b0668e5ba8f44179b2fc0c9cec0a" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>ExitChoice</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a5b09f3aa5e9a48df2233e9a99ff105a3" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>FileExtension</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a812ce62caa40cf69f4b593ce3a87b9ac" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>Fonts</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1aa819a8a44bff8d1c8866d5ef7fc358a6" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>ItemType</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1ae9d6efcf74de2ba690f99680fcc7a873" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>JobState</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1aeea70e868b428481235d87008d466c72" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>QType</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a138f92240949319555481c9ceab9e952" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>StatusText</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a8c897f1d645b300a31f564ab7036d987" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>SurveyPage</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1ad67935cec57c94f279aab4a9a9a40003" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>TimeType</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_enums_1a3862a4ced5596b13ad5c9b4bf3bc2d37" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Enums</scope><name>TimeUnit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

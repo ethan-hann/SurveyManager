@@ -7,11 +7,16 @@ using static SurveyManager.utility.Enums;
 namespace SurveyManager.backend.wrappers.SurveyJob
 {
     /// <summary>
-    /// Class to represent one line item in a survey job's bill. Multiple line items can be added to a survey.
+    /// This class represents a single line item for a survey job. A line item is simply an extra charge to bill for on this survey.
+    /// <para>Multiple line items can be added to a survey using the <see cref="Billing"/> class.</para>
+    /// <para>This class implements the <see cref="IDatabaseWrapper"/> interface to facilitate easier database operations.</para>
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class LineItem : IDatabaseWrapper
     {
+        /// <summary>
+        /// The 
+        /// </summary>
         [Browsable(false)]
         public int ID { get; set; }
         /// <summary>

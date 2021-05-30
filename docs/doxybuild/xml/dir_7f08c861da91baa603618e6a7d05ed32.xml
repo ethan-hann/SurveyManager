@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_7f08c861da91baa603618e6a7d05ed32" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing</compoundname>
+    <innerfile refid="_invalid_product_key_validation_failure_8cs">InvalidProductKeyValidationFailure.cs</innerfile>
+    <innerfile refid="_license_engine_8cs">LicenseEngine.cs</innerfile>
+    <innerfile refid="_license_info_8cs">LicenseInfo.cs</innerfile>
+    <innerfile refid="_license_type_8cs">LicenseType.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_37ef9ff1ce78b2abe3f1dd216232f95e" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms</compoundname>
+    <innerdir refid="dir_e9e16e5971d7be54b43bf3ef26200b07">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu</innerdir>
+    <innerdir refid="dir_fd5593e642fa71f04c00a139e897edc0">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs</innerdir>
+    <innerdir refid="dir_005b4e6aa09da8611c15cfca5485de6b">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/fileMenu</innerdir>
+    <innerdir refid="dir_87314a4ea77b30f8e039f255b8428025">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/pages</innerdir>
+    <innerdir refid="dir_9faa49be06f44cce7cc8c15d50117bcd">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu</innerdir>
+    <innerdir refid="dir_3f0f03525190630c1d2203b98bf3ff4e">D:/Documents/GitHub/SurveyManager/SurveyManager/forms/userControls</innerdir>
+    <innerfile refid="_main_form_8cs">MainForm.cs</innerfile>
+    <innerfile refid="_main_form_8_designer_8cs">MainForm.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/"/>
+  </compounddef>
+</doxygen>

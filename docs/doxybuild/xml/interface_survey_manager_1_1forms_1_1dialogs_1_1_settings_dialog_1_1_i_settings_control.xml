@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" kind="interface" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</compoundname>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.EmailSettings</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.FileSettings</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings</derivedcompoundref>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aca78f44584a4c37458a4c4c82c11b463" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" kindref="member">ChangeStatusText</ref></type>
+        <definition>ChangeStatusText SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.HelpTextChanged</definition>
+        <argsstring></argsstring>
+        <name>HelpTextChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="12" column="39" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aab9283d9a30ebe3a3d0e4566c260ffa3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.UniqueName</definition>
+        <argsstring></argsstring>
+        <name>UniqueName</name>
+        <briefdescription>
+<para>The unique name for this setting control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="26" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a13ceca8970e38ff76e197ba350d27ff3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.Unchanged</definition>
+        <argsstring></argsstring>
+        <name>Unchanged</name>
+        <briefdescription>
+<para>Indicates if the control&apos;s settings have been unchanged and thus do not need saving. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="31" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.ChangeStatusText</definition>
+        <argsstring>(StatusArgs args)</argsstring>
+        <name>ChangeStatusText</name>
+        <param>
+          <type>StatusArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="10" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aa2bb3f6b0b7263bca89b38dba1ade165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.SaveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>SaveSettings</name>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a4e5c34f7c83597661ee592dddd3ceb40">SaveSettings</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a18b6dd32916dd8e75027b782ea1bab8f">SaveSettings</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings_1a918601ad7904bb39078783d665326d9b">SaveSettings</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a03c4100149caa987526e690bc49a93f1">SaveSettings</reimplementedby>
+        <briefdescription>
+<para>The method that should be implemented to define how to save the control&apos;s settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="16" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a6a43635e2a80fb7c1aba1f9ae07917ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl.ToDefaults</definition>
+        <argsstring>()</argsstring>
+        <name>ToDefaults</name>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5aa09b36a452d6c85f5d79b31dab9049">ToDefaults</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings_1a43476af4a32e4f3b67164b3077b65f52">ToDefaults</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings_1a75a4997031eddbb7ce988ce31f5e0b74">ToDefaults</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings_1a44444497f18fac52991f8a5374318a39">ToDefaults</reimplementedby>
+        <briefdescription>
+<para>The method that should be implemented to define how to reset the control&apos;s settings to defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="21" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface that is implemented by any user control that is considered to be a Settings screen. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.FileSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_file_settings"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.GeneralSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_general_settings"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="3">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.EmailSettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_email_settings"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" line="8" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/ISettingsControl.cs" bodystart="9" bodyend="32"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>ChangeStatusText</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aca78f44584a4c37458a4c4c82c11b463" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>HelpTextChanged</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aa2bb3f6b0b7263bca89b38dba1ade165" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>SaveSettings</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a6a43635e2a80fb7c1aba1f9ae07917ac" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>ToDefaults</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a13ceca8970e38ff76e197ba350d27ff3" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>Unchanged</name></member>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aab9283d9a30ebe3a3d0e4566c260ffa3" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::ISettingsControl</scope><name>UniqueName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

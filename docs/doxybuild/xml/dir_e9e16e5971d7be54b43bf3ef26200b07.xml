@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e9e16e5971d7be54b43bf3ef26200b07" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu</compoundname>
+    <innerfile refid="_d_b_connection_8cs">DBConnection.cs</innerfile>
+    <innerfile refid="_d_b_connection_8_designer_8cs">DBConnection.Designer.cs</innerfile>
+    <innerfile refid="_sql_control_8cs">SqlControl.cs</innerfile>
+    <innerfile refid="_sql_control_8_designer_8cs">SqlControl.Designer.cs</innerfile>
+    <innerfile refid="_s_q_l_query_8cs">SQLQuery.cs</innerfile>
+    <innerfile refid="_s_q_l_query_8_designer_8cs">SQLQuery.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/databaseMenu/"/>
+  </compounddef>
+</doxygen>

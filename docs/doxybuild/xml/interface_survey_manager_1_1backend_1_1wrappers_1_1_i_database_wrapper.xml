@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper" kind="interface" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::wrappers::IDatabaseWrapper</compoundname>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.Address</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.CFile</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.Client</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.County</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.Realtor</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.SurveyJob.Billing</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.SurveyJob.BillingItem</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.SurveyJob.LineItem</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.SurveyJob.Rate</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.SurveyJob.Survey</derivedcompoundref>
+    <derivedcompoundref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" prot="public" virt="non-virtual">SurveyManager.backend.wrappers.TitleCompany</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1ae9756f31ef20966c4984a4bb14f432ab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.backend.wrappers.IDatabaseWrapper.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+<para>The id (primary key) of the database record. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" line="13" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.IDatabaseWrapper.Insert</definition>
+        <argsstring>()</argsstring>
+        <name>Insert</name>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1ad5e5d731c0888fe898c8e963c5465ed7">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a412d870317ccc5bd4584e1f0ee0a03a1">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1ab2f1cb0de0d3683fa7a6be8d880c9cdf">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a39636790289ff2d80c28e49458f8cf98">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a8ce1b813053408118223097df276bdb8">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a643dc4b6a7518ec2e7e0832970cc1b59">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1ae63068015f250ae8ab00b2649b252f4d">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a70e79cec8619f687768b646dd110d000">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a608f8796ad12fce4a22dd91c5d758db5">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ac41d66161da30df0ce6fc79983278d71">Insert</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a9ef5e1ad6e5b803f440fdee0dc80f2ea">Insert</reimplementedby>
+        <briefdescription>
+<para>Define the behaviour for inserting the object&apos;s data into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" line="18" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.IDatabaseWrapper.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a4f719330414bec233801d2f5153b83d4">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1ae32f185f24e6574e564274fabc29df8d">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a52b4a07f40ff2201ace237c33c112722">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a3296cb46fcc1d0ff679d92f8c11ed210">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a1881b1eabcb37cc545f030499afb0547">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a24cd09abda72b8a7adf08817ad09a8c4">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1abc9fae27d4b6dc6205c334376a86d491">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a4b5935da15c11ddd9cfdf648fad369ae">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a9b5e70746d24faa40ba17f59e8256a00">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a54b1a16245a6b9d0f74bdb49373ea538">Update</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1a4a59cf6b20464a71961fb87e513755c0">Update</reimplementedby>
+        <briefdescription>
+<para>Define the behaviour for updating the object&apos;s data in the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" line="24" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DatabaseError</type>
+        <definition>DatabaseError SurveyManager.backend.wrappers.IDatabaseWrapper.Delete</definition>
+        <argsstring>()</argsstring>
+        <name>Delete</name>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address_1a3c1fe632cf75066c20aefca13c923ab6">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file_1a6d1248c58c421a3474402146e817704a">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client_1a79a7d8f2c40c4aa111f50337ddef84db">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county_1a8a41ac45533de8c2470c8194936d1882">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor_1a3fbc65f4ac3a795306bdf9a44dca4315">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aecdafa97c515fe407d7cb63c7abb4ebe">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1ae36743433f2e882bd53fa4623d00331e">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a8d48095247a4177e975f2597ad5597e0">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a5e160790f7d61ec3d9a73bd1714d87ff">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ab3310de0c68c754f22d72bbdea99bc73">Delete</reimplementedby>
+        <reimplementedby refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company_1af7c71c2deef8c85ce287c0ba24d17bb1">Delete</reimplementedby>
+        <briefdescription>
+<para>Define the behaviour for deleting the object from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DatabaseError enum representing the result of the method.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" line="30" column="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>All classes that are considered to be database wrappers should implement this interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>SurveyManager.backend.wrappers.SurveyJob.Survey</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SurveyManager.backend.wrappers.SurveyJob.LineItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SurveyManager.backend.wrappers.SurveyJob.BillingItem</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SurveyManager.backend.wrappers.SurveyJob.Rate</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SurveyManager.backend.wrappers.CFile</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SurveyManager.backend.wrappers.SurveyJob.Billing</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SurveyManager.backend.wrappers.IDatabaseWrapper</label>
+        <link refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper"/>
+      </node>
+      <node id="6">
+        <label>SurveyManager.backend.wrappers.Realtor</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SurveyManager.backend.wrappers.TitleCompany</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SurveyManager.backend.wrappers.Client</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SurveyManager.backend.wrappers.Address</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SurveyManager.backend.wrappers.County</label>
+        <link refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" line="8" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/IDatabaseWrapper.cs" bodystart="9" bodyend="31"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a390c3fe8e34592791a1fae8db3258de7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::IDatabaseWrapper</scope><name>Delete</name></member>
+      <member refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1ae9756f31ef20966c4984a4bb14f432ab" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::IDatabaseWrapper</scope><name>ID</name></member>
+      <member refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a19d173b001eff844261802a60b99fdcd" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::IDatabaseWrapper</scope><name>Insert</name></member>
+      <member refid="interface_survey_manager_1_1backend_1_1wrappers_1_1_i_database_wrapper_1a7b01c8471479779a6512c30c8f6ab1f8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::wrappers::IDatabaseWrapper</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

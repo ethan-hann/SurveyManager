@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Filtering::TextSearchFilter</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter_1aee942ff05a6506871bdbe26954aba9cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Filtering.TextSearchFilter.TextSearchFilter</definition>
+        <argsstring>(ICollectionView filteredView, KryptonTextBox textBox)</argsstring>
+        <name>TextSearchFilter</name>
+        <param>
+          <type>ICollectionView</type>
+          <declname>filteredView</declname>
+        </param>
+        <param>
+          <type>KryptonTextBox</type>
+          <declname>textBox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/TextSearchFilter.cs" line="9" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/TextSearchFilter.cs" bodystart="9" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/TextSearchFilter.cs" line="7" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/TextSearchFilter.cs" bodystart="8" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_filtering_1_1_text_search_filter_1aee942ff05a6506871bdbe26954aba9cb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Filtering::TextSearchFilter</scope><name>TextSearchFilter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

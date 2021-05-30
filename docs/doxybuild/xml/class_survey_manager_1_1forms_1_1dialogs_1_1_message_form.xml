@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form" kind="class" language="C#" prot="package">
+    <compoundname>SurveyManager::forms::dialogs::MessageForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a9d8726b9d29dc826a7984683f69fee57" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.MessageForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="10" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a44305b6575ae09f802bb792f13f4a2d5" prot="package" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox SurveyManager.forms.dialogs.MessageForm.picImage</definition>
+        <argsstring></argsstring>
+        <name>picImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="132" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1ad09920791450e286afe722e275525136" prot="package" static="no" mutable="no">
+        <type>KryptonWrapLabel</type>
+        <definition>KryptonWrapLabel SurveyManager.forms.dialogs.MessageForm.lblText</definition>
+        <argsstring></argsstring>
+        <name>lblText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="133" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1acfe9ee0e12e7cb3b381a36dafce02ae1" prot="package" static="no" mutable="no">
+        <type>KryptonButton</type>
+        <definition>KryptonButton SurveyManager.forms.dialogs.MessageForm.btnOK</definition>
+        <argsstring></argsstring>
+        <name>btnOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="134" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a0525ed9990bc37de37f8f26c1c25b281" prot="package" static="no" mutable="no">
+        <type>KryptonButton</type>
+        <definition>KryptonButton SurveyManager.forms.dialogs.MessageForm.btnCancel</definition>
+        <argsstring></argsstring>
+        <name>btnCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="135" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a25e3ab6a5cd61f0f843945456ebc6fc8" prot="package" static="no" mutable="no">
+        <type>KryptonButton</type>
+        <definition>KryptonButton SurveyManager.forms.dialogs.MessageForm.btnNo</definition>
+        <argsstring></argsstring>
+        <name>btnNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="136" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a4f8f6b4f2e9c4122575fd1b65fdfaad2" prot="package" static="no" mutable="no">
+        <type>KryptonButton</type>
+        <definition>KryptonButton SurveyManager.forms.dialogs.MessageForm.btnYes</definition>
+        <argsstring></argsstring>
+        <name>btnYes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="137" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a31bb30ec68b9c31cc8ce6643c9b8eb34" prot="package" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.MessageForm.MessageForm</definition>
+        <argsstring>()</argsstring>
+        <name>MessageForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="9" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a6a3b8bcd54790b38a1346ebfa8443634" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.MessageForm.btnYes_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnYes_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="11" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a3b5660d81acc6fd1d9896bc9353fd52f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.MessageForm.btnNo_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNo_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="14" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a97f188ed1b40ae3f3a77a30c653ec327" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.MessageForm.btnCancel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnCancel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="17" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1aa377703cb455c666605d3e34e5d34bd5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.MessageForm.btnOK_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnOK_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="20" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1af853d977a1587ebdf75095ed62779a71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.MessageForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="31" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="31" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a7600cd9927eff35d777af6c8df299878" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.MessageForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" line="16" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.Designer.cs" bodystart="16" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.MessageForm</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.MessageForm</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>picImage</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>System</label>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" line="7" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/MessageForm.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a0525ed9990bc37de37f8f26c1c25b281" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnCancel</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a97f188ed1b40ae3f3a77a30c653ec327" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnCancel_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a25e3ab6a5cd61f0f843945456ebc6fc8" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnNo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a3b5660d81acc6fd1d9896bc9353fd52f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnNo_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1acfe9ee0e12e7cb3b381a36dafce02ae1" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnOK</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1aa377703cb455c666605d3e34e5d34bd5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnOK_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a4f8f6b4f2e9c4122575fd1b65fdfaad2" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnYes</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a6a3b8bcd54790b38a1346ebfa8443634" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>btnYes_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a9d8726b9d29dc826a7984683f69fee57" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a7600cd9927eff35d777af6c8df299878" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1af853d977a1587ebdf75095ed62779a71" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1ad09920791450e286afe722e275525136" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>lblText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a31bb30ec68b9c31cc8ce6643c9b8eb34" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>MessageForm</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_message_form_1a44305b6575ae09f802bb792f13f4a2d5" prot="package" virt="non-virtual"><scope>SurveyManager::forms::dialogs::MessageForm</scope><name>picImage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

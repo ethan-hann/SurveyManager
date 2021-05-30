@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_6879a2ba84fb018508c1309db04c8265" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog</compoundname>
+    <innerfile refid="_app_settings_8cs">AppSettings.cs</innerfile>
+    <innerfile refid="_app_settings_8_designer_8cs">AppSettings.Designer.cs</innerfile>
+    <innerfile refid="_currency_settings_8cs">CurrencySettings.cs</innerfile>
+    <innerfile refid="_currency_settings_8_designer_8cs">CurrencySettings.Designer.cs</innerfile>
+    <innerfile refid="_email_settings_8cs">EmailSettings.cs</innerfile>
+    <innerfile refid="_email_settings_8_designer_8cs">EmailSettings.Designer.cs</innerfile>
+    <innerfile refid="_file_settings_8cs">FileSettings.cs</innerfile>
+    <innerfile refid="_file_settings_8_designer_8cs">FileSettings.Designer.cs</innerfile>
+    <innerfile refid="_general_settings_8cs">GeneralSettings.cs</innerfile>
+    <innerfile refid="_general_settings_8_designer_8cs">GeneralSettings.Designer.cs</innerfile>
+    <innerfile refid="_i_settings_control_8cs">ISettingsControl.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/"/>
+  </compounddef>
+</doxygen>

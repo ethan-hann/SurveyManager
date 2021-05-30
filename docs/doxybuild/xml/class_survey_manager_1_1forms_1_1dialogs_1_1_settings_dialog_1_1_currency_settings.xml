@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control" prot="public" virt="non-virtual">SurveyManager.forms.dialogs.SettingsDialog.ISettingsControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a4fda5ab97c42734b26b46486b19d17c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.UniqueName</definition>
+        <argsstring></argsstring>
+        <name>UniqueName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="10" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a9641660eb9d103b6b94e95eb8d4b9bba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.Unchanged</definition>
+        <argsstring></argsstring>
+        <name>Unchanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="12" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1af5d75a547c0b98f942654909780d6938" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" kindref="member">ISettingsControl.ChangeStatusText</ref></type>
+        <definition>ISettingsControl.ChangeStatusText SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.HelpTextChanged</definition>
+        <argsstring></argsstring>
+        <name>HelpTextChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="14" column="55" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ac916187f0f1f5d55812793e23a5eb485" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a6543dfb57d981baba3229049554640ef" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="174" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a86c1a80a0eb3fc0f3324d86129b4a704" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="175" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a3c54d1b7e92c0b86fb694a5fd95a1dcc" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.lblDefaultFieldRate</definition>
+        <argsstring></argsstring>
+        <name>lblDefaultFieldRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="176" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ad4219bbc431b6f09234b19bd4304b146" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.txtFieldRate</definition>
+        <argsstring></argsstring>
+        <name>txtFieldRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="177" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1af9ad5a50bc0f9108b501089ec606af97" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel3</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="178" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a7a2ea4bad15530290b6634cf3191d156" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.lblOfficeRate</definition>
+        <argsstring></argsstring>
+        <name>lblOfficeRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="179" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aa17f1d4256bf7cee8f4fc7936263a810" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.txtOfficeRate</definition>
+        <argsstring></argsstring>
+        <name>txtOfficeRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="180" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aac05c5182fc643e5485228c9ad37a317" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel4</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="181" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aa0076ff12b8f776f53d3abed3076467a" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.lblTaxRate</definition>
+        <argsstring></argsstring>
+        <name>lblTaxRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="182" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a3b0144c436eab81850a2bbb3cba5367b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.txtTaxRate</definition>
+        <argsstring></argsstring>
+        <name>txtTaxRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="183" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a21d9465c0f024ff18227438f82870b01" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.lblPercentage</definition>
+        <argsstring></argsstring>
+        <name>lblPercentage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="184" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a33f1d42d642bcf457e03aa57075ffccc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.CurrencySettings</definition>
+        <argsstring>()</argsstring>
+        <name>CurrencySettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="16" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a4e5c34f7c83597661ee592dddd3ceb40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.SaveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>SaveSettings</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1aa2bb3f6b0b7263bca89b38dba1ade165">SaveSettings</reimplements>
+        <briefdescription>
+<para>The method that should be implemented to define how to save the control&apos;s settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="31" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="31" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5aa09b36a452d6c85f5d79b31dab9049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.ToDefaults</definition>
+        <argsstring>()</argsstring>
+        <name>ToDefaults</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a6a43635e2a80fb7c1aba1f9ae07917ac">ToDefaults</reimplements>
+        <briefdescription>
+<para>The method that should be implemented to define how to reset the control&apos;s settings to defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="49" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="49" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5b67b5f5e696edd437cf9e04343c91c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.CurrencySettings_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CurrencySettings_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="22" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="22" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a1747a68fc51634c6628267967cec2bfb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.txtTaxRate_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtTaxRate_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="56" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1acbe8180eada06774e864f9a54c61334f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel2_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel2_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="64" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a608239c9c6b27d3dd3dac0278e6b4aa5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel3_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel3_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="69" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ae8585cc31849fb54a20d8d0d50a20ec2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.flowLayoutPanel4_MouseEnter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>flowLayoutPanel4_MouseEnter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="74" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a9ed48ab434d6ec8af2323eb0fef6256b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.ResetHelpText</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ResetHelpText</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="79" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a1407adfe37391f0947444a90b5d7b960" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="30" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a7b2a601ef0fdab408ac8250ef1281274" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.OnHelpTextChanged</definition>
+        <argsstring>(StatusArgs args)</argsstring>
+        <name>OnHelpTextChanged</name>
+        <param>
+          <type>StatusArgs</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="84" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5667f59a750ae5850e12e44e0ab4ce26" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ISettingsControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control"/>
+      </node>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.SettingsDialog.CurrencySettings</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" line="8" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/SettingsDialog/CurrencySettings.cs" bodystart="9" bodyend="88"/>
+    <listofallmembers>
+      <member refid="interface_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_i_settings_control_1a3e20ad37ef49b86671f86630848dc547" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>ChangeStatusText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ac916187f0f1f5d55812793e23a5eb485" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a33f1d42d642bcf457e03aa57075ffccc" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>CurrencySettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5b67b5f5e696edd437cf9e04343c91c9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>CurrencySettings_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5667f59a750ae5850e12e44e0ab4ce26" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a6543dfb57d981baba3229049554640ef" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a86c1a80a0eb3fc0f3324d86129b4a704" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1acbe8180eada06774e864f9a54c61334f" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel2_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1af9ad5a50bc0f9108b501089ec606af97" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a608239c9c6b27d3dd3dac0278e6b4aa5" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel3_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aac05c5182fc643e5485228c9ad37a317" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ae8585cc31849fb54a20d8d0d50a20ec2" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>flowLayoutPanel4_MouseEnter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1af5d75a547c0b98f942654909780d6938" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>HelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a1407adfe37391f0947444a90b5d7b960" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a3c54d1b7e92c0b86fb694a5fd95a1dcc" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>lblDefaultFieldRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a7a2ea4bad15530290b6634cf3191d156" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>lblOfficeRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a21d9465c0f024ff18227438f82870b01" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>lblPercentage</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aa0076ff12b8f776f53d3abed3076467a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>lblTaxRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a7b2a601ef0fdab408ac8250ef1281274" prot="protected" virt="virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>OnHelpTextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a9ed48ab434d6ec8af2323eb0fef6256b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>ResetHelpText</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a4e5c34f7c83597661ee592dddd3ceb40" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>SaveSettings</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a5aa09b36a452d6c85f5d79b31dab9049" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>ToDefaults</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1ad4219bbc431b6f09234b19bd4304b146" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>txtFieldRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1aa17f1d4256bf7cee8f4fc7936263a810" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>txtOfficeRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a3b0144c436eab81850a2bbb3cba5367b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>txtTaxRate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a1747a68fc51634c6628267967cec2bfb" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>txtTaxRate_TextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a9641660eb9d103b6b94e95eb8d4b9bba" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>Unchanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_settings_dialog_1_1_currency_settings_1a4fda5ab97c42734b26b46486b19d17c9" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::SettingsDialog::CurrencySettings</scope><name>UniqueName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

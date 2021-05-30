@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_d_b_map_8cs" kind="file" language="C#">
+    <compoundname>DBMap.cs</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_d_b_map" prot="public">SurveyManager::utility::DBMap</innerclass>
+    <innernamespace refid="namespace_survey_manager">SurveyManager</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility">SurveyManager::utility</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_survey_manager_1_1utility" kindref="compound">SurveyManager.utility</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_survey_manager_1_1utility_1_1_d_b_map" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_survey_manager_1_1utility_1_1_d_b_map" kindref="compound">DBMap</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="class_survey_manager_1_1utility_1_1_d_b_map_1aba38b3441a54aba6574a3d1274692126" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1aba38b3441a54aba6574a3d1274692126" kindref="member">InternalField</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="15" refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" kindref="member">DisplayField</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_survey_manager_1_1utility_1_1_d_b_map_1adb4533f77ac41bd891bfc167b6b20eed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1adb4533f77ac41bd891bfc167b6b20eed" kindref="member">DBMap</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>internalField,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>displayField)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1aba38b3441a54aba6574a3d1274692126" kindref="member">InternalField</ref><sp/>=<sp/>internalField;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" kindref="member">DisplayField</ref><sp/>=<sp/>displayField;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_survey_manager_1_1utility_1_1_d_b_map_1a5c276ce5c36bf006bad9d12b0d52206d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1a5c276ce5c36bf006bad9d12b0d52206d" kindref="member">ToString</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_d_b_map_1a922a895080fb91fd4a4df65d2b048f5e" kindref="member">DisplayField</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/DBMap.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1_program_1a07c55b2cac0d9ae5de4be4f0c89d4443" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>The main entry point for the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Program.cs" line="12" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Program.cs" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/Program.cs" line="6" column="12" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/Program.cs" bodystart="7" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1_program_1a07c55b2cac0d9ae5de4be4f0c89d4443" prot="private" virt="non-virtual"><scope>SurveyManager::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

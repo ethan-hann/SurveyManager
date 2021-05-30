@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Survey Job Classes &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_reference.html">Code Reference Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Survey Job Classes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/code-reference/survey_job.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="survey-job-classes">
+<h1>Survey Job Classes<a class="headerlink" href="#survey-job-classes" title="Permalink to this headline">¶</a></h1>
+<section id="billing">
+<h2>Billing<a class="headerlink" href="#billing" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.SurveyJob.Billing">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.SurveyJob.Billing</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span><a class="headerlink" href="#class-SurveyManager.backend.wrappers.SurveyJob.Billing" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is a wrapper for a list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a>s and <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">LineItem</span></a>s. </p>
+<p>This class implements the IDatabaseWrapper interface to facilitate easier database operations with the two internal lists. When any of the interface methods are called, each list is iterated and depending on the method called, the objects are inserted, updated, or deleted from the database.</p>
+<p>The objects in each list also implement the IDatabaseWrapper class so they can also be inserted, updated, or deleted from the database easily.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingItems">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a9390aca931d430e680c99f554e0889f9"></span><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetBillingItems</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a> objects associated with this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A list of BillingItems.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetLineItems">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a4c80818155637b8cecb678df07d0ff2e"></span><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" title="type: msdn ~&gt; System.Collections.Generic.List"><span class="pre">List</span></a><span class="pre">&lt;</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a><span class="pre">&gt;</span> <span class="sig-name descname"><span class="pre">GetLineItems</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetLineItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">LineItem</span></a> objects associated with this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.SetObjects">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a7e5782a17770b0febc41da950a0633a4"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">SetObjects</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.SetObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object’s associated objects based on the ids in <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0fed5bb84fb3a643de9bf023035943af"><span class="std std-ref">BillingIds</span></a> and <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab68969e2b10ee8f530f6d1ce0e59eb0c"><span class="std std-ref">LineItemIds</span></a>. </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingIds">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a641353351a5b0ecefd26e98c2eaaff55"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">GetBillingIds</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the billing item ids as a comma seperated list of ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A comma seperated list of billing item ids.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetLineItemIds">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5674f52219b7611d0d7df1376d1da86d"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">GetLineItemIds</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetLineItemIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the line item ids as a comma seperated list of ids. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A comma seperated list of line item ids.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a10ba4dbd46b8c2b08719c958d573fe53"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddLineItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">LineItem</span></a> to this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object’s internal list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The line item to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItemsRange">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0f74c812563ea44e2081c3c307b2e6f3"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddLineItemsRange</span></span> <span class="sig-paren">(</span><span class="pre">ICollection</span><span class="pre">&lt;</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a><span class="pre">&gt;</span> <em><span class="pre">lItems</span></em>, <span class="pre">bool</span> <em><span class="pre">clearListFirst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItemsRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a collection of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">LineItem</span></a> objects to this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param lItems</dt>
+<dd class="field-odd"><p>The collection of items to add.</p>
+</dd>
+<dt class="field-even">Param clearListFirst</dt>
+<dd class="field-even"><p>Should the internal list be cleared first?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aac0552db55dece1c20ffc9cec9bb64c3"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveLineItem</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="class: SurveyManager.backend.wrappers.SurveyJob.LineItem"><span class="pre">LineItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove, if it exists, a line item from this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object’s internal list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItemID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ae042d5c215a527f5dbae5f43b5e96f28"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddLineItemID</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddLineItemID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add, if not already present, a line item id to the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab68969e2b10ee8f530f6d1ce0e59eb0c"><span class="std std-ref">LineItemIds</span></a> string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveLineItemID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aec1a46f1a2806a025bf976e653f3b69e"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveLineItemID</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveLineItemID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove, if it exists, a line item id from the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab68969e2b10ee8f530f6d1ce0e59eb0c"><span class="std std-ref">LineItemIds</span></a> string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBilling">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a09565a2dc18c923727907a6da5ac185b"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddBilling</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBilling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a> to this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object’s internal list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The billing item to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBillingRange">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1adc01df53c373c31eafe85d6b0915523a"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddBillingRange</span></span> <span class="sig-paren">(</span><span class="pre">ICollection</span><span class="pre">&lt;</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a><span class="pre">&gt;</span> <em><span class="pre">billingItems</span></em>, <span class="pre">bool</span> <em><span class="pre">clearListFirst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBillingRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a collection of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a> objects to this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param billingItems</dt>
+<dd class="field-odd"><p>The collection of items to add.</p>
+</dd>
+<dt class="field-even">Param clearListFirst</dt>
+<dd class="field-even"><p>Should the internal list be cleared first?</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveBilling">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5266a96a81c866a030bdc502c71fdd82"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveBilling</span></span> <span class="sig-paren">(</span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="class: SurveyManager.backend.wrappers.SurveyJob.BillingItem"><span class="pre">BillingItem</span></a> <em><span class="pre">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveBilling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove, if it exists, a billing item from this <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> object’s internal list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param item</dt>
+<dd class="field-odd"><p>The item to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBillingID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a2a2945cc521daf81bf5e3042284c5797"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddBillingID</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.AddBillingID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add, if not already present, a billing item id to the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0fed5bb84fb3a643de9bf023035943af"><span class="std std-ref">BillingIds</span></a> string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveBillingId">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1abeaec882f86326d56bf33ef16d40f3ea"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveBillingId</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.RemoveBillingId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove, if it exists, a billing item id from the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0fed5bb84fb3a643de9bf023035943af"><span class="std std-ref">BillingIds</span></a> string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalFieldTime">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab775f32ec6e34e7746ae3ca3bc47e36b"></span><span class="pre">TimeSpan</span> <span class="sig-name descname"><span class="pre">GetTotalFieldTime</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalFieldTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total field time spent on this job based on the list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a>s. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A TimeSpan representing the total field time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalOfficeTime">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a6b27f77c60bad9722c86020b3564d295"></span><span class="pre">TimeSpan</span> <span class="sig-name descname"><span class="pre">GetTotalOfficeTime</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalOfficeTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total office time spent on this job based on the list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a>s. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A TimeSpan representing the total office time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalTime">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a5d82f5e2ec3804584edab5f6e96d8d5d"></span><span class="pre">TimeSpan</span> <span class="sig-name descname"><span class="pre">GetTotalTime</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total time spent on this job based on the list of <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a>s. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A TimeSpan representing the total time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalOfficeBill">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a09a8179a6fe40d28ff62324b6e8ffaa9"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">GetTotalOfficeBill</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalOfficeBill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total bill amount for the office time including any applicable tax and time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The total office bill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalFieldBill">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a59380d10f7cc81adde92e117d2e778e6"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">GetTotalFieldBill</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalFieldBill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total bill amount for the field time including any applicable tax and time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The total field bill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingLineItemsBill">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ad814b43b19e83c721efc44482e0b6438"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">GetBillingLineItemsBill</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetBillingLineItemsBill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total bill amount for the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"><span class="std std-ref">LineItem</span></a>s. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The total line items bill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalBill">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a347fd975dba0b87d3e87fa876427e494"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">GetTotalBill</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.GetTotalBill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total bill combining the office bill, the field bill, and the line items bill. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>The total bill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a643dc4b6a7518ec2e7e0832970cc1b59"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a24cd09abda72b8a7adf08817ad09a8c4"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Billing.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1aecdafa97c515fe407d7cb63c7abb4ebe"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Billing.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.Billing.ID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1af59beaea09d490b6738f3df556e56fe6"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">ID</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.Billing.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id representing this billing object in the database. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.Billing.LineItemIds">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1ab68969e2b10ee8f530f6d1ce0e59eb0c"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">LineItemIds</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.Billing.LineItemIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>The string of comma seperated line item ids. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.Billing.BillingIds">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_1a0fed5bb84fb3a643de9bf023035943af"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">BillingIds</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.Billing.BillingIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>The string of comma seperated billing item ids. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="billingitem">
+<h2>BillingItem<a class="headerlink" href="#billingitem" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.SurveyJob.BillingItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.SurveyJob.BillingItem</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span><a class="headerlink" href="#class-SurveyManager.backend.wrappers.SurveyJob.BillingItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a single billing item for a survey job. A billing item has a field rate and time as well as an office rate and time. </p>
+<p>There is also an associated date that corresponds to when the entry was created.</p>
+<p>This class implements the IDatabaseWrapper interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.SetObjects">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a711dfb13272ec695c8d9a5b8c9c799b7"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">SetObjects</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.SetObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set this billing item’s objects with those from the database based on the Ids. Each database operation runs on a seperate thread. </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1ae63068015f250ae8ab00b2649b252f4d"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1abc9fae27d4b6dc6205c334376a86d491"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1ae36743433f2e882bd53fa4623d00331e"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.ID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a175db8c325f5ee794917cf29e3291587"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">ID</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id representing this billing item in the database. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Description">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1ac167c8f210c75deed6f6c3db3e251350"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Description</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">&quot;N/A&quot;</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.Description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of this billing item. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a904cdf70515fe9417431fdff7750695e"></span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <span class="sig-name descname"><span class="pre">FieldRate</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate"><span class="std std-ref">Rate</span></a> that should be associated with the Field time. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldRateId">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a1c586b01c42c68dae71848a3142243e5"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">FieldRateId</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldRateId" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id in the database of the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a904cdf70515fe9417431fdff7750695e"><span class="std std-ref">FieldRate</span></a>. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a4fde88486a2f76d65dd0c98c2b0e51e6"></span><a class="reference internal" href="#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="class: SurveyManager.backend.wrappers.SurveyJob.Rate"><span class="pre">Rate</span></a> <span class="sig-name descname"><span class="pre">OfficeRate</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate"><span class="std std-ref">Rate</span></a> that should be associated with the Office time. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeRateId">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a3d11fe4ac82a4dbde667447dd6efdfe8"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">OfficeRateId</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeRateId" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id in the database of the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a4fde88486a2f76d65dd0c98c2b0e51e6"><span class="std std-ref">OfficeRate</span></a>. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldTime">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a42a85bc4e210f90db6d88f601e28603d"></span><span class="pre">TimeSpan</span> <span class="sig-name descname"><span class="pre">FieldTime</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.FieldTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time entry for this billing item’s field time. This is used in conjuction with the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a904cdf70515fe9417431fdff7750695e"><span class="std std-ref">FieldRate</span></a> to determine the field bill. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeTime">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1adff6a2c639913ca59bee398c730f18e2"></span><span class="pre">TimeSpan</span> <span class="sig-name descname"><span class="pre">OfficeTime</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.OfficeTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time entry for this billing item’s office time. This is used in conjuction with the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a4fde88486a2f76d65dd0c98c2b0e51e6"><span class="std std-ref">OfficeRate</span></a> to determine the office bill. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.AssociatedDate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a6dbb03ea27553f656bd45a8e48d39757"></span><span class="pre">DateTime</span> <span class="sig-name descname"><span class="pre">AssociatedDate</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">DateTime.Now</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.AssociatedDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date this entry was created. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.IsValidItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item_1a6035b71cc771fd22b14fc83c4f7c82dc"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidItem</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.BillingItem.IsValidItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the description, the field rate, and the office rate to ensure this is a valid billing item. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="lineitem">
+<h2>LineItem<a class="headerlink" href="#lineitem" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.SurveyJob.LineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.SurveyJob.LineItem</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span><a class="headerlink" href="#class-SurveyManager.backend.wrappers.SurveyJob.LineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a single line item for a survey job. A line item is simply an extra charge to bill for on this survey. </p>
+<p>Multiple line items can be added to a survey using the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing"><span class="std std-ref">Billing</span></a> class.</p>
+<p>This class implements the IDatabaseWrapper interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.LineItem.LineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a057e55c21411a337959e54dec97ef616"></span><span class="sig-name descname"><span class="pre">LineItem</span></span> <span class="sig-paren">(</span><span class="pre">decimal</span> <em><span class="pre">amount</span></em>, <span class="pre">string</span> <em><span class="pre">description</span></em>, <span class="pre">double</span> <em><span class="pre">taxRate</span></em><em> <span class="pre">=</span> <span class="pre">0.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.LineItem.LineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new line item with the necessary information. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param amount</dt>
+<dd class="field-odd"><p>The amount for this charge.</p>
+</dd>
+<dt class="field-even">Param description</dt>
+<dd class="field-even"><p>A brief description of the charge.</p>
+</dd>
+<dt class="field-odd">Param taxRate</dt>
+<dd class="field-odd"><p>Any applicable tax that should be considered for this charge.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a1339830ccc9370837dcba1713b144f65"></span><span class="sig-name descname"><span class="pre">LineItem</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em>, <span class="pre">decimal</span> <em><span class="pre">amount</span></em>, <span class="pre">string</span> <em><span class="pre">description</span></em>, <span class="pre">double</span> <em><span class="pre">taxRate</span></em><em> <span class="pre">=</span> <span class="pre">0.0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create a new line item with the necessary information. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id of the row in the database.</p>
+</dd>
+<dt class="field-even">Param amount</dt>
+<dd class="field-even"><p>The amount for this charge.</p>
+</dd>
+<dt class="field-odd">Param description</dt>
+<dd class="field-odd"><p>A brief description of the charge.</p>
+</dd>
+<dt class="field-even">Param taxRate</dt>
+<dd class="field-even"><p>Any applicable tax that should be considered for this charge.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a70e79cec8619f687768b646dd110d000"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a4b5935da15c11ddd9cfdf648fad369ae"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a8d48095247a4177e975f2597ad5597e0"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.LineItem.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.ID">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ac2c8dbb6fbd3290534a86dd4fca99415"></span><span class="pre">int</span> <span class="sig-name descname"><span class="pre">ID</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>The </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.Amount">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ad12524b3ae7e029ca75188b38506d2e6"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">Amount</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.Amount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount in US dollars to charge for this line item. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.Description">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a289e4c4681d1d4dd7842c101b01223e2"></span><span class="pre">string</span> <span class="sig-name descname"><span class="pre">Description</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.Description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A brief description about this charge. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.TaxRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a76ef53516b5a20f3e9404d3bf42c154f"></span><span class="pre">double</span> <span class="sig-name descname"><span class="pre">TaxRate</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span> <span class="pre">=</span> <span class="pre">Settings.Default.DefaultTaxRate</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.TaxRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Any applicable tax to add to the total for this line item. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.SubTotal">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1add6f76793b173618f7d0c5a4021175b0"></span><span class="pre">decimal</span> <span class="sig-name descname"><span class="pre">SubTotal</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.SubTotal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value representing the subtotal for this line item. The subtotal is calculated using the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1ad12524b3ae7e029ca75188b38506d2e6"><span class="std std-ref">Amount</span></a> and the <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a76ef53516b5a20f3e9404d3bf42c154f"><span class="std std-ref">TaxRate</span></a>. </p>
+</dd></dl>
+
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.LineItem.IsValidLineItem">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item_1a2f47d11d46c7cb3bad7d0cb9e41c17c5"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidLineItem</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.LineItem.IsValidLineItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value indicating if this is a valid billing line item. </p>
+<p>A valid line item is one whose amount is not $0.00 and has a description.</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="rate">
+<h2>Rate<a class="headerlink" href="#rate" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.SurveyJob.Rate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.SurveyJob.Rate</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span><a class="headerlink" href="#class-SurveyManager.backend.wrappers.SurveyJob.Rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a single rate. </p>
+<p>A rate is associated with a <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item"><span class="std std-ref">BillingItem</span></a> and is used to determine how much to bill.</p>
+<p>This class implements the IDatabaseWrapper interface to facilitate easier database operations.</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Rate.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a608f8796ad12fce4a22dd91c5d758db5"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Rate.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for inserting the object’s data into the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Rate.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a9b5e70746d24faa40ba17f59e8256a00"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Rate.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for updating the object’s data in the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Rate.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a5e160790f7d61ec3d9a73bd1714d87ff"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Rate.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the behaviour for deleting the object from the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError enum representing the result of the method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.Rate.IsValidRate">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate_1a3434f3ba8a4415e1dd1c244eb342318c"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidRate</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.Rate.IsValidRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the description, amount, and county to ensure this is a valid rate. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="survey">
+<h2>Survey<a class="headerlink" href="#survey" title="Permalink to this headline">¶</a></h2>
+<dl class="cs class">
+<dt class="sig sig-object cs" id="class-SurveyManager.backend.wrappers.SurveyJob.Survey">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"></span><em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SurveyManager.backend.wrappers.SurveyJob.Survey</span></span> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ExpandableObjectConverter</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <span class="pre">SurveyManager.backend.wrappers.IDatabaseWrapper</span><a class="headerlink" href="#class-SurveyManager.backend.wrappers.SurveyJob.Survey" title="Permalink to this definition">¶</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.SetObjects">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a4c4d5e8178e9412f2faa627dcd3d5bdb"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">SetObjects</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.SetObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the objects for this survey with values from the database. </p>
+<p>Gets the survey’s Client, County, Realtor, TitleCompany, and any files associated with it.</p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a416f5e00c5cf0c463e10269e61082247"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddFile</span></span> <span class="sig-paren">(</span><span class="pre">CFile</span> <em><span class="pre">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new file to the associated file list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param file</dt>
+<dd class="field-odd"><p>The file to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFiles">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a3f05cab20f44aee0982236d318655bae"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddFiles</span></span> <span class="sig-paren">(</span><span class="pre">ICollection</span><span class="pre">&lt;</span><span class="pre">CFile</span><span class="pre">&gt;</span> <em><span class="pre">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the files to the associated file list if they are not already present. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param files</dt>
+<dd class="field-odd"><p>The files to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.SetFiles">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a4207251f911d9a9dbc6222cbdc82d658"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">SetFiles</span></span> <span class="sig-paren">(</span><span class="pre">ICollection</span><span class="pre">&lt;</span><span class="pre">CFile</span><span class="pre">&gt;</span> <em><span class="pre">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.SetFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites the files list to be the specified files instead. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param files</dt>
+<dd class="field-odd"><p>The files to set as the new Files list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFile">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a83be17282971b49d0dd978bf56ff6c58"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveFile</span></span> <span class="sig-paren">(</span><span class="pre">CFile</span> <em><span class="pre">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a file, if it exists, from the associated file list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param file</dt>
+<dd class="field-odd"><p>The file to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFiles">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1aa260c1d3ebaeaaf618ccc345e38e1e17"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveFiles</span></span> <span class="sig-paren">(</span><span class="pre">ICollection</span><span class="pre">&lt;</span><span class="pre">CFile</span><span class="pre">&gt;</span> <em><span class="pre">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all files in <em>files</em>  from Files. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param files</dt>
+<dd class="field-odd"><p>The collection of files to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.ClearFiles">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a15cc787d797bdc6cf156884463f4b315"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">ClearFiles</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.ClearFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear this survey’s associated files and file ids. </p>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFileId">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a2d000592ba0ee39af2ec2495d650ae81"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">AddFileId</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.AddFileId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new file id to the id list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFileId">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ad66d8963a0cd70aeb6dfa3bfd3e2aa55"></span><span class="pre">void</span> <span class="sig-name descname"><span class="pre">RemoveFileId</span></span> <span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.RemoveFileId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a file id from the id list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Param id</dt>
+<dd class="field-odd"><p>The id to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.ParseNotes">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1adb7c90e9165a899049b9f4a8e946e4ad"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">ParseNotes</span></span> <span class="sig-paren">(</span><span class="pre">string</span> <em><span class="pre">notesString</span></em><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.ParseNotes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a string containing notes and times into the appropiate dictionary in this class. </p>
+<p>A note is specified by a dateTime in ticks (i.e., 637539336310000000) followed by a string; these two components are seperated by <code class="docutils literal notranslate"><span class="pre">/*</span><span class="pre">*</span><span class="pre">/</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Param notesString</dt>
+<dd class="field-odd"><p>The string containing the notes and time information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.Insert">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ac41d66161da30df0ce6fc79983278d71"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Insert</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.Insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles insertion of this survey and any files associated with it. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError with the result of the Insert operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.Update">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a54b1a16245a6b9d0f74bdb49373ea538"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Update</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles updating this survey and any files associated with it as well. If there is a file with an ID of 0 (meaning it hasn’t been inserted yet), inserts it. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError with the result of the Update operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cs function">
+<dt class="sig sig-object cs" id="function-SurveyManager.backend.wrappers.SurveyJob.Survey.Delete">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1ab3310de0c68c754f22d72bbdea99bc73"></span><span class="pre">DatabaseError</span> <span class="sig-name descname"><span class="pre">Delete</span></span> <span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#function-SurveyManager.backend.wrappers.SurveyJob.Survey.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete this survey from the database, along with the associated files and billing line items. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>A DatabaseError with the result of the Delete operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cs property">
+<dt class="sig sig-object cs" id="property-SurveyManager.backend.wrappers.SurveyJob.Survey.IsValidSurvey">
+<span class="target" id="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey_1a090712e92b46fb4039688d4f003ed4a8"></span><span class="pre">bool</span> <span class="sig-name descname"><span class="pre">IsValidSurvey</span></span> <span class="pre">{</span> <em class="property"><span class="pre">get;</span> <span class="pre">set;</span></em> <span class="pre">}</span><a class="headerlink" href="#property-SurveyManager.backend.wrappers.SurveyJob.Survey.IsValidSurvey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a value that indicates if this is a valid <a class="reference internal" href="#class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey"><span class="std std-ref">Survey</span></a> object. </p>
+<p>A valid survey has a client, county, job number, and description at the very least.</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

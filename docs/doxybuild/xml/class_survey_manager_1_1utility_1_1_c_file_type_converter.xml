@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_c_file_type_converter" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CFileTypeConverter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TypeConverter</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_file_type_converter_1a1fbe8e34034dd18ca6588e2f0cea6534" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CFileTypeConverter.CanConvertTo</definition>
+        <argsstring>(ITypeDescriptorContext context, Type destinationType)</argsstring>
+        <name>CanConvertTo</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>destinationType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" line="11" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_c_file_type_converter_1aa3e8559d63071965f289d7fc95d77256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override object</type>
+        <definition>override object SurveyManager.utility.CFileTypeConverter.ConvertTo</definition>
+        <argsstring>(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)</argsstring>
+        <name>ConvertTo</name>
+        <param>
+          <type>ITypeDescriptorContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>CultureInfo</type>
+          <declname>culture</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>destinationType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" line="16" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" bodystart="16" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.utility.CFileTypeConverter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_file_type_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TypeConverter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.utility.CFileTypeConverter</label>
+        <link refid="class_survey_manager_1_1utility_1_1_c_file_type_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TypeConverter</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" line="9" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CFileTypeConverter.cs" bodystart="10" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_c_file_type_converter_1a1fbe8e34034dd18ca6588e2f0cea6534" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CFileTypeConverter</scope><name>CanConvertTo</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_c_file_type_converter_1aa3e8559d63071965f289d7fc95d77256" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CFileTypeConverter</scope><name>ConvertTo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

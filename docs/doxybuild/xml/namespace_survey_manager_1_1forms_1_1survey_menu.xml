@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1forms_1_1survey_menu" kind="namespace" language="C#">
+    <compoundname>SurveyManager::forms::surveyMenu</compoundname>
+    <innerclass refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public">SurveyManager::forms::surveyMenu::IInfoControl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_info_ctl" prot="public">SurveyManager::forms::surveyMenu::InfoCtl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_line_items_ctl" prot="public">SurveyManager::forms::surveyMenu::LineItemsCtl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_notes_ctl" prot="public">SurveyManager::forms::surveyMenu::NotesCtl</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_search_results" prot="public">SurveyManager::forms::surveyMenu::SearchResults</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_survey_search_results" prot="public">SurveyManager::forms::surveyMenu::SurveySearchResults</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_upload_file" prot="public">SurveyManager::forms::surveyMenu::UploadFile</innerclass>
+    <innerclass refid="class_survey_manager_1_1forms_1_1survey_menu_1_1_view_panel" prot="public">SurveyManager::forms::surveyMenu::ViewPanel</innerclass>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu_1_1billing_portal">SurveyManager::forms::surveyMenu::billingPortal</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu_1_1description">SurveyManager::forms::surveyMenu::description</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu_1_1job_info">SurveyManager::forms::surveyMenu::jobInfo</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu_1_1location_info">SurveyManager::forms::surveyMenu::locationInfo</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1forms_1_1survey_menu_1_1subdivision_info">SurveyManager::forms::surveyMenu::subdivisionInfo</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/billingPortal/NewEntryDlg.cs" line="15" column="1"/>
+  </compounddef>
+</doxygen>

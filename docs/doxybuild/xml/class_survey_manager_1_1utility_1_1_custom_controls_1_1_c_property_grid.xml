@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::CustomControls::CPropertyGrid</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PropertyGrid</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a0ee3062b60b70bd3d146321a47907b4a" prot="private" static="no" mutable="no">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.acceptButton</definition>
+        <argsstring></argsstring>
+        <name>acceptButton</name>
+        <initializer>= new ToolStripButton(&quot;Save&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="11" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a1fd68601b46009d0ac4bd9da83b680fa" prot="private" static="no" mutable="no">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.clearButton</definition>
+        <argsstring></argsstring>
+        <name>clearButton</name>
+        <initializer>= new ToolStripButton(&quot;Clear&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="12" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a61218f7ff68d443357e3e29ac1ab93fd" prot="private" static="no" mutable="no">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.uploadFiles</definition>
+        <argsstring></argsstring>
+        <name>uploadFiles</name>
+        <initializer>= new ToolStripButton(&quot;Upload Files&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="13" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a8dc4a03d9101554d97b550ae0762e817" prot="private" static="no" mutable="no">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.downloadFiles</definition>
+        <argsstring></argsstring>
+        <name>downloadFiles</name>
+        <initializer>= new ToolStripButton(&quot;Download Files&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="14" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a232991d4294851034dd0de038f801818" prot="private" static="no" mutable="no">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.openJob</definition>
+        <argsstring></argsstring>
+        <name>openJob</name>
+        <initializer>= new ToolStripButton(&quot;Open Selected Job&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="15" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a1700cc246f3280409063fcff0b549df7" prot="private" static="no" mutable="no">
+        <type>ToolStrip</type>
+        <definition>ToolStrip SurveyManager.utility.CustomControls.CPropertyGrid.toolStrip</definition>
+        <argsstring></argsstring>
+        <name>toolStrip</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="16" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a42a10e18dd041d611d6a9907bf604445" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.utility.CustomControls.CPropertyGrid.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a37f617ff9320015346f11f342cf1e49d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CustomControls.CPropertyGrid.CPropertyGrid</definition>
+        <argsstring>()</argsstring>
+        <name>CPropertyGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="18" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aadb8768fce15b4c06be367811fbe3944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.CustomControls.CPropertyGrid.CPropertyGrid</definition>
+        <argsstring>(IContainer container)</argsstring>
+        <name>CPropertyGrid</name>
+        <param>
+          <type>IContainer</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="36" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="36" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a479b4455d76bdad6254cc911e09e6b67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStrip</type>
+        <definition>ToolStrip SurveyManager.utility.CustomControls.CPropertyGrid.GetToolStrip</definition>
+        <argsstring>()</argsstring>
+        <name>GetToolStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="82" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a659c48818796308b925ea6e8a44deb13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.GetAcceptButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetAcceptButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="87" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a01cb2bc81f3602b4d5afe727ad543d59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.GetClearButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetClearButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="92" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1abe51c7b265ac1aa97bfc914e08a64d05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.GetUploadFilesButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetUploadFilesButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="97" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a5fc06123ed32e4fca006a976bfdca8cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.GetDownloadFilesButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetDownloadFilesButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="102" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aa26d074028874aa365bd0b9cbeea0183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ToolStripButton</type>
+        <definition>ToolStripButton SurveyManager.utility.CustomControls.CPropertyGrid.GetOpenJobButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetOpenJobButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="107" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="107" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aa475aa5a9ced10092c47f3c5a8f61e9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.utility.CustomControls.CPropertyGrid.AddButtons</definition>
+        <argsstring>()</argsstring>
+        <name>AddButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="56" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="56" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a0ed01b3cd372e7ca2d8cb786a4f51f6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.utility.CustomControls.CPropertyGrid.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a6af19037544cd96f866af1e0003f9b62" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool SurveyManager.utility.CustomControls.CPropertyGrid.ProcessTabKey</definition>
+        <argsstring>(bool forward)</argsstring>
+        <name>ProcessTabKey</name>
+        <param>
+          <type>bool</type>
+          <declname>forward</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="112" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="112" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1afaf5a737d81948e905c9cbb01e9ef2ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.utility.CustomControls.CPropertyGrid.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PropertyGrid</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CustomControls.CPropertyGrid</label>
+        <link refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>PropertyGrid</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.CustomControls.CPropertyGrid</label>
+        <link refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" line="9" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/CustomControls/CPropertyGrid.cs" bodystart="10" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a0ee3062b60b70bd3d146321a47907b4a" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>acceptButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aa475aa5a9ced10092c47f3c5a8f61e9b" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>AddButtons</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a1fd68601b46009d0ac4bd9da83b680fa" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>clearButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a42a10e18dd041d611d6a9907bf604445" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a37f617ff9320015346f11f342cf1e49d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>CPropertyGrid</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aadb8768fce15b4c06be367811fbe3944" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>CPropertyGrid</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1afaf5a737d81948e905c9cbb01e9ef2ed" prot="protected" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a8dc4a03d9101554d97b550ae0762e817" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>downloadFiles</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a659c48818796308b925ea6e8a44deb13" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetAcceptButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a01cb2bc81f3602b4d5afe727ad543d59" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetClearButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a5fc06123ed32e4fca006a976bfdca8cb" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetDownloadFilesButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1aa26d074028874aa365bd0b9cbeea0183" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetOpenJobButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a479b4455d76bdad6254cc911e09e6b67" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetToolStrip</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1abe51c7b265ac1aa97bfc914e08a64d05" prot="public" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>GetUploadFilesButton</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a0ed01b3cd372e7ca2d8cb786a4f51f6c" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a232991d4294851034dd0de038f801818" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>openJob</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a6af19037544cd96f866af1e0003f9b62" prot="protected" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>ProcessTabKey</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a1700cc246f3280409063fcff0b549df7" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>toolStrip</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_custom_controls_1_1_c_property_grid_1a61218f7ff68d443357e3e29ac1ab93fd" prot="private" virt="non-virtual"><scope>SurveyManager::utility::CustomControls::CPropertyGrid</scope><name>uploadFiles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

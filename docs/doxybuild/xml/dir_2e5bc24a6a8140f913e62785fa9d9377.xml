@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_2e5bc24a6a8140f913e62785fa9d9377" kind="dir">
+    <compoundname>D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering</compoundname>
+    <innerfile refid="_a_n_d_filter_8cs">ANDFilter.cs</innerfile>
+    <innerfile refid="_filter_8cs">Filter.cs</innerfile>
+    <innerfile refid="_filter_expression_list_8cs">FilterExpressionList.cs</innerfile>
+    <innerfile refid="_i_filter_8cs">IFilter.cs</innerfile>
+    <innerfile refid="_o_r_filter_8cs">ORFilter.cs</innerfile>
+    <innerfile refid="_text_search_filter_8cs">TextSearchFilter.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Filtering/"/>
+  </compounddef>
+</doxygen>

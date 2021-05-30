@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::dialogs::ActivationDlg</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">KryptonForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a3feb3da88c967363cc70a175c338c828" prot="private" static="no" mutable="no">
+        <type><ref refid="class_survey_manager_1_1utility_1_1_licensing_1_1_license_info" kindref="compound">LicenseInfo</ref></type>
+        <definition>LicenseInfo SurveyManager.forms.dialogs.ActivationDlg.info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="14" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0d1289c0289bb72d1315831c5753c178" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.dialogs.ActivationDlg.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a00e49f19a3e762524343426bd962c145" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.ActivationDlg.btnPurchase</definition>
+        <argsstring></argsstring>
+        <name>btnPurchase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="162" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a30ac3b392a84f9b85a1704ec27fbec53" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.OpenFileDialog</type>
+        <definition>System.Windows.Forms.OpenFileDialog SurveyManager.forms.dialogs.ActivationDlg.dlgOpenFile</definition>
+        <argsstring></argsstring>
+        <name>dlgOpenFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="163" column="50" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a29abdf7f67cfe3f6e1fe3ec0784ce46b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonButton</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonButton SurveyManager.forms.dialogs.ActivationDlg.btnActivate</definition>
+        <argsstring></argsstring>
+        <name>btnActivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="164" column="61" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ab512cc2f5578545e4e7ad3a625356657" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.dialogs.ActivationDlg.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="165" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a33f814c2147f6b6d7797898e36ec4b57" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.dialogs.ActivationDlg.txtProductKey</definition>
+        <argsstring></argsstring>
+        <name>txtProductKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="166" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a5ce4cecabf2349561bd982204bef624a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip SurveyManager.forms.dialogs.ActivationDlg.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="167" column="47" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1aeaa21eea1aab00d14ce87a9d9260124a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel SurveyManager.forms.dialogs.ActivationDlg.lblActivationStatus</definition>
+        <argsstring></argsstring>
+        <name>lblActivationStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="168" column="56" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ab28bd049fc763b8b410504e06d7ba59e" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonGroupBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonGroupBox SurveyManager.forms.dialogs.ActivationDlg.grpInfoBox</definition>
+        <argsstring></argsstring>
+        <name>grpInfoBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="169" column="63" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a34790dd8c858e2db384d1d44c4ecac4c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PropertyGrid</type>
+        <definition>System.Windows.Forms.PropertyGrid SurveyManager.forms.dialogs.ActivationDlg.infoPropGrid</definition>
+        <argsstring></argsstring>
+        <name>infoPropGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="170" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0b98d8fc9d5d5df44d526d1263056a91" prot="public" static="no" mutable="no">
+        <type>EventHandler</type>
+        <definition>EventHandler SurveyManager.forms.dialogs.ActivationDlg.LicensingComplete</definition>
+        <argsstring></argsstring>
+        <name>LicensingComplete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="16" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a3073335213f929823239e078172d938e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.dialogs.ActivationDlg.ActivationDlg</definition>
+        <argsstring>()</argsstring>
+        <name>ActivationDlg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="18" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a35fb19f393110ba752ec97316efb706c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.ActivationDlg.Activation_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Activation_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="23" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="23" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ae3d5f3fbd98c59de340de154402a18b7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.ActivationDlg.btnFinish_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnFinish_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="47" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="47" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a85e96df399a5650ab23d6a30328c8443" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.ActivationDlg.ActivationDlg_FormClosing</definition>
+        <argsstring>(object sender, FormClosingEventArgs e)</argsstring>
+        <name>ActivationDlg_FormClosing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="89" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0fca0b441958342f6307a1b2fc9a4495" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.dialogs.ActivationDlg.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="30" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a271125d64e856d55860640bca8e3df5a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.dialogs.ActivationDlg.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.ActivationDlg</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.dialogs.ActivationDlg</label>
+        <link refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KryptonForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" line="12" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/dialogs/ActivationDlg.cs" bodystart="13" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a35fb19f393110ba752ec97316efb706c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>Activation_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a3073335213f929823239e078172d938e" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>ActivationDlg</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a85e96df399a5650ab23d6a30328c8443" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>ActivationDlg_FormClosing</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a29abdf7f67cfe3f6e1fe3ec0784ce46b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>btnActivate</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ae3d5f3fbd98c59de340de154402a18b7" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>btnFinish_Click</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a00e49f19a3e762524343426bd962c145" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>btnPurchase</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0d1289c0289bb72d1315831c5753c178" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a271125d64e856d55860640bca8e3df5a" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a30ac3b392a84f9b85a1704ec27fbec53" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>dlgOpenFile</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ab28bd049fc763b8b410504e06d7ba59e" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>grpInfoBox</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a3feb3da88c967363cc70a175c338c828" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>info</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a34790dd8c858e2db384d1d44c4ecac4c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>infoPropGrid</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0fca0b441958342f6307a1b2fc9a4495" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1ab512cc2f5578545e4e7ad3a625356657" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1aeaa21eea1aab00d14ce87a9d9260124a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>lblActivationStatus</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a0b98d8fc9d5d5df44d526d1263056a91" prot="public" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>LicensingComplete</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a5ce4cecabf2349561bd982204bef624a" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>statusStrip1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1dialogs_1_1_activation_dlg_1a33f814c2147f6b6d7797898e36ec4b57" prot="private" virt="non-virtual"><scope>SurveyManager::forms::dialogs::ActivationDlg</scope><name>txtProductKey</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

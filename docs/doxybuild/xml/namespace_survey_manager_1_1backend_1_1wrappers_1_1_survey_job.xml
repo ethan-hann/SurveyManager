@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_survey_manager_1_1backend_1_1wrappers_1_1_survey_job" kind="namespace" language="C#">
+    <compoundname>SurveyManager::backend::wrappers::SurveyJob</compoundname>
+    <innerclass refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing" prot="public">SurveyManager::backend::wrappers::SurveyJob::Billing</innerclass>
+    <innerclass refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" prot="public">SurveyManager::backend::wrappers::SurveyJob::BillingItem</innerclass>
+    <innerclass refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" prot="public">SurveyManager::backend::wrappers::SurveyJob::LineItem</innerclass>
+    <innerclass refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" prot="public">SurveyManager::backend::wrappers::SurveyJob::Rate</innerclass>
+    <innerclass refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" prot="public">SurveyManager::backend::wrappers::SurveyJob::Survey</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/wrappers/SurveyJob/Billing.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

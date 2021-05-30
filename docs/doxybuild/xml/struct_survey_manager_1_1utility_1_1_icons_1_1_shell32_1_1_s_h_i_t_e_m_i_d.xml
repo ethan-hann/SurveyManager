@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d" kind="struct" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Icons::Shell32::SHITEMID</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d_1a53d608529f06741e71d8b98bce094eb4" prot="public" static="no" mutable="no">
+        <type>ushort</type>
+        <definition>ushort SurveyManager.utility.Icons.Shell32.SHITEMID.cb</definition>
+        <argsstring></argsstring>
+        <name>cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="139" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d_1aae080b73dffb52080a876514764da0a1" prot="public" static="no" mutable="no">
+        <type>byte[]</type>
+        <definition>byte [] SurveyManager.utility.Icons.Shell32.SHITEMID.abID</definition>
+        <argsstring></argsstring>
+        <name>abID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="141" column="25" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" line="137" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Icons/IconReader.cs" bodystart="138" bodyend="142"/>
+    <listofallmembers>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d_1aae080b73dffb52080a876514764da0a1" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHITEMID</scope><name>abID</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_icons_1_1_shell32_1_1_s_h_i_t_e_m_i_d_1a53d608529f06741e71d8b98bce094eb4" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Icons::Shell32::SHITEMID</scope><name>cb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

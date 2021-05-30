@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Licensing::InvalidProductKeyValidationFailure</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IValidationFailure</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure_1a4c996654cabb9c6140ec5d71f7e3510f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.InvalidProductKeyValidationFailure.Message</definition>
+        <argsstring></argsstring>
+        <name>Message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" line="7" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure_1a6e4ea16f2abb9ec913262d843d81d69d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Licensing.InvalidProductKeyValidationFailure.HowToResolve</definition>
+        <argsstring></argsstring>
+        <name>HowToResolve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" line="8" column="23" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IValidationFailure</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.Licensing.InvalidProductKeyValidationFailure</label>
+        <link refid="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IValidationFailure</label>
+      </node>
+      <node id="1">
+        <label>SurveyManager.utility.Licensing.InvalidProductKeyValidationFailure</label>
+        <link refid="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" line="5" column="5" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Licensing/InvalidProductKeyValidationFailure.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure_1a6e4ea16f2abb9ec913262d843d81d69d" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::InvalidProductKeyValidationFailure</scope><name>HowToResolve</name></member>
+      <member refid="class_survey_manager_1_1utility_1_1_licensing_1_1_invalid_product_key_validation_failure_1a4c996654cabb9c6140ec5d71f7e3510f" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Licensing::InvalidProductKeyValidationFailure</scope><name>Message</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

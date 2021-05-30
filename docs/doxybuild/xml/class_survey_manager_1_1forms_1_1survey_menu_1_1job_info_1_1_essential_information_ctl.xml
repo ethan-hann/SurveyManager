@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+    <basecompoundref refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control" prot="public" virt="non-virtual">SurveyManager.forms.surveyMenu.IInfoControl</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a4febc8f3675d561d115e38fc059d58a1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.IsEdited</definition>
+        <argsstring></argsstring>
+        <name>IsEdited</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="15" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a92c83db78579d3647f34787d3234e7a9" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="9" column="48" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a6f269f5ceca44a275c09ba7d4d79a3a8" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.kryptonLabel1</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="204" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ad6c838f0eaed13846ba345aec964ff28" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtJobNumber</definition>
+        <argsstring></argsstring>
+        <name>txtJobNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="205" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aa2e53389574c968a95a3e88bcd4d7539" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="206" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1af6f01e286ce5ebc688b746e4e47b5e9b" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.kryptonLabel2</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="207" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aa35b1958238ed5a76d266b687ce2f084" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtAbstract</definition>
+        <argsstring></argsstring>
+        <name>txtAbstract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="208" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ae0bd69d69d00e316796c6a1ccbf19a12" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.flowLayoutPanel2</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="209" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1abd68aba18b4f4e1caa6225a5d1406036" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.kryptonLabel3</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="210" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aac8ec5a4685dc90ce581faac66ab24d9" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtSurvey</definition>
+        <argsstring></argsstring>
+        <name>txtSurvey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="211" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aed041d9efb4da73db2e22476bb9a06d8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.flowLayoutPanel3</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="212" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a32b0664385b000e57a831e5a97d0d5e3" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonLabel</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonLabel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.kryptonLabel4</definition>
+        <argsstring></argsstring>
+        <name>kryptonLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="213" column="60" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1afa248a34125e40e8a475a7d8b3e01635" prot="private" static="no" mutable="no">
+        <type>ComponentFactory.Krypton.Toolkit.KryptonTextBox</type>
+        <definition>ComponentFactory.Krypton.Toolkit.KryptonTextBox SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtNumOfAcres</definition>
+        <argsstring></argsstring>
+        <name>txtNumOfAcres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="214" column="62" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a8285469084727b8bdc32a81cde56c7a9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.flowLayoutPanel4</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="215" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a7bd9e11f1c6e5c2652a726bcfbd17bb4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.flowLayoutPanel5</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="216" column="51" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ad2aa9a623db84e900bb39a37da5df4f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.EssentialInformationCtl</definition>
+        <argsstring>()</argsstring>
+        <name>EssentialInformationCtl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="17" column="16" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a53fbba1488e0ead5bb0ee0c1540c3bc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.SaveInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SaveInfo</name>
+        <reimplements refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control_1ac9bf9eb03dfae7cdcb5eee6c97a49633">SaveInfo</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="94" column="21" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="94" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a2284c8bce477ffd798909486d39ba720" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.JobInfoCtl_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>JobInfoCtl_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="22" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="22" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a905a9271e0c7a68b774f5e4522b4ae11" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.textBox_Enter</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="37" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a99c82bbc8ba0911dd5fe5778d6f6a1e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.textBox_Leave</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>textBox_Leave</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="44" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a37ded9a999b09f12f0d55aafc85fa71c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtNumOfAcres_TextChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtNumOfAcres_TextChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="51" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a97431acbe827ff12e66bbbbb450b9159" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.txtNumOfAcres_KeyPress</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>txtNumOfAcres_KeyPress</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="59" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="59" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a4d58447eef0fae033c453bdbc32c2f35" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.JobModified</definition>
+        <argsstring>(object sender, KeyPressEventArgs e)</argsstring>
+        <name>JobModified</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyPressEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="127" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a836e9397f1c0fbff04438594764e4ca3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="30" column="22" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="30" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a456cbb33284c3ad5aeb068a90becd3e6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" line="15" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SurveyManager.forms.surveyMenu.jobInfo.EssentialInformationCtl</label>
+        <link refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IInfoControl</label>
+        <link refid="interface_survey_manager_1_1forms_1_1survey_menu_1_1_i_info_control"/>
+      </node>
+      <node id="2">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" line="13" column="19" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/forms/surveyMenu/jobInfo/JobInfoCtl.cs" bodystart="14" bodyend="131"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a92c83db78579d3647f34787d3234e7a9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>components</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a456cbb33284c3ad5aeb068a90becd3e6" prot="protected" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>Dispose</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ad2aa9a623db84e900bb39a37da5df4f5" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>EssentialInformationCtl</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aa2e53389574c968a95a3e88bcd4d7539" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ae0bd69d69d00e316796c6a1ccbf19a12" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>flowLayoutPanel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aed041d9efb4da73db2e22476bb9a06d8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>flowLayoutPanel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a8285469084727b8bdc32a81cde56c7a9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>flowLayoutPanel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a7bd9e11f1c6e5c2652a726bcfbd17bb4" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>flowLayoutPanel5</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a836e9397f1c0fbff04438594764e4ca3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>InitializeComponent</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a4febc8f3675d561d115e38fc059d58a1" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>IsEdited</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a2284c8bce477ffd798909486d39ba720" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>JobInfoCtl_Load</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a4d58447eef0fae033c453bdbc32c2f35" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>JobModified</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a6f269f5ceca44a275c09ba7d4d79a3a8" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>kryptonLabel1</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1af6f01e286ce5ebc688b746e4e47b5e9b" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>kryptonLabel2</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1abd68aba18b4f4e1caa6225a5d1406036" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>kryptonLabel3</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a32b0664385b000e57a831e5a97d0d5e3" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>kryptonLabel4</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a53fbba1488e0ead5bb0ee0c1540c3bc3" prot="public" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>SaveInfo</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a905a9271e0c7a68b774f5e4522b4ae11" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>textBox_Enter</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a99c82bbc8ba0911dd5fe5778d6f6a1e1" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>textBox_Leave</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aa35b1958238ed5a76d266b687ce2f084" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtAbstract</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1ad6c838f0eaed13846ba345aec964ff28" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtJobNumber</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1afa248a34125e40e8a475a7d8b3e01635" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtNumOfAcres</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a97431acbe827ff12e66bbbbb450b9159" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtNumOfAcres_KeyPress</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1a37ded9a999b09f12f0d55aafc85fa71c" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtNumOfAcres_TextChanged</name></member>
+      <member refid="class_survey_manager_1_1forms_1_1survey_menu_1_1job_info_1_1_essential_information_ctl_1aac8ec5a4685dc90ce581faac66ab24d9" prot="private" virt="non-virtual"><scope>SurveyManager::forms::surveyMenu::jobInfo::EssentialInformationCtl</scope><name>txtSurvey</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

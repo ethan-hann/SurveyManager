@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_pair_8cs" kind="file" language="C#">
+    <compoundname>Pair.cs</compoundname>
+    <innerclass refid="class_survey_manager_1_1utility_1_1_pair" prot="public">SurveyManager::utility::Pair</innerclass>
+    <innernamespace refid="namespace_survey_manager">SurveyManager</innernamespace>
+    <innernamespace refid="namespace_survey_manager_1_1utility">SurveyManager::utility</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_survey_manager_1_1utility" kindref="compound">SurveyManager.utility</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_survey_manager_1_1utility_1_1_pair" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_survey_manager_1_1utility_1_1_pair" kindref="compound">Pair</ref>&lt;K,<sp/>V&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="class_survey_manager_1_1utility_1_1_pair_1adfee0a46921a42e90b752c2ce065b879" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>K<sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1adfee0a46921a42e90b752c2ce065b879" kindref="member">Key</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="17" refid="class_survey_manager_1_1utility_1_1_pair_1a9089833a0ddb92fdf9ad39d4dfc3cf22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>V<sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1a9089833a0ddb92fdf9ad39d4dfc3cf22" kindref="member">Value</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_survey_manager_1_1utility_1_1_pair_1a3a5e10f26bdee7b5b81ebf0d17787a14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1a3a5e10f26bdee7b5b81ebf0d17787a14" kindref="member">Pair</ref>(K<sp/>key,<sp/>V<sp/>value)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1adfee0a46921a42e90b752c2ce065b879" kindref="member">Key</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1a9089833a0ddb92fdf9ad39d4dfc3cf22" kindref="member">Value</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_survey_manager_1_1utility_1_1_pair_1a27c8133b77fa6e70e5d8d8554ed25d28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_survey_manager_1_1utility_1_1_pair_1a27c8133b77fa6e70e5d8d8554ed25d28" kindref="member">Pair</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Pair.cs"/>
+  </compounddef>
+</doxygen>

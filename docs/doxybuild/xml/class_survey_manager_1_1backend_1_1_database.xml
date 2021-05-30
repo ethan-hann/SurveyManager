@@ -1,0 +1,1276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_survey_manager_1_1backend_1_1_database" kind="class" language="C#" prot="public">
+    <compoundname>SurveyManager::backend::Database</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1a6fee263071bc29c770f2eebe65e9911f" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.Server</definition>
+        <argsstring></argsstring>
+        <name>Server</name>
+        <briefdescription>
+<para>The hostname of the database connection </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="23" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1a4e0152f8039081533ca710a336ce8e67" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+<para>The port the database connection is listening on </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="28" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1a3f3dda477e2db2ef3f743e8f23d82e3c" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.DB</definition>
+        <argsstring></argsstring>
+        <name>DB</name>
+        <briefdescription>
+<para>The name of the database to connect to </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="33" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1ad57ac0a6c9da3ce36887241720e1ef17" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.Username</definition>
+        <argsstring></argsstring>
+        <name>Username</name>
+        <briefdescription>
+<para>The user name for the database </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="38" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1aa8c29c304fc0c6d517a4df5a85736242" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <briefdescription>
+<para>The password for the database </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="43" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.backend.Database.ConnectionString</definition>
+        <argsstring></argsstring>
+        <name>ConnectionString</name>
+        <briefdescription>
+<para>The full connection string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="48" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_survey_manager_1_1backend_1_1_database_1a3d2a84d1784c6b21df200a3cc313881e" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SurveyManager.backend.Database.MAX_ALLOWED_PACKET_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_ALLOWED_PACKET_SIZE</name>
+        <initializer>= 1073741824</initializer>
+        <briefdescription>
+<para>The maximum allowed packet size in bytes for a file upload </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="53" column="26" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aa0b19198bfb509d9bf2cfd33e5b17d0c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.backend.Database.Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+<para>Initializes properties with values from the connection string saved in settings. Sets the <ref refid="class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549" kindref="member">ConnectionString</ref> property using these values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="59" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="59" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aefc6f852862c5ce19d07966bf2ce36db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SurveyManager.backend.Database.SaveConnectionString</definition>
+        <argsstring>()</argsstring>
+        <name>SaveConnectionString</name>
+        <briefdescription>
+<para>Used to save the connection string to settings </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="86" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a44efbc085ed396b144957037f3efef8d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.CheckConnection</definition>
+        <argsstring>()</argsstring>
+        <name>CheckConnection</name>
+        <briefdescription>
+<para>Creates a database connection on the given connection string and tests that it can be opened and closed. If it can&apos;t, the error code returned by MySqlException is returned by this function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="98" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="98" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ae094eae944a216fa847e7b72586a4ef7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable SurveyManager.backend.Database.ExecuteFilter</definition>
+        <argsstring>(string query)</argsstring>
+        <name>ExecuteFilter</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+<para>Executes a filter query built by a <ref refid="class_survey_manager_1_1forms_1_1dialogs_1_1_advanced_filter" kindref="compound">forms.dialogs.AdvancedFilter</ref> dialog. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The query to execute on the database.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A DataTable containing all of the rows that matched the query. </para>
+<para>It is up to the calling class to parse this data appropiately.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="129" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="129" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad4af1ffbd09d18accf4d3944accf886f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>static ArrayList SurveyManager.backend.Database.GetColumns</definition>
+        <argsstring>(string tableName)</argsstring>
+        <name>GetColumns</name>
+        <param>
+          <type>string</type>
+          <declname>tableName</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a list of column names from the specified table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to get the columns of</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An ArrayList of type string containing the column names.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="173" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="173" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a9aafca29e5b3de2e781fa632f694398f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable SurveyManager.backend.Database.GetTableInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetTableInfo</name>
+        <briefdescription>
+<para>Run the _.show_table_status() stored prodedure to get information about tables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A DataTable ready to be used as a data source for a DataGridView Control.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="200" column="33" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="200" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad8aa33ea0bb8b77e66232bf4c045ee30" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.GetLastRowIDInserted</definition>
+        <argsstring>(string tablename)</argsstring>
+        <name>GetLastRowIDInserted</name>
+        <param>
+          <type>string</type>
+          <declname>tablename</declname>
+        </param>
+        <briefdescription>
+<para>Get the last row id inserted in the specified table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tablename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table&apos;s name to search</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The id of the last row inserted</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="262" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="262" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7d8bd5a335e5e53f47fe40d70cbed4ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertAddress</definition>
+        <argsstring>(Address a)</argsstring>
+        <name>InsertAddress</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="288" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="288" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7ca5707375157569c5baca628368089a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateAddress</definition>
+        <argsstring>(Address a)</argsstring>
+        <name>UpdateAddress</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="325" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="325" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a679c26230876caca246e98da0643a252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
+        <definition>static Address SurveyManager.backend.Database.GetAddress</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetAddress</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="359" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="359" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a76299dd6082439d9920c082e7908ecf8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteAddress</definition>
+        <argsstring>(Address a)</argsstring>
+        <name>DeleteAddress</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_address" kindref="compound">Address</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="389" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="389" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a782b85359fa75b9fc67aa05d9ad183e7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertClient</definition>
+        <argsstring>(Client c)</argsstring>
+        <name>InsertClient</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a new client into the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Client to insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the record was inserted successfully; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="433" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="433" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a459ceb36fd35674fdf0a77e44152986b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateClient</definition>
+        <argsstring>(Client c)</argsstring>
+        <name>UpdateClient</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="472" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="472" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aaddf8d933d882ca2e99c0222ed98baa3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
+        <definition>static Client SurveyManager.backend.Database.GetClient</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetClient</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="510" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="510" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a905f3e8ddedea2f5131e625ae823daa0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref> &gt;</type>
+        <definition>static List&lt;Client&gt; SurveyManager.backend.Database.GetClients</definition>
+        <argsstring>()</argsstring>
+        <name>GetClients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="545" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="545" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a1c137a5a8be03585d917104c10fa3955" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteClient</definition>
+        <argsstring>(Client c)</argsstring>
+        <name>DeleteClient</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_client" kindref="compound">Client</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="584" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="584" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7a41f841827d130ea51efabd39b73e52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertCounty</definition>
+        <argsstring>(County c)</argsstring>
+        <name>InsertCounty</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="638" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="638" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a51c885654e7e16e4616ca4c1022589d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateCounty</definition>
+        <argsstring>(County c)</argsstring>
+        <name>UpdateCounty</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="673" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="673" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aec2294bfe5da883b774e310e26e4c00f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
+        <definition>static County SurveyManager.backend.Database.GetCounty</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetCounty</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="708" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="708" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1af7e877c814b334a5bbb4fb187e9a096b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref> &gt;</type>
+        <definition>static List&lt;County&gt; SurveyManager.backend.Database.GetCounties</definition>
+        <argsstring>()</argsstring>
+        <name>GetCounties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="736" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="736" bodyend="766"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aa3a5d51a28190e20f625954f74e2a805" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteCounty</definition>
+        <argsstring>(County c)</argsstring>
+        <name>DeleteCounty</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_county" kindref="compound">County</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="768" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="768" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab04025ba40d49b4fc7c4d7e06d059313" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertRealtor</definition>
+        <argsstring>(Realtor r)</argsstring>
+        <name>InsertRealtor</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="807" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="807" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a92a433811b532a37502316f1f96f0542" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateRealtor</definition>
+        <argsstring>(Realtor r)</argsstring>
+        <name>UpdateRealtor</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="846" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="846" bodyend="883"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a38f4d471619d63335dc78a35fa2a3b81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
+        <definition>static Realtor SurveyManager.backend.Database.GetRealtor</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetRealtor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="885" column="31" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="885" bodyend="915"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a993073c50c460fc0851f94e8155cd675" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref> &gt;</type>
+        <definition>static List&lt;Realtor&gt; SurveyManager.backend.Database.GetRealtors</definition>
+        <argsstring>()</argsstring>
+        <name>GetRealtors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="917" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="917" bodyend="951"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a8dc63b69671472e88d3dedfa2d4eec54" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteRealtor</definition>
+        <argsstring>(Realtor r)</argsstring>
+        <name>DeleteRealtor</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_realtor" kindref="compound">Realtor</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="953" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="953" bodyend="988"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a65610b31005f5105d83d985ab1f8b118" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertTitleCompany</definition>
+        <argsstring>(TitleCompany t)</argsstring>
+        <name>InsertTitleCompany</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="992" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="992" bodyend="1028"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad83c18bbe0b9a972e3de357a6bc0ac43" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateTitleCompany</definition>
+        <argsstring>(TitleCompany t)</argsstring>
+        <name>UpdateTitleCompany</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1030" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1030" bodyend="1066"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a75ef9a4a6c0ae543377ca3ece86c33e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
+        <definition>static TitleCompany SurveyManager.backend.Database.GetTitleCompany</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetTitleCompany</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1068" column="36" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1068" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aa4040cd6a3577487641fa817d44e0d68" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref> &gt;</type>
+        <definition>static List&lt;TitleCompany&gt; SurveyManager.backend.Database.GetTitleCompanies</definition>
+        <argsstring>()</argsstring>
+        <name>GetTitleCompanies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1099" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1099" bodyend="1132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a2fe185ce912c95acb5413080f782b2a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteTitleCompany</definition>
+        <argsstring>(TitleCompany c)</argsstring>
+        <name>DeleteTitleCompany</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_title_company" kindref="compound">TitleCompany</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1134" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1134" bodyend="1169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a8f42c5ca67b3337973990de453e1c407" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>InsertFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to insert a new record into the File table. If the insert could not be completed, the transaction is rolled back and no data is committed to the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CFile object to insert</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row id of the inserted file; 0 if the file was not inserted.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1180" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1180" bodyend="1219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ad78484feae68c659c192bbb976e736f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>UpdateFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Update the CFile object in the database. If the file has an ID of 0, it is inserted instead. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to update/insert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the update/insert completed successfully. False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1226" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1226" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a334290072c9a0ee6a25d9be0874f7c42" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+        <definition>static CFile SurveyManager.backend.Database.GetFile</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetFile</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a single CFile record from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the file record.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A single CFile object representing the file record or <computeroutput>null</computeroutput> if no file was found</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1275" column="29" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1275" bodyend="1316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a6a1b41e964e0f2d28a1854984c6d6d5d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref> &gt;</type>
+        <definition>static List&lt;CFile&gt; SurveyManager.backend.Database.GetFiles</definition>
+        <argsstring>(params int[] ids)</argsstring>
+        <name>GetFiles</name>
+        <param>
+          <type>params int[]</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves multiple files from the database based on the supplied ids. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A variable length parameter: the list of ids of the file records to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A List&lt;T&gt; of type CFile containing the file objects or an empty List&lt;T&gt; if no files were found</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1323" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1323" bodyend="1369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a61d8f843bf918fabb19a50c46d9b05ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteFile</definition>
+        <argsstring>(CFile file)</argsstring>
+        <name>DeleteFile</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_c_file" kindref="compound">CFile</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to delete a file record from the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the deleting was successfull; False otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1376" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1376" bodyend="1411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aac9e134fc2ec1290a9775f162f7bdcee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertSurvey</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>InsertSurvey</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1415" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1415" bodyend="1476"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a455fbae199919d050a4c6992beeb926b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateSurvey</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>UpdateSurvey</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1478" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1478" bodyend="1538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a0e008f2040899a1163fb85ccb044db07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DoesSurveyExist</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>DoesSurveyExist</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1540" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1540" bodyend="1557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a7fb854885b3a82474e7a1b75969016ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+        <definition>static Survey SurveyManager.backend.Database.GetSurvey</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetSurvey</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1559" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1559" bodyend="1614"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a35af8a472459ec9c6baeba9919c95cab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+        <definition>static Survey SurveyManager.backend.Database.GetSurvey</definition>
+        <argsstring>(string jobNumber)</argsstring>
+        <name>GetSurvey</name>
+        <param>
+          <type>string</type>
+          <declname>jobNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1616" column="30" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1616" bodyend="1671"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aac7f1560444d00d51719daab33891547" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref> &gt;</type>
+        <definition>static List&lt;Survey&gt; SurveyManager.backend.Database.GetSurveys</definition>
+        <argsstring>()</argsstring>
+        <name>GetSurveys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1673" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1673" bodyend="1733"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a0a9832eb6868c6fae0302ed4d3975d63" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteSurvey</definition>
+        <argsstring>(Survey s)</argsstring>
+        <name>DeleteSurvey</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_survey" kindref="compound">Survey</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1735" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1735" bodyend="1770"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a28e00b00998596a5050f2b5b1366a6d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertLineItem</definition>
+        <argsstring>(LineItem item)</argsstring>
+        <name>InsertLineItem</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1774" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1774" bodyend="1809"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1add7a60004a0f816847270d044fdd03a7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateLineItem</definition>
+        <argsstring>(LineItem item)</argsstring>
+        <name>UpdateLineItem</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1811" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1811" bodyend="1848"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a00ea4a3932fe4df81666dd7124725fff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref></type>
+        <definition>static LineItem SurveyManager.backend.Database.GetLineItem</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetLineItem</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1850" column="32" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1850" bodyend="1878"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a927e87b7ad94e4db858397537c2e3ff6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_line_item" kindref="compound">LineItem</ref> &gt;</type>
+        <definition>static List&lt;LineItem&gt; SurveyManager.backend.Database.GetLineItems</definition>
+        <argsstring>(params int[] ids)</argsstring>
+        <name>GetLineItems</name>
+        <param>
+          <type>params int[]</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1880" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1880" bodyend="1912"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ae84caa90c941232ebfc8f12cfc4a0ddf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteLineItem</definition>
+        <argsstring>(int id)</argsstring>
+        <name>DeleteLineItem</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1914" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1914" bodyend="1949"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aea3c098021feb5c1c61139714a6500a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertRate</definition>
+        <argsstring>(Rate item)</argsstring>
+        <name>InsertRate</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1953" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1953" bodyend="1989"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ae415393d9ed83fd642050cac256aa1cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateRate</definition>
+        <argsstring>(Rate item)</argsstring>
+        <name>UpdateRate</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="1991" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="1991" bodyend="2029"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1abdaed10988b5e54352ba43d5e8120d9a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
+        <definition>static Rate SurveyManager.backend.Database.GetRate</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetRate</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2031" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2031" bodyend="2060"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a9be33b1d9715401054fbf01890d256a8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref> &gt;</type>
+        <definition>static List&lt;Rate&gt; SurveyManager.backend.Database.GetRates</definition>
+        <argsstring>()</argsstring>
+        <name>GetRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2062" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2062" bodyend="2096"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab050cd15767263eb4ba08f87c0d1eca3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref> &gt;</type>
+        <definition>static List&lt;Rate&gt; SurveyManager.backend.Database.GetRates</definition>
+        <argsstring>(params int[] ids)</argsstring>
+        <name>GetRates</name>
+        <param>
+          <type>params int[]</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2098" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2098" bodyend="2133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a2c31a9bc2c2279af61cc52179df70e85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteRate</definition>
+        <argsstring>(Rate rate)</argsstring>
+        <name>DeleteRate</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_rate" kindref="compound">Rate</ref></type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2135" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2135" bodyend="2170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1acb900ea3fc320da916ab3ffb986d5dc7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SurveyManager.backend.Database.InsertBillingItem</definition>
+        <argsstring>(BillingItem item)</argsstring>
+        <name>InsertBillingItem</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2173" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2173" bodyend="2211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1a80789485582df7f95352116a39fe3150" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.UpdateBillingItem</definition>
+        <argsstring>(BillingItem item)</argsstring>
+        <name>UpdateBillingItem</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2213" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2213" bodyend="2253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ab76f4e8f89561a06d063baef16fbec0f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
+        <definition>static BillingItem SurveyManager.backend.Database.GetBillingItem</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetBillingItem</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2255" column="35" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2255" bodyend="2288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1ac1fcbc39e2fef5d9958d8beee66f76c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref> &gt;</type>
+        <definition>static List&lt;BillingItem&gt; SurveyManager.backend.Database.GetBillingItems</definition>
+        <argsstring>(params int[] ids)</argsstring>
+        <name>GetBillingItems</name>
+        <param>
+          <type>params int[]</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2290" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2290" bodyend="2329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_survey_manager_1_1backend_1_1_database_1aea0b2b3834982c8fd3a5e35d274d77bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SurveyManager.backend.Database.DeleteBillingItem</definition>
+        <argsstring>(BillingItem item)</argsstring>
+        <name>DeleteBillingItem</name>
+        <param>
+          <type><ref refid="class_survey_manager_1_1backend_1_1wrappers_1_1_survey_job_1_1_billing_item" kindref="compound">BillingItem</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="2331" column="28" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="2331" bodyend="2366"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class responsible for handling database connections and is the main class used to insert, update, and select records. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" line="18" column="11" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/backend/Database.cs" bodystart="19" bodyend="2368"/>
+    <listofallmembers>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a44efbc085ed396b144957037f3efef8d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>CheckConnection</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a1563fa9aa60107206f36b333c1d99549" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>ConnectionString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a3f3dda477e2db2ef3f743e8f23d82e3c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DB</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a76299dd6082439d9920c082e7908ecf8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteAddress</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aea0b2b3834982c8fd3a5e35d274d77bf" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteBillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a1c137a5a8be03585d917104c10fa3955" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteClient</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aa3a5d51a28190e20f625954f74e2a805" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteCounty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a61d8f843bf918fabb19a50c46d9b05ce" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ae84caa90c941232ebfc8f12cfc4a0ddf" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteLineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a2c31a9bc2c2279af61cc52179df70e85" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a8dc63b69671472e88d3dedfa2d4eec54" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteRealtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a0a9832eb6868c6fae0302ed4d3975d63" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a2fe185ce912c95acb5413080f782b2a5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DeleteTitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a0e008f2040899a1163fb85ccb044db07" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>DoesSurveyExist</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ae094eae944a216fa847e7b72586a4ef7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>ExecuteFilter</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a679c26230876caca246e98da0643a252" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetAddress</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ab76f4e8f89561a06d063baef16fbec0f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetBillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ac1fcbc39e2fef5d9958d8beee66f76c5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetBillingItems</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aaddf8d933d882ca2e99c0222ed98baa3" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetClient</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a905f3e8ddedea2f5131e625ae823daa0" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetClients</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ad4af1ffbd09d18accf4d3944accf886f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetColumns</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1af7e877c814b334a5bbb4fb187e9a096b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetCounties</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aec2294bfe5da883b774e310e26e4c00f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetCounty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a334290072c9a0ee6a25d9be0874f7c42" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a6a1b41e964e0f2d28a1854984c6d6d5d" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetFiles</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ad8aa33ea0bb8b77e66232bf4c045ee30" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetLastRowIDInserted</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a00ea4a3932fe4df81666dd7124725fff" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetLineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a927e87b7ad94e4db858397537c2e3ff6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetLineItems</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1abdaed10988b5e54352ba43d5e8120d9a" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a9be33b1d9715401054fbf01890d256a8" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetRates</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ab050cd15767263eb4ba08f87c0d1eca3" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetRates</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a38f4d471619d63335dc78a35fa2a3b81" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetRealtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a993073c50c460fc0851f94e8155cd675" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetRealtors</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a7fb854885b3a82474e7a1b75969016ab" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a35af8a472459ec9c6baeba9919c95cab" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aac7f1560444d00d51719daab33891547" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetSurveys</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a9aafca29e5b3de2e781fa632f694398f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetTableInfo</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aa4040cd6a3577487641fa817d44e0d68" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetTitleCompanies</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a75ef9a4a6c0ae543377ca3ece86c33e6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>GetTitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aa0b19198bfb509d9bf2cfd33e5b17d0c" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>Initialize</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a7d8bd5a335e5e53f47fe40d70cbed4ff" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertAddress</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1acb900ea3fc320da916ab3ffb986d5dc7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertBillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a782b85359fa75b9fc67aa05d9ad183e7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertClient</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a7a41f841827d130ea51efabd39b73e52" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertCounty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a8f42c5ca67b3337973990de453e1c407" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a28e00b00998596a5050f2b5b1366a6d5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertLineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aea3c098021feb5c1c61139714a6500a4" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ab04025ba40d49b4fc7c4d7e06d059313" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertRealtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aac9e134fc2ec1290a9775f162f7bdcee" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a65610b31005f5105d83d985ab1f8b118" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>InsertTitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a3d2a84d1784c6b21df200a3cc313881e" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>MAX_ALLOWED_PACKET_SIZE</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aa8c29c304fc0c6d517a4df5a85736242" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>Password</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a4e0152f8039081533ca710a336ce8e67" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>Port</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1aefc6f852862c5ce19d07966bf2ce36db" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>SaveConnectionString</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a6fee263071bc29c770f2eebe65e9911f" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>Server</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a7ca5707375157569c5baca628368089a" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateAddress</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a80789485582df7f95352116a39fe3150" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateBillingItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a459ceb36fd35674fdf0a77e44152986b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateClient</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a51c885654e7e16e4616ca4c1022589d6" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateCounty</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ad78484feae68c659c192bbb976e736f5" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateFile</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1add7a60004a0f816847270d044fdd03a7" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateLineItem</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ae415393d9ed83fd642050cac256aa1cc" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateRate</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a92a433811b532a37502316f1f96f0542" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateRealtor</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1a455fbae199919d050a4c6992beeb926b" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateSurvey</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ad83c18bbe0b9a972e3de357a6bc0ac43" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>UpdateTitleCompany</name></member>
+      <member refid="class_survey_manager_1_1backend_1_1_database_1ad57ac0a6c9da3ce36887241720e1ef17" prot="public" virt="non-virtual"><scope>SurveyManager::backend::Database</scope><name>Username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars" kind="struct" language="C#" prot="public">
+    <compoundname>SurveyManager::utility::Utility::TrimVars</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1ac2417f98f9b30d3c022804e759b744e7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string SurveyManager.utility.Utility.TrimVars.trimmedString</definition>
+        <argsstring></argsstring>
+        <name>trimmedString</name>
+        <briefdescription>
+<para>The trimmed string containing new-line characters </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="296" column="27" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="296" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1ae0c492507554a5e3395359faf3a46348" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int SurveyManager.utility.Utility.TrimVars.numberOfLines</definition>
+        <argsstring></argsstring>
+        <name>numberOfLines</name>
+        <briefdescription>
+<para>The number of new-line characters in the string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="300" column="24" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="300" bodyend="300"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1a529ac5004999e1a6e8459554e3ef82f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SurveyManager.utility.Utility.TrimVars.TrimVars</definition>
+        <argsstring>(string trimmedString)</argsstring>
+        <name>TrimVars</name>
+        <param>
+          <type>string</type>
+          <declname>trimmedString</declname>
+        </param>
+        <briefdescription>
+<para>Get an instance of this structure with the specified string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trimmedString</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="306" column="20" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="306" bodyend="310"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a structure to hold a trimmed string (from <ref refid="class_survey_manager_1_1utility_1_1_utility_1a57318bc6b7abdeef4d32c7ea23915683" kindref="member">Utility.TrimString(string, int)</ref>) and the number of new-lines in that string. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" line="291" column="15" bodyfile="D:/Documents/GitHub/SurveyManager/SurveyManager/utility/Utility.cs" bodystart="292" bodyend="311"/>
+    <listofallmembers>
+      <member refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1ae0c492507554a5e3395359faf3a46348" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility::TrimVars</scope><name>numberOfLines</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1ac2417f98f9b30d3c022804e759b744e7" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility::TrimVars</scope><name>trimmedString</name></member>
+      <member refid="struct_survey_manager_1_1utility_1_1_utility_1_1_trim_vars_1a529ac5004999e1a6e8459554e3ef82f1" prot="public" virt="non-virtual"><scope>SurveyManager::utility::Utility::TrimVars</scope><name>TrimVars</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
