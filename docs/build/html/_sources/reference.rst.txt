@@ -10,3 +10,4 @@ To get more information about a specific ribbon command or page, select it's top
 
     advancedSearch
     surveyRibbon
+    objectRibbon

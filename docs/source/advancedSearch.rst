@@ -56,7 +56,7 @@ Let's walk through the options in the dialog. We will look at the dialog for sea
 
 Searching for a Survey
 ----------------------
-The following example will walk through how to use the dialog to find an existing Survey Job. The example assumes you have a survey job with the Job# 21-1520 and acreage of 5.25 acres.
+The following example will walk through how to use the dialog to find an existing Survey Job. The example assumes you have a survey job with the Job# 21-5215 and acreage of 5.26 acres.
 
 1. Click ``Open`` on the Survey tab under the Jobs group.
 2. The Advanced Search Dialog opens with options specific to Survey Jobs.

@@ -33,6 +33,7 @@ The last tab, **Database**, contains commands for defining the database connecti
 
 The ribbon also has a **Menu** drop-down which contains commands to edit the settings, see the about dialog, and check for updates as well as exit the application. This drop-down also
 houses the most recently opened survey jobs so opening a currently worked on job is quick and easy. The date and time shown is when the job was last updated/saved not necessarily when it was opened last.
+The most recent job will always be at the top of this list and up to 10 jobs can be in this list.
 
 .. image:: images/menu_drop_down.png
   :width: 600

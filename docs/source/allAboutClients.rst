@@ -99,6 +99,6 @@ Once a row or multiple rows are selected, simply click the ``Delete Selected Row
 
 Ensure that the selected objects in the list view on the right of the dialog match what you intended and then confirm the deletion. The dialog will explain what will be deleted in addition to the selected object.
 
-.. note:: If you receive and error after confirming the deletion, it is because the selected object is already being referenced by another object and therefore it cannot be deleted.
+.. note:: If you receive an error after confirming the deletion, it is because the selected object is already being referenced by another object and therefore it cannot be deleted.
    Either delete the object that references the one you are trying to delete or change the reference to be another object. As of now, the application makes no attempt to direct you to
    the object doing the referencing.
