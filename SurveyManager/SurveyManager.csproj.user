@@ -4,7 +4,7 @@
     <PublishUrlHistory>Z:\SurveyManagerPublish\v1.0.0.0\|publish\</PublishUrlHistory>
     <InstallUrlHistory>\\csm-nas01\SurveyManagerApplication\|\\HomeServer\homes\ethan\SurveyManagerPublish\v1.0.0.0\|\\HomeServer\homes\ethan\SurveyManagerPublish\|\\HomeServer\homes\ethan\Drive\SurveyManager\</InstallUrlHistory>
     <SupportUrlHistory>https://surveymanager.readthedocs.io</SupportUrlHistory>
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>\\csm-nas01\SurveyManagerApplication\</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

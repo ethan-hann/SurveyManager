@@ -141,6 +141,9 @@ namespace SurveyManager.forms.userControls
 
         private void LoadData()
         {
+            if (bgWorker.IsBusy)
+                return;
+
             StatusUpdate?.Invoke(this, new StatusArgs($"Loading {typeOfData}s..."));
             loadProgressBar.Value = 0;
             loadProgressBar.Visible = true;

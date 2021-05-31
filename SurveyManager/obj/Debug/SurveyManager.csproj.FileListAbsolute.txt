@@ -206,3 +206,4 @@ D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.applicat
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csproj.CopyComplete
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.exe
 D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.pdb
+D:\Documents\GitHub\SurveyManager\SurveyManager\obj\Debug\SurveyManager.csprojAssemblyReference.cache

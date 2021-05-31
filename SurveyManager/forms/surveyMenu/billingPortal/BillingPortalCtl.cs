@@ -1,4 +1,5 @@
 ﻿using JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid;
+using SurveyManager.backend;
 using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
 using SurveyManager.forms.surveyMenu;
@@ -254,6 +255,12 @@ namespace SurveyManager.forms.userControls
         {
             if (JobHandler.Instance.ReadOnly)
                 return;
+
+            if (Database.GetRates().Count == 0)
+            {
+                CMessageBox.Show("There are no rates yet! You must add at least one rate object.", "No Rates", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
 
             NewEntryDlg dialog = new NewEntryDlg(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]));
             dialog.TimeEntryAdded += ProcessItem;

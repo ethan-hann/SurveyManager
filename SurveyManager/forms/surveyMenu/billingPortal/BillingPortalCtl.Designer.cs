@@ -226,7 +226,7 @@ namespace SurveyManager.forms.userControls
             this.billingGrid.PreviousSelectedGroupRow = -1;
             this.billingGrid.ReadOnly = true;
             this.billingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.billingGrid.Size = new System.Drawing.Size(852, 594);
+            this.billingGrid.Size = new System.Drawing.Size(852, 592);
             this.billingGrid.TabIndex = 1;
             this.billingGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.billingGrid_CellDoubleClick);
             this.billingGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.billingGrid_UserDeletedRow);

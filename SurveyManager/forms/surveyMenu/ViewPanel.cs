@@ -38,7 +38,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void RefreshObject(object sender, EventArgs e)
         {
-            if (propGrid == null)
+            if (propGrid == null || propGrid.SelectedObject == null)
                 return;
 
             if (JobHandler.Instance.CurrentJobState == Enums.JobState.Opened)
@@ -57,7 +57,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void RefreshButton(object sender, EventArgs e)
         {
-            if (propGrid == null)
+            if (propGrid == null || propGrid.SelectedObject == null)
                 return;
 
             if (JobHandler.Instance.IsJobOpen)
@@ -72,7 +72,7 @@ namespace SurveyManager.forms.surveyMenu
 
         private void ClearObject(object sender, EventArgs e)
         {
-            if (propGrid == null)
+            if (propGrid == null || propGrid.SelectedObject == null)
                 return;
 
             if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening)
@@ -87,6 +87,9 @@ namespace SurveyManager.forms.surveyMenu
 
         private void propGrid_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
+            if (propGrid == null || propGrid.SelectedObject == null)
+                return;
+
             if (!e.OldValue.Equals(e.ChangedItem.Value))
                 JobHandler.Instance.UpdateSavePending(true);
         }

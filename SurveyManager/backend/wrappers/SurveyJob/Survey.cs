@@ -372,14 +372,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
             if (CountyID != 0)
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    County = Database.GetCounty(CountyID);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                County = RuntimeVars.Instance.Counties.Where(e => e.ID == CountyID).First();
             }
             if (RealtorID != 0)
             {
