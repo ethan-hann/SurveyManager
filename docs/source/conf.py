@@ -55,5 +55,5 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = []
 
 # Breathe Config
-breathe_projects = { "Survey Manager": "D:\\Documents\\GitHub\\SurveyManager\\docs\\doxybuild\\xml"}
+breathe_projects = { "Survey Manager": "../doxybuild/xml"}
 breathe_default_project = "Survey Manager"

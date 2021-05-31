@@ -3,6 +3,7 @@ using SurveyManager.Properties;
 using SurveyManager.utility;
 using SurveyManager.utility.Licensing;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
@@ -92,6 +93,11 @@ namespace SurveyManager.forms.dialogs
                     (info.Type == utility.Licensing.LicenseType.FullLicense || info.Type == utility.Licensing.LicenseType.Trial) ?
                     Enums.CloseReasons.Licensed : Enums.CloseReasons.Unlicensed;
             LicensingComplete?.Invoke(this, new LicensingEventArgs(info, reason));
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            Process.Start("mailto:ethan.hann@protonmail.com");
         }
     }
 }

@@ -52,6 +52,7 @@ namespace SurveyManager.forms.dialogs
             this.btnPurchase.Size = new System.Drawing.Size(168, 25);
             this.btnPurchase.TabIndex = 1;
             this.btnPurchase.Values.Text = "Purchase New Product Key";
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // dlgOpenFile
             // 
