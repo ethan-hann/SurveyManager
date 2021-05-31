@@ -17,7 +17,7 @@ The first launch of the application may look something like this:
   :alt: First launch of application, unlicensed
 
 If the product is unlicensed, click the ``Activation`` button on the main ribbon and enter your product key. If the product key was valid, the application will be licensed and
-all features will be enabled. If you don't have a product key, you can click ``Purchase New Product Key`` from the activation window.
+all features will be enabled. If you don't have a product key, you can email thomasthunderous@protonmail.com to request one.
 
 After successfully licensing the application, the title bar will change to denote the product's current status:
 
