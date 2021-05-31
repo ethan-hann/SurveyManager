@@ -76,18 +76,6 @@ namespace SurveyManager.forms.surveyMenu
 
         protected override void Dispose(bool disposing)
         {
-            if (!JobHandler.Instance.ReadOnly)
-            {
-                if (Save())
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs("Job information successfully updated internally."));
-                }
-                else
-                {
-                    StatusUpdate?.Invoke(this, new StatusArgs("There was an issue updating the job's internal information. Please try again."));
-                }
-            }
-
             if (disposing && (components != null))
             {
                 components.Dispose();

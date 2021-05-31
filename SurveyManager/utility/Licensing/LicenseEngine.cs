@@ -41,7 +41,7 @@ namespace SurveyManager.utility.Licensing
             string info = manager.GetInfo(productKey);
 
             info = info.Trim();
-            string[] tokens = info.Split(';');
+            string[] tokens = info.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
             if (tokens.Length == 4)
             {
                 string customerName = tokens[0].Trim();

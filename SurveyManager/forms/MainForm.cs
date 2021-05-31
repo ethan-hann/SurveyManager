@@ -1285,6 +1285,51 @@ namespace SurveyManager
             }
         }
 
+        private void btnReloadFromDatabase_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Save.ToDescriptionString()));
+                    return;
+                }
+
+                if (JobHandler.Instance.SavePending)
+                {
+                    DialogResult result = CMessageBox.Show("Are you sure you want to refresh the local copy of the job with values from the database. Your pending changes will be overwritten.", 
+                    "Confirm", MessageBoxButtons.YesNo, Resources.warning_64x64);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        RefreshJob();
+                    }
+                }
+                else
+                {
+                    RefreshJob();
+                }
+            }
+        }
+
+        private void RefreshJob()
+        {
+            string jobNumber = JobHandler.Instance.CurrentJob.JobNumber;
+            if (JobHandler.Instance.CloseJob(false, false, false))
+            {
+                if (JobHandler.Instance.OpenJob(jobNumber))
+                {
+                    ChangeTitleText("[JOB# " + jobNumber + "]");
+                }
+            }
+        }
+
         private void btnCloseCurrentJob_Click(object sender, EventArgs e)
         {
             if (licensed)

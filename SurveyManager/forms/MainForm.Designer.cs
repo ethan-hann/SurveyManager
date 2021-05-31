@@ -132,6 +132,7 @@ namespace SurveyManager
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
             this.dumpDatabaseBGWorker = new System.ComponentModel.BackgroundWorker();
             this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnReloadFromDatabase = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderPanel)).BeginInit();
@@ -215,6 +216,7 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
+            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
@@ -341,6 +343,7 @@ namespace SurveyManager
             // kryptonRibbonGroupTriple12
             // 
             this.kryptonRibbonGroupTriple12.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnReloadFromDatabase,
             this.btnCloseCurrentJob});
             // 
             // btnCloseCurrentJob
@@ -905,6 +908,16 @@ namespace SurveyManager
             this.dumpDatabaseBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.dumpDatabaseBGWorker_ProgressChanged);
             this.dumpDatabaseBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.dumpDatabaseBGWorker_RunWorkerCompleted);
             // 
+            // btnReloadFromDatabase
+            // 
+            this.btnReloadFromDatabase.ImageLarge = global::SurveyManager.Properties.Resources.reload;
+            this.btnReloadFromDatabase.ImageSmall = global::SurveyManager.Properties.Resources.reload_16x16;
+            this.btnReloadFromDatabase.TextLine1 = "Reload";
+            this.btnReloadFromDatabase.TextLine2 = "Job from Database";
+            this.btnReloadFromDatabase.ToolTipBody = resources.GetString("btnReloadFromDatabase.ToolTipBody");
+            this.btnReloadFromDatabase.ToolTipTitle = "Current Job";
+            this.btnReloadFromDatabase.Click += new System.EventHandler(this.btnReloadFromDatabase_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1038,6 +1051,7 @@ namespace SurveyManager
         private System.Windows.Forms.FolderBrowserDialog csvSaveFolder;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnToggleReadOnly;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnReloadFromDatabase;
     }
 }
 

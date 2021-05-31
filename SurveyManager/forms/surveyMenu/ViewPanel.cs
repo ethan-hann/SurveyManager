@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using SurveyManager.backend;
 using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.Properties;
 using SurveyManager.utility;
@@ -29,59 +30,81 @@ namespace SurveyManager.forms.surveyMenu
 
         public void CreateEmptyJob()
         {
-            propGrid.SelectedObject = new Survey();
-            (Parent as KryptonPage).Text = "No Job Opened";
-            (Parent as KryptonPage).TextTitle = "No Job Opened";
-            (Parent as KryptonPage).UniqueName = "No Job Opened";
-            propGrid.Enabled = false;
+            try
+            {
+                propGrid.SelectedObject = new Survey();
+                (Parent as KryptonPage).Text = "No Job Opened";
+                (Parent as KryptonPage).TextTitle = "No Job Opened";
+                (Parent as KryptonPage).UniqueName = "No Job Opened";
+                propGrid.Enabled = false;
+            } catch (NullReferenceException e)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {e.Message}. The stacktrace is: {e.StackTrace}");
+            }
         }
 
         private void RefreshObject(object sender, EventArgs e)
         {
-            if (propGrid == null || propGrid.SelectedObject == null)
+            if (propGrid == null)
                 return;
 
-            if (JobHandler.Instance.CurrentJobState == Enums.JobState.Opened)
+            try
             {
-                propGrid.SelectedObject = JobHandler.Instance.CurrentJob; //TODO: check if the page is open first!
+                if (JobHandler.Instance.CurrentJobState == Enums.JobState.Opened)
+                {
+                    propGrid.SelectedObject = Database.GetSurvey(JobHandler.Instance.CurrentJob.JobNumber);
+                    if (propGrid.SelectedObject == null)
+                    {
+                        propGrid.SelectedObject = new Survey();
+                    }
+
                 (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                propGrid.Enabled = !JobHandler.Instance.ReadOnly;
-            }
-            else
+                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    propGrid.Enabled = !JobHandler.Instance.ReadOnly;
+                }
+                else
+                {
+                    RefreshButton(sender, e);
+                }
+            } catch (NullReferenceException n)
             {
-                RefreshButton(sender, e);
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {n.Message}. The stacktrace is: {n.StackTrace}");
             }
         }
 
         private void RefreshButton(object sender, EventArgs e)
         {
-            if (propGrid == null || propGrid.SelectedObject == null)
-                return;
-
-            if (JobHandler.Instance.IsJobOpen)
+            try
             {
-                propGrid.SelectedObject = JobHandler.Instance.CurrentJob;
+                if (JobHandler.Instance.IsJobOpen)
+                {
+                    propGrid.SelectedObject = Database.GetSurvey(JobHandler.Instance.CurrentJob.JobNumber);
+                    if (propGrid.SelectedObject == null)
+                    {
+                        propGrid.SelectedObject = new Survey();
+                    }
+
                 (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                propGrid.Enabled = !JobHandler.Instance.ReadOnly;
+                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    propGrid.Enabled = !JobHandler.Instance.ReadOnly;
+                }
+            } catch (NullReferenceException n)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {n.Message}. The stacktrace is: {n.StackTrace}");
             }
         }
 
         private void ClearObject(object sender, EventArgs e)
         {
-            if (propGrid == null || propGrid.SelectedObject == null)
+            if (propGrid == null)
                 return;
 
             if ((JobHandler.Instance.CurrentJobState != Enums.JobState.Opening)
                 || (JobHandler.Instance.CurrentJobState != Enums.JobState.Opened))
             {
-                if (propGrid.SelectedObject != null)
-                {
-                    CreateEmptyJob();
-                }
+                CreateEmptyJob();
             }
         }
 

@@ -473,12 +473,14 @@ namespace SurveyManager.utility
             if (_jobState != JobState.SaveError && isClosing)
             {
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
+                _savePending = false;
                 AddSurveyToRecentJobs();
                 Close();
             }
             else
             {
                 AddSurveyToRecentJobs();
+                _savePending = false;
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
             }
         }
@@ -490,7 +492,7 @@ namespace SurveyManager.utility
         /// <param name="isClosingApplication">Whether the main application is exiting.</param>
         /// <param name="isOpeningOtherJob">Whether another survey job is pending opening.</param>
         /// <returns>True if the job was closed successfully; False otherwise.</returns>
-        public bool CloseJob(bool isClosingApplication = false, bool isOpeningOtherJob = false)
+        public bool CloseJob(bool isClosingApplication = false, bool isOpeningOtherJob = false, bool showDialog = true)
         {
             if (IsJobOpen && SavePending && !ReadOnly)
             {
@@ -500,34 +502,41 @@ namespace SurveyManager.utility
                 }
                 else
                 {
-                    ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
-                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true, isOpeningOtherJob);
-                    switch (choice)
+                    if (showDialog)
                     {
-                        case ExitChoice.SaveAndExit:
+                        ExitChoice choice = CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened job. What would you like to do?",
+                    "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel, Resources.warning_64x64, true, isOpeningOtherJob);
+                        switch (choice)
                         {
-                            isClosing = true;
-                            Save();
-                            break;
-                        }
-                        case ExitChoice.ExitNoSave:
-                        {
-                            Close();
-                            break;
-                        }
-                        case ExitChoice.SaveOnly:
-                        {
-                            Save();
+                            case ExitChoice.SaveAndExit:
+                            {
+                                isClosing = true;
+                                Save();
+                                break;
+                            }
+                            case ExitChoice.ExitNoSave:
+                            {
+                                Close();
+                                break;
+                            }
+                            case ExitChoice.SaveOnly:
+                            {
+                                Save();
+                                return false;
+                            }
+                            case ExitChoice.Cancel:
+                            {
+                                StatusUpdate?.Invoke(this, new StatusArgs("Closing of Job# " + CurrentJob.JobNumber + " canceled."));
+                                _jobState = JobState.CloseCancelled;
+                                return false;
+                            }
+                            default:
                             return false;
                         }
-                        case ExitChoice.Cancel:
-                        {
-                            StatusUpdate?.Invoke(this, new StatusArgs("Closing of Job# " + CurrentJob.JobNumber + " canceled."));
-                            _jobState = JobState.CloseCancelled;
-                            return false;
-                        }
-                        default:
-                        return false;
+                    }
+                    else
+                    {
+                        _jobState = Close();
                     }
                 }
             }

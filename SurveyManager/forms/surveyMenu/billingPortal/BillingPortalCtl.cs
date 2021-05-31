@@ -262,6 +262,12 @@ namespace SurveyManager.forms.userControls
                 return;
             }
 
+            if (lbTimeEntries.Items.Count <= 0)
+            {
+                CMessageBox.Show("There are no days yet! You must add a day to the left in order to add time to it.", "Days", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
+
             NewEntryDlg dialog = new NewEntryDlg(DateTime.Parse((string)lbTimeEntries.Items[selectedListBoxIndex]));
             dialog.TimeEntryAdded += ProcessItem;
             dialog.ShowDialog();
