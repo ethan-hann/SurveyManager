@@ -1,12 +1,7 @@
 ﻿using SurveyManager.Properties;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SurveyManager.utility.CustomControls
@@ -17,7 +12,8 @@ namespace SurveyManager.utility.CustomControls
         ToolStripButton clearButton = new ToolStripButton("Clear");
         ToolStripButton uploadFiles = new ToolStripButton("Upload Files");
         ToolStripButton downloadFiles = new ToolStripButton("Download Files");
-        
+        ToolStripButton openJob = new ToolStripButton("Open Selected Job");
+
         public CPropertyGrid()
         {
             InitializeComponent();
@@ -26,10 +22,12 @@ namespace SurveyManager.utility.CustomControls
             clearButton.Image = Resources.error_16x16;
             uploadFiles.Image = Resources.file_16x16;
             downloadFiles.Image = Resources.download_16x16;
+            openJob.Image = Resources.open_16x16;
             acceptButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             clearButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             uploadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             downloadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            openJob.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
 
             AddButtons();
         }
@@ -44,10 +42,12 @@ namespace SurveyManager.utility.CustomControls
             clearButton.Image = Resources.error_16x16;
             uploadFiles.Image = Resources.file_16x16;
             downloadFiles.Image = Resources.download_16x16;
+            openJob.Image = Resources.open_16x16;
             acceptButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             clearButton.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             uploadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             downloadFiles.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            openJob.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
 
             AddButtons();
         }
@@ -67,13 +67,15 @@ namespace SurveyManager.utility.CustomControls
                 //Hide the property pages button
                 toolStrip.Items[4].Visible = false;
 
-                //Add our two custom buttons
+                //Add our custom buttons
                 toolStrip.Items.Add(acceptButton);
                 toolStrip.Items.Add(clearButton);
                 toolStrip.Items.Add(uploadFiles);
                 toolStrip.Items.Add(downloadFiles);
+                toolStrip.Items.Add(openJob);
                 uploadFiles.Visible = false;
                 downloadFiles.Visible = false;
+                openJob.Visible = false;
             }
         }
 
@@ -95,6 +97,11 @@ namespace SurveyManager.utility.CustomControls
         public ToolStripButton GetDownloadFilesButton()
         {
             return downloadFiles;
+        }
+
+        public ToolStripButton GetOpenJobButton()
+        {
+            return openJob;
         }
 
         protected override bool ProcessTabKey(bool forward)

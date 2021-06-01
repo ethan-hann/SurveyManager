@@ -14,9 +14,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -54,13 +51,30 @@ namespace SurveyManager.forms.userControls
             {
                 propGrid.GetUploadFilesButton().Click += UploadFiles;
                 propGrid.GetDownloadFilesButton().Click += DownloadFiles;
+                propGrid.GetOpenJobButton().Click += OpenJob;
                 propGrid.GetUploadFilesButton().Visible = true;
                 propGrid.GetDownloadFilesButton().Visible = true;
+                propGrid.GetOpenJobButton().Visible = true;
             }
 
             dataGrid.RegisterGroupBoxEvents();
             DataGridViewSetup.SetupDGV(dataGrid, typeOfData);
             LoadData();
+        }
+
+        private void OpenJob(object sender, EventArgs e)
+        {
+            if (dataGrid.SelectedRows.Count == 1)
+            {
+                if (dataGrid.SelectedRows[0].Tag != null)
+                {
+                    if (JobHandler.Instance.OpenJob(dataGrid.SelectedRows[0].Tag as Survey))
+                    {
+                        RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + (dataGrid.SelectedRows[0].Tag as Survey).JobNumber + "]");
+                        JobHandler.Instance.AddSurveyToRecentJobs();
+                    }
+                }
+            }
         }
 
         private void DownloadFiles(object sender, EventArgs e)
@@ -130,11 +144,6 @@ namespace SurveyManager.forms.userControls
             bgWorker.RunWorkerAsync();
         }
 
-        private void btnDeleteRow_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             lastFilterResults = null;
@@ -188,6 +197,18 @@ namespace SurveyManager.forms.userControls
                     filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies", "", Icon.FromHandle(Resources.title_company_16x16.GetHicon()));
                     break;
                 }
+                case EntityTypes.Rate:
+                {
+                    columns = new ArrayList
+                    {
+                        new DBMap("description", "Description"),
+                        new DBMap("amount", "Amount"),
+                        new DBMap("time_unit", "Time Unit")
+                    };
+
+                    filter = new AdvancedFilter("Rates", columns, "Find Rates");
+                    break;
+                }
                 case EntityTypes.Survey:
                 {
                     columns = new ArrayList
@@ -201,8 +222,8 @@ namespace SurveyManager.forms.userControls
                         new DBMap("section", "Section #"),
                         new DBMap("county_id", "County"),
                         new DBMap("acres", "Acres"),
-                        new DBMap("realtor_id", "Realtor"),
-                        new DBMap("title_company_id", "Title Company")
+                        new DBMap("realtor_id", "Realtor ID"),
+                        new DBMap("title_company_id", "Title Company ID")
                     }; //TODO: combine all tables to search for surveys!
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));
@@ -246,6 +267,11 @@ namespace SurveyManager.forms.userControls
                     PopulateTitleCompanyGrid(LoadTitleCompanies());
                     break;
                 }
+                case EntityTypes.Rate:
+                {
+                    PopulateRateGrid(LoadRates());
+                    break;
+                }
                 case EntityTypes.Survey:
                 {
                     PopulateSurveyGrid(LoadSurveys());
@@ -265,14 +291,15 @@ namespace SurveyManager.forms.userControls
             {
                 if (lastFilterResults != null)
                 {
+                    int rowCount = currentFilterArgs.Results.Rows.Count;
                     if (typeOfData == EntityTypes.TitleCompany)
                     {
-                        UpdateTabName("Title Companies" + $" [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        UpdateTabName("Title Companies" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]");
                         StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} title companies " + "matching search criteria: " + currentFilterArgs.Query));
                     }
                     else
                     {
-                        UpdateTabName(typeOfData.ToString() + $"s [Filtered: {currentFilterArgs.Results.Rows.Count} rows]");
+                        UpdateTabName(typeOfData.ToString() + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]");
                         StatusUpdate?.Invoke(this, new StatusArgs($"Found {currentFilterArgs.Results.Rows.Count} {typeOfData}s " + "matching search criteria: " + currentFilterArgs.Query));
                     }
                 }
@@ -289,7 +316,7 @@ namespace SurveyManager.forms.userControls
                         StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}s loaded."));
                     }
                 }
-                
+
                 dataGrid.SuspendLayout();
                 dataGrid.ClearInternalRows();
                 dataGrid.ResumeLayout();
@@ -313,6 +340,73 @@ namespace SurveyManager.forms.userControls
             }
         }
 
+        DatabaseWrapper objToDelete;
+
+        private void btnDeleteRow_Click(object sender, EventArgs e)
+        {
+            if (dataGrid.SelectedRows.Count == 1)
+            {
+                string confirmText = "The following is what will be deleted based on the type of object the grid is displaying:\n" +
+                "Surveys       ->\tdelete the survey record, all associated files, and all associated billing line items.\n\n" +
+                "Clients       ->\tdelete the client record and the associated address record; can only delete if the client is not referenced anywhere else.\n\n" +
+                "Realtors      ->\tdelete the realtor record only; can only delete if the realtor is not referenced anywhere else.\n\n" +
+                "Title Company ->\tdelete the title company record only; can only delete if the title company is not referenced anywhere else.\n\n";
+
+                DialogResult confirm = CRichMsgBox.Show("Are you sure you want to delete this record?\nTHIS IS A DESTRUCTIVE OPERATION AND CANNOT BE REVERSED!", "Confirm", confirmText, MessageBoxButtons.YesNo, Resources.warning_64x64);
+                if (confirm == DialogResult.Yes)
+                {
+                    objToDelete = dataGrid.SelectedRows[0].Tag as DatabaseWrapper;
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Attempting to delete {typeOfData} {objToDelete}..."));
+                    loadProgressBar.Value = 0;
+                    loadProgressBar.Visible = true;
+                    deleteBgWorker.RunWorkerAsync();
+                }
+                else
+                {
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Canceled deletion of {typeOfData} {objToDelete}..."));
+                }
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs("No row selected; nothing to delete."));
+            }
+        }
+
+        DatabaseError deleteError;
+        private void deleteBgWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            deleteError = objToDelete.Delete();
+
+        }
+
+        private void deleteBgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            loadProgressBar.Value = e.ProgressPercentage;
+        }
+
+        private void deleteBgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!Disposing && !IsDisposed)
+            {
+                if (deleteError == DatabaseError.NoError)
+                {
+                    LoadData();
+                    return;
+                }
+                else
+                {
+                    CMessageBox.Show("This object can not be deleted. Most likely it is referenced elsewhere or the database connection was interupted.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    loadProgressBar.Visible = false;
+                    StatusUpdate?.Invoke(this, new StatusArgs($"Could not perform deletion on {typeOfData} {objToDelete}."));
+                    return;
+                }
+            }
+            else
+            {
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData} deletion canceled."));
+            }
+        }
+
         private void SaveData(object sender, EventArgs e)
         {
             if (propGrid.SelectedObject == null)
@@ -323,11 +417,11 @@ namespace SurveyManager.forms.userControls
             switch (error)
             {
                 case DatabaseError.NoError:
-                    StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj.ToString()}, updated successfully!"));
-                    break;
+                StatusUpdate?.Invoke(this, new StatusArgs($"{typeOfData}, {obj}, updated successfully!"));
+                break;
                 default:
-                    CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    break;
+                CMessageBox.Show("Object could not be updated; check your input and try again.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                break;
             }
         }
 
@@ -434,6 +528,43 @@ namespace SurveyManager.forms.userControls
                     c.Name
                 });
                 row.Tag = c;
+                rows.Add(row);
+            }
+        }
+        #endregion
+
+        #region Rates
+        private List<Rate> LoadRates()
+        {
+            List<Rate> rates = new List<Rate>();
+            if (lastFilterResults == null)
+            {
+                rates = Database.GetRates();
+            }
+            else
+            {
+                foreach (DataRow dataRow in lastFilterResults.Rows)
+                {
+                    rates.Add(ProcessDataTable.GetRate(dataRow));
+                }
+            }
+            return rates;
+        }
+
+        private void PopulateRateGrid(List<Rate> rates)
+        {
+            OutlookGridRow row;
+            rows = new List<OutlookGridRow>();
+
+            foreach (Rate r in rates)
+            {
+                row = new OutlookGridRow();
+                row.CreateCells(dataGrid, new object[] {
+                    r.ID,
+                    r.Description,
+                    $"{r.Amount.ToString("C2")} / {r.TimeUnit}"
+                });
+                row.Tag = r;
                 rows.Add(row);
             }
         }

@@ -1,14 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using SurveyManager.backend.wrappers;
+using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend
@@ -109,6 +108,7 @@ namespace SurveyManager.backend
                 catch (MySqlException ex)
                 {
                     RuntimeVars.Instance.DatabaseConnected = false;
+                    RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to connect to SQL database: {ex.Message}");
                     return ex.Number;
                 }
                 finally
@@ -152,13 +152,14 @@ namespace SurveyManager.backend
                             }
                         }
                     }
-                } catch (MySqlException ex)
+                }
+                catch (MySqlException ex)
                 {
                     dt.Columns.Add("MySQL Error");
                     dt.Columns.Add("Error Code");
                     dt.Rows.Add(ex.Message, ex.ErrorCode);
                 }
-                
+
                 con.Close();
             }
             return dt;
@@ -193,6 +194,67 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
+        /// Run the _.show_table_status() stored prodedure to get information about tables.
+        /// </summary>
+        /// <returns>A <see cref="DataTable"/> ready to be used as a data source for a DataGridView Control.</returns>
+        public static DataTable GetTableInfo()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Table");
+            dt.Columns.Add("Engine");
+            dt.Columns.Add("Version");
+            dt.Columns.Add("Row Format");
+            dt.Columns.Add("Number of Rows");
+            dt.Columns.Add("Avg. Row Length");
+            dt.Columns.Add("Data Length");
+            dt.Columns.Add("Max Data Length");
+            dt.Columns.Add("Index Length");
+            dt.Columns.Add("Data Free");
+            dt.Columns.Add("Next Auto Increment Value");
+            dt.Columns.Add("Create Time");
+            dt.Columns.Add("Last Update");
+            dt.Columns.Add("Comment");
+
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandText = "_.show_table_status()";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                dt.Rows.Add(reader["Name"],
+                                            reader["Engine"],
+                                            reader["Version"],
+                                            reader["Row_format"],
+                                            reader["Rows"],
+                                            reader["Avg_row_length"],
+                                            reader["Data_length"],
+                                            reader["Max_data_length"],
+                                            reader["Index_length"],
+                                            reader["Data_free"],
+                                            reader["Auto_increment"],
+                                            reader["Create_time"],
+                                            reader["Update_time"],
+                                            reader["Comment"]);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+
+                return dt;
+            }
+        }
+
+        /// <summary>
         /// Get the last row id inserted in the specified table.
         /// </summary>
         /// <param name="tablename">The table's name to search</param>
@@ -223,7 +285,7 @@ namespace SurveyManager.backend
         }
 
         #region Address
-        public static bool InsertAddress(Address a)
+        public static int InsertAddress(Address a)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Address");
@@ -257,7 +319,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Address") : 0;
         }
 
         public static bool UpdateAddress(Address a)
@@ -351,11 +413,13 @@ namespace SurveyManager.backend
                     }
                     con.Close();
                 }
-            } catch (Exception)
+            }
+            catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete address: {a.ID}. It might be associated with another object.");
                 return false;
             }
-            
+
             return affectedRows != 0;
         }
         #endregion
@@ -366,7 +430,7 @@ namespace SurveyManager.backend
         /// </summary>
         /// <param name="c">The <see cref="Client"/> to insert.</param>
         /// <returns>True if the record was inserted successfully; False otherwise.</returns>
-        public static bool InsertClient(Client c)
+        public static int InsertClient(Client c)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Client");
@@ -377,7 +441,7 @@ namespace SurveyManager.backend
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
                 con.Open();
-                using(MySqlCommand cmd = new MySqlCommand())
+                using (MySqlCommand cmd = new MySqlCommand())
                 {
                     using (MySqlTransaction tr = con.BeginTransaction())
                     {
@@ -402,7 +466,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Client") : 0;
         }
 
         public static bool UpdateClient(Client c)
@@ -562,6 +626,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete client: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -570,7 +635,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region County
-        public static bool InsertCounty(County c)
+        public static int InsertCounty(County c)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("County");
@@ -602,7 +667,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("County") : 0;
         }
 
         public static bool UpdateCounty(County c)
@@ -730,6 +795,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete county: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -738,7 +804,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Realtor
-        public static bool InsertRealtor(Realtor r)
+        public static int InsertRealtor(Realtor r)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Realtor");
@@ -774,7 +840,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Realtor") : 0;
         }
 
         public static bool UpdateRealtor(Realtor r)
@@ -884,10 +950,10 @@ namespace SurveyManager.backend
             return realtors;
         }
 
-        public static bool DeleteRealtor(Realtor c)
+        public static bool DeleteRealtor(Realtor r)
         {
             int affectedRows = 0;
-            string q = Queries.BuildQuery(QType.DELETE, "Realtor", null, null, $"realtor_id={c.ID}");
+            string q = Queries.BuildQuery(QType.DELETE, "Realtor", null, null, $"realtor_id={r.ID}");
 
             try
             {
@@ -914,6 +980,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete realtor: {r.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -922,7 +989,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Title Company
-        public static bool InsertTitleCompany(TitleCompany t)
+        public static int InsertTitleCompany(TitleCompany t)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("TitleCompany");
@@ -957,7 +1024,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("TitleCompany") : 0;
         }
 
         public static bool UpdateTitleCompany(TitleCompany t)
@@ -1094,6 +1161,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete title company: {c.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1108,8 +1176,8 @@ namespace SurveyManager.backend
         /// and no data is committed to the database.
         /// </summary>
         /// <param name="file">The <see cref="CFile"/> object to insert</param>
-        /// <returns>True if the record inserted successfully; False otherwise</returns>
-        public static bool InsertFile(CFile file)
+        /// <returns>The row id of the inserted file; 0 if the file was not inserted.</returns>
+        public static int InsertFile(CFile file)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("File");
@@ -1147,7 +1215,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("File") : 0;
         }
 
         /// <summary>
@@ -1158,7 +1226,7 @@ namespace SurveyManager.backend
         public static bool UpdateFile(CFile file)
         {
             if (file.ID == 0)
-                return InsertFile(file);
+                return file.Insert() == DatabaseError.NoError;
 
             int affectedRows = 0;
             ArrayList columns = GetColumns("File");
@@ -1236,6 +1304,7 @@ namespace SurveyManager.backend
                             }
                             catch (Exception)
                             {
+                                RuntimeVars.Instance.LogFile.AddEntry($"Could not read file from database: {id}.");
                                 return null;
                             }
                         }
@@ -1286,6 +1355,7 @@ namespace SurveyManager.backend
                                 }
                                 catch (Exception)
                                 {
+                                    RuntimeVars.Instance.LogFile.AddEntry($"Could not read file from database: {id}.");
                                     return files;
                                 }
                             }
@@ -1333,6 +1403,7 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete file: {file.ID}. It might be associated with another object.");
                 return false;
             }
 
@@ -1341,7 +1412,7 @@ namespace SurveyManager.backend
         #endregion
 
         #region Survey
-        public static bool InsertSurvey(Survey s)
+        public static int InsertSurvey(Survey s)
         {
             int affectedRows = 0;
             ArrayList columns = GetColumns("Survey");
@@ -1383,6 +1454,11 @@ namespace SurveyManager.backend
 
                         cmd.Parameters.AddWithValue("@12", s.FileIds);
                         cmd.Parameters.AddWithValue("@13", s.Location.ID);
+                        cmd.Parameters.AddWithValue("@14", s.BillingObject.GetBillingIds());
+                        cmd.Parameters.AddWithValue("@15", s.BillingObject.GetLineItemIds());
+                        cmd.Parameters.AddWithValue("@16", s.GetNotesString());
+                        cmd.Parameters.AddWithValue("@17", s.SurveyName);
+
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1395,7 +1471,7 @@ namespace SurveyManager.backend
                 }
                 con.Close();
             }
-            return affectedRows != 0;
+            return affectedRows != 0 ? GetLastRowIDInserted("Survey") : 0;
         }
 
         public static bool UpdateSurvey(Survey s)
@@ -1439,6 +1515,10 @@ namespace SurveyManager.backend
 
                         cmd.Parameters.AddWithValue("@13", s.FileIds);
                         cmd.Parameters.AddWithValue("@14", s.Location.ID);
+                        cmd.Parameters.AddWithValue("@15", s.BillingObject.GetBillingIds());
+                        cmd.Parameters.AddWithValue("@16", s.BillingObject.GetLineItemIds());
+                        cmd.Parameters.AddWithValue("@17", s.GetNotesString());
+                        cmd.Parameters.AddWithValue("@18", s.SurveyName);
 
                         cmd.Connection = con;
                         affectedRows = cmd.ExecuteNonQuery();
@@ -1453,6 +1533,25 @@ namespace SurveyManager.backend
             }
             return affectedRows != 0;
 
+        }
+
+        public static bool DoesSurveyExist(string jobNumber)
+        {
+            bool exists = false;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"job_number='{jobNumber}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        exists = reader.HasRows;
+                    }
+                }
+                con.Close();
+            }
+            return exists;
         }
 
         public static Survey GetSurvey(int id)
@@ -1484,7 +1583,9 @@ namespace SurveyManager.backend
                                 CountyID = reader.GetInt32(9),
                                 Acres = reader.GetDouble(10),
                                 FileIds = reader.GetString(13),
-                                LocationID = reader.GetInt32(14)
+                                LocationID = reader.GetInt32(14),
+                                NotesString = reader.GetString(17),
+                                SurveyName = reader.GetString(18)
                             };
 
                             if (reader.IsDBNull(11))
@@ -1496,6 +1597,65 @@ namespace SurveyManager.backend
                                 s.TitleCompanyID = 0;
                             else
                                 s.TitleCompanyID = reader.GetInt32(12);
+
+                            s.BillingObject.BillingIds = reader.GetString(15);
+                            s.BillingObject.LineItemIds = reader.GetString(16);
+
+                            s.SetObjects();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return s;
+        }
+
+        public static Survey GetSurvey(string jobNumber)
+        {
+            Survey s = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"job_number='{jobNumber}'");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            s = new Survey
+                            {
+                                ID = reader.GetInt32(0),
+                                JobNumber = reader.GetString(1),
+                                ClientID = reader.GetInt32(2),
+                                Description = reader.GetString(3),
+                                AbstractNumber = reader.GetString(4),
+                                Subdivision = reader.GetString(5),
+                                LotNumber = reader.GetString(6),
+                                BlockNumber = reader.GetString(7),
+                                SectionNumber = reader.GetString(8),
+                                CountyID = reader.GetInt32(9),
+                                Acres = reader.GetDouble(10),
+                                FileIds = reader.GetString(13),
+                                LocationID = reader.GetInt32(14),
+                                NotesString = reader.GetString(17),
+                                SurveyName = reader.GetString(18)
+                            };
+
+                            if (reader.IsDBNull(11))
+                                s.RealtorID = 0;
+                            else
+                                s.RealtorID = reader.GetInt32(11);
+
+                            if (reader.IsDBNull(12))
+                                s.TitleCompanyID = 0;
+                            else
+                                s.TitleCompanyID = reader.GetInt32(12);
+
+                            s.BillingObject.BillingIds = reader.GetString(15);
+                            s.BillingObject.LineItemIds = reader.GetString(16);
 
                             s.SetObjects();
                         }
@@ -1537,7 +1697,9 @@ namespace SurveyManager.backend
                                     CountyID = reader.GetInt32(9),
                                     Acres = reader.GetDouble(10),
                                     FileIds = reader.GetString(13),
-                                    LocationID = reader.GetInt32(14)
+                                    LocationID = reader.GetInt32(14),
+                                    NotesString = reader.GetString(17),
+                                    SurveyName = reader.GetString(18)
                                 };
 
                                 if (reader.IsDBNull(11))
@@ -1549,6 +1711,9 @@ namespace SurveyManager.backend
                                     s.TitleCompanyID = 0;
                                 else
                                     s.TitleCompanyID = reader.GetInt32(12);
+
+                                s.BillingObject.BillingIds = reader.GetString(15);
+                                s.BillingObject.LineItemIds = reader.GetString(16);
 
                                 s.SetObjects();
 
@@ -1592,6 +1757,603 @@ namespace SurveyManager.backend
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete survey: {s.ID}. It might be associated with another object.");
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
+
+        #region Line Items
+        public static int InsertLineItem(LineItem item)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("LineItem");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "LineItem", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.Amount);
+                        cmd.Parameters.AddWithValue("@1", item.Description);
+                        cmd.Parameters.AddWithValue("@2", item.TaxRate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0 ? GetLastRowIDInserted("LineItem") : 0;
+        }
+
+        public static bool UpdateLineItem(LineItem item)
+        {
+            if (item.ID == 0)
+                return item.Insert() == DatabaseError.NoError;
+
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("LineItem");
+            string q = Queries.BuildQuery(QType.UPDATE, "LineItem", null, columns, $"item_id={item.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.ID);
+                        cmd.Parameters.AddWithValue("@1", item.Amount);
+                        cmd.Parameters.AddWithValue("@2", item.Description);
+                        cmd.Parameters.AddWithValue("@3", item.TaxRate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static LineItem GetLineItem(int id)
+        {
+            LineItem item = null;
+            string q = Queries.BuildQuery(QType.SELECT, "LineItem", null, null, $"item_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            item = new LineItem
+                            {
+                                ID = reader.GetInt32(0),
+                                Amount = reader.GetDecimal(1),
+                                Description = reader.GetString(2),
+                                TaxRate = reader.GetDouble(3),
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return item;
+        }
+
+        public static List<LineItem> GetLineItems(params int[] ids)
+        {
+            List<LineItem> items = new List<LineItem>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                foreach (int id in ids)
+                {
+                    string q = Queries.BuildQuery(QType.SELECT, "LineItem", null, null, $"item_id={id}");
+
+                    using (MySqlCommand cmd = new MySqlCommand(q, con))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                items.Add(new LineItem
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Amount = reader.GetDecimal(1),
+                                    Description = reader.GetString(2),
+                                    TaxRate = reader.GetDouble(3),
+                                });
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
+        public static bool DeleteLineItem(int id)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "LineItem", null, null, $"item_id={id}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete line item: {id}. It might be associated with another object.");
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
+
+        #region Rates
+        public static int InsertRate(Rate item)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Rates");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Rates", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.Description);
+                        cmd.Parameters.AddWithValue("@1", item.Amount);
+                        cmd.Parameters.AddWithValue("@2", item.TimeUnit.ToString());
+                        cmd.Parameters.AddWithValue("@3", item.TaxIncluded);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0 ? GetLastRowIDInserted("Rates") : 0;
+        }
+
+        public static bool UpdateRate(Rate item)
+        {
+            if (item.ID == 0)
+                return item.Insert() == DatabaseError.NoError;
+
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Rates");
+            string q = Queries.BuildQuery(QType.UPDATE, "Rates", null, columns, $"rate_id={item.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.ID);
+                        cmd.Parameters.AddWithValue("@1", item.Description);
+                        cmd.Parameters.AddWithValue("@2", item.Amount);
+                        cmd.Parameters.AddWithValue("@3", item.TimeUnit.ToString());
+                        cmd.Parameters.AddWithValue("@4", item.TaxIncluded);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static Rate GetRate(int id)
+        {
+            Rate item = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Rates", null, null, $"rate_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            item = new Rate
+                            {
+                                ID = reader.GetInt32(0),
+                                Description = reader.GetString(1),
+                                Amount = reader.GetDecimal(2),
+                                TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
+                                TaxIncluded = reader.GetBoolean(4)
+                            };
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return item;
+        }
+
+        public static List<Rate> GetRates()
+        {
+            List<Rate> items = new List<Rate>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                string q = Queries.BuildQuery(QType.SELECT, "Rates", null, null);
+
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Rate item = new Rate
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Description = reader.GetString(1),
+                                    Amount = reader.GetDecimal(2),
+                                    TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
+                                    TaxIncluded = reader.GetBoolean(4)
+                                };
+
+                                items.Add(item);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
+        public static List<Rate> GetRates(params int[] ids)
+        {
+            List<Rate> items = new List<Rate>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                foreach (int id in ids)
+                {
+                    string q = Queries.BuildQuery(QType.SELECT, "Rates", null, null, $"rate_id={id}");
+
+                    using (MySqlCommand cmd = new MySqlCommand(q, con))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                Rate item = new Rate
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Description = reader.GetString(1),
+                                    Amount = reader.GetDecimal(2),
+                                    TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), reader.GetString(3)),
+                                    TaxIncluded = reader.GetBoolean(4)
+                                };
+
+                                items.Add(item);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
+        public static bool DeleteRate(Rate rate)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Rates", null, null, $"rate_id={rate.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete rate: {rate.ID}. It might be associated with another object.");
+                return false;
+            }
+
+            return affectedRows != 0;
+        }
+        #endregion
+        #region Billing Items
+        public static int InsertBillingItem(BillingItem item)
+        {
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Billing");
+            columns.RemoveAt(0); //remove the id column
+            columns.TrimToSize(); //trim the arraylist after index removal
+            string q = Queries.BuildQuery(QType.INSERT, "Billing", null, columns);
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.Description);
+                        cmd.Parameters.AddWithValue("@1", item.FieldRate.ID);
+                        cmd.Parameters.AddWithValue("@2", item.OfficeRate.ID);
+                        cmd.Parameters.AddWithValue("@3", item.FieldTime);
+                        cmd.Parameters.AddWithValue("@4", item.OfficeTime);
+                        cmd.Parameters.AddWithValue("@5", item.AssociatedDate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0 ? GetLastRowIDInserted("Billing") : 0;
+        }
+
+        public static bool UpdateBillingItem(BillingItem item)
+        {
+            if (item.ID == 0)
+                return item.Insert() == DatabaseError.NoError;
+
+            int affectedRows = 0;
+            ArrayList columns = GetColumns("Billing");
+            string q = Queries.BuildQuery(QType.UPDATE, "Billing", null, columns, $"billing_id={item.ID}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlTransaction tr = con.BeginTransaction())
+                    {
+                        cmd.CommandText = q;
+                        cmd.Transaction = tr;
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.Parameters.AddWithValue("@0", item.ID);
+                        cmd.Parameters.AddWithValue("@1", item.Description);
+                        cmd.Parameters.AddWithValue("@2", item.FieldRate.ID);
+                        cmd.Parameters.AddWithValue("@3", item.OfficeRate.ID);
+                        cmd.Parameters.AddWithValue("@4", item.FieldTime);
+                        cmd.Parameters.AddWithValue("@5", item.OfficeTime);
+                        cmd.Parameters.AddWithValue("@6", item.AssociatedDate);
+
+                        cmd.Connection = con;
+                        affectedRows = cmd.ExecuteNonQuery();
+
+                        if (affectedRows > 0)
+                            tr.Commit();
+                        else
+                            tr.Rollback();
+                    }
+                }
+                con.Close();
+            }
+            return affectedRows != 0;
+        }
+
+        public static BillingItem GetBillingItem(int id)
+        {
+            BillingItem item = null;
+            string q = Queries.BuildQuery(QType.SELECT, "Billing", null, null, $"billing_id={id}");
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            item = new BillingItem
+                            {
+                                ID = reader.GetInt32(0),
+                                Description = reader.GetString(1),
+                                FieldRateId = reader.GetInt32(2),
+                                OfficeRateId = reader.GetInt32(3),
+                                FieldTime = reader.GetTimeSpan(4),
+                                OfficeTime = reader.GetTimeSpan(5),
+                                AssociatedDate = reader.GetDateTime(6)
+                            };
+
+                            item.SetObjects();
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return item;
+        }
+
+        public static List<BillingItem> GetBillingItems(params int[] ids)
+        {
+            List<BillingItem> items = new List<BillingItem>();
+
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                foreach (int id in ids)
+                {
+                    string q = Queries.BuildQuery(QType.SELECT, "Billing", null, null, $"billing_id={id}");
+
+                    using (MySqlCommand cmd = new MySqlCommand(q, con))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                BillingItem item = new BillingItem
+                                {
+                                    ID = reader.GetInt32(0),
+                                    Description = reader.GetString(1),
+                                    FieldRateId = reader.GetInt32(2),
+                                    OfficeRateId = reader.GetInt32(3),
+                                    FieldTime = reader.GetTimeSpan(4),
+                                    OfficeTime = reader.GetTimeSpan(5),
+                                    AssociatedDate = reader.GetDateTime(6)
+                                };
+
+                                item.SetObjects();
+
+                                items.Add(item);
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            return items;
+        }
+
+        public static bool DeleteBillingItem(BillingItem item)
+        {
+            int affectedRows = 0;
+            string q = Queries.BuildQuery(QType.DELETE, "Billing", null, null, $"billing_id={item.ID}");
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlTransaction tr = con.BeginTransaction())
+                        {
+                            cmd.CommandText = q;
+                            cmd.Transaction = tr;
+                            cmd.Connection = con;
+                            affectedRows = cmd.ExecuteNonQuery();
+
+                            if (affectedRows > 0)
+                                tr.Commit();
+                            else
+                                tr.Rollback();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"Could not delete billing item: {item.ID}. It might be associated with another object.");
                 return false;
             }
 

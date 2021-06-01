@@ -1,15 +1,12 @@
 ﻿using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing;
 using System.Drawing.Design;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -21,6 +18,8 @@ namespace SurveyManager.backend.wrappers
     [Serializable]
     public class CFile : DatabaseWrapper
     {
+        private string tempPath = string.Empty;
+
         [Browsable(false)]
         public int ID { get; set; }
 
@@ -52,6 +51,9 @@ namespace SurveyManager.backend.wrappers
             }
         }
 
+        [Browsable(false)]
+        public string TempPath { get; internal set; }
+
         /// <summary>
         /// The RAW byte array representing the file's contents.
         /// </summary>
@@ -68,7 +70,7 @@ namespace SurveyManager.backend.wrappers
         [Description("The size of the file as stored in the database.")]
         [Browsable(true)]
         [DisplayName("File Size")]
-        public string FileSize 
+        public string FileSize
         {
             get
             {
@@ -104,18 +106,18 @@ namespace SurveyManager.backend.wrappers
                         case FileExtension.DXF:
                         case FileExtension.DWT:
                         case FileExtension.DXB:
-                            return Resources.dwg_32x32;
+                        return Resources.dwg_32x32;
                         case FileExtension.PNG:
                         case FileExtension.JPEG:
                         case FileExtension.JPG:
-                            return Resources.png_32x32;
+                        return Resources.png_32x32;
                         case FileExtension.DOC:
                         case FileExtension.DOCX:
-                            return Resources.doc_32x32;
+                        return Resources.doc_32x32;
                         case FileExtension.PDF:
-                            return Resources.pdf_32x32;
+                        return Resources.pdf_32x32;
                         case FileExtension.TXT:
-                            return Resources.txt_32x32;
+                        return Resources.txt_32x32;
                     }
                 }
                 return Resources.file_32x32;
@@ -190,6 +192,7 @@ namespace SurveyManager.backend.wrappers
             }
             catch (Exception)
             {
+                RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to read a file: {path}");
                 return false;
             }
         }
@@ -204,6 +207,24 @@ namespace SurveyManager.backend.wrappers
         }
 
         /// <summary>
+        /// Get a file path to this CFile object. The temporary file is deleted after the program is closed.
+        /// </summary>
+        /// <returns></returns>
+        public string GetTempFile()
+        {
+            if (Contents.Length == 0)
+                return null;
+
+            string path = Path.Combine(RuntimeVars.Instance.TempFiles.TempDir, Path.GetRandomFileName() + $"-{FullFileName}");
+            File.WriteAllBytes(path, Contents);
+            RuntimeVars.Instance.TempFiles.AddFile(path, false);
+
+            TempPath = path;
+
+            return path;
+        }
+
+        /// <summary>
         /// Override for <see cref="object.ToString()"/> that returns a readable version of this <see cref="CFile"/>.
         /// </summary>
         /// <returns><c>FileName.Extension</c></returns>
@@ -212,25 +233,33 @@ namespace SurveyManager.backend.wrappers
             return $"{FileName}.{Extension.ToString().ToLower()}";
         }
 
-        public DatabaseError Delete()
-        {
-            return Database.DeleteFile(this) ? DatabaseError.NoError : DatabaseError.FileDelete;
-        }
-
         public DatabaseError Insert()
         {
-            if (!IsValidFile)
-                return DatabaseError.FileIncomplete;
-
-            return Database.InsertFile(this) ? DatabaseError.NoError : DatabaseError.FileInsert;
+            DatabaseError e;
+            if (IsValidFile)
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertFile(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.FileInsert;
+                }
+                else
+                {
+                    e = Database.UpdateFile(this) ? DatabaseError.NoError : DatabaseError.FileUpdate;
+                }
+                return e;
+            }
+            return DatabaseError.FileIncomplete;
         }
 
         public DatabaseError Update()
         {
-            if (!IsValidFile)
-                return DatabaseError.FileIncomplete;
+            return Insert();
+        }
 
-            return Database.UpdateFile(this) ? DatabaseError.NoError : DatabaseError.FileUpdate;
+        public DatabaseError Delete()
+        {
+            return Database.DeleteFile(this) ? DatabaseError.NoError : DatabaseError.FileDelete;
         }
     }
 }

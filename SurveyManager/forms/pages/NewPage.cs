@@ -1,12 +1,9 @@
 ﻿using ComponentFactory.Krypton.Navigator;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.userControls;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 
@@ -26,6 +23,27 @@ namespace SurveyManager.forms.pages
             {
                 Dock = System.Windows.Forms.DockStyle.Fill
             };
+            switch (entity)
+            {
+                case EntityTypes.Client:
+                {
+                    ImageSmall = Resources.client_16x16;
+                    ImageLarge = Resources.client;
+                    break;
+                }
+                case EntityTypes.Realtor:
+                {
+                    ImageSmall = Resources.realtor_16x16;
+                    ImageLarge = Resources.realtor;
+                    break;
+                }
+                case EntityTypes.TitleCompany:
+                {
+                    ImageSmall = Resources.title_company_16x16;
+                    ImageLarge = Resources.title_company;
+                    break;
+                }
+            }
 
             ctl.StatusUpdate += UpdateMainFormStatus;
 

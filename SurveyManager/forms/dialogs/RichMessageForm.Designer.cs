@@ -52,7 +52,7 @@ namespace SurveyManager.forms.dialogs
             // lblText
             // 
             this.lblText.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.lblText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.lblText.Location = new System.Drawing.Point(82, 12);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(28, 15);
@@ -124,7 +124,7 @@ namespace SurveyManager.forms.dialogs
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RichMessageForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Title";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();

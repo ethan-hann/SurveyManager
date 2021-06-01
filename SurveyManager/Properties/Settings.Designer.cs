@@ -46,5 +46,244 @@ namespace SurveyManager.Properties {
                 this["UpgradeRequired"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection RecentJobs {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["RecentJobs"]));
+            }
+            set {
+                this["RecentJobs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string LogFilePath {
+            get {
+                return ((string)(this["LogFilePath"]));
+            }
+            set {
+                this["LogFilePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string DefaultSavePath {
+            get {
+                return ((string)(this["DefaultSavePath"]));
+            }
+            set {
+                this["DefaultSavePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Unlicensed")]
+        public string ProductKey {
+            get {
+                return ((string)(this["ProductKey"]));
+            }
+            set {
+                this["ProductKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailFromAddress {
+            get {
+                return ((string)(this["MailFromAddress"]));
+            }
+            set {
+                this["MailFromAddress"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerUser {
+            get {
+                return ((string)(this["MailServerUser"]));
+            }
+            set {
+                this["MailServerUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerPassword {
+            get {
+                return ((string)(this["MailServerPassword"]));
+            }
+            set {
+                this["MailServerPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string MailServerHost {
+            get {
+                return ((string)(this["MailServerHost"]));
+            }
+            set {
+                this["MailServerHost"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MailServerPort {
+            get {
+                return ((int)(this["MailServerPort"]));
+            }
+            set {
+                this["MailServerPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.00")]
+        public decimal DefaultFieldRate {
+            get {
+                return ((decimal)(this["DefaultFieldRate"]));
+            }
+            set {
+                this["DefaultFieldRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.00")]
+        public decimal DefaultOfficeRate {
+            get {
+                return ((decimal)(this["DefaultOfficeRate"]));
+            }
+            set {
+                this["DefaultOfficeRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0825")]
+        public double DefaultTaxRate {
+            get {
+                return ((double)(this["DefaultTaxRate"]));
+            }
+            set {
+                this["DefaultTaxRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool OverwriteLogFile {
+            get {
+                return ((bool)(this["OverwriteLogFile"]));
+            }
+            set {
+                this["OverwriteLogFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int LogAutoSaveInterval {
+            get {
+                return ((int)(this["LogAutoSaveInterval"]));
+            }
+            set {
+                this["LogAutoSaveInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public int SurveyAutoSaveInterval {
+            get {
+                return ((int)(this["SurveyAutoSaveInterval"]));
+            }
+            set {
+                this["SurveyAutoSaveInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SurveyAutoSaveEnabled {
+            get {
+                return ((bool)(this["SurveyAutoSaveEnabled"]));
+            }
+            set {
+                this["SurveyAutoSaveEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Undefined")]
+        public string SurveyJobPrefix {
+            get {
+                return ((string)(this["SurveyJobPrefix"]));
+            }
+            set {
+                this["SurveyJobPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DefaultJobPrefixEnabled {
+            get {
+                return ((bool)(this["DefaultJobPrefixEnabled"]));
+            }
+            set {
+                this["DefaultJobPrefixEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeveloperName {
+            get {
+                return ((string)(this["DeveloperName"]));
+            }
+            set {
+                this["DeveloperName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeveloperKey {
+            get {
+                return ((string)(this["DeveloperKey"]));
+            }
+            set {
+                this["DeveloperKey"] = value;
+            }
+        }
     }
 }

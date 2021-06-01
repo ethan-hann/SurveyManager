@@ -1,15 +1,8 @@
 ﻿using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
-using SurveyManager.backend;
 using SurveyManager.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 

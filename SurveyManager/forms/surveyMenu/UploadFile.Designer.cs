@@ -35,7 +35,6 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRemoveSelected = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAddFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.seperator = new ComponentFactory.Krypton.Toolkit.KryptonSeparator();
             this.picPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.propGrid = new System.Windows.Forms.PropertyGrid();
@@ -46,14 +45,22 @@ namespace SurveyManager.forms.surveyMenu
             this.tblProgress = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancelLoading = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnPreview = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblFileSize = new System.Windows.Forms.ToolStripStatusLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seperator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPanel)).BeginInit();
             this.picPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.tblProgress.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbFileNames
@@ -62,7 +69,7 @@ namespace SurveyManager.forms.surveyMenu
             this.lbFileNames.Location = new System.Drawing.Point(0, 0);
             this.lbFileNames.Name = "lbFileNames";
             this.lbFileNames.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lbFileNames.Size = new System.Drawing.Size(332, 430);
+            this.lbFileNames.Size = new System.Drawing.Size(300, 408);
             this.lbFileNames.TabIndex = 0;
             this.lbFileNames.SelectedIndexChanged += new System.EventHandler(this.lbFileNames_SelectedIndexChanged);
             // 
@@ -70,10 +77,10 @@ namespace SurveyManager.forms.surveyMenu
             // 
             this.kryptonPanel1.Controls.Add(this.lbFileNames);
             this.kryptonPanel1.Controls.Add(this.flowLayoutPanel1);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(332, 470);
+            this.kryptonPanel1.Size = new System.Drawing.Size(300, 448);
             this.kryptonPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -81,18 +88,17 @@ namespace SurveyManager.forms.surveyMenu
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Controls.Add(this.btnRemoveSelected);
             this.flowLayoutPanel1.Controls.Add(this.btnAddFile);
-            this.flowLayoutPanel1.Controls.Add(this.seperator);
             this.flowLayoutPanel1.Controls.Add(this.picPanel);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 430);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 408);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(300, 40);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnRemoveSelected
             // 
-            this.btnRemoveSelected.Location = new System.Drawing.Point(205, 3);
+            this.btnRemoveSelected.Location = new System.Drawing.Point(173, 3);
             this.btnRemoveSelected.Name = "btnRemoveSelected";
             this.btnRemoveSelected.Size = new System.Drawing.Size(124, 32);
             this.btnRemoveSelected.TabIndex = 0;
@@ -102,7 +108,7 @@ namespace SurveyManager.forms.surveyMenu
             // 
             // btnAddFile
             // 
-            this.btnAddFile.Location = new System.Drawing.Point(75, 3);
+            this.btnAddFile.Location = new System.Drawing.Point(43, 3);
             this.btnAddFile.Name = "btnAddFile";
             this.btnAddFile.Size = new System.Drawing.Size(124, 32);
             this.btnAddFile.TabIndex = 1;
@@ -110,20 +116,10 @@ namespace SurveyManager.forms.surveyMenu
             this.btnAddFile.Values.Text = "Add File(s)...";
             this.btnAddFile.Click += new System.EventHandler(this.btnAddFile_Click);
             // 
-            // seperator
-            // 
-            this.seperator.AllowMove = false;
-            this.seperator.Enabled = false;
-            this.seperator.Location = new System.Drawing.Point(59, 3);
-            this.seperator.Name = "seperator";
-            this.seperator.Size = new System.Drawing.Size(10, 31);
-            this.seperator.TabIndex = 3;
-            this.seperator.Visible = false;
-            // 
             // picPanel
             // 
             this.picPanel.Controls.Add(this.picBox);
-            this.picPanel.Location = new System.Drawing.Point(21, 3);
+            this.picPanel.Location = new System.Drawing.Point(5, 3);
             this.picPanel.Name = "picPanel";
             this.picPanel.Size = new System.Drawing.Size(32, 32);
             this.picPanel.TabIndex = 2;
@@ -142,9 +138,9 @@ namespace SurveyManager.forms.surveyMenu
             // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(332, 0);
+            this.propGrid.Location = new System.Drawing.Point(0, 0);
             this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(512, 470);
+            this.propGrid.Size = new System.Drawing.Size(540, 448);
             this.propGrid.TabIndex = 2;
             this.propGrid.ToolbarVisible = false;
             // 
@@ -187,7 +183,7 @@ namespace SurveyManager.forms.surveyMenu
             this.tblProgress.Controls.Add(this.progressBar, 0, 0);
             this.tblProgress.Controls.Add(this.btnCancelLoading, 1, 0);
             this.tblProgress.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tblProgress.Location = new System.Drawing.Point(0, 470);
+            this.tblProgress.Location = new System.Drawing.Point(0, 448);
             this.tblProgress.Name = "tblProgress";
             this.tblProgress.RowCount = 1;
             this.tblProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -213,6 +209,48 @@ namespace SurveyManager.forms.surveyMenu
             this.btnPreview.UniqueName = "9375A9B752B1440D459DA3AD6C2A3260";
             this.btnPreview.Visible = false;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.lblFileSize});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 476);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(844, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 6;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(685, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // lblFileSize
+            // 
+            this.lblFileSize.Name = "lblFileSize";
+            this.lblFileSize.Size = new System.Drawing.Size(144, 17);
+            this.lblFileSize.Text = "Total File Size For This Job:";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.kryptonPanel1);
+            this.splitContainer1.Panel1MinSize = 300;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.propGrid);
+            this.splitContainer1.Size = new System.Drawing.Size(844, 448);
+            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer1.TabIndex = 7;
+            // 
             // UploadFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,24 +259,30 @@ namespace SurveyManager.forms.surveyMenu
             this.btnSave,
             this.btnPreview});
             this.ClientSize = new System.Drawing.Size(844, 498);
-            this.Controls.Add(this.propGrid);
-            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tblProgress);
+            this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UploadFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Upload Files";
+            this.Text = "Manage Files";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UploadFile_FormClosing);
             this.Load += new System.EventHandler(this.UploadFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.seperator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPanel)).EndInit();
             this.picPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.tblProgress.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -258,7 +302,10 @@ namespace SurveyManager.forms.surveyMenu
         private ComponentFactory.Krypton.Toolkit.KryptonPanel picPanel;
         private System.Windows.Forms.TableLayoutPanel tblProgress;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelLoading;
-        private ComponentFactory.Krypton.Toolkit.KryptonSeparator seperator;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnPreview;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lblFileSize;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

@@ -13,7 +13,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
@@ -25,6 +24,7 @@ namespace SurveyManager.forms.surveyMenu
         private StringBuilder bldr = new StringBuilder();
         private List<CFile> filesToAdd = new List<CFile>();
         private string currentFileName = "";
+        private bool saved = false;
 
         private Thread backgroundThread;
 
@@ -45,15 +45,16 @@ namespace SurveyManager.forms.surveyMenu
 
         private void UploadFile_Load(object sender, EventArgs e)
         {
-            Icon = Icon.FromHandle(Resources.file_16x16.GetHicon());
+            Icon = Icon.FromHandle(Resources.attachment.GetHicon());
 
             btnSave.Click += SaveFiles;
-            btnPreview.Click += PreviewFile;
 
             if (filesToAdd.Count > 0)
             {
                 lbFileNames.Items.AddRange(filesToAdd.ToArray());
             }
+
+            lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
         }
 
         private void btnAddFile_Click(object sender, EventArgs e)
@@ -104,9 +105,10 @@ namespace SurveyManager.forms.surveyMenu
 
                     counter++;
                 }
-            } catch (ThreadAbortException)
+            }
+            catch (ThreadAbortException)
             {
-                
+
             }
         }
 
@@ -119,16 +121,18 @@ namespace SurveyManager.forms.surveyMenu
         private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             lbFileNames.Items.AddRange(filesToAdd.ToArray());
-            Text = $"Upload Files - Total Size to Upload = {Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length))}";
+            lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
 
             if (bldr.Length != 0)
-                CRichMsgBox.Show("The following files were to big to be added to the database:", "Files to big",
+                CRichMsgBox.Show("The following files were either too big to be added to the database or an error occured while reading them:", "File Error",
                     bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
 
             StatusUpdate?.Invoke(this, new StatusArgs($"{filesToAdd.Count} files pending upload."));
 
             progressBar.Value = 0;
             tblProgress.Visible = false;
+
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void btnRemoveSelected_Click(object sender, EventArgs e)
@@ -142,7 +146,7 @@ namespace SurveyManager.forms.surveyMenu
                     lbFileNames.Items.RemoveAt(idx);
                 }
 
-                Text = $"Upload Files - Total Size to Upload = {Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length))}";
+                lblFileSize.Text = "Total File Size For This Job: " + Utility.FormatSize(lbFileNames.Items.Cast<CFile>().Sum(e => e.Contents.Length));
                 StatusUpdate?.Invoke(this, new StatusArgs($"Removed {count} files from pending upload."));
                 Application.DoEvents();
 
@@ -153,6 +157,8 @@ namespace SurveyManager.forms.surveyMenu
 
                 StatusUpdate?.Invoke(this, new StatusArgs($"{lbFileNames.Items.Count} files pending upload."));
             }
+
+            JobHandler.Instance.UpdateSavePending(true);
         }
 
         private void SaveFiles(object sender, EventArgs e)
@@ -161,22 +167,17 @@ namespace SurveyManager.forms.surveyMenu
             {
                 FileUploadDone?.Invoke(this, new FileUploadDoneArgs(lbFileNames.Items.Cast<CFile>().ToList()));
                 DialogResult = DialogResult.OK;
-                Close();
+
             }
             else
             {
                 FileUploadDone?.Invoke(this, new FileUploadDoneArgs(new List<CFile>()));
                 DialogResult = DialogResult.Cancel;
-                Close();
             }
-        }
 
-        private void PreviewFile(object sender, EventArgs e)
-        {
-            if (lbFileNames.SelectedItem != null)
-            {
-                
-            }
+            saved = true;
+            JobHandler.Instance.UpdateSavePending(true);
+            Close();
         }
 
         private void lbFileNames_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,14 +187,11 @@ namespace SurveyManager.forms.surveyMenu
                 propGrid.SelectedObject = (CFile)lbFileNames.Items[lbFileNames.SelectedIndex];
                 picBox.Image = ((CFile)propGrid.SelectedObject).DisplayIcon;
                 picPanel.Visible = true;
-                seperator.Visible = true;
             }
             else
             {
                 picPanel.Visible = false;
-                seperator.Visible = false;
             }
-                
         }
 
         private void UploadFile_FormClosing(object sender, FormClosingEventArgs e)
@@ -201,8 +199,11 @@ namespace SurveyManager.forms.surveyMenu
             if (bgWorker.IsBusy)
             {
                 backgroundThread.Abort();
-                StatusUpdate?.Invoke(this, new StatusArgs($"File upload cancelled."));
+                StatusUpdate?.Invoke(this, new StatusArgs($"File upload canceled."));
             }
+
+            if (!saved)
+                StatusUpdate?.Invoke(this, new StatusArgs($"File upload canceled."));
 
             GC.Collect();
             GC.WaitForPendingFinalizers();
@@ -221,11 +222,6 @@ namespace SurveyManager.forms.surveyMenu
                 progressBar.Value = 0;
                 tblProgress.Visible = false;
             }
-        }
-
-        public List<CFile> GetFiles()
-        {
-            return lbFileNames.Items.Cast<CFile>().ToList();
         }
     }
 }

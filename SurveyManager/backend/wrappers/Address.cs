@@ -1,5 +1,4 @@
-﻿using SurveyManager.utility;
-using System;
+﻿using System;
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
@@ -68,18 +67,27 @@ namespace SurveyManager.backend.wrappers
 
         public DatabaseError Insert()
         {
+            DatabaseError e;
             if (!IsEmpty)
-                return Database.InsertAddress(this) ? DatabaseError.NoError : DatabaseError.AddressInsert;
+            {
+                if (ID == 0)
+                {
+                    ID = Database.InsertAddress(this);
+                    e = ID != 0 ? DatabaseError.NoError : DatabaseError.AddressInsert;
+                }
+                else
+                {
+                    e = Database.UpdateAddress(this) ? DatabaseError.NoError : DatabaseError.AddressUpdate;
+                }
+                return e;
+            }
             else
                 return DatabaseError.AddressIncomplete;
         }
 
         public DatabaseError Update()
         {
-            if (!IsEmpty)
-                return Database.UpdateAddress(this) ? DatabaseError.NoError : DatabaseError.AddressUpdate;
-            else
-                return DatabaseError.AddressIncomplete;
+            return Insert();
         }
 
         public DatabaseError Delete()

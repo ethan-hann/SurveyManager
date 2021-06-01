@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SurveyManager.utility
 {
@@ -31,6 +27,8 @@ namespace SurveyManager.utility
         {
             if (destinationType != typeof(string))
                 return base.ConvertTo(context, culture, value, destinationType);
+            if (value == null)
+                return "";
             return value.ToString();
         }
 

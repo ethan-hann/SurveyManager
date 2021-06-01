@@ -1,29 +1,34 @@
 ﻿using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
+using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
+using ComponentFactory.Krypton.Workspace;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
-using SurveyManager.forms;
 using SurveyManager.forms.databaseMenu;
 using SurveyManager.forms.dialogs;
+using SurveyManager.forms.fileMenu;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
-using SurveyManager.forms.userControls;
 using SurveyManager.Properties;
 using SurveyManager.utility;
+using SurveyManager.utility.Licensing;
+using SurveyManager.utility.Logging;
+using SurveyManager.utility.PdfGeneration;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Deployment.Application;
-using System.Drawing;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager
 {
@@ -34,24 +39,89 @@ namespace SurveyManager
         /// </summary>
         public KryptonDockingWorkspace DockingWorkspace { get; private set; } = null;
 
+        private delegate void SafeCallChangeStatusText(string text);
+        private SafeCallChangeStatusText del;
+
+        private ActivationDlg activationDialog = new ActivationDlg();
+        private bool licensed = false; //always assume we are unlicensed until we've checked the product key
+
         public MainForm()
         {
             InitializeComponent();
+
+            del = new SafeCallChangeStatusText(UpdateStatusFromOtherThread);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            lblStatusDate.Text = DateTime.Now.ToString();
+
+            //Check for recent jobs
+            if (Settings.Default.RecentJobs == null)
+                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
+
+            //Set up the ribbon UI
             InitializeRibbon();
 
+            //Create our docking heirarchy
+            InitializeDock();
+
+            //Set and enable autosave timers
+            InitializeAutoSave();
+
+            //Create, if they dont exist, the temporary files and the log file path
+            InitializeDirectories();
+
+            //Upgrade settings if needed - keeps settings persistent across version updates to the program
+            InitializeSettings();
+
+            //Ask if user wants desktop shortcut created
+            CheckForDesktopShortcut();
+
+            //Check license statuses
+            InitializeLicensing();
+
+            //Subscribe to events from the JobHandler
+            InitializeJobHandler();
+        }
+
+        private void InitializeDock()
+        {
             DockingWorkspace = dockingManager.ManageWorkspace("MainWorkspace", dockableWorkspace);
             dockingManager.ManageControl("Control", kryptonPanel1, DockingWorkspace);
             dockingManager.ManageFloating("Floating", this);
+        }
 
-            lblStatusDate.Text = DateTime.Now.ToString();
-
+        private void InitializeAutoSave()
+        {
             clockTimer.Start();
 
-            //Upgrade settings if needed - keeps settings persistent across version updates to the program
+            surveyAutosave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.SurveyAutoSaveInterval).TotalMilliseconds;
+            logAutoSave.Interval = (int)TimeSpan.FromMinutes(Settings.Default.LogAutoSaveInterval).TotalMilliseconds;
+
+            surveyAutosave.Enabled = Settings.Default.SurveyAutoSaveEnabled;
+            logAutoSave.Enabled = true;
+
+            if (surveyAutosave.Enabled)
+                surveyAutosave.Start();
+
+            if (logAutoSave.Enabled)
+                logAutoSave.Start();
+        }
+
+        private void InitializeDirectories()
+        {
+            Directory.CreateDirectory(RuntimeVars.Instance.TempFiles.TempDir);
+            Directory.CreateDirectory(Settings.Default.LogFilePath);
+
+            //Set log file
+            RuntimeVars.Instance.LogFile = new LogFile(Settings.Default.LogFilePath);
+            if (!Settings.Default.OverwriteLogFile)
+                RuntimeVars.Instance.LogFile.FileName = Guid.NewGuid().ToString().Substring(0, 10) + DateTime.Now.Date.ToString("MM-dd-yyyy") + ".log";
+        }
+
+        private void InitializeSettings()
+        {
             if (Settings.Default.UpgradeRequired)
             {
                 Settings.Default.Upgrade();
@@ -59,22 +129,133 @@ namespace SurveyManager
                 Settings.Default.Save();
             }
 
-            //Initialize the database and connection string
-            Database.Initialize();
-
-            //Check database connection
-            int code = Database.CheckConnection();
-            if (code != -1)
-                Text = "Survey Manager - Database: <NONE>";
-            else
-                Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}";
-
-            //Set main form
-            RuntimeVars.Instance.MainForm = this;
-
-            if (RuntimeVars.Instance.DatabaseConnected)
+            if (Settings.Default.LogFilePath.Equals("Undefined"))
             {
-                RuntimeVars.Instance.Counties = Database.GetCounties();
+                Settings.Default.LogFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SurveyManager", "logs");
+                Settings.Default.Save();
+            }
+
+            if (Settings.Default.DefaultSavePath.Equals("Undefined"))
+            {
+                Settings.Default.DefaultSavePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SurveyManager");
+                Settings.Default.Save();
+            }
+        }
+
+        private void CheckForDesktopShortcut()
+        {
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                if (ApplicationDeployment.CurrentDeployment.IsFirstRun)
+                {
+                    if (!DesktopShortcut.Exists("Survey Manager"))
+                    {
+                        DialogResult result = CMessageBox.Show("No shortcut to the application found on the desktop! Would you like to add one now?", "No Shortcut Found", MessageBoxButtons.YesNo, Resources.info_64x64);
+                        if (result == DialogResult.Yes)
+                        {
+                            DesktopShortcut.Create("Survey Manager");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void InitializeLicensing()
+        {
+            //Ensure that we have the correct key for the licensing API
+            if (Settings.Default.DeveloperName.Length <= 0 || Settings.Default.DeveloperKey.Length <= 0)
+            {
+                EllipterActivation ellActivation = new EllipterActivation();
+                DialogResult result = ellActivation.ShowDialog();
+                if (result != DialogResult.OK)
+                    Application.Exit(); //if we dont, exit the application because the licensing API won't work.
+            }
+
+            //Check product key and set license status
+            InitializeLicense();
+        }
+
+        private void InitializeJobHandler()
+        {
+            JobHandler.Instance.JobOpening += ChangeStatusText;
+            JobHandler.Instance.JobOpened += ChangeStatusText;
+            JobHandler.Instance.JobClosing += ChangeStatusText;
+            JobHandler.Instance.JobClosed += ChangeStatusText;
+            JobHandler.Instance.JobSaving += ChangeStatusText;
+            JobHandler.Instance.JobSaved += ChangeStatusText;
+            JobHandler.Instance.StatusUpdate += ChangeStatusText;
+        }
+
+        private void UpdateStatusFromOtherThread(string statusText)
+        {
+            ChangeStatusText(this, new StatusArgs(statusText));
+        }
+
+        private void surveyAutosave_Tick(object sender, EventArgs e)
+        {
+            if (Settings.Default.SurveyAutoSaveEnabled)
+            {
+                if (JobHandler.Instance.IsJobOpen)
+                {
+                    if (JobHandler.Instance.CurrentJobState != JobState.Saving)
+                    {
+                        if (JobHandler.Instance.SaveJob(false))
+                        {
+                            ChangeStatusText(this, new StatusArgs($"Autosave completed for Job# {JobHandler.Instance.CurrentJob.JobNumber}."));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void logAutoSave_Tick(object sender, EventArgs e)
+        {
+            RuntimeVars.Instance.LogFile.WriteToFile();
+        }
+
+        public void SetSurveyAutosaveInterval(int minutes)
+        {
+            surveyAutosave.Stop();
+            surveyAutosave.Interval = (int)TimeSpan.FromMinutes(minutes).TotalMilliseconds;
+            surveyAutosave.Start();
+        }
+
+        public void SetLogAutosaveInterval(int minutes)
+        {
+            logAutoSave.Stop();
+            logAutoSave.Interval = (int)TimeSpan.FromMinutes(minutes).TotalMilliseconds;
+            logAutoSave.Start();
+        }
+
+        private void InitializeLicense()
+        {
+            RuntimeVars.Instance.License = LicenseEngine.GetLicenseInfo(Settings.Default.ProductKey);
+            if (RuntimeVars.Instance.License.IsEmpty)
+            {
+                licensed = false;
+                SetLicenseStatus(this, new LicensingEventArgs(RuntimeVars.Instance.License, CloseReasons.Unlicensed));
+            }
+            else
+            {
+                //If the license type is a trial and today is the day of the trial expiration, show message and let user know.
+                if (RuntimeVars.Instance.License.Type == LicenseType.Trial & DateTime.Now.Date >= RuntimeVars.Instance.License.ExpirationDate.Date)
+                {
+                    licensed = false;
+                    CMessageBox.Show("Your trial period has ended. Please purchase a new product key or request a new trial key. " +
+                    "Most features are disabled until the product is activated.", "End of Trial", MessageBoxButtons.OK, Resources.warning_64x64);
+                    Settings.Default.ProductKey = "Unlicensed";
+                    Settings.Default.Save();
+
+                    RuntimeVars.Instance.LogFile.AddEntry("Trial has ended. Features are disabled.");
+
+                    SetLicenseStatus(this, new LicensingEventArgs(LicenseInfo.CreateUnlicensedInfo(), CloseReasons.Unlicensed));
+                    return;
+                }
+
+                //Otherwise, assume it to be a full key and set the license.
+                licensed = true;
+                RuntimeVars.Instance.LogFile.AddEntry("Product is licensed! All features are enabled.");
+                SetLicenseStatus(this, new LicensingEventArgs(RuntimeVars.Instance.License, CloseReasons.Licensed));
             }
         }
 
@@ -112,10 +293,144 @@ namespace SurveyManager
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(checkUpdatesBtn);
             mainRibbon.RibbonAppButton.AppButtonMenuItems.Add(exitBtn);
 
+            UpdateRecentDocs();
+
             settingsBtn.Click += settingsBtn_Click;
             aboutBtn.Click += aboutBtn_Click;
             checkUpdatesBtn.Click += checkForUpdatesBtn_Click;
             exitBtn.Click += exitBtn_Click;
+
+            //Context Menu Actions
+            //Survey Associate Client -> search for client
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[0]).Click += btnAssocClient_Click;
+            //Survey Associate Client -> create new client
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[1]).Click += CreateNewClient;
+
+            //Survey Associate Realtor -> search for realtor
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[0]).Click += btnAssocRealtor_Click;
+            //Survey Associate Realtor -> create new realtor
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[1]).Click += CreateNewRealtor;
+
+            //Survey Associate TitleCompany -> search for title company
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[0]).Click += btnAssocTitleComp_Click;
+            //Survey Associate TitleCompany -> create new title company
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[1]).Click += CreateNewTitleCompany;
+
+            mainRibbon.SelectedTab = surveyTab;
+        }
+
+        private void CreateNewClient(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
+                    return;
+                }
+
+                newClientBtn_Click(sender, e);
+            }
+        }
+
+        private void CreateNewRealtor(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
+                    return;
+                }
+
+                newRealtorBtn_Click(sender, e);
+            }
+        }
+
+        private void CreateNewTitleCompany(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
+                    return;
+                }
+
+                newTitleCompanyBtn_Click(sender, e);
+            }
+        }
+
+        public void UpdateRecentDocs()
+        {
+            mainRibbon.RibbonAppButton.AppButtonRecentDocs.Clear();
+
+            if (Settings.Default.RecentJobs != null && Settings.Default.RecentJobs.Count > 0)
+            {
+                List<KryptonRibbonRecentDoc> recentJobs = new List<KryptonRibbonRecentDoc>();
+                foreach (string str in Settings.Default.RecentJobs)
+                {
+                    KryptonRibbonRecentDoc job = new KryptonRibbonRecentDoc();
+                    job.Text = str;
+                    job.Click += OpenRecentJob;
+                    recentJobs.Add(job);
+                }
+                mainRibbon.RibbonAppButton.AppButtonRecentDocs.AddRange(recentJobs.ToArray());
+            }
+            else
+            {
+                Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
+                Settings.Default.Save();
+            }
+        }
+
+        private void OpenRecentJob(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (sender is KryptonRibbonRecentDoc recentDoc)
+                {
+                    if (JobHandler.Instance.OpenJob(recentDoc.Text))
+                    {
+                        ChangeTitleText("[JOB# " + recentDoc.Text + "]");
+                    }
+
+                    if (JobHandler.Instance.CurrentJobState == JobState.InvalidJob)
+                    {
+                        ChangeStatusText(this, new StatusArgs("The selected job no longer exists! It was probably deleted; removing from recent jobs list."));
+                        if (Settings.Default.RecentJobs.Contains(recentDoc.Text))
+                        {
+                            Settings.Default.RecentJobs.Remove(recentDoc.Text);
+                            Settings.Default.Save();
+                            UpdateRecentDocs();
+                        }
+                    }
+                }
+            }
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
@@ -126,7 +441,7 @@ namespace SurveyManager
         #region File Menu
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-            
+            new AppSettings().ShowDialog();
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)
@@ -201,7 +516,7 @@ namespace SurveyManager
                 }
                 else
                 {
-                    CMessageBox.Show($"Congrats! You are running the current version.\nVersion: {Assembly.GetExecutingAssembly().GetName().Version}", "No Updates", MessageBoxButtons.OK, Resources.info_64x64);
+                    CMessageBox.Show($"Congrats! You are running the latest version.\nVersion: {Assembly.GetExecutingAssembly().GetName().Version}", "No Updates", MessageBoxButtons.OK, Resources.info_64x64);
                 }
             }
             else
@@ -213,76 +528,79 @@ namespace SurveyManager
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-        #endregion
-
-        #region Survey Menu
-        private void findSurveyBtn_Click(object sender, EventArgs e)
-        {
-            ArrayList columns = new ArrayList
+            ExitChoice choice = ShowCloseDialog();
+            if (choice == ExitChoice.SaveAndExit)
             {
-                new DBMap("job_number", "Job #"),
-                new DBMap("client_id", "Client ID"),
-                new DBMap("description", "Description"),
-                new DBMap("subdivision", "Subdivision"),
-                new DBMap("lot", "Lot #"),
-                new DBMap("block", "Block #"),
-                new DBMap("section", "Section #"),
-                new DBMap("county_id", "County"),
-                new DBMap("acres", "Acres"),
-                new DBMap("realtor_id", "Realtor"),
-                new DBMap("title_company_id", "Title Company")
-            };
-
-            AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
-            filter.FilterDone += ProcessSurveySearch;
-            filter.Show();
-        }
-
-        private void newSurveyBtn_Click(object sender, EventArgs e)
-        {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Survey);
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
-        }
-
-        private void viewSurveysBtn_Click(object sender, EventArgs e)
-        {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys");
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+                JobHandler.Instance.SaveJob();
+                JobHandler.Instance.CloseJob();
+                Application.Exit();
+            }
+            else if (choice == ExitChoice.ExitNoSave)
+            {
+                Application.Exit();
+            }
+            else if (choice == ExitChoice.SaveOnly)
+            {
+                JobHandler.Instance.SaveJob();
+            }
         }
         #endregion
 
         #region Client Menu
         private void findClientBtn_Click(object sender, EventArgs e)
         {
-            ArrayList columns = new ArrayList
+            if (licensed)
             {
-                new DBMap("name", "Name"),
-                new DBMap("phone_number", "Phone #"),
-                new DBMap("email_address", "Email"),
-                new DBMap("fax_number", "Fax #")
-            };
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
 
-            AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
-            filter.FilterDone += ProcessClientSearch;
-            filter.Show();
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("phone_number", "Phone #"),
+                    new DBMap("email_address", "Email"),
+                    new DBMap("fax_number", "Fax #")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
+                filter.FilterDone += ProcessClientSearch;
+                filter.Show();
+            }
         }
 
         private void newClientBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Client);
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new NewPage(EntityTypes.Client);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
 
         private void viewClientsBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients");
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(EntityTypes.Client, "Clients");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
 
         #endregion
@@ -290,80 +608,192 @@ namespace SurveyManager
         #region Realtor Menu
         private void findRealtorBtn_Click(object sender, EventArgs e)
         {
-            ArrayList columns = new ArrayList
+            if (licensed)
             {
-                new DBMap("name", "Name"),
-                new DBMap("phone_number", "Phone #"),
-                new DBMap("email_address", "Email"),
-                new DBMap("fax_number", "Fax #")
-            };
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
 
-            AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
-            filter.FilterDone += ProcessRealtorSearch;
-            filter.Show();
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("phone_number", "Phone #"),
+                    new DBMap("email_address", "Email"),
+                    new DBMap("fax_number", "Fax #")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
+                filter.FilterDone += ProcessRealtorSearch;
+                filter.Show();
+            }
         }
 
         private void newRealtorBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new NewPage(Enums.EntityTypes.Realtor);
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new NewPage(EntityTypes.Realtor);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
 
         private void viewRealtorsBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors");
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
         #endregion
 
         #region Title Company Menu
         private void findTitleCompanyBtn_Click(object sender, EventArgs e)
         {
-            ArrayList columns = new ArrayList
+            if (licensed)
             {
-                new DBMap("name", "Name"),
-                new DBMap("associate_name", "Associate's Name"),
-                new DBMap("associate_email", "Associate's Email"),
-                new DBMap("office_number", "Office #")
-            };
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
 
-            AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
-            filter.FilterDone += ProcessTitleCompanySearch;
-            filter.Show();
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("associate_name", "Associate's Name"),
+                    new DBMap("associate_email", "Associate's Email"),
+                    new DBMap("office_number", "Office #")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
+                filter.FilterDone += ProcessTitleCompanySearch;
+                filter.Show();
+            }
         }
 
         private void newTitleCompanyBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new NewPage(Enums.EntityTypes.TitleCompany);
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new NewPage(Enums.EntityTypes.TitleCompany);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
 
         private void viewTitleCompanyBtn_Click(object sender, EventArgs e)
         {
-            KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies");
-            dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-            dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
         }
+
+        private void btnFindRate_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("description", "Description"),
+                    new DBMap("amount", "Amount"),
+                    new DBMap("time_unit", "Time Unit")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("Rates", columns, "Find Rates");
+                filter.FilterDone += ProcessRateSearch;
+                filter.Show();
+            }
+        }
+
+        private void btnNewRate_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new NewPage(EntityTypes.Rate);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
+        private void btnViewAllRates_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
         #endregion
 
         #region Database Menu
         private void dbConnectionBtn_Click(object sender, EventArgs e)
         {
-            if (RuntimeVars.Instance.NumberOfDBConnectionFormsOpen == 0)
+            if (licensed)
             {
-                DBConnection dbForm = new DBConnection();
-                RuntimeVars.Instance.NumberOfDBConnectionFormsOpen++;
-                dbForm.DatabaseConnectFinished += OnDBConnectDone;
-                dbForm.Show();
+                if (RuntimeVars.Instance.NumberOfDBConnectionFormsOpen == 0)
+                {
+                    DBConnection dbForm = new DBConnection();
+                    RuntimeVars.Instance.NumberOfDBConnectionFormsOpen++;
+                    dbForm.DatabaseConnectFinished += OnDBConnectDone;
+                    dbForm.Show();
+                }
+                else
+                {
+                    CMessageBox.Show("Only 1 connection window can be opened at a time!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                }
             }
-            else
-            {
-                CMessageBox.Show("Only 1 connection window can be opened at a time!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-            }
-            
         }
 
         private void OnDBConnectDone(object sender, EventArgs e)
@@ -373,29 +803,86 @@ namespace SurveyManager
                 switch (args.ExceptionCode)
                 {
                     case 0: //the user specified did not exist or did not have the correct permissions
-                        CMessageBox.Show("The database user did not exist.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    CMessageBox.Show("The database user did not exist or does not have the appropiate permissions.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
                     break;
                     case 1042: //could not reach the hostname
-                        CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    CMessageBox.Show("The specified host could not be reached.\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    Text = "Survey Manager - " + $"Database: <Not Connected>";
                     break;
                     case -1: //all good, begin loading database data
                     {
                         if (RuntimeVars.Instance.DatabaseConnected)
-                            Text = "Survey Manager - " + $"Database: \\\\{Database.Server}\\{Database.DB}";
+                            ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
+                        ChangeStatusText(this, new StatusArgs("Ready"));
                         break;
                     }
                     default: //unknown error; display error code for debugging
-                        CMessageBox.Show($"An error occured with DB connection. Error code: {args.ExceptionCode}\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
+                    CMessageBox.Show($"An error occured with DB connection. Error code: {args.ExceptionCode}\nCheck your settings and try again.", "Could not connect", MessageBoxButtons.OK, Resources.error);
                     break;
                 }
             }
         }
 
+        private void exportDataBtn_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (csvSaveFolder.ShowDialog() == DialogResult.OK)
+                {
+                    progressBar.Visible = true;
+                    dumpDatabaseBGWorker.RunWorkerAsync();
+                }
+            }
+        }
+
+        private void dumpDatabaseBGWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            List<DataTable> tables = new List<DataTable>();
+            DataTable tableInfos = Database.GetTableInfo();
+            del.Invoke("Getting tables from database...");
+            Thread.Sleep(600);
+
+            foreach (DataRow row in tableInfos.Rows)
+            {
+                tables.Add(Database.ExecuteFilter(Queries.BuildQuery(QType.SELECT, row[0].ToString())));
+                del.Invoke($"Dumping table: {row[0]}");
+            }
+
+            CSVHelper.DumpTables(tables, csvSaveFolder.SelectedPath);
+        }
+
+        private void dumpDatabaseBGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void dumpDatabaseBGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar.Visible = false;
+            progressBar.Value = 0;
+            ChangeStatusText(this, new StatusArgs($"Database information dumped successfully to: {csvSaveFolder.SelectedPath}"));
+        }
+
         private void sqlQueryBtn_Click(object sender, EventArgs e)
         {
-            SQLQuery sqForm = new SQLQuery();
-            sqForm.StatusUpdate += ChangeStatusText;
-            sqForm.Show();
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                SQLQuery sqForm = new SQLQuery();
+                sqForm.StatusUpdate += ChangeStatusText;
+                sqForm.Show();
+            }
         }
         #endregion
 
@@ -403,14 +890,19 @@ namespace SurveyManager
         public void ChangeStatusText(object sender, EventArgs e)
         {
             if (e is StatusArgs args)
+            {
                 lblStatus.Text = args.StatusString;
+                RuntimeVars.Instance.LogFile.AddEntry(args.StatusString);
+                RuntimeVars.Instance.LogFile.WriteToFile();
+            }
         }
 
         private void ProcessClientSearch(object sender, EventArgs e)
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Client, "Clients" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Client, "Clients" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -420,7 +912,8 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Realtor, "Realtors" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Realtor, "Realtors" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -430,7 +923,19 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.TitleCompany, "Title Companies" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
+        private void ProcessRateSearch(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                int rowCount = args.Results.Rows.Count;
+                KryptonPage page = new ViewPage(EntityTypes.Rate, "Rates" + $" [Filtered: {(rowCount > 1 ? $"{rowCount} rows" : $"{rowCount} row")}]", args);
                 dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
                 dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
             }
@@ -440,9 +945,72 @@ namespace SurveyManager
         {
             if (e is FilterDoneEventArgs args)
             {
-                KryptonPage page = new ViewPage(Enums.EntityTypes.Survey, "Surveys" + $" [Filtered: {args.Results.Rows.Count} rows]", args);
-                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
-                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+                SurveySearchResults searchResults = new SurveySearchResults(args.Results);
+                searchResults.StatusUpdate += ChangeStatusText;
+                searchResults.SurveyOpened += UpdateTitleAfterSurveyOpened;
+                searchResults.Show();
+            }
+        }
+
+        private void UpdateTitleAfterSurveyOpened(object sender, EventArgs e)
+        {
+            if (e is SurveyOpenedEventArgs args)
+            {
+                ChangeTitleText("[JOB# " + args.Survey.JobNumber + "]");
+                JobHandler.Instance.AddSurveyToRecentJobs();
+            }
+        }
+
+        public void ChangeTitleText(params string[] texts)
+        {
+            if (texts.Length == 3)
+            {
+                Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], texts[1], texts[2]);
+            }
+            else if (texts.Length == 2)
+            {
+                Text = string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], texts[1], string.Empty);
+            }
+            else if (texts.Length == 1)
+            {
+                if (texts[0].Contains("JOB"))
+                    Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", texts[0]) :
+                        string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                            + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), texts[0]);
+                else if (texts[0].Contains("\\\\"))
+                {
+                    if (JobHandler.Instance.IsJobOpen)
+                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber} OPEN BUT DISABLED]") :
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
+                    else
+                        Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], "Unlicensed Copy", "[JOBS DISABLED]") :
+                            string.Format(StatusText.TitleText.ToDescriptionString(), texts[0], $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                                + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                }
+            }
+            else
+                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+        }
+
+        private void UpdateTitleText()
+        {
+            if (JobHandler.Instance.IsJobOpen)
+                Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), $"[JOB# {JobHandler.Instance.CurrentJob.JobNumber}]");
+            else
+            {
+                if (RuntimeVars.Instance.DatabaseConnected)
+                    Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), $"\\\\{Database.Server}\\{Database.DB}", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
+                else
+                    Text = licensed == false ? string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", "Unlicensed Copy", "[JOBS DISABLED]") :
+                    string.Format(StatusText.TitleText.ToDescriptionString(), "<NO CONNECTION>", $"Licensed to: {RuntimeVars.Instance.License.CustomerName}"
+                        + (RuntimeVars.Instance.License.Type == LicenseType.Trial ? $" (Trial: {(RuntimeVars.Instance.License.ExpirationDate - DateTime.Now).Days + 1} days remaining)" : ""), "[NO JOB OPEN]");
             }
         }
         #endregion
@@ -455,5 +1023,752 @@ namespace SurveyManager
 
 
         #endregion
+
+        #region Survey Tab
+        private void btnNewSurveyJob_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                string prefix = $"{DateTime.Now.Date.Year.ToString().Substring(2)}-";
+                if (!Settings.Default.DefaultJobPrefixEnabled)
+                    prefix = Settings.Default.SurveyJobPrefix + "-";
+
+                string newJobNumber = KryptonInputBox.Show(this, "Enter the new job number:", "New Job", prefix);
+                if (newJobNumber.Equals("NONE") || newJobNumber.Length <= 0)
+                    return;
+
+                if (JobHandler.Instance.CreateJob(newJobNumber))
+                {
+                    ChangeTitleText("[JOB# " + newJobNumber + "]");
+                }
+            }
+        }
+
+        private void btnOpenSurveyJob_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("job_number", "Job #"),
+                    new DBMap("client_id", "Client ID"),
+                    new DBMap("description", "Description"),
+                    new DBMap("subdivision", "Subdivision"),
+                    new DBMap("lot", "Lot #"),
+                    new DBMap("block", "Block #"),
+                    new DBMap("section", "Section #"),
+                    new DBMap("county_id", "County"),
+                    new DBMap("acres", "Acres"),
+                    new DBMap("realtor_id", "Realtor ID"),
+                    new DBMap("title_company_id", "Title Company ID")
+                };
+
+                //TODO: add correct search filter for county
+                AdvancedFilter filter = new AdvancedFilter("Survey", columns, "Find Surveys");
+                filter.FilterDone += ProcessSurveySearch;
+                filter.Show();
+            }
+        }
+
+        private void btnViewAllJobs_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage page = new ViewPage(EntityTypes.Survey, "Surveys");
+                dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+            }
+        }
+
+        private void btnBasicInfo_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BasicInfo.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage basicInfoPage = new KryptonPage
+                {
+                    Text = "Job Information",
+                    TextTitle = "Job Information",
+                    UniqueName = "Job Information",
+                    ImageSmall = Resources.instrument_16x16,
+                    ImageMedium = Resources.instrument_24x24,
+                    ImageLarge = Resources.instrument,
+                    Tag = SurveyPage.IsSurveyPage
+                };
+                InfoCtl ctl = new InfoCtl()
+                {
+                    Dock = DockStyle.Fill
+                };
+                ctl.StatusUpdate += ChangeStatusText;
+
+                basicInfoPage.Controls.Add(ctl);
+
+                if (!dockingManager.ContainsPage(basicInfoPage))
+                {
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { basicInfoPage });
+                }
+                else
+                {
+                    dockingManager.RemovePage(basicInfoPage, true);
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { basicInfoPage });
+                }
+            }
+        }
+
+        private void btnOpenViewPanel_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_View.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage viewPanel = new KryptonPage
+                {
+                    Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                    TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                    UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info",
+                    ImageSmall = Resources.view_16x16,
+                    ImageLarge = Resources.view
+                };
+                viewPanel.Controls.Add(new ViewPanel()
+                {
+                    Dock = DockStyle.Fill
+                });
+
+                if (!dockingManager.ContainsPage(viewPanel))
+                {
+                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+                }
+                else
+                {
+                    dockingManager.RemovePage(viewPanel, true);
+                    dockingManager.AddDockspace("Control", DockingEdge.Right, new KryptonPage[] { viewPanel });
+                }
+            }
+        }
+
+        private void btnSaveSurvey_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Save.ToDescriptionString()));
+                    return;
+                }
+
+                JobHandler.Instance.SaveJob();
+            }
+        }
+
+        private void btnCloseCurrentJob_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_Close.ToDescriptionString()));
+                    return;
+                }
+
+                CloseJob();
+            }
+        }
+
+        private void CloseJob()
+        {
+            if (JobHandler.Instance.CloseJob())
+            {
+                ChangeTitleText("[NO JOB OPEN]");
+
+                //remove pages that are considered survey pages
+                dockingManager.RemovePages(dockingManager.Pages.Where(p => (p.Tag != null && ((SurveyPage)p.Tag) == SurveyPage.IsSurveyPage)).ToArray(), true);
+
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (!Application.OpenForms[i].Equals(this))
+                        Application.OpenForms[i].Close();
+                }
+
+                ChangeStatusText(this, new StatusArgs("Ready"));
+            }
+        }
+
+        private void btnAddNewFile_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AttachFile.ToDescriptionString()));
+                    return;
+                }
+
+                UploadFile uploadForm = new UploadFile(JobHandler.Instance.CurrentJob.Files);
+                uploadForm.FileUploadDone += AddFiles;
+                uploadForm.StatusUpdate += ChangeStatusText;
+                uploadForm.Show();
+            }
+        }
+
+        private void AddFiles(object sender, EventArgs e)
+        {
+            if (e is FileUploadDoneArgs args)
+            {
+                JobHandler.Instance.CurrentJob.SetFiles(args.Files);
+                JobHandler.Instance.UpdateSavePending(true);
+            }
+        }
+
+        private void btnViewAllFiles_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_ViewFiles.ToDescriptionString()));
+                    return;
+                }
+
+                FileBrowser fb = new FileBrowser(JobHandler.Instance.CurrentJob.Files);
+                fb.StatusUpdate += ChangeStatusText;
+                fb.Show();
+            }
+        }
+
+        private void btnBillingPortal_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BillingPortal.ToDescriptionString()));
+                    return;
+                }
+
+                BillingPortal page = new BillingPortal()
+                {
+                    UniqueName = "Billing Portal",
+                    ImageSmall = Resources.billing_portal_16x16,
+                    ImageLarge = Resources.billing_portal,
+                    Tag = SurveyPage.IsSurveyPage
+                };
+
+                if (!dockingManager.ContainsPage(page.UniqueName))
+                {
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { page });
+                }
+
+                try
+                {
+                    dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(page.UniqueName);
+                }
+                catch (Exception)
+                {
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select billing portal page. Perhaps it is a floating window and not docked?");
+                    RuntimeVars.Instance.LogFile.WriteToFile();
+                }
+            }
+        }
+
+        private void btnCurrentBill_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
+                    return;
+                }
+
+                string fileName = $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                PDF.CreateDocument(fileName,
+                        $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                        $"Billing Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+
+                ChangeStatusText(this, new StatusArgs($"Generating billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateBillingReport(JobHandler.Instance.CurrentJob);
+
+                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                Process.Start(path);
+                ChangeStatusText(this, new StatusArgs($"Billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+            }
+        }
+
+        private void btnGenerateFullReport_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FullReport.ToDescriptionString()));
+                    return;
+                }
+
+                string fileName = $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                PDF.CreateDocument(fileName,
+                    $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                    $"Full Survey Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+
+                ChangeStatusText(this, new StatusArgs($"Generating full report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateFullReport(JobHandler.Instance.CurrentJob);
+
+                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                Process.Start(path);
+                ChangeStatusText(this, new StatusArgs($"Full report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+            }
+        }
+
+        private void btnFileDetailReport_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_FileReport.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.CurrentJob.HasFiles)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.FileReport_NoFiles.ToDescriptionString()));
+                    return;
+                }
+
+                string fileName = $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                PDF.CreateDocument(fileName,
+                    $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                    $"File Detail Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+
+                ChangeStatusText(this, new StatusArgs($"Generating detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                PDF.GenerateFileReport(JobHandler.Instance.CurrentJob);
+
+                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                Process.Start(path);
+                ChangeStatusText(this, new StatusArgs($"Detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+            }
+        }
+
+        private void btnAssocClient_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddClient.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+                {
+                    new DBMap("name", "Name"),
+                    new DBMap("phone_number", "Phone #"),
+                    new DBMap("email_address", "Email"),
+                    new DBMap("fax_number", "Fax #")
+                };
+
+                AdvancedFilter filter = new AdvancedFilter("Client", columns, "Find Clients");
+                filter.FilterDone += SelectClient;
+                filter.Show();
+            }
+        }
+
+        private void SelectClient(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.Client);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateClient;
+                resultsForm.Show();
+            }
+        }
+
+        private void AssociateClient(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                JobHandler.Instance.CurrentJob.Client = args.Object as Client;
+                JobHandler.Instance.UpdateSavePending(true);
+            }
+        }
+
+        private void btnAssocRealtor_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("phone_number", "Phone #"),
+                new DBMap("email_address", "Email"),
+                new DBMap("fax_number", "Fax #")
+            };
+
+                AdvancedFilter filter = new AdvancedFilter("Realtor", columns, "Find Realtors");
+                filter.FilterDone += SelectRealtor;
+                filter.Show();
+            }
+        }
+
+        private void SelectRealtor(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.Realtor);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateRealtor;
+                resultsForm.Show();
+            }
+        }
+
+        private void AssociateRealtor(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                JobHandler.Instance.CurrentJob.Realtor = args.Object as Realtor;
+                JobHandler.Instance.UpdateSavePending(true);
+            }
+        }
+
+        private void btnAssocTitleComp_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddTitleCompany.ToDescriptionString()));
+                    return;
+                }
+
+                ArrayList columns = new ArrayList
+            {
+                new DBMap("name", "Name"),
+                new DBMap("associate_name", "Associate's Name"),
+                new DBMap("associate_email", "Associate's Email"),
+                new DBMap("office_number", "Office #")
+            };
+
+                AdvancedFilter filter = new AdvancedFilter("TitleCompany", columns, "Find Title Companies");
+                filter.FilterDone += SelectTitleCompany;
+                filter.Show();
+            }
+        }
+
+        private void SelectTitleCompany(object sender, EventArgs e)
+        {
+            if (e is FilterDoneEventArgs args)
+            {
+                SearchResults resultsForm = new SearchResults(args.Results, EntityTypes.TitleCompany);
+                resultsForm.StatusUpdate += ChangeStatusText;
+                resultsForm.ObjectSelected += AssociateTitleCompany;
+                resultsForm.Show();
+            }
+        }
+
+        private void AssociateTitleCompany(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                JobHandler.Instance.CurrentJob.TitleCompany = args.Object as TitleCompany;
+                JobHandler.Instance.UpdateSavePending(true);
+            }
+        }
+
+        private void btnNotes_Click(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddNotes.ToDescriptionString()));
+                    return;
+                }
+
+                KryptonPage notesPanel = new KryptonPage
+                {
+                    Text = "Notes",
+                    TextTitle = "Notes",
+                    UniqueName = "Notes",
+                    ImageSmall = Resources.notes_16x16,
+                    ImageLarge = Resources.notes,
+                    Tag = SurveyPage.IsSurveyPage
+                };
+
+                NotesCtl ctl = new NotesCtl(JobHandler.Instance.CurrentJob.Notes);
+                ctl.StatusUpdate += ChangeStatusText;
+                ctl.Dock = DockStyle.Fill;
+                notesPanel.Controls.Add(ctl);
+
+                if (!dockingManager.ContainsPage(notesPanel))
+                {
+                    dockingManager.AddToWorkspace("MainWorkspace", new KryptonPage[] { notesPanel });
+                }
+
+                try
+                {
+                    dockingManager.FindDockingWorkspace("MainWorkspace").SelectPage(notesPanel.UniqueName);
+                }
+                catch (Exception)
+                {
+                    RuntimeVars.Instance.LogFile.AddEntry("Exception when trying to select notes page. Perhaps it is a floating window and not docked?");
+                    RuntimeVars.Instance.LogFile.WriteToFile();
+                }
+            }
+        }
+
+        private void btnManageLicense_Click(object sender, EventArgs e)
+        {
+            activationDialog.LicensingComplete += SetLicenseStatus;
+            activationDialog.ShowDialog();
+        }
+
+        private void SetLicenseStatus(object sender, EventArgs e)
+        {
+            if (e is LicensingEventArgs args)
+            {
+                RuntimeVars.Instance.License = args.License;
+                licensed = RuntimeVars.Instance.IsLicensed;
+
+                if (!licensed)
+                {
+                    if (JobHandler.Instance.IsJobOpen)
+                        CloseJob();
+                    ChangeStatusText(this, new StatusArgs("Running an Unlicensed Copy! Most features are disabled. Please activate!"));
+                }
+
+                UpdateTitleText();
+            }
+        }
+        #endregion
+
+        private void dockingManager_DockableWorkspaceCellAdding(object sender, DockableWorkspaceCellEventArgs e)
+        {
+            KryptonWorkspaceCell currentCell = e.CellControl;
+
+            currentCell.Bar.ItemAlignment = RelativePositionAlign.Center;
+            currentCell.Bar.TabStyle = TabStyle.OneNote;
+            currentCell.Bar.TabBorderStyle = TabBorderStyle.OneNote;
+            currentCell.NavigatorMode = NavigatorMode.BarTabGroup;
+            currentCell.Group.GroupBackStyle = PaletteBackStyle.ControlClient;
+            currentCell.Group.GroupBorderStyle = PaletteBorderStyle.ControlClient;
+        }
+
+        private ExitChoice ShowCloseDialog(bool hideExitOptions = false)
+        {
+            if (JobHandler.Instance.IsJobOpen)
+            {
+                if (JobHandler.Instance.SavePending)
+                {
+                    return CMessageBox.ShowExitDialog("There are unsaved changes to the currently opened survey job. What would you like to do?", "Save Changes", MessageBoxButtons.OKCancel, Resources.warning_64x64, hideExitOptions);
+                }
+                else
+                {
+                    return ExitChoice.ExitNoSave;
+                }
+            }
+            else
+            {
+                return ExitChoice.ExitNoSave;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RuntimeVars.Instance.LogFile.WriteToFile();
+            if (e.CloseReason == CloseReason.WindowsShutDown || e.CloseReason == CloseReason.TaskManagerClosing)
+                Application.Exit();
+
+            if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.FormOwnerClosing)
+            {
+                ExitChoice choice = ShowCloseDialog();
+                if (choice == ExitChoice.SaveAndExit)
+                {
+                    JobHandler.Instance.SaveJob();
+                    JobHandler.Instance.CloseJob();
+                    Application.Exit();
+                }
+                else if (choice == ExitChoice.ExitNoSave)
+                {
+                    Application.Exit();
+                }
+                else if (choice == ExitChoice.SaveOnly)
+                {
+                    JobHandler.Instance.SaveJob();
+                    e.Cancel = true;
+                }
+                else if (choice == ExitChoice.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            progressBar.Visible = true;
+            checkConnectionBGWorker.RunWorkerAsync();
+            ChangeStatusText(this, new StatusArgs("Checking existing database connection. Please wait..."));
+        }
+
+        int code;
+        private void checkConnectionBGWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //Initialize the database and connection string
+            Database.Initialize();
+
+            //Check database connection
+            code = Database.CheckConnection();
+        }
+
+        private void checkConnectionBGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void checkConnectionBGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (code != -1)
+            {
+                ChangeTitleText("", "", "", "");
+                ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+            }
+            else
+            {
+                ChangeTitleText($"\\\\{Database.Server}\\{Database.DB}");
+                ChangeStatusText(this, new StatusArgs("Ready"));
+            }
+
+            progressBar.Visible = false;
+
+            //Set main form
+            RuntimeVars.Instance.MainForm = this;
+
+            if (RuntimeVars.Instance.DatabaseConnected)
+            {
+                RuntimeVars.Instance.Counties = Database.GetCounties();
+            }
+        }
+
+        private void btnOpenHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://surveymanager.readthedocs.io/en/latest/");
+        }
     }
 }

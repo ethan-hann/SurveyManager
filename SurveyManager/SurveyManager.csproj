@@ -12,6 +12,28 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Z:\SurveyManagerPublish\v1.0.0.0\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\csm-nas01\SurveyManagerApplication\</InstallUrl>
+    <UpdateUrl>\\csm-nas01\SurveyManagerApplication\</UpdateUrl>
+    <SupportUrl>https://surveymanager.readthedocs.io</SupportUrl>
+    <ProductName>Survey Manager</ProductName>
+    <PublisherName>Ethan Hann</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +59,34 @@
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B95E796643151813BE3A69FACE6A369F31D468D0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SurveyManager_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -78,12 +128,51 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.23\lib\net48\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SeriousBit.Ellipter">
+      <HintPath>Z:\Drive\UI Libraries\DLLS\SeriousBit.Ellipter.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=3.2.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Common, Version=2.2.16.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=4.1.9.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.DataExport.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=2.1.0.19040, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=7.2.8.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=4.1.10.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.2.17.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=4.2.7.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=4.2.6.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=9.2.16.19040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="Standard.Licensing, Version=1.1.5.0, Culture=neutral, PublicKeyToken=9f81b18f6db6aea5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Standard.Licensing.1.1.5\lib\net45\Standard.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -123,23 +212,27 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.23\lib\net48\Ubiety.Dns.Core.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\Ubiety.Dns.Core.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.23\lib\net48\Zstandard.Net.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="backend\Database.cs" />
     <Compile Include="backend\Queries.cs" />
     <Compile Include="backend\wrappers\Address.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\BillingItem.cs" />
     <Compile Include="backend\wrappers\CFile.cs" />
     <Compile Include="backend\wrappers\Client.cs" />
     <Compile Include="backend\wrappers\County.cs" />
     <Compile Include="backend\wrappers\DatabaseWrapper.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\Rate.cs" />
     <Compile Include="backend\wrappers\Realtor.cs" />
-    <Compile Include="backend\wrappers\Survey.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\Billing.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\LineItem.cs" />
+    <Compile Include="backend\wrappers\SurveyJob\Survey.cs" />
     <Compile Include="backend\wrappers\TitleCompany.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.cs">
       <SubType>Form</SubType>
@@ -165,14 +258,38 @@
     <Compile Include="forms\dialogs\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\ActivationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\ActivationDlg.Designer.cs">
+      <DependentUpon>ActivationDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\AdvancedFilter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\dialogs\AdvancedFilter.Designer.cs">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\EllipterActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\EllipterActivation.Designer.cs">
+      <DependentUpon>EllipterActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.Designer.cs">
+      <DependentUpon>AppSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\CMessageBox.cs" />
     <Compile Include="forms\dialogs\CRichMsgBox.cs" />
+    <Compile Include="forms\dialogs\SaveMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SaveMessageForm.Designer.cs">
+      <DependentUpon>SaveMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\dialogs\MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,19 +302,118 @@
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.Designer.cs">
+      <DependentUpon>CurrencySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.Designer.cs">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.Designer.cs">
+      <DependentUpon>EmailSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.Designer.cs">
+      <DependentUpon>FileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\ISettingsControl.cs" />
+    <Compile Include="forms\fileMenu\FileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\fileMenu\FileBrowser.Designer.cs">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\pages\BillingPortal.cs" />
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
+    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.Designer.cs">
+      <DependentUpon>NewEntryDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\description\DescriptionCtl.Designer.cs">
+      <DependentUpon>DescriptionCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\IInfoControl.cs" />
+    <Compile Include="forms\surveyMenu\InfoCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\InfoCtl.Designer.cs">
+      <DependentUpon>InfoCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.Designer.cs">
+      <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\LineItemsCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\LineItemsCtl.Designer.cs">
+      <DependentUpon>LineItemsCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.Designer.cs">
+      <DependentUpon>LocationCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\NotesCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
+      <DependentUpon>NotesCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SearchResults.Designer.cs">
+      <DependentUpon>SearchResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.Designer.cs">
+      <DependentUpon>SubdivisionCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\SurveySearchResults.Designer.cs">
+      <DependentUpon>SurveySearchResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\surveyMenu\UploadFile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\surveyMenu\UploadFile.Designer.cs">
       <DependentUpon>UploadFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\UploadFileCtl.cs">
+    <Compile Include="forms\surveyMenu\ViewPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\UploadFileCtl.Designer.cs">
-      <DependentUpon>UploadFileCtl.cs</DependentUpon>
+    <Compile Include="forms\surveyMenu\ViewPanel.Designer.cs">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.Designer.cs">
+      <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\userControls\NewObject.cs">
       <SubType>UserControl</SubType>
@@ -222,6 +438,7 @@
     <Compile Include="utility\CEventArgs.cs" />
     <Compile Include="utility\CFileTypeConverter.cs" />
     <Compile Include="utility\CountyTypeConverter.cs" />
+    <Compile Include="utility\CSVHelper.cs" />
     <Compile Include="utility\CustomControls\CPropertyGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -230,6 +447,7 @@
     </Compile>
     <Compile Include="utility\DataGridViewSetup.cs" />
     <Compile Include="utility\DBMap.cs" />
+    <Compile Include="utility\DesktopShortcut.cs" />
     <Compile Include="utility\DragDropInfo.cs" />
     <Compile Include="utility\Enums.cs" />
     <Compile Include="utility\Filtering\ANDFilter.cs" />
@@ -238,9 +456,21 @@
     <Compile Include="utility\Filtering\IFilter.cs" />
     <Compile Include="utility\Filtering\ORFilter.cs" />
     <Compile Include="utility\Filtering\TextSearchFilter.cs" />
+    <Compile Include="utility\Icons\IconListManager.cs" />
+    <Compile Include="utility\Icons\IconReader.cs" />
+    <Compile Include="utility\JobHandler.cs" />
+    <Compile Include="utility\Licensing\InvalidProductKeyValidationFailure.cs" />
+    <Compile Include="utility\Licensing\LicenseEngine.cs" />
+    <Compile Include="utility\Licensing\LicenseInfo.cs" />
+    <Compile Include="utility\Licensing\LicenseType.cs" />
+    <Compile Include="utility\Logging\LogFile.cs" />
+    <Compile Include="utility\Mail.cs" />
+    <Compile Include="utility\Pair.cs" />
+    <Compile Include="utility\PdfGeneration\PDF.cs" />
     <Compile Include="utility\ProcessDataTable.cs" />
     <Compile Include="utility\RuntimeVars.cs" />
     <Compile Include="utility\Utility.cs" />
+    <Compile Include="utility\Validator.cs" />
     <EmbeddedResource Include="forms\databaseMenu\DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,17 +483,83 @@
     <EmbeddedResource Include="forms\dialogs\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\ActivationDlg.resx">
+      <DependentUpon>ActivationDlg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\dialogs\AdvancedFilter.resx">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\EllipterActivation.resx">
+      <DependentUpon>EllipterActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\RichMessageForm.resx">
+      <DependentUpon>RichMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\AppSettings.resx">
+      <DependentUpon>AppSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SaveMessageForm.resx">
+      <DependentUpon>SaveMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\CurrencySettings.resx">
+      <DependentUpon>CurrencySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\EmailSettings.resx">
+      <DependentUpon>EmailSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dialogs\SettingsDialog\FileSettings.resx">
+      <DependentUpon>FileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\fileMenu\FileBrowser.resx">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\billingPortal\NewEntryDlg.resx">
+      <DependentUpon>NewEntryDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\description\DescriptionCtl.resx">
+      <DependentUpon>DescriptionCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\InfoCtl.resx">
+      <DependentUpon>InfoCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\jobInfo\JobInfoCtl.resx">
+      <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\LineItemsCtl.resx">
+      <DependentUpon>LineItemsCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\locationInfo\LocationCtl.resx">
+      <DependentUpon>LocationCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
+      <DependentUpon>NotesCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\SearchResults.resx">
+      <DependentUpon>SearchResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.resx">
+      <DependentUpon>SubdivisionCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">
+      <DependentUpon>SurveySearchResults.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\UploadFile.resx">
       <DependentUpon>UploadFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\UploadFileCtl.resx">
-      <DependentUpon>UploadFileCtl.cs</DependentUpon>
+    <EmbeddedResource Include="forms\surveyMenu\ViewPanel.resx">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\surveyMenu\billingPortal\BillingPortalCtl.resx">
+      <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\userControls\NewObject.resx">
       <DependentUpon>NewObject.cs</DependentUpon>
@@ -282,6 +578,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -291,6 +588,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SurveyManager_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -305,6 +603,7 @@
     <None Include="Resources\realtor.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\surman_public.key" />
     <None Include="Resources\surveying.png" />
   </ItemGroup>
   <ItemGroup>
@@ -362,7 +661,7 @@
     <None Include="Resources\view.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="forms\fileMenu\" />
+    <None Include="Resources\folder_16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\db_connection.png" />
@@ -522,6 +821,164 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_rates_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_rates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_files_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\current_bill_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\current_bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\license_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_line_items_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_line_items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billing_portal_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Getting Started &mdash; SurveyManager 1.0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introducing the User Interface" href="user_interface.html" />
+    <link rel="prev" title="Survey Manager Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SurveyManager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#licenseing">Licenseing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connecting-to-a-database">Connecting to a Database</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-survey-workflow">Basic Survey Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-survey-job">Creating the Survey Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-the-job-s-information">Editing the Job’s Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-client-object">Adding a Client Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-the-job-persistently">Saving the Job Persistently</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_interface.html">Introducing the User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_help.html">Need More Help?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SurveyManager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>This section will show you how to quickly get started with creating and editing survey jobs. It will also show you how to setup the initial environment needed for using the application.</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="licenseing">
+<h3>Licenseing<a class="headerlink" href="#licenseing" title="Permalink to this headline">¶</a></h3>
+<p>The first launch of the application may look something like this:</p>
+<a class="reference internal image-reference" href="_images/first_launch_unlicensed.png"><img alt="First launch of application, unlicensed" src="_images/first_launch_unlicensed.png" style="width: 800px;" /></a>
+<p>If the product is unlicensed, click the <code class="docutils literal notranslate"><span class="pre">Activation</span></code> button on the main ribbon and enter your product key. If the product key was valid, the application will be licensed and
+all features will be enabled. If you don’t have a product key, you can click <code class="docutils literal notranslate"><span class="pre">Purchase</span> <span class="pre">New</span> <span class="pre">Product</span> <span class="pre">Key</span></code> from the activation window.</p>
+<p>After successfully licensing the application, the title bar will change to denote the product’s current status:</p>
+<a class="reference internal image-reference" href="_images/after_licensed_title_bar.png"><img alt="After licensing of application" src="_images/after_licensed_title_bar.png" style="width: 800px;" /></a>
+<p>At any time, you can click the <code class="docutils literal notranslate"><span class="pre">Activation</span></code> button to change/update your product key, view information about your license, and purchase a new product key.</p>
+<a class="reference internal image-reference" href="_images/activation_window.png"><img alt="Activation window for Survey Manager" src="_images/activation_window.png" style="width: 300px;" /></a>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Once a product key has been entered, you can not “unlicense” the application. Even if you enter an invalid product key afterwards, Survey Manager will continue to use the
+last valid product key that was entered. In this way, you are protected from accidently unlicenseing the application.</p>
+</div>
+</div>
+<div class="section" id="connecting-to-a-database">
+<h3>Connecting to a Database<a class="headerlink" href="#connecting-to-a-database" title="Permalink to this headline">¶</a></h3>
+<p>Before data can be entered and manipulated, you must connect to a valid Database on a server. To connect, navigate to the Database tab on the ribbon and click the <code class="docutils literal notranslate"><span class="pre">Connection</span> <span class="pre">Settings</span></code> button:</p>
+<a class="reference internal image-reference" href="_images/database_connection_button.png"><img alt="Database connection button" src="_images/database_connection_button.png" style="width: 400px;" /></a>
+<p>This will open a dialog where you can enter the connection details. Simply fill out the required fields to connect to a database.</p>
+<ul class="simple">
+<li><p>Server: <em>the IP or hostname of the database server</em></p></li>
+<li><p>Port: <em>the port number the server listens on for database connections</em></p></li>
+<li><p>Database: <em>the name of the database to connect to</em></p></li>
+<li><p>Username: <em>a database user who has permissions to select, insert, update, and delete from the database</em></p></li>
+<li><p>Password: <em>the password of the database user</em></p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/database_connection_window.png"><img alt="The database connection dialog" src="_images/database_connection_window.png" style="width: 400px;" /></a>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only one of these connection dialogs can be opened at a time. If you try to open another one, a pop-up will show giving you an error.</p>
+</div>
+<p>Once all required fields are entered, click the <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Connection</span></code> button in the title bar of the dialog to begin connecting to the database. If no error occured, a new button will appear, <code class="docutils literal notranslate"><span class="pre">Finished</span></code> that will close the dialog and save the connection.</p>
+<a class="reference internal image-reference" href="_images/database_connection_success.png"><img alt="Database connection window after successful connection" src="_images/database_connection_success.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="basic-survey-workflow">
+<h2>Basic Survey Workflow<a class="headerlink" href="#basic-survey-workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-the-survey-job">
+<h3>Creating the Survey Job<a class="headerlink" href="#creating-the-survey-job" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">New</span></code> button under the <em>Jobs</em> group and enter a job number. This job number is plain text and can be anything you wish. The default prefix is the last two digits of the current year followed by a dash symbol.
+This can be changed in the application’s settings.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Two different jobs cannot have the same job number.</p>
+</div>
+</li>
+<li><p>After the job has been created, the title bar (at the top) and the status bar (at the bottom) of the window will change to correspond to the current state of the application:</p>
+<a class="reference internal image-reference" href="_images/after_new_job_title.png"><img alt="After creation of a new job" src="_images/after_new_job_title.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/after_new_job_status.png"><img alt="After creation of a new job" src="_images/after_new_job_status.png" style="width: 800px;" /></a>
+</li>
+</ol>
+</div>
+<div class="section" id="editing-the-job-s-information">
+<h3>Editing the Job’s Information<a class="headerlink" href="#editing-the-job-s-information" title="Permalink to this headline">¶</a></h3>
+<p>Once a job has been created, the next step is to edit it’s basic information and add objects to it. Click the <code class="docutils literal notranslate"><span class="pre">Basic</span> <span class="pre">Information</span></code> button under the <em>Current Job</em> group. This will open the
+page that allows you to edit some basic information about the currently opened survey job. Simply fill out all of the fields that are required (marked with a red *). The currently selected
+field is highlighted yellow to make navigation easier.</p>
+<a class="reference internal image-reference" href="_images/essential_info.png"><img alt="Essential information page for survey job" src="_images/essential_info.png" style="width: 800px;" /></a>
+<p>While most of the fields here are self-explanatory, the last sub-page (Location) has some extra functionality. If a Client object has been set (and the survey’s location is the same as the Client’s address), you
+can click the <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">to</span> <span class="pre">Client's</span> <span class="pre">Address</span></code> button to automatically set the location for the job.</p>
+<p>However, if no Client has been set, you will get a pop-up letting you know you must set a Client before you can use that feature. As of now, all addresses and locations are assumed to be in the state of Texas and only
+four Counties are supported: <em>Chambers</em>, <em>Liberty</em>, <em>Harris</em>, and <em>Galveston</em>.</p>
+<a class="reference internal image-reference" href="_images/location_info.png"><img alt="Location information" src="_images/location_info.png" style="width: 800px;" /></a>
+<p>Once all information is entered, simply click the <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Update</span></code> button on the top right of the Basic Information page. This will save the changes locally and update the open job.
+Then, you can close the Basic Information page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you close the page before clicking the <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Update</span></code> button, none of the changes will be saved to the open job. All of the changes will have to be re-entered and saved correctly.</p>
+</div>
+<a class="reference internal image-reference" href="_images/save_and_update_button.png"><img alt="Save and update button on basic information page" src="_images/save_and_update_button.png" style="width: 300px;" /></a>
+<p>At any time, you can open a view panel that will show an overview of the currently opened job. This panel opens to the right side and only one panel can be opened at a time. To open it, click
+the <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">View</span> <span class="pre">Panel</span></code> button under the Current Job group on the Survey Ribbon tab. This view does not update in real time, however it can be refreshed by clicking the <code class="docutils literal notranslate"><span class="pre">Refresh</span></code> button on the panel. Certain fields
+in the View Panel are also editable and provide a quick shortcut to edit some attributes of the job.</p>
+<a class="reference internal image-reference" href="_images/open_view_panel_1.png"><img alt="Open view panel" src="_images/open_view_panel_1.png" style="width: 800px;" /></a>
+</div>
+<div class="section" id="adding-a-client-object">
+<h3>Adding a Client Object<a class="headerlink" href="#adding-a-client-object" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have a job with basic information, the next step is to add a client object. This can be accomplished a few different ways. See the reference page for <a class="reference internal" href="allAboutClients.html#creating-a-client"><span class="std std-ref">creating a new client</span></a> for more information about client objects.
+For now, we will add the client using the <strong>Client</strong> command on the <strong>Survey</strong> ribbon. To do this, click the drop-down arrow underneath the <code class="docutils literal notranslate"><span class="pre">Client</span></code> button in the Associated Objects group and then click the <code class="docutils literal notranslate"><span class="pre">New...</span></code> button.</p>
+<a class="reference internal image-reference" href="_images/add_client_button.png"><img alt="Add new client to open job" src="_images/add_client_button.png" style="width: 300px;" /></a>
+<p>This will open a new page which allows you to edit the Client’s details. It is on this page where you can enter the client’s address, name, email address, fax number, and phone number. To
+enter the address, expand the <em>Address</em> group and enter the required fields.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can press the &lt;TAB&gt; key on your keyboard to navigate to the next field. This works most places where you enter data.</p>
+</div>
+<a class="reference internal image-reference" href="_images/new_client_page.png"><img alt="New client page" src="_images/new_client_page.png" style="width: 800px;" /></a>
+<p>After entering all of the required data, simply click the <code class="docutils literal notranslate"><span class="pre">Save</span></code> button on the page. The client will be inserted into the database and you will be asked if you wish to associate the new client
+with the currently opened job. In this case, click <code class="docutils literal notranslate"><span class="pre">Yes</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you choose no, you can still add the client to the job by searching for it. You don’t have to recreate the object again.</p>
+</div>
+<p>You will also be asked if you wish to create another client. If you want to create multiple clients in a row, you can click <code class="docutils literal notranslate"><span class="pre">Yes</span></code>; otherwise, click <code class="docutils literal notranslate"><span class="pre">No</span></code> to close the page.</p>
+<a class="reference internal image-reference" href="_images/new_client_page_after_data_entry.png"><img alt="New client page after data entry" src="_images/new_client_page_after_data_entry.png" style="width: 800px;" /></a>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This workflow is the same for the other associated objects. The pages are laid out similar to the New Client page only requiring different data depending on the object being created.
+See <a class="reference internal" href="allAboutClients.html"><span class="doc">Working With Objects</span></a> for more information about objects and how to manipulate them.</p>
+</div>
+<p>After you have created the client and associated it with the job, if you have the View Panel open, you can click <code class="docutils literal notranslate"><span class="pre">Refresh</span></code> to see the new client there.</p>
+<p>We now have the absolute minimum amount of information needed to save the job to the database!</p>
+</div>
+<div class="section" id="saving-the-job-persistently">
+<h3>Saving the Job Persistently<a class="headerlink" href="#saving-the-job-persistently" title="Permalink to this headline">¶</a></h3>
+<p>All of the changes so far (with the exeception of the Client) have not touched the database. The survey job is still in your local computer’s memory. In order to make the survey persistant and allow others to open it,
+you must click the <code class="docutils literal notranslate"><span class="pre">Save</span></code> button under the Current Job group on the Survey ribbon. This will insert the survey (if it’s a new job) or update (if it’s an opened one) in the database. After doing this,
+the status bar will update to let you know the status of the saving. <strong>It is worth noting that by default, there is an auto-save feature turned on that will save the opened job every 15 minutes. This is configurable in the Settings.</strong></p>
+<a class="reference internal image-reference" href="_images/save_button.png"><img alt="Save button for current job." src="_images/save_button.png" style="width: 300px;" /></a>
+<p>This concludes the quickstart guide. There are many more functions available to you to manipulate surveys. You can add files, billing information, time entries, notes, a realtor, and a title company to the survey job.
+You can also run reports on the data in the database. These reports show an overview of the survey job in an easy to print PDF format. Continue through this documentation to learn more about all of these features!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="user_interface.html" class="btn btn-neutral float-right" title="Introducing the User Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Survey Manager Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Ethan Hann.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

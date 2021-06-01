@@ -207,16 +207,16 @@ namespace SurveyManager.forms.databaseMenu
             // progressBarLoad
             // 
             this.progressBarLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarLoad.Location = new System.Drawing.Point(144, 7);
+            this.progressBarLoad.Location = new System.Drawing.Point(195, 7);
             this.progressBarLoad.Name = "progressBarLoad";
-            this.progressBarLoad.Size = new System.Drawing.Size(235, 19);
+            this.progressBarLoad.Size = new System.Drawing.Size(184, 19);
             this.progressBarLoad.TabIndex = 1;
             // 
             // tlpStatus
             // 
             this.tlpStatus.ColumnCount = 2;
-            this.tlpStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.911F));
-            this.tlpStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.089F));
+            this.tlpStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.52356F));
+            this.tlpStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.47644F));
             this.tlpStatus.Controls.Add(this.txtStatus, 0, 0);
             this.tlpStatus.Controls.Add(this.progressBarLoad, 1, 0);
             this.tlpStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -232,7 +232,7 @@ namespace SurveyManager.forms.databaseMenu
             this.txtStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStatus.Location = new System.Drawing.Point(3, 7);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(135, 20);
+            this.txtStatus.Size = new System.Drawing.Size(186, 20);
             this.txtStatus.TabIndex = 2;
             this.txtStatus.Values.Text = "<Status>";
             // 

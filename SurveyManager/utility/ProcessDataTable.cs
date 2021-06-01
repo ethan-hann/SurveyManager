@@ -1,10 +1,7 @@
 ﻿using SurveyManager.backend.wrappers;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
@@ -45,6 +42,7 @@ namespace SurveyManager.utility
             {
                 ID = (int)row["realtor_id"],
                 Name = (string)row["name"],
+                CompanyName = (string)row["company_name"],
                 Email = (string)row["email"],
                 PhoneNumber = (string)row["phone_number"],
                 FaxNumber = (string)row["fax_number"]
@@ -90,11 +88,30 @@ namespace SurveyManager.utility
                 FileIds = (string)row["file_ids"],
                 RealtorID = row.IsNull("realtor_id") ? 0 : (int)row["realtor_id"],
                 TitleCompanyID = row.IsNull("title_company_id") ? 0 : (int)row["title_company_id"],
-                LocationID = (int)row["address_id"]
+                LocationID = (int)row["address_id"],
+                NotesString = (string)row["notes"],
+                SurveyName = (string)row["survey_name"]
             };
+
+            s.BillingObject.BillingIds = (string)row["billing_ids"];
+            s.BillingObject.LineItemIds = (string)row["line_item_ids"];
 
             s.SetObjects();
             return s;
+        }
+
+        public static Rate GetRate(DataRow row)
+        {
+            Rate r = new Rate
+            {
+                ID = (int)row["rate_id"],
+                Description = (string)row["description"],
+                Amount = (decimal)row["amount"],
+                TimeUnit = (TimeUnit)Enum.Parse(typeof(TimeUnit), (string)row["time_unit"]),
+                TaxIncluded = (bool)row["include_tax"]
+            };
+
+            return r;
         }
     }
 }

@@ -5,6 +5,7 @@ using SurveyManager.utility;
 using SurveyManager.utility.Filtering;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
@@ -29,6 +30,13 @@ namespace SurveyManager.forms.dialogs
         private readonly string optionalClause;
         private string query;
         private readonly string tableName;
+        private List<SqlOperators> originalOperators = new List<SqlOperators>((SqlOperators[])Enum.GetValues(typeof(SqlOperators)));
+        private List<SqlOperators> likeOperatorOnly = new List<SqlOperators>
+        {
+            SqlOperators.Like
+        };
+
+        private int selectedOperationIndex = 0;
 
         /// <summary>
         /// Occurs whenever the filtering is done.
@@ -71,6 +79,7 @@ namespace SurveyManager.forms.dialogs
             orContextItem.Click += AddOrOperation;
 
             cmbColumns.DataSource = columns; //Column options for the user to select
+            cmbChoices.DataSource = originalOperators;
 
             cmbColumns.SelectedIndex = 0;
             cmbChoices.SelectedIndex = 0;
@@ -84,39 +93,39 @@ namespace SurveyManager.forms.dialogs
         private void AddFilterToGrid(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)cmbChoices.SelectedItem);
+            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
             {
-                dgvFilters.Rows.Add(column, operation, value, BooleanOps.AND);
+                dgvFilters.Rows.Add(column, operation.ToString(), value, BooleanOps.AND);
             }
             else
             {
-                dgvFilters.Rows.Add(column, operation, value);
+                dgvFilters.Rows.Add(column, operation.ToString(), value);
             }
         }
 
         private void AddAndOperation(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)cmbChoices.SelectedItem);
+            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
             {
-                dgvFilters.Rows.Add(column, operation, value, BooleanOps.AND);
+                dgvFilters.Rows.Add(column, operation.ToString(), value, BooleanOps.AND);
             }
             else
             {
-                dgvFilters.Rows.Add(column, operation, value);
+                dgvFilters.Rows.Add(column, operation.ToString(), value);
             }
         }
 
         private void AddOrOperation(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)cmbChoices.SelectedItem);
+            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
@@ -131,12 +140,24 @@ namespace SurveyManager.forms.dialogs
 
         private string BuildFilter()
         {
+            string fieldName = ((DBMap)dgvFilters.Rows[0].Cells["columnDBColumn"].Value).InternalField;
+            string searchText = (string)dgvFilters.Rows[0].Cells["columnCriteria"].Value;
+            SqlOperators operation = (SqlOperators)dgvFilters.Rows[0].Cells["columnOption"].Value;
+
+            if (tableName.Equals("Survey"))
+            {
+                if (fieldName.Equals("county_id"))
+                {
+                    int countyID = RuntimeVars.Instance.Counties.Find(c => c.CountyName.ToLower().Contains(searchText.ToLower())).ID;
+                    searchText = countyID.ToString();
+                    operation = SqlOperators.Like;
+                }
+            }
+
             //Always add the first row to the filter list.
             filters = new ArrayList
             {
-                new Filter(((DBMap)dgvFilters.Rows[0].Cells["columnDBColumn"].Value).InternalField,
-                                       (SqlOperators)dgvFilters.Rows[0].Cells["columnOption"].Value,
-                                       (string)dgvFilters.Rows[0].Cells["columnCriteria"].Value)
+                new Filter(fieldName, operation, searchText)
             };
 
             //If there are more rows, continue adding filters that build on each other.
@@ -146,9 +167,21 @@ namespace SurveyManager.forms.dialogs
                 {
                     DataGridViewRow currentRow = dgvFilters.Rows[i];
 
-                    Filter f = new Filter(((DBMap)currentRow.Cells["columnDBColumn"].Value).InternalField,
-                                            (SqlOperators)currentRow.Cells["columnOption"].Value,
-                                            (string)currentRow.Cells["columnCriteria"].Value);
+                    fieldName = ((DBMap)currentRow.Cells["columnDBColumn"].Value).InternalField;
+                    searchText = (string)currentRow.Cells["columnCriteria"].Value;
+                    operation = (SqlOperators)currentRow.Cells["columnOption"].Value;
+
+                    if (tableName.Equals("Survey"))
+                    {
+                        if (fieldName.Equals("county_id"))
+                        {
+                            int countyID = RuntimeVars.Instance.Counties.Find(c => c.CountyName.ToLower().Contains(searchText.ToLower())).ID;
+                            searchText = countyID.ToString();
+                            operation = SqlOperators.Like;
+                        }
+                    }
+
+                    Filter f = new Filter(fieldName, operation, searchText);
 
                     BooleanOps op = (BooleanOps)currentRow.Cells["columnBoolean"].Value;
                     switch (op)
@@ -169,11 +202,23 @@ namespace SurveyManager.forms.dialogs
 
         private string BuildFilterNoRows()
         {
+            string fieldName = ((DBMap)cmbColumns.SelectedItem).InternalField;
+            string searchText = txtSearch1.Text;
+            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString(), false);
+
+            if (tableName.Equals("Survey"))
+            {
+                if (fieldName.Equals("county_id"))
+                {
+                    int countyID = RuntimeVars.Instance.Counties.Find(c => c.CountyName.ToLower().Contains(searchText.ToLower())).ID;
+                    searchText = countyID.ToString();
+                    operation = SqlOperators.Like;
+                }
+            }
+
             filters = new ArrayList
             {
-                new Filter(((DBMap)cmbColumns.SelectedItem).InternalField,
-                                       (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)cmbChoices.SelectedItem, false),
-                                       txtSearch1.Text)
+                new Filter(fieldName, operation, searchText)
             };
 
             return ((IFilter)filters[0]).FilterString;
@@ -186,6 +231,7 @@ namespace SurveyManager.forms.dialogs
             {
                 whereClause = BuildFilter();
             }
+
             //Otherwise, just use the values in the combo boxes and text box to build the filter
             else if (!txtSearch1.Text.Equals(string.Empty) || !txtSearch1.Text.Equals("Search Text Here..."))
             {
@@ -243,6 +289,23 @@ namespace SurveyManager.forms.dialogs
         {
             Help.ShowHelp(this, "file://..\\Help\\index.chm", HelpNavigator.Topic, "advanced_filter.html");
             hlpevent.Handled = true;
+        }
+
+        private void cmbColumns_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbChoices.DataSource != likeOperatorOnly)
+                selectedOperationIndex = cmbChoices.SelectedIndex;
+
+            if (((DBMap)cmbColumns.SelectedItem).InternalField.Equals("county_id"))
+            {
+                cmbChoices.DataSource = likeOperatorOnly;
+                cmbChoices.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbChoices.DataSource = originalOperators;
+                cmbChoices.SelectedIndex = selectedOperationIndex;
+            }
         }
     }
 }

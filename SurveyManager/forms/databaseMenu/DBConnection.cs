@@ -2,14 +2,8 @@
 using SurveyManager.backend;
 using SurveyManager.utility;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 
@@ -51,6 +45,7 @@ namespace SurveyManager.forms.databaseMenu
             {
                 progressBarLoad.Value = 0;
                 tlpStatus.Visible = true;
+                progressBarLoad.Visible = true;
                 bgWorker.RunWorkerAsync();
             }
         }
@@ -120,11 +115,13 @@ namespace SurveyManager.forms.databaseMenu
                 progressBarLoad.Visible = false;
                 txtStatus.Text = "Connected!";
                 btnFinish.Visible = true;
+                RuntimeVars.Instance.DatabaseConnected = true;
             }
             else
             {
                 txtStatus.Text = "Not Connected to Server!";
                 btnFinish.Visible = false;
+                RuntimeVars.Instance.DatabaseConnected = false;
             }
         }
 

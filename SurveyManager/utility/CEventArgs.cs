@@ -1,10 +1,9 @@
 ﻿using SurveyManager.backend.wrappers;
+using SurveyManager.utility.Licensing;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.utility
 {
@@ -32,6 +31,18 @@ namespace SurveyManager.utility
             }
         }
 
+        public class DBObjectArgs : EventArgs
+        {
+            public DatabaseWrapper Object { get; internal set; }
+            public EntityTypes Type { get; internal set; }
+
+            public DBObjectArgs(DatabaseWrapper obj, EntityTypes type)
+            {
+                Object = obj;
+                Type = type;
+            }
+        }
+
         public class StatusArgs : EventArgs
         {
             public string StatusString { get; internal set; }
@@ -39,6 +50,16 @@ namespace SurveyManager.utility
             public StatusArgs(string status)
             {
                 StatusString = status;
+            }
+        }
+
+        public class SurveyOpenedEventArgs : EventArgs
+        {
+            public Survey Survey { get; internal set; }
+
+            public SurveyOpenedEventArgs(Survey survey)
+            {
+                Survey = survey;
             }
         }
 
@@ -59,6 +80,30 @@ namespace SurveyManager.utility
             public FileUploadDoneArgs(List<CFile> files)
             {
                 Files = files;
+            }
+        }
+
+        public class LicensingEventArgs : EventArgs
+        {
+            public CloseReasons CloseReason { get; internal set; }
+            public LicenseInfo License { get; internal set; }
+
+            public LicensingEventArgs(LicenseInfo info, CloseReasons closeReason)
+            {
+                License = info;
+                CloseReason = closeReason;
+            }
+        }
+
+        public class ObjectCreatedEventArgs : EventArgs
+        {
+            public object DataValue { get; internal set; }
+            public object Tag { get; internal set; }
+
+            public ObjectCreatedEventArgs(object dataValue, object tag)
+            {
+                DataValue = dataValue;
+                Tag = tag;
             }
         }
     }
