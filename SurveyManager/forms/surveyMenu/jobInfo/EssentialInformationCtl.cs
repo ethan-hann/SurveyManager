@@ -19,7 +19,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             InitializeComponent();
         }
 
-        private void JobInfoCtl_Load(object sender, EventArgs e)
+        private void EssentialInformationCtl_Load(object sender, EventArgs e)
         {
             txtJobNumber.Text = JobHandler.Instance.CurrentJob.JobNumber;
             txtAbstract.Text = JobHandler.Instance.CurrentJob.AbstractNumber;

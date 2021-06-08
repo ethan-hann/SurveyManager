@@ -72,7 +72,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
@@ -81,7 +81,7 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>SurveyManager_1_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>SurveyManager_StrongKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -153,8 +153,8 @@
     <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.15.8.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.15.8\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.17.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.17.3\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid">
       <HintPath>Z:\Drive\UI Libraries\DLLS\JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.dll</HintPath>
@@ -168,15 +168,15 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="SeriousBit.Ellipter">
-      <HintPath>Z:\Drive\UI Libraries\DLLS\SeriousBit.Ellipter.dll</HintPath>
+      <HintPath>C:\Users\TLITAdmin\SynologyDrive - Home\UI Libraries\DLLS\SeriousBit.Ellipter.dll</HintPath>
     </Reference>
     <Reference Include="Spire.Barcode, Version=3.2.0.14040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\FreeSpire.Office.4.3.1\lib\net40\Spire.Barcode.dll</HintPath>
@@ -252,11 +252,11 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\Ubiety.Dns.Core.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\Ubiety.Dns.Core.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.24\lib\net48\Zstandard.Net.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net48\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -401,11 +401,11 @@
     <Compile Include="forms\surveyMenu\InfoCtl.Designer.cs">
       <DependentUpon>InfoCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.cs">
+    <Compile Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\jobInfo\JobInfoCtl.Designer.cs">
-      <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    <Compile Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.Designer.cs">
+      <DependentUpon>EssentialInformationCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\LineItemsCtl.cs">
       <SubType>UserControl</SubType>
@@ -577,8 +577,8 @@
     <EmbeddedResource Include="forms\surveyMenu\InfoCtl.resx">
       <DependentUpon>InfoCtl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\jobInfo\JobInfoCtl.resx">
-      <DependentUpon>JobInfoCtl.cs</DependentUpon>
+    <EmbeddedResource Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.resx">
+      <DependentUpon>EssentialInformationCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\LineItemsCtl.resx">
       <DependentUpon>LineItemsCtl.cs</DependentUpon>
@@ -634,7 +634,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SurveyManager_1_TemporaryKey.pfx" />
     <None Include="SurveyManager_StrongKey.pfx" />
     <None Include="SurveyManager_TemporaryKey.pfx" />
   </ItemGroup>

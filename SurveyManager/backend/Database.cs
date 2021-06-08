@@ -92,10 +92,9 @@ namespace SurveyManager.backend
 
         /// <summary>
         /// Creates a database connection on the given connection string and tests that it can be opened and closed.
-        /// If it can't, the error code returned by <see cref="MySqlException"/> is returned by this function.
         /// </summary>
-        /// <returns></returns>
-        public static int CheckConnection()
+        /// <returns>An <see cref="MySqlException"/> if an error occured while checking connection; <c>null</c> otherwise.</returns>
+        public static MySqlException CheckConnection()
         {
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -109,14 +108,27 @@ namespace SurveyManager.backend
                 {
                     RuntimeVars.Instance.DatabaseConnected = false;
                     RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to connect to SQL database: {ex.Message}");
-                    return ex.Number;
+                    return ex;
                 }
                 finally
                 {
                     con.Dispose();
                 }
-                return -1;
+                return null;
             }
+        }
+
+        /// <summary>
+        /// Get a MySql Error Message based on the supplied <paramref name="exception"/>. The exception can be retrieved from the <see cref="CheckConnection"/> method.
+        /// <para>If the exception is <c>null</c>, meaning no error occured, this method simply returns <c>NO ERROR</c> as a string.</para>
+        /// </summary>
+        /// <param name="exception">The exception to get the message of.</param>
+        /// <returns>A string containing the error message.</returns>
+        public static string GetErrorMessage(MySqlException exception = null)
+        {
+            if (exception == null)
+                return "NO ERROR";
+            return exception.Message;
         }
 
         /// <summary>

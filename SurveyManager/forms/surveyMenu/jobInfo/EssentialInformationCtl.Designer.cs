@@ -185,7 +185,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             this.Controls.Add(this.flowLayoutPanel5);
             this.Name = "EssentialInformationCtl";
             this.Size = new System.Drawing.Size(331, 146);
-            this.Load += new System.EventHandler(this.JobInfoCtl_Load);
+            this.Load += new System.EventHandler(this.EssentialInformationCtl_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

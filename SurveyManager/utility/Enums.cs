@@ -407,8 +407,6 @@ namespace SurveyManager.utility
             NoJob_AddTime,
             [Description("No job is currently opened. There is nothing to add billing items to.")]
             NoJob_AddBillingItems,
-            [Description("No job is currently opened. There is nothing to generate a billing report for")]
-            NoJob_OpenBill,
             [Description("No job is currently opened. There is nothing to add notes to.")]
             NoJob_AddNotes,
             [Description("No job is currently opened. There is no billing portal to open.")]
@@ -417,12 +415,20 @@ namespace SurveyManager.utility
             NoDatabaseConnection,
             [Description("Survey Manager - Database: {0}\t\t{1}\t\t{2}")]
             TitleText,
+            [Description("No job is currently opened. There is nothing to generate billing report of.")]
+            NoJob_BillingReport,
             [Description("No job is currently opened. There is nothing to generate a report for.")]
             NoJob_FullReport,
             [Description("No job is currently opened. There is nothing to generate a full file report for.")]
             NoJob_FileReport,
             [Description("There are no files associated with this job; nothing to generate a full file report for.")]
-            FileReport_NoFiles
+            FileReport_NoFiles,
+            [Description("Could not generate billing report. The current survey job is missing required information.")]
+            BillingReport_MissingInfo,
+            [Description("Could not generate full report. The current survey job is missing required information.")]
+            FullReport_MissingInfo,
+            [Description("Could not generate file report. The current survey job is missing required information.")]
+            FileReport_MissingInfo
         }
 
         /// <summary>

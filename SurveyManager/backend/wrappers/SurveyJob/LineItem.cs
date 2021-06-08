@@ -40,7 +40,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// Any applicable tax to add to the total for this line item.
         /// </summary>
         [Category("Details")]
-        [Description($"The tax rate that should be applied to the amount. Default is modified in application settings.")]
+        [Description("The tax rate that should be applied to the amount. Default is modified in application settings.")]
         [Browsable(true)]
         [DisplayName("Tax Rate")]
         public double TaxRate { get; set; } = Settings.Default.DefaultTaxRate;

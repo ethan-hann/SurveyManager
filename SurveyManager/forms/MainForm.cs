@@ -4,6 +4,7 @@ using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
 using ComponentFactory.Krypton.Workspace;
 using Microsoft.Win32;
+using MySql.Data.MySqlClient;
 using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.forms.databaseMenu;
@@ -27,6 +28,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
@@ -1308,7 +1310,13 @@ namespace SurveyManager
 
                     if (result == DialogResult.Yes)
                     {
-                        RefreshJob();
+                        if (Database.DoesSurveyExist(JobHandler.Instance.CurrentJob.JobNumber))
+                            RefreshJob();
+                        else
+                        {
+                            CMessageBox.Show("The current job does not exist in the database yet! There is nothing to refresh from.", "No Job", MessageBoxButtons.OK, Resources.error_64x64);
+                            return;
+                        }
                     }
                 }
                 else
@@ -1482,21 +1490,37 @@ namespace SurveyManager
 
                 if (!JobHandler.Instance.IsJobOpen)
                 {
-                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_OpenBill.ToDescriptionString()));
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_BillingReport.ToDescriptionString()));
                     return;
                 }
 
-                string fileName = $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
-                PDF.CreateDocument(fileName,
-                        $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                        $"Billing Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                if (JobHandler.Instance.CurrentJob.IsValidSurvey)
+                {
+                    string fileName = $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                    PDF.CreateDocument(fileName,
+                            $"BillingReport-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                            $"Billing Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
-                PDF.GenerateBillingReport(JobHandler.Instance.CurrentJob);
+                    ChangeStatusText(this, new StatusArgs($"Generating billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                    PDF.GenerateBillingReport(JobHandler.Instance.CurrentJob);
 
-                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
-                Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                    string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                    Process.Start(path);
+                    ChangeStatusText(this, new StatusArgs($"Billing report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                }
+                else
+                {
+                    StringBuilder bldr = new StringBuilder();
+                    bldr.Append("You are missing the following components of the survey job:\n");
+                    foreach (string missing in JobHandler.Instance.MissingInformation)
+                    {
+                        bldr.Append($"-: {missing}\n");
+                    }
+
+                    CRichMsgBox.Show("There is not enough information for this job to generate a report!", "Error", bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
+                    ChangeStatusText(this, new StatusArgs(StatusText.BillingReport_MissingInfo.ToDescriptionString()));
+                    return;
+                }
             }
         }
 
@@ -1516,17 +1540,33 @@ namespace SurveyManager
                     return;
                 }
 
-                string fileName = $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
-                PDF.CreateDocument(fileName,
-                    $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                    $"Full Survey Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                if (JobHandler.Instance.CurrentJob.IsValidSurvey)
+                {
+                    string fileName = $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                    PDF.CreateDocument(fileName,
+                        $"Full Survey Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                        $"Full Survey Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating full report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
-                PDF.GenerateFullReport(JobHandler.Instance.CurrentJob);
+                    ChangeStatusText(this, new StatusArgs($"Generating full report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                    PDF.GenerateFullReport(JobHandler.Instance.CurrentJob);
 
-                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
-                Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Full report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                    string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                    Process.Start(path);
+                    ChangeStatusText(this, new StatusArgs($"Full report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                }
+                else
+                {
+                    StringBuilder bldr = new StringBuilder();
+                    bldr.Append("You are missing the following components of the survey job:\n");
+                    foreach (string missing in JobHandler.Instance.MissingInformation)
+                    {
+                        bldr.Append($"-: {missing}\n");
+                    }
+
+                    CRichMsgBox.Show("There is not enough information for this job to generate a report!", "Error", bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
+                    ChangeStatusText(this, new StatusArgs(StatusText.FullReport_MissingInfo.ToDescriptionString()));
+                    return;
+                }
             }
         }
 
@@ -1552,17 +1592,33 @@ namespace SurveyManager
                     return;
                 }
 
-                string fileName = $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
-                PDF.CreateDocument(fileName,
-                    $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
-                    $"File Detail Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
+                if (JobHandler.Instance.CurrentJob.IsValidSurvey)
+                {
+                    string fileName = $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}";
+                    PDF.CreateDocument(fileName,
+                        $"File Detail Report-{JobHandler.Instance.CurrentJob.JobNumber}-{DateTime.Now.Date:MM-dd-yyyy}", "CSM", "",
+                        $"File Detail Report - Job#: {JobHandler.Instance.CurrentJob.JobNumber}", Fonts.Courier, true, true, false, 12);
 
-                ChangeStatusText(this, new StatusArgs($"Generating detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
-                PDF.GenerateFileReport(JobHandler.Instance.CurrentJob);
+                    ChangeStatusText(this, new StatusArgs($"Generating detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber}. Please wait..."));
+                    PDF.GenerateFileReport(JobHandler.Instance.CurrentJob);
 
-                string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
-                Process.Start(path);
-                ChangeStatusText(this, new StatusArgs($"Detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                    string path = Path.Combine(Settings.Default.DefaultSavePath, $"{fileName}.pdf");
+                    Process.Start(path);
+                    ChangeStatusText(this, new StatusArgs($"Detailed file report for Job# {JobHandler.Instance.CurrentJob.JobNumber} created successfully!"));
+                }
+                else
+                {
+                    StringBuilder bldr = new StringBuilder();
+                    bldr.Append("You are missing the following components of the survey job:\n");
+                    foreach (string missing in JobHandler.Instance.MissingInformation)
+                    {
+                        bldr.Append($"-: {missing}\n");
+                    }
+
+                    CRichMsgBox.Show("There is not enough information for this job to generate a report!", "Error", bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
+                    ChangeStatusText(this, new StatusArgs(StatusText.FileReport_MissingInfo.ToDescriptionString()));
+                    return;
+                }
             }
         }
 
@@ -1876,7 +1932,7 @@ namespace SurveyManager
             ChangeStatusText(this, new StatusArgs("Checking existing database connection. Please wait..."));
         }
 
-        int code;
+        MySqlException code;
         private void checkConnectionBGWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             //Initialize the database and connection string
@@ -1893,7 +1949,7 @@ namespace SurveyManager
 
         private void checkConnectionBGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (code != -1)
+            if (!Database.GetErrorMessage(code).Equals("NO ERROR"))
             {
                 ChangeTitleText("", "", "", "");
                 ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
