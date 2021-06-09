@@ -1,5 +1,5 @@
 ﻿
-namespace SurveyManager.forms.surveyMenu.jobInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     partial class EssentialInformationCtl
     {
@@ -41,12 +41,29 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtNumOfAcres = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.descHeaderGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.txtDescription = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblDescCharCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup.Panel)).BeginInit();
+            this.descHeaderGroup.Panel.SuspendLayout();
+            this.descHeaderGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            this.kryptonPanel2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
+            this.kryptonPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonLabel1
@@ -102,7 +119,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             // 
             this.flowLayoutPanel2.Controls.Add(this.kryptonLabel2);
             this.flowLayoutPanel2.Controls.Add(this.txtAbstract);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 37);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 35);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(315, 28);
             this.flowLayoutPanel2.TabIndex = 1;
@@ -121,7 +138,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             // 
             this.txtSurvey.Location = new System.Drawing.Point(69, 3);
             this.txtSurvey.Name = "txtSurvey";
-            this.txtSurvey.Size = new System.Drawing.Size(246, 23);
+            this.txtSurvey.Size = new System.Drawing.Size(230, 23);
             this.txtSurvey.TabIndex = 1;
             this.txtSurvey.Enter += new System.EventHandler(this.textBox_Enter);
             this.txtSurvey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
@@ -131,9 +148,9 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             // 
             this.flowLayoutPanel3.Controls.Add(this.kryptonLabel3);
             this.flowLayoutPanel3.Controls.Add(this.txtSurvey);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 71);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 69);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(318, 28);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(315, 28);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // kryptonLabel4
@@ -161,30 +178,103 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             // 
             this.flowLayoutPanel4.Controls.Add(this.kryptonLabel4);
             this.flowLayoutPanel4.Controls.Add(this.txtNumOfAcres);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 105);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 103);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(315, 28);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(315, 32);
             this.flowLayoutPanel4.TabIndex = 3;
             // 
-            // flowLayoutPanel5
+            // descHeaderGroup
             // 
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel1);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(321, 133);
-            this.flowLayoutPanel5.TabIndex = 0;
+            this.descHeaderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.descHeaderGroup.Location = new System.Drawing.Point(0, 0);
+            this.descHeaderGroup.Name = "descHeaderGroup";
+            // 
+            // descHeaderGroup.Panel
+            // 
+            this.descHeaderGroup.Panel.Controls.Add(this.kryptonPanel2);
+            this.descHeaderGroup.Size = new System.Drawing.Size(759, 316);
+            this.descHeaderGroup.StateCommon.HeaderPrimary.Content.LongText.Color2 = System.Drawing.Color.Red;
+            this.descHeaderGroup.TabIndex = 1;
+            this.descHeaderGroup.ValuesPrimary.Heading = "Description *";
+            this.descHeaderGroup.ValuesPrimary.Image = null;
+            this.descHeaderGroup.ValuesSecondary.Heading = "Enter the description for this survey job.";
+            // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.descHeaderGroup);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 285);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(759, 316);
+            this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Controls.Add(this.txtDescription);
+            this.kryptonPanel2.Controls.Add(this.statusStrip1);
+            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(757, 263);
+            this.kryptonPanel2.TabIndex = 2;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDescription.Location = new System.Drawing.Point(0, 0);
+            this.txtDescription.MaxLength = 6000;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(757, 241);
+            this.txtDescription.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.TabIndex = 0;
+            this.txtDescription.Text = "";
+            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JobModified);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.lblDescCharCount});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 241);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(757, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 0;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(627, 17);
+            this.toolStripStatusLabel1.Spring = true;
+            // 
+            // lblDescCharCount
+            // 
+            this.lblDescCharCount.Name = "lblDescCharCount";
+            this.lblDescCharCount.Size = new System.Drawing.Size(115, 17);
+            this.lblDescCharCount.Text = "Char Count: 0 / 6000";
+            // 
+            // kryptonPanel3
+            // 
+            this.kryptonPanel3.Controls.Add(this.flowLayoutPanel4);
+            this.kryptonPanel3.Controls.Add(this.flowLayoutPanel3);
+            this.kryptonPanel3.Controls.Add(this.flowLayoutPanel2);
+            this.kryptonPanel3.Controls.Add(this.flowLayoutPanel1);
+            this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel3.Name = "kryptonPanel3";
+            this.kryptonPanel3.Size = new System.Drawing.Size(759, 285);
+            this.kryptonPanel3.TabIndex = 3;
             // 
             // EssentialInformationCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.flowLayoutPanel5);
+            this.Controls.Add(this.kryptonPanel3);
+            this.Controls.Add(this.kryptonPanel1);
             this.Name = "EssentialInformationCtl";
-            this.Size = new System.Drawing.Size(331, 146);
+            this.Size = new System.Drawing.Size(759, 601);
             this.Load += new System.EventHandler(this.EssentialInformationCtl_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -194,7 +284,19 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup.Panel)).EndInit();
+            this.descHeaderGroup.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup)).EndInit();
+            this.descHeaderGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            this.kryptonPanel2.ResumeLayout(false);
+            this.kryptonPanel2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
+            this.kryptonPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,6 +315,13 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNumOfAcres;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup descHeaderGroup;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtDescription;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lblDescCharCount;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
     }
 }

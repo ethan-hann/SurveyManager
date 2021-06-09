@@ -1,20 +1,16 @@
-﻿using SurveyManager.forms.surveyMenu.description;
-using SurveyManager.forms.surveyMenu.jobInfo;
-using SurveyManager.forms.surveyMenu.locationInfo;
-using SurveyManager.forms.surveyMenu.subdivisionInfo;
-using SurveyManager.utility;
+﻿using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 
-namespace SurveyManager.forms.surveyMenu
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class InfoCtl : UserControl
     {
         private readonly List<UserControl> infoControls = new List<UserControl>
         {
-            new EssentialInformationCtl(), new DescriptionCtl(), new SubdivisionCtl(), new LocationCtl()
+            new EssentialInformationCtl(), new SubdivisionCtl(), new LocationCtl()
         };
 
         public EventHandler StatusUpdate;

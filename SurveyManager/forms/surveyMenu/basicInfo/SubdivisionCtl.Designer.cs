@@ -1,5 +1,5 @@
 ﻿
-namespace SurveyManager.forms.surveyMenu.subdivisionInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     partial class SubdivisionCtl
     {

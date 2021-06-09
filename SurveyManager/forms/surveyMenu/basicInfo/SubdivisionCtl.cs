@@ -4,7 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SurveyManager.forms.surveyMenu.subdivisionInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class SubdivisionCtl : UserControl, IInfoControl
     {

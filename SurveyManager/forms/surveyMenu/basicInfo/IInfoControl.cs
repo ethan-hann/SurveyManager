@@ -1,4 +1,4 @@
-﻿namespace SurveyManager.forms.surveyMenu
+﻿namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public interface IInfoControl
     {

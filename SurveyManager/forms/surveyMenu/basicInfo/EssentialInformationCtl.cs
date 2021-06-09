@@ -8,7 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SurveyManager.forms.surveyMenu.jobInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class EssentialInformationCtl : UserControl, IInfoControl
     {
@@ -30,6 +30,10 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             txtAbstract.ReadOnly = JobHandler.Instance.ReadOnly;
             txtSurvey.ReadOnly = JobHandler.Instance.ReadOnly;
             txtNumOfAcres.ReadOnly = JobHandler.Instance.ReadOnly;
+
+            txtDescription.Text = JobHandler.Instance.CurrentJob.Description;
+            txtDescription.ReadOnly = JobHandler.Instance.ReadOnly;
+
 
             IsEdited = true;
         }
@@ -54,6 +58,11 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             {
                 JobHandler.Instance.CurrentJob.Acres = acres;
             }
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+            lblDescCharCount.Text = "Char Count: " + txtDescription.Text.Count() + " / 6000";
         }
 
         private void txtNumOfAcres_KeyPress(object sender, KeyPressEventArgs e)
@@ -119,10 +128,18 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
                     return false;
                 }
 
+                if (txtDescription.Text.Length <= 0 || txtDescription.Text.ToLower().Equals("n/a"))
+                {
+                    CMessageBox.Show("The job's description cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return false;
+                }
+
                 JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
                 JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
                 JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
                 JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
+                JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
+
                 return true;
             } catch (NullReferenceException e)
             {

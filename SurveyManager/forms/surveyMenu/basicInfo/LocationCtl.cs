@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SurveyManager.forms.surveyMenu.locationInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class LocationCtl : UserControl, IInfoControl
     {

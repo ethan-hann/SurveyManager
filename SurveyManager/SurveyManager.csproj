@@ -388,23 +388,17 @@
     <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.Designer.cs">
       <DependentUpon>NewEntryDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\description\DescriptionCtl.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\IInfoControl.cs" />
+    <Compile Include="forms\surveyMenu\basicInfo\InfoCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\description\DescriptionCtl.Designer.cs">
-      <DependentUpon>DescriptionCtl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\surveyMenu\IInfoControl.cs" />
-    <Compile Include="forms\surveyMenu\InfoCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="forms\surveyMenu\InfoCtl.Designer.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\InfoCtl.Designer.cs">
       <DependentUpon>InfoCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.Designer.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.Designer.cs">
       <DependentUpon>EssentialInformationCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\LineItemsCtl.cs">
@@ -413,10 +407,10 @@
     <Compile Include="forms\surveyMenu\LineItemsCtl.Designer.cs">
       <DependentUpon>LineItemsCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\LocationCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\locationInfo\LocationCtl.Designer.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\LocationCtl.Designer.cs">
       <DependentUpon>LocationCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\NotesCtl.cs">
@@ -431,10 +425,10 @@
     <Compile Include="forms\surveyMenu\SearchResults.Designer.cs">
       <DependentUpon>SearchResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\SubdivisionCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.Designer.cs">
+    <Compile Include="forms\surveyMenu\basicInfo\SubdivisionCtl.Designer.cs">
       <DependentUpon>SubdivisionCtl.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
@@ -571,19 +565,16 @@
     <EmbeddedResource Include="forms\surveyMenu\billingPortal\NewEntryDlg.resx">
       <DependentUpon>NewEntryDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\description\DescriptionCtl.resx">
-      <DependentUpon>DescriptionCtl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\InfoCtl.resx">
+    <EmbeddedResource Include="forms\surveyMenu\basicInfo\InfoCtl.resx">
       <DependentUpon>InfoCtl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\jobInfo\EssentialInformationCtl.resx">
+    <EmbeddedResource Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.resx">
       <DependentUpon>EssentialInformationCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\LineItemsCtl.resx">
       <DependentUpon>LineItemsCtl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\locationInfo\LocationCtl.resx">
+    <EmbeddedResource Include="forms\surveyMenu\basicInfo\LocationCtl.resx">
       <DependentUpon>LocationCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\NotesCtl.resx">
@@ -592,7 +583,7 @@
     <EmbeddedResource Include="forms\surveyMenu\SearchResults.resx">
       <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\surveyMenu\subdivisionInfo\SubdivisionCtl.resx">
+    <EmbeddedResource Include="forms\surveyMenu\basicInfo\SubdivisionCtl.resx">
       <DependentUpon>SubdivisionCtl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\surveyMenu\SurveySearchResults.resx">

@@ -12,6 +12,7 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.forms.fileMenu;
 using SurveyManager.forms.pages;
 using SurveyManager.forms.surveyMenu;
+using SurveyManager.forms.surveyMenu.basicInfo;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using SurveyManager.utility.Licensing;
@@ -1283,7 +1284,23 @@ namespace SurveyManager
                     return;
                 }
 
-                JobHandler.Instance.SaveJob();
+                if (JobHandler.Instance.CurrentJob.IsValidSurvey)
+                {
+                    JobHandler.Instance.SaveJob();
+                }
+                else
+                {
+                    StringBuilder bldr = new StringBuilder();
+                    bldr.Append("You are missing the following components of the survey job. Please add them and try saving again:\n");
+                    foreach (string missing in JobHandler.Instance.MissingInformation)
+                    {
+                        bldr.Append($"-: {missing}\n");
+                    }
+
+                    CRichMsgBox.Show("There is not enough information for this job to save to the database!", "Error", bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
+                    ChangeStatusText(this, new StatusArgs(StatusText.Survey_MissingInfo.ToDescriptionString()));
+                    return;
+                }
             }
         }
 

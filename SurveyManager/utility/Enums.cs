@@ -428,7 +428,9 @@ namespace SurveyManager.utility
             [Description("Could not generate full report. The current survey job is missing required information.")]
             FullReport_MissingInfo,
             [Description("Could not generate file report. The current survey job is missing required information.")]
-            FileReport_MissingInfo
+            FileReport_MissingInfo,
+            [Description("Could not save job to the database. The current survey job is missing required information.")]
+            Survey_MissingInfo
         }
 
         /// <summary>

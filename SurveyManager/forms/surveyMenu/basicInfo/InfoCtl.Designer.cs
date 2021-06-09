@@ -1,5 +1,5 @@
 ﻿
-namespace SurveyManager.forms.surveyMenu
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     partial class InfoCtl
     {
@@ -51,7 +51,6 @@ namespace SurveyManager.forms.surveyMenu
             this.lbCategories.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCategories.Items.AddRange(new object[] {
             "Essential Information",
-            "Description",
             "Subdivision",
             "Location"});
             this.lbCategories.Location = new System.Drawing.Point(0, 0);
