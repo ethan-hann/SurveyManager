@@ -40,27 +40,33 @@ namespace SurveyManager.utility.Licensing
             DateTime purchaseDate = manager.GetDate(productKey);
             string info = manager.GetInfo(productKey);
 
-            info = info.Trim();
-            string[] tokens = info.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-            if (tokens.Length == 4)
+            try
             {
-                string customerName = tokens[0].Trim();
-                string customerEmail = tokens[1].Trim();
-                string numOfUses = tokens[2].Trim();
-                string expirationDate = tokens[3].Trim();
-                DateTime expDate = DateTime.Parse(expirationDate);
-                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(),
-                    purchaseDate, expDate, LicenseType.Trial);
-            }
-            else if (tokens.Length == 3)
-            {
-                string customerName = tokens[0].Trim();
-                string customerEmail = tokens[1].Trim();
-                string numOfUses = tokens[2].Trim();
-                return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), purchaseDate,
-                    LicenseType.FullLicense);
-            }
-            else
+                info = info.Trim();
+                string[] tokens = info.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                if (tokens.Length == 4)
+                {
+                    string customerName = tokens[0].Trim();
+                    string customerEmail = tokens[1].Trim();
+                    string numOfUses = tokens[2].Trim();
+                    string expirationDate = tokens[3].Trim();
+                    DateTime expDate = DateTime.Parse(expirationDate);
+                    return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(),
+                        purchaseDate, expDate, LicenseType.Trial);
+                }
+                else if (tokens.Length == 3)
+                {
+                    string customerName = tokens[0].Trim();
+                    string customerEmail = tokens[1].Trim();
+                    string numOfUses = tokens[2].Trim();
+                    return new LicenseInfo(customerName, customerEmail, numOfUses, serialID.ToString(), purchaseDate,
+                        LicenseType.FullLicense);
+                }
+                else
+                {
+                    return LicenseInfo.CreateUnlicensedInfo();
+                }
+            } catch (Exception)
             {
                 return LicenseInfo.CreateUnlicensedInfo();
             }

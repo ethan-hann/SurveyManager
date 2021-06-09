@@ -93,35 +93,42 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
 
         public bool SaveInfo()
         {
-            if (txtJobNumber.Text.Length == 0)
+            try
             {
-                CMessageBox.Show("The job number cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                if (txtJobNumber.Text.Length <= 0 || txtJobNumber.Text.ToLower().Equals("n/a"))
+                {
+                    CMessageBox.Show("The job number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return false;
+                }
+
+                if (txtAbstract.Text.Length <= 0 || txtAbstract.Text.ToLower().Equals("n/a"))
+                {
+                    CMessageBox.Show("The abstract cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return false;
+                }
+
+                if (txtSurvey.Text.Length <= 0 || txtSurvey.Text.ToLower().Equals("n/a"))
+                {
+                    CMessageBox.Show("The survey name cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return false;
+                }
+
+                if (txtNumOfAcres.Text.Length <= 0 || txtNumOfAcres.Text.ToLower().Equals("n/a"))
+                {
+                    CMessageBox.Show("The number of acres cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                    return false;
+                }
+
+                JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
+                JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
+                JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
+                JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
+                return true;
+            } catch (NullReferenceException e)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception has occured: {e.Message}. The stacktrace is: {e.StackTrace}");
                 return false;
             }
-
-            if (txtAbstract.Text.Length == 0)
-            {
-                CMessageBox.Show("The abstract cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            if (txtSurvey.Text.Length == 0)
-            {
-                CMessageBox.Show("The survey name cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            if (txtNumOfAcres.Text.Length == 0)
-            {
-                CMessageBox.Show("The number of acres cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
-            JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
-            JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
-            JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
-            return true;
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)

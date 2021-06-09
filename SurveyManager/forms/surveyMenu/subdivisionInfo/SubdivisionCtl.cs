@@ -15,16 +15,6 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             InitializeComponent();
         }
 
-        public bool SaveInfo()
-        {
-            JobHandler.Instance.CurrentJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
-            JobHandler.Instance.CurrentJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
-            JobHandler.Instance.CurrentJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
-            JobHandler.Instance.CurrentJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
-
-            return true;
-        }
-
         private void SubdivisionCtl_Load(object sender, EventArgs e)
         {
             txtName.Text = JobHandler.Instance.CurrentJob.Subdivision;
@@ -52,6 +42,16 @@ namespace SurveyManager.forms.surveyMenu.subdivisionInfo
             KryptonTextBox txtBox = sender as KryptonTextBox;
             if (txtBox != null)
                 txtBox.StateCommon.Back.Color1 = Color.White;
+        }
+
+        public bool SaveInfo()
+        {
+            JobHandler.Instance.CurrentJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
+            JobHandler.Instance.CurrentJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
+            JobHandler.Instance.CurrentJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
+            JobHandler.Instance.CurrentJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
+
+            return true;
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)

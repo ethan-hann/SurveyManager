@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace SurveyManager.forms.surveyMenu.description
 {
+    //TODO: Combine this description control into the Essential Information control. It makes more sense to put it there instead.
     public partial class DescriptionCtl : UserControl, IInfoControl
     {
         public bool IsEdited { get; set; }
@@ -14,18 +15,6 @@ namespace SurveyManager.forms.surveyMenu.description
         public DescriptionCtl()
         {
             InitializeComponent();
-        }
-
-        public bool SaveInfo()
-        {
-            if (txtDescription.Text.Length == 0)
-            {
-                CMessageBox.Show("The job's description cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
-            return true;
         }
 
         private void DescriptionCtl_Load(object sender, EventArgs e)
@@ -40,6 +29,18 @@ namespace SurveyManager.forms.surveyMenu.description
         private void txtDescription_TextChanged(object sender, EventArgs e)
         {
             lblDescCharCount.Text = "Char Count: " + txtDescription.Text.Count() + " / 6000";
+        }
+
+        public bool SaveInfo()
+        {
+            if (txtDescription.Text.Length == 0)
+            {
+                CMessageBox.Show("The job's description cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
+            return true;
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)

@@ -341,7 +341,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
-        /// <para>A valid survey has a valid client, county, job number, and description, abstract number, and location at the very least.</para>
+        /// <para>A valid survey has a valid client, survey name, county, job number, and description, abstract number, and location at the very least.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidSurvey
@@ -349,7 +349,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             get
             {
                 return (Client != null && Client.IsValidClient) && County != null && !JobNumber.ToLower().Equals("n/a") &&
-                    !Description.ToLower().Equals("n/a") && !AbstractNumber.ToLower().Equals("n/a") && Location != null && !Location.IsEmpty;
+                    !Description.ToLower().Equals("n/a") && !AbstractNumber.ToLower().Equals("n/a") && Location != null && 
+                    !Location.IsEmpty && !SurveyName.ToLower().Equals("n/a") && SurveyName.Length > 0;
             }
         }
 

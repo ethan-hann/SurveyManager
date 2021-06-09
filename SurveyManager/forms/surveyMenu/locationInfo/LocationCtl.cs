@@ -114,21 +114,27 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
 
         public bool SaveInfo()
         {
-            if (txtStreet.Text.Length <= 0 || txtStreet.Text.Equals("N/A"))
+            if (cmbCounty.SelectedItem as County == null)
+            {
+                CMessageBox.Show("Please select a county for this job's location.", "No County Selected", MessageBoxButtons.OK, Resources.error_64x64);
+                return false;
+            }
+
+            if (txtStreet.Text.Length <= 0 || txtStreet.Text.ToLower().Equals("n/a"))
             {
                 CMessageBox.Show("The job's street cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 return false;
             }
 
-            if (txtCity.Text.Length <= 0 || txtCity.Text.Equals("N/A"))
+            if (txtCity.Text.Length <= 0 || txtCity.Text.ToLower().Equals("n/a"))
             {
                 CMessageBox.Show("The job's city cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 return false;
             }
 
-            if (txtZipCode.Text.Length <= 0)
+            if (txtZipCode.Text.Length <= 0 || txtZipCode.Text.ToLower().Equals("n/a"))
             {
-                CMessageBox.Show("The job's zip-code cannot be empty.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
+                CMessageBox.Show("The job's zip-code cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
                 return false;
             }
 
