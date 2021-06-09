@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveyManager.utility;
+using System;
 using System.ComponentModel;
 using System.Threading;
 using static SurveyManager.utility.Enums;
@@ -77,8 +78,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return !Name.ToLower().Equals("N/A") && ((PhoneNumber.Length == 12 || PhoneNumber.Length == 7 || PhoneNumber.Length == 10
-                    || PhoneNumber.ToLower().Equals("do not have info"))  && !PhoneNumber.ToLower().Equals("n/a")) && !ClientAddress.IsEmpty;
+                return Validator.Client(this).Count == 0;
             }
         }
 

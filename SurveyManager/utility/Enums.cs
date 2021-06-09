@@ -508,6 +508,99 @@ namespace SurveyManager.utility
             ReadOnly,
             None
         }
+
+        /// <summary>
+        /// Enum representing the various validator errors from the <see cref="Validator"/> class.
+        /// </summary>
+        public enum ValidatorError
+        {
+            [Description("The phone number entered is incomplete or is not in the correct format.\n")]
+            IncompletePhoneNumber,
+            [Description("The phone number cannot be \"N/A\".")]
+            PhoneNumberNA,
+            [Description("The phone number cannot be empty.")]
+            NoLengthPhoneNumber,
+            [Description("The email address entered is incomplete or is not in the correct format.")]
+            InvalidEmailAddress,
+            [Description("The email address cannot be \"N/A\".")]
+            EmailNA,
+            [Description("The email address cannot be empty.")]
+            NoLengthEmailAddress,
+            [Description("The name cannot be empty.")]
+            NoLengthName,
+            [Description("The name cannot be \"N/A\".")]
+            NameNA,
+            [Description("The company name cannot be empty.")]
+            NoLengthCompanyName,
+            [Description("The company name cannot be \"N/A\".")]
+            CompanyNameNA,
+            [Description("The associate's name cannot be empty.")]
+            NoLengthAssociateName,
+            [Description("The associate's name cannot be \"N/A\".")]
+            AssociateNameNA,
+            [Description("The address cannot be empty.")]
+            EmptyAddress,
+            [Description("The address cannot be \"N/A\".")]
+            AddressNA,
+            [Description("The address is incomplete.")]
+            AddressIncomplete,
+            [Description("The file has no contents associated with it.")]
+            NoContentsFile,
+            [Description("The file name cannot be empty.")]
+            NoFileNameFile,
+            [Description("The file name cannot be \"N/A\".")]
+            FileNameNA,
+            [Description("The file extension is invalid.")]
+            FileExtensionInvalid,
+            [Description("Information => The job number cannot be empty. ")]
+            JobNumberEmpty,
+            [Description("Information => The job number cannot be \"N/A\".")]
+            JobNumberNA,
+            [Description("Information => The abstract number cannot be empty. ")]
+            AbstractEmpty,
+            [Description("Information => The abstract number cannot be \"N/A\".")]
+            AbstractNA,
+            [Description("Information => The survey name cannot be empty.")]
+            SurveyEmpty,
+            [Description("Information => The survey name cannot be \"N/A\".")]
+            SurveyNA,
+            [Description("Information => The number of acres cannot be empty.")]
+            NumberOfAcresEmpty,
+            [Description("Information => The number of acres must be >= 0.")]
+            NumberOfAcresNegative,
+            [Description("Description => The description cannot be empty.")]
+            DescriptionEmpty,
+            [Description("Description => The description cannot be \"N/A\".")]
+            DescriptionNA,
+            [Description("Subdivision => The subdivision's name cannot be empty.\nIf there is no name, use \"DO NOT HAVE INFO\" as the value.")]
+            SubdivisionNameEmpty,
+            [Description("Subdivision => The subdivision's block cannot be empty.\nIf there is no block, use \"DO NOT HAVE INFO\" as the value.")]
+            SubdivisionBlockEmpty,
+            [Description("Subdivision => The subdivision's lot number cannot be empty.\nIf there is no lot number, use \"DO NOT HAVE INFO\" as the value.")]
+            SubdivisionLotEmpty,
+            [Description("Subdivision => The subdivision's section number cannot be empty.\nIf there is no section number, use \"DO NOT HAVE INFO\" as the value.")]
+            SubdivisionSectionEmpty,
+            [Description("Location => The street cannot be empty.")]
+            StreetEmpty,
+            [Description("Location => The street cannot be \"N/A\".")]
+            StreetNA,
+            [Description("Location => The city cannot be empty.")]
+            CityEmpty,
+            [Description("Location => The city cannot be \"N/A\".")]
+            CityNA,
+            [Description("Location => The zip-code cannot be empty.")]
+            ZipCodeEmpty,
+            [Description("Location => A county must be selected first.")]
+            InvalidCounty,
+            [Description("Location => The county name cannot be \"N/A\".")]
+            CountyNA,
+            [Description("Survey => Either no client has been selected or the selected client is missing information.")]
+            InvalidClient,
+            [Description("An exception occured while trying to validate the input. Please try again.")]
+            Exception,
+            [Description("No error has occured and all validation succeeded.")]
+            None
+        }
     }
 
     /// <summary>
@@ -525,6 +618,15 @@ namespace SurveyManager.utility
         }
 
         public static string ToDescriptionString(this DatabaseError val)
+        {
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])val
+               .GetType()
+               .GetField(val.ToString())
+               .GetCustomAttributes(typeof(DescriptionAttribute), false);
+            return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+        }
+
+        public static string ToDescriptionString(this ValidatorError val)
         {
             DescriptionAttribute[] attributes = (DescriptionAttribute[])val
                .GetType()

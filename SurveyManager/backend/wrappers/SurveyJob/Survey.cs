@@ -348,9 +348,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         {
             get
             {
-                return (Client != null && Client.IsValidClient) && County != null && !JobNumber.ToLower().Equals("n/a") &&
-                    !Description.ToLower().Equals("n/a") && !AbstractNumber.ToLower().Equals("n/a") && Location != null && 
-                    !Location.IsEmpty && !SurveyName.ToLower().Equals("n/a") && SurveyName.Length > 0;
+                return Validator.Survey(this).Count == 0;
             }
         }
 

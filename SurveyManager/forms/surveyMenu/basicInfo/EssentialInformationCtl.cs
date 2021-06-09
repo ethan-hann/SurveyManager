@@ -3,10 +3,12 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.surveyMenu.basicInfo
 {
@@ -100,51 +102,27 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             JobHandler.Instance.UpdateSavePending(true);
         }
 
-        public bool SaveInfo()
+        public List<ValidatorError> SaveInfo()
         {
             try
             {
-                if (txtJobNumber.Text.Length <= 0 || txtJobNumber.Text.ToLower().Equals("n/a"))
-                {
-                    CMessageBox.Show("The job number cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return false;
-                }
+                double.TryParse(txtNumOfAcres.Text, out double acres);
 
-                if (txtAbstract.Text.Length <= 0 || txtAbstract.Text.ToLower().Equals("n/a"))
-                {
-                    CMessageBox.Show("The abstract cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return false;
-                }
-
-                if (txtSurvey.Text.Length <= 0 || txtSurvey.Text.ToLower().Equals("n/a"))
-                {
-                    CMessageBox.Show("The survey name cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return false;
-                }
-
-                if (txtNumOfAcres.Text.Length <= 0 || txtNumOfAcres.Text.ToLower().Equals("n/a"))
-                {
-                    CMessageBox.Show("The number of acres cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return false;
-                }
-
-                if (txtDescription.Text.Length <= 0 || txtDescription.Text.ToLower().Equals("n/a"))
-                {
-                    CMessageBox.Show("The job's description cannot be empty or \"N/A\"!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                    return false;
-                }
+                List<ValidatorError> errors = Validator.Information(txtJobNumber.Text, txtAbstract.Text, txtSurvey.Text, acres);
+                errors.AddRange(Validator.Description(txtDescription.Text));
 
                 JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
                 JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
                 JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
-                JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
+                JobHandler.Instance.CurrentJob.Acres = acres;
                 JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
 
-                return true;
+                return errors;
+
             } catch (NullReferenceException e)
             {
                 RuntimeVars.Instance.LogFile.AddEntry($"An exception has occured: {e.Message}. The stacktrace is: {e.StackTrace}");
-                return false;
+                return new List<ValidatorError>() { ValidatorError.Exception };
             }
         }
 

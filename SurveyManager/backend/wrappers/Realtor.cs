@@ -70,10 +70,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return (!Name.ToLower().Equals("n/a") && Name.Length > 0) &&
-                ((PhoneNumber.Length == 10 || PhoneNumber.Length == 7 || PhoneNumber.ToLower().Equals("do not have info")) 
-                && !PhoneNumber.ToLower().Equals("n/a")) && (!Email.ToLower().Equals("n/a") && Validator.ValidateEmail(Email)) &&
-                (!CompanyName.ToLower().Equals("n/a") && CompanyName.Length > 0);
+                return Validator.Realtor(this).Count == 0;
             }
         }
 

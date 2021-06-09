@@ -54,17 +54,14 @@ namespace SurveyManager.backend.wrappers
 
         /// <summary>
         /// Get a value indiciating if this is a valid TitleCompany.
-        /// <para>A valid TitleCompany is one whose name, associate's name, associate's email, and office phone number is not "N/A" and is valid..</para>
+        /// <para>A valid TitleCompany is one whose name, associate's name, associate's email, and office phone number is not "N/A" and is valid.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidCompany
         {
             get
             {
-                return (!Name.ToLower().Equals("n/a") && Name.Length > 0) &&
-                ((OfficeNumber.Length == 10 || OfficeNumber.Length == 7 || OfficeNumber.ToLower().Equals("do not have info")) 
-                && !OfficeNumber.ToLower().Equals("n/a")) && (!AssociateEmail.ToLower().Equals("n/a") 
-                && Validator.ValidateEmail(AssociateEmail)) && (!AssociateName.ToLower().Equals("n/a") && AssociateName.Length > 0);
+                return Validator.TitleCompany(this).Count == 0;
             }
         }
 

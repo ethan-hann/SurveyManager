@@ -42,13 +42,14 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.txtNumOfAcres = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.descHeaderGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.txtDescription = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblDescCharCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -57,13 +58,19 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup.Panel)).BeginInit();
             this.descHeaderGroup.Panel.SuspendLayout();
             this.descHeaderGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
+            this.kryptonSplitContainer1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
+            this.kryptonSplitContainer1.Panel2.SuspendLayout();
+            this.kryptonSplitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonLabel1
@@ -192,21 +199,12 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             // descHeaderGroup.Panel
             // 
             this.descHeaderGroup.Panel.Controls.Add(this.kryptonPanel2);
-            this.descHeaderGroup.Size = new System.Drawing.Size(759, 316);
+            this.descHeaderGroup.Size = new System.Drawing.Size(759, 383);
             this.descHeaderGroup.StateCommon.HeaderPrimary.Content.LongText.Color2 = System.Drawing.Color.Red;
             this.descHeaderGroup.TabIndex = 1;
             this.descHeaderGroup.ValuesPrimary.Heading = "Description *";
             this.descHeaderGroup.ValuesPrimary.Image = null;
             this.descHeaderGroup.ValuesSecondary.Heading = "Enter the description for this survey job.";
-            // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Controls.Add(this.descHeaderGroup);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 285);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(759, 316);
-            this.kryptonPanel1.TabIndex = 2;
             // 
             // kryptonPanel2
             // 
@@ -215,7 +213,7 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(757, 263);
+            this.kryptonPanel2.Size = new System.Drawing.Size(757, 330);
             this.kryptonPanel2.TabIndex = 2;
             // 
             // txtDescription
@@ -224,7 +222,7 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.txtDescription.Location = new System.Drawing.Point(0, 0);
             this.txtDescription.MaxLength = 6000;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(757, 241);
+            this.txtDescription.Size = new System.Drawing.Size(757, 308);
             this.txtDescription.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.TabIndex = 0;
             this.txtDescription.Text = "";
@@ -236,7 +234,7 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblDescCharCount});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 241);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 308);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(757, 22);
             this.statusStrip1.SizingGrip = false;
@@ -254,8 +252,18 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.lblDescCharCount.Size = new System.Drawing.Size(115, 17);
             this.lblDescCharCount.Text = "Char Count: 0 / 6000";
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.descHeaderGroup);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(759, 383);
+            this.kryptonPanel1.TabIndex = 2;
+            // 
             // kryptonPanel3
             // 
+            this.kryptonPanel3.AutoScroll = true;
             this.kryptonPanel3.Controls.Add(this.flowLayoutPanel4);
             this.kryptonPanel3.Controls.Add(this.flowLayoutPanel3);
             this.kryptonPanel3.Controls.Add(this.flowLayoutPanel2);
@@ -263,16 +271,35 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(759, 285);
+            this.kryptonPanel3.Size = new System.Drawing.Size(759, 213);
             this.kryptonPanel3.TabIndex = 3;
+            // 
+            // kryptonSplitContainer1
+            // 
+            this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer1.Name = "kryptonSplitContainer1";
+            this.kryptonSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // kryptonSplitContainer1.Panel1
+            // 
+            this.kryptonSplitContainer1.Panel1.AutoScroll = true;
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.kryptonPanel3);
+            // 
+            // kryptonSplitContainer1.Panel2
+            // 
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonPanel1);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(759, 601);
+            this.kryptonSplitContainer1.SplitterDistance = 213;
+            this.kryptonSplitContainer1.TabIndex = 4;
             // 
             // EssentialInformationCtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.kryptonPanel3);
-            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.kryptonSplitContainer1);
             this.Name = "EssentialInformationCtl";
             this.Size = new System.Drawing.Size(759, 601);
             this.Load += new System.EventHandler(this.EssentialInformationCtl_Load);
@@ -288,15 +315,21 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
             this.descHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.descHeaderGroup)).EndInit();
             this.descHeaderGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
+            this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
+            this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
+            this.kryptonSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,5 +356,6 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblDescCharCount;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
     }
 }

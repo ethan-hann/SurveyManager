@@ -142,7 +142,14 @@ namespace SurveyManager.forms.dialogs
         {
             string fieldName = ((DBMap)dgvFilters.Rows[0].Cells["columnDBColumn"].Value).InternalField;
             string searchText = (string)dgvFilters.Rows[0].Cells["columnCriteria"].Value;
-            SqlOperators operation = (SqlOperators)dgvFilters.Rows[0].Cells["columnOption"].Value;
+            string oper = dgvFilters.Rows[0].Cells["columnOption"].Value.ToString();
+            bool success = Enum.TryParse(oper, out SqlOperators operation);
+
+            if (!success)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"There was an error while parsing SQL operator from filter: {oper}");
+                return ";";
+            }
 
             if (tableName.Equals("Survey"))
             {
@@ -169,7 +176,14 @@ namespace SurveyManager.forms.dialogs
 
                     fieldName = ((DBMap)currentRow.Cells["columnDBColumn"].Value).InternalField;
                     searchText = (string)currentRow.Cells["columnCriteria"].Value;
-                    operation = (SqlOperators)currentRow.Cells["columnOption"].Value;
+                    oper = currentRow.Cells["columnOption"].Value.ToString();
+                    success = Enum.TryParse(oper, out operation);
+
+                    if (!success)
+                    {
+                        RuntimeVars.Instance.LogFile.AddEntry($"There was an error while parsing SQL operator from filter: {oper}");
+                        return ";";
+                    }
 
                     if (tableName.Equals("Survey"))
                     {
@@ -187,11 +201,11 @@ namespace SurveyManager.forms.dialogs
                     switch (op)
                     {
                         case BooleanOps.AND:
-                        filters.Add(new ANDFilter((IFilter)filters[i - 1], f));
-                        break;
+                            filters.Add(new ANDFilter((IFilter)filters[i - 1], f));
+                            break;
                         case BooleanOps.OR:
-                        filters.Add(new ORFilter((IFilter)filters[i - 1], f));
-                        break;
+                            filters.Add(new ORFilter((IFilter)filters[i - 1], f));
+                            break;
                     }
                 }
             }
@@ -252,10 +266,12 @@ namespace SurveyManager.forms.dialogs
             if (args.Results == null || args.Results.Rows.Count <= 0)
             {
                 CMessageBox.Show("No records found with that filter.\nTry to refine it.", "No Records", MessageBoxButtons.OK, Resources.warning_64x64);
+                RuntimeVars.Instance.MainForm.ChangeStatusText(this, new StatusArgs($"No records found for search: {query}"));
             }
             else
             {
                 FilterDone?.Invoke(this, args);
+                RuntimeVars.Instance.MainForm.ChangeStatusText(this, new StatusArgs($"Found {args.Results.Rows.Count} rows matching query: {query}"));
                 Close();
             }
         }
@@ -283,12 +299,6 @@ namespace SurveyManager.forms.dialogs
                 txtSearch1.Text = "Search Text Here...";
                 txtSearch1.ForeColor = SystemColors.GrayText;
             }
-        }
-
-        private void AdvancedFilter_HelpRequested(object sender, HelpEventArgs hlpevent)
-        {
-            Help.ShowHelp(this, "file://..\\Help\\index.chm", HelpNavigator.Topic, "advanced_filter.html");
-            hlpevent.Handled = true;
         }
 
         private void cmbColumns_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.surveyMenu.basicInfo
 {
@@ -44,14 +46,24 @@ namespace SurveyManager.forms.surveyMenu.basicInfo
                 txtBox.StateCommon.Back.Color1 = Color.White;
         }
 
-        public bool SaveInfo()
+        public List<ValidatorError> SaveInfo()
         {
-            JobHandler.Instance.CurrentJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
-            JobHandler.Instance.CurrentJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
-            JobHandler.Instance.CurrentJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
-            JobHandler.Instance.CurrentJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
+            try
+            {
+                List<ValidatorError> errors = Validator.Subdivision(txtName.Text, txtBlock.Text, txtLot.Text, txtSection.Text);
 
-            return true;
+                JobHandler.Instance.CurrentJob.Subdivision = txtName.Text.Length == 0 ? "N/A" : txtName.Text;
+                JobHandler.Instance.CurrentJob.SectionNumber = txtSection.Text.Length == 0 ? "N/A" : txtSection.Text;
+                JobHandler.Instance.CurrentJob.BlockNumber = txtBlock.Text.Length == 0 ? "N/A" : txtBlock.Text;
+                JobHandler.Instance.CurrentJob.LotNumber = txtLot.Text.Length == 0 ? "N/A" : txtLot.Text;
+
+                return errors;
+            }
+            catch (NullReferenceException e)
+            {
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception has occured: {e.Message}. The stacktrace is: {e.StackTrace}");
+                return new List<ValidatorError>() { ValidatorError.Exception };
+            }
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)
