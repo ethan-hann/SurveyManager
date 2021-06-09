@@ -61,7 +61,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// </summary>
         public void SetObjects()
         {
-            if (!BillingIds.Equals("N/A"))
+            if (!BillingIds.ToLower().Equals("n/a"))
             {
                 Thread dbThread = new Thread(() =>
                 {
@@ -74,7 +74,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 };
                 dbThread.Start();
             }
-            if (!LineItemIds.Equals("N/A"))
+            if (!LineItemIds.ToLower().Equals("n/a"))
             {
                 Thread dbThread = new Thread(() =>
                 {
@@ -171,7 +171,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// <param name="id">The id to add.</param>
         public void AddLineItemID(int id)
         {
-            if (LineItemIds.Equals("N/A"))
+            if (LineItemIds.ToLower().Equals("n/a"))
                 LineItemIds = "";
 
             if (LineItemIds.Contains($"{id}"))
@@ -233,7 +233,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// <param name="id">The id to add.</param>
         public void AddBillingID(int id)
         {
-            if (BillingIds.Equals("N/A"))
+            if (BillingIds.ToLower().Equals("n/a"))
                 BillingIds = "";
             if (BillingIds.Contains($"{id}"))
                 return;

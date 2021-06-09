@@ -69,15 +69,15 @@ namespace SurveyManager.backend.wrappers
         public Address ClientAddress { get; set; } = new Address();
 
         /// <summary>
-        /// Get a value indicating if the client is valid. A valid client is one whose name and phone number is not "N/A" and whose address is 
-        /// not empty.
+        /// Get a value indicating if the client is valid. A valid client is one whose name is not "N/A", phone number is not "N/A" and the correct length (10 or 7 digits),
+        /// and whose address is not empty.
         /// </summary>
         [Browsable(false)]
         public bool IsValidClient
         {
             get
             {
-                return !Name.Equals("N/A") && !PhoneNumber.Equals("N/A") && !ClientAddress.IsEmpty;
+                return !Name.ToLower().Equals("N/A") && ((PhoneNumber.Length == 10 || PhoneNumber.Length == 7) && PhoneNumber.ToLower().Equals("n/a")) && !ClientAddress.IsEmpty;
             }
         }
 

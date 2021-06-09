@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SurveyManager.utility;
+using System;
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
@@ -62,16 +63,17 @@ namespace SurveyManager.backend.wrappers
 
         /// <summary>
         /// Get a value representing whether this Realtor is valid or not.
-        /// <para>A valid Realtor is one whose name, email, and company name is not equal to "N/A" and not an empty string.</para>
+        /// <para>A valid Realtor is one whose name, email, and company name is not equal to "N/A" or empty and valid and whose phone number is 10 or 7 characters and not "N/A".</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidRealtor
         {
             get
             {
-                return (!Name.Equals("N/A") && Name.Length > 0) &&
-                (!PhoneNumber.Equals("N/A") && PhoneNumber.Length > 0) &&
-                (!CompanyName.Equals("N/A") && CompanyName.Length > 0);
+                return (!Name.ToLower().Equals("n/a") && Name.Length > 0) &&
+                ((PhoneNumber.Length == 10 || PhoneNumber.Length == 7) && !PhoneNumber.ToLower().Equals("n/a")) &&
+                (!Email.ToLower().Equals("n/a") && Validator.ValidateEmail(Email)) &&
+                (!CompanyName.ToLower().Equals("n/a") && CompanyName.Length > 0);
             }
         }
 
@@ -101,7 +103,7 @@ namespace SurveyManager.backend.wrappers
             if (IsValidRealtor)
                 return $"{Name} with {CompanyName}";
             else
-                return "(...)";
+                return "Invalid Realtor (...)";
         }
 
         public DatabaseError Insert()

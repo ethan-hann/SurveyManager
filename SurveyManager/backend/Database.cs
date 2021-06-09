@@ -61,7 +61,6 @@ namespace SurveyManager.backend
             string connection = Settings.Default.ConnectionString;
             if (connection != null && !connection.Equals(""))
             {
-                Console.WriteLine("Connection string: " + connection);
                 string[] conParts = connection.Split(';');
                 string[] conParams = new string[conParts.Length];
 
@@ -169,7 +168,7 @@ namespace SurveyManager.backend
                 {
                     dt.Columns.Add("MySQL Error");
                     dt.Columns.Add("Error Code");
-                    dt.Rows.Add(ex.Message, ex.ErrorCode);
+                    dt.Rows.Add(ex.Message, ex.Code);
                 }
 
                 con.Close();
@@ -2379,6 +2378,7 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
         #region Billing Items
         /// <summary>
         /// Insert into the database the <see cref="BillingItem"/> <paramref name="item"/>.

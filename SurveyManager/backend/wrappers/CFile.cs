@@ -30,7 +30,7 @@ namespace SurveyManager.backend.wrappers
         [Description("The file's name, without extension.")]
         [Browsable(true)]
         [DisplayName("File Name")]
-        public string FileName { get; set; } = "";
+        public string FileName { get; set; } = "N/A";
 
         /// <summary>
         /// A brief description for this file explaining what it is.
@@ -40,7 +40,7 @@ namespace SurveyManager.backend.wrappers
         [Browsable(true)]
         [DisplayName("Description")]
         [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-        public string Description { get; set; } = "";
+        public string Description { get; set; } = "N/A";
 
         /// <summary>
         /// The extension of this file. This is limited to the options in <see cref="FileExtension"/>.
@@ -105,7 +105,7 @@ namespace SurveyManager.backend.wrappers
         {
             get
             {
-                return Contents != null && (Contents.Length > 0 && Extension != FileExtension.NONE && FileName.Length > 0);
+                return Contents != null && Contents.Length > 0 && Extension != FileExtension.NONE && FileName.Length > 0;
             }
         }
 
@@ -213,7 +213,7 @@ namespace SurveyManager.backend.wrappers
             }
             catch (Exception)
             {
-                RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to read a file: {path}");
+                RuntimeVars.Instance.LogFile.AddEntry($"Error while trying to read file: {path}");
                 return false;
             }
         }
@@ -236,7 +236,7 @@ namespace SurveyManager.backend.wrappers
             if (Contents.Length == 0)
                 return null;
 
-            string path = Path.Combine(RuntimeVars.Instance.TempFiles.TempDir, Path.GetRandomFileName() + $"-{FullFileName}");
+            string path = Path.Combine(RuntimeVars.Instance.TempFiles.TempDir, $"{Path.GetRandomFileName()}-{FullFileName}");
             File.WriteAllBytes(path, Contents);
             RuntimeVars.Instance.TempFiles.AddFile(path, false);
 

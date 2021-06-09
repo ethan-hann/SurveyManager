@@ -17,7 +17,8 @@ namespace SurveyManager.backend
         /// <param name="values">A <see cref="ArrayList"/> of values for Inserting or Updating.</param>
         /// <param name="columnNames">A <see cref="ArrayList"/> of column names that should be considered.</param>
         /// <param name="condition">The condition, if any, the query should include.</param>
-        /// <returns>A new string that represents the query and can be passed to a DB connection for execution.</returns>
+        /// <returns>A new string that represents the query and can be passed to a DB connection for execution. If for some reason the query could not be built,
+        /// returns an empty query <c>';'</c></returns>
         public static string BuildQuery(QType qtype, string tableName, ArrayList values = null, ArrayList columnNames = null, string condition = null)
         {
             StringBuilder s = new StringBuilder();
@@ -44,7 +45,7 @@ namespace SurveyManager.backend
                         return s.ToString();
                     }
                     else
-                        return "NOTHING";
+                        return ";";
                 }
                 case QType.UPDATE:
                 {
@@ -74,7 +75,7 @@ namespace SurveyManager.backend
                     }
                     else
                     {
-                        return "NOTHING";
+                        return ";";
                     }
                 }
                 case QType.DELETE:
@@ -86,7 +87,7 @@ namespace SurveyManager.backend
                     }
                     else
                     {
-                        return "NOTHING";
+                        return ";";
                     }
                 }
                 case QType.SELECT:
@@ -120,7 +121,7 @@ namespace SurveyManager.backend
                 }
                 default:
                 {
-                    return "NOTHING";
+                    return ";";
                 }
             }
         }

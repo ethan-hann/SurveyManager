@@ -64,7 +64,7 @@ namespace SurveyManager.forms.surveyMenu
                         propGrid.SelectedObject = new Survey();
                     }
 
-                (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     propGrid.Enabled = !JobHandler.Instance.ReadOnly;

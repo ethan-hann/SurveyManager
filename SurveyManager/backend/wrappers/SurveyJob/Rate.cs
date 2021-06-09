@@ -61,7 +61,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         {
             get
             {
-                return !Description.Equals("N/A") && Amount != 0.00m;
+                return !Description.ToLower().Equals("n/a") && Amount != 0.00m;
             }
         }
 
