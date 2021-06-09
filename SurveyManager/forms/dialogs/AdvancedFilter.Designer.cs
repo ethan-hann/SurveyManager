@@ -110,17 +110,6 @@ namespace SurveyManager.forms.dialogs
             // 
             this.cmbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChoices.DropDownWidth = 143;
-            this.cmbChoices.Items.AddRange(new object[] {
-            "StartsLike",
-            "EndsLike",
-            "Like",
-            "NotLike",
-            "Equals",
-            "LessOrEqual",
-            "GreaterOrEqual",
-            "NotEqual",
-            "Greater",
-            "Less"});
             this.cmbChoices.Location = new System.Drawing.Point(152, 3);
             this.cmbChoices.Name = "cmbChoices";
             this.cmbChoices.Size = new System.Drawing.Size(143, 21);

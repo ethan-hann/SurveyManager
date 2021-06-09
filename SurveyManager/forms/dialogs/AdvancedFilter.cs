@@ -93,7 +93,7 @@ namespace SurveyManager.forms.dialogs
         private void AddFilterToGrid(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
+            SqlOperators operation = (SqlOperators)cmbChoices.SelectedItem;
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
@@ -109,7 +109,7 @@ namespace SurveyManager.forms.dialogs
         private void AddAndOperation(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
+            SqlOperators operation = (SqlOperators)cmbChoices.SelectedItem;
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
@@ -125,7 +125,7 @@ namespace SurveyManager.forms.dialogs
         private void AddOrOperation(object sender, EventArgs e)
         {
             DBMap column = (DBMap)cmbColumns.SelectedItem;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString());
+            SqlOperators operation = (SqlOperators)cmbChoices.SelectedItem;
             string value = txtSearch1.Text;
 
             if (dgvFilters.Rows.Count >= 1)
@@ -142,7 +142,7 @@ namespace SurveyManager.forms.dialogs
         {
             string fieldName = ((DBMap)dgvFilters.Rows[0].Cells["columnDBColumn"].Value).InternalField;
             string searchText = (string)dgvFilters.Rows[0].Cells["columnCriteria"].Value;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)dgvFilters.Rows[0].Cells["columnOption"].Value);
+            SqlOperators operation = (SqlOperators)dgvFilters.Rows[0].Cells["columnOption"].Value;
 
             if (tableName.Equals("Survey"))
             {
@@ -169,7 +169,7 @@ namespace SurveyManager.forms.dialogs
 
                     fieldName = ((DBMap)currentRow.Cells["columnDBColumn"].Value).InternalField;
                     searchText = (string)currentRow.Cells["columnCriteria"].Value;
-                    operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), (string)currentRow.Cells["columnOption"].Value);
+                    operation = (SqlOperators)currentRow.Cells["columnOption"].Value;
 
                     if (tableName.Equals("Survey"))
                     {
@@ -204,7 +204,7 @@ namespace SurveyManager.forms.dialogs
         {
             string fieldName = ((DBMap)cmbColumns.SelectedItem).InternalField;
             string searchText = txtSearch1.Text;
-            SqlOperators operation = (SqlOperators)Enum.Parse(typeof(SqlOperators), cmbChoices.SelectedItem.ToString(), false);
+            SqlOperators operation = (SqlOperators)cmbChoices.SelectedItem;
 
             if (tableName.Equals("Survey"))
             {

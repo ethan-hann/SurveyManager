@@ -1113,6 +1113,8 @@ namespace SurveyManager
                     new DBMap("client_id", "Client ID"),
                     new DBMap("description", "Description"),
                     new DBMap("subdivision", "Subdivision"),
+                    new DBMap("abstract_number", "Abstract"),
+                    new DBMap("survey_name", "Survey Name"),
                     new DBMap("lot", "Lot #"),
                     new DBMap("block", "Block #"),
                     new DBMap("section", "Section #"),

@@ -62,9 +62,9 @@ namespace SurveyManager.backend.wrappers
             get
             {
                 return (!Name.ToLower().Equals("n/a") && Name.Length > 0) &&
-                ((OfficeNumber.Length == 10 || OfficeNumber.Length == 7) && !OfficeNumber.ToLower().Equals("n/a")) &&
-                (!AssociateEmail.ToLower().Equals("n/a") && Validator.ValidateEmail(AssociateEmail)) &&
-                (!AssociateName.ToLower().Equals("n/a") && AssociateName.Length > 0);
+                ((OfficeNumber.Length == 10 || OfficeNumber.Length == 7 || OfficeNumber.ToLower().Equals("do not have info")) 
+                && !OfficeNumber.ToLower().Equals("n/a")) && (!AssociateEmail.ToLower().Equals("n/a") 
+                && Validator.ValidateEmail(AssociateEmail)) && (!AssociateName.ToLower().Equals("n/a") && AssociateName.Length > 0);
             }
         }
 

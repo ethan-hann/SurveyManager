@@ -223,6 +223,8 @@ namespace SurveyManager.forms.userControls
                         new DBMap("client_id", "Client ID"),
                         new DBMap("description", "Description"),
                         new DBMap("subdivision", "Subdivision"),
+                        new DBMap("abstract_number", "Abstract"),
+                        new DBMap("survey_name", "Survey Name"),
                         new DBMap("lot", "Lot #"),
                         new DBMap("block", "Block #"),
                         new DBMap("section", "Section #"),
@@ -230,7 +232,7 @@ namespace SurveyManager.forms.userControls
                         new DBMap("acres", "Acres"),
                         new DBMap("realtor_id", "Realtor ID"),
                         new DBMap("title_company_id", "Title Company ID")
-                    }; //TODO: combine all tables to search for surveys!
+                    };
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));
                     break;
