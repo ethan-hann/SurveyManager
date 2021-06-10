@@ -37,9 +37,13 @@ namespace SurveyManager.forms.surveyMenu
             try
             {
                 propGrid.SelectedObject = new Survey();
-                (Parent as KryptonPage).Text = "No Job Opened";
-                (Parent as KryptonPage).TextTitle = "No Job Opened";
-                (Parent as KryptonPage).UniqueName = "No Job Opened";
+                KryptonPage parent = (KryptonPage)Parent;
+                if (parent == null)
+                    return;
+
+                parent.Text = "No Job Opened";
+                parent.TextTitle = "No Job Opened";
+                parent.UniqueName = "No Job Opened";
                 propGrid.Enabled = false;
             }
             catch (NullReferenceException e)
@@ -64,9 +68,13 @@ namespace SurveyManager.forms.surveyMenu
                         propGrid.SelectedObject = new Survey();
                     }
 
-                    (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    KryptonPage parent = (KryptonPage)Parent;
+                    if (parent == null)
+                        return;
+
+                    parent.Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     propGrid.Enabled = !JobHandler.Instance.ReadOnly;
                 }
                 else
@@ -91,10 +99,13 @@ namespace SurveyManager.forms.surveyMenu
                     {
                         propGrid.SelectedObject = JobHandler.Instance.CurrentJob;
                     }
+                    KryptonPage parent = (KryptonPage)Parent;
+                    if (parent == null)
+                        return;
 
-                    (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     propGrid.Enabled = !JobHandler.Instance.ReadOnly;
                 }
             } catch (NullReferenceException n)
@@ -123,6 +134,12 @@ namespace SurveyManager.forms.surveyMenu
 
             if (!e.OldValue.Equals(e.ChangedItem.Value))
                 JobHandler.Instance.UpdateSavePending(true);
+        }
+
+        private void propGrid_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+            propGrid.Invalidate();
+            propGrid.Update();
         }
     }
 }

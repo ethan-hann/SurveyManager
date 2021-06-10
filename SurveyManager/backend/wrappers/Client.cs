@@ -152,7 +152,10 @@ namespace SurveyManager.backend.wrappers
 
         public override string ToString()
         {
-            return $"{Name}";
+            if (IsValidClient)
+                return Name;
+            else
+                return "Invalid Client (...)";
         }
 
         public DatabaseError Insert()

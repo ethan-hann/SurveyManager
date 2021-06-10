@@ -21,7 +21,7 @@ namespace SurveyManager.utility
         /// Validates an e-mail address against an email regular expression pattern.
         /// </summary>
         /// <param name="emailAddress">The email address to validate.</param>
-        /// <returns>A list of <see cref="ValidatorError"/> enums.</returns>
+        /// <returns>A list of <see cref="ValidatorError"/>s.</returns>
         public static List<ValidatorError> Email(string emailAddress)
         {
             List<ValidatorError> e = new List<ValidatorError>();
@@ -40,10 +40,22 @@ namespace SurveyManager.utility
         }
 
         /// <summary>
-        /// Validates a phone number's format and content.
+        /// Validates a phone number's format and content. A valid phone number is:
+        /// <list type="bullet">
+        ///     <item>not empty</item>
+        ///     <item>not equal to n/a</item>
+        ///     <item>after characters are stripped away, either 10 or 7 digits</item>
+        /// </list>
+        /// Examples:
+        /// <list type="number">
+        ///         <item>281-555-5214</item>
+        ///         <item>555-5214</item>
+        ///         <item>2815555214</item>
+        ///         <item>5555214</item>
+        ///     </list>
         /// </summary>
-        /// <param name="phoneNumber"></param>
-        /// <returns></returns>
+        /// <param name="phoneNumber">The phone number to validate.</param>
+        /// <returns>A list of <see cref="ValidatorError"/>s.</returns>
         public static List<ValidatorError> PhoneNumber(string phoneNumber)
         {
             List<ValidatorError> e = new List<ValidatorError>();
@@ -63,6 +75,11 @@ namespace SurveyManager.utility
             return e;
         }
 
+        /// <summary>
+        /// Validates a generic name. Ensures the name is not empty and not equal to n/a.
+        /// </summary>
+        /// <param name="name">The name to verify.</param>
+        /// <returns>A list of <see cref="ValidatorError"/>s.</returns>
         public static List<ValidatorError> Name(string name)
         {
             List<ValidatorError> e = new List<ValidatorError>();
@@ -78,6 +95,11 @@ namespace SurveyManager.utility
             return e;
         }
 
+        /// <summary>
+        /// Validates a company's name. Ensures the name is not empty and not equal to n/a.
+        /// </summary>
+        /// <param name="name">The company name to verify.</param>
+        /// <returns>A list of <see cref="ValidatorError"/>s.</returns>
         public static List<ValidatorError> CompanyName(string name)
         {
             List<ValidatorError> e = new List<ValidatorError>();
@@ -93,6 +115,11 @@ namespace SurveyManager.utility
             return e;
         }
 
+        /// <summary>
+        /// Validates a title company's associate's name. Ensures the name is not empty and not equal to n/a.
+        /// </summary>
+        /// <param name="name">The associate's name to verify.</param>
+        /// <returns>A list of <see cref="ValidatorError"/>s.</returns>
         public static List<ValidatorError> AssociateName(string name)
         {
             List<ValidatorError> e = new List<ValidatorError>();

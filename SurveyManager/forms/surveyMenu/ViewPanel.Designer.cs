@@ -42,6 +42,7 @@ namespace SurveyManager.forms.surveyMenu
             this.propGrid.Size = new System.Drawing.Size(412, 613);
             this.propGrid.TabIndex = 0;
             this.propGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propGrid_PropertyValueChanged);
+            this.propGrid.SelectedObjectsChanged += new System.EventHandler(this.propGrid_SelectedObjectsChanged);
             // 
             // ViewPanel
             // 

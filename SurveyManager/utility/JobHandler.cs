@@ -365,7 +365,7 @@ namespace SurveyManager.utility
                 {
                     case ExitChoice.SaveAndExit:
                     {
-                        isClosing = true;
+                        isClosing = false;
                         Save();
                         break;
                     }
