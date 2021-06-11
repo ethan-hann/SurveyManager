@@ -70,7 +70,8 @@ namespace SurveyManager.forms.userControls
                     if (Database.DoesClientExist(c.Name))
                     {
                         DialogResult result = CMessageBox.Show($"A client with the name, {c.Name.ToUpper()}, already exists!\n" +
-                            $"Unless these are two seperate people, it is recommended to edit the existing client instead.\n\n" +
+                            $"Unless these are two seperate people, it is recommended to edit the existing client instead.\n" +
+                            $"If you are associating this client with a survey job, search for it using the Advanced Filter Dialog instead.\n\n" +
                             $"Do you really want to create a duplicate client?", "Client Already Exists", MessageBoxButtons.YesNo, Resources.warning_64x64);
                         if (result == DialogResult.No)
                             return;
