@@ -66,7 +66,7 @@ namespace SurveyManager.utility
                 e.Add(ValidatorError.PhoneNumberNA);
 
             string newPhone = new string(phoneNumber.Where(c => c != '-' && (c < '0' || c > '9')).ToArray());
-            if (newPhone.Length != 10 || newPhone.Length != 7)
+            if (newPhone.Length != 0)
                 e.Add(ValidatorError.IncompletePhoneNumber);
 
             if (phoneNumber.ToLower().Equals("do not have info"))
