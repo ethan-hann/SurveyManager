@@ -666,10 +666,26 @@ namespace SurveyManager.forms.userControls
                     c.JobNumber,
                     c.AbstractNumber,
                     c.Acres,
-                    c.County.CountyName,
+                    c.Description,
+                    c.County.CountyName
                 });
                 row.Tag = c;
                 rows.Add(row);
+            }
+            rows.Sort(new CompareRows());
+        }
+
+        private class CompareRows : IComparer<OutlookGridRow>
+        {
+            public int Compare(OutlookGridRow x, OutlookGridRow y)
+            {
+                IDatabaseWrapper xObj = x.Tag as IDatabaseWrapper;
+                IDatabaseWrapper yObj = y.Tag as IDatabaseWrapper;
+
+                if (xObj == null || yObj == null)
+                    return -1;
+
+                return xObj.ID.CompareTo(yObj.ID);
             }
         }
         #endregion
