@@ -17,6 +17,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Comparators;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.userControls
@@ -71,12 +72,20 @@ namespace SurveyManager.forms.userControls
             {
                 if (dataGrid.SelectedRows[0].Tag != null)
                 {
-                    if (JobHandler.Instance.OpenJob(dataGrid.SelectedRows[0].Tag as Survey))
-                    {
-                        RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + (dataGrid.SelectedRows[0].Tag as Survey).JobNumber + "]");
-                        JobHandler.Instance.AddSurveyToRecentJobs();
-                    }
+                    OpenSurvey(dataGrid.SelectedRows[0].Tag as Survey);
                 }
+            }
+        }
+
+        private void OpenSurvey(Survey s)
+        {
+            if (s == null)
+                return;
+
+            if (JobHandler.Instance.OpenJob(s))
+            {
+                RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + s.JobNumber + "]");
+                JobHandler.Instance.AddSurveyToRecentJobs();
             }
         }
 
@@ -672,21 +681,8 @@ namespace SurveyManager.forms.userControls
                 row.Tag = c;
                 rows.Add(row);
             }
-            rows.Sort(new CompareRows());
-        }
 
-        private class CompareRows : IComparer<OutlookGridRow>
-        {
-            public int Compare(OutlookGridRow x, OutlookGridRow y)
-            {
-                IDatabaseWrapper xObj = x.Tag as IDatabaseWrapper;
-                IDatabaseWrapper yObj = y.Tag as IDatabaseWrapper;
-
-                if (xObj == null || yObj == null)
-                    return -1;
-
-                return xObj.ID.CompareTo(yObj.ID);
-            }
+            rows.Sort(new CompareOutlookGridRows());
         }
         #endregion
 
@@ -696,6 +692,15 @@ namespace SurveyManager.forms.userControls
             {
                 DataGridViewRow r = dataGrid.Rows[e.RowIndex];
                 propGrid.SelectedObject = r.Tag;
+            }
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow r = dataGrid.Rows[e.RowIndex];
+                OpenSurvey(r.Tag as Survey);
             }
         }
     }

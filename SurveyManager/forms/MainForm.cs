@@ -33,6 +33,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Comparators;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager
@@ -436,16 +437,6 @@ namespace SurveyManager
             {
                 Settings.Default.RecentJobs = new System.Collections.Specialized.StringCollection();
                 Settings.Default.Save();
-            }
-        }
-
-        private class CompareRecentJobs : IComparer<KryptonRibbonRecentDoc>
-        {
-            public int Compare(KryptonRibbonRecentDoc x, KryptonRibbonRecentDoc y)
-            {
-                DateTime xD = DateTime.Parse(x.ExtraText);
-                DateTime yD = DateTime.Parse(y.ExtraText);
-                return xD.CompareTo(yD);
             }
         }
 

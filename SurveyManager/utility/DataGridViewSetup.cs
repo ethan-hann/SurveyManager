@@ -244,7 +244,7 @@ namespace SurveyManager.utility
 
                     grid.Columns.AddRange(columnsToAdd.ToArray());
 
-                    grid.AddInternalColumn(surveyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.Ascending, -1, -1);
+                    grid.AddInternalColumn(surveyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(jobNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(abstractNumberColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(acresColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
