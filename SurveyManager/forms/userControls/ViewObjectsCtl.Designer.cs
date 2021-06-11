@@ -124,9 +124,10 @@ namespace SurveyManager.forms.userControls
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.PreviousSelectedGroupRow = -1;
             this.dataGrid.ReadOnly = true;
-            this.dataGrid.Size = new System.Drawing.Size(955, 210);
+            this.dataGrid.Size = new System.Drawing.Size(955, 212);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            this.dataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellDoubleClick);
             // 
             // groupBox
             // 

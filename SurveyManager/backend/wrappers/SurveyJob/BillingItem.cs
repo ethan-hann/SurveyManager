@@ -92,7 +92,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         {
             get
             {
-                return !Description.Equals("N/A") && FieldRate.IsValidRate && OfficeRate.IsValidRate;
+                return !Description.ToLower().Equals("n/a") && FieldRate.IsValidRate && OfficeRate.IsValidRate;
             }
         }
 
@@ -164,7 +164,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public override string ToString()
         {
-            return $"Description: {Description}\tOffice Rate: {OfficeRate}\tField Rate: {FieldRate}";
+            return OfficeTime == TimeSpan.Zero ? $"Description: {Description}\tField Rate: {FieldRate}\tField Time: {FieldTime}" :
+                $"Description: {Description}\tOffice Rate: {OfficeRate}\tOffice Time: {OfficeTime}";
         }
 
         public DatabaseError Insert()

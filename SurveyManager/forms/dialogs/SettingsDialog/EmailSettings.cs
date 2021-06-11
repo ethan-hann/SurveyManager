@@ -2,7 +2,9 @@
 using SurveyManager.utility;
 using System;
 using System.Windows.Forms;
+using System.Linq;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.dialogs.SettingsDialog
 {
@@ -40,7 +42,7 @@ namespace SurveyManager.forms.dialogs.SettingsDialog
         /// </summary>
         public void SaveSettings()
         {
-            if (Validator.ValidateEmail(txtSMTPUsername.Text) && Validator.ValidateEmail(txtFromAddress.Text))
+            if (Validator.Email(txtSMTPUsername.Text).Count == 0 && Validator.Email(txtFromAddress.Text).Count == 0)
             {
                 if (int.TryParse(txtSMTPPort.Text, out int port))
                 {

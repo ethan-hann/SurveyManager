@@ -1,20 +1,20 @@
-﻿using SurveyManager.forms.surveyMenu.description;
-using SurveyManager.forms.surveyMenu.jobInfo;
-using SurveyManager.forms.surveyMenu.locationInfo;
-using SurveyManager.forms.surveyMenu.subdivisionInfo;
+﻿using SurveyManager.forms.dialogs;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.forms.surveyMenu
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class InfoCtl : UserControl
     {
         private readonly List<UserControl> infoControls = new List<UserControl>
         {
-            new EssentialInformationCtl(), new DescriptionCtl(), new SubdivisionCtl(), new LocationCtl()
+            new EssentialInformationCtl(), new SubdivisionCtl(), new LocationCtl()
         };
 
         public EventHandler StatusUpdate;
@@ -65,8 +65,15 @@ namespace SurveyManager.forms.surveyMenu
             {
                 if (ctl.IsEdited)
                 {
-                    if (!ctl.SaveInfo())
+                    List<ValidatorError> errors = ctl.SaveInfo();
+                    if (errors.Count != 0)
                     {
+                        StringBuilder bldr = new StringBuilder();
+                        foreach (ValidatorError e in errors)
+                            bldr.Append(e.ToDescriptionString() + "\n");
+
+                        CRichMsgBox.Show("Invalid or incomplete information detected. Please correct the issues below and try saving again:",
+                            "Incomplete Information", bldr.ToString(), MessageBoxButtons.OK, Resources.error_64x64);
                         return false;
                     }
                 }

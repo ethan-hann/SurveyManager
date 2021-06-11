@@ -269,6 +269,9 @@ namespace SurveyManager.utility
         /// <returns>A new <see cref="TrimVars"/> structure containing the trimmed string and the number of new lines.</returns>
         public static TrimVars TrimString(string text, int lineLength = 80)
         {
+            if (text.Length == lineLength)
+                return new TrimVars(text);
+
             for (int i = 0; i < text.Length; i++)
             {
                 if (i % lineLength == 0 && i != 0)
@@ -281,7 +284,7 @@ namespace SurveyManager.utility
                         }
                         if (i + 2 <= text.Length)
                         {
-                            text = text.Remove(i + 2, 1);
+                            text = text.Remove(i + 1, 1);
                         }
                     }
                     else if (text[i].Equals('\n'))

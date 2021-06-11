@@ -4,12 +4,14 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.forms.surveyMenu.locationInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class LocationCtl : UserControl, IInfoControl
     {
@@ -112,31 +114,24 @@ namespace SurveyManager.forms.surveyMenu.locationInfo
             JobHandler.Instance.CurrentJob.County = RuntimeVars.Instance.Counties.Find(e => e.ID == JobHandler.Instance.CurrentJob.CountyID);
         }
 
-        public bool SaveInfo()
+        public List<ValidatorError> SaveInfo()
         {
-            if (txtStreet.Text.Length <= 0 || txtStreet.Text.Equals("N/A"))
+            try
             {
-                CMessageBox.Show("The job's street cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
+                List<ValidatorError> errors = Validator.Address(new Address(txtStreet.Text, txtCity.Text, txtZipCode.Text));
+                errors.AddRange(Validator.County(cmbCounty.SelectedItem as County));
 
-            if (txtCity.Text.Length <= 0 || txtCity.Text.Equals("N/A"))
+                JobHandler.Instance.CurrentJob.Location.Street = txtStreet.Text;
+                JobHandler.Instance.CurrentJob.Location.City = txtCity.Text;
+                JobHandler.Instance.CurrentJob.Location.ZipCode = txtZipCode.Text;
+                JobHandler.Instance.CurrentJob.County = cmbCounty.SelectedItem as County;
+
+                return errors;
+            } catch (NullReferenceException e)
             {
-                CMessageBox.Show("The job's city cannot be empty or \"N/A\".", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception has occured: {e.Message}. The stacktrace is: {e.StackTrace}");
+                return new List<ValidatorError>() { ValidatorError.Exception };
             }
-
-            if (txtZipCode.Text.Length <= 0)
-            {
-                CMessageBox.Show("The job's zip-code cannot be empty.", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            JobHandler.Instance.CurrentJob.Location.Street = txtStreet.Text;
-            JobHandler.Instance.CurrentJob.Location.City = txtCity.Text;
-            JobHandler.Instance.CurrentJob.Location.ZipCode = txtZipCode.Text;
-            JobHandler.Instance.CurrentJob.County = cmbCounty.SelectedItem as County;
-            return true;
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)

@@ -1,5 +1,5 @@
 ﻿
-namespace SurveyManager.forms.surveyMenu
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     partial class InfoCtl
     {
@@ -42,7 +42,7 @@ namespace SurveyManager.forms.surveyMenu
             // 
             this.splitContainer1.Panel1.Controls.Add(this.lbCategories);
             this.splitContainer1.Panel1MinSize = 240;
-            this.splitContainer1.Size = new System.Drawing.Size(891, 681);
+            this.splitContainer1.Size = new System.Drawing.Size(891, 683);
             this.splitContainer1.SplitterDistance = 240;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -51,12 +51,11 @@ namespace SurveyManager.forms.surveyMenu
             this.lbCategories.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCategories.Items.AddRange(new object[] {
             "Essential Information",
-            "Description",
             "Subdivision",
             "Location"});
             this.lbCategories.Location = new System.Drawing.Point(0, 0);
             this.lbCategories.Name = "lbCategories";
-            this.lbCategories.Size = new System.Drawing.Size(240, 681);
+            this.lbCategories.Size = new System.Drawing.Size(240, 683);
             this.lbCategories.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCategories.TabIndex = 0;
             this.lbCategories.SelectedIndexChanged += new System.EventHandler(this.lbCategories_SelectedIndexChanged);

@@ -3,12 +3,14 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using static SurveyManager.utility.Enums;
 
-namespace SurveyManager.forms.surveyMenu.jobInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     public partial class EssentialInformationCtl : UserControl, IInfoControl
     {
@@ -19,7 +21,7 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             InitializeComponent();
         }
 
-        private void JobInfoCtl_Load(object sender, EventArgs e)
+        private void EssentialInformationCtl_Load(object sender, EventArgs e)
         {
             txtJobNumber.Text = JobHandler.Instance.CurrentJob.JobNumber;
             txtAbstract.Text = JobHandler.Instance.CurrentJob.AbstractNumber;
@@ -30,6 +32,10 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             txtAbstract.ReadOnly = JobHandler.Instance.ReadOnly;
             txtSurvey.ReadOnly = JobHandler.Instance.ReadOnly;
             txtNumOfAcres.ReadOnly = JobHandler.Instance.ReadOnly;
+
+            txtDescription.Text = JobHandler.Instance.CurrentJob.Description;
+            txtDescription.ReadOnly = JobHandler.Instance.ReadOnly;
+
 
             IsEdited = true;
         }
@@ -54,6 +60,11 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             {
                 JobHandler.Instance.CurrentJob.Acres = acres;
             }
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+            lblDescCharCount.Text = "Char Count: " + txtDescription.Text.Count() + " / 6000";
         }
 
         private void txtNumOfAcres_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,37 +102,28 @@ namespace SurveyManager.forms.surveyMenu.jobInfo
             JobHandler.Instance.UpdateSavePending(true);
         }
 
-        public bool SaveInfo()
+        public List<ValidatorError> SaveInfo()
         {
-            if (txtJobNumber.Text.Length == 0)
+            try
             {
-                CMessageBox.Show("The job number cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
+                double.TryParse(txtNumOfAcres.Text, out double acres);
 
-            if (txtAbstract.Text.Length == 0)
+                List<ValidatorError> errors = Validator.Information(txtJobNumber.Text, txtAbstract.Text, txtSurvey.Text, acres);
+                errors.AddRange(Validator.Description(txtDescription.Text));
+
+                JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
+                JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
+                JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
+                JobHandler.Instance.CurrentJob.Acres = acres;
+                JobHandler.Instance.CurrentJob.Description = txtDescription.Text;
+
+                return errors;
+
+            } catch (NullReferenceException e)
             {
-                CMessageBox.Show("The abstract cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
+                RuntimeVars.Instance.LogFile.AddEntry($"An exception has occured: {e.Message}. The stacktrace is: {e.StackTrace}");
+                return new List<ValidatorError>() { ValidatorError.Exception };
             }
-
-            if (txtSurvey.Text.Length == 0)
-            {
-                CMessageBox.Show("The survey name cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            if (txtNumOfAcres.Text.Length == 0)
-            {
-                CMessageBox.Show("The number of acres cannot be empty!", "Error", MessageBoxButtons.OK, Resources.error_64x64);
-                return false;
-            }
-
-            JobHandler.Instance.CurrentJob.JobNumber = txtJobNumber.Text;
-            JobHandler.Instance.CurrentJob.AbstractNumber = txtAbstract.Text;
-            JobHandler.Instance.CurrentJob.SurveyName = txtSurvey.Text;
-            JobHandler.Instance.CurrentJob.Acres = double.Parse(txtNumOfAcres.Text);
-            return true;
         }
 
         private void JobModified(object sender, KeyPressEventArgs e)

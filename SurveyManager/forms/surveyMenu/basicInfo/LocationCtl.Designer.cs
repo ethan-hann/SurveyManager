@@ -1,5 +1,5 @@
 ﻿
-namespace SurveyManager.forms.surveyMenu.locationInfo
+namespace SurveyManager.forms.surveyMenu.basicInfo
 {
     partial class LocationCtl
     {

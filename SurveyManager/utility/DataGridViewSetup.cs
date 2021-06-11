@@ -225,6 +225,14 @@ namespace SurveyManager.utility
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
                     columnsToAdd.Add(acresColumn);
+                    DataGridViewColumn descColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Description",
+                        Name = "descColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader
+                    };
+                    columnsToAdd.Add(descColumn);
                     DataGridViewColumn countyColumn = new KryptonDataGridViewTextBoxColumn
                     {
                         HeaderText = "County",
@@ -238,8 +246,9 @@ namespace SurveyManager.utility
 
                     grid.AddInternalColumn(surveyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(jobNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(abstractNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
-                    grid.AddInternalColumn(acresColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(abstractNumberColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(acresColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(descColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(countyColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     break;
                 }

@@ -17,6 +17,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
+using static SurveyManager.utility.Comparators;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.forms.userControls
@@ -71,18 +72,26 @@ namespace SurveyManager.forms.userControls
             {
                 if (dataGrid.SelectedRows[0].Tag != null)
                 {
-                    if (JobHandler.Instance.OpenJob(dataGrid.SelectedRows[0].Tag as Survey))
-                    {
-                        RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + (dataGrid.SelectedRows[0].Tag as Survey).JobNumber + "]");
-                        JobHandler.Instance.AddSurveyToRecentJobs();
-                    }
+                    OpenSurvey(dataGrid.SelectedRows[0].Tag as Survey);
                 }
+            }
+        }
+
+        private void OpenSurvey(Survey s)
+        {
+            if (s == null)
+                return;
+
+            if (JobHandler.Instance.OpenJob(s))
+            {
+                RuntimeVars.Instance.MainForm.ChangeTitleText("[JOB# " + s.JobNumber + "]");
+                JobHandler.Instance.AddSurveyToRecentJobs();
             }
         }
 
         private void DownloadFiles(object sender, EventArgs e)
         {
-            if (typeOfData != EntityTypes.Survey)
+            if (typeOfData != EntityTypes.Survey || (propGrid.SelectedObject as Survey) == null)
                 return;
 
             if (!(propGrid.SelectedObject as Survey).HasFiles)
@@ -109,6 +118,12 @@ namespace SurveyManager.forms.userControls
         {
             if (typeOfData != EntityTypes.Survey)
                 return;
+
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot upload files to this job.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
 
             UploadFile uploadDialog = new UploadFile((propGrid.SelectedObject as Survey).Files);
             uploadDialog.StatusUpdate += RuntimeVars.Instance.MainForm.ChangeStatusText;
@@ -223,6 +238,8 @@ namespace SurveyManager.forms.userControls
                         new DBMap("client_id", "Client ID"),
                         new DBMap("description", "Description"),
                         new DBMap("subdivision", "Subdivision"),
+                        new DBMap("abstract_number", "Abstract"),
+                        new DBMap("survey_name", "Survey Name"),
                         new DBMap("lot", "Lot #"),
                         new DBMap("block", "Block #"),
                         new DBMap("section", "Section #"),
@@ -230,7 +247,7 @@ namespace SurveyManager.forms.userControls
                         new DBMap("acres", "Acres"),
                         new DBMap("realtor_id", "Realtor ID"),
                         new DBMap("title_company_id", "Title Company ID")
-                    }; //TODO: combine all tables to search for surveys!
+                    };
 
                     filter = new AdvancedFilter("Survey", columns, "Find Surveys", "", Icon.FromHandle(Resources.surveying_16x16.GetHicon()));
                     break;
@@ -350,6 +367,12 @@ namespace SurveyManager.forms.userControls
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot delete from the database.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
+
             objectsToDelete = new List<IDatabaseWrapper>();
             if (dataGrid.SelectedRows.Count > 0)
             {
@@ -474,6 +497,12 @@ namespace SurveyManager.forms.userControls
         {
             if (propGrid.SelectedObject == null)
                 return;
+
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot save changed data to the database.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
 
             IDatabaseWrapper obj = (IDatabaseWrapper)propGrid.SelectedObject;
             DatabaseError error = obj.Update();
@@ -664,11 +693,14 @@ namespace SurveyManager.forms.userControls
                     c.JobNumber,
                     c.AbstractNumber,
                     c.Acres,
-                    c.County.CountyName,
+                    c.Description,
+                    c.County.CountyName
                 });
                 row.Tag = c;
                 rows.Add(row);
             }
+
+            rows.Sort(new CompareOutlookGridRows());
         }
         #endregion
 
@@ -678,6 +710,15 @@ namespace SurveyManager.forms.userControls
             {
                 DataGridViewRow r = dataGrid.Rows[e.RowIndex];
                 propGrid.SelectedObject = r.Tag;
+            }
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow r = dataGrid.Rows[e.RowIndex];
+                OpenSurvey(r.Tag as Survey);
             }
         }
     }

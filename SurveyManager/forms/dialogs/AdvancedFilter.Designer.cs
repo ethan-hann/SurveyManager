@@ -35,7 +35,6 @@ namespace SurveyManager.forms.dialogs
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.cmbColumns = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.dBMapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbChoices = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txtSearch1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAddFilter = new ComponentFactory.Krypton.Toolkit.KryptonDropButton();
@@ -56,14 +55,15 @@ namespace SurveyManager.forms.dialogs
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBMapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbColumns)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBMapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbChoices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilters)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMapBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -102,25 +102,10 @@ namespace SurveyManager.forms.dialogs
             this.cmbColumns.ValueMember = "InternalField";
             this.cmbColumns.SelectedIndexChanged += new System.EventHandler(this.cmbColumns_SelectedIndexChanged);
             // 
-            // dBMapBindingSource
-            // 
-            this.dBMapBindingSource.DataSource = typeof(SurveyManager.utility.DBMap);
-            // 
             // cmbChoices
             // 
             this.cmbChoices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbChoices.DropDownWidth = 143;
-            this.cmbChoices.Items.AddRange(new object[] {
-            "StartsLike",
-            "EndsLike",
-            "Like",
-            "NotLike",
-            "Equals",
-            "LessOrEqual",
-            "GreaterOrEqual",
-            "NotEqual",
-            "Greater",
-            "Less"});
             this.cmbChoices.Location = new System.Drawing.Point(152, 3);
             this.cmbChoices.Name = "cmbChoices";
             this.cmbChoices.Size = new System.Drawing.Size(143, 21);
@@ -266,6 +251,10 @@ namespace SurveyManager.forms.dialogs
             // 
             this.kryptonContextMenuItem2.Text = "Or";
             // 
+            // dBMapBindingSource
+            // 
+            this.dBMapBindingSource.DataSource = typeof(SurveyManager.utility.DBMap);
+            // 
             // AdvancedFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,16 +269,15 @@ namespace SurveyManager.forms.dialogs
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.TopMost = true;
-            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.AdvancedFilter_HelpRequested);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbColumns)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBMapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbChoices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilters)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBMapBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

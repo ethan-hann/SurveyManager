@@ -58,7 +58,7 @@ namespace SurveyManager.forms.dialogs
             LicenseInfo temp = LicenseEngine.GetLicenseInfo(txtProductKey.Text);
             if (!temp.IsEmpty)
             {
-                if (temp.Type == utility.Licensing.LicenseType.Trial)
+                if (temp.Type == LicenseType.Trial)
                 {
                     if (DateTime.Now.Date >= temp.ExpirationDate.Date)
                     {
@@ -90,14 +90,14 @@ namespace SurveyManager.forms.dialogs
         private void ActivationDlg_FormClosing(object sender, FormClosingEventArgs e)
         {
             Enums.CloseReasons reason =
-                    (info.Type == utility.Licensing.LicenseType.FullLicense || info.Type == utility.Licensing.LicenseType.Trial) ?
+                    (info.Type == LicenseType.FullLicense || info.Type == LicenseType.Trial) ?
                     Enums.CloseReasons.Licensed : Enums.CloseReasons.Unlicensed;
             LicensingComplete?.Invoke(this, new LicensingEventArgs(info, reason));
         }
 
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-            Process.Start("mailto:ethan.hann@protonmail.com");
+            Process.Start("mailto:ethan.hann@pm.me");
         }
     }
 }

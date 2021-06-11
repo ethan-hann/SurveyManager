@@ -341,14 +341,14 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         /// <summary>
         /// Get a value that indicates if this is a valid Survey object.
-        /// <para>A valid survey has a valid client, county, job number, and description at the very least.</para>
+        /// <para>A valid survey has a valid client, survey name, county, job number, and description, abstract number, and location at the very least.</para>
         /// </summary>
         [Browsable(false)]
         public bool IsValidSurvey
         {
             get
             {
-                return (Client != null && Client.IsValidClient) && County != null && !JobNumber.Equals("N/A") && !Description.Equals("N/A") && !AbstractNumber.Equals("N/A");
+                return Validator.Survey(this).Count == 0;
             }
         }
 
@@ -407,7 +407,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 };
                 dbThread.Start();
             }
-            if (!FileIds.Equals("N/A"))
+            if (!FileIds.ToLower().Equals("n/a"))
             {
                 Thread dbThread = new Thread(() =>
                 {
@@ -419,7 +419,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 };
                 dbThread.Start();
             }
-            if (!NotesString.Equals("N/A"))
+            if (!NotesString.ToLower().Equals("n/a"))
             {
                 ParseNotes(NotesString);
             }
@@ -493,7 +493,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// <param name="id">The id to add.</param>
         public void AddFileId(int id)
         {
-            if (FileIds.Equals("N/A"))
+            if (FileIds.ToLower().Equals("n/a"))
                 FileIds = "";
 
             if (FileIds.Contains($"{id}"))

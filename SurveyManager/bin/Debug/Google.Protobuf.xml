@@ -3134,6 +3134,13 @@
             <param name="message">The message to merge the data into.</param>
             <param name="input">Stream containing the data to merge, which must be protobuf-encoded binary data.</param>
         </member>
+        <member name="M:Google.Protobuf.MessageExtensions.MergeFrom(Google.Protobuf.IMessage,System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Merges data from the given span into an existing message.
+            </summary>
+            <param name="message">The message to merge the data into.</param>
+            <param name="span">Span containing the data to merge, which must be protobuf-encoded binary data.</param>
+        </member>
         <member name="M:Google.Protobuf.MessageExtensions.MergeDelimitedFrom(Google.Protobuf.IMessage,System.IO.Stream)">
             <summary>
             Merges length-delimited data from the given stream into an existing message.
@@ -3239,6 +3246,13 @@
         <member name="M:Google.Protobuf.MessageParser.ParseFrom(System.Buffers.ReadOnlySequence{System.Byte})">
             <summary>
             Parses a message from the given sequence.
+            </summary>
+            <param name="data">The data to parse.</param>
+            <returns>The parsed message.</returns>
+        </member>
+        <member name="M:Google.Protobuf.MessageParser.ParseFrom(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Parses a message from the given span.
             </summary>
             <param name="data">The data to parse.</param>
             <returns>The parsed message.</returns>
@@ -3355,6 +3369,13 @@
             <param name="data">The data to parse.</param>
             <returns>The parsed message.</returns>
         </member>
+        <member name="M:Google.Protobuf.MessageParser`1.ParseFrom(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Parses a message from the given span.
+            </summary>
+            <param name="data">The data to parse.</param>
+            <returns>The parsed message.</returns>
+        </member>
         <member name="M:Google.Protobuf.MessageParser`1.ParseDelimitedFrom(System.IO.Stream)">
             <summary>
             Parses a length-delimited message from the given stream.
@@ -3408,6 +3429,17 @@
             as the parsing proceeds.
             All the public methods are intended to be invoked only by the generated code,
             users should never invoke them directly.
+            </summary>
+        </member>
+        <member name="M:Google.Protobuf.ParseContext.Initialize(System.ReadOnlySpan{System.Byte},Google.Protobuf.ParseContext@)">
+            <summary>
+            Initialize a <see cref="T:Google.Protobuf.ParseContext"/>, building all <see cref="T:Google.Protobuf.ParserInternalState"/> from defaults and
+            the given <paramref name="buffer"/>.
+            </summary>
+        </member>
+        <member name="M:Google.Protobuf.ParseContext.Initialize(System.ReadOnlySpan{System.Byte},Google.Protobuf.ParserInternalState@,Google.Protobuf.ParseContext@)">
+            <summary>
+            Initialize a <see cref="T:Google.Protobuf.ParseContext"/> using existing <see cref="T:Google.Protobuf.ParserInternalState"/>, e.g. from <see cref="T:Google.Protobuf.CodedInputStream"/>.
             </summary>
         </member>
         <member name="M:Google.Protobuf.ParseContext.Initialize(Google.Protobuf.CodedInputStream,Google.Protobuf.ParseContext@)">
@@ -4664,11 +4696,11 @@
         </member>
         <member name="P:Google.Protobuf.Reflection.FileOptions.JavaOuterClassname">
             <summary>
-            If set, all the classes from the .proto file are wrapped in a single
-            outer class with the given name.  This applies to both Proto1
-            (equivalent to the old "--one_java_file" option) and Proto2 (where
-            a .proto always translates to a single class, but you may want to
-            explicitly choose the class name).
+            Controls the name of the wrapper Java class generated for the .proto file.
+            That class will always contain the .proto file's getDescriptor() method as
+            well as any top-level extensions defined in the .proto file.
+            If java_multiple_files is disabled, then all the other classes from the
+            .proto file will be nested inside the single wrapper outer class.
             </summary>
         </member>
         <member name="P:Google.Protobuf.Reflection.FileOptions.HasJavaOuterClassname">
@@ -4682,10 +4714,10 @@
         </member>
         <member name="P:Google.Protobuf.Reflection.FileOptions.JavaMultipleFiles">
             <summary>
-            If set true, then the Java code generator will generate a separate .java
+            If enabled, then the Java code generator will generate a separate .java
             file for each top-level message, enum, and service defined in the .proto
-            file.  Thus, these types will *not* be nested inside the outer class
-            named by java_outer_classname.  However, the outer class will still be
+            file.  Thus, these types will *not* be nested inside the wrapper class
+            named by java_outer_classname.  However, the wrapper class will still be
             generated to contain the file's getDescriptor() method as well as any
             top-level extensions defined in the file.
             </summary>
@@ -9946,6 +9978,13 @@
             <summary>
             Writes a string field value, without a tag, to the stream.
             The data is length-prefixed.
+            </summary>
+        </member>
+        <member name="M:Google.Protobuf.WritingPrimitives.NarrowFourUtf16CharsToAsciiAndWriteToBuffer(System.Byte@,System.UInt64)">
+            <summary>
+            Given a QWORD which represents a buffer of 4 ASCII chars in machine-endian order,
+            narrows each WORD to a BYTE, then writes the 4-byte result to the output buffer
+            also in machine-endian order.
             </summary>
         </member>
         <member name="M:Google.Protobuf.WritingPrimitives.WriteBytes(System.Span{System.Byte}@,Google.Protobuf.WriterInternalState@,Google.Protobuf.ByteString)">

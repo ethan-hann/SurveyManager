@@ -1,8 +1,12 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using MySql.Data.MySqlClient;
 using SurveyManager.backend;
+using SurveyManager.forms.dialogs;
+using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.ComponentModel;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
@@ -11,7 +15,7 @@ namespace SurveyManager.forms.databaseMenu
 {
     public partial class DBConnection : KryptonForm
     {
-        private int errorCode;
+        private MySqlException errorCode;
         private bool isConnected;
 
         /// <summary>
@@ -108,7 +112,7 @@ namespace SurveyManager.forms.databaseMenu
 
         private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            isConnected = errorCode == -1;
+            isConnected = errorCode == null;
 
             if (isConnected)
             {
@@ -122,12 +126,14 @@ namespace SurveyManager.forms.databaseMenu
                 txtStatus.Text = "Not Connected to Server!";
                 btnFinish.Visible = false;
                 RuntimeVars.Instance.DatabaseConnected = false;
+                CRichMsgBox.Show("There was an issue communicating with the server. See the error below:", "Server Connection Failed", Database.GetErrorMessage(errorCode), MessageBoxButtons.OK, Resources.error_64x64);
             }
         }
 
         private void Finish(object sender, EventArgs e)
         {
-            DatabaseConnectFinished?.Invoke(this, new DBArgs(errorCode));
+            if (errorCode == null)
+                DatabaseConnectFinished?.Invoke(this, new DBArgs(-1));
 
             if (isConnected)
             {

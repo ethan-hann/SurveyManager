@@ -77,7 +77,7 @@ namespace SurveyManager.backend.wrappers
         {
             if (!IsEmpty)
                 return $"{Street} {City}, {ZipCode}";
-            return "(...)";
+            return "Invalid Address (...)";
         }
 
         public DatabaseError Insert()

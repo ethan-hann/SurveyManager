@@ -54,6 +54,7 @@ namespace SurveyManager
             this.kryptonRibbonGroupButton1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple12 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnReloadFromDatabase = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnCloseCurrentJob = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.filesRibbonGroup = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -132,7 +133,6 @@ namespace SurveyManager
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
             this.dumpDatabaseBGWorker = new System.ComponentModel.BackgroundWorker();
             this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.btnReloadFromDatabase = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderPanel)).BeginInit();
@@ -216,7 +216,6 @@ namespace SurveyManager
             this.surveyTab,
             this.objectsTab,
             this.databaseTab});
-            this.mainRibbon.SelectedContext = null;
             this.mainRibbon.SelectedTab = this.surveyTab;
             this.mainRibbon.Size = new System.Drawing.Size(1536, 115);
             this.mainRibbon.TabIndex = 4;
@@ -345,6 +344,16 @@ namespace SurveyManager
             this.kryptonRibbonGroupTriple12.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.btnReloadFromDatabase,
             this.btnCloseCurrentJob});
+            // 
+            // btnReloadFromDatabase
+            // 
+            this.btnReloadFromDatabase.ImageLarge = global::SurveyManager.Properties.Resources.reload;
+            this.btnReloadFromDatabase.ImageSmall = global::SurveyManager.Properties.Resources.reload_16x16;
+            this.btnReloadFromDatabase.TextLine1 = "Reload";
+            this.btnReloadFromDatabase.TextLine2 = "from Database";
+            this.btnReloadFromDatabase.ToolTipBody = resources.GetString("btnReloadFromDatabase.ToolTipBody");
+            this.btnReloadFromDatabase.ToolTipTitle = "Current Job";
+            this.btnReloadFromDatabase.Click += new System.EventHandler(this.btnReloadFromDatabase_Click);
             // 
             // btnCloseCurrentJob
             // 
@@ -907,16 +916,6 @@ namespace SurveyManager
             this.dumpDatabaseBGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.dumpDatabaseBGWorker_DoWork);
             this.dumpDatabaseBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.dumpDatabaseBGWorker_ProgressChanged);
             this.dumpDatabaseBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.dumpDatabaseBGWorker_RunWorkerCompleted);
-            // 
-            // btnReloadFromDatabase
-            // 
-            this.btnReloadFromDatabase.ImageLarge = global::SurveyManager.Properties.Resources.reload;
-            this.btnReloadFromDatabase.ImageSmall = global::SurveyManager.Properties.Resources.reload_16x16;
-            this.btnReloadFromDatabase.TextLine1 = "Reload";
-            this.btnReloadFromDatabase.TextLine2 = "Job from Database";
-            this.btnReloadFromDatabase.ToolTipBody = resources.GetString("btnReloadFromDatabase.ToolTipBody");
-            this.btnReloadFromDatabase.ToolTipTitle = "Current Job";
-            this.btnReloadFromDatabase.Click += new System.EventHandler(this.btnReloadFromDatabase_Click);
             // 
             // MainForm
             // 

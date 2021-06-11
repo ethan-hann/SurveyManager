@@ -61,7 +61,6 @@ namespace SurveyManager.backend
             string connection = Settings.Default.ConnectionString;
             if (connection != null && !connection.Equals(""))
             {
-                Console.WriteLine("Connection string: " + connection);
                 string[] conParts = connection.Split(';');
                 string[] conParams = new string[conParts.Length];
 
@@ -92,10 +91,9 @@ namespace SurveyManager.backend
 
         /// <summary>
         /// Creates a database connection on the given connection string and tests that it can be opened and closed.
-        /// If it can't, the error code returned by <see cref="MySqlException"/> is returned by this function.
         /// </summary>
-        /// <returns></returns>
-        public static int CheckConnection()
+        /// <returns>An <see cref="MySqlException"/> if an error occured while checking connection; <c>null</c> otherwise.</returns>
+        public static MySqlException CheckConnection()
         {
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
@@ -109,14 +107,27 @@ namespace SurveyManager.backend
                 {
                     RuntimeVars.Instance.DatabaseConnected = false;
                     RuntimeVars.Instance.LogFile.AddEntry($"Error when trying to connect to SQL database: {ex.Message}");
-                    return ex.Number;
+                    return ex;
                 }
                 finally
                 {
                     con.Dispose();
                 }
-                return -1;
+                return null;
             }
+        }
+
+        /// <summary>
+        /// Get a MySql Error Message based on the supplied <paramref name="exception"/>. The exception can be retrieved from the <see cref="CheckConnection"/> method.
+        /// <para>If the exception is <c>null</c>, meaning no error occured, this method simply returns <c>NO ERROR</c> as a string.</para>
+        /// </summary>
+        /// <param name="exception">The exception to get the message of.</param>
+        /// <returns>A string containing the error message.</returns>
+        public static string GetErrorMessage(MySqlException exception = null)
+        {
+            if (exception == null)
+                return "NO ERROR";
+            return exception.Message;
         }
 
         /// <summary>
@@ -157,7 +168,7 @@ namespace SurveyManager.backend
                 {
                     dt.Columns.Add("MySQL Error");
                     dt.Columns.Add("Error Code");
-                    dt.Rows.Add(ex.Message, ex.ErrorCode);
+                    dt.Rows.Add(ex.Message, ex.Code);
                 }
 
                 con.Close();
@@ -1658,6 +1669,81 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
+        /// Search the database for the specified <paramref name="clientName"/> and get a value indiciating if the Client already exists.
+        /// </summary>
+        /// <param name="clientName">The client's name to search for.</param>
+        /// <returns>True if the client already exists; False otherwise.</returns>
+        public static bool DoesClientExist(string clientName)
+        {
+            bool exists = false;
+            string name = clientName.TrimEnd();
+            name = name.TrimStart();
+
+            string q = Queries.BuildQuery(QType.SELECT, "Client", null, new ArrayList { "name" }, $"name LIKE '{name}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using MySqlDataReader reader = cmd.ExecuteReader();
+                    exists = reader.HasRows;
+                }
+                con.Close();
+            }
+            return exists;
+        }
+
+        /// <summary>
+        /// Search the database for the specified <paramref name="titleCompanyName"/> and get a value indiciating if the Title Company already exists.
+        /// </summary>
+        /// <param name="titleCompanyName">The title company's name to search for.</param>
+        /// <returns>True if the title company already exists; False otherwise.</returns>
+        public static bool DoesTitleCompanyExist(string titleCompanyName)
+        {
+            bool exists = false;
+            string name = titleCompanyName.TrimEnd();
+            name = name.TrimStart();
+
+            string q = Queries.BuildQuery(QType.SELECT, "TitleCompany", null, new ArrayList { "name" }, $"name LIKE '{name}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using MySqlDataReader reader = cmd.ExecuteReader();
+                    exists = reader.HasRows;
+                }
+                con.Close();
+            }
+            return exists;
+        }
+
+        /// <summary>
+        /// Search the database for the specified <paramref name="realtorName"/> and get a value indiciating if the Realtor already exists.
+        /// </summary>
+        /// <param name="realtorName">The Realtor's name to search for.</param>
+        /// <returns>True if the realtor already exists; False otherwise.</returns>
+        public static bool DoesRealtorExist(string realtorName)
+        {
+            bool exists = false;
+            string name = realtorName.TrimEnd();
+            name = name.TrimStart();
+
+            string q = Queries.BuildQuery(QType.SELECT, "Realtor", null, new ArrayList { "name" }, $"name LIKE '{name}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using MySqlDataReader reader = cmd.ExecuteReader();
+                    exists = reader.HasRows;
+                }
+                con.Close();
+            }
+            return exists;
+        }
+
+        /// <summary>
         /// Search the database for the specified <paramref name="jobNumber"/> and get a value indicating if the job already exists.
         /// </summary>
         /// <param name="jobNumber">The job number to search for.</param>
@@ -1665,16 +1751,14 @@ namespace SurveyManager.backend
         public static bool DoesSurveyExist(string jobNumber)
         {
             bool exists = false;
-            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, null, $"job_number='{jobNumber}'");
+            string q = Queries.BuildQuery(QType.SELECT, "Survey", null, new ArrayList { "job_number" }, $"job_number='{jobNumber}'");
             using (MySqlConnection con = new MySqlConnection(ConnectionString))
             {
                 con.Open();
                 using (MySqlCommand cmd = new MySqlCommand(q, con))
                 {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        exists = reader.HasRows;
-                    }
+                    using MySqlDataReader reader = cmd.ExecuteReader();
+                    exists = reader.HasRows;
                 }
                 con.Close();
             }
@@ -2367,6 +2451,7 @@ namespace SurveyManager.backend
             return affectedRows != 0;
         }
         #endregion
+
         #region Billing Items
         /// <summary>
         /// Insert into the database the <see cref="BillingItem"/> <paramref name="item"/>.

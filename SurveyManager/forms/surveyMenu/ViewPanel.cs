@@ -5,6 +5,7 @@ using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
 using System.Windows.Forms;
+using static SurveyManager.utility.CEventArgs;
 
 namespace SurveyManager.forms.surveyMenu
 {
@@ -30,15 +31,24 @@ namespace SurveyManager.forms.surveyMenu
 
         public void CreateEmptyJob()
         {
+            if (propGrid == null)
+                return;
+
             try
             {
                 propGrid.SelectedObject = new Survey();
-                (Parent as KryptonPage).Text = "No Job Opened";
-                (Parent as KryptonPage).TextTitle = "No Job Opened";
-                (Parent as KryptonPage).UniqueName = "No Job Opened";
+                KryptonPage parent = (KryptonPage)Parent;
+                if (parent == null)
+                    return;
+
+                parent.Text = "No Job Opened";
+                parent.TextTitle = "No Job Opened";
+                parent.UniqueName = "No Job Opened";
                 propGrid.Enabled = false;
-            } catch (NullReferenceException e)
+            }
+            catch (NullReferenceException e)
             {
+                RuntimeVars.Instance.MainForm.ChangeStatusText(this, new StatusArgs($"An exception has occured: {e.Message}. See the log file for full details."));
                 RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {e.Message}. The stacktrace is: {e.StackTrace}");
             }
         }
@@ -58,9 +68,13 @@ namespace SurveyManager.forms.surveyMenu
                         propGrid.SelectedObject = new Survey();
                     }
 
-                (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    KryptonPage parent = (KryptonPage)Parent;
+                    if (parent == null)
+                        return;
+
+                    parent.Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     propGrid.Enabled = !JobHandler.Instance.ReadOnly;
                 }
                 else
@@ -69,6 +83,7 @@ namespace SurveyManager.forms.surveyMenu
                 }
             } catch (NullReferenceException n)
             {
+                RuntimeVars.Instance.MainForm.ChangeStatusText(this, new StatusArgs($"An exception has occured: {n.Message}. See the log file for full details."));
                 RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {n.Message}. The stacktrace is: {n.StackTrace}");
             }
         }
@@ -82,16 +97,20 @@ namespace SurveyManager.forms.surveyMenu
                     propGrid.SelectedObject = Database.GetSurvey(JobHandler.Instance.CurrentJob.JobNumber);
                     if (propGrid.SelectedObject == null)
                     {
-                        propGrid.SelectedObject = new Survey();
+                        propGrid.SelectedObject = JobHandler.Instance.CurrentJob;
                     }
+                    KryptonPage parent = (KryptonPage)Parent;
+                    if (parent == null)
+                        return;
 
-                (Parent as KryptonPage).Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
-                    (Parent as KryptonPage).UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.Text = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.TextTitle = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
+                    parent.UniqueName = "Job #: " + JobHandler.Instance.CurrentJob.JobNumber + " Info";
                     propGrid.Enabled = !JobHandler.Instance.ReadOnly;
                 }
             } catch (NullReferenceException n)
             {
+                RuntimeVars.Instance.MainForm.ChangeStatusText(this, new StatusArgs($"An exception has occured: {n.Message}. See the log file for full details."));
                 RuntimeVars.Instance.LogFile.AddEntry($"An exception occured: {n.Message}. The stacktrace is: {n.StackTrace}");
             }
         }
@@ -115,6 +134,12 @@ namespace SurveyManager.forms.surveyMenu
 
             if (!e.OldValue.Equals(e.ChangedItem.Value))
                 JobHandler.Instance.UpdateSavePending(true);
+        }
+
+        private void propGrid_SelectedObjectsChanged(object sender, EventArgs e)
+        {
+            propGrid.Invalidate();
+            propGrid.Update();
         }
     }
 }

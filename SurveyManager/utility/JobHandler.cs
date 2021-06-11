@@ -4,8 +4,10 @@ using SurveyManager.forms.dialogs;
 using SurveyManager.Properties;
 using System;
 using System.ComponentModel;
+using System.Collections;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
+using System.Collections.Generic;
 
 namespace SurveyManager.utility
 {
@@ -85,6 +87,44 @@ namespace SurveyManager.utility
         /// make sure there is actually a job opened.
         /// </summary>
         public Survey CurrentJob { get; private set; } = null;
+
+        /// <summary>
+        /// Get the missing information for the current survey job as a list of strings.
+        /// <para>If there is no job opened, the list contains a single item: <c>NO JOB OPENED</c>.</para>
+        /// <para>If the current job is valid, the returned list will be empty (i.e. Count == 0).</para>
+        /// </summary>
+        public List<string> MissingInformation
+        {
+            get
+            {
+                List<string> info = new List<string>();
+                if (!IsJobOpen)
+                {
+                    info.Add("NO JOB OPENED");
+                    return info;
+                }
+
+                if (CurrentJob.Client == null || !CurrentJob.Client.IsValidClient)
+                    info.Add("Client");
+
+                if (CurrentJob.County == null || !CurrentJob.County.IsValidCounty)
+                    info.Add("County");
+
+                if (CurrentJob.JobNumber == null || CurrentJob.JobNumber.ToLower().Equals("n/a"))
+                    info.Add("Job Number");
+
+                if (CurrentJob.Description == null || CurrentJob.Description.ToLower().Equals("n/a"))
+                    info.Add("Description");
+
+                if (CurrentJob.AbstractNumber == null || CurrentJob.AbstractNumber.ToLower().Equals("n/a"))
+                    info.Add("Abstract Number");
+
+                if (CurrentJob.Location == null || CurrentJob.Location.IsEmpty)
+                    info.Add("Location");
+
+                return info;
+            }
+        }
 
         private bool _savePending = false;
 
@@ -325,7 +365,7 @@ namespace SurveyManager.utility
                 {
                     case ExitChoice.SaveAndExit:
                     {
-                        isClosing = true;
+                        isClosing = false;
                         Save();
                         break;
                     }
@@ -470,7 +510,14 @@ namespace SurveyManager.utility
 
         private void SaveBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (_jobState != JobState.SaveError && isClosing)
+            if (_jobState == JobState.SaveError)
+            {
+                JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} could not be saved to the database."));
+                _savePending = true;
+                return;
+            }
+
+            if (isClosing)
             {
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
                 _savePending = false;
@@ -482,6 +529,7 @@ namespace SurveyManager.utility
                 AddSurveyToRecentJobs();
                 _savePending = false;
                 JobSaved?.Invoke(this, new StatusArgs($"Job# {lastJobNumber} saved to the database successfully."));
+                return;
             }
         }
 
@@ -510,9 +558,19 @@ namespace SurveyManager.utility
                         {
                             case ExitChoice.SaveAndExit:
                             {
-                                isClosing = true;
-                                Save();
-                                break;
+                                if (CurrentJob.IsValidSurvey)
+                                {
+                                    isClosing = true;
+                                    Save();
+                                    break;
+                                }
+                                else
+                                {
+                                    isClosing = true;
+                                    StatusUpdate?.Invoke(this, new StatusArgs("Job is missing information. Can not save to database; Closing instead..."));
+                                    Close();
+                                    break;
+                                }
                             }
                             case ExitChoice.ExitNoSave:
                             {
@@ -521,7 +579,10 @@ namespace SurveyManager.utility
                             }
                             case ExitChoice.SaveOnly:
                             {
-                                Save();
+                                if (CurrentJob.IsValidSurvey)
+                                    Save();
+                                else
+                                    StatusUpdate?.Invoke(this, new StatusArgs("Job is missing information. Can not save to database."));
                                 return false;
                             }
                             case ExitChoice.Cancel:
@@ -531,7 +592,7 @@ namespace SurveyManager.utility
                                 return false;
                             }
                             default:
-                            return false;
+                                return false;
                         }
                     }
                     else
