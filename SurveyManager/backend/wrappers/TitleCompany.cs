@@ -22,7 +22,7 @@ namespace SurveyManager.backend.wrappers
         [Category("Company Information")]
         [Description("The full name of the Title Company.")]
         [Browsable(true)]
-        [DisplayName("Name")]
+        [DisplayName("Company Name")]
         public string Name { get; set; } = "N/A";
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SurveyManager.backend.wrappers
         [Category("Company Information")]
         [Description("The email address of the associate at the title company.")]
         [Browsable(true)]
-        [DisplayName("Associates Email")]
+        [DisplayName("Associate's Email")]
         public string AssociateEmail { get; set; } = "N/A";
 
         /// <summary>

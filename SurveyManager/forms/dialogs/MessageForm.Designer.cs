@@ -65,7 +65,7 @@ namespace SurveyManager.forms.dialogs
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(220, 88);
+            this.btnOK.Location = new System.Drawing.Point(223, 90);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 25);
             this.btnOK.TabIndex = 4;
@@ -75,7 +75,7 @@ namespace SurveyManager.forms.dialogs
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(301, 88);
+            this.btnCancel.Location = new System.Drawing.Point(304, 90);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 25);
             this.btnCancel.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace SurveyManager.forms.dialogs
             // btnNo
             // 
             this.btnNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNo.Location = new System.Drawing.Point(220, 88);
+            this.btnNo.Location = new System.Drawing.Point(223, 90);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(75, 25);
             this.btnNo.TabIndex = 1;
@@ -95,7 +95,7 @@ namespace SurveyManager.forms.dialogs
             // btnYes
             // 
             this.btnYes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnYes.Location = new System.Drawing.Point(139, 88);
+            this.btnYes.Location = new System.Drawing.Point(142, 90);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(75, 25);
             this.btnYes.TabIndex = 0;
@@ -109,7 +109,7 @@ namespace SurveyManager.forms.dialogs
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(394, 129);
+            this.ClientSize = new System.Drawing.Size(397, 131);
             this.Controls.Add(this.btnYes);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnCancel);

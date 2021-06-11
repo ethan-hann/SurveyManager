@@ -29,14 +29,16 @@ namespace SurveyManager.forms.userControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid();
+            this.components = new System.ComponentModel.Container();
+            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             this.SuspendLayout();
             // 
-            // propertyGrid1
+            // propGrid
             // 
             this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propGrid.Location = new System.Drawing.Point(0, 0);
             this.propGrid.Name = "propGrid";
+            this.propGrid.PropertySort = System.Windows.Forms.PropertySort.Categorized;
             this.propGrid.Size = new System.Drawing.Size(695, 478);
             this.propGrid.TabIndex = 0;
             // 

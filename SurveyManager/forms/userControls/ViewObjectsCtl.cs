@@ -91,7 +91,7 @@ namespace SurveyManager.forms.userControls
 
         private void DownloadFiles(object sender, EventArgs e)
         {
-            if (typeOfData != EntityTypes.Survey)
+            if (typeOfData != EntityTypes.Survey || (propGrid.SelectedObject as Survey) == null)
                 return;
 
             if (!(propGrid.SelectedObject as Survey).HasFiles)
@@ -118,6 +118,12 @@ namespace SurveyManager.forms.userControls
         {
             if (typeOfData != EntityTypes.Survey)
                 return;
+
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot upload files to this job.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
 
             UploadFile uploadDialog = new UploadFile((propGrid.SelectedObject as Survey).Files);
             uploadDialog.StatusUpdate += RuntimeVars.Instance.MainForm.ChangeStatusText;
@@ -361,6 +367,12 @@ namespace SurveyManager.forms.userControls
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot delete from the database.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
+
             objectsToDelete = new List<IDatabaseWrapper>();
             if (dataGrid.SelectedRows.Count > 0)
             {
@@ -485,6 +497,12 @@ namespace SurveyManager.forms.userControls
         {
             if (propGrid.SelectedObject == null)
                 return;
+
+            if (JobHandler.Instance.ReadOnly)
+            {
+                CMessageBox.Show("Survey Manager is in READ-ONLY state; cannot save changed data to the database.", "Read-Only Enabled", MessageBoxButtons.OK, Resources.error_64x64);
+                return;
+            }
 
             IDatabaseWrapper obj = (IDatabaseWrapper)propGrid.SelectedObject;
             DatabaseError error = obj.Update();

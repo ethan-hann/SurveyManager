@@ -62,23 +62,10 @@ namespace SurveyManager.forms.userControls
         #region Save Methods
         private void SaveObject()
         {
-            if (obj as Client != null)
-            {
-                Client c = obj as Client;
-                if (!c.Name.ToLower().Equals("do not have info"))
-                {
-                    if (Database.DoesClientExist(c.Name))
-                    {
-                        DialogResult result = CMessageBox.Show($"A client with the name, {c.Name.ToUpper()}, already exists!\n" +
-                            $"Unless these are two seperate people, it is recommended to edit the existing client instead.\n" +
-                            $"If you are associating this client with a survey job, search for it using the Advanced Filter Dialog instead.\n\n" +
-                            $"Do you really want to create a duplicate client?", "Client Already Exists", MessageBoxButtons.YesNo, Resources.warning_64x64);
-                        if (result == DialogResult.No)
-                            return;
-                    }
-                }
-            }
+            if (!DuplicatesOkay())
+                return;
 
+            //Check if the objects already exist in the database. This check is only performed if the name of the client or the title company is not "DO NOT HAVE INFO"
             DatabaseError e = obj.Insert();
             if (e != DatabaseError.NoError)
             {
@@ -105,6 +92,62 @@ namespace SurveyManager.forms.userControls
                     RuntimeVars.Instance.MainForm.DockingWorkspace.RemovePage(RuntimeVars.Instance.SelectedPageUniqueName, true);
                 }
             }
+        }
+
+        private bool DuplicatesOkay()
+        {
+            if (obj as Client != null)
+            {
+                Client c = obj as Client;
+                if (!c.Name.ToLower().Equals("do not have info"))
+                {
+                    if (Database.DoesClientExist(c.Name.ToLower()))
+                    {
+                        DialogResult result = CRichMsgBox.Show($"A client with the name, {c.Name.ToUpper().Trim()}, already exists!\nDo you really want to create a duplicate client?",
+                            "Client Already Exists", $"Unless these are two seperate people, it is recommended to edit the existing client instead.\n" +
+                            "If you are associating this client with a survey job, search for it using the Advanced Filter Dialog.",
+                            MessageBoxButtons.YesNo, Resources.warning_64x64);
+
+                        if (result == DialogResult.No || result == DialogResult.Cancel)
+                            return false;
+                    }
+                }
+            }
+            else if (obj as TitleCompany != null)
+            {
+                TitleCompany c = obj as TitleCompany;
+                if (!c.Name.ToLower().Equals("do not have info"))
+                {
+                    if (Database.DoesTitleCompanyExist(c.Name.ToLower()))
+                    {
+                        DialogResult result = CRichMsgBox.Show($"A Title Company with the name, {c.Name.ToUpper().Trim()}, already exists!\nDo you really want to create a duplicate title company?",
+                            "Title Company Already Exists", "Unless the Title Company has multiple associates, it is recommended to edit the existing title company instead.\n" +
+                            "If you are associating this title company with a survey job, search for it using the Advanced Filter Dialog.",
+                            MessageBoxButtons.YesNo, Resources.warning_64x64);
+
+                        if (result == DialogResult.No || result == DialogResult.Cancel)
+                            return false;
+                    }
+                }
+            }
+            else if (obj as Realtor != null)
+            {
+                Realtor r = obj as Realtor;
+                if (!r.Name.ToLower().Equals("do not have info"))
+                {
+                    if (Database.DoesRealtorExist(r.Name.ToLower()))
+                    {
+                        DialogResult result = CRichMsgBox.Show($"A Realtor with the name, {r.Name.ToUpper().Trim()}, already exists!\nDo you really want to create a duplicate realtor?",
+                            "Realtor Already Exists", "Unless the Realtor is associated with multiple companies, it is recommended to edit the existing realtor instead.\n" +
+                            "If you are associating this realtor with a survey job, search for it using the Advanced Filter Dialog.",
+                            MessageBoxButtons.YesNo, Resources.warning_64x64);
+
+                        if (result == DialogResult.No || result == DialogResult.Cancel)
+                            return false;
+                    }
+                }
+            }
+            return true;
         }
 
         private void CheckForAssociation()
