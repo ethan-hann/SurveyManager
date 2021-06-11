@@ -1669,6 +1669,30 @@ namespace SurveyManager.backend
         }
 
         /// <summary>
+        /// Search the database for the specified <paramref name="clientName"/> and get a value indiciating if the client already exists.
+        /// </summary>
+        /// <param name="clientName">The client's name to search for.</param>
+        /// <returns>True if the client already exists; False otherwise.</returns>
+        public static bool DoesClientExist(string clientName)
+        {
+            bool exists = false;
+            string q = Queries.BuildQuery(QType.SELECT, "Client", null, null, $"name='{clientName}'");
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (MySqlCommand cmd = new MySqlCommand(q, con))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        exists = reader.HasRows;
+                    }
+                }
+                con.Close();
+            }
+            return exists;
+        }
+
+        /// <summary>
         /// Search the database for the specified <paramref name="jobNumber"/> and get a value indicating if the job already exists.
         /// </summary>
         /// <param name="jobNumber">The job number to search for.</param>

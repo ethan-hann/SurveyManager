@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using SurveyManager.backend;
 using SurveyManager.backend.wrappers;
 using SurveyManager.backend.wrappers.SurveyJob;
 using SurveyManager.forms.dialogs;
@@ -61,6 +62,22 @@ namespace SurveyManager.forms.userControls
         #region Save Methods
         private void SaveObject()
         {
+            if (obj as Client != null)
+            {
+                Client c = obj as Client;
+                if (!c.Name.ToLower().Equals("do not have info"))
+                {
+                    if (Database.DoesClientExist(c.Name))
+                    {
+                        DialogResult result = CMessageBox.Show($"A client with the name, {c.Name.ToUpper()}, already exists!\n" +
+                            $"Unless these are two seperate people, it is recommended to edit the existing client instead.\n\n" +
+                            $"Do you really want to create a duplicate client?", "Client Already Exists", MessageBoxButtons.YesNo, Resources.warning_64x64);
+                        if (result == DialogResult.No)
+                            return;
+                    }
+                }
+            }
+
             DatabaseError e = obj.Insert();
             if (e != DatabaseError.NoError)
             {

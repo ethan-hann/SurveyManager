@@ -308,3 +308,4 @@ D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.basicInfo.EssentialInformationCtl.resources
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.basicInfo.LocationCtl.resources
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.basicInfo.SubdivisionCtl.resources
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.testing.TestForm.resources
