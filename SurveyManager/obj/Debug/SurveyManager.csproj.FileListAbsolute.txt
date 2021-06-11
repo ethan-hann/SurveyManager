@@ -309,3 +309,10 @@ D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.basicInfo.LocationCtl.resources
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.forms.surveyMenu.basicInfo.SubdivisionCtl.resources
 D:\Documents\Projects\SurveyManager-Github\SurveyManager\obj\Debug\SurveyManager.testing.TestForm.resources
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Design.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Docking.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+D:\Documents\Projects\SurveyManager-Github\SurveyManager\bin\Debug\JDHSoftware.Krypton.Toolkit.KryptonOutlookGrid.dll

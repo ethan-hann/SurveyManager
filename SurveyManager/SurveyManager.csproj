@@ -63,7 +63,7 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5CFD6B0C176AE934B03F668168EB1C2C5627A9CF</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3A7F83F1CCF144B7D5878F951A05E5843BFB40B3</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>SurveyManager_1_TemporaryKey.pfx</ManifestKeyFile>
