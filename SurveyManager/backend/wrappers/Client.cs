@@ -1,5 +1,6 @@
 ﻿using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
 using static SurveyManager.utility.Enums;
@@ -81,6 +82,8 @@ namespace SurveyManager.backend.wrappers
                 return Validator.Client(this).Count == 0;
             }
         }
+
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>() { ClientAddress }; } }
 
         public Client() { }
 

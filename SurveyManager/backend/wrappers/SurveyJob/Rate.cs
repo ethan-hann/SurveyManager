@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
@@ -64,6 +65,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
                 return !Description.ToLower().Equals("n/a") && Amount != 0.00m;
             }
         }
+
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
 
         public Rate() { }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
@@ -34,6 +35,8 @@ namespace SurveyManager.backend.wrappers
                 return !CountyName.Equals("N/A");
             }
         }
+
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
 
         public County() { }
 

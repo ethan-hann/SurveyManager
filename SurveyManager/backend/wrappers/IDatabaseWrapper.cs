@@ -1,4 +1,5 @@
-﻿using static SurveyManager.utility.Enums;
+﻿using System.Collections.Generic;
+using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
 {
@@ -28,5 +29,10 @@ namespace SurveyManager.backend.wrappers
         /// </summary>
         /// <returns>A <see cref="DatabaseError"/> enum representing the result of the method.</returns>
         public DatabaseError Delete();
+
+        /// <summary>
+        /// An optional list of associated objectes for this Database object.
+        /// </summary>
+        public List<IDatabaseWrapper> AssociatedObjects { get; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SurveyManager.Properties;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
@@ -73,6 +74,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
+
         public LineItem() { }
 
         /// <summary>
@@ -105,7 +108,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public override string ToString()
         {
-            return $"{SubTotal:C2} - {Description}";
+            return $"Line Item: {SubTotal:C2} - {Description}";
         }
 
         public DatabaseError Insert()

@@ -1,6 +1,7 @@
 ﻿using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing;
@@ -144,6 +145,8 @@ namespace SurveyManager.backend.wrappers
                 return Resources.file_32x32;
             }
         }
+
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
 
         public CFile() { }
 

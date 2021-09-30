@@ -352,6 +352,14 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        public List<IDatabaseWrapper> AssociatedObjects 
+        {
+            get
+            {
+                return  new List<IDatabaseWrapper> { Location, BillingObject};
+            }
+        }
+
         /// <summary>
         /// Set the objects in this survey to those from the database based on the various ID properties.
         /// <para>Gets the survey's Client, County, Realtor, TitleCompany, Location, any files associated with this job, the notes, and the billing objects.</para>
@@ -709,9 +717,6 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public DatabaseError Delete()
         {
-            CKeys keys = new CKeys(ClientID, CountyID, RealtorID, TitleCompanyID, LocationID);
-            keys.RemoveZeroKeys();
-
             if (Database.DeleteSurvey(this))
             {
                 DatabaseError e = DeleteObjects();

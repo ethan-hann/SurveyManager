@@ -1,5 +1,6 @@
 ﻿using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
@@ -73,6 +74,8 @@ namespace SurveyManager.backend.wrappers
                 return Validator.Realtor(this).Count == 0;
             }
         }
+
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
 
         public Realtor() { }
 

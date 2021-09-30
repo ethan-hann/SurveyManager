@@ -423,7 +423,7 @@ namespace SurveyManager.forms.userControls
                 }
                 case EntityTypes.Survey:
                 {
-                    rtfText = "\\pard\\b\\f0\\fs22 Survey\\f1\\b0 - \\cf1\\f0 delete the survey record, all associated files, and all associated billing line items.\\f2\\fs20\\par}\n";
+                    rtfText = "\\pard\\b\\f0\\fs22 Survey\\f1\\b0 - \\cf1\\f0 delete the survey record, location record, all associated files, and all associated billing items.\\f2\\fs20\\par}\n";
                     break;
                 }
                 case EntityTypes.Realtor:

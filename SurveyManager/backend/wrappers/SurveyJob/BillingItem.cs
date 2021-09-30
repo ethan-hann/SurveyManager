@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
 using static SurveyManager.utility.Enums;
@@ -96,6 +97,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
             }
         }
 
+        public List<IDatabaseWrapper> AssociatedObjects { get { return new List<IDatabaseWrapper>(); } }
+
         public BillingItem() { }
 
         public BillingItem(int iD, string description, Rate fieldRate, int fieldRateId, Rate officeRate, int officeRateId, TimeSpan fieldTime, TimeSpan officeTime)
@@ -164,8 +167,8 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public override string ToString()
         {
-            return OfficeTime == TimeSpan.Zero ? $"Description: {Description}\tField Rate: {FieldRate}\tField Time: {FieldTime}" :
-                $"Description: {Description}\tOffice Rate: {OfficeRate}\tOffice Time: {OfficeTime}";
+            return OfficeTime == TimeSpan.Zero ? $"Billing Item: {Description}\tField Rate: {FieldRate}\tField Time: {FieldTime}" :
+                $"Billing Item: {Description}\tOffice Rate: {OfficeRate}\tOffice Time: {OfficeTime}";
         }
 
         public DatabaseError Insert()

@@ -35,6 +35,17 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         [Browsable(false)]
         public string BillingIds { get; set; } = "N/A";
 
+        public List<IDatabaseWrapper> AssociatedObjects
+        {
+            get
+            {
+                List<IDatabaseWrapper> objs = new List<IDatabaseWrapper>();
+                objs.AddRange(items);
+                objs.AddRange(lineItems);
+                return objs;
+            }
+        }
+
         public Billing() { }
 
         /// <summary>
@@ -369,6 +380,11 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         public decimal GetTotalBill()
         {
             return GetTotalOfficeBill() + GetTotalFieldBill() + GetBillingLineItemsBill();
+        }
+
+        public override string ToString()
+        {
+            return $"Billing Items: {items.Count} - Line Items: {lineItems.Count}";
         }
 
         public DatabaseError Insert()

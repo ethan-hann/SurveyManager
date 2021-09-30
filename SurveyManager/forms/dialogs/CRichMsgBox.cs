@@ -161,16 +161,39 @@ namespace SurveyManager.forms.dialogs
                 if (message.lblText.Height > 64)
                     message.Height = (message.lblText.Top + message.lblText.Height) + 78;
 
-                foreach (IDatabaseWrapper wrapper in objects)
-                {
-                    message.lvObjects.Items.Add($"{wrapper.ID}  -  {wrapper}");
-                }
-                message.lvObjects.Sort(); //sort in ascending order, based on Sorting property set in Design View.
+                PopulateTreeView(message, objects);
 
-                message.lblListViewCaption.Text = $"Objects to be deleted: {message.lvObjects.Items.Count}";
+                message.lblListViewCaption.Text = $"Objects to be deleted: {totalNumberOfObjects}";
 
                 return (message.ShowDialog());
             }
+        }
+
+        private static int totalNumberOfObjects = 0;
+
+        private static void PopulateTreeView(DeleteMessageForm messageForm, List<IDatabaseWrapper> objects)
+        {
+            totalNumberOfObjects = 0;
+            foreach (IDatabaseWrapper wrapper in objects)
+            {
+                totalNumberOfObjects++;
+                TreeNode parent = new TreeNode(wrapper.ToString());
+                foreach (IDatabaseWrapper child in wrapper.AssociatedObjects)
+                {
+                    totalNumberOfObjects++;
+                    TreeNode childNode = new TreeNode(child.ToString());
+                    parent.Nodes.Add(childNode);
+                    foreach (IDatabaseWrapper grandchild in child.AssociatedObjects)
+                    {
+                        totalNumberOfObjects++;
+                        TreeNode grandChildNode = new TreeNode(grandchild.ToString());
+                        childNode.Nodes.Add(grandChildNode);
+                    }
+                }
+
+                messageForm.tvObjects.Nodes.Add(parent);
+            }
+            messageForm.tvObjects.Sort(); //sort in ascending order, based on Sorting property set in Design View.
         }
     }
 }
