@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>Z:\SurveyManagerPublish\v1.0.0.0\|publish\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\Kelvin\Documents\Projects\SurveyManagerPublish\|Z:\SurveyManagerPublish\v1.0.0.0\|publish\</PublishUrlHistory>
     <InstallUrlHistory>\\csm-nas01\SurveyManagerApplication\|\\HomeServer\homes\ethan\SurveyManagerPublish\v1.0.0.0\|\\HomeServer\homes\ethan\SurveyManagerPublish\|\\HomeServer\homes\ethan\Drive\SurveyManager\</InstallUrlHistory>
     <SupportUrlHistory>https://surveymanager.readthedocs.io</SupportUrlHistory>
     <UpdateUrlHistory>\\csm-nas01\SurveyManagerApplication\</UpdateUrlHistory>

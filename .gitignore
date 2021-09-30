@@ -3,3 +3,6 @@ packages/
 bin/
 obj/
 *.nupkg
+SurveyManager/SurveyManager_1_TemporaryKey.pfx
+SurveyManager/SurveyManager_2_TemporaryKey.pfx
+SurveyManager/SurveyManager_1_TemporaryKey.pfx

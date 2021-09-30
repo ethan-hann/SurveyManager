@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>Z:\SurveyManagerPublish\v1.0.0.0\</PublishUrl>
+    <PublishUrl>C:\Users\Kelvin\Documents\Projects\SurveyManagerPublish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,7 +29,7 @@
     <ProductName>Survey Manager</ProductName>
     <PublisherName>Critical Software</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -63,16 +63,16 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>3A7F83F1CCF144B7D5878F951A05E5843BFB40B3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>00A97D6E25B0CCB1D2BD1AF7185F960EBF023B5E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SurveyManager_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SurveyManager_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
@@ -81,7 +81,7 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>SurveyManager_StrongKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>SurveyManager_2_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -274,210 +274,144 @@
     <Compile Include="backend\wrappers\SurveyJob\LineItem.cs" />
     <Compile Include="backend\wrappers\SurveyJob\Survey.cs" />
     <Compile Include="backend\wrappers\TitleCompany.cs" />
-    <Compile Include="forms\databaseMenu\DBConnection.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\databaseMenu\DBConnection.cs" />
     <Compile Include="forms\databaseMenu\DBConnection.Designer.cs">
       <DependentUpon>DBConnection.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\databaseMenu\SqlControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\databaseMenu\SqlControl.cs" />
     <Compile Include="forms\databaseMenu\SqlControl.Designer.cs">
       <DependentUpon>SqlControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\databaseMenu\SQLQuery.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\databaseMenu\SQLQuery.cs" />
     <Compile Include="forms\databaseMenu\SQLQuery.Designer.cs">
       <DependentUpon>SQLQuery.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\AboutBox.cs" />
     <Compile Include="forms\dialogs\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\ActivationDlg.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\ActivationDlg.cs" />
     <Compile Include="forms\dialogs\ActivationDlg.Designer.cs">
       <DependentUpon>ActivationDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\AdvancedFilter.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\AdvancedFilter.cs" />
     <Compile Include="forms\dialogs\AdvancedFilter.Designer.cs">
       <DependentUpon>AdvancedFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\EllipterActivation.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\EllipterActivation.cs" />
     <Compile Include="forms\dialogs\EllipterActivation.Designer.cs">
       <DependentUpon>EllipterActivation.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\DeleteMessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\DeleteMessageForm.cs" />
     <Compile Include="forms\dialogs\DeleteMessageForm.Designer.cs">
       <DependentUpon>DeleteMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\AppSettings.cs" />
     <Compile Include="forms\dialogs\SettingsDialog\AppSettings.Designer.cs">
       <DependentUpon>AppSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\CMessageBox.cs" />
     <Compile Include="forms\dialogs\CRichMsgBox.cs" />
-    <Compile Include="forms\dialogs\SaveMessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SaveMessageForm.cs" />
     <Compile Include="forms\dialogs\SaveMessageForm.Designer.cs">
       <DependentUpon>SaveMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\MessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\MessageForm.cs" />
     <Compile Include="forms\dialogs\MessageForm.Designer.cs">
       <DependentUpon>MessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\RichMessageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\RichMessageForm.cs" />
     <Compile Include="forms\dialogs\RichMessageForm.Designer.cs">
       <DependentUpon>RichMessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.cs" />
     <Compile Include="forms\dialogs\SettingsDialog\CurrencySettings.Designer.cs">
       <DependentUpon>CurrencySettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.cs" />
     <Compile Include="forms\dialogs\SettingsDialog\GeneralSettings.Designer.cs">
       <DependentUpon>GeneralSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.cs" />
     <Compile Include="forms\dialogs\SettingsDialog\EmailSettings.Designer.cs">
       <DependentUpon>EmailSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\dialogs\SettingsDialog\FileSettings.cs" />
     <Compile Include="forms\dialogs\SettingsDialog\FileSettings.Designer.cs">
       <DependentUpon>FileSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\dialogs\SettingsDialog\ISettingsControl.cs" />
-    <Compile Include="forms\fileMenu\FileBrowser.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\fileMenu\FileBrowser.cs" />
     <Compile Include="forms\fileMenu\FileBrowser.Designer.cs">
       <DependentUpon>FileBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\pages\BillingPortal.cs" />
     <Compile Include="forms\pages\NewPage.cs" />
     <Compile Include="forms\pages\ViewPage.cs" />
-    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.cs" />
     <Compile Include="forms\surveyMenu\billingPortal\NewEntryDlg.Designer.cs">
       <DependentUpon>NewEntryDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\surveyMenu\basicInfo\IInfoControl.cs" />
-    <Compile Include="forms\surveyMenu\basicInfo\InfoCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\basicInfo\InfoCtl.cs" />
     <Compile Include="forms\surveyMenu\basicInfo\InfoCtl.Designer.cs">
       <DependentUpon>InfoCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.cs" />
     <Compile Include="forms\surveyMenu\basicInfo\EssentialInformationCtl.Designer.cs">
       <DependentUpon>EssentialInformationCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\LineItemsCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\LineItemsCtl.cs" />
     <Compile Include="forms\surveyMenu\LineItemsCtl.Designer.cs">
       <DependentUpon>LineItemsCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\basicInfo\LocationCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\basicInfo\LocationCtl.cs" />
     <Compile Include="forms\surveyMenu\basicInfo\LocationCtl.Designer.cs">
       <DependentUpon>LocationCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\NotesCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\NotesCtl.cs" />
     <Compile Include="forms\surveyMenu\NotesCtl.Designer.cs">
       <DependentUpon>NotesCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\SearchResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\SearchResults.cs" />
     <Compile Include="forms\surveyMenu\SearchResults.Designer.cs">
       <DependentUpon>SearchResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\basicInfo\SubdivisionCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\basicInfo\SubdivisionCtl.cs" />
     <Compile Include="forms\surveyMenu\basicInfo\SubdivisionCtl.Designer.cs">
       <DependentUpon>SubdivisionCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\SurveySearchResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\SurveySearchResults.cs" />
     <Compile Include="forms\surveyMenu\SurveySearchResults.Designer.cs">
       <DependentUpon>SurveySearchResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\UploadFile.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\UploadFile.cs" />
     <Compile Include="forms\surveyMenu\UploadFile.Designer.cs">
       <DependentUpon>UploadFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\ViewPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\ViewPanel.cs" />
     <Compile Include="forms\surveyMenu\ViewPanel.Designer.cs">
       <DependentUpon>ViewPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.cs" />
     <Compile Include="forms\surveyMenu\billingPortal\BillingPortalCtl.Designer.cs">
       <DependentUpon>BillingPortalCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\userControls\NewObject.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\userControls\NewObject.cs" />
     <Compile Include="forms\userControls\NewObject.Designer.cs">
       <DependentUpon>NewObject.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\userControls\ViewObjectsCtl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="forms\userControls\ViewObjectsCtl.cs" />
     <Compile Include="forms\userControls\ViewObjectsCtl.Designer.cs">
       <DependentUpon>ViewObjectsCtl.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="forms\MainForm.cs" />
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="testing\TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="testing\TestForm.cs" />
     <Compile Include="testing\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
@@ -486,9 +420,7 @@
     <Compile Include="utility\Comparators.cs" />
     <Compile Include="utility\CountyTypeConverter.cs" />
     <Compile Include="utility\CSVHelper.cs" />
-    <Compile Include="utility\CustomControls\CPropertyGrid.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="utility\CustomControls\CPropertyGrid.cs" />
     <Compile Include="utility\CustomControls\CPropertyGrid.Designer.cs">
       <DependentUpon>CPropertyGrid.cs</DependentUpon>
     </Compile>
@@ -635,6 +567,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SurveyManager_2_TemporaryKey.pfx" />
     <None Include="SurveyManager_StrongKey.pfx" />
     <None Include="SurveyManager_TemporaryKey.pfx" />
   </ItemGroup>
