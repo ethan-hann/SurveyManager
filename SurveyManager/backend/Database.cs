@@ -445,7 +445,7 @@ namespace SurveyManager.backend
                     con.Close();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 RuntimeVars.Instance.LogFile.AddEntry($"Could not delete address: {a.ID}. It might be associated with another object.");
                 return false;

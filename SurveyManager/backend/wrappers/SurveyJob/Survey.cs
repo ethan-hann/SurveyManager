@@ -689,7 +689,7 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         private DatabaseError DeleteObjects()
         {
             DatabaseError e;
-            e = Database.DeleteAddress(Location) ? DatabaseError.NoError : DatabaseError.AddressDelete;
+            e = Location.Delete();
             if (e != DatabaseError.NoError)
                 return e;
 
@@ -709,11 +709,19 @@ namespace SurveyManager.backend.wrappers.SurveyJob
 
         public DatabaseError Delete()
         {
-            DatabaseError e = DeleteObjects();
-            if (e != DatabaseError.NoError)
-                return e;
+            CKeys keys = new CKeys(ClientID, CountyID, RealtorID, TitleCompanyID, LocationID);
+            keys.RemoveZeroKeys();
 
-            return Database.DeleteSurvey(this) ? DatabaseError.NoError : DatabaseError.SurveyDelete;
+            if (Database.DeleteSurvey(this))
+            {
+                DatabaseError e = DeleteObjects();
+                if (e != DatabaseError.NoError)
+                    return e;
+
+                return DatabaseError.NoError;
+            }
+            else
+                return DatabaseError.SurveyDelete;
         }
     }
 }
