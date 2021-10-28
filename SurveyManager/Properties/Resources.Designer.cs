@@ -173,6 +173,16 @@ namespace SurveyManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap browser_18 {
+            get {
+                object obj = ResourceManager.GetObject("browser-18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap client {
             get {
                 object obj = ResourceManager.GetObject("client", resourceCulture);
@@ -973,6 +983,26 @@ namespace SurveyManager.Properties {
         internal static System.Drawing.Bitmap search_32x32 {
             get {
                 object obj = ResourceManager.GetObject("search_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap select_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("select_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap select_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("select_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

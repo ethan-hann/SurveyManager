@@ -72,6 +72,8 @@ namespace SurveyManager
             this.kryptonContextMenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.btnAssocRealtor = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.surveyRealtorContextMenu = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuItems5 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
+            this.kryptonContextMenuItem8 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItems3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem3 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuItem4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
@@ -133,6 +135,8 @@ namespace SurveyManager
             this.logAutoSave = new System.Windows.Forms.Timer(this.components);
             this.dumpDatabaseBGWorker = new System.ComponentModel.BackgroundWorker();
             this.csvSaveFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.kryptonContextMenuItem7 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuSeparator1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator();
             this.mainStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderPanel)).BeginInit();
@@ -485,7 +489,18 @@ namespace SurveyManager
             // surveyRealtorContextMenu
             // 
             this.surveyRealtorContextMenu.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItems5,
             this.kryptonContextMenuItems3});
+            // 
+            // kryptonContextMenuItems5
+            // 
+            this.kryptonContextMenuItems5.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
+            this.kryptonContextMenuItem8});
+            // 
+            // kryptonContextMenuItem8
+            // 
+            this.kryptonContextMenuItem8.Image = global::SurveyManager.Properties.Resources.select_16x16;
+            this.kryptonContextMenuItem8.Text = "Select from list...";
             // 
             // kryptonContextMenuItems3
             // 
@@ -917,6 +932,10 @@ namespace SurveyManager
             this.dumpDatabaseBGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.dumpDatabaseBGWorker_ProgressChanged);
             this.dumpDatabaseBGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.dumpDatabaseBGWorker_RunWorkerCompleted);
             // 
+            // kryptonContextMenuItem7
+            // 
+            this.kryptonContextMenuItem7.Text = "Menu Item";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1051,6 +1070,10 @@ namespace SurveyManager
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnToggleReadOnly;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton btnReloadFromDatabase;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems5;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem8;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem7;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuSeparator kryptonContextMenuSeparator1;
     }
 }
 

@@ -3,6 +3,7 @@ using SurveyManager.backend.wrappers;
 using SurveyManager.Properties;
 using SurveyManager.utility;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using static SurveyManager.utility.CEventArgs;
@@ -23,6 +24,14 @@ namespace SurveyManager.forms.surveyMenu
             InitializeComponent();
 
             this.results = results;
+            this.typeOfData = typeOfData;
+        }
+
+        public SearchResults(IEnumerable<IDatabaseWrapper> results, EntityTypes typeOfData)
+        {
+            InitializeComponent();
+
+            this.results = Utility.ToDataTable((List<IDatabaseWrapper>)results);
             this.typeOfData = typeOfData;
         }
 

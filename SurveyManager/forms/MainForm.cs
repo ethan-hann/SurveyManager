@@ -31,6 +31,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Comparators;
@@ -334,10 +335,12 @@ namespace SurveyManager
             //Survey Associate Client -> create new client
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyClientContextMenu.Items[0]).Items[1]).Click += CreateNewClient;
 
+            //Survey Associate Realtor -> select realtor from list
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[0]).Click += SelectRealtorFromList;
             //Survey Associate Realtor -> search for realtor
-            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[0]).Click += btnAssocRealtor_Click;
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[1]).Items[0]).Click += btnAssocRealtor_Click;
             //Survey Associate Realtor -> create new realtor
-            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[0]).Items[1]).Click += CreateNewRealtor;
+            ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyRealtorContextMenu.Items[1]).Items[1]).Click += CreateNewRealtor;
 
             //Survey Associate TitleCompany -> search for title company
             ((KryptonContextMenuItem)((KryptonContextMenuItems)surveyTitleCompanyContextMenu.Items[0]).Items[0]).Click += btnAssocTitleComp_Click;
@@ -364,6 +367,52 @@ namespace SurveyManager
                 }
 
                 newClientBtn_Click(sender, e);
+            }
+        }
+
+        private void SelectRealtorFromList(object sender, EventArgs e)
+        {
+            if (licensed)
+            {
+                if (!RuntimeVars.Instance.DatabaseConnected)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoDatabaseConnection.ToDescriptionString()));
+                    return;
+                }
+
+                if (!JobHandler.Instance.IsJobOpen)
+                {
+                    ChangeStatusText(this, new StatusArgs(StatusText.NoJob_AddRealtor.ToDescriptionString()));
+                    return;
+                }
+            }
+
+            List<Realtor> realtors = (List<Realtor>)SelectFromDBAsync(EntityTypes.Realtor).Result.ToList().Cast<Realtor>();
+            SearchResults sr = new SearchResults(realtors, EntityTypes.Realtor);
+            sr.ShowDialog();
+        }
+
+        private async Task<List<IDatabaseWrapper>> SelectFromDBAsync(EntityTypes type)
+        {
+            return await Task.FromResult(GetObjects(type));
+        }
+
+        private List<IDatabaseWrapper> GetObjects(EntityTypes type)
+        {
+            switch (type)
+            {
+                case EntityTypes.Client:
+                    return Database.GetClients().Cast<IDatabaseWrapper>();
+                case EntityTypes.County:
+                    return (List<IDatabaseWrapper>)Database.GetCounties().Cast<IDatabaseWrapper>();
+                case EntityTypes.Realtor:
+                    return (List<IDatabaseWrapper>)Database.GetRealtors().Cast<IDatabaseWrapper>();
+                case EntityTypes.Survey:
+                    return (List<IDatabaseWrapper>)Database.GetSurveys().Cast<IDatabaseWrapper>();
+                case EntityTypes.TitleCompany:
+                    return (List<IDatabaseWrapper>)Database.GetTitleCompanies().Cast<IDatabaseWrapper>();
+                default:
+                    return new List<IDatabaseWrapper>();
             }
         }
 

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using static SurveyManager.utility.Enums;
 
@@ -218,6 +219,37 @@ namespace SurveyManager.utility
                 dt.Rows.Add(data[i].Split(';'));
             }
             return dt;
+        }
+
+        /// <summary>
+        /// Converts a list of items into a DataTable.
+        /// </summary>
+        /// <typeparam name="T">The type of objects contained in the list.</typeparam>
+        /// <param name="items">The list of items to convert.</param>
+        /// <returns>A new DataTable containing the list items.</returns>
+        public static DataTable ToDataTable<T>(List<T> items)
+        {
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (PropertyInfo prop in Props)
+            {
+                //Setting column names as Property names
+                dataTable.Columns.Add(prop.Name);
+            }
+            foreach (T item in items)
+            {
+                var values = new object[Props.Length];
+                for (int i = 0; i < Props.Length; i++)
+                {
+                    //inserting property values to datatable rows
+                    values[i] = Props[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            //put a breakpoint here and check datatable
+            return dataTable;
         }
 
         /// <summary>

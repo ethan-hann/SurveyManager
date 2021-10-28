@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers
@@ -30,6 +31,7 @@ namespace SurveyManager.backend.wrappers
         /// <returns>A <see cref="DatabaseError"/> enum representing the result of the method.</returns>
         public DatabaseError Delete();
 
+        [Browsable(true)]
         /// <summary>
         /// An optional list of associated objectes for this Database object.
         /// </summary>
