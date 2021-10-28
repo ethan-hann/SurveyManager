@@ -209,6 +209,14 @@ namespace SurveyManager.utility
                         AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     };
                     columnsToAdd.Add(jobNumberColumn);
+                    DataGridViewColumn clientColumn = new KryptonDataGridViewTextBoxColumn
+                    {
+                        HeaderText = "Client",
+                        Name = "clientColumn",
+                        SortMode = DataGridViewColumnSortMode.Programmatic,
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    };
+                    columnsToAdd.Add(clientColumn);
                     DataGridViewColumn abstractNumberColumn = new KryptonDataGridViewTextBoxColumn
                     {
                         HeaderText = "Abstract",
@@ -246,6 +254,7 @@ namespace SurveyManager.utility
 
                     grid.AddInternalColumn(surveyIDColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(jobNumberColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
+                    grid.AddInternalColumn(clientColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(abstractNumberColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(acresColumn, new OutlookGridDefaultGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);
                     grid.AddInternalColumn(descColumn, new OutlookGridAlphabeticGroup() { OneItemText = "1 survey", XXXItemsText = " surveys" }, SortOrder.None, -1, -1);

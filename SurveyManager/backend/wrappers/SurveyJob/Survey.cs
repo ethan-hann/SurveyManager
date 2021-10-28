@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Enums;
 
 namespace SurveyManager.backend.wrappers.SurveyJob
@@ -16,6 +18,13 @@ namespace SurveyManager.backend.wrappers.SurveyJob
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class Survey : ExpandableObjectConverter, IDatabaseWrapper
     {
+        public static EventHandler OnClientFetched;
+        public static EventHandler OnCountyFetched;
+        public static EventHandler OnRealtorFetched;
+        public static EventHandler OnTitleCompanyFetched;
+        public static EventHandler OnFilesFetched;
+        public static EventHandler OnNotesFetched;
+
         [Browsable(false)]
         public int ID { get; set; }
 
@@ -365,71 +374,94 @@ namespace SurveyManager.backend.wrappers.SurveyJob
         /// <para>Gets the survey's Client, County, Realtor, TitleCompany, Location, any files associated with this job, the notes, and the billing objects.</para>
         /// <para>All database operations here run on a seperate thread.</para>
         /// </summary>
-        public void SetObjects()
+        public async void SetObjects()
         {
             if (ClientID != 0)
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    Client = Database.GetClient(ClientID);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                Client = await Task.Run(() => Database.GetClient(ClientID));
+                OnClientFetched?.Invoke(this, new DBObjectArgs(this, EntityTypes.Survey));
+
+                //Thread dbThread = new Thread(() =>
+                //{
+                //    Client = Database.GetClient(ClientID);
+                //})
+                //{
+                //    IsBackground = true
+                //};
+                //dbThread.Start();
             }
+
             if (CountyID != 0)
             {
-                County = RuntimeVars.Instance.Counties.Where(e => e.ID == CountyID).First();
+                County = await Task.Run(() => RuntimeVars.Instance.Counties.Where(e => e.ID == CountyID).First());
+                OnCountyFetched?.Invoke(this, new DBObjectArgs(this, EntityTypes.Survey));
             }
+            else
+            {
+                County = RuntimeVars.Instance.Counties.First();
+                CountyID = County.ID;
+            }
+
             if (RealtorID != 0)
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    Realtor = Database.GetRealtor(RealtorID);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                Realtor = await Task.Run(() => Database.GetRealtor(RealtorID));
+                OnRealtorFetched?.Invoke(this, new DBObjectArgs(this, EntityTypes.Survey));
+
+                //Thread dbThread = new Thread(() =>
+                //{
+                //    Realtor = Database.GetRealtor(RealtorID);
+                //})
+                //{
+                //    IsBackground = true
+                //};
+                //dbThread.Start();
             }
             if (TitleCompanyID != 0)
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    TitleCompany = Database.GetTitleCompany(TitleCompanyID);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                TitleCompany = await Task.Run(() => Database.GetTitleCompany(TitleCompanyID));
+                OnRealtorFetched?.Invoke(this, new DBObjectArgs(this, EntityTypes.Survey));
+
+                //Thread dbThread = new Thread(() =>
+                //{
+                //    TitleCompany = Database.GetTitleCompany(TitleCompanyID);
+                //})
+                //{
+                //    IsBackground = true
+                //};
+                //dbThread.Start();
             }
             if (LocationID != 0)
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    Location = Database.GetAddress(LocationID);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                Location = await Task.Run(() => Database.GetAddress(LocationID));
+
+                //Thread dbThread = new Thread(() =>
+                //{
+                //    Location = Database.GetAddress(LocationID);
+                //})
+                //{
+                //    IsBackground = true
+                //};
+                //dbThread.Start();
             }
             if (!FileIds.ToLower().Equals("n/a"))
             {
-                Thread dbThread = new Thread(() =>
-                {
-                    int[] ids = ParseIds(FileIds);
-                    Files = Database.GetFiles(ids);
-                })
-                {
-                    IsBackground = true
-                };
-                dbThread.Start();
+                int[] ids = ParseIds(FileIds);
+                Files = await Task.Run(() => Database.GetFiles(ids));
+
+                //Thread dbThread = new Thread(() =>
+                //{
+                //    int[] ids = ParseIds(FileIds);
+                //    Files = Database.GetFiles(ids);
+                //})
+                //{
+                //    IsBackground = true
+                //};
+                //dbThread.Start();
             }
             if (!NotesString.ToLower().Equals("n/a"))
             {
-                ParseNotes(NotesString);
+                await Task.Run(() => ParseNotes(NotesString));
+                //ParseNotes(NotesString);
             }
 
             BillingObject.SetObjects();

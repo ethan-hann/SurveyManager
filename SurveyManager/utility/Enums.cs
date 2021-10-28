@@ -272,6 +272,10 @@ namespace SurveyManager.utility
             /// </summary>
             Survey,
             /// <summary>
+            /// Represents a county.
+            /// </summary>
+            County,
+            /// <summary>
             /// Represents a title company entity.
             /// </summary>
             TitleCompany,

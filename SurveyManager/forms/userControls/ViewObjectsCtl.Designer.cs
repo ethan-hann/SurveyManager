@@ -40,9 +40,9 @@ namespace SurveyManager.forms.userControls
             this.loadProgressBar = new System.Windows.Forms.ProgressBar();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.saveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.deleteBgWorker = new System.ComponentModel.BackgroundWorker();
+            this.propGrid = new SurveyManager.utility.CustomControls.CPropertyGrid(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrGroup.Panel)).BeginInit();
             this.hdrGroup.Panel.SuspendLayout();
@@ -165,14 +165,6 @@ namespace SurveyManager.forms.userControls
             this.saveDialog.Filter = "Compressed Zip File (*.zip)|*.zip";
             this.saveDialog.Title = "Save Files";
             // 
-            // propGrid
-            // 
-            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propGrid.Location = new System.Drawing.Point(0, 0);
-            this.propGrid.Name = "propGrid";
-            this.propGrid.Size = new System.Drawing.Size(957, 302);
-            this.propGrid.TabIndex = 5;
-            // 
             // kryptonSplitContainer1
             // 
             this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -199,6 +191,14 @@ namespace SurveyManager.forms.userControls
             this.deleteBgWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.deleteBgWorker_DoWork);
             this.deleteBgWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.deleteBgWorker_ProgressChanged);
             this.deleteBgWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.deleteBgWorker_RunWorkerCompleted);
+            // 
+            // propGrid
+            // 
+            this.propGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propGrid.Location = new System.Drawing.Point(0, 0);
+            this.propGrid.Name = "propGrid";
+            this.propGrid.Size = new System.Drawing.Size(957, 302);
+            this.propGrid.TabIndex = 5;
             // 
             // ViewObjectsCtl
             // 

@@ -15,6 +15,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using static SurveyManager.utility.CEventArgs;
 using static SurveyManager.utility.Comparators;
@@ -42,6 +43,11 @@ namespace SurveyManager.forms.userControls
                 lastFilterResults = args.Results;
                 currentFilterArgs = args;
             }
+
+            Survey.OnClientFetched += UpdateClientInGrid;
+            Survey.OnCountyFetched += UpdateCountyInGrid;
+            Survey.OnTitleCompanyFetched += UpdateTitleCompanyInGrid;
+            Survey.OnRealtorFetched += UpdateRealtorInGrid;
         }
 
         private void ViewObjects_Load(object sender, EventArgs e)
@@ -691,10 +697,11 @@ namespace SurveyManager.forms.userControls
                 row.CreateCells(dataGrid, new object[] {
                     c.ID,
                     c.JobNumber,
+                    c.Client.Name,
                     c.AbstractNumber,
                     c.Acres,
                     c.Description,
-                    c.County.CountyName
+                    c.County != null ? c.County.CountyName : RuntimeVars.Instance.Counties.First().CountyName
                 });
                 row.Tag = c;
                 rows.Add(row);
@@ -719,6 +726,70 @@ namespace SurveyManager.forms.userControls
             {
                 DataGridViewRow r = dataGrid.Rows[e.RowIndex];
                 OpenSurvey(r.Tag as Survey);
+            }
+        }
+
+        private void UpdateRealtorInGrid(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                OutlookGridRow r = dataGrid.InternalRows.First(row => (row.Tag as Survey).ID == args.Object.ID);
+                if (r == null)
+                    return;
+                r.Tag = args.Object as Survey;
+            }
+        }
+
+        private void UpdateTitleCompanyInGrid(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                OutlookGridRow r = dataGrid.InternalRows.First(row => (row.Tag as Survey).ID == args.Object.ID);
+                if (r == null)
+                    return;
+                r.Tag = args.Object as Survey;
+            }
+        }
+
+        private void UpdateClientInGrid(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                OutlookGridRow r = dataGrid.InternalRows.First(row => (row.Tag as Survey).ID == args.Object.ID);
+                if (r == null)
+                    return;
+
+                Survey s = r.Tag as Survey;
+                r.Cells["clientColumn"].Value = (args.Object as Survey).Client.Name;
+                r.Tag = args.Object as Survey;
+
+                dataGrid.Invoke(() => {
+                    dataGrid.SuspendLayout();
+                    dataGrid.ForceRefreshGroupBox();
+                    dataGrid.UpdateCellValue(dataGrid.Rows[r.Index].Cells["clientColumn"].ColumnIndex, dataGrid.Rows[r.Index].Cells["clientColumn"].RowIndex);
+                    dataGrid.ResumeLayout();
+                });
+            }
+        }
+
+        private void UpdateCountyInGrid(object sender, EventArgs e)
+        {
+            if (e is DBObjectArgs args)
+            {
+                OutlookGridRow r = dataGrid.InternalRows.First(row => (row.Tag as Survey).ID == args.Object.ID);
+                if (r == null)
+                    return;
+
+                Survey s = r.Tag as Survey;
+                r.Cells["countyColumn"].Value = (args.Object as Survey).County.CountyName;
+                r.Tag = args.Object as Survey;
+
+                dataGrid.Invoke(() => {
+                    dataGrid.SuspendLayout();
+                    dataGrid.ForceRefreshGroupBox();
+                    dataGrid.UpdateCellValue(dataGrid.Rows[r.Index].Cells["countyColumn"].ColumnIndex, dataGrid.Rows[r.Index].Cells["countyColumn"].RowIndex);
+                    dataGrid.ResumeLayout();
+                });
             }
         }
     }
